@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Marketplace Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        :root {
+            --black: #000000;
+            --white: #ffffff;
+            --gray-50: #fafafa;
+            --gray-100: #f5f5f5;
+            --gray-200: #eeeeee;
+            --gray-300: #e0e0e0;
+            --gray-400: #bdbdbd;
+            --gray-500: #9e9e9e;
+            --gray-600: #757575;
+            --gray-700: #616161;
+            --gray-800: #424242;
+            --gray-900: #212121;
+            --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--gray-50);
+            color: var(--gray-900);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            font-weight: 400;
+        }
+        
+        .dashboard {
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 100%);
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+        
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 3rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--gray-200);
+        }
+        
+        .header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--black);
+            margin: 0;
+            letter-spacing: -0.025em;
+        }
+        
+        .header-actions {
+            display: flex;
+            gap: 0.75rem;
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            border-radius: 0.375rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            font-family: inherit;
+        }
+        
+        .btn-primary {
+            background-color: var(--black);
+            color: var(--white);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--gray-800);
+            transform: translateY(-1px);
+        }
+        
+        .btn-secondary {
+            background-color: var(--white);
+            color: var(--gray-900);
+            border: 1px solid var(--gray-300);
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--gray-50);
+            border-color: var(--gray-400);
+        }
+        
+        .btn-success {
+            background-color: var(--black);
+            color: var(--white);
+        }
+        
+        .btn-success:hover {
+            background-color: var(--gray-800);
+            transform: translateY(-1px);
+        }
+        
+        .btn-danger {
+            background-color: var(--white);
+            color: var(--black);
+            border: 1px solid var(--gray-300);
+        }
+        
+        .btn-danger:hover {
+            background-color: var(--gray-100);
+            color: var(--gray-900);
+        }
+        
+        .btn-sm {
+            padding: 0.5rem 1rem;
+            font-size: 0.8125rem;
+        }
+        
+        /* Cards */
+        .grid {
+            display: grid;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .grid-cols-4 {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        
+        .grid-cols-3 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        
+        .grid-cols-2 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+        @media (max-width: 1024px) {
+            .grid-cols-4 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .grid-cols-4,
+            .grid-cols-3,
+            .grid-cols-2 {
+                grid-template-columns: 1fr;
+            }
+            
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+            
+            .container {
+                padding: 1rem;
+            }
+            
+            .system-info {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+        }
+        
+        .card {
+            background: var(--white);
+            border-radius: 0.75rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--gray-200);
+            transition: all 0.2s ease;
+            overflow: hidden;
+        }
+        
+        .card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-1px);
+        }
+        
+        .card-body {
+            padding: 1.5rem;
+        }
+        
+        .card-header {
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid var(--gray-200);
+            background-color: var(--gray-50);
+        }
+        
+        .card-header h5 {
+            margin: 0;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--gray-900);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .card-title {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--gray-600);
+            margin: 0 0 0.5rem 0;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .metric-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--black);
+            margin: 0;
+            line-height: 1.2;
+        }
+        
+        .metric-icon {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--gray-100);
+            color: var(--gray-600);
+            font-size: 1.5rem;
+        }
+        
+        .stat-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        
+        /* Status indicators */
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.375rem;
+            padding: 0.375rem 0.75rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+            border-radius: 9999px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .status-running {
+            background-color: rgba(0, 0, 0, 0.08);
+            color: var(--black);
+        }
+        
+        .status-stopped {
+            background-color: rgba(0, 0, 0, 0.04);
+            color: var(--gray-700);
+        }
+        
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.375rem 0.75rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+            border-radius: 9999px;
+        }
+        
+        .bg-success {
+            background-color: rgba(0, 0, 0, 0.08);
+            color: var(--black);
+        }
+        
+        .bg-warning {
+            background-color: rgba(0, 0, 0, 0.04);
+            color: var(--gray-700);
+        }
+        
+        .bg-secondary {
+            background-color: var(--gray-100);
+            color: var(--gray-800);
+        }
+        
+        /* Tables */
+        .table-container {
+            max-height: 24rem;
+            overflow-y: auto;
+            border-radius: 0.5rem;
+        }
+        
+        .table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+        
+        .table th {
+            background-color: var(--gray-50);
+            border-bottom: 1px solid var(--gray-200);
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--gray-600);
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+        
+        .table td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--gray-200);
+            font-size: 0.875rem;
+            color: var(--gray-900);
+        }
+        
+        .table tr:hover {
+            background-color: var(--gray-50);
+        }
+        
+        .table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        /* Loading spinner */
+        .loading {
+            display: inline-block;
+            width: 1.25rem;
+            height: 1.25rem;
+            border: 2px solid var(--gray-300);
+            border-top: 2px solid var(--black);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Price change indicators */
+        .price-increase {
+            color: var(--black);
+            font-weight: 600;
+        }
+        
+        .price-decrease {
+            color: var(--gray-800);
+            font-weight: 600;
+        }
+        
+        /* Typography utilities */
+        .text-sm {
+            font-size: 0.875rem;
+        }
+        
+        .text-xs {
+            font-size: 0.75rem;
+        }
+        
+        .text-muted {
+            color: var(--gray-600);
+        }
+        
+        .fw-bold {
+            font-weight: 600;
+        }
+        
+        .fw-medium {
+            font-weight: 500;
+        }
+        
+        .truncate {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        
+        /* Toast notifications */
+        .toast-container {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            z-index: 1000;
+        }
+        
+        .toast {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: 0.5rem;
+            box-shadow: var(--shadow-lg);
+            padding: 1rem;
+            margin-bottom: 0.5rem;
+            min-width: 300px;
+            transform: translateX(calc(100% + 1rem));
+            transition: transform 0.3s ease;
+        }
+        
+        .toast.show {
+            transform: translateX(0);
+        }
+        
+        .bg-success, .toast-success {
+            border-left: 3px solid var(--black);
+        }
+        
+        .bg-danger, .toast-danger {
+            border-left: 3px solid var(--gray-800);
+        }
+        
+        .bg-info, .toast-info {
+            border-left: 3px solid var(--gray-600);
+        }
+        
+        /* Footer info */
+        .system-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            background-color: var(--white);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--gray-200);
+        }
+        
+        .system-info-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+        }
+        
+        .system-info-label {
+            font-weight: 500;
+            color: var(--gray-700);
+        }
+        
+        .system-info-value {
+            color: var(--black);
+        }
+        
+        /* Scheduler card specific styles */
+        .scheduler-info {
+            margin-bottom: 1rem;
+        }
+        
+        .scheduler-controls {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        
+        /* Fix for scheduler card layout */
+        .scheduler-card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: space-between;
+        }
+        
+        /* Table improvements */
+        .table-container::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        
+        .table-container::-webkit-scrollbar-track {
+            background: var(--gray-100);
+            border-radius: 3px;
+        }
+        
+        .table-container::-webkit-scrollbar-thumb {
+            background: var(--gray-300);
+            border-radius: 3px;
+        }
+        
+        .table-container::-webkit-scrollbar-thumb:hover {
+            background: var(--gray-400);
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="container">
+            <header class="header">
+                <h1><i class="bi bi-shop"></i> Facebook Marketplace</h1>
+                <div class="header-actions">
+                    <button class="btn btn-secondary" onclick="refreshData()">
+                        <i class="bi bi-arrow-clockwise"></i> Refresh
+                    </button>
+                    <button class="btn btn-primary" onclick="runScrape()">
+                        <i class="bi bi-play-circle"></i> Run Scrape
+                    </button>
+                </div>
+            </header>
+
+            <!-- Stats Cards -->
+            <div class="grid grid-cols-4">
+                <div class="card">
+                    <div class="card-body stat-card">
+                        <div>
+                            <h5 class="card-title">Total Listings</h5>
+                            <h2 class="metric-value" id="total-listings">-</h2>
+                        </div>
+                        <div class="metric-icon">
+                            <i class="bi bi-list"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-body stat-card">
+                        <div>
+                            <h5 class="card-title">Today's Listings</h5>
+                            <h2 class="metric-value" id="listings-today">-</h2>
+                        </div>
+                        <div class="metric-icon">
+                            <i class="bi bi-calendar-day"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-body stat-card">
+                        <div>
+                            <h5 class="card-title">Price Changes</h5>
+                            <h2 class="metric-value" id="price-changes">-</h2>
+                        </div>
+                        <div class="metric-icon">
+                            <i class="bi bi-graph-up"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-body scheduler-card">
+                        <div class="scheduler-info">
+                            <h5 class="card-title">Scheduler</h5>
+                            <div>
+                                <span class="status-badge status-stopped" id="scheduler-status">-</span>
+                            </div>
+                            <div class="text-xs text-muted" id="next-run">-</div>
+                        </div>
+                        <div class="scheduler-controls">
+                            <button class="btn btn-sm btn-primary" onclick="startScheduler()" id="start-btn">
+                                <i class="bi bi-play"></i> Start
+                            </button>
+                            <button class="btn btn-sm btn-secondary" onclick="stopScheduler()" id="stop-btn">
+                                <i class="bi bi-stop"></i> Stop
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Listings and Price Changes -->
+            <div class="grid grid-cols-3">
+                <div class="card" style="grid-column: span 2;">
+                    <div class="card-header">
+                        <h5><i class="bi bi-list-ul"></i> Recent Listings</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-container">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Title</th>
+                                        <th>Price</th>
+                                        <th>Location</th>
+                                        <th>Category</th>
+                                        <th>Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="listings-table">
+                                    <tr>
+                                        <td colspan="5" class="text-center">
+                                            <div class="loading"></div> Loading...
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h5><i class="bi bi-graph-up"></i> Recent Price Changes</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-container">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Item</th>
+                                        <th>Change</th>
+                                        <th>Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="price-changes-table">
+                                    <tr>
+                                        <td colspan="3" class="text-center">
+                                            <div class="loading"></div> Loading...
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Last Scrape Info -->
+            <div class="system-info">
+                <div class="system-info-item">
+                    <span class="system-info-label">Last Scrape:</span>
+                    <span class="system-info-value" id="last-scrape">-</span>
+                </div>
+                <div class="system-info-item">
+                    <span class="system-info-label">Database Size:</span>
+                    <span class="system-info-value" id="db-size">-</span>
+                </div>
+                <div class="system-info-item">
+                    <span class="system-info-label">Status:</span>
+                    <span class="badge bg-secondary" id="system-status">Loading</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container">
+        <div id="notification-toast" class="toast" role="alert">
+            <div class="toast-body" id="toast-message">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div>Default message</div>
+                    <button type="button" class="btn-sm" style="background: none; border: none; cursor: pointer;" data-bs-dismiss="toast">
+                        <i class="bi bi-x"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        let toast;
+
+        document.addEventListener('DOMContentLoaded', function() {
+            toast = new bootstrap.Toast(document.getElementById('notification-toast'));
+            loadData();
+            // Refresh data every 30 seconds
+            setInterval(loadData, 30000);
+        });
+
+        function showNotification(message, type = 'info') {
+            const toastElement = document.getElementById('notification-toast');
+            const toastBody = document.getElementById('toast-message');
+            const toastContent = `
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div>${message}</div>
+                    <button type="button" class="btn-sm" style="background: none; border: none; cursor: pointer;" data-bs-dismiss="toast">
+                        <i class="bi bi-x"></i>
+                    </button>
+                </div>
+            `;
+            
+            toastBody.innerHTML = toastContent;
+            toastElement.className = `toast toast-${type}`;
+            toast.show();
+        }
+
+        async function loadData() {
+            try {
+                await Promise.all([
+                    loadStats(),
+                    loadListings(),
+                    loadPriceChanges()
+                ]);
+            } catch (error) {
+                console.error('Error loading data:', error);
+                showNotification('Error loading data', 'danger');
+            }
+        }
+
+        async function loadStats() {
+            try {
+                const response = await fetch('/api/stats');
+                const result = await response.json();
+                
+                if (result.success) {
+                    const data = result.data;
+                    document.getElementById('total-listings').textContent = data.total_listings || 0;
+                    document.getElementById('listings-today').textContent = data.listings_today || 0;
+                    document.getElementById('price-changes').textContent = data.price_changes || 0;
+                    document.getElementById('last-scrape').textContent = data.last_scrape || 'Never';
+                    document.getElementById('db-size').textContent = data.db_size || 'Unknown';
+                    
+                    // Scheduler status
+                    const scheduler = data.scheduler || {};
+                    const isRunning = scheduler.scheduler_running || false;
+                    const statusElement = document.getElementById('scheduler-status');
+                    const nextRunElement = document.getElementById('next-run');
+                    const statusBadge = document.getElementById('system-status');
+                    
+                    if (isRunning) {
+                        statusElement.textContent = 'Running';
+                        statusElement.className = 'status-badge status-running';
+                        nextRunElement.textContent = scheduler.next_run || 'Unknown';
+                        statusBadge.textContent = 'Active';
+                        statusBadge.className = 'badge bg-success';
+                    } else {
+                        statusElement.textContent = 'Stopped';
+                        statusElement.className = 'status-badge status-stopped';
+                        nextRunElement.textContent = 'Not scheduled';
+                        statusBadge.textContent = 'Inactive';
+                        statusBadge.className = 'badge bg-warning';
+                    }
+                }
+            } catch (error) {
+                console.error('Error loading stats:', error);
+            }
+        }
+
+        async function loadListings() {
+            try {
+                const response = await fetch('/api/listings?limit=20');
+                const result = await response.json();
+                
+                if (result.success) {
+                    const tbody = document.getElementById('listings-table');
+                    tbody.innerHTML = '';
+                    
+                    if (result.data.length === 0) {
+                        tbody.innerHTML = '<tr><td colspan="5" class="text-center text-muted">No listings found</td></tr>';
+                        return;
+                    }
+                    
+                    result.data.forEach(listing => {
+                        const row = document.createElement('tr');
+                        const createdAt = new Date(listing.created_at).toLocaleDateString();
+                        
+                        row.innerHTML = `
+                            <td>
+                                <div class="fw-bold truncate" style="max-width: 240px;" title="${listing.title || 'N/A'}">${listing.title || 'N/A'}</div>
+                                ${listing.seller_name ? `<div class="text-xs text-muted">by ${listing.seller_name}</div>` : ''}
+                            </td>
+                            <td>
+                                <span class="fw-bold">${listing.price_display || 'N/A'}</span>
+                            </td>
+                            <td>${listing.seller_location || 'N/A'}</td>
+                            <td><span class="badge bg-secondary">${listing.category || 'other'}</span></td>
+                            <td><span class="text-xs">${createdAt}</span></td>
+                        `;
+                        tbody.appendChild(row);
+                    });
+                }
+            } catch (error) {
+                console.error('Error loading listings:', error);
+            }
+        }
+
+        async function loadPriceChanges() {
+            try {
+                const response = await fetch('/api/price-changes?limit=10');
+                const result = await response.json();
+                
+                if (result.success) {
+                    const tbody = document.getElementById('price-changes-table');
+                    tbody.innerHTML = '';
+                    
+                    if (result.data.length === 0) {
+                        tbody.innerHTML = '<tr><td colspan="3" class="text-center text-muted">No price changes</td></tr>';
+                        return;
+                    }
+                    
+                    result.data.forEach(change => {
+                        const row = document.createElement('tr');
+                        const detectedAt = new Date(change.detected_at).toLocaleDateString();
+                        const changeClass = change.change_amount > 0 ? 'price-increase' : 'price-decrease';
+                        const changeIcon = change.change_amount > 0 ? '↑' : '↓';
+                        
+                        row.innerHTML = `
+                            <td>
+                                <div class="fw-bold truncate" style="max-width: 180px;" title="${change.title}">
+                                    ${change.title || 'N/A'}
+                                </div>
+                            </td>
+                            <td>
+                                <span class="${changeClass}">${changeIcon} ${change.change_display}</span>
+                            </td>
+                            <td><span class="text-xs">${detectedAt}</span></td>
+                        `;
+                        tbody.appendChild(row);
+                    });
+                }
+            } catch (error) {
+                console.error('Error loading price changes:', error);
+            }
+        }
+
+        function refreshData() {
+            loadData();
+            showNotification('Data refreshed', 'success');
+        }
+
+        async function startScheduler() {
+            try {
+                const response = await fetch('/api/scheduler/start', { method: 'POST' });
+                const result = await response.json();
+                
+                if (result.success) {
+                    showNotification('Scheduler started successfully', 'success');
+                    loadStats(); // Refresh stats
+                } else {
+                    showNotification(result.message || 'Failed to start scheduler', 'danger');
+                }
+            } catch (error) {
+                console.error('Error starting scheduler:', error);
+                showNotification('Error starting scheduler', 'danger');
+            }
+        }
+
+        async function stopScheduler() {
+            try {
+                const response = await fetch('/api/scheduler/stop', { method: 'POST' });
+                const result = await response.json();
+                
+                if (result.success) {
+                    showNotification('Scheduler stopped successfully', 'info');
+                    loadStats(); // Refresh stats
+                } else {
+                    showNotification(result.message || 'Failed to stop scheduler', 'danger');
+                }
+            } catch (error) {
+                console.error('Error stopping scheduler:', error);
+                showNotification('Error stopping scheduler', 'danger');
+            }
+        }
+
+        async function runScrape() {
+            try {
+                showNotification('Starting manual scrape...', 'info');
+                
+                const response = await fetch('/api/scrape/run', { method: 'POST' });
+                const result = await response.json();
+                
+                if (result.success) {
+                    showNotification(`Scraping completed! Found ${result.listings_found} listings in ${result.duration_seconds}s`, 'success');
+                    loadData(); // Refresh all data
+                } else {
+                    showNotification(result.error || 'Scraping failed', 'danger');
+                }
+            } catch (error) {
+                console.error('Error running scrape:', error);
+                showNotification('Error running scrape', 'danger');
+            }
+        }
+    </script>
+</body>
+</html>

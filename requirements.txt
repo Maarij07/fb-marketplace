@@ -1,0 +1,12 @@
+selenium
+beautifulsoup4
+requests
+schedule
+flask
+flask-cors
+pandas
+plotly
+python-dotenv
+webdriver-manager
+apscheduler
+sqlalchemy

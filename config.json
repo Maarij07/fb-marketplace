@@ -1,0 +1,12 @@
+{
+  "facebook_credentials": {
+    "email": "nawazali1026@gmail.com",
+    "password": "ali1245"
+  },
+  "default_location": "Sydney, Australia",
+  "app_settings": {
+    "auto_login": true,
+    "child_mode": true,
+    "show_credentials_form": false
+  }
+}

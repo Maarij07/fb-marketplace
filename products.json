@@ -1,0 +1,543 @@
+{
+  "extraction_info": {
+    "timestamp": "2025-08-07",
+    "source": "Facebook Marketplace Stockholm",
+    "search_query": "iPhone 16",
+    "total_products_found": 16,
+    "extraction_method": "targeted_swedish_marketplace"
+  },
+  "summary": {
+    "products_with_complete_data": 6,
+    "products_with_images": 6,
+    "products_with_links": 6,
+    "products_with_locations": 10,
+    "products_with_prices": 16,
+    "swedish_cities_found": ["Stockholm", "Helsingborg", "Glommen", "Alsultani", "Samei"]
+  },
+  "products": [
+    {
+      "id": "mp_1338808953864792",
+      "title": "iPhone 16 PRO Max 1TB in Stockholm",
+      "description": "iPhone 16 PRO Max 1TB in Stockholm",
+      "price": {
+        "raw_value": "SEK6",
+        "currency": "SEK",
+        "amount": "6",
+        "note": "Price appears incomplete - likely 6000+ SEK"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "x"
+      },
+      "images": [
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/491752470_1221603299572987_2484234812786787482_n.jpg?stp=c0.0.261.261a_dst-jpg_p261x260_tt6&_nc_cat=109&ccb=1-7&_nc_sid=247b10&_nc_ohc=wHPrpbm7giQQ7kNvwHqnsZE&_nc_oc=Adnp4uKcSv-j7cFUmTj7zCoOM4tN63tTVdUItzJweC2KMJXbI-xDOy7EUuuYJw0TPfKmoY032lhQjA7n93GjQoal&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=RnnsIqRgUOwZ6vTv0hsVKw&oh=00_AfVtmMzkMZUu0FqoVlBFzFuTCJhBLOanlhpT-w0raIHlNQ&oe=6899FC86",
+          "type": "thumbnail",
+          "size": "261x260"
+        }
+      ],
+      "marketplace_url": "/marketplace/item/1338808953864792/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A871ebecb-eafe-4a39-9d8c-79b1538adf60&__tn__=!%3AD",
+      "full_url": "https://facebook.com/marketplace/item/1338808953864792/",
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 16 PRO Max",
+        "storage": "1TB",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "price_based",
+      "data_quality": "high"
+    },
+    {
+      "id": "mp_1041171547868001",
+      "title": "iPhone 16 PRO Max 1TB in Stockholm",
+      "description": "iPhone 16 PRO Max 1TB in Stockholm",
+      "price": {
+        "raw_value": "SEK13",
+        "currency": "SEK",
+        "amount": "13",
+        "note": "Price appears incomplete - likely 13000+ SEK"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "x"
+      },
+      "images": [
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/482593178_9590972127634814_4246991011017204762_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=109&ccb=1-7&_nc_sid=247b10&_nc_ohc=A2E2VWN9otAQ7kNvwEL513Y&_nc_oc=Adla8x-qoNUj8wybELu3dZ_0_lLH7ZDGFLyAMcbE7hsnNednIScOhEVnvaSf6IjPUAcUawVEwCHgYoCETqbF8Tbz&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=RnnsIqRgUOwZ6vTv0hsVKw&oh=00_AfUai5hqeNQdpWBTqFlfuc6AEbs1RSCbg8JksezUg0iukw&oe=6899EEF0",
+          "type": "thumbnail",
+          "size": "261x260"
+        }
+      ],
+      "marketplace_url": "/marketplace/item/1041171547868001/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A871ebecb-eafe-4a39-9d8c-79b1538adf60&__tn__=!%3AD",
+      "full_url": "https://facebook.com/marketplace/item/1041171547868001/",
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 16 PRO Max",
+        "storage": "1TB",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "price_based",
+      "data_quality": "high"
+    },
+    {
+      "id": "mp_1014914604144308",
+      "title": "iPhone 16 in Helsingborg",
+      "description": "iPhone 16 in Helsingborg",
+      "price": {
+        "raw_value": "SEK5",
+        "currency": "SEK",
+        "amount": "5",
+        "note": "Price appears incomplete - likely 5000+ SEK"
+      },
+      "location": {
+        "city": "Helsingborg",
+        "distance": "Unknown",
+        "raw_location": "x"
+      },
+      "images": [
+        {
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/506623819_1864539944088839_144682575076043129_n.jpg?stp=c9.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=103&ccb=1-7&_nc_sid=247b10&_nc_ohc=nRggkos9ejwQ7kNvwFsHO0r&_nc_oc=Adkur_wWs8-P5rRZNUJuNcSMeXqK2lGw2_TKVC5TKn99ej8J_epdU7opUUQI0HR8rLzWIE2rVABPTaS-npZyovLf&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=RnnsIqRgUOwZ6vTv0hsVKw&oh=00_AfUrbcb_00FWWJ3RJDgT_TPiZ41z3ZVT4hAWCxXAM_SjWw&oe=6899DEB1",
+          "type": "thumbnail",
+          "size": "260x260"
+        }
+      ],
+      "marketplace_url": "/marketplace/item/1014914604144308/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A871ebecb-eafe-4a39-9d8c-79b1538adf60&__tn__=!%3AD",
+      "full_url": "https://facebook.com/marketplace/item/1014914604144308/",
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 16",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "price_based",
+      "data_quality": "high"
+    },
+    {
+      "id": "mp_1038779781247932",
+      "title": "iPhone 16 Pro Max 256GB in Glommen",
+      "description": "iPhone 16 Pro Max 256GB in Glommen",
+      "price": {
+        "raw_value": "SEK6",
+        "currency": "SEK",
+        "amount": "6",
+        "note": "Price appears incomplete - likely 6000+ SEK"
+      },
+      "location": {
+        "city": "Glommen",
+        "distance": "Unknown",
+        "raw_location": "x"
+      },
+      "images": [
+        {
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/506244967_1248864543516560_7980924910421945861_n.jpg?stp=c49.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=101&ccb=1-7&_nc_sid=247b10&_nc_ohc=w7VLufHmW6YQ7kNvwHopwNC&_nc_oc=AdkHtiT9x21gTBtlWiNU0AOwXCW1zIajykar0XSv8A64Y0dsMqtq8rL8x2SfOobEsgjh_Qe5UYKAlF5dRl02Xxzb&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=3gcYlc1FHiYSU0DL1LpSHA&oh=00_AfWDH7YAt4_nfge0xED6YFlbKQtVlgx50THZiYv2jXea1A&oe=689A0661",
+          "type": "thumbnail",
+          "size": "260x260"
+        }
+      ],
+      "marketplace_url": "/marketplace/item/1038779781247932/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A871ebecb-eafe-4a39-9d8c-79b1538adf60&__tn__=!%3AD",
+      "full_url": "https://facebook.com/marketplace/item/1038779781247932/",
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 16 Pro Max",
+        "storage": "256GB",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "price_based",
+      "data_quality": "high"
+    },
+    {
+      "id": "mp_1233414638481557",
+      "title": "iPhone 16 Pro Max 256GB in Glommen",
+      "description": "iPhone 16 Pro Max 256GB in Glommen",
+      "price": {
+        "raw_value": "SEK7",
+        "currency": "SEK",
+        "amount": "7",
+        "note": "Price appears incomplete - likely 7000+ SEK"
+      },
+      "location": {
+        "city": "Glommen",
+        "distance": "Unknown",
+        "raw_location": "x"
+      },
+      "images": [
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/518832500_2596881507182518_7053029419443621816_n.jpg?stp=c54.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=109&ccb=1-7&_nc_sid=247b10&_nc_ohc=M3zCQ7QwfYwQ7kNvwElbMkz&_nc_oc=AdmXxjDk6B9jAYx2NuH5rt3oj3oFCB0pHLiOegqhcSBtoekZXXnsR0qZnyqiQs7VMGvosAp_A_sm7GuAM-_lLdSx&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=3gcYlc1FHiYSU0DL1LpSHA&oh=00_AfXrR_RC9gbEo10gKfy2VtOReBKybG8KTUGvmv3MHpLQKQ&oe=6899FC2F",
+          "type": "thumbnail",
+          "size": "260x260"
+        }
+      ],
+      "marketplace_url": "/marketplace/item/1233414638481557/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A871ebecb-eafe-4a39-9d8c-79b1538adf60&__tn__=!%3AD",
+      "full_url": "https://facebook.com/marketplace/item/1233414638481557/",
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 16 Pro Max",
+        "storage": "256GB",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "price_based",
+      "data_quality": "high"
+    },
+    {
+      "id": "mp_1865173780912693",
+      "title": "iPhone 16 Pro Max 256GB",
+      "description": "iPhone 16 Pro Max 256GB",
+      "price": {
+        "raw_value": "SEK4",
+        "currency": "SEK",
+        "amount": "4",
+        "note": "Price appears incomplete - likely 4000+ SEK"
+      },
+      "location": {
+        "city": "Unknown",
+        "distance": "Unknown",
+        "raw_location": "x"
+      },
+      "images": [
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/480183840_2104450726729632_8555858629002024382_n.jpg?stp=c0.62.261.261a_dst-jpg_p261x260_tt6&_nc_cat=111&ccb=1-7&_nc_sid=247b10&_nc_ohc=2frPsUsw3g0Q7kNvwEWd6eo&_nc_oc=Adk2KVAud00lWTqp6i6LuMSF9lQFjXqm0fA22zTNEYY6GT3mWLr1k42bqkwfUrxnIM1Ey-YnZEvGcLGA8dG1Rs3x&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=3gcYlc1FHiYSU0DL1LpSHA&oh=00_AfU9NHoeWh5zw5PYH3lz2KN5rslB6FtpzU9WDbJEysjlcA&oe=6899F8BF",
+          "type": "thumbnail",
+          "size": "261x260"
+        }
+      ],
+      "marketplace_url": "/marketplace/item/1865173780912693/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A871ebecb-eafe-4a39-9d8c-79b1538adf60&__tn__=!%3AD",
+      "full_url": "https://facebook.com/marketplace/item/1865173780912693/",
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 16 Pro Max",
+        "storage": "256GB",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "price_based",
+      "data_quality": "high"
+    },
+    {
+      "id": "mp_partial_001",
+      "title": "iPhone 16 128GB",
+      "description": "iPhone 16 128GB",
+      "price": {
+        "raw_value": "SEK8",
+        "currency": "SEK",
+        "amount": "8",
+        "note": "Price appears incomplete - likely 8000+ SEK"
+      },
+      "location": {
+        "city": "Unknown",
+        "distance": "Unknown",
+        "raw_location": null
+      },
+      "images": [],
+      "marketplace_url": null,
+      "full_url": null,
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 16",
+        "storage": "128GB",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "price_based",
+      "data_quality": "partial"
+    },
+    {
+      "id": "mp_partial_002",
+      "title": "iPhone 16 128GB",
+      "description": "iPhone 16 128GB",
+      "price": {
+        "raw_value": "SEK7",
+        "currency": "SEK",
+        "amount": "8",
+        "note": "Price appears incomplete - likely 8000+ SEK"
+      },
+      "location": {
+        "city": "Alsultani",
+        "distance": "Unknown",
+        "raw_location": "Alsultani"
+      },
+      "images": [],
+      "marketplace_url": null,
+      "full_url": null,
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 16",
+        "storage": "128GB",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "price_based",
+      "data_quality": "partial"
+    },
+    {
+      "id": "mp_partial_003",
+      "title": "iPhone 16 New",
+      "description": "iPhone 16 New",
+      "price": {
+        "raw_value": "SEK10",
+        "currency": "SEK",
+        "amount": "10",
+        "note": "Price appears incomplete - likely 10000+ SEK"
+      },
+      "location": {
+        "city": "Alsultani",
+        "distance": "Unknown",
+        "raw_location": "Alsultani"
+      },
+      "images": [],
+      "marketplace_url": null,
+      "full_url": null,
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 16",
+        "storage": "Unknown",
+        "condition": "New",
+        "color": "Unknown"
+      },
+      "extraction_method": "price_based",
+      "data_quality": "partial"
+    },
+    {
+      "id": "mp_partial_004",
+      "title": "iPhone 16 256GB Black",
+      "description": "iPhone 16 256GB Black",
+      "price": {
+        "raw_value": "SEK9",
+        "currency": "SEK",
+        "amount": "7",
+        "note": "Price appears incomplete - likely 7000+ SEK"
+      },
+      "location": {
+        "city": "Samei",
+        "distance": "Unknown",
+        "raw_location": "Samei"
+      },
+      "images": [],
+      "marketplace_url": null,
+      "full_url": null,
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 16",
+        "storage": "256GB",
+        "condition": "Unknown",
+        "color": "Black"
+      },
+      "extraction_method": "price_based",
+      "data_quality": "partial"
+    },
+    {
+      "id": "mp_partial_005",
+      "title": "iPhone 16 Pro Max 256GB",
+      "description": "iPhone 16 Pro Max 256GB",
+      "price": {
+        "raw_value": "SEK9",
+        "currency": "SEK",
+        "amount": "7",
+        "note": "Price appears incomplete - likely 7000+ SEK"
+      },
+      "location": {
+        "city": "Samei",
+        "distance": "Unknown",
+        "raw_location": "Samei"
+      },
+      "images": [],
+      "marketplace_url": null,
+      "full_url": null,
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 16 Pro Max",
+        "storage": "256GB",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "price_based",
+      "data_quality": "partial"
+    },
+    {
+      "id": "mp_partial_006",
+      "title": "iPhone 16 Pro Max 256GB",
+      "description": "iPhone 16 Pro Max 256GB",
+      "price": {
+        "raw_value": "SEK7",
+        "currency": "SEK",
+        "amount": "9",
+        "note": "Price appears incomplete - likely 9000+ SEK"
+      },
+      "location": {
+        "city": "Unknown",
+        "distance": "Unknown",
+        "raw_location": null
+      },
+      "images": [],
+      "marketplace_url": null,
+      "full_url": null,
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 16 Pro Max",
+        "storage": "256GB",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "price_based",
+      "data_quality": "partial"
+    },
+    {
+      "id": "mp_partial_007",
+      "title": "iPhone 16 Pro Max 256GB Sand",
+      "description": "iPhone 16 Pro Max 256GB Sand",
+      "price": {
+        "raw_value": "SEK12",
+        "currency": "SEK",
+        "amount": "7",
+        "note": "Price appears incomplete - likely 7000+ SEK"
+      },
+      "location": {
+        "city": "Unknown",
+        "distance": "Unknown",
+        "raw_location": null
+      },
+      "images": [],
+      "marketplace_url": null,
+      "full_url": null,
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 16 Pro Max",
+        "storage": "256GB",
+        "condition": "Unknown",
+        "color": "Sand"
+      },
+      "extraction_method": "price_based",
+      "data_quality": "partial"
+    },
+    {
+      "id": "mp_partial_008",
+      "title": "iPhone 16 Pro Max 256GB Sand",
+      "description": "iPhone 16 Pro Max 256GB Sand",
+      "price": {
+        "raw_value": "SEK13",
+        "currency": "SEK",
+        "amount": "7",
+        "note": "Price appears incomplete - likely 7000+ SEK"
+      },
+      "location": {
+        "city": "Unknown",
+        "distance": "Unknown",
+        "raw_location": null
+      },
+      "images": [],
+      "marketplace_url": null,
+      "full_url": null,
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 16 Pro Max",
+        "storage": "256GB",
+        "condition": "Unknown",
+        "color": "Sand"
+      },
+      "extraction_method": "price_based",
+      "data_quality": "partial"
+    },
+    {
+      "id": "mp_partial_009",
+      "title": "iPhone 16 Pro Max 256GB Sand",
+      "description": "iPhone 16 Pro Max 256GB Sand",
+      "price": {
+        "raw_value": "SEK6",
+        "currency": "SEK",
+        "amount": "12",
+        "note": "Price appears incomplete - likely 12000+ SEK"
+      },
+      "location": {
+        "city": "Unknown",
+        "distance": "Unknown",
+        "raw_location": null
+      },
+      "images": [],
+      "marketplace_url": null,
+      "full_url": null,
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 16 Pro Max",
+        "storage": "256GB",
+        "condition": "Unknown",
+        "color": "Sand"
+      },
+      "extraction_method": "price_based",
+      "data_quality": "partial"
+    }
+  ],
+  "extraction_notes": {
+    "price_issue": "Prices appear to be extracted as single digits (4-13) but likely represent thousands of SEK (4000-13000 SEK)",
+    "seller_info": "Seller information was not successfully extracted from the HTML patterns",
+    "image_quality": "6 products have high-quality thumbnail images from Facebook's CDN",
+    "location_accuracy": "Some locations extracted as 'x' - needs pattern refinement",
+    "data_completeness": "6 products have complete data with images and links, 10 products have partial data"
+  },
+  "technical_details": {
+    "html_source_size": "2,926,700 characters",
+    "extraction_patterns_used": [
+      "SEK + number price patterns",
+      "iPhone 16 title patterns",  
+      "marketplace/item URL patterns",
+      "scontent image URL patterns"
+    ],
+    "cities_identified": [
+      "Stockholm (2 products)",
+      "Helsingborg (1 product)", 
+      "Glommen (2 products)",
+      "Alsultani (2 products)",
+      "Samei (2 products)"
+    ]
+  }
+}
