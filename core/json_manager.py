@@ -92,6 +92,12 @@ class JSONDataManager:
         """Add a single product with duplicate checking."""
         data = self.load_data()
         
+        # Validate title first
+        title = product_data.get('title', '').strip()
+        if not self._is_valid_title(title):
+            self.logger.warning(f"Skipping product with invalid title: '{title}'")
+            return False
+        
         # Check for duplicates
         if self.is_duplicate(product_data, data["products"]):
             self.logger.debug(f"Duplicate product skipped: {product_data.get('title', 'Unknown')}")
@@ -118,17 +124,65 @@ class JSONDataManager:
         
         return success
     
+    def _is_valid_title(self, title: str) -> bool:
+        """Check if a title is valid for a product listing."""
+        if not title or len(title.strip()) <= 3:
+            return False
+        
+        title = title.strip()
+        
+        # Invalid titles to filter out
+        import re
+        invalid_patterns = [
+            r'^SEK\d+',  # SEK followed by numbers
+            r'^\$\d+',   # Dollar sign followed by numbers
+            r'^\d+\s*kr',  # Numbers followed by "kr"
+            r'^Create new listing$',  # Facebook UI text
+            r'^Loading',  # Loading states
+            r'^\d+$',     # Pure numbers
+            r'^[\d,]+$',  # Numbers with commas only
+        ]
+        
+        for pattern in invalid_patterns:
+            if re.match(pattern, title, re.IGNORECASE):
+                return False
+        
+        # Additional checks
+        if title.lower().startswith('sek') and any(c.isdigit() for c in title):
+            return False
+        
+        if title.replace(',', '').replace('.', '').isdigit():
+            return False
+        
+        # Valid titles should contain meaningful text (at least one letter)
+        if not any(c.isalpha() for c in title):
+            return False
+        
+        return True
+    
     def add_products_batch(self, products: List[Dict[str, Any]]) -> Dict[str, int]:
         """Add multiple products with duplicate checking."""
         data = self.load_data()
+        
+        # Cleanup old data before adding new products
+        self.cleanup_old_data(data)
+        
         stats = {
             'added': 0,
             'duplicates': 0,
-            'errors': 0
+            'errors': 0,
+            'invalid_titles': 0
         }
         
         for product_data in products:
             try:
+                # Validate title first
+                title = product_data.get('title', '').strip()
+                if not self._is_valid_title(title):
+                    self.logger.warning(f"Skipping product with invalid title: '{title}'")
+                    stats['invalid_titles'] += 1
+                    continue
+                
                 # Check for duplicates
                 if self.is_duplicate(product_data, data["products"]):
                     stats['duplicates'] += 1
@@ -163,13 +217,13 @@ class JSONDataManager:
     def is_duplicate(self, new_product: Dict[str, Any], existing_products: List[Dict[str, Any]]) -> bool:
         """Check if a product is a duplicate based on ID and title similarity."""
         new_id = new_product.get('id')
-        new_title = new_product.get('title', '').lower().strip()
-        new_url = new_product.get('marketplace_url', '').strip()
+        new_title = (new_product.get('title') or '').lower().strip()
+        new_url = (new_product.get('marketplace_url') or '').strip()
         
         for existing in existing_products:
             existing_id = existing.get('id')
-            existing_title = existing.get('title', '').lower().strip()
-            existing_url = existing.get('marketplace_url', '').strip()
+            existing_title = (existing.get('title') or '').lower().strip()
+            existing_url = (existing.get('marketplace_url') or '').strip()
             
             # Check exact ID match
             if new_id and existing_id and new_id == existing_id:
@@ -297,6 +351,21 @@ class JSONDataManager:
         data = self.load_data()
         products = data.get("products", [])
         
+        # Fix missing timestamps for existing products
+        current_time = datetime.now().isoformat()
+        for product in products:
+            if not product.get('added_at'):
+                product['added_at'] = current_time
+            if not product.get('created_at'):
+                product['created_at'] = product.get('added_at', current_time)
+            # Fix seller info for dashboard display
+            if not product.get('seller_name'):
+                seller_info = product.get('seller', {}).get('info', 'Unknown Seller')
+                product['seller_name'] = seller_info if seller_info != 'Not extracted' else 'Private Seller'
+        
+        # Save updated data back to file
+        self.save_data(data)
+        
         # Sort by added_at timestamp (most recent first)
         sorted_products = sorted(
             products,
@@ -379,3 +448,94 @@ class JSONDataManager:
                 matches.append(product)
         
         return matches[:limit]
+    
+    def cleanup_old_data(self, data: Dict[str, Any], retention_hours: int = 48) -> int:
+        """Remove products older than retention period."""
+        try:
+            from datetime import datetime, timedelta
+            
+            cutoff_time = datetime.now() - timedelta(hours=retention_hours)
+            products = data.get("products", [])
+            sessions = data.get("scraping_sessions", [])
+            
+            # Filter out old products
+            original_count = len(products)
+            data["products"] = [
+                product for product in products
+                if self._is_product_recent(product, cutoff_time)
+            ]
+            removed_products = original_count - len(data["products"])
+            
+            # Filter out old sessions
+            original_sessions = len(sessions)
+            data["scraping_sessions"] = [
+                session for session in sessions
+                if self._is_session_recent(session, cutoff_time)
+            ]
+            removed_sessions = original_sessions - len(data["scraping_sessions"])
+            
+            total_removed = removed_products + removed_sessions
+            
+            if total_removed > 0:
+                self.logger.info(f"Cleaned up {removed_products} old products and {removed_sessions} old sessions")
+                # Update summary after cleanup
+                self.update_summary(data)
+            
+            return total_removed
+            
+        except Exception as e:
+            self.logger.error(f"Failed to cleanup old data: {e}")
+            return 0
+    
+    def _is_product_recent(self, product: Dict[str, Any], cutoff_time: datetime) -> bool:
+        """Check if product is recent enough to keep."""
+        try:
+            added_at_str = product.get('added_at', '')
+            if not added_at_str:
+                # If no timestamp, keep the product (could be legacy data)
+                return True
+            
+            # Parse the timestamp
+            if 'T' in added_at_str:
+                # ISO format
+                added_at = datetime.fromisoformat(added_at_str.replace('Z', '+00:00'))
+            else:
+                # Simple date format
+                added_at = datetime.strptime(added_at_str, '%Y-%m-%d')
+            
+            # Remove timezone info for comparison if present
+            if added_at.tzinfo is not None:
+                added_at = added_at.replace(tzinfo=None)
+            
+            return added_at >= cutoff_time
+            
+        except Exception as e:
+            self.logger.debug(f"Could not parse timestamp for product {product.get('id', 'unknown')}: {e}")
+            # If we can't parse the timestamp, keep the product to be safe
+            return True
+    
+    def _is_session_recent(self, session: Dict[str, Any], cutoff_time: datetime) -> bool:
+        """Check if scraping session is recent enough to keep."""
+        try:
+            start_time_str = session.get('start_time', '')
+            if not start_time_str:
+                return True
+            
+            # Parse the timestamp
+            if 'T' in start_time_str:
+                # ISO format
+                start_time = datetime.fromisoformat(start_time_str.replace('Z', '+00:00'))
+            else:
+                # Simple date format
+                start_time = datetime.strptime(start_time_str, '%Y-%m-%d')
+            
+            # Remove timezone info for comparison if present
+            if start_time.tzinfo is not None:
+                start_time = start_time.replace(tzinfo=None)
+            
+            return start_time >= cutoff_time
+            
+        except Exception as e:
+            self.logger.debug(f"Could not parse timestamp for session: {e}")
+            # If we can't parse the timestamp, keep the session to be safe
+            return True

@@ -2540,3 +2540,526 @@ Stacktrace:
 2025-08-07 08:50:35,419 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (2): localhost:52798
 2025-08-07 08:50:37,476 - selenium.webdriver.remote.remote_connection - DEBUG - DELETE http://localhost:52798/session/a786c6161fe96c17ca08e837ea7a581f {}
 2025-08-07 08:50:37,477 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:52798
+2025-08-12 00:09:15,406 - core.database - INFO - Database initialized successfully
+2025-08-12 00:09:15,430 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-12 00:09:25,207 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-12 00:09:25,224 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-12 00:09:25,383 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-08-12 00:09:25,384 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-12 00:09:25,391 - werkzeug - INFO -  * Restarting with stat
+2025-08-12 00:09:28,489 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-12 00:09:28,505 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-12 00:09:28,551 - werkzeug - WARNING -  * Debugger is active!
+2025-08-12 00:09:28,615 - werkzeug - INFO -  * Debugger PIN: 765-752-686
+2025-08-12 00:09:34,387 - werkzeug - INFO - 127.0.0.1 - - [12/Aug/2025 00:09:34] "GET / HTTP/1.1" 200 -
+2025-08-12 00:09:35,047 - werkzeug - INFO - 127.0.0.1 - - [12/Aug/2025 00:09:35] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-12 00:09:35,050 - werkzeug - INFO - 127.0.0.1 - - [12/Aug/2025 00:09:35] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-12 00:09:35,056 - werkzeug - INFO - 127.0.0.1 - - [12/Aug/2025 00:09:35] "GET /api/stats HTTP/1.1" 200 -
+2025-08-12 00:09:43,569 - core.scheduler - INFO - Starting custom scraping job for: iphone 15
+2025-08-12 00:09:47,271 - core.scraper - INFO - Chrome WebDriver initialized successfully
+2025-08-12 00:09:47,272 - core.scraper - INFO - Starting Facebook login...
+2025-08-12 00:10:05,057 - werkzeug - INFO - 127.0.0.1 - - [12/Aug/2025 00:10:05] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-12 00:10:05,061 - werkzeug - INFO - 127.0.0.1 - - [12/Aug/2025 00:10:05] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-12 00:10:05,065 - werkzeug - INFO - 127.0.0.1 - - [12/Aug/2025 00:10:05] "GET /api/stats HTTP/1.1" 200 -
+2025-08-12 00:10:35,052 - werkzeug - INFO - 127.0.0.1 - - [12/Aug/2025 00:10:35] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-12 00:10:35,057 - werkzeug - INFO - 127.0.0.1 - - [12/Aug/2025 00:10:35] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-12 00:10:35,061 - werkzeug - INFO - 127.0.0.1 - - [12/Aug/2025 00:10:35] "GET /api/stats HTTP/1.1" 200 -
+2025-08-12 00:10:53,288 - core.scraper - INFO - Successfully logged in to Facebook
+2025-08-12 00:10:53,288 - core.scraper - INFO - Navigating to Facebook Marketplace with search: iphone 15
+2025-08-12 00:10:53,289 - core.scraper - INFO - Opening marketplace URL: https://www.facebook.com/marketplace
+2025-08-12 00:11:00,455 - core.scraper - INFO - Navigating to custom search: https://www.facebook.com/marketplace/stockholm/search/?query=iphone%2015
+2025-08-12 00:11:05,053 - werkzeug - INFO - 127.0.0.1 - - [12/Aug/2025 00:11:05] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-12 00:11:05,057 - werkzeug - INFO - 127.0.0.1 - - [12/Aug/2025 00:11:05] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-12 00:11:05,062 - werkzeug - INFO - 127.0.0.1 - - [12/Aug/2025 00:11:05] "GET /api/stats HTTP/1.1" 200 -
+2025-08-12 00:11:05,309 - core.scraper - ERROR - Failed to navigate to Marketplace with custom search: type object 'By' has no attribute 'TEXT'
+2025-08-12 00:11:07,844 - core.scheduler - INFO - Custom scraping completed: {'success': True, 'listings_found': 0, 'duration_seconds': 84.3, 'start_time': '2025-08-12T00:09:43.570443', 'end_time': '2025-08-12T00:11:07.844742', 'search_query': 'iphone 15'}
+2025-08-12 00:11:12,029 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001AA2F187ED0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/2854cb87cf24d7ea61c6c3c7b5d04c67
+2025-08-12 00:11:16,112 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001AA2F3B0190>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/2854cb87cf24d7ea61c6c3c7b5d04c67
+2025-08-12 00:11:20,149 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001AA2F18A520>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/2854cb87cf24d7ea61c6c3c7b5d04c67
+2025-08-12 00:11:28,312 - werkzeug - INFO - 127.0.0.1 - - [12/Aug/2025 00:11:28] "POST /api/scrape/custom HTTP/1.1" 200 -
+2025-08-12 00:11:28,392 - werkzeug - INFO - 127.0.0.1 - - [12/Aug/2025 00:11:28] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-12 00:11:28,490 - werkzeug - INFO - 127.0.0.1 - - [12/Aug/2025 00:11:28] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-12 00:11:28,492 - werkzeug - INFO - 127.0.0.1 - - [12/Aug/2025 00:11:28] "GET /api/stats HTTP/1.1" 200 -
+2025-08-12 00:11:35,041 - werkzeug - INFO - 127.0.0.1 - - [12/Aug/2025 00:11:35] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-12 00:11:35,043 - werkzeug - INFO - 127.0.0.1 - - [12/Aug/2025 00:11:35] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-12 00:11:35,045 - werkzeug - INFO - 127.0.0.1 - - [12/Aug/2025 00:11:35] "GET /api/stats HTTP/1.1" 200 -
+2025-08-12 00:17:44,846 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-12 00:17:44,864 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-12 00:17:44,945 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-08-12 00:17:44,946 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-12 00:17:44,953 - werkzeug - INFO -  * Restarting with stat
+2025-08-12 00:17:47,838 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-12 00:17:47,855 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-12 00:17:47,899 - werkzeug - WARNING -  * Debugger is active!
+2025-08-12 00:17:47,913 - werkzeug - INFO -  * Debugger PIN: 765-752-686
+2025-08-12 00:17:48,296 - werkzeug - INFO - 127.0.0.1 - - [12/Aug/2025 00:17:48] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-12 00:17:48,298 - werkzeug - INFO - 127.0.0.1 - - [12/Aug/2025 00:17:48] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-12 00:17:48,299 - werkzeug - INFO - 127.0.0.1 - - [12/Aug/2025 00:17:48] "GET /api/stats HTTP/1.1" 200 -
+2025-08-12 00:17:51,000 - werkzeug - INFO - 127.0.0.1 - - [12/Aug/2025 00:17:51] "GET / HTTP/1.1" 200 -
+2025-08-12 00:17:51,139 - werkzeug - INFO - 127.0.0.1 - - [12/Aug/2025 00:17:51] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-12 00:17:51,141 - werkzeug - INFO - 127.0.0.1 - - [12/Aug/2025 00:17:51] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-12 00:17:51,144 - werkzeug - INFO - 127.0.0.1 - - [12/Aug/2025 00:17:51] "GET /api/stats HTTP/1.1" 200 -
+2025-08-12 00:18:02,044 - core.scheduler - INFO - Starting custom scraping job for: iphone 15
+2025-08-12 00:18:04,907 - core.scraper - INFO - Chrome WebDriver initialized successfully
+2025-08-12 00:18:04,907 - core.scraper - INFO - Starting Facebook login...
+2025-08-12 00:18:21,154 - werkzeug - INFO - 127.0.0.1 - - [12/Aug/2025 00:18:21] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-12 00:18:21,157 - werkzeug - INFO - 127.0.0.1 - - [12/Aug/2025 00:18:21] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-12 00:18:21,161 - werkzeug - INFO - 127.0.0.1 - - [12/Aug/2025 00:18:21] "GET /api/stats HTTP/1.1" 200 -
+2025-08-12 00:18:45,285 - werkzeug - INFO - 127.0.0.1 - - [12/Aug/2025 00:18:45] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-12 00:18:45,286 - werkzeug - INFO - 127.0.0.1 - - [12/Aug/2025 00:18:45] "GET /api/stats HTTP/1.1" 200 -
+2025-08-12 00:18:45,287 - werkzeug - INFO - 127.0.0.1 - - [12/Aug/2025 00:18:45] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-12 00:18:51,153 - werkzeug - INFO - 127.0.0.1 - - [12/Aug/2025 00:18:51] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-12 00:18:51,156 - werkzeug - INFO - 127.0.0.1 - - [12/Aug/2025 00:18:51] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-12 00:18:51,158 - werkzeug - INFO - 127.0.0.1 - - [12/Aug/2025 00:18:51] "GET /api/stats HTTP/1.1" 200 -
+2025-08-12 00:18:57,605 - core.scraper - INFO - Successfully logged in to Facebook
+2025-08-12 00:18:57,605 - core.scraper - INFO - Navigating to Facebook Marketplace with search: iphone 15
+2025-08-12 00:18:57,606 - core.scraper - INFO - Opening marketplace URL: https://www.facebook.com/marketplace
+2025-08-12 00:19:03,448 - core.scraper - INFO - Navigating to custom search: https://www.facebook.com/marketplace/stockholm/search/?query=iphone%2015
+2025-08-12 00:19:09,410 - core.scraper - ERROR - Failed to navigate to Marketplace with custom search: type object 'By' has no attribute 'TEXT'
+2025-08-12 00:19:11,793 - core.scheduler - INFO - Custom scraping completed: {'success': True, 'listings_found': 0, 'duration_seconds': 69.7, 'start_time': '2025-08-12T00:18:02.044639', 'end_time': '2025-08-12T00:19:11.793183', 'search_query': 'iphone 15'}
+2025-08-12 00:19:15,922 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000024F47B27750>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/c31f80f7796b745cef7cc00bc3038c09
+2025-08-12 00:19:19,993 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000024F47B26FD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/c31f80f7796b745cef7cc00bc3038c09
+2025-08-12 00:19:21,159 - werkzeug - INFO - 127.0.0.1 - - [12/Aug/2025 00:19:21] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-12 00:19:21,160 - werkzeug - INFO - 127.0.0.1 - - [12/Aug/2025 00:19:21] "GET /api/stats HTTP/1.1" 200 -
+2025-08-12 00:19:21,161 - werkzeug - INFO - 127.0.0.1 - - [12/Aug/2025 00:19:21] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-12 00:19:24,100 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000024F47B2F360>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/c31f80f7796b745cef7cc00bc3038c09
+2025-08-12 00:19:32,214 - werkzeug - INFO - 127.0.0.1 - - [12/Aug/2025 00:19:32] "POST /api/scrape/custom HTTP/1.1" 200 -
+2025-08-12 00:19:32,281 - werkzeug - INFO - 127.0.0.1 - - [12/Aug/2025 00:19:32] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-12 00:19:32,285 - werkzeug - INFO - 127.0.0.1 - - [12/Aug/2025 00:19:32] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-12 00:19:32,288 - werkzeug - INFO - 127.0.0.1 - - [12/Aug/2025 00:19:32] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:02:52,380 - core.database - INFO - Database initialized successfully
+2025-08-13 00:02:52,383 - core.database - INFO - Database initialized successfully
+2025-08-13 00:02:52,383 - __main__ - INFO - Database initialized successfully
+2025-08-13 00:03:05,975 - core.database - INFO - Database initialized successfully
+2025-08-13 00:03:05,987 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-13 00:03:12,263 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-13 00:03:12,265 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-13 00:03:12,327 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-08-13 00:03:12,327 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-13 00:03:12,331 - werkzeug - INFO -  * Restarting with stat
+2025-08-13 00:03:12,983 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-13 00:03:12,986 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-13 00:03:12,997 - werkzeug - WARNING -  * Debugger is active!
+2025-08-13 00:03:13,004 - werkzeug - INFO -  * Debugger PIN: 765-752-686
+2025-08-13 00:03:19,654 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:03:19] "GET / HTTP/1.1" 200 -
+2025-08-13 00:03:19,796 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:03:19] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:03:19,797 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:03:19] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:03:19,802 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:03:19] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:03:27,694 - core.scheduler - INFO - Starting custom scraping job for: iphone 14
+2025-08-13 00:03:30,748 - core.scraper - INFO - Chrome WebDriver initialized successfully
+2025-08-13 00:03:30,748 - core.scraper - INFO - Starting Facebook login...
+2025-08-13 00:03:49,805 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:03:49] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:03:49,807 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:03:49] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:03:49,808 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:03:49] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:04:20,323 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:04:20] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:04:20,324 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:04:20] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:04:20,326 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:04:20] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:04:37,553 - core.scraper - INFO - Successfully logged in to Facebook
+2025-08-13 00:04:37,555 - core.scraper - INFO - Navigating to Facebook Marketplace with search: iphone 14
+2025-08-13 00:04:37,555 - core.scraper - INFO - Opening marketplace URL: https://www.facebook.com/marketplace
+2025-08-13 00:04:44,411 - core.scraper - INFO - Navigating to custom search: https://www.facebook.com/marketplace/stockholm/search/?query=iphone%2014
+2025-08-13 00:04:50,320 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:04:50] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:04:50,324 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:04:50] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:04:50,326 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:04:50] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:04:50,878 - core.scraper - ERROR - Failed to navigate to Marketplace with custom search: type object 'By' has no attribute 'TEXT'
+2025-08-13 00:04:53,511 - core.scheduler - INFO - Custom scraping completed: {'success': True, 'listings_found': 0, 'duration_seconds': 85.8, 'start_time': '2025-08-13T00:03:27.695055', 'end_time': '2025-08-13T00:04:53.509335', 'search_query': 'iphone 14'}
+2025-08-13 00:04:57,582 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C14E5A4050>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/9c91a7cc52944b16803c6d0f1de3c79e
+2025-08-13 00:05:01,639 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C14E5A42D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/9c91a7cc52944b16803c6d0f1de3c79e
+2025-08-13 00:05:05,709 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C14E3CF820>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/9c91a7cc52944b16803c6d0f1de3c79e
+2025-08-13 00:05:13,830 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:05:13] "POST /api/scrape/custom HTTP/1.1" 200 -
+2025-08-13 00:05:13,863 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:05:13] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:05:14,040 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:05:14] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:05:14,042 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:05:14] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:05:20,329 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:05:20] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:05:20,333 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:05:20] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:05:20,336 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:05:20] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:05:50,315 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:05:50] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:05:50,319 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:05:50] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:05:50,320 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:05:50] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:08:44,492 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-13 00:08:44,494 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-13 00:08:44,541 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-08-13 00:08:44,541 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-13 00:08:44,543 - werkzeug - INFO -  * Restarting with stat
+2025-08-13 00:08:45,575 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-13 00:08:45,583 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-13 00:08:45,602 - werkzeug - WARNING -  * Debugger is active!
+2025-08-13 00:08:45,633 - werkzeug - INFO -  * Debugger PIN: 765-752-686
+2025-08-13 00:08:49,638 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:08:49] "GET / HTTP/1.1" 200 -
+2025-08-13 00:08:49,751 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:08:49] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:08:49,852 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:08:49] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:08:49,854 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:08:49] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:08:56,139 - core.scheduler - INFO - Starting custom scraping job for: iphone 14
+2025-08-13 00:08:58,014 - core.scraper - INFO - Chrome WebDriver initialized successfully
+2025-08-13 00:08:58,014 - core.scraper - INFO - Starting Facebook login...
+2025-08-13 00:09:19,759 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:09:19] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:09:19,764 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:09:19] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:09:19,784 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:09:19] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:09:38,336 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:09:38] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:09:38,440 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:09:38] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:09:38,445 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:09:38] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:09:49,764 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:09:49] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:09:49,785 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:09:49] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:09:49,791 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:09:49] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:09:51,875 - core.scraper - INFO - Successfully logged in to Facebook
+2025-08-13 00:09:51,876 - core.scraper - INFO - Navigating to Facebook Marketplace with search: iphone 14
+2025-08-13 00:09:51,876 - core.scraper - INFO - Opening marketplace URL: https://www.facebook.com/marketplace
+2025-08-13 00:09:58,523 - core.scraper - INFO - Navigating to custom search: https://www.facebook.com/marketplace/stockholm/search/?query=iphone%2014
+2025-08-13 00:10:03,893 - core.scraper - ERROR - Failed to navigate to Marketplace with custom search: type object 'By' has no attribute 'TEXT'
+2025-08-13 00:10:06,303 - core.scheduler - INFO - Custom scraping completed: {'success': True, 'listings_found': 0, 'duration_seconds': 70.2, 'start_time': '2025-08-13T00:08:56.140296', 'end_time': '2025-08-13T00:10:06.302721', 'search_query': 'iphone 14'}
+2025-08-13 00:10:10,371 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000175C8BB4050>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/a00e39d3b0f6bf18fbfabf75f7847a64
+2025-08-13 00:10:14,426 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000175C8BB42D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/a00e39d3b0f6bf18fbfabf75f7847a64
+2025-08-13 00:10:18,465 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000175C8A1EEA0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/a00e39d3b0f6bf18fbfabf75f7847a64
+2025-08-13 00:10:19,760 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:10:19] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:10:19,789 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:10:19] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:10:19,792 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:10:19] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:10:26,630 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:10:26] "POST /api/scrape/custom HTTP/1.1" 200 -
+2025-08-13 00:10:26,644 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:10:26] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:10:26,665 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:10:26] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:10:26,687 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:10:26] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:18:40,566 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-13 00:18:40,569 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-13 00:18:40,606 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-08-13 00:18:40,606 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-13 00:18:40,614 - werkzeug - INFO -  * Restarting with stat
+2025-08-13 00:18:41,235 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-13 00:18:41,237 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-13 00:18:41,254 - werkzeug - WARNING -  * Debugger is active!
+2025-08-13 00:18:41,264 - werkzeug - INFO -  * Debugger PIN: 765-752-686
+2025-08-13 00:18:44,976 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:18:44] "GET / HTTP/1.1" 200 -
+2025-08-13 00:18:45,163 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:18:45] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:18:45,166 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:18:45] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:18:45,172 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:18:45] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:18:49,703 - core.scheduler - INFO - Starting custom scraping job for: iphone 14
+2025-08-13 00:18:51,525 - core.scraper - INFO - Chrome WebDriver initialized successfully
+2025-08-13 00:18:51,526 - core.scraper - INFO - Starting Facebook login...
+2025-08-13 00:19:15,171 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:19:15] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:19:15,241 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:19:15] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:19:15,245 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:19:15] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:19:44,352 - core.scraper - INFO - Successfully logged in to Facebook
+2025-08-13 00:19:44,352 - core.scraper - INFO - Navigating to Facebook Marketplace with search: iphone 14
+2025-08-13 00:19:44,353 - core.scraper - INFO - Opening marketplace URL: https://www.facebook.com/marketplace
+2025-08-13 00:19:45,171 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:19:45] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:19:45,172 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:19:45] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:19:45,186 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:19:45] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:19:53,030 - core.scraper - INFO - Navigating to custom search: https://www.facebook.com/marketplace/stockholm/search/?query=iphone%2014
+2025-08-13 00:20:09,747 - core.scraper - INFO - Successfully navigated to Marketplace with search: iphone 14
+2025-08-13 00:20:09,748 - core.scraper - INFO - Extracting iphone 14 listings from current page...
+2025-08-13 00:20:15,172 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:20:15] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:20:15,197 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:20:15] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:20:15,202 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:20:15] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:20:45,163 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:20:45] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:20:45,243 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:20:45] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:20:45,260 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:20:45] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:21:02,109 - core.scraper - WARNING - No listing elements found
+2025-08-13 00:21:02,109 - core.scraper - INFO - Raw extraction returned 0 listings for 'iphone 14'
+2025-08-13 00:21:02,110 - core.scraper - WARNING - No listings extracted from page for 'iphone 14', but continuing...
+2025-08-13 00:21:02,125 - core.scraper - WARNING - No iphone 14 listings extracted to save
+2025-08-13 00:21:02,126 - core.scraper - INFO - Total results for 'iphone 14': 0 listings
+2025-08-13 00:21:02,126 - core.scraper - INFO - Custom scraping completed. Total listings: 0
+2025-08-13 00:21:04,616 - core.scheduler - INFO - Custom scraping completed: {'success': True, 'listings_found': 0, 'duration_seconds': 134.9, 'start_time': '2025-08-13T00:18:49.704147', 'end_time': '2025-08-13T00:21:04.588203', 'search_query': 'iphone 14'}
+2025-08-13 00:21:08,692 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002A9AC77C050>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/a89f175f4823343efc24f48a587a25e1
+2025-08-13 00:21:12,762 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002A9AC77C2D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/a89f175f4823343efc24f48a587a25e1
+2025-08-13 00:21:15,162 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:21:15] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:21:15,164 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:21:15] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:21:15,174 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:21:15] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:21:16,821 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002A9AC58F230>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/a89f175f4823343efc24f48a587a25e1
+2025-08-13 00:21:24,928 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:21:24] "POST /api/scrape/custom HTTP/1.1" 200 -
+2025-08-13 00:21:24,938 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:21:24] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:21:24,954 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:21:24] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:21:24,955 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:21:24] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:36:11,494 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-13 00:36:11,497 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-13 00:36:11,538 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-08-13 00:36:11,539 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-13 00:36:11,545 - werkzeug - INFO -  * Restarting with stat
+2025-08-13 00:36:12,336 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-13 00:36:12,339 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-13 00:36:12,367 - werkzeug - WARNING -  * Debugger is active!
+2025-08-13 00:36:12,373 - werkzeug - INFO -  * Debugger PIN: 765-752-686
+2025-08-13 00:36:20,426 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:36:20] "GET / HTTP/1.1" 200 -
+2025-08-13 00:36:20,616 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:36:20] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:36:20,617 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-13 00:36:20,626 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:36:20] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:36:20,636 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:36:20] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:36:27,414 - core.scheduler - INFO - Starting custom scraping job for: iphone 15
+2025-08-13 00:36:29,065 - core.scraper - INFO - Chrome WebDriver initialized successfully
+2025-08-13 00:36:29,065 - core.scraper - INFO - Starting Facebook login...
+2025-08-13 00:36:50,622 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:36:50] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:36:50,654 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:36:50] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:36:50,660 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:36:50] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:37:20,681 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:37:20] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:37:20,707 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:37:20] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:37:20,712 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:37:20] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:37:22,830 - core.scraper - INFO - Successfully logged in to Facebook
+2025-08-13 00:37:22,830 - core.scraper - INFO - Navigating to Facebook Marketplace with search: iphone 15
+2025-08-13 00:37:22,831 - core.scraper - INFO - Opening marketplace URL: https://www.facebook.com/marketplace
+2025-08-13 00:37:35,201 - core.scraper - INFO - Navigating to custom search: https://www.facebook.com/marketplace/stockholm/search/?query=iphone%2015
+2025-08-13 00:37:50,633 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:37:50] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:37:50,715 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-13 00:37:50,722 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:37:50] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:37:50,745 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:37:50] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:37:51,549 - core.scraper - INFO - Successfully navigated to Marketplace with search: iphone 15
+2025-08-13 00:37:51,550 - core.scraper - INFO - Extracting iphone 15 listings from current page...
+2025-08-13 00:38:20,625 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:38:20] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:38:20,628 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-13 00:38:20,638 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:38:20] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:38:20,663 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:38:20] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:38:50,625 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:38:50] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:38:50,627 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:38:50] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:38:50,640 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:38:50] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:39:15,016 - core.scraper - INFO - Found 2 elements with selector: div[aria-label*='Marketplace']
+2025-08-13 00:39:20,629 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:39:20] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:39:20,654 - core.json_manager - ERROR - Failed to load JSON data: Expecting property name enclosed in double quotes: line 738 column 9 (char 24268)
+2025-08-13 00:39:20,657 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:39:20] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:39:20,675 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:39:20] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:39:35,367 - core.scraper - INFO - Successfully extracted listing: Create new listing... Price: 0 SEK ID: mp_gen_1755027565_0
+2025-08-13 00:39:37,795 - core.scraper - INFO - Successfully extracted listing: SEK5,600... Price: 5600 SEK ID: mp_1919176872145523
+2025-08-13 00:39:37,796 - core.scraper - INFO - Successfully extracted 2 listings
+2025-08-13 00:39:37,796 - core.scraper - INFO - Raw extraction returned 2 listings for 'iphone 15'
+2025-08-13 00:39:37,796 - core.scraper - INFO - Attempting to save 2 iphone 15 listings to JSON...
+2025-08-13 00:39:37,808 - core.json_manager - INFO - Batch operation completed: 1 added, 1 duplicates, 0 errors
+2025-08-13 00:39:37,809 - core.scraper - INFO - JSON save stats: 1 added, 1 duplicates, 0 errors
+2025-08-13 00:39:37,809 - core.scraper - INFO - Found listing 1: Create new listing...
+2025-08-13 00:39:37,809 - core.scraper - INFO - Found listing 2: SEK5,600...
+2025-08-13 00:39:37,810 - core.scraper - INFO - Final count for 'iphone 15': 2 listings will be returned
+2025-08-13 00:39:37,810 - core.scraper - INFO - Custom scraping completed. Total listings: 2
+2025-08-13 00:39:40,337 - core.scheduler - INFO - Custom scraping completed: {'success': True, 'listings_found': 2, 'duration_seconds': 192.9, 'start_time': '2025-08-13T00:36:27.415200', 'end_time': '2025-08-13T00:39:40.315098', 'search_query': 'iphone 15'}
+2025-08-13 00:39:44,396 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001AF1C620050>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/13c15911f393edac17acc2e2d35c6ceb
+2025-08-13 00:39:48,464 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001AF1C6202D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/13c15911f393edac17acc2e2d35c6ceb
+2025-08-13 00:39:50,635 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:39:50] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:39:50,638 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-13 00:39:50,649 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:39:50] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:39:50,730 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:39:50] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:39:52,523 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001AF1C3EF230>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/13c15911f393edac17acc2e2d35c6ceb
+2025-08-13 00:40:00,625 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:40:00] "POST /api/scrape/custom HTTP/1.1" 200 -
+2025-08-13 00:40:00,705 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:40:00] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:40:00,745 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:40:00] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:40:00,784 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:40:00] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:40:20,620 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:40:20] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:40:20,643 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:40:20] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:40:20,645 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:40:20] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:40:31,482 - core.scheduler - INFO - Starting custom scraping job for: iphone 13
+2025-08-13 00:40:33,156 - core.scraper - INFO - Chrome WebDriver initialized successfully
+2025-08-13 00:40:33,156 - core.scraper - INFO - Starting Facebook login...
+2025-08-13 00:40:50,626 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:40:50] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:40:50,628 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:40:50] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:40:50,636 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:40:50] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:41:20,625 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:41:20] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:41:20,643 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:41:20] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:41:20,653 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:41:20] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:41:39,715 - core.scraper - INFO - Successfully logged in to Facebook
+2025-08-13 00:41:39,716 - core.scraper - INFO - Navigating to Facebook Marketplace with search: iphone 13
+2025-08-13 00:41:39,716 - core.scraper - INFO - Opening marketplace URL: https://www.facebook.com/marketplace
+2025-08-13 00:41:44,538 - core.scraper - INFO - Navigating to custom search: https://www.facebook.com/marketplace/stockholm/search/?query=iphone%2013
+2025-08-13 00:41:50,619 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:41:50] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:41:50,640 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:41:50] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:41:50,652 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:41:50] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:41:59,616 - core.scraper - INFO - Successfully navigated to Marketplace with search: iphone 13
+2025-08-13 00:41:59,616 - core.scraper - INFO - Extracting iphone 13 listings from current page...
+2025-08-13 00:42:20,619 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:42:20] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:42:20,638 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-13 00:42:20,642 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:42:20] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:42:20,656 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:42:20] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:42:50,622 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:42:50] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:42:50,625 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:42:50] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:42:50,627 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:42:50] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:43:20,620 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:43:20] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:43:20,641 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:43:20] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:43:20,644 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:43:20] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:43:23,170 - core.scraper - INFO - Found 2 elements with selector: div[aria-label*='Marketplace']
+2025-08-13 00:43:43,509 - core.scraper - INFO - Successfully extracted listing: Create new listing... Price: 0 SEK ID: mp_gen_1755027813_0
+2025-08-13 00:43:45,665 - core.scraper - INFO - Successfully extracted listing: SEK165... Price: 165 SEK ID: mp_1387903588937108
+2025-08-13 00:43:45,666 - core.scraper - INFO - Successfully extracted 2 listings
+2025-08-13 00:43:45,666 - core.scraper - INFO - Raw extraction returned 2 listings for 'iphone 13'
+2025-08-13 00:43:45,667 - core.scraper - INFO - Attempting to save 2 iphone 13 listings to JSON...
+2025-08-13 00:43:45,690 - core.json_manager - INFO - Batch operation completed: 1 added, 1 duplicates, 0 errors
+2025-08-13 00:43:45,690 - core.scraper - INFO - JSON save stats: 1 added, 1 duplicates, 0 errors
+2025-08-13 00:43:45,691 - core.scraper - INFO - Found listing 1: Create new listing...
+2025-08-13 00:43:45,691 - core.scraper - INFO - Found listing 2: SEK165...
+2025-08-13 00:43:45,692 - core.scraper - INFO - Final count for 'iphone 13': 2 listings will be returned
+2025-08-13 00:43:45,692 - core.scraper - INFO - Custom scraping completed. Total listings: 2
+2025-08-13 00:43:48,126 - core.scheduler - INFO - Custom scraping completed: {'success': True, 'listings_found': 2, 'duration_seconds': 196.6, 'start_time': '2025-08-13T00:40:31.482650', 'end_time': '2025-08-13T00:43:48.112810', 'search_query': 'iphone 13'}
+2025-08-13 00:43:50,622 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:43:50] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:43:50,628 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:43:50] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:43:50,629 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:43:50] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:43:52,194 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001AF1C3DE7A0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/ffc92688518730d57e5d7f2b21813afc
+2025-08-13 00:43:56,265 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001AF1C3DE9C0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/ffc92688518730d57e5d7f2b21813afc
+2025-08-13 00:44:00,334 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001AF1C3DE690>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/ffc92688518730d57e5d7f2b21813afc
+2025-08-13 00:44:08,425 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:44:08] "POST /api/scrape/custom HTTP/1.1" 200 -
+2025-08-13 00:44:08,442 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:44:08] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:44:08,461 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-13 00:44:08,468 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:44:08] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:44:08,483 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:44:08] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:44:20,624 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:44:20] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:44:20,626 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:44:20] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:44:20,643 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:44:20] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:44:43,647 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-13 00:44:43,650 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-13 00:44:43,675 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-08-13 00:44:43,675 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-13 00:44:43,678 - werkzeug - INFO -  * Restarting with stat
+2025-08-13 00:44:44,281 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-13 00:44:44,284 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-13 00:44:44,362 - werkzeug - WARNING -  * Debugger is active!
+2025-08-13 00:44:44,367 - werkzeug - INFO -  * Debugger PIN: 765-752-686
+2025-08-13 00:44:48,297 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:44:48] "GET / HTTP/1.1" 200 -
+2025-08-13 00:44:48,400 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:44:48] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:44:48,426 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:44:48] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:44:48,427 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:44:48] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:45:00,688 - core.scheduler - INFO - Starting custom scraping job for: iphone 14
+2025-08-13 00:45:02,733 - core.scraper - INFO - Chrome WebDriver initialized successfully
+2025-08-13 00:45:02,733 - core.scraper - INFO - Starting Facebook login...
+2025-08-13 00:45:18,411 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:45:18] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:45:18,439 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:45:18] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:45:18,440 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:45:18] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:45:49,313 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:45:49] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:45:49,343 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:45:49] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:45:49,346 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:45:49] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:45:59,423 - core.scraper - INFO - Successfully logged in to Facebook
+2025-08-13 00:45:59,424 - core.scraper - INFO - Navigating to Facebook Marketplace with search: iphone 14
+2025-08-13 00:45:59,424 - core.scraper - INFO - Opening marketplace URL: https://www.facebook.com/marketplace
+2025-08-13 00:46:07,158 - core.scraper - INFO - Navigating to custom search: https://www.facebook.com/marketplace/stockholm/search/?query=iphone%2014
+2025-08-13 00:46:18,414 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:46:18] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:46:18,417 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:46:18] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:46:18,427 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:46:18] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:46:22,778 - core.scraper - INFO - Successfully navigated to Marketplace with search: iphone 14
+2025-08-13 00:46:22,779 - core.scraper - INFO - Extracting iphone 14 listings from current page...
+2025-08-13 00:46:48,410 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:46:48] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:46:48,435 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-13 00:46:48,441 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:46:48] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:46:48,474 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:46:48] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:47:18,413 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:47:18] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:47:18,451 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:47:18] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:47:18,454 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:47:18] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:47:47,078 - core.scraper - INFO - Found 2 elements with selector: div[aria-label*='Marketplace']
+2025-08-13 00:47:48,411 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:47:48] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:47:48,431 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-13 00:47:48,436 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:47:48] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:47:48,454 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:47:48] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:48:07,362 - core.scraper - INFO - Successfully extracted listing: Create new listing... Price: 0 SEK ID: mp_gen_1755028077_0
+2025-08-13 00:48:09,216 - core.scraper - INFO - Successfully extracted listing: SEK6,500... Price: 12 USD ID: mp_1291349209069589
+2025-08-13 00:48:09,217 - core.scraper - INFO - Successfully extracted 2 listings
+2025-08-13 00:48:09,217 - core.scraper - INFO - Raw extraction returned 2 listings for 'iphone 14'
+2025-08-13 00:48:09,218 - core.scraper - INFO - Attempting to save 2 iphone 14 listings to JSON...
+2025-08-13 00:48:09,227 - core.json_manager - INFO - Batch operation completed: 1 added, 1 duplicates, 0 errors
+2025-08-13 00:48:09,228 - core.scraper - INFO - JSON save stats: 1 added, 1 duplicates, 0 errors
+2025-08-13 00:48:09,228 - core.scraper - INFO - Found listing 1: Create new listing...
+2025-08-13 00:48:09,229 - core.scraper - INFO - Found listing 2: SEK6,500...
+2025-08-13 00:48:09,229 - core.scraper - INFO - Final count for 'iphone 14': 2 listings will be returned
+2025-08-13 00:48:09,230 - core.scraper - INFO - Custom scraping completed. Total listings: 2
+2025-08-13 00:48:11,812 - core.scheduler - INFO - Custom scraping completed: {'success': True, 'listings_found': 2, 'duration_seconds': 191.1, 'start_time': '2025-08-13T00:45:00.689397', 'end_time': '2025-08-13T00:48:11.786787', 'search_query': 'iphone 14'}
+2025-08-13 00:48:15,857 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D6DEC2C050>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/7f5f6d91f392d15a846a327c0714062f
+2025-08-13 00:48:18,408 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:48:18] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:48:18,409 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-13 00:48:18,418 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:48:18] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:48:18,438 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:48:18] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:48:19,904 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D6DEC2C2D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/7f5f6d91f392d15a846a327c0714062f
+2025-08-13 00:48:23,955 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D6DE9CEC40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/7f5f6d91f392d15a846a327c0714062f
+2025-08-13 00:51:58,029 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-13 00:51:58,032 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-13 00:51:58,061 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-08-13 00:51:58,062 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-13 00:51:58,064 - werkzeug - INFO -  * Restarting with stat
+2025-08-13 00:51:58,920 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-13 00:51:58,928 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-13 00:51:58,959 - werkzeug - WARNING -  * Debugger is active!
+2025-08-13 00:51:59,022 - werkzeug - INFO -  * Debugger PIN: 765-752-686
+2025-08-13 00:52:03,824 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:52:03] "GET / HTTP/1.1" 200 -
+2025-08-13 00:52:04,032 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:52:04] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:52:04,053 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:52:04] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:52:04,075 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:52:04] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:52:10,382 - core.scheduler - INFO - Starting custom scraping job for: iphone 14
+2025-08-13 00:52:12,112 - core.scraper - INFO - Chrome WebDriver initialized successfully
+2025-08-13 00:52:12,112 - core.scraper - INFO - Starting Facebook login...
+2025-08-13 00:52:34,046 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:52:34] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:52:34,135 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:52:34] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:52:34,136 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:52:34] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:52:38,314 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:52:38] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:52:38,334 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:52:38] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:52:38,343 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:52:38] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:53:04,099 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:53:04] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:53:04,222 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:53:04] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:53:04,240 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:53:04] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:53:04,252 - core.scraper - INFO - Successfully logged in to Facebook
+2025-08-13 00:53:04,253 - core.scraper - INFO - Navigating to Facebook Marketplace with search: iphone 14
+2025-08-13 00:53:04,254 - core.scraper - INFO - Opening marketplace URL: https://www.facebook.com/marketplace
+2025-08-13 00:53:11,410 - core.scraper - INFO - Navigating to custom search: https://www.facebook.com/marketplace/stockholm/search/?query=iphone%2014
+2025-08-13 00:53:26,191 - core.scraper - INFO - Successfully navigated to Marketplace with search: iphone 14
+2025-08-13 00:53:26,192 - core.scraper - INFO - Extracting iphone 14 listings from current page...
+2025-08-13 00:53:34,036 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:53:34] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:53:34,068 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:53:34] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:53:34,072 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:53:34] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:54:04,085 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:54:04] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:54:04,124 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:54:04] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:54:04,137 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:54:04] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:54:34,033 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:54:34] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:54:34,054 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:54:34] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:54:34,069 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:54:34] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:54:49,856 - core.scraper - INFO - Found 2 elements with selector: div[aria-label*='Marketplace']
+2025-08-13 00:55:04,074 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:55:04] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:55:04,109 - core.json_manager - ERROR - Failed to load JSON data: Expecting ':' delimiter: line 202 column 16 (char 7995)
+2025-08-13 00:55:04,113 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:55:04] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:55:04,134 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:55:04] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:55:10,203 - core.scraper - INFO - Successfully extracted listing: Create new listing... Price: 0 SEK ID: mp_gen_1755028500_0
+2025-08-13 00:55:11,559 - core.scraper - INFO - Successfully extracted listing: IPhone 14 Pro 128GB Deep Purple... Price: 7500 USD ID: mp_1291349209069589
+2025-08-13 00:55:11,560 - core.scraper - INFO - Successfully extracted 2 listings
+2025-08-13 00:55:11,560 - core.scraper - INFO - Raw extraction returned 2 listings for 'iphone 14'
+2025-08-13 00:55:11,561 - core.scraper - INFO - Attempting to save 2 iphone 14 listings to JSON...
+2025-08-13 00:55:11,573 - core.json_manager - INFO - Batch operation completed: 2 added, 0 duplicates, 0 errors
+2025-08-13 00:55:11,574 - core.scraper - INFO - JSON save stats: 2 added, 0 duplicates, 0 errors
+2025-08-13 00:55:11,575 - core.scraper - INFO - Found listing 1: Create new listing...
+2025-08-13 00:55:11,575 - core.scraper - INFO - Found listing 2: IPhone 14 Pro 128GB Deep Purple...
+2025-08-13 00:55:11,576 - core.scraper - INFO - Final count for 'iphone 14': 2 listings will be returned
+2025-08-13 00:55:11,576 - core.scraper - INFO - Custom scraping completed. Total listings: 2
+2025-08-13 00:55:14,631 - core.scheduler - INFO - Custom scraping completed: {'success': True, 'listings_found': 2, 'duration_seconds': 184.1, 'start_time': '2025-08-13T00:52:10.383034', 'end_time': '2025-08-13T00:55:14.511583', 'search_query': 'iphone 14'}
+2025-08-13 00:55:18,761 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000018473E57D90>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/87975c80c9c43811970063878a9d6e02
+2025-08-13 00:55:22,908 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000018474060190>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/87975c80c9c43811970063878a9d6e02
+2025-08-13 00:55:26,954 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000018473E5ED70>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/87975c80c9c43811970063878a9d6e02
+2025-08-13 00:55:34,097 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:55:34] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:55:34,114 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-13 00:55:34,129 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:55:34] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:55:34,190 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:55:34] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:55:39,201 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:55:39] "POST /api/scrape/custom HTTP/1.1" 200 -
+2025-08-13 00:55:39,230 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:55:39] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:55:39,256 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:55:39] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:55:39,258 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:55:39] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 00:56:04,032 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:56:04] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 00:56:04,100 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-13 00:56:04,107 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:56:04] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 00:56:04,154 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 00:56:04] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 01:00:44,807 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-13 01:00:44,810 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-13 01:00:44,851 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-08-13 01:00:44,853 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-13 01:00:44,856 - werkzeug - INFO -  * Restarting with stat
+2025-08-13 01:00:45,618 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-13 01:00:45,621 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-13 01:00:45,638 - werkzeug - WARNING -  * Debugger is active!
+2025-08-13 01:00:45,647 - werkzeug - INFO -  * Debugger PIN: 765-752-686
+2025-08-13 01:01:21,138 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-13 01:01:21,141 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-13 01:01:21,169 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-08-13 01:01:21,169 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-13 01:01:21,171 - werkzeug - INFO -  * Restarting with stat
+2025-08-13 01:01:21,957 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-13 01:01:21,960 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-13 01:01:21,974 - werkzeug - WARNING -  * Debugger is active!
+2025-08-13 01:01:21,978 - werkzeug - INFO -  * Debugger PIN: 765-752-686
+2025-08-13 01:01:27,053 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 01:01:27] "GET / HTTP/1.1" 200 -
+2025-08-13 01:01:27,196 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 01:01:27] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-13 01:01:27,214 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 01:01:27] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-13 01:01:27,379 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 01:01:27] "GET /api/stats HTTP/1.1" 200 -
+2025-08-13 01:01:36,306 - core.scheduler - INFO - Starting custom scraping job for: iphone 12
+2025-08-13 01:01:38,341 - core.scraper - INFO - Chrome WebDriver initialized successfully
+2025-08-13 01:01:38,341 - core.scraper - INFO - Starting Facebook login...

@@ -109,6 +109,13 @@ def create_app(settings):
                 if isinstance(location_info, dict):
                     city = location_info.get('city', 'Unknown')
                     formatted_listing['seller_location'] = city
+                else:
+                    formatted_listing['seller_location'] = 'Unknown'
+                
+                # Add seller name if missing
+                if not formatted_listing.get('seller_name'):
+                    seller_info = formatted_listing.get('seller', {}).get('info', 'Private Seller')
+                    formatted_listing['seller_name'] = seller_info if seller_info != 'Not extracted' else 'Private Seller'
                 
                 # Add category field for dashboard display
                 product_details = formatted_listing.get('product_details', {})
@@ -269,6 +276,22 @@ def create_app(settings):
             return jsonify(result)
         except Exception as e:
             logger.error(f"Failed to run manual scraping: {e}")
+            return jsonify({'success': False, 'error': str(e)})
+    
+    @app.route('/api/scrape/custom', methods=['POST'])
+    def api_run_custom_scrape():
+        """Run scraper with custom search query."""
+        try:
+            data = request.get_json()
+            search_query = data.get('query', '').strip()
+            
+            if not search_query:
+                return jsonify({'success': False, 'error': 'Search query is required'})
+            
+            result = scheduler_manager.run_custom_scraping(search_query)
+            return jsonify(result)
+        except Exception as e:
+            logger.error(f"Failed to run custom scraping: {e}")
             return jsonify({'success': False, 'error': str(e)})
     
     @app.route('/api/search')

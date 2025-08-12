@@ -207,7 +207,7 @@ class FacebookMarketplaceScraper:
                 self.wait.until(
                     EC.any_of(
                         EC.presence_of_element_located((By.CSS_SELECTOR, "[data-surface='marketplace']")),
-                        EC.presence_of_element_located((By.TEXT, "Marketplace")),
+                        EC.presence_of_element_located((By.XPATH, "//*[contains(text(), 'Marketplace')]")),
                         EC.presence_of_element_located((By.CSS_SELECTOR, "[aria-label*='Marketplace']"))
                     )
                 )
@@ -280,13 +280,20 @@ class FacebookMarketplaceScraper:
             # Wait a bit for dynamic content to load
             self._random_delay(2, 4)
             
-            # Find listing containers - try multiple selectors
+            # Find listing containers - try multiple selectors (updated for current Facebook)
             listing_selectors = [
                 "[data-surface-wrapper='1'] > div > div",
                 "[role='main'] [data-surface-wrapper='1'] > div",
                 "div[data-surface-wrapper] > div > div",
+                "[data-surface-wrapper] div[role='article']",
+                "[data-surface-wrapper] > div > div > div",
+                "div[role='main'] div[role='article']",
+                "[data-testid*='marketplace']",
+                "div[data-testid*='marketplace-item']",
+                "div[aria-label*='Marketplace']",
+                "a[href*='/marketplace/item/']",
                 ".marketplace-card",
-                "[data-testid*='marketplace-item']"
+                "div[data-pagelet*='marketplace']"
             ]
             
             listing_elements = []
@@ -302,6 +309,41 @@ class FacebookMarketplaceScraper:
             
             if not listing_elements:
                 self.logger.warning("No listing elements found")
+                
+                # Debug: Save screenshot and page source for analysis
+                try:
+                    debug_dir = "debug_output"
+                    import os
+                    os.makedirs(debug_dir, exist_ok=True)
+                    
+                    # Save screenshot
+                    screenshot_path = f"{debug_dir}/no_elements_screenshot_{int(time.time())}.png"
+                    self.driver.save_screenshot(screenshot_path)
+                    self.logger.info(f"Debug screenshot saved: {screenshot_path}")
+                    
+                    # Save page source
+                    page_source_path = f"{debug_dir}/no_elements_page_source_{int(time.time())}.html"
+                    with open(page_source_path, 'w', encoding='utf-8') as f:
+                        f.write(self.driver.page_source)
+                    self.logger.info(f"Debug page source saved: {page_source_path}")
+                    
+                    # Log current URL and basic page info
+                    current_url = self.driver.current_url
+                    page_title = self.driver.title
+                    self.logger.info(f"Debug info - URL: {current_url}, Title: {page_title}")
+                    
+                    # Try to find ANY elements on the page to see what's there
+                    all_divs = self.driver.find_elements(By.TAG_NAME, "div")
+                    all_links = self.driver.find_elements(By.TAG_NAME, "a")
+                    self.logger.info(f"Page has {len(all_divs)} div elements and {len(all_links)} link elements")
+                    
+                    # Check for specific Facebook elements
+                    fb_elements = self.driver.find_elements(By.CSS_SELECTOR, "[data-testid], [role], [aria-label]")
+                    self.logger.info(f"Found {len(fb_elements)} Facebook-specific elements")
+                    
+                except Exception as debug_error:
+                    self.logger.error(f"Debug info collection failed: {debug_error}")
+                
                 return []
             
             # Extract data from each listing
@@ -334,85 +376,214 @@ class FacebookMarketplaceScraper:
         try:
             listing_data = {}
             
-            # Extract title
+            # Extract all text content from the element for debugging
+            element_text = element.text.strip()
+            if not element_text:
+                return None
+            
+            # Try to extract title - look for the main heading/link text
+            title = None
             title_selectors = [
+                "a[role='link'] span",
+                "h3", "h4", "h2",
                 "span[dir='auto']",
-                "h3 span",
-                "[data-surface-wrapper] span",
-                "a span[dir='auto']"
+                "[data-testid*='title']",
+                "a span"
             ]
             
-            title = self._find_text_by_selectors(element, title_selectors)
+            # Try each selector and get the first meaningful text
+            for selector in title_selectors:
+                try:
+                    elements = element.find_elements(By.CSS_SELECTOR, selector)
+                    for elem in elements:
+                        text = elem.text.strip()
+                        # Additional filtering to avoid prices and short text
+                        if text and len(text) > 3 and not text.startswith('$') and not text.lower().startswith('sek') and 'kr' not in text.lower() and not text.replace(',','').isdigit():
+                            title = text
+                            break
+                    if title:
+                        break
+                except:
+                    continue
+            
+            # If no title found with selectors, try to extract from element text
             if not title:
-                return None  # Skip if no title found
+                lines = element_text.split('\n')
+                for line in lines:
+                    line = line.strip()
+                    if len(line) > 3 and not line.startswith('$') and 'km' not in line.lower() and not line.isdigit() and not line.lower().startswith('sek'):
+                        title = line
+                        break
             
-            listing_data['title'] = title.strip()
+            if not title:
+                self.logger.debug(f"No title found in element: {element_text[:100]}...")
+                return None
             
-            # Extract price
-            price_selectors = [
-                "span[dir='auto']:contains('$')",
-                "span:contains('AU$')",
-                "span:contains('AUD')",
-                "[data-testid*='price']",
-                "span[class*='price']"
+            listing_data['title'] = title[:200]  # Limit title length
+            
+            # Extract price - look for currency symbols and numbers
+            price_text = None
+            price_patterns = [
+                r'\$[\d,]+(?:\.\d{2})?',  # $1,234.56
+                r'[\d,]+\s*kr',           # 1234 kr
+                r'SEK\s*[\d,]+',          # SEK 1234
+                r'[\d,]+\s*SEK',          # 1234 SEK
+                r'AU\$[\d,]+',            # AU$1234
+                r'USD\s*[\d,]+',          # USD 1234
             ]
             
-            price_text = self._find_text_by_selectors(element, price_selectors)
-            listing_data['price'] = self._parse_price(price_text)
-            listing_data['currency'] = 'AUD'  # Default based on config
+            for pattern in price_patterns:
+                matches = re.findall(pattern, element_text, re.IGNORECASE)
+                if matches:
+                    price_text = matches[0]
+                    break
             
-            # Extract seller location
-            location_selectors = [
-                "span:contains('km away')",
-                "span[dir='auto']:contains('km')",
-                "[data-testid*='location']"
-            ]
-            
-            location = self._find_text_by_selectors(element, location_selectors)
-            listing_data['seller_location'] = location.strip() if location else ""
-            
-            # Extract listing URL
-            link_element = element.find_element(By.CSS_SELECTOR, "a[href*='/marketplace/item/']")
-            if link_element:
-                href = link_element.get_attribute('href')
-                listing_data['listing_url'] = href
-                
-                # Extract listing ID from URL
-                match = re.search(r'/marketplace/item/(\d+)', href)
-                if match:
-                    listing_data['listing_id'] = match.group(1)
+            # Parse price into structured format for JSON compatibility
+            if price_text:
+                # Extract numeric value
+                price_numbers = re.findall(r'[\d,]+', price_text)
+                if price_numbers:
+                    try:
+                        amount = int(price_numbers[0].replace(',', ''))
+                        # Determine currency
+                        if 'kr' in price_text.lower() or 'sek' in price_text.lower():
+                            currency = 'SEK'
+                        elif '$' in price_text:
+                            currency = 'USD' if 'AU' not in price_text else 'AUD'
+                        else:
+                            currency = 'SEK'  # Default for Stockholm
+                        
+                        listing_data['price'] = {
+                            'raw_value': price_text,
+                            'currency': currency,
+                            'amount': str(amount),
+                            'note': f'Extracted from: {price_text}'
+                        }
+                    except ValueError:
+                        listing_data['price'] = {'amount': '0', 'currency': 'SEK', 'raw_value': price_text}
                 else:
-                    listing_data['listing_id'] = f"unknown_{index}_{int(time.time())}"
+                    listing_data['price'] = {'amount': '0', 'currency': 'SEK', 'raw_value': price_text}
             else:
-                listing_data['listing_id'] = f"unknown_{index}_{int(time.time())}"
-                listing_data['listing_url'] = ""
+                listing_data['price'] = {'amount': '0', 'currency': 'SEK', 'raw_value': 'Not found'}
             
-            # Extract image URL
-            img_selectors = [
-                "img[src*='scontent']",
-                "img[data-src*='scontent']",
-                "img[alt]"
+            # Extract location - look for distance indicators
+            location_text = None
+            location_patterns = [
+                r'([\w\s]+)\s+\d+\s*km',  # City 15 km
+                r'\d+\s*km\s+from\s+([\w\s]+)',  # 15 km from City
             ]
             
-            img_element = self._find_element_by_selectors(element, img_selectors)
-            if img_element:
-                img_url = img_element.get_attribute('src') or img_element.get_attribute('data-src')
-                listing_data['image_url'] = img_url
-            else:
-                listing_data['image_url'] = ""
+            for pattern in location_patterns:
+                matches = re.findall(pattern, element_text, re.IGNORECASE)
+                if matches:
+                    location_text = matches[0].strip()
+                    break
             
-            # Set default values for missing fields
-            listing_data.setdefault('seller_name', '')
-            listing_data.setdefault('seller_id', '')
-            listing_data.setdefault('description', '')
-            listing_data.setdefault('category', self._guess_category(title))
-            listing_data.setdefault('condition_text', '')
+            # If no specific location found, look for location-like text
+            if not location_text:
+                lines = element_text.split('\n')
+                for line in lines:
+                    if 'km' in line.lower():
+                        location_text = line.strip()
+                        break
+            
+            listing_data['location'] = {
+                'city': location_text if location_text else 'Stockholm',
+                'distance': 'Unknown',
+                'raw_location': location_text if location_text else 'Not specified'
+            }
+            
+            # Extract listing URL and ID
+            try:
+                link_elements = element.find_elements(By.CSS_SELECTOR, "a[href*='/marketplace/item/']")
+                if not link_elements:
+                    link_elements = element.find_elements(By.CSS_SELECTOR, "a[href*='marketplace']")
+                
+                if link_elements:
+                    href = link_elements[0].get_attribute('href')
+                    listing_data['marketplace_url'] = href
+                    
+                    # Extract listing ID from URL
+                    id_match = re.search(r'/marketplace/item/(\d+)', href)
+                    if id_match:
+                        listing_data['id'] = f"mp_{id_match.group(1)}"
+                    else:
+                        listing_data['id'] = f"mp_gen_{int(time.time())}_{index}"
+                else:
+                    listing_data['marketplace_url'] = ''
+                    listing_data['id'] = f"mp_gen_{int(time.time())}_{index}"
+            except Exception as e:
+                listing_data['marketplace_url'] = ''
+                listing_data['id'] = f"mp_gen_{int(time.time())}_{index}"
+            
+            # Extract image URLs
+            image_urls = []
+            try:
+                img_elements = element.find_elements(By.CSS_SELECTOR, "img")
+                for img in img_elements:
+                    src = img.get_attribute('src') or img.get_attribute('data-src')
+                    if src and ('scontent' in src or 'fbcdn' in src):
+                        image_urls.append({
+                            'url': src,
+                            'type': 'thumbnail',
+                            'size': 'unknown'
+                        })
+                        break  # Just take the first good image
+            except:
+                pass
+            
+            listing_data['images'] = image_urls
+            
+            # Add seller info (placeholder)
+            listing_data['seller'] = {
+                'info': 'Not extracted',
+                'profile': None
+            }
+            
+            # Add product details
+            listing_data['product_details'] = {
+                'model': self._extract_model(title),
+                'storage': 'Unknown',
+                'condition': 'Unknown',
+                'color': 'Unknown'
+            }
+            
+            # Add metadata with timestamp
+            listing_data['extraction_method'] = 'automated_scraper'
+            listing_data['data_quality'] = 'medium' if location_text and price_text else 'basic'
+            listing_data['full_url'] = listing_data['marketplace_url']
+            listing_data['added_at'] = datetime.now().isoformat()
+            listing_data['source'] = 'facebook_marketplace_scraper'
+            
+            # Log successful extraction
+            self.logger.info(f"Successfully extracted listing: {title[:50]}... Price: {listing_data['price']['amount']} {listing_data['price']['currency']} ID: {listing_data['id']}")
             
             return listing_data
             
         except Exception as e:
-            self.logger.debug(f"Failed to extract data from listing element: {e}")
+            self.logger.error(f"Failed to extract data from listing element {index}: {e}")
+            import traceback
+            self.logger.debug(traceback.format_exc())
             return None
+    
+    def _extract_model(self, title: str) -> str:
+        """Extract product model from title."""
+        title_lower = title.lower()
+        if 'iphone' in title_lower:
+            # Try to extract iPhone model
+            iphone_patterns = [
+                r'iphone\s*(\d+)\s*(pro\s*max|pro|plus|mini)?',
+                r'iphone\s*(se|xr|xs|x)\s*(max)?'
+            ]
+            for pattern in iphone_patterns:
+                match = re.search(pattern, title_lower)
+                if match:
+                    model = f"iPhone {match.group(1)}"
+                    if match.group(2):
+                        model += f" {match.group(2).title()}"
+                    return model
+            return 'iPhone'
+        return 'Unknown'
     
     def _find_text_by_selectors(self, parent_element, selectors: List[str]) -> Optional[str]:
         """Try multiple CSS selectors to find text content."""
@@ -515,13 +686,17 @@ class FacebookMarketplaceScraper:
                 
                 # Save listings to JSON with duplicate prevention
                 if listings:
+                    self.logger.info(f"Attempting to save {len(listings)} listings to JSON...")
                     stats = self.json_manager.add_products_batch(listings)
                     self.session_stats['new_listings'] = stats['added']
                     self.session_stats['duplicates_found'] = stats['duplicates']
                     self.session_stats['errors_count'] += stats['errors']
+                    self.logger.info(f"JSON save stats: {stats['added']} added, {stats['duplicates']} duplicates, {stats['errors']} errors")
+                else:
+                    self.logger.warning("No listings extracted to save")
                 
                 all_listings.extend(listings)
-                self.logger.info(f"Found {len(listings)} iPhone 16 listings")
+                self.logger.info(f"Found {len(listings)} iPhone 16 listings, total so far: {len(all_listings)}")
                 
             except Exception as e:
                 self.logger.error(f"Failed to extract iPhone 16 listings: {e}")
@@ -554,6 +729,139 @@ class FacebookMarketplaceScraper:
                     pass
         
         return all_listings
+    
+    def scrape_marketplace_custom(self, search_query: str) -> List[Dict[str, Any]]:
+        """Custom scraping method with user-provided search query."""
+        all_listings = []
+        
+        try:
+            # Setup WebDriver
+            if not self.setup_driver():
+                return []
+            
+            # Login to Facebook
+            if not self.login_to_facebook():
+                self.session_stats['error_details'].append("Login failed")
+                return []
+            
+            # Navigate to Marketplace with custom search
+            if not self.navigate_to_marketplace_custom(search_query):
+                self.session_stats['error_details'].append("Failed to navigate to Marketplace")
+                return []
+            
+            # Extract listings
+            try:
+                self.logger.info(f"Extracting {search_query} listings from current page...")
+                listings = self.extract_listings()
+                
+                self.logger.info(f"Raw extraction returned {len(listings)} listings for '{search_query}'")
+                
+                # Save listings to JSON with duplicate prevention FIRST
+                if listings:
+                    self.logger.info(f"Attempting to save {len(listings)} {search_query} listings to JSON...")
+                    stats = self.json_manager.add_products_batch(listings)
+                    self.session_stats['new_listings'] = stats['added']
+                    self.session_stats['duplicates_found'] = stats['duplicates'] 
+                    self.session_stats['errors_count'] += stats['errors']
+                    self.logger.info(f"JSON save stats: {stats['added']} added, {stats['duplicates']} duplicates, {stats['errors']} errors")
+                    
+                    # Add to return list
+                    all_listings.extend(listings)
+                    
+                    # Log the actual titles found for debugging
+                    for i, listing in enumerate(listings[:5]):
+                        self.logger.info(f"Found listing {i+1}: {listing.get('title', 'NO TITLE')[:60]}...")
+                    
+                else:
+                    self.logger.warning(f"No {search_query} listings extracted from page")
+                    # Check if page loaded correctly by looking for any elements
+                    try:
+                        page_source_snippet = self.driver.page_source[:500] if self.driver else "No driver"
+                        self.logger.debug(f"Page source snippet: {page_source_snippet}")
+                        
+                        # Check if we can find any products in general (not just matching search)
+                        all_elements = self.driver.find_elements(By.CSS_SELECTOR, "[data-surface-wrapper='1'] > div > div")
+                        self.logger.info(f"Total elements found on page: {len(all_elements)}")
+                        
+                        if all_elements:
+                            self.logger.info(f"Sample element text: {all_elements[0].text[:200]}..." if all_elements[0].text else "Empty text")
+                    except Exception as debug_error:
+                        self.logger.error(f"Debug info extraction failed: {debug_error}")
+                
+                self.logger.info(f"Final count for '{search_query}': {len(all_listings)} listings will be returned")
+                
+            except Exception as e:
+                self.logger.error(f"Failed to extract {search_query} listings: {e}")
+                self.session_stats['errors_count'] += 1
+                self.session_stats['error_details'].append(f"{search_query} extraction: {str(e)}")
+            
+            # Update session stats
+            self.session_stats['end_time'] = datetime.now().isoformat()
+            self.session_stats['status'] = 'completed'
+            self.session_stats['search_keywords'] = search_query
+            self.session_stats['search_location'] = 'Stockholm, Sweden'
+            
+            self.logger.info(f"Custom scraping completed. Total listings: {len(all_listings)}")
+            
+        except Exception as e:
+            self.logger.error(f"Custom scraping failed: {e}")
+            self.session_stats['status'] = 'failed'
+            self.session_stats['error_details'].append(f"General error: {str(e)}")
+            self.session_stats['end_time'] = datetime.now().isoformat()
+        
+        finally:
+            # Save session data
+            self.json_manager.save_scraping_session(self.session_stats)
+            
+            # Close WebDriver
+            if self.driver:
+                try:
+                    self.driver.quit()
+                except:
+                    pass
+        
+        return all_listings
+    
+    def navigate_to_marketplace_custom(self, search_query: str) -> bool:
+        """Navigate to Facebook Marketplace with custom search query."""
+        try:
+            self.logger.info(f"Navigating to Facebook Marketplace with search: {search_query}")
+            
+            # First navigate to main marketplace
+            marketplace_url = "https://www.facebook.com/marketplace"
+            self.logger.info(f"Opening marketplace URL: {marketplace_url}")
+            self.driver.get(marketplace_url)
+            
+            # Wait 1 second
+            time.sleep(1)
+            
+            # Build search URL with custom query
+            import urllib.parse
+            encoded_query = urllib.parse.quote(search_query)
+            search_url = f"https://www.facebook.com/marketplace/stockholm/search/?query={encoded_query}"
+            
+            self.logger.info(f"Navigating to custom search: {search_url}")
+            self.driver.get(search_url)
+            self._random_delay(3, 5)
+            
+            # Wait for marketplace to load
+            try:
+                self.wait.until(
+                    EC.any_of(
+                        EC.presence_of_element_located((By.CSS_SELECTOR, "[data-surface='marketplace']")),
+                        EC.presence_of_element_located((By.XPATH, "//*[contains(text(), 'Marketplace')]")),
+                        EC.presence_of_element_located((By.CSS_SELECTOR, "[aria-label*='Marketplace']"))
+                    )
+                )
+                self.logger.info(f"Successfully navigated to Marketplace with search: {search_query}")
+                return True
+            except TimeoutException:
+                self.logger.error("Failed to load Marketplace page")
+                return False
+                
+        except Exception as e:
+            self.logger.error(f"Failed to navigate to Marketplace with custom search: {e}")
+            return False
     
     def __del__(self):
         """Cleanup when object is destroyed."""

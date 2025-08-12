@@ -222,6 +222,66 @@ class SchedulerManager:
                 'duration_seconds': 0
             }
     
+    def run_custom_scraping(self, search_query: str) -> dict:
+        """Run custom scraping with user-provided search query."""
+        try:
+            self.logger.info(f"Starting custom scraping job for: {search_query}")
+            
+            start_time = datetime.now()
+            scraper = FacebookMarketplaceScraper(self.settings)
+            results = scraper.scrape_marketplace_custom(search_query)
+            end_time = datetime.now()
+            
+            duration = (end_time - start_time).total_seconds()
+            
+            # Check actual listings in JSON file for accurate count
+            actual_count = len(results)
+            
+            # Always check JSON file to get the most accurate count
+            try:
+                data = self.json_manager.load_data()
+                # Count products from the current scraping session
+                current_timestamp = datetime.now().strftime('%Y-%m-%d')
+                matching_products = [
+                    p for p in data.get('products', [])
+                    if search_query.lower() in p.get('title', '').lower()
+                    and p.get('added_at', '').startswith(current_timestamp)
+                ]
+                
+                # Use JSON count if it's higher than returned count (more accurate)
+                if len(matching_products) > actual_count:
+                    self.logger.info(f"JSON verification: Found {len(matching_products)} matching products vs {actual_count} returned from scraper")
+                    actual_count = len(matching_products)
+                    
+                    # Log sample products for verification
+                    for i, product in enumerate(matching_products[:3]):
+                        self.logger.info(f"Sample product {i+1}: {product.get('title', 'NO TITLE')[:50]}...")
+                        
+            except Exception as e:
+                self.logger.warning(f"Could not verify saved product count: {e}")
+            
+            result = {
+                'success': True,
+                'listings_found': actual_count,
+                'duration_seconds': round(duration, 1),
+                'start_time': start_time.isoformat(),
+                'end_time': end_time.isoformat(),
+                'search_query': search_query
+            }
+            
+            self.logger.info(f"Custom scraping completed: {result}")
+            return result
+            
+        except Exception as e:
+            self.logger.error(f"Custom scraping failed: {e}")
+            return {
+                'success': False,
+                'error': str(e),
+                'listings_found': 0,
+                'duration_seconds': 0,
+                'search_query': search_query
+            }
+    
     def update_schedule(self, new_interval_minutes: int):
         """Update the scraping schedule interval."""
         try:

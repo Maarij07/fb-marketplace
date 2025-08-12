@@ -1,18 +1,25 @@
 {
   "extraction_info": {
-    "timestamp": "2025-08-07",
+    "timestamp": "2025-08-13",
     "source": "Facebook Marketplace Stockholm",
     "search_query": "iPhone 16",
-    "total_products_found": 16,
-    "extraction_method": "targeted_swedish_marketplace"
+    "total_products_found": 22,
+    "extraction_method": "targeted_swedish_marketplace",
+    "last_cleaned": "2025-08-13T00:59:29.240999"
   },
   "summary": {
-    "products_with_complete_data": 6,
-    "products_with_images": 6,
-    "products_with_links": 6,
-    "products_with_locations": 10,
-    "products_with_prices": 16,
-    "swedish_cities_found": ["Stockholm", "Helsingborg", "Glommen", "Alsultani", "Samei"]
+    "products_with_complete_data": 13,
+    "products_with_images": 13,
+    "products_with_links": 13,
+    "products_with_locations": 16,
+    "products_with_prices": 22,
+    "unique_locations": [
+      "Alsultani",
+      "Glommen",
+      "Helsingborg",
+      "Samei",
+      "Stockholm"
+    ]
   },
   "products": [
     {
@@ -50,7 +57,10 @@
         "color": "Unknown"
       },
       "extraction_method": "price_based",
-      "data_quality": "high"
+      "data_quality": "high",
+      "added_at": "2025-08-13T00:08:32.825159",
+      "created_at": "2025-08-13T00:08:32.825159",
+      "seller_name": "Private Seller"
     },
     {
       "id": "mp_1041171547868001",
@@ -87,7 +97,10 @@
         "color": "Unknown"
       },
       "extraction_method": "price_based",
-      "data_quality": "high"
+      "data_quality": "high",
+      "added_at": "2025-08-13T00:08:32.825159",
+      "created_at": "2025-08-13T00:08:32.825159",
+      "seller_name": "Private Seller"
     },
     {
       "id": "mp_1014914604144308",
@@ -124,7 +137,10 @@
         "color": "Unknown"
       },
       "extraction_method": "price_based",
-      "data_quality": "high"
+      "data_quality": "high",
+      "added_at": "2025-08-13T00:08:32.825159",
+      "created_at": "2025-08-13T00:08:32.825159",
+      "seller_name": "Private Seller"
     },
     {
       "id": "mp_1038779781247932",
@@ -161,7 +177,10 @@
         "color": "Unknown"
       },
       "extraction_method": "price_based",
-      "data_quality": "high"
+      "data_quality": "high",
+      "added_at": "2025-08-13T00:08:32.825159",
+      "created_at": "2025-08-13T00:08:32.825159",
+      "seller_name": "Private Seller"
     },
     {
       "id": "mp_1233414638481557",
@@ -198,7 +217,10 @@
         "color": "Unknown"
       },
       "extraction_method": "price_based",
-      "data_quality": "high"
+      "data_quality": "high",
+      "added_at": "2025-08-13T00:08:32.825159",
+      "created_at": "2025-08-13T00:08:32.825159",
+      "seller_name": "Private Seller"
     },
     {
       "id": "mp_1865173780912693",
@@ -235,7 +257,10 @@
         "color": "Unknown"
       },
       "extraction_method": "price_based",
-      "data_quality": "high"
+      "data_quality": "high",
+      "added_at": "2025-08-13T00:08:32.825159",
+      "created_at": "2025-08-13T00:08:32.825159",
+      "seller_name": "Private Seller"
     },
     {
       "id": "mp_partial_001",
@@ -266,7 +291,10 @@
         "color": "Unknown"
       },
       "extraction_method": "price_based",
-      "data_quality": "partial"
+      "data_quality": "partial",
+      "added_at": "2025-08-13T00:08:32.825159",
+      "created_at": "2025-08-13T00:08:32.825159",
+      "seller_name": "Private Seller"
     },
     {
       "id": "mp_partial_002",
@@ -297,7 +325,10 @@
         "color": "Unknown"
       },
       "extraction_method": "price_based",
-      "data_quality": "partial"
+      "data_quality": "partial",
+      "added_at": "2025-08-13T00:08:32.825159",
+      "created_at": "2025-08-13T00:08:32.825159",
+      "seller_name": "Private Seller"
     },
     {
       "id": "mp_partial_003",
@@ -328,7 +359,10 @@
         "color": "Unknown"
       },
       "extraction_method": "price_based",
-      "data_quality": "partial"
+      "data_quality": "partial",
+      "added_at": "2025-08-13T00:08:32.825159",
+      "created_at": "2025-08-13T00:08:32.825159",
+      "seller_name": "Private Seller"
     },
     {
       "id": "mp_partial_004",
@@ -359,7 +393,10 @@
         "color": "Black"
       },
       "extraction_method": "price_based",
-      "data_quality": "partial"
+      "data_quality": "partial",
+      "added_at": "2025-08-13T00:08:32.825159",
+      "created_at": "2025-08-13T00:08:32.825159",
+      "seller_name": "Private Seller"
     },
     {
       "id": "mp_partial_005",
@@ -390,7 +427,10 @@
         "color": "Unknown"
       },
       "extraction_method": "price_based",
-      "data_quality": "partial"
+      "data_quality": "partial",
+      "added_at": "2025-08-13T00:08:32.825159",
+      "created_at": "2025-08-13T00:08:32.825159",
+      "seller_name": "Private Seller"
     },
     {
       "id": "mp_partial_006",
@@ -421,7 +461,10 @@
         "color": "Unknown"
       },
       "extraction_method": "price_based",
-      "data_quality": "partial"
+      "data_quality": "partial",
+      "added_at": "2025-08-13T00:08:32.825159",
+      "created_at": "2025-08-13T00:08:32.825159",
+      "seller_name": "Private Seller"
     },
     {
       "id": "mp_partial_007",
@@ -452,7 +495,10 @@
         "color": "Sand"
       },
       "extraction_method": "price_based",
-      "data_quality": "partial"
+      "data_quality": "partial",
+      "added_at": "2025-08-13T00:08:32.825159",
+      "created_at": "2025-08-13T00:08:32.825159",
+      "seller_name": "Private Seller"
     },
     {
       "id": "mp_partial_008",
@@ -483,7 +529,10 @@
         "color": "Sand"
       },
       "extraction_method": "price_based",
-      "data_quality": "partial"
+      "data_quality": "partial",
+      "added_at": "2025-08-13T00:08:32.825159",
+      "created_at": "2025-08-13T00:08:32.825159",
+      "seller_name": "Private Seller"
     },
     {
       "id": "mp_partial_009",
@@ -514,7 +563,287 @@
         "color": "Sand"
       },
       "extraction_method": "price_based",
-      "data_quality": "partial"
+      "data_quality": "partial",
+      "added_at": "2025-08-13T00:08:32.825159",
+      "created_at": "2025-08-13T00:08:32.825159",
+      "seller_name": "Private Seller"
+    },
+    {
+      "id": "mp_test_0",
+      "title": "Test iPhone 16 Pro - Debug Listing 0",
+      "price": {
+        "amount": "10000",
+        "currency": "SEK",
+        "raw_value": "10000 kr"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "5 km",
+        "raw_location": "Stockholm 5 km"
+      },
+      "marketplace_url": "https://facebook.com/marketplace/item/123456",
+      "images": [
+        {
+          "url": "https://scontent.test/test_image_0.jpg",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Test Seller 0",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 16",
+        "storage": "128GB",
+        "condition": "Like new",
+        "color": "Black"
+      },
+      "extraction_method": "debug_test",
+      "data_quality": "high",
+      "full_url": "https://facebook.com/marketplace/item/123456",
+      "added_at": "2025-08-12T00:15:45.517820",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-12T00:15:45.517820",
+      "seller_name": "Test Seller 0"
+    },
+    {
+      "id": "mp_test_1",
+      "title": "Test iPhone 17 Pro - Debug Listing 1",
+      "price": {
+        "amount": "11000",
+        "currency": "SEK",
+        "raw_value": "11000 kr"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "6 km",
+        "raw_location": "Stockholm 6 km"
+      },
+      "marketplace_url": "https://facebook.com/marketplace/item/123457",
+      "images": [
+        {
+          "url": "https://scontent.test/test_image_1.jpg",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Test Seller 1",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 17",
+        "storage": "128GB",
+        "condition": "Like new",
+        "color": "Black"
+      },
+      "extraction_method": "debug_test",
+      "data_quality": "high",
+      "full_url": "https://facebook.com/marketplace/item/123457",
+      "added_at": "2025-08-12T00:15:45.537434",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-12T00:15:45.537434",
+      "seller_name": "Test Seller 1"
+    },
+    {
+      "id": "mp_test_2",
+      "title": "Test iPhone 18 Pro - Debug Listing 2",
+      "price": {
+        "amount": "12000",
+        "currency": "SEK",
+        "raw_value": "12000 kr"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "7 km",
+        "raw_location": "Stockholm 7 km"
+      },
+      "marketplace_url": "https://facebook.com/marketplace/item/123458",
+      "images": [
+        {
+          "url": "https://scontent.test/test_image_2.jpg",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Test Seller 2",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 18",
+        "storage": "128GB",
+        "condition": "Like new",
+        "color": "Black"
+      },
+      "extraction_method": "debug_test",
+      "data_quality": "high",
+      "full_url": "https://facebook.com/marketplace/item/123458",
+      "added_at": "2025-08-12T00:15:45.537655",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-12T00:15:45.537655",
+      "seller_name": "Test Seller 2"
+    },
+    {
+      "id": "mp_1234567890",
+      "title": "iPhone 16 Pro Max 256GB - Perfect condition",
+      "price": {
+        "raw_value": "15000 kr",
+        "currency": "SEK",
+        "amount": "15000",
+        "note": "Extracted from: 15000 kr"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "5 km",
+        "raw_location": "Stockholm 5 km"
+      },
+      "marketplace_url": "https://facebook.com/marketplace/item/1234567890",
+      "images": [
+        {
+          "url": "https://scontent.fbcdn.net/test_image.jpg",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 16 Pro Max",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "medium",
+      "full_url": "https://facebook.com/marketplace/item/1234567890",
+      "added_at": "2025-08-12T00:17:03.792801",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-12T00:17:03.792801",
+      "seller_name": "Private Seller"
+    },
+    {
+      "id": "mp_9876543210",
+      "title": "iPhone 16 128GB Blue - Like new",
+      "price": {
+        "raw_value": "12500 kr",
+        "currency": "SEK",
+        "amount": "12500",
+        "note": "Extracted from: 12500 kr"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "8 km",
+        "raw_location": "Stockholm 8 km"
+      },
+      "marketplace_url": "https://facebook.com/marketplace/item/9876543210",
+      "images": [
+        {
+          "url": "https://scontent.fbcdn.net/test_image2.jpg",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 16",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "medium",
+      "full_url": "https://facebook.com/marketplace/item/9876543210",
+      "added_at": "2025-08-12T00:17:03.794137",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-12T00:17:03.794137",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "IPhone 14 Pro 128GB Deep Purple",
+      "price": {
+        "raw_value": "$7,500",
+        "currency": "USD",
+        "amount": "7500",
+        "note": "Extracted from: $7,500"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1291349209069589/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A71f6de4d-1ce5-4690-ad38-516679f4c128&__tn__=!%3AD",
+      "id": "mp_1291349209069589",
+      "images": [
+        {
+          "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/529209456_24028239930131294_540896625250127787_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=104&ccb=1-7&_nc_sid=247b10&_nc_ohc=qNBNnAiT9rUQ7kNvwG2Rn4N&_nc_oc=AdlDwBGC-QELlTBcc90g1Iric9I6A-GbcynBzD1YHWZPOBNc5bEyKBvYEMDwfrOYN8k&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=5jjrq6rShfxmEFBFs7PqQg&oh=00_AfWY4rp4lfmgPPPqo33JQ_XHA2S5TnasoL1GGGKukt7q_A&oe=68A152CF",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 14 Pro",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/1291349209069589/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A71f6de4d-1ce5-4690-ad38-516679f4c128&__tn__=!%3AD",
+      "added_at": "2025-08-13T00:55:11.567465",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-13T00:55:11.567465",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "iPhone 12 Pro Gold",
+      "price": {
+        "raw_value": "$3,000",
+        "currency": "USD",
+        "amount": "3000",
+        "note": "Extracted from: $3,000"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/24412620408370396/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A6e470a00-d837-4872-ae5b-18193ada2695&__tn__=!%3AD",
+      "id": "mp_24412620408370396",
+      "images": [
+        {
+          "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/530823132_783243617569499_7965622123761761046_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=103&ccb=1-7&_nc_sid=247b10&_nc_ohc=_4B5RjsgzLoQ7kNvwF-0mtG&_nc_oc=AdlQHEZrUv9aNQnuxclpPgpeII52RhICCUvJPyRmTgI6Tv3zEwspBBBZAFR3og049Ic&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=01z90Xsn4NX6cgFG3A4Juw&oh=00_AfV7Xk7XbWc0v365K8HUuomPgG2DsHy3f3M3HT5A8Eh4Hw&oe=68A155E7",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 12 Pro",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/24412620408370396/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A6e470a00-d837-4872-ae5b-18193ada2695&__tn__=!%3AD",
+      "added_at": "2025-08-13T01:04:54.605411",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-13T01:04:54.605411",
+      "seller_name": "Private Seller"
     }
   ],
   "extraction_notes": {
@@ -522,22 +851,216 @@
     "seller_info": "Seller information was not successfully extracted from the HTML patterns",
     "image_quality": "6 products have high-quality thumbnail images from Facebook's CDN",
     "location_accuracy": "Some locations extracted as 'x' - needs pattern refinement",
-    "data_completeness": "6 products have complete data with images and links, 10 products have partial data"
+    "data_completeness": "6 products have complete data with images and links, 10 products have partial data",
+    "last_updated": "2025-08-13T01:06:27.323304"
   },
   "technical_details": {
     "html_source_size": "2,926,700 characters",
     "extraction_patterns_used": [
       "SEK + number price patterns",
-      "iPhone 16 title patterns",  
+      "iPhone 16 title patterns",
       "marketplace/item URL patterns",
       "scontent image URL patterns"
     ],
     "cities_identified": [
       "Stockholm (2 products)",
-      "Helsingborg (1 product)", 
+      "Helsingborg (1 product)",
       "Glommen (2 products)",
       "Alsultani (2 products)",
       "Samei (2 products)"
     ]
-  }
+  },
+  "scraping_sessions": [
+    {
+      "start_time": "2025-08-12T00:09:43.578302",
+      "listings_found": 0,
+      "new_listings": 0,
+      "updated_listings": 0,
+      "errors_count": 0,
+      "error_details": [
+        "Failed to navigate to Marketplace"
+      ],
+      "saved_at": "2025-08-12T00:11:05.311416"
+    },
+    {
+      "start_time": "2025-08-12T00:18:02.049747",
+      "listings_found": 0,
+      "new_listings": 0,
+      "updated_listings": 0,
+      "errors_count": 0,
+      "error_details": [
+        "Failed to navigate to Marketplace"
+      ],
+      "saved_at": "2025-08-12T00:19:09.411221"
+    },
+    {
+      "start_time": "2025-08-13T00:03:27.699081",
+      "listings_found": 0,
+      "new_listings": 0,
+      "updated_listings": 0,
+      "errors_count": 0,
+      "error_details": [
+        "Failed to navigate to Marketplace"
+      ],
+      "saved_at": "2025-08-13T00:04:50.879745"
+    },
+    {
+      "start_time": "2025-08-13T00:08:56.146143",
+      "listings_found": 0,
+      "new_listings": 0,
+      "updated_listings": 0,
+      "errors_count": 0,
+      "error_details": [
+        "Failed to navigate to Marketplace"
+      ],
+      "saved_at": "2025-08-13T00:10:03.910064"
+    },
+    {
+      "start_time": "2025-08-13T00:12:56.327564",
+      "listings_found": 0,
+      "new_listings": 0,
+      "updated_listings": 0,
+      "errors_count": 0,
+      "error_details": [
+        "Failed to navigate to Marketplace"
+      ],
+      "saved_at": "2025-08-13T00:14:15.548729"
+    },
+    {
+      "start_time": "2025-08-13T00:15:05.962558",
+      "listings_found": 0,
+      "new_listings": 0,
+      "updated_listings": 0,
+      "errors_count": 0,
+      "error_details": [],
+      "end_time": "2025-08-13T00:17:48.785076",
+      "status": "completed",
+      "search_keywords": "iphone 14",
+      "search_location": "Stockholm, Sweden",
+      "saved_at": "2025-08-13T00:17:48.786192"
+    },
+    {
+      "start_time": "2025-08-13T00:18:49.705490",
+      "listings_found": 0,
+      "new_listings": 0,
+      "updated_listings": 0,
+      "errors_count": 0,
+      "error_details": [],
+      "end_time": "2025-08-13T00:21:02.126771",
+      "status": "completed",
+      "search_keywords": "iphone 14",
+      "search_location": "Stockholm, Sweden",
+      "saved_at": "2025-08-13T00:21:02.128032"
+    },
+    {
+      "start_time": "2025-08-13T00:23:49.226373",
+      "listings_found": 0,
+      "new_listings": 0,
+      "updated_listings": 0,
+      "errors_count": 0,
+      "error_details": [],
+      "end_time": "2025-08-13T00:26:09.604526",
+      "status": "completed",
+      "search_keywords": "iphone 14",
+      "search_location": "Stockholm, Sweden",
+      "saved_at": "2025-08-13T00:26:09.607749"
+    },
+    {
+      "start_time": "2025-08-13T00:26:58.686766",
+      "listings_found": 0,
+      "new_listings": 0,
+      "updated_listings": 0,
+      "errors_count": 0,
+      "error_details": [],
+      "end_time": "2025-08-13T00:29:30.446028",
+      "status": "completed",
+      "search_keywords": "iphone 16",
+      "search_location": "Stockholm, Sweden",
+      "saved_at": "2025-08-13T00:29:30.508584"
+    },
+    {
+      "start_time": "2025-08-13T00:31:24.702906",
+      "listings_found": 2,
+      "new_listings": 2,
+      "updated_listings": 0,
+      "errors_count": 0,
+      "error_details": [],
+      "duplicates_found": 0,
+      "end_time": "2025-08-13T00:34:29.229454",
+      "status": "completed",
+      "search_keywords": "iphone 16",
+      "search_location": "Stockholm, Sweden",
+      "saved_at": "2025-08-13T00:34:29.239604"
+    },
+    {
+      "start_time": "2025-08-13T00:36:27.418616",
+      "listings_found": 2,
+      "new_listings": 1,
+      "updated_listings": 0,
+      "errors_count": 0,
+      "error_details": [],
+      "duplicates_found": 1,
+      "end_time": "2025-08-13T00:39:37.810481",
+      "status": "completed",
+      "search_keywords": "iphone 15",
+      "search_location": "Stockholm, Sweden",
+      "saved_at": "2025-08-13T00:39:37.860027"
+    },
+    {
+      "start_time": "2025-08-13T00:40:31.519224",
+      "listings_found": 2,
+      "new_listings": 1,
+      "updated_listings": 0,
+      "errors_count": 0,
+      "error_details": [],
+      "duplicates_found": 1,
+      "end_time": "2025-08-13T00:43:45.692857",
+      "status": "completed",
+      "search_keywords": "iphone 13",
+      "search_location": "Stockholm, Sweden",
+      "saved_at": "2025-08-13T00:43:45.757282"
+    },
+    {
+      "start_time": "2025-08-13T00:45:00.696098",
+      "listings_found": 2,
+      "new_listings": 1,
+      "updated_listings": 0,
+      "errors_count": 0,
+      "error_details": [],
+      "duplicates_found": 1,
+      "end_time": "2025-08-13T00:48:09.230083",
+      "status": "completed",
+      "search_keywords": "iphone 14",
+      "search_location": "Stockholm, Sweden",
+      "saved_at": "2025-08-13T00:48:09.290576"
+    },
+    {
+      "start_time": "2025-08-13T00:52:10.387442",
+      "listings_found": 2,
+      "new_listings": 2,
+      "updated_listings": 0,
+      "errors_count": 0,
+      "error_details": [],
+      "duplicates_found": 0,
+      "end_time": "2025-08-13T00:55:11.576752",
+      "status": "completed",
+      "search_keywords": "iphone 14",
+      "search_location": "Stockholm, Sweden",
+      "saved_at": "2025-08-13T00:55:11.602481"
+    },
+    {
+      "start_time": "2025-08-13T01:01:36.309233",
+      "listings_found": 2,
+      "new_listings": 1,
+      "updated_listings": 0,
+      "errors_count": 0,
+      "error_details": [],
+      "duplicates_found": 0,
+      "end_time": "2025-08-13T01:04:54.621694",
+      "status": "completed",
+      "search_keywords": "iphone 12",
+      "search_location": "Stockholm, Sweden",
+      "saved_at": "2025-08-13T01:04:54.643393"
+    }
+  ]
 }
