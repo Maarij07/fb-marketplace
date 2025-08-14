@@ -1,18 +1,18 @@
 {
   "extraction_info": {
-    "timestamp": "2025-08-13",
+    "timestamp": "2025-08-14",
     "source": "Facebook Marketplace Stockholm",
     "search_query": "iPhone 16",
-    "total_products_found": 22,
+    "total_products_found": 42,
     "extraction_method": "targeted_swedish_marketplace",
     "last_cleaned": "2025-08-13T00:59:29.240999"
   },
   "summary": {
-    "products_with_complete_data": 13,
-    "products_with_images": 13,
-    "products_with_links": 13,
-    "products_with_locations": 16,
-    "products_with_prices": 22,
+    "products_with_complete_data": 33,
+    "products_with_images": 33,
+    "products_with_links": 33,
+    "products_with_locations": 36,
+    "products_with_prices": 42,
     "unique_locations": [
       "Alsultani",
       "Glommen",
@@ -569,203 +569,6 @@
       "seller_name": "Private Seller"
     },
     {
-      "id": "mp_test_0",
-      "title": "Test iPhone 16 Pro - Debug Listing 0",
-      "price": {
-        "amount": "10000",
-        "currency": "SEK",
-        "raw_value": "10000 kr"
-      },
-      "location": {
-        "city": "Stockholm",
-        "distance": "5 km",
-        "raw_location": "Stockholm 5 km"
-      },
-      "marketplace_url": "https://facebook.com/marketplace/item/123456",
-      "images": [
-        {
-          "url": "https://scontent.test/test_image_0.jpg",
-          "type": "thumbnail",
-          "size": "unknown"
-        }
-      ],
-      "seller": {
-        "info": "Test Seller 0",
-        "profile": null
-      },
-      "product_details": {
-        "model": "iPhone 16",
-        "storage": "128GB",
-        "condition": "Like new",
-        "color": "Black"
-      },
-      "extraction_method": "debug_test",
-      "data_quality": "high",
-      "full_url": "https://facebook.com/marketplace/item/123456",
-      "added_at": "2025-08-12T00:15:45.517820",
-      "source": "facebook_marketplace_scraper",
-      "created_at": "2025-08-12T00:15:45.517820",
-      "seller_name": "Test Seller 0"
-    },
-    {
-      "id": "mp_test_1",
-      "title": "Test iPhone 17 Pro - Debug Listing 1",
-      "price": {
-        "amount": "11000",
-        "currency": "SEK",
-        "raw_value": "11000 kr"
-      },
-      "location": {
-        "city": "Stockholm",
-        "distance": "6 km",
-        "raw_location": "Stockholm 6 km"
-      },
-      "marketplace_url": "https://facebook.com/marketplace/item/123457",
-      "images": [
-        {
-          "url": "https://scontent.test/test_image_1.jpg",
-          "type": "thumbnail",
-          "size": "unknown"
-        }
-      ],
-      "seller": {
-        "info": "Test Seller 1",
-        "profile": null
-      },
-      "product_details": {
-        "model": "iPhone 17",
-        "storage": "128GB",
-        "condition": "Like new",
-        "color": "Black"
-      },
-      "extraction_method": "debug_test",
-      "data_quality": "high",
-      "full_url": "https://facebook.com/marketplace/item/123457",
-      "added_at": "2025-08-12T00:15:45.537434",
-      "source": "facebook_marketplace_scraper",
-      "created_at": "2025-08-12T00:15:45.537434",
-      "seller_name": "Test Seller 1"
-    },
-    {
-      "id": "mp_test_2",
-      "title": "Test iPhone 18 Pro - Debug Listing 2",
-      "price": {
-        "amount": "12000",
-        "currency": "SEK",
-        "raw_value": "12000 kr"
-      },
-      "location": {
-        "city": "Stockholm",
-        "distance": "7 km",
-        "raw_location": "Stockholm 7 km"
-      },
-      "marketplace_url": "https://facebook.com/marketplace/item/123458",
-      "images": [
-        {
-          "url": "https://scontent.test/test_image_2.jpg",
-          "type": "thumbnail",
-          "size": "unknown"
-        }
-      ],
-      "seller": {
-        "info": "Test Seller 2",
-        "profile": null
-      },
-      "product_details": {
-        "model": "iPhone 18",
-        "storage": "128GB",
-        "condition": "Like new",
-        "color": "Black"
-      },
-      "extraction_method": "debug_test",
-      "data_quality": "high",
-      "full_url": "https://facebook.com/marketplace/item/123458",
-      "added_at": "2025-08-12T00:15:45.537655",
-      "source": "facebook_marketplace_scraper",
-      "created_at": "2025-08-12T00:15:45.537655",
-      "seller_name": "Test Seller 2"
-    },
-    {
-      "id": "mp_1234567890",
-      "title": "iPhone 16 Pro Max 256GB - Perfect condition",
-      "price": {
-        "raw_value": "15000 kr",
-        "currency": "SEK",
-        "amount": "15000",
-        "note": "Extracted from: 15000 kr"
-      },
-      "location": {
-        "city": "Stockholm",
-        "distance": "5 km",
-        "raw_location": "Stockholm 5 km"
-      },
-      "marketplace_url": "https://facebook.com/marketplace/item/1234567890",
-      "images": [
-        {
-          "url": "https://scontent.fbcdn.net/test_image.jpg",
-          "type": "thumbnail",
-          "size": "unknown"
-        }
-      ],
-      "seller": {
-        "info": "Not extracted",
-        "profile": null
-      },
-      "product_details": {
-        "model": "iPhone 16 Pro Max",
-        "storage": "Unknown",
-        "condition": "Unknown",
-        "color": "Unknown"
-      },
-      "extraction_method": "automated_scraper",
-      "data_quality": "medium",
-      "full_url": "https://facebook.com/marketplace/item/1234567890",
-      "added_at": "2025-08-12T00:17:03.792801",
-      "source": "facebook_marketplace_scraper",
-      "created_at": "2025-08-12T00:17:03.792801",
-      "seller_name": "Private Seller"
-    },
-    {
-      "id": "mp_9876543210",
-      "title": "iPhone 16 128GB Blue - Like new",
-      "price": {
-        "raw_value": "12500 kr",
-        "currency": "SEK",
-        "amount": "12500",
-        "note": "Extracted from: 12500 kr"
-      },
-      "location": {
-        "city": "Stockholm",
-        "distance": "8 km",
-        "raw_location": "Stockholm 8 km"
-      },
-      "marketplace_url": "https://facebook.com/marketplace/item/9876543210",
-      "images": [
-        {
-          "url": "https://scontent.fbcdn.net/test_image2.jpg",
-          "type": "thumbnail",
-          "size": "unknown"
-        }
-      ],
-      "seller": {
-        "info": "Not extracted",
-        "profile": null
-      },
-      "product_details": {
-        "model": "iPhone 16",
-        "storage": "Unknown",
-        "condition": "Unknown",
-        "color": "Unknown"
-      },
-      "extraction_method": "automated_scraper",
-      "data_quality": "medium",
-      "full_url": "https://facebook.com/marketplace/item/9876543210",
-      "added_at": "2025-08-12T00:17:03.794137",
-      "source": "facebook_marketplace_scraper",
-      "created_at": "2025-08-12T00:17:03.794137",
-      "seller_name": "Private Seller"
-    },
-    {
       "title": "IPhone 14 Pro 128GB Deep Purple",
       "price": {
         "raw_value": "$7,500",
@@ -844,6 +647,1005 @@
       "source": "facebook_marketplace_scraper",
       "created_at": "2025-08-13T01:04:54.605411",
       "seller_name": "Private Seller"
+    },
+    {
+      "title": "iPhone 16 Pro, Max ￼",
+      "price": {
+        "raw_value": "SEK3,500",
+        "currency": "SEK",
+        "amount": "3500",
+        "note": "Extracted from: SEK3,500"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/24778472958425747/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A3d266dc3-c81c-413b-bbf2-fbdde396e8d6&__tn__=!%3AD",
+      "id": "mp_24778472958425747",
+      "images": [
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/531364049_1388997816153997_692927352139311514_n.jpg?stp=c0.151.261.261a_dst-jpg_p261x260_tt6&_nc_cat=100&ccb=1-7&_nc_sid=247b10&_nc_ohc=mVUOTDUvzUMQ7kNvwHDXNYn&_nc_oc=AdkbtwkJ30awF2ujr0fKU7Fa0H2Nv16e0dQLiAOqmO2ex86EoPOfaCpS3JgOPHZhjCAuVAHz9PvLlzmRQhaivP2W&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=NENWL6gbId5TjviY4hV1hA&oh=00_AfWV5SO22RrVDBlRd36CRh9CgfgI1zpPUdbKPB67FfZYBw&oe=68A2982F",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 16 Pro",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/24778472958425747/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A3d266dc3-c81c-413b-bbf2-fbdde396e8d6&__tn__=!%3AD",
+      "added_at": "2025-08-13T23:42:05.970171",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-13T23:42:05.970171",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "iPhone 8 Batteri",
+      "price": {
+        "raw_value": "SEK60",
+        "currency": "SEK",
+        "amount": "60",
+        "note": "Extracted from: SEK60"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/726321799735660/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A12c09d64-fa69-43f9-b530-108c82cfbc41&__tn__=!%3AD",
+      "id": "mp_726321799735660",
+      "images": [
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/504661287_1278680266952546_51737123097878738_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=111&ccb=1-7&_nc_sid=247b10&_nc_ohc=rinuq2KTy34Q7kNvwGGKsI6&_nc_oc=AdnRc5OHiwt0DIBqfmAfPzzOR5zNU8p60VMrw-SEadYJ4-7aVPB_99HAM-SjQgcwYejReqMR1WNrzqUwZwX7OcyE&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=g6mKfgwZtfNLdHLjze_icw&oh=00_AfU9_-LVKqzDf84WAZw9T3qqNxBbYyB-7JIVkMnCVJ705w&oe=68A2B41D",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 8",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/726321799735660/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A12c09d64-fa69-43f9-b530-108c82cfbc41&__tn__=!%3AD",
+      "added_at": "2025-08-13T23:54:50.370006",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-13T23:54:50.370006",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "iPhone 12 64GB",
+      "price": {
+        "raw_value": "SEK2,200",
+        "currency": "SEK",
+        "amount": "2200",
+        "note": "Extracted from: SEK2,200"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1771973960064111/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Abc68c796-ad75-4da2-b7b3-4ce4d172e9ab&__tn__=!%3AD",
+      "id": "mp_1771973960064111",
+      "images": [
+        {
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/532794124_2171174830013074_5362893928117348099_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=104&ccb=1-7&_nc_sid=247b10&_nc_ohc=T3HeiRe8bnsQ7kNvwEaEkzz&_nc_oc=AdlGKEZOZElbHomJ7E6grQdfzbxEN5s0iMgPYnGbz9k9PrkSTt87Nd0M3VKmwRy6R98HJbrqFkOHA_PeRb9_Ozgk&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=aAFoaYjnmxpzM0GLl8c-wg&oh=00_AfWpEe7xOS9fesqYnsYTRTo7f2OwA9S7B643gmcLxbta-A&oe=68A2ACBA",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 12",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/1771973960064111/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Abc68c796-ad75-4da2-b7b3-4ce4d172e9ab&__tn__=!%3AD",
+      "added_at": "2025-08-14T00:18:19.006116",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-14T00:18:19.006116",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "iPhone 16 PRO 128 GB",
+      "price": {
+        "raw_value": "SEK10,500",
+        "currency": "SEK",
+        "amount": "10500",
+        "note": "Extracted from: SEK10,500"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1229396405602491/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A1ada2e02-4d7a-43d5-906a-8f3bcecc5aa3&__tn__=!%3AD",
+      "id": "mp_1229396405602491",
+      "images": [
+        {
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/530825895_615614744939334_259475973832602563_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=104&ccb=1-7&_nc_sid=247b10&_nc_ohc=kWQOP-uiB_UQ7kNvwEkGmRR&_nc_oc=AdlrOK2mnwt8Tcq61XIRZqqq4qShgEHfa-rcs7iZekAc1_7TAQ2611RVAdSInmOpZ-m4XFqAZNENSCDgkXlP4k_m&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=h5vucKiY7b_JhUMCw23NLA&oh=00_AfURkECxRe8QoLgKlS3WtkeX4fmJ0-Dq_bL5zJ9oOSiqXQ&oe=68A2A3DF",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 16 Pro",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/1229396405602491/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A1ada2e02-4d7a-43d5-906a-8f3bcecc5aa3&__tn__=!%3AD",
+      "added_at": "2025-08-14T00:36:39.164744",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-14T00:36:39.164744",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "iPhone 8 64gb",
+      "price": {
+        "raw_value": "SEK900",
+        "currency": "SEK",
+        "amount": "900",
+        "note": "Extracted from: SEK900"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/2892181387656774/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A8e2a3165-41c8-4b4b-a82d-64a0941957c8&__tn__=!%3AD",
+      "id": "mp_2892181387656774",
+      "images": [
+        {
+          "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/531478981_1142376364408410_8733218134650077714_n.jpg?stp=c0.0.261.261a_dst-jpg_p261x260_tt6&_nc_cat=103&ccb=1-7&_nc_sid=247b10&_nc_ohc=IIYfqSJ-KQMQ7kNvwG8ZEat&_nc_oc=AdmVu7bTu8RtYInVW2RtHxaUGh5ZKEnAEbNyDaSnGmXv_euDCg38t0coRc9Gyib4tkI9Ba-sDXzempX9FHoFkWKw&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=CtR7P_jE6d3XR1W4ByZRuA&oh=00_AfXvycgT8dcdGrey2rlwIbvL5p5SrBoNVK3IoebGQu90DA&oe=68A3833F",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 8",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/2892181387656774/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A8e2a3165-41c8-4b4b-a82d-64a0941957c8&__tn__=!%3AD",
+      "added_at": "2025-08-14T16:13:02.752607",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-14T16:13:02.752607",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "iPhone 8",
+      "price": {
+        "raw_value": "SEK700",
+        "currency": "SEK",
+        "amount": "700",
+        "note": "Extracted from: SEK700"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1281036793812617/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
+      "id": "mp_1281036793812617",
+      "images": [
+        {
+          "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/529701810_1092242339663658_4298856627077297648_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=106&ccb=1-7&_nc_sid=247b10&_nc_ohc=1QACjUDR0yEQ7kNvwGzO_DD&_nc_oc=AdmEBSy22LPEz7DCY1-2PuYUeOJSFjaCo4GMkDKNw8pccay2ob3OYScllfUIzzjvxCF4k6pOyL18Y1hgV9HGwgT6&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=N3sfo93Z2tmGWX5Lf7S2Pg&oh=00_AfXJT-TF2z88AQsrctm3y5W3VtzKIhEtHDEkrgdlYyaCVQ&oe=68A3A837",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 8",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/1281036793812617/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
+      "added_at": "2025-08-14T16:35:22.043180",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-14T16:35:22.043180",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "Mobilskal",
+      "price": {
+        "raw_value": "SEK200",
+        "currency": "SEK",
+        "amount": "200",
+        "note": "Extracted from: SEK200"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/2437848189941515/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
+      "id": "mp_2437848189941515",
+      "images": [
+        {
+          "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/519637265_1391070938635355_670949973219673336_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=100&ccb=1-7&_nc_sid=247b10&_nc_ohc=8Fuu_tRBWaQQ7kNvwHrqEDC&_nc_oc=Adkb6yKuRgszrboIfDRQrRBXPUgCCr2ExL-kEUH1JHWiGhNBtM-Wi0zjs0qNRbMqJpawhL31pZI7dlIisNo-pnAV&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=N3sfo93Z2tmGWX5Lf7S2Pg&oh=00_AfX0WowgH2dkupiHETD3iJYVAu_FX5t5g4LWXE7IjAT0nQ&oe=68A3B372",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "Unknown",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/2437848189941515/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
+      "added_at": "2025-08-14T16:35:22.043732",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-14T16:35:22.043732",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "iPhone 8 Plus 64 gb",
+      "price": {
+        "raw_value": "SEK2,120",
+        "currency": "SEK",
+        "amount": "2120",
+        "note": "Extracted from: SEK2,120"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1216740053168125/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
+      "id": "mp_1216740053168125",
+      "images": [
+        {
+          "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/501992814_709117351768728_3371136511525328469_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=106&ccb=1-7&_nc_sid=247b10&_nc_ohc=N7VBEcu62P0Q7kNvwHfiZUH&_nc_oc=AdmiPbLuk-I8T2oEgo0tsg53BH3F7jNlGu5NP0UJhSVXQcoZOLos5s945IzoKFOCPWs2vM3jZ4EENgpm50UTDLdV&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=N3sfo93Z2tmGWX5Lf7S2Pg&oh=00_AfXQis90J2eMQxIENDSEf57c538mu_Ap-ge6DvR-yTxhHg&oe=68A388B9",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 8 Plus",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/1216740053168125/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
+      "added_at": "2025-08-14T16:35:22.044371",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-14T16:35:22.044371",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "iPhone 8 black 256GB battery health 100% Fast pris",
+      "price": {
+        "raw_value": "SEK1,600",
+        "currency": "SEK",
+        "amount": "1600",
+        "note": "Extracted from: SEK1,600"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1454138318945882/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
+      "id": "mp_1454138318945882",
+      "images": [
+        {
+          "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/524909830_732584739558353_3830660618848077578_n.jpg?stp=c0.26.261.261a_dst-jpg_p261x260_tt6&_nc_cat=100&ccb=1-7&_nc_sid=247b10&_nc_ohc=rMkYwJHij2EQ7kNvwErU68U&_nc_oc=AdmJO1b-EUnhFFSkGZi8pRJ6qeKMMAAVY8rbV74N1U37UXcbjPh71tT3bvrxRTEM7QikSKqt_l1nSXZh4m_da7RK&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=N3sfo93Z2tmGWX5Lf7S2Pg&oh=00_AfXvnQXq4rIkJ3IjOylrf0KjYK3ETx8eMyv-_8OzLjC-6A&oe=68A3ADC0",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 8",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/1454138318945882/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
+      "added_at": "2025-08-14T16:35:22.045477",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-14T16:35:22.045477",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "Iphone 8 svart",
+      "price": {
+        "raw_value": "SEK1,300",
+        "currency": "SEK",
+        "amount": "1300",
+        "note": "Extracted from: SEK1,300"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1206416914484003/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
+      "id": "mp_1206416914484003",
+      "images": [
+        {
+          "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/527833293_582957234749458_3763358697253125564_n.jpg?stp=c0.152.261.261a_dst-jpg_p261x260_tt6&_nc_cat=106&ccb=1-7&_nc_sid=247b10&_nc_ohc=GPMd7Splrs0Q7kNvwFCE0LI&_nc_oc=AdmEV_H0deGxf-Xj_oNxBnFMcHPl6PvbUQjXVf5P94oRYvpHd_5bdcuVRVRiqK5Em_F-lWxl5kQc6I7vCiZZmLVn&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=N3sfo93Z2tmGWX5Lf7S2Pg&oh=00_AfWB_Jm12Hcesr2ik4SmkOYrILSdynk-yisfW1nA30x6pQ&oe=68A38B27",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 8",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/1206416914484003/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
+      "added_at": "2025-08-14T16:35:22.046272",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-14T16:35:22.046272",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "iphone",
+      "price": {
+        "raw_value": "SEK1,700",
+        "currency": "SEK",
+        "amount": "1700",
+        "note": "Extracted from: SEK1,700"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/724622430217320/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
+      "id": "mp_724622430217320",
+      "images": [
+        {
+          "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/508182179_730106749710421_4547432280997609911_n.jpg?stp=c0.145.261.261a_dst-jpg_p261x260_tt6&_nc_cat=103&ccb=1-7&_nc_sid=247b10&_nc_ohc=jrPfSZpD2gMQ7kNvwFdrRQ9&_nc_oc=Adn1MTPgxzWrTWHvZ4zZbM91BCVFWbcsvsVHZPTULs908EIf7yOuU0PcbCw9ZtSQp8Uf0543BWhok5GyuHprN1jZ&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=N3sfo93Z2tmGWX5Lf7S2Pg&oh=00_AfXXeZjSB7Lum1cdzTTm2X7KBTGMNMJRGG8yCsqOZ2ybCw&oe=68A3A40A",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/724622430217320/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
+      "added_at": "2025-08-14T16:35:22.046953",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-14T16:35:22.046953",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "iPhone 8 64GB Gold",
+      "price": {
+        "raw_value": "SEK900",
+        "currency": "SEK",
+        "amount": "900",
+        "note": "Extracted from: SEK900"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1126111709539135/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
+      "id": "mp_1126111709539135",
+      "images": [
+        {
+          "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/524744961_1517837996266351_4575291736535726829_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=106&ccb=1-7&_nc_sid=247b10&_nc_ohc=a7cMmjIcCD0Q7kNvwGQdYa8&_nc_oc=Adln9QY7aHdXRX8u7RoQ-uPUUSb3Nh0e4AHV60hVvwZSK5xn0pWLqRbuZGmbVNu245etUjPAJcY8D6KXx9_Nmrwf&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=N3sfo93Z2tmGWX5Lf7S2Pg&oh=00_AfV0iYgFklnH2-gqOid7gC5y8T32NRfVc940A_qHv1xJ1A&oe=68A3AB96",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 8",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/1126111709539135/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
+      "added_at": "2025-08-14T16:35:22.047923",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-14T16:35:22.047923",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "iPhone 8 2 stick",
+      "price": {
+        "raw_value": "SEK1,000",
+        "currency": "SEK",
+        "amount": "1000",
+        "note": "Extracted from: SEK1,000"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/668475879534924/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
+      "id": "mp_668475879534924",
+      "images": [
+        {
+          "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/524886764_718674917358042_7582529785758476087_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=111&ccb=1-7&_nc_sid=247b10&_nc_ohc=AmmMt1G2xREQ7kNvwG9eX7i&_nc_oc=AdnL8gHKldJ1rPwsW2x1M7uz_NH1SqrN608oTiU_pXmBINfrp4vzuAcDUTOaL_hgg5oluHBHkx1D-s3KiIizAXPy&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=N3sfo93Z2tmGWX5Lf7S2Pg&oh=00_AfWRnMVa4FXpPqv2-qWwphMnhi70Ia6Dz0S8GPdlUEzrmA&oe=68A3A6E0",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 8",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/668475879534924/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
+      "added_at": "2025-08-14T16:35:22.048620",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-14T16:35:22.048620",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "📱 iPhone 8 – 64GB – Guld",
+      "price": {
+        "raw_value": "SEK900",
+        "currency": "SEK",
+        "amount": "900",
+        "note": "Extracted from: SEK900"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1217209400095330/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
+      "id": "mp_1217209400095330",
+      "images": [
+        {
+          "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/532534043_1469200400943244_8673888943253365474_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_ohc=JWPy07URyb4Q7kNvwHq2DMW&_nc_oc=AdkaXqa5yzL3_AiO__U7R82wMvBAcOXqGcn2OBKIAvoL0_JUNh0tgzoQ3eyKDFpu45l2CJ-8w_0l6rGvx0yXDKWH&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=N3sfo93Z2tmGWX5Lf7S2Pg&oh=00_AfUCi8OF51Hqh65uBQPJEcTYNfYa2mRjKpNEjTwzuJFqEQ&oe=68A39CD5",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 8",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/1217209400095330/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
+      "added_at": "2025-08-14T16:35:22.050102",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-14T16:35:22.050102",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "iPhone 8 – 256 GB – Svart – Mycket bra skick",
+      "price": {
+        "raw_value": "SEK1,100",
+        "currency": "SEK",
+        "amount": "1100",
+        "note": "Extracted from: SEK1,100"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/739230092258153/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
+      "id": "mp_739230092258153",
+      "images": [
+        {
+          "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/530508895_1255384072730285_4850170580570724151_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=101&ccb=1-7&_nc_sid=247b10&_nc_ohc=RB5us_v2euEQ7kNvwExusKd&_nc_oc=Adk7NcH0Jz9tbsSvl1RpApZQ9l7tJx9y-ddCyqB6eZK5yIif9mF0_xNvDjaDHlcuDfXxnP2SVOhdKUo6GcC1Ks9l&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=N3sfo93Z2tmGWX5Lf7S2Pg&oh=00_AfUgOY5T-JPPDvbbhw7WZNUBIsAj4ghKNY_7IV6t15jOkA&oe=68A38E55",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 8",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/739230092258153/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
+      "added_at": "2025-08-14T16:35:22.053504",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-14T16:35:22.053504",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "Mobil säljes",
+      "price": {
+        "raw_value": "SEK1,500",
+        "currency": "SEK",
+        "amount": "1500",
+        "note": "Extracted from: SEK1,500"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1051250976887649/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
+      "id": "mp_1051250976887649",
+      "images": [
+        {
+          "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/495644218_677793718328679_4762772487140913987_n.jpg?stp=c0.159.261.261a_dst-jpg_p261x260_tt6&_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_ohc=qXG4ez0TfrsQ7kNvwFDHLO0&_nc_oc=Adl7E7Xa03eZx4b_3jDXcZFAV8GnNdi8V5tgprgH0-AIOCVYdMgZtfbRhMOB6Au2tQ8X-I1fd8qbnnF5W3QFqV6V&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=N3sfo93Z2tmGWX5Lf7S2Pg&oh=00_AfVYMd1rAXfawi9fbluORGO3m8QUpvkuPRvVaS7-5Fquug&oe=68A3ACA8",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "Unknown",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/1051250976887649/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
+      "added_at": "2025-08-14T16:35:22.055402",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-14T16:35:22.055402",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "NEW Protection glasses for phones: Samsung Note 8 / iPhone 8",
+      "price": {
+        "raw_value": "SEK50",
+        "currency": "SEK",
+        "amount": "50",
+        "note": "Extracted from: SEK50"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1490262472131039/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
+      "id": "mp_1490262472131039",
+      "images": [
+        {
+          "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/531613940_1258891662221428_3061277274020620168_n.jpg?stp=c0.160.261.261a_dst-jpg_p261x260_tt6&_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_ohc=2aZm5STh1twQ7kNvwGMCpLH&_nc_oc=Adm-2hpiMCam17sGr93R3ufkxfKMhskumMZQJgRUToCr3ud26iUCtKBYjIzBNNziePgX89BdDYx-rlI7v1kW2KQH&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=odHvBtBEHn-hofUlo3Totg&oh=00_AfVA2JrGa1HAT23WhJNN2qYxgXxzLzK8NS0lReFIE0iErw&oe=68A3A2EE",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 8",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/1490262472131039/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
+      "added_at": "2025-08-14T16:36:13.826037",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-14T16:36:13.826037",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "LCD-Skärm iPhone 8",
+      "price": {
+        "raw_value": "SEK150",
+        "currency": "SEK",
+        "amount": "150",
+        "note": "Extracted from: SEK150"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/743007044749524/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
+      "id": "mp_743007044749524",
+      "images": [
+        {
+          "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/505261184_4079478485712750_4669937851652314178_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=103&ccb=1-7&_nc_sid=247b10&_nc_ohc=iGghbhBZLeEQ7kNvwGpYgSc&_nc_oc=AdkHjTDf9YlBYoL7dTlY4DtnI4b22K6X7L4g0ME-Ab0Beu9t1tRWlPD8q6o8nxPdX8uIwhDI3ZbQVeB6pjtEVQwk&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=odHvBtBEHn-hofUlo3Totg&oh=00_AfVZREmz-3ms2U9cbrR688_FnImGKKgmZWFKmX_9Aof2hg&oe=68A38DD5",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 8",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/743007044749524/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
+      "added_at": "2025-08-14T16:36:13.827256",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-14T16:36:13.827256",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "iPhone 7/8 plus silikonskal",
+      "price": {
+        "raw_value": "SEK20",
+        "currency": "SEK",
+        "amount": "20",
+        "note": "Extracted from: SEK20"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1678202929476086/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
+      "id": "mp_1678202929476086",
+      "images": [
+        {
+          "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/502853404_642596435494999_5688576605846262429_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=108&ccb=1-7&_nc_sid=247b10&_nc_ohc=EtUWaPS0d5wQ7kNvwF20UF7&_nc_oc=Adlunu-VpHPCUSl9ED3F7epN6M01lnB12R7VGId-GuwRCAq9lKPYt7pl1tBvtHsPeiM1clanJHOduR3jRbMW0LNL&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=odHvBtBEHn-hofUlo3Totg&oh=00_AfUxYQaku5Sq2lO6aiAs1ZRK6B4_gY2G1t748TpaitRvhw&oe=68A39BCC",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 7",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/1678202929476086/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
+      "added_at": "2025-08-14T16:36:13.828472",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-14T16:36:13.828472",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "Mobilskal till iPhone 7/8",
+      "price": {
+        "raw_value": "SEK80",
+        "currency": "SEK",
+        "amount": "80",
+        "note": "Extracted from: SEK80"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/593060047140217/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
+      "id": "mp_593060047140217",
+      "images": [
+        {
+          "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/500826059_1763970280999780_4149234366440047530_n.jpg?stp=c0.152.261.261a_dst-jpg_p261x260_tt6&_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_ohc=7TjA1jFFbA4Q7kNvwHKveO8&_nc_oc=Admrhw0zch9W3ddxAcUDtorceLEVy1FBnuIoafuEQIg7ThHJwmis43FpVfmcJBckhsCsmjRw4jG2dVkD8odfPp75&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=odHvBtBEHn-hofUlo3Totg&oh=00_AfUxpIQuPOZMhfAvgqnCbCyAiu3DbV-HK2tN7-BN7nu9gw&oe=68A38FDA",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 7",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/593060047140217/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
+      "added_at": "2025-08-14T16:36:13.829697",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-14T16:36:13.829697",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "Mobilfodral iPhone 8/7/6/6s",
+      "price": {
+        "raw_value": "SEK149",
+        "currency": "SEK",
+        "amount": "149",
+        "note": "Extracted from: SEK149"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1379606059860385/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
+      "id": "mp_1379606059860385",
+      "images": [
+        {
+          "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/489355925_3989027464700197_4337225793835750916_n.jpg?stp=c0.101.261.261a_dst-jpg_p261x260_tt6&_nc_cat=111&ccb=1-7&_nc_sid=247b10&_nc_ohc=oVHcETp_e3wQ7kNvwGSbVp-&_nc_oc=AdkRf_PDAK2j7UVaXunoE6QuJO6BLvtl-2xgwtvgXpdyzEJTSLQIEy38mw6y0YNhNlj1IeCsFGnvGBRW8GBZLN5H&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=odHvBtBEHn-hofUlo3Totg&oh=00_AfUVspexjzRiY8yqlx0BTOreJxRcvujs0rU9yYFfRWiYkg&oe=68A399A6",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 8",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/1379606059860385/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
+      "added_at": "2025-08-14T16:36:13.830960",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-14T16:36:13.830960",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "iDeal of Sweden | Striped Roses | Mobilskal för iPhone 8/7/6/6s",
+      "price": {
+        "raw_value": "SEK55",
+        "currency": "SEK",
+        "amount": "55",
+        "note": "Extracted from: SEK55"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/510448152097394/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
+      "id": "mp_510448152097394",
+      "images": [
+        {
+          "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/479943642_1668872403984182_276852512814769708_n.jpg?stp=c0.101.261.261a_dst-jpg_p261x260_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=-K7tsDlYrvQQ7kNvwHo3N4r&_nc_oc=Admhwgcs83XWNZ6VEAwvxrdpgmsdwmchWXPxxwgRyro0E0LwriE4kKnuynYutI_6zG4bkoqNSZrHkpdL7nCZsOD2&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=odHvBtBEHn-hofUlo3Totg&oh=00_AfUkV93v_5aDqiXkkMY__KLDgeTieknhidkN_ncMrU6P-A&oe=68A396B1",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 8",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/510448152097394/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
+      "added_at": "2025-08-14T16:36:13.833393",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-14T16:36:13.833393",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "Free",
+      "price": {
+        "amount": "0",
+        "currency": "SEK",
+        "raw_value": "Not found"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1224997052391175/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
+      "id": "mp_1224997052391175",
+      "images": [
+        {
+          "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/489852799_1168530107830194_8550718551317939549_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=106&ccb=1-7&_nc_sid=247b10&_nc_ohc=aOkR684s6Y8Q7kNvwHG3Odz&_nc_oc=AdniCk0vG72i2ir_TjHE8FYsqgjUcXUzjNxzW6xsKjYTzQTMdXP_9qJ9Sy89H6ncrNOZJR8DK567uhGh0oIsHz8b&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=odHvBtBEHn-hofUlo3Totg&oh=00_AfVIRDbVlY_TlcK7gPp99kk-ThCHnulQo6-FjEOHx_2ZVw&oe=68A3B14D",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "Unknown",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/1224997052391175/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
+      "added_at": "2025-08-14T16:36:13.834481",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-14T16:36:13.834481",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "Ny iPhone 8, Space Gray, 256GB",
+      "price": {
+        "raw_value": "SEK1,495",
+        "currency": "SEK",
+        "amount": "1495",
+        "note": "Extracted from: SEK1,495"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1240823253879834/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
+      "id": "mp_1240823253879834",
+      "images": [
+        {
+          "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/522636808_1792890594646638_2556723605679201427_n.jpg?stp=c0.71.261.261a_dst-jpg_p261x260_tt6&_nc_cat=104&ccb=1-7&_nc_sid=247b10&_nc_ohc=5yCkd4AMfOkQ7kNvwGOhYaz&_nc_oc=AdnA-2tDTOIIGyDCxFog0mWnYRTjgyFqeQaMAxnOZZhvo5u0Gf0uXuoRezADK54kZi7NbBe3O5_-n_FVT18lzJA1&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=odHvBtBEHn-hofUlo3Totg&oh=00_AfVu4Zsz3ktkMQNUCcYYXxtkeNUzGXWr-ZZNJ3N0eMbIcg&oe=68A3A85C",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 8",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/1240823253879834/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
+      "added_at": "2025-08-14T16:36:13.835971",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-14T16:36:13.835971",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "Iphone 8 olåst bra skick funkar allt bra",
+      "price": {
+        "raw_value": "SEK1,150",
+        "currency": "SEK",
+        "amount": "1150",
+        "note": "Extracted from: SEK1,150"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1241843024214244/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
+      "id": "mp_1241843024214244",
+      "images": [
+        {
+          "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/494964487_1141781507703952_6218199965522102129_n.jpg?stp=c0.5.261.261a_dst-jpg_p261x260_tt6&_nc_cat=101&ccb=1-7&_nc_sid=247b10&_nc_ohc=9B3dMuV7nkYQ7kNvwEHfjhh&_nc_oc=Adkn7SiQxlPYQr_Q0aoagCSkzcw99NROJjH69zYazgBDY0WfSCgPgKD8flf4UD9ICxxoeXLGRswBukkIENBUaw4O&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=odHvBtBEHn-hofUlo3Totg&oh=00_AfXBaCCPIIpkR7TRrz4gGE6-lq-YdSNEsBJ3O9vZ_P7ghw&oe=68A3B751",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 8",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/1241843024214244/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
+      "added_at": "2025-08-14T16:36:13.838402",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-14T16:36:13.838402",
+      "seller_name": "Private Seller"
     }
   ],
   "extraction_notes": {
@@ -852,7 +1654,7 @@
     "image_quality": "6 products have high-quality thumbnail images from Facebook's CDN",
     "location_accuracy": "Some locations extracted as 'x' - needs pattern refinement",
     "data_completeness": "6 products have complete data with images and links, 10 products have partial data",
-    "last_updated": "2025-08-13T01:06:27.323304"
+    "last_updated": "2025-08-14T19:10:59.980786"
   },
   "technical_details": {
     "html_source_size": "2,926,700 characters",
@@ -871,28 +1673,6 @@
     ]
   },
   "scraping_sessions": [
-    {
-      "start_time": "2025-08-12T00:09:43.578302",
-      "listings_found": 0,
-      "new_listings": 0,
-      "updated_listings": 0,
-      "errors_count": 0,
-      "error_details": [
-        "Failed to navigate to Marketplace"
-      ],
-      "saved_at": "2025-08-12T00:11:05.311416"
-    },
-    {
-      "start_time": "2025-08-12T00:18:02.049747",
-      "listings_found": 0,
-      "new_listings": 0,
-      "updated_listings": 0,
-      "errors_count": 0,
-      "error_details": [
-        "Failed to navigate to Marketplace"
-      ],
-      "saved_at": "2025-08-12T00:19:09.411221"
-    },
     {
       "start_time": "2025-08-13T00:03:27.699081",
       "listings_found": 0,
@@ -1061,6 +1841,95 @@
       "search_keywords": "iphone 12",
       "search_location": "Stockholm, Sweden",
       "saved_at": "2025-08-13T01:04:54.643393"
+    },
+    {
+      "start_time": "2025-08-13T23:18:51.945754",
+      "listings_found": 0,
+      "new_listings": 0,
+      "updated_listings": 0,
+      "errors_count": 0,
+      "error_details": [],
+      "saved_at": "2025-08-13T23:18:55.425210"
+    },
+    {
+      "start_time": "2025-08-13T23:19:57.930689",
+      "listings_found": 0,
+      "new_listings": 0,
+      "updated_listings": 0,
+      "errors_count": 0,
+      "error_details": [],
+      "saved_at": "2025-08-13T23:20:01.299246"
+    },
+    {
+      "start_time": "2025-08-13T23:20:24.889517",
+      "listings_found": 0,
+      "new_listings": 0,
+      "updated_listings": 0,
+      "errors_count": 0,
+      "error_details": [],
+      "saved_at": "2025-08-13T23:22:53.828948"
+    },
+    {
+      "start_time": "2025-08-13T23:38:47.728551",
+      "listings_found": 2,
+      "new_listings": 1,
+      "updated_listings": 0,
+      "errors_count": 0,
+      "error_details": [],
+      "duplicates_found": 0,
+      "end_time": "2025-08-13T23:42:05.973869",
+      "status": "completed",
+      "search_keywords": "iphone 16",
+      "search_location": "Stockholm, Sweden",
+      "saved_at": "2025-08-13T23:42:05.992226"
+    },
+    {
+      "start_time": "2025-08-13T23:44:08.517267",
+      "listings_found": 0,
+      "new_listings": 0,
+      "updated_listings": 0,
+      "errors_count": 0,
+      "error_details": [],
+      "saved_at": "2025-08-13T23:44:58.984544"
+    },
+    {
+      "start_time": "2025-08-13T23:46:26.292848",
+      "listings_found": 0,
+      "new_listings": 0,
+      "updated_listings": 0,
+      "errors_count": 0,
+      "error_details": [
+        "Failed to navigate to Marketplace"
+      ],
+      "saved_at": "2025-08-13T23:48:02.965715"
+    },
+    {
+      "start_time": "2025-08-13T23:51:35.153457",
+      "listings_found": 2,
+      "new_listings": 1,
+      "updated_listings": 0,
+      "errors_count": 0,
+      "error_details": [],
+      "duplicates_found": 0,
+      "end_time": "2025-08-13T23:54:50.377562",
+      "status": "completed",
+      "search_keywords": "iphone 8",
+      "search_location": "Stockholm, Sweden",
+      "saved_at": "2025-08-13T23:54:50.389334"
+    },
+    {
+      "start_time": "2025-08-14T00:33:27.583142",
+      "listings_found": 2,
+      "new_listings": 1,
+      "updated_listings": 0,
+      "errors_count": 0,
+      "error_details": [],
+      "duplicates_found": 0,
+      "end_time": "2025-08-14T00:36:39.172942",
+      "status": "completed",
+      "search_keywords": "iPhone 16",
+      "search_location": "Stockholm, Sweden",
+      "saved_at": "2025-08-14T00:36:39.201319"
     }
   ]
 }

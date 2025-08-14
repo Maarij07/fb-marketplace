@@ -32,11 +32,14 @@ from core.json_manager import JSONDataManager
 class FacebookMarketplaceScraper:
     """Main scraper class for Facebook Marketplace automation."""
     
-    def __init__(self, settings):
+    def __init__(self, settings, persistent_session=False):
         """Initialize scraper with configuration."""
         self.settings = settings
         self.logger = logging.getLogger(__name__)
         self.json_manager = JSONDataManager()
+        self.persistent_session = persistent_session
+        self.is_logged_in_flag = False
+        self.is_on_marketplace = False
         
         # Configuration
         self.credentials = settings.get_facebook_credentials()
@@ -86,8 +89,18 @@ class FacebookMarketplaceScraper:
             )
             chrome_options.add_argument(f'--user-agent={user_agent}')
             
-            # Initialize driver
-            self.driver = webdriver.Chrome(options=chrome_options)
+            # Initialize driver - let Selenium manage ChromeDriver automatically
+            from selenium.webdriver.chrome.service import Service
+            from webdriver_manager.chrome import ChromeDriverManager
+            
+            try:
+                # Use webdriver-manager to automatically get the right ChromeDriver version
+                service = Service(ChromeDriverManager().install())
+                self.driver = webdriver.Chrome(service=service, options=chrome_options)
+            except Exception as e:
+                self.logger.warning(f"webdriver-manager failed: {e}, trying default Chrome setup")
+                # Fallback to default Chrome setup if webdriver-manager fails
+                self.driver = webdriver.Chrome(options=chrome_options)
             
             # Additional anti-detection
             self.driver.execute_script(
@@ -280,32 +293,62 @@ class FacebookMarketplaceScraper:
             # Wait a bit for dynamic content to load
             self._random_delay(2, 4)
             
-            # Find listing containers - try multiple selectors (updated for current Facebook)
-            listing_selectors = [
-                "[data-surface-wrapper='1'] > div > div",
-                "[role='main'] [data-surface-wrapper='1'] > div",
-                "div[data-surface-wrapper] > div > div",
-                "[data-surface-wrapper] div[role='article']",
-                "[data-surface-wrapper] > div > div > div",
-                "div[role='main'] div[role='article']",
-                "[data-testid*='marketplace']",
-                "div[data-testid*='marketplace-item']",
-                "div[aria-label*='Marketplace']",
-                "a[href*='/marketplace/item/']",
-                ".marketplace-card",
-                "div[data-pagelet*='marketplace']"
-            ]
+            # Use the most reliable approach: find elements that contain marketplace item links
+            self.logger.info("Looking for Facebook Marketplace product containers...")
             
+            # First, try to find direct marketplace item links
+            marketplace_links = self.driver.find_elements(By.CSS_SELECTOR, "a[href*='/marketplace/item/']")
+            self.logger.info(f"Found {len(marketplace_links)} marketplace item links")
+            
+            # Get the parent containers of these links (these are the actual product cards)
             listing_elements = []
-            for selector in listing_selectors:
-                try:
-                    elements = self.driver.find_elements(By.CSS_SELECTOR, selector)
-                    if elements:
-                        listing_elements = elements
-                        self.logger.info(f"Found {len(elements)} elements with selector: {selector}")
+            seen_elements = set()
+            
+            for link in marketplace_links:
+                # Try different parent levels to find the product container
+                current_element = link
+                for level in range(5):  # Go up to 5 parent levels
+                    try:
+                        current_element = current_element.find_element(By.XPATH, "..")
+                        element_id = id(current_element)
+                        
+                        # Check if this element looks like a product container
+                        if (element_id not in seen_elements and 
+                            current_element.text and 
+                            len(current_element.text.strip()) > 10):
+                            
+                            seen_elements.add(element_id)
+                            listing_elements.append(current_element)
+                            break
+                    except:
                         break
-                except Exception:
-                    continue
+            
+            self.logger.info(f"Extracted {len(listing_elements)} unique product containers from marketplace links")
+            
+            # If we didn't find enough, try alternative methods
+            if len(listing_elements) < 3:
+                self.logger.info("Trying alternative selector methods...")
+                
+                # Try finding elements with price information (Swedish kronor)
+                price_elements = self.driver.find_elements(By.XPATH, "//*[contains(text(), 'kr') or contains(text(), 'SEK')]")
+                for elem in price_elements:
+                    # Go up parent levels to find container
+                    current = elem
+                    for level in range(3):
+                        try:
+                            current = current.find_element(By.XPATH, "..")
+                            element_id = id(current)
+                            if (element_id not in seen_elements and 
+                                current.text and 
+                                len(current.text.strip()) > 20 and
+                                ('kr' in current.text or 'SEK' in current.text)):
+                                seen_elements.add(element_id)
+                                listing_elements.append(current)
+                                break
+                        except:
+                            break
+                
+                self.logger.info(f"Found {len(listing_elements)} total product containers")
             
             if not listing_elements:
                 self.logger.warning("No listing elements found")
@@ -555,8 +598,12 @@ class FacebookMarketplaceScraper:
             listing_data['added_at'] = datetime.now().isoformat()
             listing_data['source'] = 'facebook_marketplace_scraper'
             
-            # Log successful extraction
-            self.logger.info(f"Successfully extracted listing: {title[:50]}... Price: {listing_data['price']['amount']} {listing_data['price']['currency']} ID: {listing_data['id']}")
+            # Log successful extraction (handle Unicode properly)
+            try:
+                safe_title = title[:50].encode('ascii', 'replace').decode('ascii')
+                self.logger.info(f"Successfully extracted listing: {safe_title}... Price: {listing_data['price']['amount']} {listing_data['price']['currency']} ID: {listing_data['id']}")
+            except Exception:
+                self.logger.info(f"Successfully extracted listing (title contains special chars) Price: {listing_data['price']['amount']} {listing_data['price']['currency']} ID: {listing_data['id']}")
             
             return listing_data
             
@@ -659,6 +706,36 @@ class FacebookMarketplaceScraper:
         """Add random delay to avoid detection."""
         delay = random.uniform(min_seconds, max_seconds)
         time.sleep(delay)
+    
+    def _ensure_single_tab(self):
+        """Ensure only one tab is open, close any extra tabs."""
+        try:
+            if not self.driver:
+                return
+            
+            # Get all window handles
+            all_windows = self.driver.window_handles
+            
+            if len(all_windows) > 1:
+                self.logger.info(f"Found {len(all_windows)} tabs, closing extra tabs...")
+                
+                # Keep the first tab, close all others
+                main_window = all_windows[0]
+                
+                for window in all_windows[1:]:
+                    try:
+                        self.driver.switch_to.window(window)
+                        self.driver.close()
+                        self.logger.debug(f"Closed extra tab: {window}")
+                    except Exception as e:
+                        self.logger.warning(f"Failed to close tab {window}: {e}")
+                
+                # Switch back to the main window
+                self.driver.switch_to.window(main_window)
+                self.logger.info(f"Now using single tab: {main_window}")
+            
+        except Exception as e:
+            self.logger.warning(f"Failed to ensure single tab: {e}")
     
     def scrape_marketplace(self) -> List[Dict[str, Any]]:
         """Main scraping method that orchestrates the entire process."""
@@ -863,10 +940,202 @@ class FacebookMarketplaceScraper:
             self.logger.error(f"Failed to navigate to Marketplace with custom search: {e}")
             return False
     
-    def __del__(self):
-        """Cleanup when object is destroyed."""
+    def initialize_session(self) -> bool:
+        """Initialize persistent session (login + navigate to marketplace)."""
+        try:
+            # Setup WebDriver if not already done
+            if not self.driver:
+                if not self.setup_driver():
+                    return False
+            
+            # Login if not already logged in
+            if not self.is_logged_in_flag:
+                if not self.login_to_facebook():
+                    self.session_stats['error_details'].append("Login failed")
+                    return False
+                self.is_logged_in_flag = True
+            
+            # Navigate to marketplace if not already there
+            if not self.is_on_marketplace:
+                marketplace_url = "https://www.facebook.com/marketplace/stockholm"
+                self.logger.info(f"Navigating to marketplace: {marketplace_url}")
+                self.driver.get(marketplace_url)
+                self._random_delay(2, 3)
+                self.is_on_marketplace = True
+            
+            self.logger.info("Persistent session initialized successfully")
+            return True
+            
+        except Exception as e:
+            self.logger.error(f"Failed to initialize persistent session: {e}")
+            return False
+    
+    def quick_search(self, search_query: str) -> List[Dict[str, Any]]:
+        """Enhanced quick search with continuous scrolling and deduplication."""
+        try:
+            self.logger.info(f"Starting enhanced search for: {search_query}")
+            
+            # Ensure session is initialized
+            if not self.initialize_session():
+                return []
+            
+            # Ensure we're using only one tab - close any extra tabs
+            self._ensure_single_tab()
+            
+            # Build search URL and navigate directly in the current tab
+            import urllib.parse
+            encoded_query = urllib.parse.quote(search_query)
+            search_url = f"https://www.facebook.com/marketplace/stockholm/search/?query={encoded_query}"
+            
+            self.logger.info(f"Navigating to search in current tab: {search_url}")
+            self.driver.get(search_url)
+            self._random_delay(3, 5)
+            
+            # Double-check we still have only one tab
+            self._ensure_single_tab()
+            
+            # Wait for search results
+            try:
+                self.wait.until(
+                    EC.any_of(
+                        EC.presence_of_element_located((By.CSS_SELECTOR, "[data-surface-wrapper='1']"))
+                    )
+                )
+            except TimeoutException:
+                self.logger.warning("Search results may not have loaded properly")
+            
+            # Start continuous scraping with scrolling
+            all_listings = self.continuous_scroll_and_scrape(search_query, max_cycles=10)
+            
+            return all_listings
+            
+        except Exception as e:
+            self.logger.error(f"Quick search failed for '{search_query}': {e}")
+            return []
+    
+    def continuous_scroll_and_scrape(self, search_query: str, max_cycles: int = 10) -> List[Dict[str, Any]]:
+        """Continuously scroll and scrape products with deduplication."""
+        all_listings = []
+        seen_ids = set()
+        cycle_count = 0
+        no_new_products_count = 0
+        
+        self.logger.info(f"Starting continuous scraping for '{search_query}' with max {max_cycles} cycles")
+        
+        try:
+            while cycle_count < max_cycles:
+                cycle_count += 1
+                self.logger.info(f"--- Scraping Cycle {cycle_count}/{max_cycles} ---")
+                
+                # Wait for products to load
+                self._random_delay(2, 4)
+                
+                # Extract current listings from page
+                current_listings = self.extract_listings()
+                
+                if not current_listings:
+                    self.logger.warning(f"No listings found in cycle {cycle_count}")
+                    no_new_products_count += 1
+                    if no_new_products_count >= 3:
+                        self.logger.warning("No new products found for 3 consecutive cycles, stopping")
+                        break
+                else:
+                    # Reset counter if we found products
+                    no_new_products_count = 0
+                
+                # Filter out duplicates based on ID
+                new_listings = []
+                for listing in current_listings:
+                    listing_id = listing.get('id')
+                    if listing_id and listing_id not in seen_ids:
+                        # Additional check: skip obviously invalid listings
+                        title = listing.get('title', '').lower()
+                        if title and 'create new listing' not in title and len(title) > 3:
+                            seen_ids.add(listing_id)
+                            new_listings.append(listing)
+                            self.logger.debug(f"New listing: {listing.get('title', 'NO TITLE')[:40]}...")
+                
+                if new_listings:
+                    self.logger.info(f"Cycle {cycle_count}: Found {len(new_listings)} new unique listings")
+                    all_listings.extend(new_listings)
+                    
+                    # Save to JSON immediately to prevent data loss
+                    try:
+                        stats = self.json_manager.add_products_batch(new_listings)
+                        self.logger.info(f"Saved {stats['added']} listings, {stats['duplicates']} duplicates")
+                    except Exception as save_error:
+                        self.logger.error(f"Failed to save listings: {save_error}")
+                else:
+                    self.logger.info(f"Cycle {cycle_count}: No new unique listings found")
+                
+                # Scroll down to load more products
+                if cycle_count < max_cycles:
+                    self.logger.info(f"Scrolling down to load more products...")
+                    
+                    # Get current scroll position
+                    current_height = self.driver.execute_script("return window.pageYOffset;")
+                    
+                    # Scroll down by 300-500 pixels (more controlled scrolling)
+                    scroll_amount = random.randint(300, 500)
+                    new_scroll_pos = current_height + scroll_amount
+                    
+                    self.driver.execute_script(f"window.scrollTo(0, {new_scroll_pos});")
+                    self.logger.debug(f"Scrolled from {current_height} to {new_scroll_pos}")
+                    
+                    # Wait for new content to load
+                    self._random_delay(3, 5)
+                    
+                    # Check if we've reached the bottom or no new content loaded
+                    new_height = self.driver.execute_script("return document.body.scrollHeight;")
+                    if new_scroll_pos >= new_height - 100:  # Near bottom with 100px buffer
+                        self.logger.info("Reached near bottom of page")
+                        break
+                
+                # Every 30 seconds cycle (approximate)
+                if cycle_count % 3 == 0:  # Roughly every 3 cycles = ~30 seconds
+                    self.logger.info(f"Completed {cycle_count} cycles, brief pause...")
+                    self._random_delay(1, 2)
+        
+        except Exception as e:
+            self.logger.error(f"Error during continuous scrolling: {e}")
+            import traceback
+            self.logger.debug(traceback.format_exc())
+        
+        self.logger.info(f"Continuous scraping completed: {len(all_listings)} unique listings found")
+        
+        # Log summary of found listings
+        if all_listings:
+            self.logger.info("Sample of scraped listings:")
+            for i, listing in enumerate(all_listings[:5], 1):
+                title = listing.get('title', 'NO TITLE')[:50]
+                price = listing.get('price', {}).get('amount', 'N/A')
+                currency = listing.get('price', {}).get('currency', '')
+                try:
+                    safe_title = title.encode('ascii', 'replace').decode('ascii')
+                    self.logger.info(f"  {i}. {safe_title}... - {price} {currency}")
+                except Exception:
+                    self.logger.info(f"  {i}. [Title with special chars]... - {price} {currency}")
+        
+        return all_listings
+    
+    def close_session(self):
+        """Close the persistent session and browser."""
         if hasattr(self, 'driver') and self.driver:
             try:
+                self.logger.info("Closing persistent session")
                 self.driver.quit()
+                self.driver = None
+                self.is_logged_in_flag = False
+                self.is_on_marketplace = False
             except:
                 pass
+    
+    def __del__(self):
+        """Cleanup when object is destroyed."""
+        if not self.persistent_session:
+            # Only auto-close if not in persistent mode
+            if hasattr(self, 'driver') and self.driver:
+                try:
+                    self.driver.quit()
+                except:
+                    pass

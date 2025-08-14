@@ -228,8 +228,8 @@ class SchedulerManager:
             self.logger.info(f"Starting custom scraping job for: {search_query}")
             
             start_time = datetime.now()
-            scraper = FacebookMarketplaceScraper(self.settings)
-            results = scraper.scrape_marketplace_custom(search_query)
+            scraper = FacebookMarketplaceScraper(self.settings, persistent_session=True)
+            results = scraper.quick_search(search_query)
             end_time = datetime.now()
             
             duration = (end_time - start_time).total_seconds()
