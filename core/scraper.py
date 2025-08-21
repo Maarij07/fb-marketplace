@@ -707,6 +707,33 @@ class FacebookMarketplaceScraper:
         delay = random.uniform(min_seconds, max_seconds)
         time.sleep(delay)
     
+    def _send_scraping_notification(self, notification_type: str, data: dict):
+        """Send real-time scraping notification via Flask app if available."""
+        try:
+            # Try to get notification manager from the global registry
+            if hasattr(self, '_notification_manager') and self._notification_manager:
+                self._notification_manager.broadcast_notification(notification_type, data)
+                self.logger.debug(f"Sent notification: {notification_type} - {data.get('message', 'No message')}")
+            else:
+                # Try Flask current_app as fallback
+                try:
+                    from flask import current_app
+                    if hasattr(current_app, 'notification_manager'):
+                        current_app.notification_manager.broadcast_notification(notification_type, data)
+                        self.logger.debug(f"Sent notification via Flask app: {notification_type} - {data.get('message', 'No message')}")
+                    else:
+                        self.logger.debug(f"No notification manager available for: {notification_type}")
+                except:
+                    self.logger.debug(f"Flask app not available, notification not sent: {notification_type}")
+                
+        except Exception as e:
+            # Silently fail if Flask app is not available or in different context
+            self.logger.debug(f"Could not send notification {notification_type}: {e}")
+    
+    def set_notification_manager(self, notification_manager):
+        """Set notification manager for real-time updates."""
+        self._notification_manager = notification_manager
+    
     def _ensure_single_tab(self):
         """Ensure only one tab is open, close any extra tabs."""
         try:
@@ -1022,10 +1049,24 @@ class FacebookMarketplaceScraper:
         
         self.logger.info(f"Starting continuous scraping for '{search_query}' with max {max_cycles} cycles")
         
+        # Send start notification
+        self._send_scraping_notification('scraping_started', {
+            'search_query': search_query,
+            'max_cycles': max_cycles,
+            'message': f'Started scraping for "{search_query}"'
+        })
+        
         try:
             while cycle_count < max_cycles:
                 cycle_count += 1
                 self.logger.info(f"--- Scraping Cycle {cycle_count}/{max_cycles} ---")
+                
+                # Send cycle start notification
+                self._send_scraping_notification('cycle_started', {
+                    'cycle': cycle_count,
+                    'max_cycles': max_cycles,
+                    'message': f'Starting cycle {cycle_count} of {max_cycles}'
+                })
                 
                 # Wait for products to load
                 self._random_delay(2, 4)
@@ -1036,6 +1077,13 @@ class FacebookMarketplaceScraper:
                 if not current_listings:
                     self.logger.warning(f"No listings found in cycle {cycle_count}")
                     no_new_products_count += 1
+                    
+                    # Send no items found notification
+                    self._send_scraping_notification('no_items_found', {
+                        'cycle': cycle_count,
+                        'message': f'No items found in cycle {cycle_count}'
+                    })
+                    
                     if no_new_products_count >= 3:
                         self.logger.warning("No new products found for 3 consecutive cycles, stopping")
                         break
@@ -1058,6 +1106,15 @@ class FacebookMarketplaceScraper:
                 if new_listings:
                     self.logger.info(f"Cycle {cycle_count}: Found {len(new_listings)} new unique listings")
                     all_listings.extend(new_listings)
+                    
+                    # Send items found notification
+                    self._send_scraping_notification('items_found', {
+                        'cycle': cycle_count,
+                        'new_items': len(new_listings),
+                        'total_items': len(all_listings),
+                        'search_query': search_query,
+                        'message': f'Found {len(new_listings)} new items in cycle {cycle_count}'
+                    })
                     
                     # Save to JSON immediately to prevent data loss
                     try:
@@ -1102,6 +1159,14 @@ class FacebookMarketplaceScraper:
             self.logger.debug(traceback.format_exc())
         
         self.logger.info(f"Continuous scraping completed: {len(all_listings)} unique listings found")
+        
+        # Send completion notification
+        self._send_scraping_notification('scraping_completed', {
+            'search_query': search_query,
+            'total_items': len(all_listings),
+            'cycles_completed': cycle_count,
+            'message': f'Scraping completed! Found {len(all_listings)} total items for "{search_query}"'
+        })
         
         # Log summary of found listings
         if all_listings:

@@ -1,0 +1,67 @@
+2025-08-21 16:08:25,950 - WDM - INFO - ====== WebDriver manager ======
+2025-08-21 16:08:26,908 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-21 16:08:27,413 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-21 16:08:27,808 - WDM - INFO - There is no [win64] chromedriver "139.0.7258.138" for browser google-chrome "139.0.7258" in cache
+2025-08-21 16:08:27,809 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-21 16:08:29,532 - WDM - INFO - WebDriver version 139.0.7258.138 selected
+2025-08-21 16:08:29,537 - WDM - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/139.0.7258.138/win32/chromedriver-win32.zip
+2025-08-21 16:08:29,538 - WDM - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/139.0.7258.138/win32/chromedriver-win32.zip
+2025-08-21 16:08:30,052 - WDM - INFO - Driver downloading response is 200
+2025-08-21 16:09:11,754 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-21 16:09:13,390 - WDM - INFO - Driver has been saved in cache [C:\Users\PC\.wdm\drivers\chromedriver\win64\139.0.7258.138]
+2025-08-21 16:09:16,258 - __main__ - INFO - Chrome WebDriver initialized successfully
+2025-08-21 16:09:16,258 - __main__ - INFO - Starting Facebook login...
+2025-08-21 16:10:18,557 - __main__ - INFO - Successfully logged in to Facebook
+2025-08-21 16:10:18,558 - __main__ - INFO - Navigating to search: https://www.facebook.com/marketplace/stockholm/search/?query=iphone%2016
+2025-08-21 16:10:36,806 - __main__ - WARNING - Marketplace may not have loaded properly
+2025-08-21 16:10:36,807 - __main__ - INFO - Looking for product cards...
+2025-08-21 16:10:39,830 - __main__ - INFO - Found 21 marketplace item links
+2025-08-21 16:10:40,041 - __main__ - INFO - Prepared 5 product cards for detail extraction
+2025-08-21 16:10:40,041 - __main__ - INFO - Extracting seller details for: SEK7,400
+SEK8,200
+iPhone 16 Pro Max – 1TB Helt Ny & Oanvänd!
+Stockholm, AB
+2025-08-21 16:10:49,488 - __main__ - INFO - Page source saved to: seller_debug_output\product_page_1_20250821_161049.html
+2025-08-21 16:21:41,805 - WDM - INFO - ====== WebDriver manager ======
+2025-08-21 16:21:42,592 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-21 16:21:42,996 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-21 16:21:43,432 - WDM - INFO - Driver [C:\Users\PC\.wdm\drivers\chromedriver\win64\139.0.7258.138\chromedriver-win32/chromedriver.exe] found in cache
+2025-08-21 16:21:44,592 - __main__ - INFO - Chrome WebDriver initialized successfully
+2025-08-21 16:21:44,592 - __main__ - INFO - Starting Facebook login...
+2025-08-21 16:22:47,951 - __main__ - INFO - Successfully logged in to Facebook
+2025-08-21 16:22:47,951 - __main__ - INFO - Navigating to search: https://www.facebook.com/marketplace/stockholm/search/?query=iphone%2016
+2025-08-21 16:23:05,433 - __main__ - WARNING - Marketplace may not have loaded properly
+2025-08-21 16:23:05,434 - __main__ - INFO - Looking for product cards...
+2025-08-21 16:23:08,456 - __main__ - INFO - Found 19 marketplace item links
+2025-08-21 16:23:08,591 - __main__ - INFO - Prepared 5 product cards for detail extraction
+2025-08-21 16:23:08,592 - __main__ - INFO - Extracting seller details for: SEK7,400
+SEK8,200
+iPhone 16 Pro Max – 1TB Helt Ny & Oanvänd!
+Stockholm, AB
+2025-08-21 16:23:19,409 - __main__ - INFO - Initial page source saved to: seller_debug_output\product_page_initial_1_20250821_162319.html
+2025-08-21 16:24:29,889 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001BBE0885310>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/27969a610947a05946da134427c2fa90/elements
+2025-08-21 16:24:33,968 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001BBE0888E90>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/27969a610947a05946da134427c2fa90/elements
+2025-08-21 16:25:21,343 - WDM - INFO - ====== WebDriver manager ======
+2025-08-21 16:25:22,184 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-21 16:25:22,606 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-21 16:25:23,004 - WDM - INFO - Driver [C:\Users\PC\.wdm\drivers\chromedriver\win64\139.0.7258.138\chromedriver-win32/chromedriver.exe] found in cache
+2025-08-21 16:25:24,112 - __main__ - INFO - Chrome WebDriver initialized successfully
+2025-08-21 16:25:24,113 - __main__ - INFO - Starting Facebook login...
+2025-08-21 16:26:13,972 - __main__ - INFO - Successfully logged in to Facebook
+2025-08-21 16:26:13,972 - __main__ - INFO - Navigating to search: https://www.facebook.com/marketplace/stockholm/search/?query=samsung%20galaxy%20s22
+2025-08-21 16:26:33,387 - __main__ - WARNING - Marketplace may not have loaded properly
+2025-08-21 16:26:33,387 - __main__ - INFO - Looking for product cards...
+2025-08-21 16:26:36,408 - __main__ - INFO - Found 20 marketplace item links
+2025-08-21 16:26:36,525 - __main__ - INFO - Prepared 5 product cards for detail extraction
+2025-08-21 16:26:36,526 - __main__ - INFO - Extracting seller details for: SEK2,000
+Samsung Galaxy S22 ultra
+Stockholm, AB
+2025-08-21 16:26:47,199 - __main__ - INFO - Initial page source saved to: seller_debug_output\product_page_initial_1_20250821_162646.html
+2025-08-21 16:27:58,156 - __main__ - INFO - Looking for 'See details' button...
+2025-08-21 16:28:25,284 - __main__ - INFO - Found profile link as alternative to 'See details' button
+2025-08-21 16:28:25,312 - __main__ - INFO - Clicking 'See details' button: Seller details
+2025-08-21 16:28:28,820 - __main__ - INFO - Seller details page saved to: seller_debug_output\seller_details_page_1_20250821_162646.html
+2025-08-21 16:29:10,031 - __main__ - INFO - Navigated to new page, going back to product page
+2025-08-21 16:32:02,501 - __main__ - INFO - Extracted data saved to: seller_debug_output\extracted_data_1_20250821_162646.json
+2025-08-21 16:32:02,502 - __main__ - INFO - HTML report created: seller_debug_output\seller_report_1_20250821_162646.html
+2025-08-21 16:32:05,507 - __main__ - INFO - Summary report created: seller_debug_output\extraction_summary_20250821_163205.html

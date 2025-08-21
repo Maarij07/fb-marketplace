@@ -163,14 +163,16 @@
         }
         
         .btn-danger {
-            background-color: var(--white);
-            color: var(--black);
-            border: 1px solid var(--gray-300);
+            background-color: #dc3545;
+            color: var(--white);
+            border: 1px solid #dc3545;
         }
         
         .btn-danger:hover {
-            background-color: var(--gray-100);
-            color: var(--gray-900);
+            background-color: #c82333;
+            border-color: #bd2130;
+            color: var(--white);
+            transform: translateY(-1px);
         }
         
         .btn-sm {
@@ -541,6 +543,320 @@
         .table-container::-webkit-scrollbar-thumb:hover {
             background: var(--gray-400);
         }
+        
+        /* Notification icon styles */
+        .notification-icon {
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .notification-badge {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background-color: #dc3545;
+            color: white;
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;
+            font-size: 0.7rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 500;
+        }
+        
+        .notification-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: 0.5rem;
+            box-shadow: var(--shadow-lg);
+            width: 320px;
+            max-height: 400px;
+            overflow-y: auto;
+            z-index: 1000;
+            display: none;
+        }
+        
+        .notification-dropdown.show {
+            display: block;
+        }
+        
+        .notification-header {
+            padding: 1rem;
+            border-bottom: 1px solid var(--gray-200);
+            font-weight: 600;
+            font-size: 0.875rem;
+            background-color: var(--gray-50);
+        }
+        
+        .notification-item {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid var(--gray-100);
+            font-size: 0.8125rem;
+            cursor: pointer;
+        }
+        
+        .notification-item:hover {
+            background-color: var(--gray-50);
+        }
+        
+        .notification-item:last-child {
+            border-bottom: none;
+        }
+        
+        .notification-time {
+            font-size: 0.75rem;
+            color: var(--gray-500);
+            margin-top: 0.25rem;
+        }
+        
+        .notification-empty {
+            padding: 2rem 1rem;
+            text-align: center;
+            color: var(--gray-500);
+            font-size: 0.875rem;
+        }
+        
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1050;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            backdrop-filter: blur(2px);
+        }
+        
+        .modal.show {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-dialog {
+            max-width: 500px;
+            width: 90%;
+            margin: 0 auto;
+        }
+        
+        .modal-content {
+            background: var(--white);
+            border-radius: 0.75rem;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--gray-200);
+        }
+        
+        .modal-header {
+            padding: 1.5rem 1.5rem 0.75rem 1.5rem;
+            border-bottom: 1px solid var(--gray-200);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .modal-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--gray-900);
+            margin: 0;
+        }
+        
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--gray-500);
+            cursor: pointer;
+            padding: 0;
+            width: 2rem;
+            height: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0.25rem;
+        }
+        
+        .modal-close:hover {
+            background-color: var(--gray-100);
+            color: var(--gray-700);
+        }
+        
+        .modal-body {
+            padding: 1.5rem;
+        }
+        
+        .modal-footer {
+            padding: 0.75rem 1.5rem 1.5rem 1.5rem;
+            display: flex;
+            justify-content: flex-end;
+            gap: 0.75rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--gray-700);
+            font-size: 0.875rem;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            font-size: 0.875rem;
+            border: 2px solid var(--gray-300);
+            border-radius: 0.375rem;
+            background-color: var(--white);
+            color: var(--gray-900);
+            transition: all 0.2s ease;
+            font-family: inherit;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--black);
+            box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-control.error {
+            border-color: #dc3545;
+            box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1);
+        }
+        
+        .form-control.error:focus {
+            border-color: #dc3545;
+            box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.2);
+        }
+        
+        .form-select {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            font-size: 0.875rem;
+            border: 2px solid var(--gray-300);
+            border-radius: 0.375rem;
+            background-color: var(--white);
+            color: var(--gray-900);
+            transition: all 0.2s ease;
+            font-family: inherit;
+            cursor: pointer;
+        }
+        
+        .form-select:focus {
+            outline: none;
+            border-color: var(--black);
+            box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-select.error {
+            border-color: #dc3545;
+            box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1);
+        }
+        
+        .form-select.error:focus {
+            border-color: #dc3545;
+            box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.2);
+        }
+        
+        .error-message {
+            color: #dc3545;
+            font-size: 0.75rem;
+            margin-top: 0.25rem;
+            display: none;
+        }
+        
+        .error-message.show {
+            display: block;
+        }
+        
+        /* Scheduler item styles */
+        .scheduler-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem;
+            margin-bottom: 0.5rem;
+            background-color: var(--gray-50);
+            border-radius: 0.375rem;
+            border: 1px solid var(--gray-200);
+        }
+        
+        .scheduler-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .scheduler-details {
+            flex: 1;
+        }
+        
+        .scheduler-query {
+            font-weight: 500;
+            font-size: 0.875rem;
+            color: var(--gray-900);
+            margin-bottom: 0.25rem;
+        }
+        
+        .scheduler-meta {
+            font-size: 0.75rem;
+            color: var(--gray-600);
+        }
+        
+        .scheduler-actions {
+            display: flex;
+            gap: 0.25rem;
+        }
+        
+        .btn-xs {
+            padding: 0.25rem 0.5rem;
+            font-size: 0.75rem;
+            border-radius: 0.25rem;
+        }
+        
+        .btn-play {
+            background-color: var(--gray-800);
+            color: var(--white);
+            border: none;
+        }
+        
+        .btn-play:hover {
+            background-color: var(--black);
+        }
+        
+        .btn-pause {
+            background-color: var(--gray-600);
+            color: var(--white);
+            border: none;
+        }
+        
+        .btn-pause:hover {
+            background-color: var(--gray-700);
+        }
+        
+        .btn-delete {
+            background-color: var(--white);
+            color: var(--gray-700);
+            border: 1px solid var(--gray-300);
+        }
+        
+        .btn-delete:hover {
+            background-color: var(--gray-100);
+            color: var(--gray-900);
+        }
+        
+        /* Confirmation modal styles */
+        .modal-sm {
+            max-width: 400px;
+        }
     </style>
 </head>
 <body>
@@ -557,6 +873,27 @@
                     </div>
                 </div>
                 <div class="header-actions">
+                    <!-- Notification Icon -->
+                    <div class="notification-icon" onclick="toggleNotifications()">
+                        <button class="btn btn-secondary">
+                            <i class="bi bi-bell"></i>
+                        </button>
+                        <span class="notification-badge" id="notification-count" style="display: none;">0</span>
+                        
+                        <!-- Notification Dropdown -->
+                        <div class="notification-dropdown" id="notification-dropdown">
+                            <div class="notification-header">
+                                Recent Notifications
+                            </div>
+                            <div id="notification-list">
+                                <div class="notification-empty">
+                                    <i class="bi bi-bell-slash"></i><br>
+                                    No recent notifications
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <button class="btn btn-secondary" onclick="refreshData()">
                         <i class="bi bi-arrow-clockwise"></i> Refresh
                     </button>
@@ -607,18 +944,14 @@
                 <div class="card">
                     <div class="card-body scheduler-card">
                         <div class="scheduler-info">
-                            <h5 class="card-title">Scheduler</h5>
-                            <div>
-                                <span class="status-badge status-stopped" id="scheduler-status">-</span>
+                            <h5 class="card-title">Schedulers <span class="text-muted text-xs" id="scheduler-count">0/3</span></h5>
+                            <div class="scheduler-list" id="scheduler-list">
+                                <div class="text-muted text-xs" id="no-schedulers">No schedulers created</div>
                             </div>
-                            <div class="text-xs text-muted" id="next-run">-</div>
                         </div>
                         <div class="scheduler-controls">
-                            <button class="btn btn-sm btn-primary" onclick="startScheduler()" id="start-btn">
-                                <i class="bi bi-play"></i> Start
-                            </button>
-                            <button class="btn btn-sm btn-secondary" onclick="stopScheduler()" id="stop-btn">
-                                <i class="bi bi-stop"></i> Stop
+                            <button class="btn btn-sm btn-primary" onclick="openSchedulerModal()" id="add-scheduler-btn">
+                                <i class="bi bi-plus-circle"></i> Add Scheduler
                             </button>
                         </div>
                     </div>
@@ -699,6 +1032,93 @@
         </div>
     </div>
 
+    <!-- Scheduler Modal -->
+    <div class="modal" id="scheduler-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add New Scheduler</h5>
+                    <button type="button" class="modal-close" onclick="closeSchedulerModal()">
+                        <i class="bi bi-x"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="scheduler-form">
+                        <div class="form-group">
+                            <label for="search-query-modal" class="form-label">Search Query</label>
+                            <input type="text" id="search-query-modal" class="form-control" placeholder="e.g., iPhone 15 Pro" required>
+                            <div class="error-message" id="search-query-error">Please enter a search query</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="city-modal" class="form-label">City</label>
+                            <select id="city-modal" class="form-select" required>
+                                <option value="">Select a city...</option>
+                                <option value="Stockholm" selected>Stockholm</option>
+                                <option value="Sydney">Sydney</option>
+                                <option value="Melbourne">Melbourne</option>
+                                <option value="Brisbane">Brisbane</option>
+                                <option value="Perth">Perth</option>
+                                <option value="Adelaide">Adelaide</option>
+                                <option value="Gold Coast">Gold Coast</option>
+                                <option value="Newcastle">Newcastle</option>
+                                <option value="Canberra">Canberra</option>
+                                <option value="Sunshine Coast">Sunshine Coast</option>
+                                <option value="Wollongong">Wollongong</option>
+                                <option value="Hobart">Hobart</option>
+                                <option value="Geelong">Geelong</option>
+                                <option value="Townsville">Townsville</option>
+                                <option value="Cairns">Cairns</option>
+                                <option value="Darwin">Darwin</option>
+                                <option value="Toowoomba">Toowoomba</option>
+                                <option value="Ballarat">Ballarat</option>
+                                <option value="Bendigo">Bendigo</option>
+                                <option value="Albury">Albury</option>
+                            </select>
+                            <div class="error-message" id="city-error">Please select a city</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="interval-modal" class="form-label">Schedule Interval</label>
+                            <select id="interval-modal" class="form-select" required>
+                                <option value="">Select interval...</option>
+                                <option value="15">Every 15 minutes</option>
+                                <option value="30">Every 30 minutes</option>
+                                <option value="60">Every 1 hour</option>
+                            </select>
+                            <div class="error-message" id="interval-error">Please select a schedule interval</div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" onclick="closeSchedulerModal()">Cancel</button>
+                    <button type="button" class="btn btn-primary" onclick="createScheduler()">Create Scheduler</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div class="modal" id="confirm-modal">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirm-title">Confirm Action</h5>
+                    <button type="button" class="modal-close" onclick="closeConfirmModal()">
+                        <i class="bi bi-x"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="confirm-message">Are you sure you want to proceed?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" onclick="closeConfirmModal()">Cancel</button>
+                    <button type="button" class="btn btn-danger" onclick="confirmAction()" id="confirm-btn">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Toast Container -->
     <div class="toast-container">
         <div id="notification-toast" class="toast" role="alert">
@@ -716,10 +1136,15 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         let toast;
+        let eventSource;
 
         document.addEventListener('DOMContentLoaded', function() {
             toast = new bootstrap.Toast(document.getElementById('notification-toast'));
             loadData();
+            
+            // Setup real-time notifications via Server-Sent Events
+            setupEventSource();
+            
             // Refresh data every 30 seconds
             setInterval(loadData, 30000);
             
@@ -733,6 +1158,87 @@
                 });
             }
         });
+        
+        function setupEventSource() {
+            if (eventSource) {
+                eventSource.close();
+            }
+            
+            eventSource = new EventSource('/api/events');
+            
+            eventSource.onopen = function(event) {
+                console.log('Connected to notification stream');
+            };
+            
+            eventSource.onmessage = function(event) {
+                try {
+                    const notification = JSON.parse(event.data);
+                    handleScrapingNotification(notification);
+                } catch (error) {
+                    console.error('Error parsing notification:', error);
+                }
+            };
+            
+            eventSource.onerror = function(event) {
+                console.error('EventSource failed:', event);
+                // Reconnect after 5 seconds
+                setTimeout(() => {
+                    setupEventSource();
+                }, 5000);
+            };
+        }
+        
+        function handleScrapingNotification(notification) {
+            const { type, data } = notification;
+            
+            switch (type) {
+                case 'items_found':
+                    showNotification(
+                        `Found ${data.new_items} new items in cycle ${data.cycle}! Total: ${data.total_items} items for "${data.search_query}"`,
+                        'success'
+                    );
+                    // Refresh listings to show new items
+                    loadListings();
+                    break;
+                    
+                case 'scraping_started':
+                    showNotification(`Started scraping for "${data.search_query}"...`, 'info');
+                    break;
+                    
+                case 'scraping_completed':
+                    showNotification(
+                        `Scraping completed! Found ${data.total_items} total items for "${data.search_query}" in ${data.cycles_completed} cycles`,
+                        'success'
+                    );
+                    // Refresh all data to show final results
+                    loadData();
+                    break;
+                    
+                case 'cycle_started':
+                    if (data.cycle % 2 === 1) { // Show notification for every other cycle to avoid spam
+                        showNotification(`Scraping cycle ${data.cycle} of ${data.max_cycles}...`, 'info');
+                    }
+                    break;
+                    
+                case 'no_items_found':
+                    // Only show if we haven't found any items at all for a while
+                    if (data.cycle > 2) {
+                        showNotification(`No new items found in cycle ${data.cycle}`, 'warning');
+                    }
+                    break;
+                    
+                case 'connected':
+                    console.log('Connected to real-time notifications');
+                    break;
+                    
+                case 'heartbeat':
+                    // Silent heartbeat to keep connection alive
+                    break;
+                    
+                default:
+                    console.log('Unknown notification type:', type, data);
+            }
+        }
 
         function showNotification(message, type = 'info') {
             const toastElement = document.getElementById('notification-toast');
@@ -969,6 +1475,426 @@
                 showNotification('Error running custom scrape', 'danger');
             }
         }
+        
+        // Notification Management
+        let recentNotifications = [];
+        
+        function addToNotificationHistory(message, type) {
+            const notification = {
+                id: Date.now(),
+                message: message,
+                type: type,
+                timestamp: new Date()
+            };
+            
+            recentNotifications.unshift(notification);
+            
+            // Keep only last 10 notifications
+            if (recentNotifications.length > 10) {
+                recentNotifications = recentNotifications.slice(0, 10);
+            }
+            
+            updateNotificationBadge();
+            updateNotificationDropdown();
+        }
+        
+        function updateNotificationBadge() {
+            const badge = document.getElementById('notification-count');
+            const count = recentNotifications.length;
+            
+            if (count > 0) {
+                badge.textContent = count > 9 ? '9+' : count;
+                badge.style.display = 'flex';
+            } else {
+                badge.style.display = 'none';
+            }
+        }
+        
+        function updateNotificationDropdown() {
+            const notificationList = document.getElementById('notification-list');
+            
+            if (recentNotifications.length === 0) {
+                notificationList.innerHTML = `
+                    <div class="notification-empty">
+                        <i class="bi bi-bell-slash"></i><br>
+                        No recent notifications
+                    </div>
+                `;
+                return;
+            }
+            
+            const notificationsHtml = recentNotifications.map(notification => {
+                const timeAgo = getTimeAgo(notification.timestamp);
+                const iconClass = getNotificationIcon(notification.type);
+                
+                return `
+                    <div class="notification-item">
+                        <div style="display: flex; align-items: flex-start; gap: 0.5rem;">
+                            <i class="bi ${iconClass}" style="margin-top: 0.2rem; color: var(--gray-600);"></i>
+                            <div style="flex: 1;">
+                                <div>${notification.message}</div>
+                                <div class="notification-time">${timeAgo}</div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+            
+            notificationList.innerHTML = notificationsHtml;
+        }
+        
+        function getNotificationIcon(type) {
+            switch (type) {
+                case 'success': return 'bi-check-circle';
+                case 'danger': return 'bi-exclamation-triangle';
+                case 'warning': return 'bi-exclamation-circle';
+                case 'info': return 'bi-info-circle';
+                default: return 'bi-bell';
+            }
+        }
+        
+        function getTimeAgo(timestamp) {
+            const now = new Date();
+            const diff = now - timestamp;
+            const minutes = Math.floor(diff / 60000);
+            
+            if (minutes < 1) return 'Just now';
+            if (minutes < 60) return `${minutes}m ago`;
+            
+            const hours = Math.floor(minutes / 60);
+            if (hours < 24) return `${hours}h ago`;
+            
+            const days = Math.floor(hours / 24);
+            return `${days}d ago`;
+        }
+        
+        function toggleNotifications() {
+            const dropdown = document.getElementById('notification-dropdown');
+            dropdown.classList.toggle('show');
+        }
+        
+        // Close notification dropdown when clicking outside
+        document.addEventListener('click', function(event) {
+            const notificationIcon = document.querySelector('.notification-icon');
+            const dropdown = document.getElementById('notification-dropdown');
+            
+            if (!notificationIcon.contains(event.target)) {
+                dropdown.classList.remove('show');
+            }
+        });
+        
+        // Override the original showNotification to also add to history
+        const originalShowNotification = showNotification;
+        showNotification = function(message, type = 'info') {
+            originalShowNotification(message, type);
+            addToNotificationHistory(message, type);
+        };
+        
+        // Global variables for scheduler management
+        let schedulers = [];
+        let confirmCallback = null;
+        
+        // Scheduler Modal Functions
+        function openSchedulerModal() {
+            // Check if we already have 3 schedulers
+            if (schedulers.length >= 3) {
+                showNotification('Maximum of 3 schedulers allowed. Please delete an existing scheduler first.', 'warning');
+                return;
+            }
+            
+            document.getElementById('scheduler-modal').classList.add('show');
+            // Reset form
+            document.getElementById('scheduler-form').reset();
+            // Reset Stockholm as default selection
+            document.getElementById('city-modal').value = 'Stockholm';
+        }
+        
+        function closeSchedulerModal() {
+            document.getElementById('scheduler-modal').classList.remove('show');
+        }
+        
+        // Validation helper functions
+        function clearFieldErrors() {
+            // Clear all error states
+            const errorFields = document.querySelectorAll('.form-control.error, .form-select.error');
+            errorFields.forEach(field => field.classList.remove('error'));
+            
+            const errorMessages = document.querySelectorAll('.error-message.show');
+            errorMessages.forEach(msg => msg.classList.remove('show'));
+        }
+        
+        function showFieldError(fieldId, errorId) {
+            const field = document.getElementById(fieldId);
+            const error = document.getElementById(errorId);
+            
+            field.classList.add('error');
+            error.classList.add('show');
+            
+            // Remove error state when user starts typing
+            field.addEventListener('input', function() {
+                field.classList.remove('error');
+                error.classList.remove('show');
+            }, { once: true });
+        }
+        
+        function validateForm() {
+            clearFieldErrors();
+            
+            const searchQuery = document.getElementById('search-query-modal').value.trim();
+            const city = document.getElementById('city-modal').value;
+            const interval = document.getElementById('interval-modal').value;
+            
+            let isValid = true;
+            
+            if (!searchQuery) {
+                showFieldError('search-query-modal', 'search-query-error');
+                isValid = false;
+            }
+            
+            if (!city) {
+                showFieldError('city-modal', 'city-error');
+                isValid = false;
+            }
+            
+            if (!interval) {
+                showFieldError('interval-modal', 'interval-error');
+                isValid = false;
+            }
+            
+            return isValid;
+        }
+        
+        async function createScheduler() {
+            try {
+                // Validate form first
+                if (!validateForm()) {
+                    return;
+                }
+                
+                const searchQuery = document.getElementById('search-query-modal').value.trim();
+                const city = document.getElementById('city-modal').value.trim();
+                const interval = document.getElementById('interval-modal').value;
+                
+                showNotification('Creating new scheduler...', 'info');
+                
+                const response = await fetch('/api/scheduler/create', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        search_query: searchQuery,
+                        city: city || null,
+                        interval_minutes: parseInt(interval)
+                    })
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    showNotification(`Scheduler created successfully! Will run every ${interval} minutes for "${searchQuery}"`, 'success');
+                    closeSchedulerModal();
+                    loadStats(); // Refresh stats
+                } else {
+                    showNotification(result.message || 'Failed to create scheduler', 'danger');
+                }
+            } catch (error) {
+                console.error('Error creating scheduler:', error);
+                showNotification('Error creating scheduler', 'danger');
+            }
+        }
+        
+        // Close modal when clicking outside
+        document.addEventListener('click', function(event) {
+            const modal = document.getElementById('scheduler-modal');
+            const modalContent = modal.querySelector('.modal-content');
+            
+            if (event.target === modal && !modalContent.contains(event.target)) {
+                closeSchedulerModal();
+            }
+        });
+        
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeSchedulerModal();
+                closeConfirmModal();
+            }
+        });
+        
+        // Load and display schedulers
+        async function loadSchedulers() {
+            try {
+                const response = await fetch('/api/schedulers');
+                const result = await response.json();
+                
+                if (result.success) {
+                    schedulers = result.data || [];
+                    displaySchedulers();
+                    updateSchedulerCount();
+                } else {
+                    console.error('Failed to load schedulers:', result.message);
+                }
+            } catch (error) {
+                console.error('Error loading schedulers:', error);
+            }
+        }
+        
+        function displaySchedulers() {
+            const schedulerList = document.getElementById('scheduler-list');
+            const noSchedulers = document.getElementById('no-schedulers');
+            
+            if (schedulers.length === 0) {
+                noSchedulers.style.display = 'block';
+                schedulerList.innerHTML = '<div class="text-muted text-xs" id="no-schedulers">No schedulers created</div>';
+                return;
+            }
+            
+            noSchedulers.style.display = 'none';
+            
+            const schedulerHtml = schedulers.map(scheduler => {
+                const isRunning = scheduler.is_running || false;
+                const playPauseIcon = isRunning ? 'pause' : 'play';
+                const playPauseClass = isRunning ? 'btn-pause' : 'btn-play';
+                const intervalText = getIntervalText(scheduler.interval_minutes);
+                
+                return `
+                    <div class="scheduler-item" data-id="${scheduler.id}">
+                        <div class="scheduler-details">
+                            <div class="scheduler-query">${scheduler.search_query}</div>
+                            <div class="scheduler-meta">${scheduler.city || 'No city'} • ${intervalText}</div>
+                        </div>
+                        <div class="scheduler-actions">
+                            <button class="btn btn-xs ${playPauseClass}" onclick="toggleScheduler(${scheduler.id}, ${isRunning})" title="${isRunning ? 'Pause' : 'Start'} scheduler">
+                                <i class="bi bi-${playPauseIcon}-fill"></i>
+                            </button>
+                            <button class="btn btn-xs btn-delete" onclick="confirmDeleteScheduler(${scheduler.id}, '${scheduler.search_query}')" title="Delete scheduler">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+            
+            schedulerList.innerHTML = schedulerHtml;
+        }
+        
+        function updateSchedulerCount() {
+            const countElement = document.getElementById('scheduler-count');
+            countElement.textContent = `${schedulers.length}/3`;
+            
+            // Update add button state
+            const addBtn = document.getElementById('add-scheduler-btn');
+            if (schedulers.length >= 3) {
+                addBtn.disabled = true;
+                addBtn.innerHTML = '<i class="bi bi-plus-circle"></i> Limit Reached';
+            } else {
+                addBtn.disabled = false;
+                addBtn.innerHTML = '<i class="bi bi-plus-circle"></i> Add Scheduler';
+            }
+        }
+        
+        function getIntervalText(minutes) {
+            if (minutes < 60) {
+                return `Every ${minutes}m`;
+            } else {
+                const hours = minutes / 60;
+                return `Every ${hours}h`;
+            }
+        }
+        
+        // Toggle scheduler play/pause
+        async function toggleScheduler(schedulerId, isCurrentlyRunning) {
+            try {
+                const action = isCurrentlyRunning ? 'pause' : 'start';
+                const response = await fetch(`/api/scheduler/${schedulerId}/${action}`, {
+                    method: 'POST'
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    showNotification(`Scheduler ${action}ed successfully`, 'success');
+                    loadSchedulers(); // Refresh scheduler list
+                } else {
+                    showNotification(result.message || `Failed to ${action} scheduler`, 'danger');
+                }
+            } catch (error) {
+                console.error(`Error ${action}ing scheduler:`, error);
+                showNotification(`Error ${action}ing scheduler`, 'danger');
+            }
+        }
+        
+        // Confirmation modal functions
+        function confirmDeleteScheduler(schedulerId, searchQuery) {
+            const title = document.getElementById('confirm-title');
+            const message = document.getElementById('confirm-message');
+            const confirmBtn = document.getElementById('confirm-btn');
+            
+            title.textContent = 'Delete Scheduler';
+            message.textContent = `Are you sure you want to delete the scheduler for "${searchQuery}"? This action cannot be undone.`;
+            confirmBtn.textContent = 'Delete';
+            
+            confirmCallback = () => deleteScheduler(schedulerId);
+            
+            document.getElementById('confirm-modal').classList.add('show');
+        }
+        
+        async function deleteScheduler(schedulerId) {
+            try {
+                const response = await fetch(`/api/scheduler/${schedulerId}`, {
+                    method: 'DELETE'
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    showNotification('Scheduler deleted successfully', 'success');
+                    loadSchedulers(); // Refresh scheduler list
+                } else {
+                    showNotification(result.message || 'Failed to delete scheduler', 'danger');
+                }
+            } catch (error) {
+                console.error('Error deleting scheduler:', error);
+                showNotification('Error deleting scheduler', 'danger');
+            }
+        }
+        
+        function closeConfirmModal() {
+            document.getElementById('confirm-modal').classList.remove('show');
+            confirmCallback = null;
+        }
+        
+        function confirmAction() {
+            if (confirmCallback) {
+                confirmCallback();
+                closeConfirmModal();
+            }
+        }
+        
+        // Close confirm modal when clicking outside
+        document.addEventListener('click', function(event) {
+            const modal = document.getElementById('confirm-modal');
+            const modalContent = modal.querySelector('.modal-content');
+            
+            if (event.target === modal && !modalContent.contains(event.target)) {
+                closeConfirmModal();
+            }
+        });
+        
+        // Update loadData to also load schedulers
+        const originalLoadData = loadData;
+        loadData = async function() {
+            try {
+                await Promise.all([
+                    originalLoadData(),
+                    loadSchedulers()
+                ]);
+            } catch (error) {
+                console.error('Error loading data:', error);
+                showNotification('Error loading data', 'danger');
+            }
+        };
         
     </script>
 </body>

@@ -1,0 +1,169 @@
+{
+  "product_url": "https://www.facebook.com/marketplace/item/1408107033810014/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A9d221e24-04ae-4381-b75e-d689a3d5f6eb&__tn__=!%3AD",
+  "product_title": "SEK2,000\nSamsung Galaxy S22 ultra\nStockholm, AB",
+  "extraction_timestamp": "2025-08-21T16:26:47.200047",
+  "page_title": "(3) Marketplace – Samsung Galaxy S22 ultra | Facebook",
+  "current_url": "https://www.facebook.com/marketplace/item/1408107033810014/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A9d221e24-04ae-4381-b75e-d689a3d5f6eb",
+  "seller_info": {
+    "seller_from_a[href*='/profile/']": {
+      "text": "Seller details",
+      "profile_url": "https://www.facebook.com/marketplace/profile/61578402554938/?product_id=1408107033810014"
+    },
+    "seller_from_[role='link'][href*='/profile/']": {
+      "text": "Seller details",
+      "profile_url": "https://www.facebook.com/marketplace/profile/61578402554938/?product_id=1408107033810014"
+    }
+  },
+  "seller_details_info": {
+    "button_found": true,
+    "button_text": "Seller details",
+    "button_href": "https://www.facebook.com/marketplace/profile/61578402554938/?product_id=1408107033810014",
+    "button_classes": "x1i10hfl x1qjc9v5 xjqpnuy xc5r6h4 xqeqjp1 x1phubyo x972fbf x10w94by x1qhh985 x14e42zd x9f619 xdl72j9 x2lah0s x3ct3a4 x2lwn1j xeuugli x16tdsg8 x1hl2dhg xggy1nq x1ja2u2z x1t137rt x1fmog5m xu25z0z x140muxe xo1y3bh x1q0g3np x87ps6o x1lku1pv x1a2a7pz x1fey0fg x1ypdohk x1ejq31n x18oe1m7 x1sy0etr xstzfhl x1rg5ohu xdj266r x14z9mp xat24cr x1lziwak xexx8yu xyri2b x18d9i69 x1c1uobl x1n2onr6 x3ajldb",
+    "details_page_filename": "seller_details_page_1_20250821_162646.html",
+    "join_date": "joined facebook in 2025",
+    "profile_links": [
+      {
+        "url": "https://www.facebook.com/marketplace/profile/61578402554938/?product_id=1408107033810014",
+        "text": "Seller details"
+      },
+      {
+        "url": "https://www.facebook.com/marketplace/profile/61578402554938/?product_id=1408107033810014",
+        "text": "Laura Lisa"
+      }
+    ]
+  },
+  "product_details": {
+    "storage": "256 GB",
+    "color": "Red",
+    "condition": "New",
+    "price_detailed": "2,000 SEK"
+  },
+  "contact_info": {
+    "contact_option_[aria-label*='Messag": 2
+  },
+  "location_details": {
+    "pattern_([\\w\\s]+)\\s+(\\d+)\\s*": [
+      [
+        "Within",
+        "51"
+      ]
+    ],
+    "pattern_Stockholm[^<]*": [
+      "stockholm/\" role=\"link\" tabindex=\"0\">",
+      "Stockholm, AB",
+      "Stockholm, AB"
+    ]
+  },
+  "timing_info": {},
+  "additional_images": [
+    {
+      "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t39.30808-1/348275887_914205606302972_2180412001916335337_n.png?stp=dst-png_s100x100&_nc_cat=1&ccb=1-7&_nc_sid=11a88f&_nc_ohc=brLOFva5FsUQ7kNvwGnvHUv&_nc_oc=AdmCIN839l7tTDnaFIFkOK6HORaxRndiepZbwyuFHfn260sWfWkE4FpVUmJXoQwWFBchREmnj_zv2kutAD7z69zO&_nc_ad=z-m&_nc_cid=0&_nc_zt=24&_nc_ht=scontent.fisb17-1.fna&_nc_gid=vg3BidLSwFwmjaKT7Hu9ng&oh=00_AfVk0SaOftV07mWmrR0u8Po0fa9IJ5PSJH2DUqY4UvoaGQ&oe=68ACDA22",
+      "alt_text": "",
+      "type": "product_detail"
+    },
+    {
+      "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/523481375_1290025845871459_5886083926670212326_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=247b10&_nc_ohc=-tVrVsDM1R8Q7kNvwF7XeqT&_nc_oc=Adm5TbGmhXJqi2Pr4DeMD1RKor-OJEqGwQwGoHhMswGudK4sxw48RvC4hCr9jpimLQOK3MAdqydJedVKz4LPJMVa&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=cE-ijPL4AHHSin20d0zqvQ&oh=00_AfVyAmzald__WJXnSb4vfpiUmTQSTvUVFR275EQheiPl0A&oe=68ACC77A",
+      "alt_text": "",
+      "type": "product_detail"
+    },
+    {
+      "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/523481375_1290025845871459_5886083926670212326_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=247b10&_nc_ohc=-tVrVsDM1R8Q7kNvwF7XeqT&_nc_oc=Adm5TbGmhXJqi2Pr4DeMD1RKor-OJEqGwQwGoHhMswGudK4sxw48RvC4hCr9jpimLQOK3MAdqydJedVKz4LPJMVa&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=cE-ijPL4AHHSin20d0zqvQ&oh=00_AfVyAmzald__WJXnSb4vfpiUmTQSTvUVFR275EQheiPl0A&oe=68ACC77A",
+      "alt_text": "Product photo of Samsung Galaxy S22 ultra ",
+      "type": "product_detail"
+    },
+    {
+      "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/523481375_1290025845871459_5886083926670212326_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=247b10&_nc_ohc=-tVrVsDM1R8Q7kNvwF7XeqT&_nc_oc=Adm5TbGmhXJqi2Pr4DeMD1RKor-OJEqGwQwGoHhMswGudK4sxw48RvC4hCr9jpimLQOK3MAdqydJedVKz4LPJMVa&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=cE-ijPL4AHHSin20d0zqvQ&oh=00_AfVyAmzald__WJXnSb4vfpiUmTQSTvUVFR275EQheiPl0A&oe=68ACC77A",
+      "alt_text": "Product photo of Samsung Galaxy S22 ultra ",
+      "type": "product_detail"
+    },
+    {
+      "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/523112942_1332243531669267_3461999666344267886_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=247b10&_nc_ohc=bgqeLEw2H28Q7kNvwHT-LOi&_nc_oc=AdkaKgdlJjrJJfVi2IHhtH7h7WnLVuItEeAhfZoPXzYAcDpHXB2ihJSbI86TgqKYC1dt6-ozLeS9D6qUo9jMiVG9&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=cE-ijPL4AHHSin20d0zqvQ&oh=00_AfU_rPtaO8c2dfM47Bq-bEXLsxT84a1AZwqshJ6FpGGVOg&oe=68ACD012",
+      "alt_text": "Product photo of Samsung Galaxy S22 ultra ",
+      "type": "product_detail"
+    },
+    {
+      "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/523118680_1773764443220313_7771832006179380922_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=106&ccb=1-7&_nc_sid=247b10&_nc_ohc=E7UZmtArpPQQ7kNvwFwNPE2&_nc_oc=Adm5RdLBwLOin_L4UlvQhs-RJLASnRHf2IGE1O1VGPXof_Iy9V4Y7gET4XwKrB3yQlucWbe6QnbIz2BfR4zP2aXG&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=cE-ijPL4AHHSin20d0zqvQ&oh=00_AfVkjSNhl65k1I7ZgfuIsDCwcgZb92LbTg6QBwJv7qXzGQ&oe=68ACC950",
+      "alt_text": "Product photo of Samsung Galaxy S22 ultra ",
+      "type": "product_detail"
+    },
+    {
+      "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t15.5256-10/526750544_1288893279335959_4305307519711799589_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=108&ccb=1-7&_nc_sid=7965db&_nc_ohc=97aOumMvxNMQ7kNvwEc6iNJ&_nc_oc=AdkjBVMSsy3YmNQnLM9gfUzgRzvQL-u1Tlt6P9OViuk6Gt0Jn6shST3WMQkHRAe4TFNms5LOBhzUjs7HaqOu96ai&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=cE-ijPL4AHHSin20d0zqvQ&oh=00_AfV8gPhzdOZA-OAH-6bVF5ywsGi1x3PixeQKhZz3jLSH0g&oe=68ACE02E",
+      "alt_text": "",
+      "type": "product_detail"
+    },
+    {
+      "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t15.5256-10/514478185_9927826763995076_709292891798527200_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=1&ccb=1-7&_nc_sid=282d23&_nc_ohc=E_ZVZTYzQysQ7kNvwFiJ3Ty&_nc_oc=AdnYysPhLwLJtSse9uOtmEFLG5hDDH9h5RBFVISXTYVcGlbyfAAgqlUN8pVcpYpDzv9TC9DbDuEHgsYqMs1olL50&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=cE-ijPL4AHHSin20d0zqvQ&oh=00_AfUmnfprXr2BJUN_C2-b8pSXh7muA0Jl-uGDzZ2CusMyQg&oe=68ACDC42",
+      "alt_text": "",
+      "type": "product_detail"
+    },
+    {
+      "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/533052531_740707935421782_9222969316466403316_n.jpg?stp=c0.101.261.261a_dst-jpg_p261x260_tt6&_nc_cat=100&ccb=1-7&_nc_sid=247b10&_nc_ohc=Qwo1y8KQKjYQ7kNvwHhdzzM&_nc_oc=AdmjD9XrNFNZmwjnf6gFt_k3Lf_1oIpxAv6dfopafrhaMjWOU-G1l-idXp9Z9ST3DHqvFpsNysYa8folPLhn4HdN&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=vYb2eun3Wc6UoxiOltWycQ&oh=00_AfU_WgJxf9NWLNaoXwuQnoTvAAw_Ye63r1TEwzjDQtFgYw&oe=68ACBA4E",
+      "alt_text": "iPhone 16 Pro Max 1T in Sydney, NSW",
+      "type": "product_detail"
+    },
+    {
+      "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/532928318_1099216615510850_2832873717771932502_n.jpg?stp=c43.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=109&ccb=1-7&_nc_sid=247b10&_nc_ohc=f-epxqybXN4Q7kNvwGbq32C&_nc_oc=AdnGHteRLm2ZUmg1B04WTU3iEDnOaJRZcDPnsnuya8e5wZBG-A8XYpFsGx3lTPLaVYsxUn-6qMvt1fGoYT-lt_Rt&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=vYb2eun3Wc6UoxiOltWycQ&oh=00_AfXsMSj9gUNTtKZWRM9ehYY0PA-JAOz6kDHIaR9ot02CoA&oe=68ACCF01",
+      "alt_text": "Free!!!!! in Sydney, NSW",
+      "type": "product_detail"
+    }
+  ],
+  "description": "Samsung Galaxy S22 ultra\n\nListed 2 weeks ago in Stockholm, AB\n\nJag säljer min Samsung Galaxy S22 ultra, 256 GB\n\nLocation is approximate\n\nTry Xero free for 30 days",
+  "raw_text_sections": [
+    "Find friends\n1 unread chats\n1\nNumber of unread notifications\n3",
+    "Find friends\n1 unread chats\n1\nNumber of unread notifications\n3",
+    "Find friends\n1 unread chats\n1\nNumber of unread notifications\n3",
+    "Find friends",
+    "Find friends",
+    "Find friends",
+    "1 unread chats\n1",
+    "1 unread chats\n1",
+    "1 unread chats\n1",
+    "1 unread chats\n1",
+    "1 unread chats\n1",
+    "1 unread chats\n1",
+    "1 unread chats\n1",
+    "1 unread chats\n1",
+    "1 unread chats",
+    "Number of unread notifications\n3",
+    "Number of unread notifications\n3",
+    "Number of unread notifications\n3",
+    "Number of unread notifications\n3",
+    "Number of unread notifications\n3",
+    "Number of unread notifications\n3",
+    "Number of unread notifications",
+    "Marketplace",
+    "Marketplace",
+    "Marketplace",
+    "Marketplace",
+    "Marketplace",
+    "Marketplace",
+    "Marketplace",
+    "Browse all",
+    "Browse all",
+    "Browse all",
+    "Browse all",
+    "Browse all",
+    "Browse all",
+    "Browse all",
+    "Browse all",
+    "Notifications",
+    "Notifications",
+    "Notifications",
+    "Notifications",
+    "Notifications",
+    "Notifications",
+    "Notifications",
+    "Notifications",
+    "Inbox",
+    "Inbox",
+    "Inbox",
+    "Inbox",
+    "Inbox"
+  ],
+  "page_sources": {
+    "initial_page": "product_page_initial_1_20250821_162646.html"
+  },
+  "marketplace_metadata": {
+    "fb_listing_id": "1408107033810014"
+  }
+}

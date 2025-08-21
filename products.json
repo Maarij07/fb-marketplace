@@ -1,591 +1,42 @@
 {
   "extraction_info": {
-    "timestamp": "2025-08-14",
+    "timestamp": "2025-08-21",
     "source": "Facebook Marketplace Stockholm",
     "search_query": "iPhone 16",
-    "total_products_found": 42,
+    "total_products_found": 69,
     "extraction_method": "targeted_swedish_marketplace",
     "last_cleaned": "2025-08-13T00:59:29.240999"
   },
   "summary": {
-    "products_with_complete_data": 33,
-    "products_with_images": 33,
-    "products_with_links": 33,
-    "products_with_locations": 36,
-    "products_with_prices": 42,
+    "products_with_complete_data": 68,
+    "products_with_images": 68,
+    "products_with_links": 68,
+    "products_with_locations": 69,
+    "products_with_prices": 69,
     "unique_locations": [
-      "Alsultani",
-      "Glommen",
-      "Helsingborg",
-      "Samei",
-      "Stockholm"
+      "Stockholm",
+      "Within"
     ]
   },
   "products": [
     {
-      "id": "mp_1338808953864792",
-      "title": "iPhone 16 PRO Max 1TB in Stockholm",
-      "description": "iPhone 16 PRO Max 1TB in Stockholm",
+      "title": "iPhone 16 Pro Max",
       "price": {
-        "raw_value": "SEK6",
+        "raw_value": "SEK4,200",
         "currency": "SEK",
-        "amount": "6",
-        "note": "Price appears incomplete - likely 6000+ SEK"
-      },
-      "location": {
-        "city": "Stockholm",
-        "distance": "Unknown",
-        "raw_location": "x"
-      },
-      "images": [
-        {
-          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/491752470_1221603299572987_2484234812786787482_n.jpg?stp=c0.0.261.261a_dst-jpg_p261x260_tt6&_nc_cat=109&ccb=1-7&_nc_sid=247b10&_nc_ohc=wHPrpbm7giQQ7kNvwHqnsZE&_nc_oc=Adnp4uKcSv-j7cFUmTj7zCoOM4tN63tTVdUItzJweC2KMJXbI-xDOy7EUuuYJw0TPfKmoY032lhQjA7n93GjQoal&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=RnnsIqRgUOwZ6vTv0hsVKw&oh=00_AfVtmMzkMZUu0FqoVlBFzFuTCJhBLOanlhpT-w0raIHlNQ&oe=6899FC86",
-          "type": "thumbnail",
-          "size": "261x260"
-        }
-      ],
-      "marketplace_url": "/marketplace/item/1338808953864792/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A871ebecb-eafe-4a39-9d8c-79b1538adf60&__tn__=!%3AD",
-      "full_url": "https://facebook.com/marketplace/item/1338808953864792/",
-      "seller": {
-        "info": "Not extracted",
-        "profile": null
-      },
-      "product_details": {
-        "model": "iPhone 16 PRO Max",
-        "storage": "1TB",
-        "condition": "Unknown",
-        "color": "Unknown"
-      },
-      "extraction_method": "price_based",
-      "data_quality": "high",
-      "added_at": "2025-08-13T00:08:32.825159",
-      "created_at": "2025-08-13T00:08:32.825159",
-      "seller_name": "Private Seller"
-    },
-    {
-      "id": "mp_1041171547868001",
-      "title": "iPhone 16 PRO Max 1TB in Stockholm",
-      "description": "iPhone 16 PRO Max 1TB in Stockholm",
-      "price": {
-        "raw_value": "SEK13",
-        "currency": "SEK",
-        "amount": "13",
-        "note": "Price appears incomplete - likely 13000+ SEK"
-      },
-      "location": {
-        "city": "Stockholm",
-        "distance": "Unknown",
-        "raw_location": "x"
-      },
-      "images": [
-        {
-          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/482593178_9590972127634814_4246991011017204762_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=109&ccb=1-7&_nc_sid=247b10&_nc_ohc=A2E2VWN9otAQ7kNvwEL513Y&_nc_oc=Adla8x-qoNUj8wybELu3dZ_0_lLH7ZDGFLyAMcbE7hsnNednIScOhEVnvaSf6IjPUAcUawVEwCHgYoCETqbF8Tbz&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=RnnsIqRgUOwZ6vTv0hsVKw&oh=00_AfUai5hqeNQdpWBTqFlfuc6AEbs1RSCbg8JksezUg0iukw&oe=6899EEF0",
-          "type": "thumbnail",
-          "size": "261x260"
-        }
-      ],
-      "marketplace_url": "/marketplace/item/1041171547868001/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A871ebecb-eafe-4a39-9d8c-79b1538adf60&__tn__=!%3AD",
-      "full_url": "https://facebook.com/marketplace/item/1041171547868001/",
-      "seller": {
-        "info": "Not extracted",
-        "profile": null
-      },
-      "product_details": {
-        "model": "iPhone 16 PRO Max",
-        "storage": "1TB",
-        "condition": "Unknown",
-        "color": "Unknown"
-      },
-      "extraction_method": "price_based",
-      "data_quality": "high",
-      "added_at": "2025-08-13T00:08:32.825159",
-      "created_at": "2025-08-13T00:08:32.825159",
-      "seller_name": "Private Seller"
-    },
-    {
-      "id": "mp_1014914604144308",
-      "title": "iPhone 16 in Helsingborg",
-      "description": "iPhone 16 in Helsingborg",
-      "price": {
-        "raw_value": "SEK5",
-        "currency": "SEK",
-        "amount": "5",
-        "note": "Price appears incomplete - likely 5000+ SEK"
-      },
-      "location": {
-        "city": "Helsingborg",
-        "distance": "Unknown",
-        "raw_location": "x"
-      },
-      "images": [
-        {
-          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/506623819_1864539944088839_144682575076043129_n.jpg?stp=c9.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=103&ccb=1-7&_nc_sid=247b10&_nc_ohc=nRggkos9ejwQ7kNvwFsHO0r&_nc_oc=Adkur_wWs8-P5rRZNUJuNcSMeXqK2lGw2_TKVC5TKn99ej8J_epdU7opUUQI0HR8rLzWIE2rVABPTaS-npZyovLf&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=RnnsIqRgUOwZ6vTv0hsVKw&oh=00_AfUrbcb_00FWWJ3RJDgT_TPiZ41z3ZVT4hAWCxXAM_SjWw&oe=6899DEB1",
-          "type": "thumbnail",
-          "size": "260x260"
-        }
-      ],
-      "marketplace_url": "/marketplace/item/1014914604144308/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A871ebecb-eafe-4a39-9d8c-79b1538adf60&__tn__=!%3AD",
-      "full_url": "https://facebook.com/marketplace/item/1014914604144308/",
-      "seller": {
-        "info": "Not extracted",
-        "profile": null
-      },
-      "product_details": {
-        "model": "iPhone 16",
-        "storage": "Unknown",
-        "condition": "Unknown",
-        "color": "Unknown"
-      },
-      "extraction_method": "price_based",
-      "data_quality": "high",
-      "added_at": "2025-08-13T00:08:32.825159",
-      "created_at": "2025-08-13T00:08:32.825159",
-      "seller_name": "Private Seller"
-    },
-    {
-      "id": "mp_1038779781247932",
-      "title": "iPhone 16 Pro Max 256GB in Glommen",
-      "description": "iPhone 16 Pro Max 256GB in Glommen",
-      "price": {
-        "raw_value": "SEK6",
-        "currency": "SEK",
-        "amount": "6",
-        "note": "Price appears incomplete - likely 6000+ SEK"
-      },
-      "location": {
-        "city": "Glommen",
-        "distance": "Unknown",
-        "raw_location": "x"
-      },
-      "images": [
-        {
-          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/506244967_1248864543516560_7980924910421945861_n.jpg?stp=c49.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=101&ccb=1-7&_nc_sid=247b10&_nc_ohc=w7VLufHmW6YQ7kNvwHopwNC&_nc_oc=AdkHtiT9x21gTBtlWiNU0AOwXCW1zIajykar0XSv8A64Y0dsMqtq8rL8x2SfOobEsgjh_Qe5UYKAlF5dRl02Xxzb&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=3gcYlc1FHiYSU0DL1LpSHA&oh=00_AfWDH7YAt4_nfge0xED6YFlbKQtVlgx50THZiYv2jXea1A&oe=689A0661",
-          "type": "thumbnail",
-          "size": "260x260"
-        }
-      ],
-      "marketplace_url": "/marketplace/item/1038779781247932/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A871ebecb-eafe-4a39-9d8c-79b1538adf60&__tn__=!%3AD",
-      "full_url": "https://facebook.com/marketplace/item/1038779781247932/",
-      "seller": {
-        "info": "Not extracted",
-        "profile": null
-      },
-      "product_details": {
-        "model": "iPhone 16 Pro Max",
-        "storage": "256GB",
-        "condition": "Unknown",
-        "color": "Unknown"
-      },
-      "extraction_method": "price_based",
-      "data_quality": "high",
-      "added_at": "2025-08-13T00:08:32.825159",
-      "created_at": "2025-08-13T00:08:32.825159",
-      "seller_name": "Private Seller"
-    },
-    {
-      "id": "mp_1233414638481557",
-      "title": "iPhone 16 Pro Max 256GB in Glommen",
-      "description": "iPhone 16 Pro Max 256GB in Glommen",
-      "price": {
-        "raw_value": "SEK7",
-        "currency": "SEK",
-        "amount": "7",
-        "note": "Price appears incomplete - likely 7000+ SEK"
-      },
-      "location": {
-        "city": "Glommen",
-        "distance": "Unknown",
-        "raw_location": "x"
-      },
-      "images": [
-        {
-          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/518832500_2596881507182518_7053029419443621816_n.jpg?stp=c54.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=109&ccb=1-7&_nc_sid=247b10&_nc_ohc=M3zCQ7QwfYwQ7kNvwElbMkz&_nc_oc=AdmXxjDk6B9jAYx2NuH5rt3oj3oFCB0pHLiOegqhcSBtoekZXXnsR0qZnyqiQs7VMGvosAp_A_sm7GuAM-_lLdSx&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=3gcYlc1FHiYSU0DL1LpSHA&oh=00_AfXrR_RC9gbEo10gKfy2VtOReBKybG8KTUGvmv3MHpLQKQ&oe=6899FC2F",
-          "type": "thumbnail",
-          "size": "260x260"
-        }
-      ],
-      "marketplace_url": "/marketplace/item/1233414638481557/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A871ebecb-eafe-4a39-9d8c-79b1538adf60&__tn__=!%3AD",
-      "full_url": "https://facebook.com/marketplace/item/1233414638481557/",
-      "seller": {
-        "info": "Not extracted",
-        "profile": null
-      },
-      "product_details": {
-        "model": "iPhone 16 Pro Max",
-        "storage": "256GB",
-        "condition": "Unknown",
-        "color": "Unknown"
-      },
-      "extraction_method": "price_based",
-      "data_quality": "high",
-      "added_at": "2025-08-13T00:08:32.825159",
-      "created_at": "2025-08-13T00:08:32.825159",
-      "seller_name": "Private Seller"
-    },
-    {
-      "id": "mp_1865173780912693",
-      "title": "iPhone 16 Pro Max 256GB",
-      "description": "iPhone 16 Pro Max 256GB",
-      "price": {
-        "raw_value": "SEK4",
-        "currency": "SEK",
-        "amount": "4",
-        "note": "Price appears incomplete - likely 4000+ SEK"
-      },
-      "location": {
-        "city": "Unknown",
-        "distance": "Unknown",
-        "raw_location": "x"
-      },
-      "images": [
-        {
-          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/480183840_2104450726729632_8555858629002024382_n.jpg?stp=c0.62.261.261a_dst-jpg_p261x260_tt6&_nc_cat=111&ccb=1-7&_nc_sid=247b10&_nc_ohc=2frPsUsw3g0Q7kNvwEWd6eo&_nc_oc=Adk2KVAud00lWTqp6i6LuMSF9lQFjXqm0fA22zTNEYY6GT3mWLr1k42bqkwfUrxnIM1Ey-YnZEvGcLGA8dG1Rs3x&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=3gcYlc1FHiYSU0DL1LpSHA&oh=00_AfU9NHoeWh5zw5PYH3lz2KN5rslB6FtpzU9WDbJEysjlcA&oe=6899F8BF",
-          "type": "thumbnail",
-          "size": "261x260"
-        }
-      ],
-      "marketplace_url": "/marketplace/item/1865173780912693/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A871ebecb-eafe-4a39-9d8c-79b1538adf60&__tn__=!%3AD",
-      "full_url": "https://facebook.com/marketplace/item/1865173780912693/",
-      "seller": {
-        "info": "Not extracted",
-        "profile": null
-      },
-      "product_details": {
-        "model": "iPhone 16 Pro Max",
-        "storage": "256GB",
-        "condition": "Unknown",
-        "color": "Unknown"
-      },
-      "extraction_method": "price_based",
-      "data_quality": "high",
-      "added_at": "2025-08-13T00:08:32.825159",
-      "created_at": "2025-08-13T00:08:32.825159",
-      "seller_name": "Private Seller"
-    },
-    {
-      "id": "mp_partial_001",
-      "title": "iPhone 16 128GB",
-      "description": "iPhone 16 128GB",
-      "price": {
-        "raw_value": "SEK8",
-        "currency": "SEK",
-        "amount": "8",
-        "note": "Price appears incomplete - likely 8000+ SEK"
-      },
-      "location": {
-        "city": "Unknown",
-        "distance": "Unknown",
-        "raw_location": null
-      },
-      "images": [],
-      "marketplace_url": null,
-      "full_url": null,
-      "seller": {
-        "info": "Not extracted",
-        "profile": null
-      },
-      "product_details": {
-        "model": "iPhone 16",
-        "storage": "128GB",
-        "condition": "Unknown",
-        "color": "Unknown"
-      },
-      "extraction_method": "price_based",
-      "data_quality": "partial",
-      "added_at": "2025-08-13T00:08:32.825159",
-      "created_at": "2025-08-13T00:08:32.825159",
-      "seller_name": "Private Seller"
-    },
-    {
-      "id": "mp_partial_002",
-      "title": "iPhone 16 128GB",
-      "description": "iPhone 16 128GB",
-      "price": {
-        "raw_value": "SEK7",
-        "currency": "SEK",
-        "amount": "8",
-        "note": "Price appears incomplete - likely 8000+ SEK"
-      },
-      "location": {
-        "city": "Alsultani",
-        "distance": "Unknown",
-        "raw_location": "Alsultani"
-      },
-      "images": [],
-      "marketplace_url": null,
-      "full_url": null,
-      "seller": {
-        "info": "Not extracted",
-        "profile": null
-      },
-      "product_details": {
-        "model": "iPhone 16",
-        "storage": "128GB",
-        "condition": "Unknown",
-        "color": "Unknown"
-      },
-      "extraction_method": "price_based",
-      "data_quality": "partial",
-      "added_at": "2025-08-13T00:08:32.825159",
-      "created_at": "2025-08-13T00:08:32.825159",
-      "seller_name": "Private Seller"
-    },
-    {
-      "id": "mp_partial_003",
-      "title": "iPhone 16 New",
-      "description": "iPhone 16 New",
-      "price": {
-        "raw_value": "SEK10",
-        "currency": "SEK",
-        "amount": "10",
-        "note": "Price appears incomplete - likely 10000+ SEK"
-      },
-      "location": {
-        "city": "Alsultani",
-        "distance": "Unknown",
-        "raw_location": "Alsultani"
-      },
-      "images": [],
-      "marketplace_url": null,
-      "full_url": null,
-      "seller": {
-        "info": "Not extracted",
-        "profile": null
-      },
-      "product_details": {
-        "model": "iPhone 16",
-        "storage": "Unknown",
-        "condition": "New",
-        "color": "Unknown"
-      },
-      "extraction_method": "price_based",
-      "data_quality": "partial",
-      "added_at": "2025-08-13T00:08:32.825159",
-      "created_at": "2025-08-13T00:08:32.825159",
-      "seller_name": "Private Seller"
-    },
-    {
-      "id": "mp_partial_004",
-      "title": "iPhone 16 256GB Black",
-      "description": "iPhone 16 256GB Black",
-      "price": {
-        "raw_value": "SEK9",
-        "currency": "SEK",
-        "amount": "7",
-        "note": "Price appears incomplete - likely 7000+ SEK"
-      },
-      "location": {
-        "city": "Samei",
-        "distance": "Unknown",
-        "raw_location": "Samei"
-      },
-      "images": [],
-      "marketplace_url": null,
-      "full_url": null,
-      "seller": {
-        "info": "Not extracted",
-        "profile": null
-      },
-      "product_details": {
-        "model": "iPhone 16",
-        "storage": "256GB",
-        "condition": "Unknown",
-        "color": "Black"
-      },
-      "extraction_method": "price_based",
-      "data_quality": "partial",
-      "added_at": "2025-08-13T00:08:32.825159",
-      "created_at": "2025-08-13T00:08:32.825159",
-      "seller_name": "Private Seller"
-    },
-    {
-      "id": "mp_partial_005",
-      "title": "iPhone 16 Pro Max 256GB",
-      "description": "iPhone 16 Pro Max 256GB",
-      "price": {
-        "raw_value": "SEK9",
-        "currency": "SEK",
-        "amount": "7",
-        "note": "Price appears incomplete - likely 7000+ SEK"
-      },
-      "location": {
-        "city": "Samei",
-        "distance": "Unknown",
-        "raw_location": "Samei"
-      },
-      "images": [],
-      "marketplace_url": null,
-      "full_url": null,
-      "seller": {
-        "info": "Not extracted",
-        "profile": null
-      },
-      "product_details": {
-        "model": "iPhone 16 Pro Max",
-        "storage": "256GB",
-        "condition": "Unknown",
-        "color": "Unknown"
-      },
-      "extraction_method": "price_based",
-      "data_quality": "partial",
-      "added_at": "2025-08-13T00:08:32.825159",
-      "created_at": "2025-08-13T00:08:32.825159",
-      "seller_name": "Private Seller"
-    },
-    {
-      "id": "mp_partial_006",
-      "title": "iPhone 16 Pro Max 256GB",
-      "description": "iPhone 16 Pro Max 256GB",
-      "price": {
-        "raw_value": "SEK7",
-        "currency": "SEK",
-        "amount": "9",
-        "note": "Price appears incomplete - likely 9000+ SEK"
-      },
-      "location": {
-        "city": "Unknown",
-        "distance": "Unknown",
-        "raw_location": null
-      },
-      "images": [],
-      "marketplace_url": null,
-      "full_url": null,
-      "seller": {
-        "info": "Not extracted",
-        "profile": null
-      },
-      "product_details": {
-        "model": "iPhone 16 Pro Max",
-        "storage": "256GB",
-        "condition": "Unknown",
-        "color": "Unknown"
-      },
-      "extraction_method": "price_based",
-      "data_quality": "partial",
-      "added_at": "2025-08-13T00:08:32.825159",
-      "created_at": "2025-08-13T00:08:32.825159",
-      "seller_name": "Private Seller"
-    },
-    {
-      "id": "mp_partial_007",
-      "title": "iPhone 16 Pro Max 256GB Sand",
-      "description": "iPhone 16 Pro Max 256GB Sand",
-      "price": {
-        "raw_value": "SEK12",
-        "currency": "SEK",
-        "amount": "7",
-        "note": "Price appears incomplete - likely 7000+ SEK"
-      },
-      "location": {
-        "city": "Unknown",
-        "distance": "Unknown",
-        "raw_location": null
-      },
-      "images": [],
-      "marketplace_url": null,
-      "full_url": null,
-      "seller": {
-        "info": "Not extracted",
-        "profile": null
-      },
-      "product_details": {
-        "model": "iPhone 16 Pro Max",
-        "storage": "256GB",
-        "condition": "Unknown",
-        "color": "Sand"
-      },
-      "extraction_method": "price_based",
-      "data_quality": "partial",
-      "added_at": "2025-08-13T00:08:32.825159",
-      "created_at": "2025-08-13T00:08:32.825159",
-      "seller_name": "Private Seller"
-    },
-    {
-      "id": "mp_partial_008",
-      "title": "iPhone 16 Pro Max 256GB Sand",
-      "description": "iPhone 16 Pro Max 256GB Sand",
-      "price": {
-        "raw_value": "SEK13",
-        "currency": "SEK",
-        "amount": "7",
-        "note": "Price appears incomplete - likely 7000+ SEK"
-      },
-      "location": {
-        "city": "Unknown",
-        "distance": "Unknown",
-        "raw_location": null
-      },
-      "images": [],
-      "marketplace_url": null,
-      "full_url": null,
-      "seller": {
-        "info": "Not extracted",
-        "profile": null
-      },
-      "product_details": {
-        "model": "iPhone 16 Pro Max",
-        "storage": "256GB",
-        "condition": "Unknown",
-        "color": "Sand"
-      },
-      "extraction_method": "price_based",
-      "data_quality": "partial",
-      "added_at": "2025-08-13T00:08:32.825159",
-      "created_at": "2025-08-13T00:08:32.825159",
-      "seller_name": "Private Seller"
-    },
-    {
-      "id": "mp_partial_009",
-      "title": "iPhone 16 Pro Max 256GB Sand",
-      "description": "iPhone 16 Pro Max 256GB Sand",
-      "price": {
-        "raw_value": "SEK6",
-        "currency": "SEK",
-        "amount": "12",
-        "note": "Price appears incomplete - likely 12000+ SEK"
-      },
-      "location": {
-        "city": "Unknown",
-        "distance": "Unknown",
-        "raw_location": null
-      },
-      "images": [],
-      "marketplace_url": null,
-      "full_url": null,
-      "seller": {
-        "info": "Not extracted",
-        "profile": null
-      },
-      "product_details": {
-        "model": "iPhone 16 Pro Max",
-        "storage": "256GB",
-        "condition": "Unknown",
-        "color": "Sand"
-      },
-      "extraction_method": "price_based",
-      "data_quality": "partial",
-      "added_at": "2025-08-13T00:08:32.825159",
-      "created_at": "2025-08-13T00:08:32.825159",
-      "seller_name": "Private Seller"
-    },
-    {
-      "title": "IPhone 14 Pro 128GB Deep Purple",
-      "price": {
-        "raw_value": "$7,500",
-        "currency": "USD",
-        "amount": "7500",
-        "note": "Extracted from: $7,500"
+        "amount": "4200",
+        "note": "Extracted from: SEK4,200"
       },
       "location": {
         "city": "Stockholm",
         "distance": "Unknown",
         "raw_location": "Not specified"
       },
-      "marketplace_url": "https://www.facebook.com/marketplace/item/1291349209069589/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A71f6de4d-1ce5-4690-ad38-516679f4c128&__tn__=!%3AD",
-      "id": "mp_1291349209069589",
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1288404269545586/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A38ff388b-11cf-4e43-a640-d8637fd8e084&__tn__=!%3AD",
+      "id": "mp_1288404269545586",
       "images": [
         {
-          "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/529209456_24028239930131294_540896625250127787_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=104&ccb=1-7&_nc_sid=247b10&_nc_ohc=qNBNnAiT9rUQ7kNvwG2Rn4N&_nc_oc=AdlDwBGC-QELlTBcc90g1Iric9I6A-GbcynBzD1YHWZPOBNc5bEyKBvYEMDwfrOYN8k&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=5jjrq6rShfxmEFBFs7PqQg&oh=00_AfWY4rp4lfmgPPPqo33JQ_XHA2S5TnasoL1GGGKukt7q_A&oe=68A152CF",
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/503159661_711616101229374_5979203011129972115_n.jpg?stp=c0.40.261.261a_dst-jpg_p261x260_tt6&_nc_cat=110&ccb=1-7&_nc_sid=247b10&_nc_ohc=uRR3YEYEVkAQ7kNvwHed7Xp&_nc_oc=AdmuQdNQEqDf2FwdlJRybRtQVXRCiReHX3FSC33X4GAspSFrJ7P9fuO2XE5dusAw1Og&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=_yefcUVUID4yuRa9v-Uonw&oh=00_AfUT5mKkpcVpCNretZ6A5g6bO5QdvAsf9iVWgZ6JjA90Ug&oe=68A8A5DA",
           "type": "thumbnail",
           "size": "unknown"
         }
@@ -595,37 +46,37 @@
         "profile": null
       },
       "product_details": {
-        "model": "iPhone 14 Pro",
+        "model": "iPhone 16 Pro Max",
         "storage": "Unknown",
         "condition": "Unknown",
         "color": "Unknown"
       },
       "extraction_method": "automated_scraper",
       "data_quality": "basic",
-      "full_url": "https://www.facebook.com/marketplace/item/1291349209069589/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A71f6de4d-1ce5-4690-ad38-516679f4c128&__tn__=!%3AD",
-      "added_at": "2025-08-13T00:55:11.567465",
+      "full_url": "https://www.facebook.com/marketplace/item/1288404269545586/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A38ff388b-11cf-4e43-a640-d8637fd8e084&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:52:07.546392",
       "source": "facebook_marketplace_scraper",
-      "created_at": "2025-08-13T00:55:11.567465",
+      "created_at": "2025-08-18T13:52:07.546392",
       "seller_name": "Private Seller"
     },
     {
-      "title": "iPhone 12 Pro Gold",
+      "title": "Iphone 16 Pro Max 512 Gb Black Titanium Sprillans Ny!",
       "price": {
-        "raw_value": "$3,000",
-        "currency": "USD",
-        "amount": "3000",
-        "note": "Extracted from: $3,000"
+        "raw_value": "SEK12,000",
+        "currency": "SEK",
+        "amount": "12000",
+        "note": "Extracted from: SEK12,000"
       },
       "location": {
         "city": "Stockholm",
         "distance": "Unknown",
         "raw_location": "Not specified"
       },
-      "marketplace_url": "https://www.facebook.com/marketplace/item/24412620408370396/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A6e470a00-d837-4872-ae5b-18193ada2695&__tn__=!%3AD",
-      "id": "mp_24412620408370396",
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1539590500359563/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A38ff388b-11cf-4e43-a640-d8637fd8e084&__tn__=!%3AD",
+      "id": "mp_1539590500359563",
       "images": [
         {
-          "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/530823132_783243617569499_7965622123761761046_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=103&ccb=1-7&_nc_sid=247b10&_nc_ohc=_4B5RjsgzLoQ7kNvwF-0mtG&_nc_oc=AdlQHEZrUv9aNQnuxclpPgpeII52RhICCUvJPyRmTgI6Tv3zEwspBBBZAFR3og049Ic&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=01z90Xsn4NX6cgFG3A4Juw&oh=00_AfV7Xk7XbWc0v365K8HUuomPgG2DsHy3f3M3HT5A8Eh4Hw&oe=68A155E7",
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/532199594_670722811997642_3055856178353576674_n.jpg?stp=c0.151.261.261a_dst-jpg_p261x260_tt6&_nc_cat=102&ccb=1-7&_nc_sid=247b10&_nc_ohc=qw7-i3nxDV0Q7kNvwEw1t30&_nc_oc=AdlYD0RHfEnEf_hFB7rIH_YgN8T6HSSkR9npXXRCvkv82-ldp4K4Mnkois1SaGWz3-c&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=mY2odR2w6jRAk1kR5pLY8Q&oh=00_AfUzom41XtlVxZOMMD8k-qMb0Hspn8dtordjN1Ey8DXXnQ&oe=68A8A9A1",
           "type": "thumbnail",
           "size": "unknown"
         }
@@ -635,37 +86,437 @@
         "profile": null
       },
       "product_details": {
-        "model": "iPhone 12 Pro",
+        "model": "iPhone 16 Pro Max",
         "storage": "Unknown",
         "condition": "Unknown",
         "color": "Unknown"
       },
       "extraction_method": "automated_scraper",
       "data_quality": "basic",
-      "full_url": "https://www.facebook.com/marketplace/item/24412620408370396/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A6e470a00-d837-4872-ae5b-18193ada2695&__tn__=!%3AD",
-      "added_at": "2025-08-13T01:04:54.605411",
+      "full_url": "https://www.facebook.com/marketplace/item/1539590500359563/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A38ff388b-11cf-4e43-a640-d8637fd8e084&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:52:07.547510",
       "source": "facebook_marketplace_scraper",
-      "created_at": "2025-08-13T01:04:54.605411",
+      "created_at": "2025-08-18T13:52:07.547510",
       "seller_name": "Private Seller"
     },
     {
-      "title": "iPhone 16 Pro, Max ￼",
+      "title": "I phone 16 PRO svart 128 GB begagnad 2 månader",
       "price": {
-        "raw_value": "SEK3,500",
+        "raw_value": "SEK8,000",
         "currency": "SEK",
-        "amount": "3500",
-        "note": "Extracted from: SEK3,500"
+        "amount": "8000",
+        "note": "Extracted from: SEK8,000"
       },
       "location": {
         "city": "Stockholm",
         "distance": "Unknown",
         "raw_location": "Not specified"
       },
-      "marketplace_url": "https://www.facebook.com/marketplace/item/24778472958425747/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A3d266dc3-c81c-413b-bbf2-fbdde396e8d6&__tn__=!%3AD",
-      "id": "mp_24778472958425747",
+      "marketplace_url": "https://www.facebook.com/marketplace/item/607838748826326/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A38ff388b-11cf-4e43-a640-d8637fd8e084&__tn__=!%3AD",
+      "id": "mp_607838748826326",
       "images": [
         {
-          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/531364049_1388997816153997_692927352139311514_n.jpg?stp=c0.151.261.261a_dst-jpg_p261x260_tt6&_nc_cat=100&ccb=1-7&_nc_sid=247b10&_nc_ohc=mVUOTDUvzUMQ7kNvwHDXNYn&_nc_oc=AdkbtwkJ30awF2ujr0fKU7Fa0H2Nv16e0dQLiAOqmO2ex86EoPOfaCpS3JgOPHZhjCAuVAHz9PvLlzmRQhaivP2W&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=NENWL6gbId5TjviY4hV1hA&oh=00_AfWV5SO22RrVDBlRd36CRh9CgfgI1zpPUdbKPB67FfZYBw&oe=68A2982F",
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/531194179_1782906699251336_2510161206440109903_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=100&ccb=1-7&_nc_sid=247b10&_nc_ohc=OcLPlVOcY0kQ7kNvwG01MgM&_nc_oc=Adl5wXJgiZ7-2xsgoTYSL4QXX2OX5lmPkfOHblFjRINYnJ3TFIC3VkekqbWzBY-drQI&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=mY2odR2w6jRAk1kR5pLY8Q&oh=00_AfVhWbhIMG6P2dRPflrT1rm85VABjy1bV8buiUciCl169Q&oe=68A8CE16",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "Unknown",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/607838748826326/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A38ff388b-11cf-4e43-a640-d8637fd8e084&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:52:07.561169",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-18T13:52:07.561169",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "Iphone 16 pro max 256gb oanvänd",
+      "price": {
+        "raw_value": "SEK13,500",
+        "currency": "SEK",
+        "amount": "13500",
+        "note": "Extracted from: SEK13,500"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1313230030153615/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A38ff388b-11cf-4e43-a640-d8637fd8e084&__tn__=!%3AD",
+      "id": "mp_1313230030153615",
+      "images": [
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/531841169_1315674213475126_2122491462266147511_n.jpg?stp=c24.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=100&ccb=1-7&_nc_sid=247b10&_nc_ohc=BG9Hj5ZW6dYQ7kNvwGbVt1V&_nc_oc=AdkUbY_Dv7orwB9poTbiV6JV5aQby721XLweiitycKSz2EbqmIuzQY5KUXopwGNQFmk&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=mY2odR2w6jRAk1kR5pLY8Q&oh=00_AfWEGYnWojt2AQkRd5_M53HDluAEL1o3b9UAnHGLcpt4Qg&oe=68A8D6C0",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 16 Pro Max",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/1313230030153615/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A38ff388b-11cf-4e43-a640-d8637fd8e084&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:52:07.561456",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-18T13:52:07.561456",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "IPHONE 16 PRO Max 256 GB",
+      "price": {
+        "raw_value": "SEK12,000",
+        "currency": "SEK",
+        "amount": "12000",
+        "note": "Extracted from: SEK12,000"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/676189238768297/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A38ff388b-11cf-4e43-a640-d8637fd8e084&__tn__=!%3AD",
+      "id": "mp_676189238768297",
+      "images": [
+        {
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/530071172_2138057793347750_802606049359530331_n.jpg?stp=c20.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=103&ccb=1-7&_nc_sid=247b10&_nc_ohc=i4LsvtkTPrsQ7kNvwHNo3px&_nc_oc=AdmL8oxw_TbIdg4KWLo6G9Z58bL5_IrbfBmmXEoFHqZtaIGl8nqecemXzp5zFRUQ2_U&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=mY2odR2w6jRAk1kR5pLY8Q&oh=00_AfVo6SXRIi_59hPRb7O-6flCRru86DW3MxfDPJSHzMDNuA&oe=68A8D1D8",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 16 Pro Max",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/676189238768297/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A38ff388b-11cf-4e43-a640-d8637fd8e084&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:52:07.561799",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-18T13:52:07.561799",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "iPhone 16 pro Max 512GB Olåst & Ny",
+      "price": {
+        "raw_value": "SEK9,500",
+        "currency": "SEK",
+        "amount": "9500",
+        "note": "Extracted from: SEK9,500"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1887115558519976/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A38ff388b-11cf-4e43-a640-d8637fd8e084&__tn__=!%3AD",
+      "id": "mp_1887115558519976",
+      "images": [
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/529400485_24119336914383722_1868199710802907252_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=111&ccb=1-7&_nc_sid=247b10&_nc_ohc=okUdhCw20BkQ7kNvwEYo1Gh&_nc_oc=Adk-mfGQpi3bG0-YRGpwCm3ql5VW201TCllk_C0NqUomLAWSrsNF1NHY-RQx_UEZpd0&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=mY2odR2w6jRAk1kR5pLY8Q&oh=00_AfUZ8u2eIiirGZK81HqLz-wo8gSRJ-oeqVCI0BvvqWNSQw&oe=68A8BA4D",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 16 Pro Max",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/1887115558519976/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A38ff388b-11cf-4e43-a640-d8637fd8e084&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:52:07.562236",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-18T13:52:07.562236",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "iPhone 16 Plus 256 GB – Nyskick + originalkartong",
+      "price": {
+        "raw_value": "SEK13,000",
+        "currency": "SEK",
+        "amount": "13000",
+        "note": "Extracted from: SEK13,000"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/779784524708867/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A38ff388b-11cf-4e43-a640-d8637fd8e084&__tn__=!%3AD",
+      "id": "mp_779784524708867",
+      "images": [
+        {
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/525560074_1297552215063576_7636360629803906484_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=104&ccb=1-7&_nc_sid=247b10&_nc_ohc=AS_dyQvGjAcQ7kNvwHJ9g4z&_nc_oc=AdlM8dH4ADuTs-yGxROMyKqPzxvoLK6ZRqdX5Miwv29xy9TxPEK86P6TxJHcrjjJ5H4&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=mY2odR2w6jRAk1kR5pLY8Q&oh=00_AfWMsJIG2FAr2x2J2kEYmCQdsmqFfYuYzmjWdbTjSU0BwQ&oe=68A8C2DA",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 16 Plus",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/779784524708867/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A38ff388b-11cf-4e43-a640-d8637fd8e084&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:52:07.562710",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-18T13:52:07.562710",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "iPhone 16 plus 128GB",
+      "price": {
+        "raw_value": "SEK7,000",
+        "currency": "SEK",
+        "amount": "7000",
+        "note": "Extracted from: SEK7,000"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/772353545288254/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A38ff388b-11cf-4e43-a640-d8637fd8e084&__tn__=!%3AD",
+      "id": "mp_772353545288254",
+      "images": [
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/531052042_766699502493059_5409966254109327999_n.jpg?stp=c0.152.261.261a_dst-jpg_p261x260_tt6&_nc_cat=111&ccb=1-7&_nc_sid=247b10&_nc_ohc=tS1Ypw7y5jIQ7kNvwFqTexu&_nc_oc=AdlzR0fSZiRPI6ezD40kWn49GqPj6qlA74qPEPk-GeRax2cCEyAaae3-2yJN75AaYJc&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=mY2odR2w6jRAk1kR5pLY8Q&oh=00_AfWEhvAO7kU91l8ZGJlVvVIIQ6C639_r28zcScqd_28o6Q&oe=68A8D26E",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 16 Plus",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/772353545288254/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A38ff388b-11cf-4e43-a640-d8637fd8e084&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:52:07.563590",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-18T13:52:07.563590",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "Säljer öppnad iPhone 16 128 gb i nyskick.",
+      "price": {
+        "raw_value": "SEK8,000",
+        "currency": "SEK",
+        "amount": "8000",
+        "note": "Extracted from: SEK8,000"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/749687374658132/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A38ff388b-11cf-4e43-a640-d8637fd8e084&__tn__=!%3AD",
+      "id": "mp_749687374658132",
+      "images": [
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/532457618_1116019303741715_2631029886071183692_n.jpg?stp=c0.101.261.261a_dst-jpg_p261x260_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=TlDMyF5OvmUQ7kNvwG9YCHA&_nc_oc=Adkd9dZ0qiKSzqvnPIcjECihPqoW9UvQJTiKfNWCF6_91QD1q3x5UCsmAPQr5j-FVCE&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=mY2odR2w6jRAk1kR5pLY8Q&oh=00_AfWtT6cofLmw1DLO-LuoPwnhYVN0_KWwPZoJKm32raylsw&oe=68A8BB28",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 16",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/749687374658132/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A38ff388b-11cf-4e43-a640-d8637fd8e084&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:52:07.564467",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-18T13:52:07.564467",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "iPhone 16",
+      "price": {
+        "raw_value": "SEK580",
+        "currency": "SEK",
+        "amount": "580",
+        "note": "Extracted from: SEK580"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1121068110035718/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A38ff388b-11cf-4e43-a640-d8637fd8e084&__tn__=!%3AD",
+      "id": "mp_1121068110035718",
+      "images": [
+        {
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/498699993_1207574524239098_2807023417755408888_n.jpg?stp=c0.101.261.261a_dst-jpg_p261x260_tt6&_nc_cat=101&ccb=1-7&_nc_sid=247b10&_nc_ohc=fuENUVB2PYUQ7kNvwHf75jl&_nc_oc=Adl7yXepYUxHq2fO0LMaQWzgs2vTiWuvK6AIVXrKkINdes3utNDmdfRWaX-wYxIotF8&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=mY2odR2w6jRAk1kR5pLY8Q&oh=00_AfUbK9M5ljFs0j6Hoy8EWhSAPzhROspTPXCGUv4kO3uHIQ&oe=68A8B30F",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 16",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/1121068110035718/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A38ff388b-11cf-4e43-a640-d8637fd8e084&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:52:07.565244",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-18T13:52:07.565244",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "Iphone 16 128GB Helt ny",
+      "price": {
+        "raw_value": "SEK7,700",
+        "currency": "SEK",
+        "amount": "7700",
+        "note": "Extracted from: SEK7,700"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1049112133873707/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A38ff388b-11cf-4e43-a640-d8637fd8e084&__tn__=!%3AD",
+      "id": "mp_1049112133873707",
+      "images": [
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/524766272_771355945339845_5077389278169385730_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=TJ8g4faNbGMQ7kNvwEgh7Ef&_nc_oc=AdnYfgeApVPXdHgK-PpH6pZKst5wACPWvZx2b51ZBNsubhSXTyEYd_fDaxSOPOPhaK4&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=mY2odR2w6jRAk1kR5pLY8Q&oh=00_AfVqnyA1gN-cyfDUxFziJwxsi9QoHx8noYA-ZtD4AeWwLA&oe=68A8C9A4",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 16",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/1049112133873707/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A38ff388b-11cf-4e43-a640-d8637fd8e084&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:52:07.566100",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-18T13:52:07.566100",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "iPhone 16ProMax (Unlocked) 256 Gb",
+      "price": {
+        "raw_value": "SEK750",
+        "currency": "SEK",
+        "amount": "750",
+        "note": "Extracted from: SEK750"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/651002468018170/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A38ff388b-11cf-4e43-a640-d8637fd8e084&__tn__=!%3AD",
+      "id": "mp_651002468018170",
+      "images": [
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/532207363_1334388168047304_6878860262132160853_n.jpg?stp=c0.100.261.261a_dst-jpg_p261x260_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=dffwtF1sGQ8Q7kNvwGyvUnm&_nc_oc=AdnR0Z30PLYlB3Zw8DhN461q2c3ShZVMd9K07EnFAsHj4ItTMxomsI8u-lpF5rRm1Cc&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=mY2odR2w6jRAk1kR5pLY8Q&oh=00_AfWH5S48FFfgrR1boAMCBuJYBCl_WYIRp_V-VW1dtreq7g&oe=68A8C55C",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 16 Promax",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/651002468018170/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A38ff388b-11cf-4e43-a640-d8637fd8e084&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:52:07.567130",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-18T13:52:07.567130",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "Iphone 16 PRO 128gb",
+      "price": {
+        "raw_value": "SEK7,000",
+        "currency": "SEK",
+        "amount": "7000",
+        "note": "Extracted from: SEK7,000"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1897362681161237/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A38ff388b-11cf-4e43-a640-d8637fd8e084&__tn__=!%3AD",
+      "id": "mp_1897362681161237",
+      "images": [
+        {
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/531069754_1250600373023074_5654356616672275995_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=108&ccb=1-7&_nc_sid=247b10&_nc_ohc=FxVfPwb0lBIQ7kNvwEqfeoC&_nc_oc=AdnXtuRVW6WueZ_hs67v4sTeuVrY6o6KWl53vBxLmj9VGu2hTozO1-Zk4UeRhFeJLxo&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=mY2odR2w6jRAk1kR5pLY8Q&oh=00_AfUDE_IwwUznl-o_jsnqK6TzZZFYb_jOWFfKENhi8wsQhw&oe=68A8A0CC",
           "type": "thumbnail",
           "size": "unknown"
         }
@@ -682,30 +533,30 @@
       },
       "extraction_method": "automated_scraper",
       "data_quality": "basic",
-      "full_url": "https://www.facebook.com/marketplace/item/24778472958425747/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A3d266dc3-c81c-413b-bbf2-fbdde396e8d6&__tn__=!%3AD",
-      "added_at": "2025-08-13T23:42:05.970171",
+      "full_url": "https://www.facebook.com/marketplace/item/1897362681161237/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A38ff388b-11cf-4e43-a640-d8637fd8e084&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:52:07.568009",
       "source": "facebook_marketplace_scraper",
-      "created_at": "2025-08-13T23:42:05.970171",
+      "created_at": "2025-08-18T13:52:07.568009",
       "seller_name": "Private Seller"
     },
     {
-      "title": "iPhone 8 Batteri",
+      "title": "iPhone 15 pro max",
       "price": {
-        "raw_value": "SEK60",
+        "raw_value": "SEK7,000",
         "currency": "SEK",
-        "amount": "60",
-        "note": "Extracted from: SEK60"
+        "amount": "7000",
+        "note": "Extracted from: SEK7,000"
       },
       "location": {
         "city": "Stockholm",
         "distance": "Unknown",
         "raw_location": "Not specified"
       },
-      "marketplace_url": "https://www.facebook.com/marketplace/item/726321799735660/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A12c09d64-fa69-43f9-b530-108c82cfbc41&__tn__=!%3AD",
-      "id": "mp_726321799735660",
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1492309412065468/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A38ff388b-11cf-4e43-a640-d8637fd8e084&__tn__=!%3AD",
+      "id": "mp_1492309412065468",
       "images": [
         {
-          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/504661287_1278680266952546_51737123097878738_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=111&ccb=1-7&_nc_sid=247b10&_nc_ohc=rinuq2KTy34Q7kNvwGGKsI6&_nc_oc=AdnRc5OHiwt0DIBqfmAfPzzOR5zNU8p60VMrw-SEadYJ4-7aVPB_99HAM-SjQgcwYejReqMR1WNrzqUwZwX7OcyE&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=g6mKfgwZtfNLdHLjze_icw&oh=00_AfU9_-LVKqzDf84WAZw9T3qqNxBbYyB-7JIVkMnCVJ705w&oe=68A2B41D",
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/511450502_703219689284798_3441523935291709985_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=108&ccb=1-7&_nc_sid=247b10&_nc_ohc=WyE1TpKdhFoQ7kNvwF_nxqG&_nc_oc=AdmxdOKjuZVIidwWxMQW5MOFmqNXIQQHW5VaR4Wol-Y9MNKAy8v3XstPjVcorRRxQrM&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=mY2odR2w6jRAk1kR5pLY8Q&oh=00_AfXTOuZpYld9D5SFVOO-jrttT4EGbGnfhp4vcOMkiOZW5Q&oe=68A8D50C",
           "type": "thumbnail",
           "size": "unknown"
         }
@@ -715,37 +566,37 @@
         "profile": null
       },
       "product_details": {
-        "model": "iPhone 8",
+        "model": "iPhone 15 Pro Max",
         "storage": "Unknown",
         "condition": "Unknown",
         "color": "Unknown"
       },
       "extraction_method": "automated_scraper",
       "data_quality": "basic",
-      "full_url": "https://www.facebook.com/marketplace/item/726321799735660/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A12c09d64-fa69-43f9-b530-108c82cfbc41&__tn__=!%3AD",
-      "added_at": "2025-08-13T23:54:50.370006",
+      "full_url": "https://www.facebook.com/marketplace/item/1492309412065468/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A38ff388b-11cf-4e43-a640-d8637fd8e084&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:52:07.568736",
       "source": "facebook_marketplace_scraper",
-      "created_at": "2025-08-13T23:54:50.370006",
+      "created_at": "2025-08-18T13:52:07.568736",
       "seller_name": "Private Seller"
     },
     {
-      "title": "iPhone 12 64GB",
+      "title": "iPhone 16 pro max. Med alla tillbehör",
       "price": {
-        "raw_value": "SEK2,200",
+        "raw_value": "SEK4,600",
         "currency": "SEK",
-        "amount": "2200",
-        "note": "Extracted from: SEK2,200"
+        "amount": "4600",
+        "note": "Extracted from: SEK4,600"
       },
       "location": {
         "city": "Stockholm",
         "distance": "Unknown",
         "raw_location": "Not specified"
       },
-      "marketplace_url": "https://www.facebook.com/marketplace/item/1771973960064111/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Abc68c796-ad75-4da2-b7b3-4ce4d172e9ab&__tn__=!%3AD",
-      "id": "mp_1771973960064111",
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1279221560499771/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A38ff388b-11cf-4e43-a640-d8637fd8e084&__tn__=!%3AD",
+      "id": "mp_1279221560499771",
       "images": [
         {
-          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/532794124_2171174830013074_5362893928117348099_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=104&ccb=1-7&_nc_sid=247b10&_nc_ohc=T3HeiRe8bnsQ7kNvwEaEkzz&_nc_oc=AdlGKEZOZElbHomJ7E6grQdfzbxEN5s0iMgPYnGbz9k9PrkSTt87Nd0M3VKmwRy6R98HJbrqFkOHA_PeRb9_Ozgk&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=aAFoaYjnmxpzM0GLl8c-wg&oh=00_AfWpEe7xOS9fesqYnsYTRTo7f2OwA9S7B643gmcLxbta-A&oe=68A2ACBA",
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/524923574_1501418580846427_6462550096071410556_n.jpg?stp=c0.46.257.257a_dst-jpg_p235x350_tt6&_nc_cat=111&ccb=1-7&_nc_sid=247b10&_nc_ohc=rB1rLugryIcQ7kNvwHitAoh&_nc_oc=Adkau0zI84wY7Pf0eUpUkUF6IyyV93H-sR9X6qV6RWEojaZGB3wYXOn7KXYAfleqOio&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=mY2odR2w6jRAk1kR5pLY8Q&oh=00_AfXrry1FrYRBgI2B0tPt2quHXCL4uHXc0Zd3gG0hNg4Dgg&oe=68A8C6AC",
           "type": "thumbnail",
           "size": "unknown"
         }
@@ -755,21 +606,581 @@
         "profile": null
       },
       "product_details": {
-        "model": "iPhone 12",
+        "model": "iPhone 16 Pro Max",
         "storage": "Unknown",
         "condition": "Unknown",
         "color": "Unknown"
       },
       "extraction_method": "automated_scraper",
       "data_quality": "basic",
-      "full_url": "https://www.facebook.com/marketplace/item/1771973960064111/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Abc68c796-ad75-4da2-b7b3-4ce4d172e9ab&__tn__=!%3AD",
-      "added_at": "2025-08-14T00:18:19.006116",
+      "full_url": "https://www.facebook.com/marketplace/item/1279221560499771/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A38ff388b-11cf-4e43-a640-d8637fd8e084&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:52:07.569721",
       "source": "facebook_marketplace_scraper",
-      "created_at": "2025-08-14T00:18:19.006116",
+      "created_at": "2025-08-18T13:52:07.569721",
       "seller_name": "Private Seller"
     },
     {
-      "title": "iPhone 16 PRO 128 GB",
+      "title": "iPhone 16pro max",
+      "price": {
+        "raw_value": "SEK5,727",
+        "currency": "SEK",
+        "amount": "5727",
+        "note": "Extracted from: SEK5,727"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/743835098507662/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A38ff388b-11cf-4e43-a640-d8637fd8e084&__tn__=!%3AD",
+      "id": "mp_743835098507662",
+      "images": [
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/528761281_1198479988661866_7743490300387568502_n.jpg?stp=c0.33.261.261a_dst-jpg_p261x260_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=jjmV98KiEpEQ7kNvwHcoilW&_nc_oc=AdnKhdGYuf_pfwRr0IwFO9Lh8QPR9LaIrm-FVIyLvlvl7qfhfBJ4Ih7NnLJFStR0kpc&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=mY2odR2w6jRAk1kR5pLY8Q&oh=00_AfUkLuPgCX7g0Bx2AWp2Gb1b0RZDk9F125SYgkyFr31UJw&oe=68A8AD62",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 16 Pro Max",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/743835098507662/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A38ff388b-11cf-4e43-a640-d8637fd8e084&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:52:07.570554",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-18T13:52:07.570554",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "Samsung S 25 Ultra",
+      "price": {
+        "raw_value": "SEK10,700",
+        "currency": "SEK",
+        "amount": "10700",
+        "note": "Extracted from: SEK10,700"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/3003909193120306/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A23511acf-2c1f-4d32-afa9-21b1ec559ee3&__tn__=!%3AD",
+      "id": "mp_3003909193120306",
+      "images": [
+        {
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/530731688_1324551305672979_4097541614420353156_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=110&ccb=1-7&_nc_sid=247b10&_nc_ohc=NE3AYX5rXRAQ7kNvwEhSJQu&_nc_oc=Adkec3XGPohVw5k1i_Xl9G5Sw55pBSRpau53cKWTQTbODQYnHY713leg1GEii_Ds42k&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=DWaODGblZQVX6P5VwZ5q3A&oh=00_AfV0lJ5GY-1sVDjxi0IOglUJmwnwZQKPnKB9QlV9lxGb2w&oe=68A8AC02",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "Unknown",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/3003909193120306/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A23511acf-2c1f-4d32-afa9-21b1ec559ee3&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:54:37.635979",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-18T13:54:37.635979",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "Samsung Galaxy S25 Ultra som",
+      "price": {
+        "raw_value": "SEK9,500",
+        "currency": "SEK",
+        "amount": "9500",
+        "note": "Extracted from: SEK9,500"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/765371336444353/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A23511acf-2c1f-4d32-afa9-21b1ec559ee3&__tn__=!%3AD",
+      "id": "mp_765371336444353",
+      "images": [
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/514182660_966129388856409_3528986762330613504_n.jpg?stp=c0.101.261.261a_dst-jpg_p261x260_tt6&_nc_cat=111&ccb=1-7&_nc_sid=247b10&_nc_ohc=gb4KZXtRSQMQ7kNvwEI30CX&_nc_oc=Adm8kxGYgZXa5YwrwC4kjzn6JAeg4IG7zpm3Y73L06__BRWht0tknmFAYja_d1IojIw&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=DWaODGblZQVX6P5VwZ5q3A&oh=00_AfWyUtCLEkkWewvTe-8t466mjj4wrn28AZ_oNjvSngqGEw&oe=68A8BE17",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "Unknown",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/765371336444353/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A23511acf-2c1f-4d32-afa9-21b1ec559ee3&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:54:37.637505",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-18T13:54:37.637505",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "Samsung S25 ultra 1TB",
+      "price": {
+        "raw_value": "SEK8,500",
+        "currency": "SEK",
+        "amount": "8500",
+        "note": "Extracted from: SEK8,500"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1235920314750784/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A23511acf-2c1f-4d32-afa9-21b1ec559ee3&__tn__=!%3AD",
+      "id": "mp_1235920314750784",
+      "images": [
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/506049973_1346747563079203_3035448004617966203_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=109&ccb=1-7&_nc_sid=247b10&_nc_ohc=9dEJrRPd9sEQ7kNvwGBZjN4&_nc_oc=Adn2Jo3TvsR7kFcLy4FoTvVXaPgK8cpNPw7D6Mu-SLeVJq-hJCWMmjNDTUMr_fZOBpQ&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=DWaODGblZQVX6P5VwZ5q3A&oh=00_AfVSTSRRog9xx_cBvAciuWH_vytnI3iocxe0kpfXiLdMrw&oe=68A8B869",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "Unknown",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/1235920314750784/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A23511acf-2c1f-4d32-afa9-21b1ec559ee3&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:54:37.638780",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-18T13:54:37.638780",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "Samsung galaxy s25 ultra",
+      "price": {
+        "raw_value": "SEK9,000",
+        "currency": "SEK",
+        "amount": "9000",
+        "note": "Extracted from: SEK9,000"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1971519943700175/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A23511acf-2c1f-4d32-afa9-21b1ec559ee3&__tn__=!%3AD",
+      "id": "mp_1971519943700175",
+      "images": [
+        {
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/525021184_1017381806962562_6914909296068366450_n.jpg?stp=c0.46.258.258a_dst-jpg_p235x350_tt6&_nc_cat=101&ccb=1-7&_nc_sid=247b10&_nc_ohc=SRvPSeJITdsQ7kNvwEguL77&_nc_oc=AdnPnEHZOPzPLsawsN_zVdoh_5Cd-5aaFbzylTpCv4BzLMOZYFWDInINN81jhL2PQtc&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=DWaODGblZQVX6P5VwZ5q3A&oh=00_AfWwrcc30DhNv5TTIthWUMCrhaqPG8iktJT6PQNfcqUNYA&oe=68A8C9B1",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "Unknown",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/1971519943700175/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A23511acf-2c1f-4d32-afa9-21b1ec559ee3&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:54:37.640262",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-18T13:54:37.640262",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "Samsung S25 Ultra",
+      "price": {
+        "raw_value": "SEK6,000",
+        "currency": "SEK",
+        "amount": "6000",
+        "note": "Extracted from: SEK6,000"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/737190939092644/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A23511acf-2c1f-4d32-afa9-21b1ec559ee3&__tn__=!%3AD",
+      "id": "mp_737190939092644",
+      "images": [
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/527886818_2197230584111548_1763031945186751083_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=100&ccb=1-7&_nc_sid=247b10&_nc_ohc=5aghHFtzb_UQ7kNvwFQAbqJ&_nc_oc=AdnXyCMp453MkLtCqLwEQbz7SQEW5JHOCes5LaFqga83lQbBWoLIAHpf3yJxrXxylCQ&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=DWaODGblZQVX6P5VwZ5q3A&oh=00_AfW3IDdhI-KlzdcCzHwIGHO32P311InegM3STTUPIZ3dbQ&oe=68A8D77F",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "Unknown",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/737190939092644/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A23511acf-2c1f-4d32-afa9-21b1ec559ee3&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:54:37.641318",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-18T13:54:37.641318",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "Samsung s25 ultra med kvitto",
+      "price": {
+        "raw_value": "SEK8,000",
+        "currency": "SEK",
+        "amount": "8000",
+        "note": "Extracted from: SEK8,000"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/784952483877255/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A23511acf-2c1f-4d32-afa9-21b1ec559ee3&__tn__=!%3AD",
+      "id": "mp_784952483877255",
+      "images": [
+        {
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/529281168_2166919860469197_6198517068950668141_n.jpg?stp=c0.107.261.261a_dst-jpg_p261x260_tt6&_nc_cat=101&ccb=1-7&_nc_sid=247b10&_nc_ohc=-XfmHMawDQYQ7kNvwE0O-Of&_nc_oc=AdmqHKMFYpe51Jm0hJ4WD-H11au-i_5kXX5GKj61icEhgfDHAgukmoLpm5LTMQYVhGc&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=DWaODGblZQVX6P5VwZ5q3A&oh=00_AfW_Wv9Tp1F5r13CTPTZ6epecJVh_ZKI3T3hE2FiVFJqhA&oe=68A8D03A",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "Unknown",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/784952483877255/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A23511acf-2c1f-4d32-afa9-21b1ec559ee3&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:54:37.644672",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-18T13:54:37.644672",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "S25 ultra",
+      "price": {
+        "raw_value": "SEK9,000",
+        "currency": "SEK",
+        "amount": "9000",
+        "note": "Extracted from: SEK9,000"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1274961497601376/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A23511acf-2c1f-4d32-afa9-21b1ec559ee3&__tn__=!%3AD",
+      "id": "mp_1274961497601376",
+      "images": [
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/526897141_1440046577241530_1809631451101678250_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=100&ccb=1-7&_nc_sid=247b10&_nc_ohc=nBK5eK7IfCcQ7kNvwF19UVI&_nc_oc=Adla2jtCO6rlorVXUpbGkwYz7QdzWysNH0b8fqa02ZUgtlnESofubmXEmbhAWNckP9E&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=DWaODGblZQVX6P5VwZ5q3A&oh=00_AfUEYQvdI50vgY0XZsatN2KySdpqQy_KeDAox-zkisugnA&oe=68A8B678",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "Unknown",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/1274961497601376/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A23511acf-2c1f-4d32-afa9-21b1ec559ee3&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:54:37.645849",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-18T13:54:37.645849",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "Samsung galaxy s25 ultra ny",
+      "price": {
+        "raw_value": "SEK9,500",
+        "currency": "SEK",
+        "amount": "9500",
+        "note": "Extracted from: SEK9,500"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/760359829803189/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A23511acf-2c1f-4d32-afa9-21b1ec559ee3&__tn__=!%3AD",
+      "id": "mp_760359829803189",
+      "images": [
+        {
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/516494588_1445171233277631_1902458741680098279_n.jpg?stp=c0.42.261.261a_dst-jpg_p261x260_tt6&_nc_cat=101&ccb=1-7&_nc_sid=247b10&_nc_ohc=2x01bluJSbMQ7kNvwFjabSC&_nc_oc=AdlN9a86ZcV-tRTeeqIHLMW5u6z_py8yfTtGIawq8Ci2n9IEoln4JFgqEXMREgcXGSY&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=DWaODGblZQVX6P5VwZ5q3A&oh=00_AfV8h-4Gfmg4e_u68JzTUqrx5K7qdMNwD-So57xRpxiHQQ&oe=68A8B724",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "Unknown",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/760359829803189/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A23511acf-2c1f-4d32-afa9-21b1ec559ee3&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:54:37.647230",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-18T13:54:37.647230",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "Samsung Galaxy s25 ultra 512gb",
+      "price": {
+        "raw_value": "SEK5,105",
+        "currency": "SEK",
+        "amount": "5105",
+        "note": "Extracted from: SEK5,105"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1938373466912610/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A23511acf-2c1f-4d32-afa9-21b1ec559ee3&__tn__=!%3AD",
+      "id": "mp_1938373466912610",
+      "images": [
+        {
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/528422796_1183406230491980_8543724716447537822_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=104&ccb=1-7&_nc_sid=247b10&_nc_ohc=7C4SS_tdGK4Q7kNvwE4nnei&_nc_oc=AdmzcJSuR8EzCfoUe7P_iKObpi_pEFNnxMcH5nGV_znMzlMQH_rpf1ttfYlYj9We3n4&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=DWaODGblZQVX6P5VwZ5q3A&oh=00_AfVbPOTdPH4oumztn2uXwXyCKOL1pY3ymUtOuD97N59EJg&oe=68A8D783",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "Unknown",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/1938373466912610/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A23511acf-2c1f-4d32-afa9-21b1ec559ee3&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:54:37.648575",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-18T13:54:37.648575",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "Samsung Galaxie S25 Ultra",
+      "price": {
+        "raw_value": "SEK5,100",
+        "currency": "SEK",
+        "amount": "5100",
+        "note": "Extracted from: SEK5,100"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/784597757425686/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A23511acf-2c1f-4d32-afa9-21b1ec559ee3&__tn__=!%3AD",
+      "id": "mp_784597757425686",
+      "images": [
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/533235782_771493185460953_843312875426500298_n.jpg?stp=c0.151.261.261a_dst-jpg_p261x260_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=dG-KcD1GQOgQ7kNvwF0fI3S&_nc_oc=Adl_WmE2oRIHZ741vZDsOCGoqSopQnzEYimACtAQTk7wAmrLLD1uwIrG8k0OhAhiEzs&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=DWaODGblZQVX6P5VwZ5q3A&oh=00_AfWf7XQEg1umdUDF-Nybu2fiJF9zsY06NV1TWG4W8-aByw&oe=68A8A4F0",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "Unknown",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/784597757425686/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A23511acf-2c1f-4d32-afa9-21b1ec559ee3&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:54:37.650121",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-18T13:54:37.650121",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "Samsung Galaxy S25 256GB Navy",
+      "price": {
+        "raw_value": "SEK9,000",
+        "currency": "SEK",
+        "amount": "9000",
+        "note": "Extracted from: SEK9,000"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/633878992909997/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Acfbf74b0-f1f0-456a-be64-4eb5b575822d&__tn__=!%3AD",
+      "id": "mp_633878992909997",
+      "images": [
+        {
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/484318617_2515998722070926_6959033142282067951_n.jpg?stp=c0.101.261.261a_dst-jpg_p261x260_tt6&_nc_cat=103&ccb=1-7&_nc_sid=247b10&_nc_ohc=kPBwcX6hR9wQ7kNvwGSf1tn&_nc_oc=Adk9LRVgOIEglBsxduePWIg1qxZcjG1To021MdJ83vOGDM-SpDwsc4GO0Ywl7MVYTTg&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=9XnqwvAiKCPxwYSqM3T-uQ&oh=00_AfXiodUQKIJX_SWHMpilJAF1RtD0bRvEZW3EureiFISQgw&oe=68A8A8E7",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "Unknown",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/633878992909997/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Acfbf74b0-f1f0-456a-be64-4eb5b575822d&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:55:50.791809",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-18T13:55:50.791809",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "Samsung Galaxy s25",
+      "price": {
+        "raw_value": "SEK7,800",
+        "currency": "SEK",
+        "amount": "7800",
+        "note": "Extracted from: SEK7,800"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1080006787170622/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Acfbf74b0-f1f0-456a-be64-4eb5b575822d&__tn__=!%3AD",
+      "id": "mp_1080006787170622",
+      "images": [
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/513568394_1269113524844761_4521977247506901060_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=109&ccb=1-7&_nc_sid=247b10&_nc_ohc=NazDB3Uk-RUQ7kNvwFoICmY&_nc_oc=Adl_6O0Y4sMblbDANtyLM7mvsnvDwg3QQ9THcXTmfT_DjD9PlKRo5NdfA0SmstMrCaI&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=9XnqwvAiKCPxwYSqM3T-uQ&oh=00_AfXmpq85obJGAZ3ulf7t9Bu0DEgMuf2O2akkNJ3-bybXgg&oe=68A8CC27",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "Unknown",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/1080006787170622/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Acfbf74b0-f1f0-456a-be64-4eb5b575822d&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:55:50.792831",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-18T13:55:50.792831",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "Samsung Galaxy s25 plus 256 GB Navy",
+      "price": {
+        "raw_value": "SEK8,500",
+        "currency": "SEK",
+        "amount": "8500",
+        "note": "Extracted from: SEK8,500"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1637763243559355/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Acfbf74b0-f1f0-456a-be64-4eb5b575822d&__tn__=!%3AD",
+      "id": "mp_1637763243559355",
+      "images": [
+        {
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/522714197_1124541036217455_30111572017670621_n.jpg?stp=c0.93.261.261a_dst-jpg_p261x260_tt6&_nc_cat=110&ccb=1-7&_nc_sid=247b10&_nc_ohc=oUNjvi5Uqp8Q7kNvwGHcSDY&_nc_oc=AdmT7OMHefueQFTTSDyTsMZYt4Z8QvYZZU6rbN_X8KnNZdqLB8QkOVoSAhXxyo8wBio&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=9XnqwvAiKCPxwYSqM3T-uQ&oh=00_AfXYUFXvr_eS9lDG8lqMvHDUmQAvfyL57qy8TYuyowu68Q&oe=68A8CD99",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "Unknown",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/1637763243559355/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Acfbf74b0-f1f0-456a-be64-4eb5b575822d&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:55:50.794160",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-18T13:55:50.794160",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "Galaxy S25 Ultra",
       "price": {
         "raw_value": "SEK10,500",
         "currency": "SEK",
@@ -781,131 +1192,11 @@
         "distance": "Unknown",
         "raw_location": "Not specified"
       },
-      "marketplace_url": "https://www.facebook.com/marketplace/item/1229396405602491/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A1ada2e02-4d7a-43d5-906a-8f3bcecc5aa3&__tn__=!%3AD",
-      "id": "mp_1229396405602491",
+      "marketplace_url": "https://www.facebook.com/marketplace/item/798898465944475/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Acfbf74b0-f1f0-456a-be64-4eb5b575822d&__tn__=!%3AD",
+      "id": "mp_798898465944475",
       "images": [
         {
-          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/530825895_615614744939334_259475973832602563_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=104&ccb=1-7&_nc_sid=247b10&_nc_ohc=kWQOP-uiB_UQ7kNvwEkGmRR&_nc_oc=AdlrOK2mnwt8Tcq61XIRZqqq4qShgEHfa-rcs7iZekAc1_7TAQ2611RVAdSInmOpZ-m4XFqAZNENSCDgkXlP4k_m&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=h5vucKiY7b_JhUMCw23NLA&oh=00_AfURkECxRe8QoLgKlS3WtkeX4fmJ0-Dq_bL5zJ9oOSiqXQ&oe=68A2A3DF",
-          "type": "thumbnail",
-          "size": "unknown"
-        }
-      ],
-      "seller": {
-        "info": "Not extracted",
-        "profile": null
-      },
-      "product_details": {
-        "model": "iPhone 16 Pro",
-        "storage": "Unknown",
-        "condition": "Unknown",
-        "color": "Unknown"
-      },
-      "extraction_method": "automated_scraper",
-      "data_quality": "basic",
-      "full_url": "https://www.facebook.com/marketplace/item/1229396405602491/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A1ada2e02-4d7a-43d5-906a-8f3bcecc5aa3&__tn__=!%3AD",
-      "added_at": "2025-08-14T00:36:39.164744",
-      "source": "facebook_marketplace_scraper",
-      "created_at": "2025-08-14T00:36:39.164744",
-      "seller_name": "Private Seller"
-    },
-    {
-      "title": "iPhone 8 64gb",
-      "price": {
-        "raw_value": "SEK900",
-        "currency": "SEK",
-        "amount": "900",
-        "note": "Extracted from: SEK900"
-      },
-      "location": {
-        "city": "Stockholm",
-        "distance": "Unknown",
-        "raw_location": "Not specified"
-      },
-      "marketplace_url": "https://www.facebook.com/marketplace/item/2892181387656774/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A8e2a3165-41c8-4b4b-a82d-64a0941957c8&__tn__=!%3AD",
-      "id": "mp_2892181387656774",
-      "images": [
-        {
-          "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/531478981_1142376364408410_8733218134650077714_n.jpg?stp=c0.0.261.261a_dst-jpg_p261x260_tt6&_nc_cat=103&ccb=1-7&_nc_sid=247b10&_nc_ohc=IIYfqSJ-KQMQ7kNvwG8ZEat&_nc_oc=AdmVu7bTu8RtYInVW2RtHxaUGh5ZKEnAEbNyDaSnGmXv_euDCg38t0coRc9Gyib4tkI9Ba-sDXzempX9FHoFkWKw&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=CtR7P_jE6d3XR1W4ByZRuA&oh=00_AfXvycgT8dcdGrey2rlwIbvL5p5SrBoNVK3IoebGQu90DA&oe=68A3833F",
-          "type": "thumbnail",
-          "size": "unknown"
-        }
-      ],
-      "seller": {
-        "info": "Not extracted",
-        "profile": null
-      },
-      "product_details": {
-        "model": "iPhone 8",
-        "storage": "Unknown",
-        "condition": "Unknown",
-        "color": "Unknown"
-      },
-      "extraction_method": "automated_scraper",
-      "data_quality": "basic",
-      "full_url": "https://www.facebook.com/marketplace/item/2892181387656774/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A8e2a3165-41c8-4b4b-a82d-64a0941957c8&__tn__=!%3AD",
-      "added_at": "2025-08-14T16:13:02.752607",
-      "source": "facebook_marketplace_scraper",
-      "created_at": "2025-08-14T16:13:02.752607",
-      "seller_name": "Private Seller"
-    },
-    {
-      "title": "iPhone 8",
-      "price": {
-        "raw_value": "SEK700",
-        "currency": "SEK",
-        "amount": "700",
-        "note": "Extracted from: SEK700"
-      },
-      "location": {
-        "city": "Stockholm",
-        "distance": "Unknown",
-        "raw_location": "Not specified"
-      },
-      "marketplace_url": "https://www.facebook.com/marketplace/item/1281036793812617/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
-      "id": "mp_1281036793812617",
-      "images": [
-        {
-          "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/529701810_1092242339663658_4298856627077297648_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=106&ccb=1-7&_nc_sid=247b10&_nc_ohc=1QACjUDR0yEQ7kNvwGzO_DD&_nc_oc=AdmEBSy22LPEz7DCY1-2PuYUeOJSFjaCo4GMkDKNw8pccay2ob3OYScllfUIzzjvxCF4k6pOyL18Y1hgV9HGwgT6&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=N3sfo93Z2tmGWX5Lf7S2Pg&oh=00_AfXJT-TF2z88AQsrctm3y5W3VtzKIhEtHDEkrgdlYyaCVQ&oe=68A3A837",
-          "type": "thumbnail",
-          "size": "unknown"
-        }
-      ],
-      "seller": {
-        "info": "Not extracted",
-        "profile": null
-      },
-      "product_details": {
-        "model": "iPhone 8",
-        "storage": "Unknown",
-        "condition": "Unknown",
-        "color": "Unknown"
-      },
-      "extraction_method": "automated_scraper",
-      "data_quality": "basic",
-      "full_url": "https://www.facebook.com/marketplace/item/1281036793812617/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
-      "added_at": "2025-08-14T16:35:22.043180",
-      "source": "facebook_marketplace_scraper",
-      "created_at": "2025-08-14T16:35:22.043180",
-      "seller_name": "Private Seller"
-    },
-    {
-      "title": "Mobilskal",
-      "price": {
-        "raw_value": "SEK200",
-        "currency": "SEK",
-        "amount": "200",
-        "note": "Extracted from: SEK200"
-      },
-      "location": {
-        "city": "Stockholm",
-        "distance": "Unknown",
-        "raw_location": "Not specified"
-      },
-      "marketplace_url": "https://www.facebook.com/marketplace/item/2437848189941515/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
-      "id": "mp_2437848189941515",
-      "images": [
-        {
-          "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/519637265_1391070938635355_670949973219673336_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=100&ccb=1-7&_nc_sid=247b10&_nc_ohc=8Fuu_tRBWaQQ7kNvwHrqEDC&_nc_oc=Adkb6yKuRgszrboIfDRQrRBXPUgCCr2ExL-kEUH1JHWiGhNBtM-Wi0zjs0qNRbMqJpawhL31pZI7dlIisNo-pnAV&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=N3sfo93Z2tmGWX5Lf7S2Pg&oh=00_AfX0WowgH2dkupiHETD3iJYVAu_FX5t5g4LWXE7IjAT0nQ&oe=68A3B372",
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/535464504_2621970974822700_7422121526795950020_n.jpg?stp=c45.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_ohc=uSF6jriL3AYQ7kNvwG7vlvX&_nc_oc=Admxr0eYwWCXsgwuU5_QabbunK7zLCXueetMRFt9ZN2x4LuSfNqpM261UPJupqHeO-s&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=e0Lisu_Jf-gCcP6zGMfjmA&oh=00_AfUDcJA42kM66WPb7R_Gzro6g_Di-HjKYwkMc9ehJuoH9w&oe=68A8A87B",
           "type": "thumbnail",
           "size": "unknown"
         }
@@ -922,350 +1213,30 @@
       },
       "extraction_method": "automated_scraper",
       "data_quality": "basic",
-      "full_url": "https://www.facebook.com/marketplace/item/2437848189941515/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
-      "added_at": "2025-08-14T16:35:22.043732",
+      "full_url": "https://www.facebook.com/marketplace/item/798898465944475/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Acfbf74b0-f1f0-456a-be64-4eb5b575822d&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:55:50.795070",
       "source": "facebook_marketplace_scraper",
-      "created_at": "2025-08-14T16:35:22.043732",
+      "created_at": "2025-08-18T13:55:50.795070",
       "seller_name": "Private Seller"
     },
     {
-      "title": "iPhone 8 Plus 64 gb",
+      "title": "Samsung S23 Ultra",
       "price": {
-        "raw_value": "SEK2,120",
+        "raw_value": "SEK4,995",
         "currency": "SEK",
-        "amount": "2120",
-        "note": "Extracted from: SEK2,120"
+        "amount": "4995",
+        "note": "Extracted from: SEK4,995"
       },
       "location": {
         "city": "Stockholm",
         "distance": "Unknown",
         "raw_location": "Not specified"
       },
-      "marketplace_url": "https://www.facebook.com/marketplace/item/1216740053168125/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
-      "id": "mp_1216740053168125",
+      "marketplace_url": "https://www.facebook.com/marketplace/item/690465094006895/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Acfbf74b0-f1f0-456a-be64-4eb5b575822d&__tn__=!%3AD",
+      "id": "mp_690465094006895",
       "images": [
         {
-          "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/501992814_709117351768728_3371136511525328469_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=106&ccb=1-7&_nc_sid=247b10&_nc_ohc=N7VBEcu62P0Q7kNvwHfiZUH&_nc_oc=AdmiPbLuk-I8T2oEgo0tsg53BH3F7jNlGu5NP0UJhSVXQcoZOLos5s945IzoKFOCPWs2vM3jZ4EENgpm50UTDLdV&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=N3sfo93Z2tmGWX5Lf7S2Pg&oh=00_AfXQis90J2eMQxIENDSEf57c538mu_Ap-ge6DvR-yTxhHg&oe=68A388B9",
-          "type": "thumbnail",
-          "size": "unknown"
-        }
-      ],
-      "seller": {
-        "info": "Not extracted",
-        "profile": null
-      },
-      "product_details": {
-        "model": "iPhone 8 Plus",
-        "storage": "Unknown",
-        "condition": "Unknown",
-        "color": "Unknown"
-      },
-      "extraction_method": "automated_scraper",
-      "data_quality": "basic",
-      "full_url": "https://www.facebook.com/marketplace/item/1216740053168125/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
-      "added_at": "2025-08-14T16:35:22.044371",
-      "source": "facebook_marketplace_scraper",
-      "created_at": "2025-08-14T16:35:22.044371",
-      "seller_name": "Private Seller"
-    },
-    {
-      "title": "iPhone 8 black 256GB battery health 100% Fast pris",
-      "price": {
-        "raw_value": "SEK1,600",
-        "currency": "SEK",
-        "amount": "1600",
-        "note": "Extracted from: SEK1,600"
-      },
-      "location": {
-        "city": "Stockholm",
-        "distance": "Unknown",
-        "raw_location": "Not specified"
-      },
-      "marketplace_url": "https://www.facebook.com/marketplace/item/1454138318945882/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
-      "id": "mp_1454138318945882",
-      "images": [
-        {
-          "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/524909830_732584739558353_3830660618848077578_n.jpg?stp=c0.26.261.261a_dst-jpg_p261x260_tt6&_nc_cat=100&ccb=1-7&_nc_sid=247b10&_nc_ohc=rMkYwJHij2EQ7kNvwErU68U&_nc_oc=AdmJO1b-EUnhFFSkGZi8pRJ6qeKMMAAVY8rbV74N1U37UXcbjPh71tT3bvrxRTEM7QikSKqt_l1nSXZh4m_da7RK&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=N3sfo93Z2tmGWX5Lf7S2Pg&oh=00_AfXvnQXq4rIkJ3IjOylrf0KjYK3ETx8eMyv-_8OzLjC-6A&oe=68A3ADC0",
-          "type": "thumbnail",
-          "size": "unknown"
-        }
-      ],
-      "seller": {
-        "info": "Not extracted",
-        "profile": null
-      },
-      "product_details": {
-        "model": "iPhone 8",
-        "storage": "Unknown",
-        "condition": "Unknown",
-        "color": "Unknown"
-      },
-      "extraction_method": "automated_scraper",
-      "data_quality": "basic",
-      "full_url": "https://www.facebook.com/marketplace/item/1454138318945882/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
-      "added_at": "2025-08-14T16:35:22.045477",
-      "source": "facebook_marketplace_scraper",
-      "created_at": "2025-08-14T16:35:22.045477",
-      "seller_name": "Private Seller"
-    },
-    {
-      "title": "Iphone 8 svart",
-      "price": {
-        "raw_value": "SEK1,300",
-        "currency": "SEK",
-        "amount": "1300",
-        "note": "Extracted from: SEK1,300"
-      },
-      "location": {
-        "city": "Stockholm",
-        "distance": "Unknown",
-        "raw_location": "Not specified"
-      },
-      "marketplace_url": "https://www.facebook.com/marketplace/item/1206416914484003/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
-      "id": "mp_1206416914484003",
-      "images": [
-        {
-          "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/527833293_582957234749458_3763358697253125564_n.jpg?stp=c0.152.261.261a_dst-jpg_p261x260_tt6&_nc_cat=106&ccb=1-7&_nc_sid=247b10&_nc_ohc=GPMd7Splrs0Q7kNvwFCE0LI&_nc_oc=AdmEV_H0deGxf-Xj_oNxBnFMcHPl6PvbUQjXVf5P94oRYvpHd_5bdcuVRVRiqK5Em_F-lWxl5kQc6I7vCiZZmLVn&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=N3sfo93Z2tmGWX5Lf7S2Pg&oh=00_AfWB_Jm12Hcesr2ik4SmkOYrILSdynk-yisfW1nA30x6pQ&oe=68A38B27",
-          "type": "thumbnail",
-          "size": "unknown"
-        }
-      ],
-      "seller": {
-        "info": "Not extracted",
-        "profile": null
-      },
-      "product_details": {
-        "model": "iPhone 8",
-        "storage": "Unknown",
-        "condition": "Unknown",
-        "color": "Unknown"
-      },
-      "extraction_method": "automated_scraper",
-      "data_quality": "basic",
-      "full_url": "https://www.facebook.com/marketplace/item/1206416914484003/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
-      "added_at": "2025-08-14T16:35:22.046272",
-      "source": "facebook_marketplace_scraper",
-      "created_at": "2025-08-14T16:35:22.046272",
-      "seller_name": "Private Seller"
-    },
-    {
-      "title": "iphone",
-      "price": {
-        "raw_value": "SEK1,700",
-        "currency": "SEK",
-        "amount": "1700",
-        "note": "Extracted from: SEK1,700"
-      },
-      "location": {
-        "city": "Stockholm",
-        "distance": "Unknown",
-        "raw_location": "Not specified"
-      },
-      "marketplace_url": "https://www.facebook.com/marketplace/item/724622430217320/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
-      "id": "mp_724622430217320",
-      "images": [
-        {
-          "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/508182179_730106749710421_4547432280997609911_n.jpg?stp=c0.145.261.261a_dst-jpg_p261x260_tt6&_nc_cat=103&ccb=1-7&_nc_sid=247b10&_nc_ohc=jrPfSZpD2gMQ7kNvwFdrRQ9&_nc_oc=Adn1MTPgxzWrTWHvZ4zZbM91BCVFWbcsvsVHZPTULs908EIf7yOuU0PcbCw9ZtSQp8Uf0543BWhok5GyuHprN1jZ&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=N3sfo93Z2tmGWX5Lf7S2Pg&oh=00_AfXXeZjSB7Lum1cdzTTm2X7KBTGMNMJRGG8yCsqOZ2ybCw&oe=68A3A40A",
-          "type": "thumbnail",
-          "size": "unknown"
-        }
-      ],
-      "seller": {
-        "info": "Not extracted",
-        "profile": null
-      },
-      "product_details": {
-        "model": "iPhone",
-        "storage": "Unknown",
-        "condition": "Unknown",
-        "color": "Unknown"
-      },
-      "extraction_method": "automated_scraper",
-      "data_quality": "basic",
-      "full_url": "https://www.facebook.com/marketplace/item/724622430217320/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
-      "added_at": "2025-08-14T16:35:22.046953",
-      "source": "facebook_marketplace_scraper",
-      "created_at": "2025-08-14T16:35:22.046953",
-      "seller_name": "Private Seller"
-    },
-    {
-      "title": "iPhone 8 64GB Gold",
-      "price": {
-        "raw_value": "SEK900",
-        "currency": "SEK",
-        "amount": "900",
-        "note": "Extracted from: SEK900"
-      },
-      "location": {
-        "city": "Stockholm",
-        "distance": "Unknown",
-        "raw_location": "Not specified"
-      },
-      "marketplace_url": "https://www.facebook.com/marketplace/item/1126111709539135/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
-      "id": "mp_1126111709539135",
-      "images": [
-        {
-          "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/524744961_1517837996266351_4575291736535726829_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=106&ccb=1-7&_nc_sid=247b10&_nc_ohc=a7cMmjIcCD0Q7kNvwGQdYa8&_nc_oc=Adln9QY7aHdXRX8u7RoQ-uPUUSb3Nh0e4AHV60hVvwZSK5xn0pWLqRbuZGmbVNu245etUjPAJcY8D6KXx9_Nmrwf&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=N3sfo93Z2tmGWX5Lf7S2Pg&oh=00_AfV0iYgFklnH2-gqOid7gC5y8T32NRfVc940A_qHv1xJ1A&oe=68A3AB96",
-          "type": "thumbnail",
-          "size": "unknown"
-        }
-      ],
-      "seller": {
-        "info": "Not extracted",
-        "profile": null
-      },
-      "product_details": {
-        "model": "iPhone 8",
-        "storage": "Unknown",
-        "condition": "Unknown",
-        "color": "Unknown"
-      },
-      "extraction_method": "automated_scraper",
-      "data_quality": "basic",
-      "full_url": "https://www.facebook.com/marketplace/item/1126111709539135/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
-      "added_at": "2025-08-14T16:35:22.047923",
-      "source": "facebook_marketplace_scraper",
-      "created_at": "2025-08-14T16:35:22.047923",
-      "seller_name": "Private Seller"
-    },
-    {
-      "title": "iPhone 8 2 stick",
-      "price": {
-        "raw_value": "SEK1,000",
-        "currency": "SEK",
-        "amount": "1000",
-        "note": "Extracted from: SEK1,000"
-      },
-      "location": {
-        "city": "Stockholm",
-        "distance": "Unknown",
-        "raw_location": "Not specified"
-      },
-      "marketplace_url": "https://www.facebook.com/marketplace/item/668475879534924/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
-      "id": "mp_668475879534924",
-      "images": [
-        {
-          "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/524886764_718674917358042_7582529785758476087_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=111&ccb=1-7&_nc_sid=247b10&_nc_ohc=AmmMt1G2xREQ7kNvwG9eX7i&_nc_oc=AdnL8gHKldJ1rPwsW2x1M7uz_NH1SqrN608oTiU_pXmBINfrp4vzuAcDUTOaL_hgg5oluHBHkx1D-s3KiIizAXPy&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=N3sfo93Z2tmGWX5Lf7S2Pg&oh=00_AfWRnMVa4FXpPqv2-qWwphMnhi70Ia6Dz0S8GPdlUEzrmA&oe=68A3A6E0",
-          "type": "thumbnail",
-          "size": "unknown"
-        }
-      ],
-      "seller": {
-        "info": "Not extracted",
-        "profile": null
-      },
-      "product_details": {
-        "model": "iPhone 8",
-        "storage": "Unknown",
-        "condition": "Unknown",
-        "color": "Unknown"
-      },
-      "extraction_method": "automated_scraper",
-      "data_quality": "basic",
-      "full_url": "https://www.facebook.com/marketplace/item/668475879534924/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
-      "added_at": "2025-08-14T16:35:22.048620",
-      "source": "facebook_marketplace_scraper",
-      "created_at": "2025-08-14T16:35:22.048620",
-      "seller_name": "Private Seller"
-    },
-    {
-      "title": "📱 iPhone 8 – 64GB – Guld",
-      "price": {
-        "raw_value": "SEK900",
-        "currency": "SEK",
-        "amount": "900",
-        "note": "Extracted from: SEK900"
-      },
-      "location": {
-        "city": "Stockholm",
-        "distance": "Unknown",
-        "raw_location": "Not specified"
-      },
-      "marketplace_url": "https://www.facebook.com/marketplace/item/1217209400095330/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
-      "id": "mp_1217209400095330",
-      "images": [
-        {
-          "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/532534043_1469200400943244_8673888943253365474_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_ohc=JWPy07URyb4Q7kNvwHq2DMW&_nc_oc=AdkaXqa5yzL3_AiO__U7R82wMvBAcOXqGcn2OBKIAvoL0_JUNh0tgzoQ3eyKDFpu45l2CJ-8w_0l6rGvx0yXDKWH&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=N3sfo93Z2tmGWX5Lf7S2Pg&oh=00_AfUCi8OF51Hqh65uBQPJEcTYNfYa2mRjKpNEjTwzuJFqEQ&oe=68A39CD5",
-          "type": "thumbnail",
-          "size": "unknown"
-        }
-      ],
-      "seller": {
-        "info": "Not extracted",
-        "profile": null
-      },
-      "product_details": {
-        "model": "iPhone 8",
-        "storage": "Unknown",
-        "condition": "Unknown",
-        "color": "Unknown"
-      },
-      "extraction_method": "automated_scraper",
-      "data_quality": "basic",
-      "full_url": "https://www.facebook.com/marketplace/item/1217209400095330/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
-      "added_at": "2025-08-14T16:35:22.050102",
-      "source": "facebook_marketplace_scraper",
-      "created_at": "2025-08-14T16:35:22.050102",
-      "seller_name": "Private Seller"
-    },
-    {
-      "title": "iPhone 8 – 256 GB – Svart – Mycket bra skick",
-      "price": {
-        "raw_value": "SEK1,100",
-        "currency": "SEK",
-        "amount": "1100",
-        "note": "Extracted from: SEK1,100"
-      },
-      "location": {
-        "city": "Stockholm",
-        "distance": "Unknown",
-        "raw_location": "Not specified"
-      },
-      "marketplace_url": "https://www.facebook.com/marketplace/item/739230092258153/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
-      "id": "mp_739230092258153",
-      "images": [
-        {
-          "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/530508895_1255384072730285_4850170580570724151_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=101&ccb=1-7&_nc_sid=247b10&_nc_ohc=RB5us_v2euEQ7kNvwExusKd&_nc_oc=Adk7NcH0Jz9tbsSvl1RpApZQ9l7tJx9y-ddCyqB6eZK5yIif9mF0_xNvDjaDHlcuDfXxnP2SVOhdKUo6GcC1Ks9l&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=N3sfo93Z2tmGWX5Lf7S2Pg&oh=00_AfUgOY5T-JPPDvbbhw7WZNUBIsAj4ghKNY_7IV6t15jOkA&oe=68A38E55",
-          "type": "thumbnail",
-          "size": "unknown"
-        }
-      ],
-      "seller": {
-        "info": "Not extracted",
-        "profile": null
-      },
-      "product_details": {
-        "model": "iPhone 8",
-        "storage": "Unknown",
-        "condition": "Unknown",
-        "color": "Unknown"
-      },
-      "extraction_method": "automated_scraper",
-      "data_quality": "basic",
-      "full_url": "https://www.facebook.com/marketplace/item/739230092258153/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
-      "added_at": "2025-08-14T16:35:22.053504",
-      "source": "facebook_marketplace_scraper",
-      "created_at": "2025-08-14T16:35:22.053504",
-      "seller_name": "Private Seller"
-    },
-    {
-      "title": "Mobil säljes",
-      "price": {
-        "raw_value": "SEK1,500",
-        "currency": "SEK",
-        "amount": "1500",
-        "note": "Extracted from: SEK1,500"
-      },
-      "location": {
-        "city": "Stockholm",
-        "distance": "Unknown",
-        "raw_location": "Not specified"
-      },
-      "marketplace_url": "https://www.facebook.com/marketplace/item/1051250976887649/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
-      "id": "mp_1051250976887649",
-      "images": [
-        {
-          "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/495644218_677793718328679_4762772487140913987_n.jpg?stp=c0.159.261.261a_dst-jpg_p261x260_tt6&_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_ohc=qXG4ez0TfrsQ7kNvwFDHLO0&_nc_oc=Adl7E7Xa03eZx4b_3jDXcZFAV8GnNdi8V5tgprgH0-AIOCVYdMgZtfbRhMOB6Au2tQ8X-I1fd8qbnnF5W3QFqV6V&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=N3sfo93Z2tmGWX5Lf7S2Pg&oh=00_AfVYMd1rAXfawi9fbluORGO3m8QUpvkuPRvVaS7-5Fquug&oe=68A3ACA8",
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/531799343_690687357351028_3035406225858857456_n.jpg?stp=c0.0.232.232a_dst-jpg_tt6&_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_ohc=WE7mn12enU4Q7kNvwGx82ip&_nc_oc=Adn4qKpnF8dgTPw6IxDFH1J9phG5Ec_-8eRZ1bMURs0WCNTx_FcmcVR9CVXgpUZrixE&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=e0Lisu_Jf-gCcP6zGMfjmA&oh=00_AfV0wXcASiIhPSkSd59IwABLwpxFBo7y1di1ws1uODy1mA&oe=68A8BD2F",
           "type": "thumbnail",
           "size": "unknown"
         }
@@ -1282,30 +1253,30 @@
       },
       "extraction_method": "automated_scraper",
       "data_quality": "basic",
-      "full_url": "https://www.facebook.com/marketplace/item/1051250976887649/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
-      "added_at": "2025-08-14T16:35:22.055402",
+      "full_url": "https://www.facebook.com/marketplace/item/690465094006895/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Acfbf74b0-f1f0-456a-be64-4eb5b575822d&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:55:50.795993",
       "source": "facebook_marketplace_scraper",
-      "created_at": "2025-08-14T16:35:22.055402",
+      "created_at": "2025-08-18T13:55:50.795993",
       "seller_name": "Private Seller"
     },
     {
-      "title": "NEW Protection glasses for phones: Samsung Note 8 / iPhone 8",
+      "title": "Linsskydd samsung galaxy s25 ultra",
       "price": {
-        "raw_value": "SEK50",
+        "raw_value": "SEK30",
         "currency": "SEK",
-        "amount": "50",
-        "note": "Extracted from: SEK50"
+        "amount": "30",
+        "note": "Extracted from: SEK30"
       },
       "location": {
         "city": "Stockholm",
         "distance": "Unknown",
         "raw_location": "Not specified"
       },
-      "marketplace_url": "https://www.facebook.com/marketplace/item/1490262472131039/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
-      "id": "mp_1490262472131039",
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1909132409931134/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Acfbf74b0-f1f0-456a-be64-4eb5b575822d&__tn__=!%3AD",
+      "id": "mp_1909132409931134",
       "images": [
         {
-          "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/531613940_1258891662221428_3061277274020620168_n.jpg?stp=c0.160.261.261a_dst-jpg_p261x260_tt6&_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_ohc=2aZm5STh1twQ7kNvwGMCpLH&_nc_oc=Adm-2hpiMCam17sGr93R3ufkxfKMhskumMZQJgRUToCr3ud26iUCtKBYjIzBNNziePgX89BdDYx-rlI7v1kW2KQH&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=odHvBtBEHn-hofUlo3Totg&oh=00_AfVA2JrGa1HAT23WhJNN2qYxgXxzLzK8NS0lReFIE0iErw&oe=68A3A2EE",
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/525570954_1813480909260010_2073259033206560670_n.jpg?stp=c0.101.261.261a_dst-jpg_p261x260_tt6&_nc_cat=110&ccb=1-7&_nc_sid=247b10&_nc_ohc=gzIfhiibsmYQ7kNvwGbL7JF&_nc_oc=AdndBwHyPFEduvDEuCuJodM98Aq7Qcgnlz8BqnXjv1qVBSqi4y32-8xDTs0WMC4uy6U&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=e0Lisu_Jf-gCcP6zGMfjmA&oh=00_AfWm6H-yu0YYF5aQeKi6wFxXheJ3o8apjFSYMBI2M7hSKw&oe=68A8B036",
           "type": "thumbnail",
           "size": "unknown"
         }
@@ -1315,37 +1286,37 @@
         "profile": null
       },
       "product_details": {
-        "model": "iPhone 8",
+        "model": "Unknown",
         "storage": "Unknown",
         "condition": "Unknown",
         "color": "Unknown"
       },
       "extraction_method": "automated_scraper",
       "data_quality": "basic",
-      "full_url": "https://www.facebook.com/marketplace/item/1490262472131039/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
-      "added_at": "2025-08-14T16:36:13.826037",
+      "full_url": "https://www.facebook.com/marketplace/item/1909132409931134/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Acfbf74b0-f1f0-456a-be64-4eb5b575822d&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:55:50.796976",
       "source": "facebook_marketplace_scraper",
-      "created_at": "2025-08-14T16:36:13.826037",
+      "created_at": "2025-08-18T13:55:50.796976",
       "seller_name": "Private Seller"
     },
     {
-      "title": "LCD-Skärm iPhone 8",
+      "title": "Ny Samsungs s 25 Ultra",
       "price": {
-        "raw_value": "SEK150",
+        "raw_value": "SEK13,900",
         "currency": "SEK",
-        "amount": "150",
-        "note": "Extracted from: SEK150"
+        "amount": "13900",
+        "note": "Extracted from: SEK13,900"
       },
       "location": {
         "city": "Stockholm",
         "distance": "Unknown",
         "raw_location": "Not specified"
       },
-      "marketplace_url": "https://www.facebook.com/marketplace/item/743007044749524/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
-      "id": "mp_743007044749524",
+      "marketplace_url": "https://www.facebook.com/marketplace/item/687738164312084/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Acfbf74b0-f1f0-456a-be64-4eb5b575822d&__tn__=!%3AD",
+      "id": "mp_687738164312084",
       "images": [
         {
-          "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/505261184_4079478485712750_4669937851652314178_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=103&ccb=1-7&_nc_sid=247b10&_nc_ohc=iGghbhBZLeEQ7kNvwGpYgSc&_nc_oc=AdkHjTDf9YlBYoL7dTlY4DtnI4b22K6X7L4g0ME-Ab0Beu9t1tRWlPD8q6o8nxPdX8uIwhDI3ZbQVeB6pjtEVQwk&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=odHvBtBEHn-hofUlo3Totg&oh=00_AfVZREmz-3ms2U9cbrR688_FnImGKKgmZWFKmX_9Aof2hg&oe=68A38DD5",
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/529358810_1409489767012780_8911936946658033807_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=104&ccb=1-7&_nc_sid=247b10&_nc_ohc=oZ-UNkP6-vwQ7kNvwHicCne&_nc_oc=Adkwp_iMrCmo-J2e7VMno3jxnndOoOcKGPgNKWJyU_rGxRR8Qga-pWzoLb6E9CAh6nc&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=e0Lisu_Jf-gCcP6zGMfjmA&oh=00_AfWlgyQB3azgdEGcRR8dyDhZOTSyc629x45vVHDurzdMBg&oe=68A8A398",
           "type": "thumbnail",
           "size": "unknown"
         }
@@ -1355,37 +1326,37 @@
         "profile": null
       },
       "product_details": {
-        "model": "iPhone 8",
+        "model": "Unknown",
         "storage": "Unknown",
         "condition": "Unknown",
         "color": "Unknown"
       },
       "extraction_method": "automated_scraper",
       "data_quality": "basic",
-      "full_url": "https://www.facebook.com/marketplace/item/743007044749524/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
-      "added_at": "2025-08-14T16:36:13.827256",
+      "full_url": "https://www.facebook.com/marketplace/item/687738164312084/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Acfbf74b0-f1f0-456a-be64-4eb5b575822d&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:55:50.797871",
       "source": "facebook_marketplace_scraper",
-      "created_at": "2025-08-14T16:36:13.827256",
+      "created_at": "2025-08-18T13:55:50.797871",
       "seller_name": "Private Seller"
     },
     {
-      "title": "iPhone 7/8 plus silikonskal",
+      "title": "Samsung S25 Ultra 512 Gb",
       "price": {
-        "raw_value": "SEK20",
+        "raw_value": "SEK9,500",
         "currency": "SEK",
-        "amount": "20",
-        "note": "Extracted from: SEK20"
+        "amount": "9500",
+        "note": "Extracted from: SEK9,500"
       },
       "location": {
         "city": "Stockholm",
         "distance": "Unknown",
         "raw_location": "Not specified"
       },
-      "marketplace_url": "https://www.facebook.com/marketplace/item/1678202929476086/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
-      "id": "mp_1678202929476086",
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1195430865606117/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Acfbf74b0-f1f0-456a-be64-4eb5b575822d&__tn__=!%3AD",
+      "id": "mp_1195430865606117",
       "images": [
         {
-          "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/502853404_642596435494999_5688576605846262429_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=108&ccb=1-7&_nc_sid=247b10&_nc_ohc=EtUWaPS0d5wQ7kNvwF20UF7&_nc_oc=Adlunu-VpHPCUSl9ED3F7epN6M01lnB12R7VGId-GuwRCAq9lKPYt7pl1tBvtHsPeiM1clanJHOduR3jRbMW0LNL&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=odHvBtBEHn-hofUlo3Totg&oh=00_AfUxYQaku5Sq2lO6aiAs1ZRK6B4_gY2G1t748TpaitRvhw&oe=68A39BCC",
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/517233151_594187493747159_6012921342948005810_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=109&ccb=1-7&_nc_sid=247b10&_nc_ohc=AIk568rfrQIQ7kNvwEjNXYh&_nc_oc=Adn3TMQ2uEF2wv0PSK9KfuFCMdlMxyh7vb5qlkgLGgVtfg106FglEnEss7HshwQ2QCs&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=e0Lisu_Jf-gCcP6zGMfjmA&oh=00_AfWfwU9yr2_CtfoMGGHJUkFpIWR8bp_8kf2BmLCvxlXsnw&oe=68A8D850",
           "type": "thumbnail",
           "size": "unknown"
         }
@@ -1395,37 +1366,37 @@
         "profile": null
       },
       "product_details": {
-        "model": "iPhone 7",
+        "model": "Unknown",
         "storage": "Unknown",
         "condition": "Unknown",
         "color": "Unknown"
       },
       "extraction_method": "automated_scraper",
       "data_quality": "basic",
-      "full_url": "https://www.facebook.com/marketplace/item/1678202929476086/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
-      "added_at": "2025-08-14T16:36:13.828472",
+      "full_url": "https://www.facebook.com/marketplace/item/1195430865606117/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Acfbf74b0-f1f0-456a-be64-4eb5b575822d&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:55:50.798787",
       "source": "facebook_marketplace_scraper",
-      "created_at": "2025-08-14T16:36:13.828472",
+      "created_at": "2025-08-18T13:55:50.798787",
       "seller_name": "Private Seller"
     },
     {
-      "title": "Mobilskal till iPhone 7/8",
+      "title": "Samsung s25 Ultra skall",
       "price": {
-        "raw_value": "SEK80",
+        "raw_value": "SEK90",
         "currency": "SEK",
-        "amount": "80",
-        "note": "Extracted from: SEK80"
+        "amount": "90",
+        "note": "Extracted from: SEK90"
       },
       "location": {
         "city": "Stockholm",
         "distance": "Unknown",
         "raw_location": "Not specified"
       },
-      "marketplace_url": "https://www.facebook.com/marketplace/item/593060047140217/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
-      "id": "mp_593060047140217",
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1315702489943883/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Acfbf74b0-f1f0-456a-be64-4eb5b575822d&__tn__=!%3AD",
+      "id": "mp_1315702489943883",
       "images": [
         {
-          "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/500826059_1763970280999780_4149234366440047530_n.jpg?stp=c0.152.261.261a_dst-jpg_p261x260_tt6&_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_ohc=7TjA1jFFbA4Q7kNvwHKveO8&_nc_oc=Admrhw0zch9W3ddxAcUDtorceLEVy1FBnuIoafuEQIg7ThHJwmis43FpVfmcJBckhsCsmjRw4jG2dVkD8odfPp75&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=odHvBtBEHn-hofUlo3Totg&oh=00_AfUxpIQuPOZMhfAvgqnCbCyAiu3DbV-HK2tN7-BN7nu9gw&oe=68A38FDA",
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/526985600_1138334951656985_4734688244695762087_n.jpg?stp=c0.145.261.261a_dst-jpg_p261x260_tt6&_nc_cat=111&ccb=1-7&_nc_sid=247b10&_nc_ohc=AlPLfVXb_38Q7kNvwE3zg0O&_nc_oc=AdljTo9KMtEczKy7YprTvgZK9n34ZL3ccmqD1Ge-QDyTAbRAAaDQEUIHoeyQ3Jt2sx4&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=e0Lisu_Jf-gCcP6zGMfjmA&oh=00_AfXUMYY3fo9Ql2qwiSKuSGy_T5AJwhNq4EfOTDEWk62XvA&oe=68A8BDAF",
           "type": "thumbnail",
           "size": "unknown"
         }
@@ -1435,37 +1406,37 @@
         "profile": null
       },
       "product_details": {
-        "model": "iPhone 7",
+        "model": "Unknown",
         "storage": "Unknown",
         "condition": "Unknown",
         "color": "Unknown"
       },
       "extraction_method": "automated_scraper",
       "data_quality": "basic",
-      "full_url": "https://www.facebook.com/marketplace/item/593060047140217/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
-      "added_at": "2025-08-14T16:36:13.829697",
+      "full_url": "https://www.facebook.com/marketplace/item/1315702489943883/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Acfbf74b0-f1f0-456a-be64-4eb5b575822d&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:55:50.799857",
       "source": "facebook_marketplace_scraper",
-      "created_at": "2025-08-14T16:36:13.829697",
+      "created_at": "2025-08-18T13:55:50.799857",
       "seller_name": "Private Seller"
     },
     {
-      "title": "Mobilfodral iPhone 8/7/6/6s",
+      "title": "Oöppnad Samsung S25 Navy (256GB)",
       "price": {
-        "raw_value": "SEK149",
+        "raw_value": "SEK7,000",
         "currency": "SEK",
-        "amount": "149",
-        "note": "Extracted from: SEK149"
+        "amount": "7000",
+        "note": "Extracted from: SEK7,000"
       },
       "location": {
         "city": "Stockholm",
         "distance": "Unknown",
         "raw_location": "Not specified"
       },
-      "marketplace_url": "https://www.facebook.com/marketplace/item/1379606059860385/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
-      "id": "mp_1379606059860385",
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1866602687589109/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Acfbf74b0-f1f0-456a-be64-4eb5b575822d&__tn__=!%3AD",
+      "id": "mp_1866602687589109",
       "images": [
         {
-          "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/489355925_3989027464700197_4337225793835750916_n.jpg?stp=c0.101.261.261a_dst-jpg_p261x260_tt6&_nc_cat=111&ccb=1-7&_nc_sid=247b10&_nc_ohc=oVHcETp_e3wQ7kNvwGSbVp-&_nc_oc=AdkRf_PDAK2j7UVaXunoE6QuJO6BLvtl-2xgwtvgXpdyzEJTSLQIEy38mw6y0YNhNlj1IeCsFGnvGBRW8GBZLN5H&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=odHvBtBEHn-hofUlo3Totg&oh=00_AfUVspexjzRiY8yqlx0BTOreJxRcvujs0rU9yYFfRWiYkg&oe=68A399A6",
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/533013364_548378311631703_5252707379743367902_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=108&ccb=1-7&_nc_sid=247b10&_nc_ohc=shFNXUeKe0EQ7kNvwGM-sRB&_nc_oc=AdldhWADa1HjtWdbaFCZsDSJ8WXtbe1M6q9zf5BpfAH5uCtW8dF6pp5-bqLK3Gg4ZF0&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=e0Lisu_Jf-gCcP6zGMfjmA&oh=00_AfWtMRoHeRCcCoBlYApKoHXoC2tWx_Y_vBIrOfLZAx9fpQ&oe=68A8B45F",
           "type": "thumbnail",
           "size": "unknown"
         }
@@ -1475,37 +1446,37 @@
         "profile": null
       },
       "product_details": {
-        "model": "iPhone 8",
+        "model": "Unknown",
         "storage": "Unknown",
         "condition": "Unknown",
         "color": "Unknown"
       },
       "extraction_method": "automated_scraper",
       "data_quality": "basic",
-      "full_url": "https://www.facebook.com/marketplace/item/1379606059860385/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
-      "added_at": "2025-08-14T16:36:13.830960",
+      "full_url": "https://www.facebook.com/marketplace/item/1866602687589109/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Acfbf74b0-f1f0-456a-be64-4eb5b575822d&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:55:50.800966",
       "source": "facebook_marketplace_scraper",
-      "created_at": "2025-08-14T16:36:13.830960",
+      "created_at": "2025-08-18T13:55:50.800966",
       "seller_name": "Private Seller"
     },
     {
-      "title": "iDeal of Sweden | Striped Roses | Mobilskal för iPhone 8/7/6/6s",
+      "title": "Samsung Galaxy S24 ULTRA",
       "price": {
-        "raw_value": "SEK55",
+        "raw_value": "SEK9,250",
         "currency": "SEK",
-        "amount": "55",
-        "note": "Extracted from: SEK55"
+        "amount": "9250",
+        "note": "Extracted from: SEK9,250"
       },
       "location": {
         "city": "Stockholm",
         "distance": "Unknown",
         "raw_location": "Not specified"
       },
-      "marketplace_url": "https://www.facebook.com/marketplace/item/510448152097394/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
-      "id": "mp_510448152097394",
+      "marketplace_url": "https://www.facebook.com/marketplace/item/2027843434417570/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Acfbf74b0-f1f0-456a-be64-4eb5b575822d&__tn__=!%3AD",
+      "id": "mp_2027843434417570",
       "images": [
         {
-          "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/479943642_1668872403984182_276852512814769708_n.jpg?stp=c0.101.261.261a_dst-jpg_p261x260_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=-K7tsDlYrvQQ7kNvwHo3N4r&_nc_oc=Admhwgcs83XWNZ6VEAwvxrdpgmsdwmchWXPxxwgRyro0E0LwriE4kKnuynYutI_6zG4bkoqNSZrHkpdL7nCZsOD2&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=odHvBtBEHn-hofUlo3Totg&oh=00_AfUkV93v_5aDqiXkkMY__KLDgeTieknhidkN_ncMrU6P-A&oe=68A396B1",
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/525978426_25409266728661996_6397897682200517936_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=mOcAQdg7W08Q7kNvwE4X0wX&_nc_oc=AdmUjkPK5hIzpSwYnI0MOQSTC7npCeoQS3s8DxZSJvGVqk2XFmTi0oHKmwI0Ba_rkS8&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=e0Lisu_Jf-gCcP6zGMfjmA&oh=00_AfUrn8lamv9WMwCLL8ErKepGJaz0WV_p5S39FfJQBtrYGQ&oe=68A8AEED",
           "type": "thumbnail",
           "size": "unknown"
         }
@@ -1515,17 +1486,377 @@
         "profile": null
       },
       "product_details": {
-        "model": "iPhone 8",
+        "model": "Unknown",
         "storage": "Unknown",
         "condition": "Unknown",
         "color": "Unknown"
       },
       "extraction_method": "automated_scraper",
       "data_quality": "basic",
-      "full_url": "https://www.facebook.com/marketplace/item/510448152097394/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
-      "added_at": "2025-08-14T16:36:13.833393",
+      "full_url": "https://www.facebook.com/marketplace/item/2027843434417570/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Acfbf74b0-f1f0-456a-be64-4eb5b575822d&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:55:50.802035",
       "source": "facebook_marketplace_scraper",
-      "created_at": "2025-08-14T16:36:13.833393",
+      "created_at": "2025-08-18T13:55:50.802035",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "Samsung Galaxy S25 Ultra 5G 512 GB",
+      "price": {
+        "raw_value": "SEK17,990",
+        "currency": "SEK",
+        "amount": "17990",
+        "note": "Extracted from: SEK17,990"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/24853995187584848/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Acfbf74b0-f1f0-456a-be64-4eb5b575822d&__tn__=!%3AD",
+      "id": "mp_24853995187584848",
+      "images": [
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/531414185_3961858617460747_544284168810997386_n.jpg?stp=c0.111.261.261a_dst-jpg_p261x260_tt6&_nc_cat=109&ccb=1-7&_nc_sid=247b10&_nc_ohc=xD8NdtaC4AUQ7kNvwGx-8Zn&_nc_oc=Adm4_J0gA_AbTp3e_h0JpfhUKBZSPYphsg1wD1z82-GS1YCOW0ogdCwbEUSwWSTpT28&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=e0Lisu_Jf-gCcP6zGMfjmA&oh=00_AfXwz4T5Ss3hx0r0pKHPO1yTagp5freUQD771Rxxr6pE-Q&oe=68A8A248",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "Unknown",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/24853995187584848/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Acfbf74b0-f1f0-456a-be64-4eb5b575822d&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:55:50.804092",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-18T13:55:50.804092",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "Galaxy S25 Ultra 512gb silverblue",
+      "price": {
+        "raw_value": "SEK10,200",
+        "currency": "SEK",
+        "amount": "10200",
+        "note": "Extracted from: SEK10,200"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/687443580995780/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Acfbf74b0-f1f0-456a-be64-4eb5b575822d&__tn__=!%3AD",
+      "id": "mp_687443580995780",
+      "images": [
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/518870440_1650354199004941_9217909094147761146_n.jpg?stp=c0.36.261.261a_dst-jpg_p261x260_tt6&_nc_cat=106&ccb=1-7&_nc_sid=247b10&_nc_ohc=BQFvf-DAv_kQ7kNvwFxsQl0&_nc_oc=AdlvoRoRaxJZtXI1pec_BVjY7BBONMTFuy1fPShEAO3bW26wE-MFHY1IgOit5CVURwE&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=e0Lisu_Jf-gCcP6zGMfjmA&oh=00_AfWtxunNQJrvVRo8HqBj4eq5IHznjbT1qYlM1SzTlBhGwg&oe=68A8A8AE",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "Unknown",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/687443580995780/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Acfbf74b0-f1f0-456a-be64-4eb5b575822d&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:55:50.807085",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-18T13:55:50.807085",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "🔥 Brand New Samsung S25 – Save 1,300 SEK! 🔥",
+      "price": {
+        "raw_value": "SEK9,500",
+        "currency": "SEK",
+        "amount": "9500",
+        "note": "Extracted from: SEK9,500"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/962155042706106/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Acfbf74b0-f1f0-456a-be64-4eb5b575822d&__tn__=!%3AD",
+      "id": "mp_962155042706106",
+      "images": [
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/476163843_1122886022476496_3934272098531171456_n.jpg?stp=c0.0.261.261a_dst-jpg_p261x260_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=Q9LP6iurOjwQ7kNvwEgCWtj&_nc_oc=AdnjfhC1keW1JL6Z8EJfSP0ut8Asc7zZb0e2CJ15hxkSGiT6il1gh1nhOWn-C3uNvpE&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=e0Lisu_Jf-gCcP6zGMfjmA&oh=00_AfUtCKPHehH08lgIAt5xe3IeSSr24avzLUz8SwxQqymCMA&oe=68A8CEC4",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "Unknown",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/962155042706106/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Acfbf74b0-f1f0-456a-be64-4eb5b575822d&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:55:50.808876",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-18T13:55:50.808876",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "Samsung Galaxy S20 Ultra 5G + Skal -128GB / Garanti",
+      "price": {
+        "raw_value": "SEK3,400",
+        "currency": "SEK",
+        "amount": "3400",
+        "note": "Extracted from: SEK3,400"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1795786954706135/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Acfbf74b0-f1f0-456a-be64-4eb5b575822d&__tn__=!%3AD",
+      "id": "mp_1795786954706135",
+      "images": [
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/463260106_1578115516427007_8018513726927471249_n.jpg?stp=c0.0.261.261a_dst-jpg_p261x260_tt6&_nc_cat=111&ccb=1-7&_nc_sid=247b10&_nc_ohc=lrcuqLs_yyUQ7kNvwFtsIba&_nc_oc=AdmZU_LaAehxK-eCAJfS5Cm-O471y70mF1zxvfwZn7M2hXowqa4zUxsfW1NdeuT5SEI&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=e0Lisu_Jf-gCcP6zGMfjmA&oh=00_AfVoiHKIEJx0DKU6uBo-7yozbuq-LSNHnukqQ4vYnbFNag&oe=68A8B3F4",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "Unknown",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/1795786954706135/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Acfbf74b0-f1f0-456a-be64-4eb5b575822d&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:55:50.810283",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-18T13:55:50.810283",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "Samsung Galaxy S25 Ultra 256gb",
+      "price": {
+        "raw_value": "SEK16,000",
+        "currency": "SEK",
+        "amount": "16000",
+        "note": "Extracted from: SEK16,000"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1042684317694896/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Acfbf74b0-f1f0-456a-be64-4eb5b575822d&__tn__=!%3AD",
+      "id": "mp_1042684317694896",
+      "images": [
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/530862625_2812179755649545_52451295905054415_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=iAL4enq5reoQ7kNvwH8dJie&_nc_oc=AdkJ7i9URsGg46FZqgnXiW11VQ5sUsxHuvsBH40oOBVSycFoh7hHHavfDgmy8u61c3g&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=e0Lisu_Jf-gCcP6zGMfjmA&oh=00_AfXLztQYz04wkWV0fNd4SwC0ChEbvvuLgnOU8t8_7lDfhQ&oe=68A8AC69",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "Unknown",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/1042684317694896/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Acfbf74b0-f1f0-456a-be64-4eb5b575822d&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:55:50.811709",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-18T13:55:50.811709",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "Samsung ultra 24 256gb",
+      "price": {
+        "raw_value": "SEK7,500",
+        "currency": "SEK",
+        "amount": "7500",
+        "note": "Extracted from: SEK7,500"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/789155136919033/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Acfbf74b0-f1f0-456a-be64-4eb5b575822d&__tn__=!%3AD",
+      "id": "mp_789155136919033",
+      "images": [
+        {
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/529395695_1578457496464435_6330448560707214499_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=103&ccb=1-7&_nc_sid=247b10&_nc_ohc=s35GHu4GsPoQ7kNvwGSemxU&_nc_oc=Adl3ww3-IxR8jWSrJc9O2xcwUHR3sPoUzY0Z0mAkmvRUPdtD4XkD8NRYMO-WgFqCZmA&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=e0Lisu_Jf-gCcP6zGMfjmA&oh=00_AfUVRVqg4H3pIoRze8Lzk2Jla6Z87ImHvcygW_FOYgNecg&oe=68A8AD64",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "Unknown",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/789155136919033/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Acfbf74b0-f1f0-456a-be64-4eb5b575822d&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:55:50.813478",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-18T13:55:50.813478",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "Samsung Galaxy S21 Ultra، 256gb, ram 12gb.",
+      "price": {
+        "raw_value": "SEK3,400",
+        "currency": "SEK",
+        "amount": "3400",
+        "note": "Extracted from: SEK3,400"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1499385887715962/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Acfbf74b0-f1f0-456a-be64-4eb5b575822d&__tn__=!%3AD",
+      "id": "mp_1499385887715962",
+      "images": [
+        {
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/532890262_8569121316544850_2033673917910176613_n.jpg?stp=c0.20.261.261a_dst-jpg_p261x260_tt6&_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_ohc=qGbx-G4o_gYQ7kNvwHRTMDT&_nc_oc=Adlx0k9kcHldDvSJM2E8-_gr0ZmVJUEeyrBl25IFJGdhcZOSYd46U2IdSWp_FDs3CrQ&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=e0Lisu_Jf-gCcP6zGMfjmA&oh=00_AfU4ApIXMlw7xfds4skqErwO0nthx2qSSj4vbL-RDaxZUw&oe=68A8B787",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "Unknown",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/1499385887715962/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Acfbf74b0-f1f0-456a-be64-4eb5b575822d&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:55:50.815542",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-18T13:55:50.815542",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "Samsung s22+ 256gb",
+      "price": {
+        "raw_value": "SEK3,000",
+        "currency": "SEK",
+        "amount": "3000",
+        "note": "Extracted from: SEK3,000"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1477423683432792/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Acfbf74b0-f1f0-456a-be64-4eb5b575822d&__tn__=!%3AD",
+      "id": "mp_1477423683432792",
+      "images": [
+        {
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/528032013_1082088530180622_6394344438176030957_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=103&ccb=1-7&_nc_sid=247b10&_nc_ohc=Jj874INcZikQ7kNvwF5oygs&_nc_oc=Adk7QF_FZJ1l7q8FNst3hWWRWZ3iXs8b8smL81liG_Hrf1kZQiROVpjtgCXEX7B5Dos&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=e0Lisu_Jf-gCcP6zGMfjmA&oh=00_AfU2FqxuD3q6_1I3YPl9-rRHjen5ss10FvflNDxw9K-WMw&oe=68A8A8E8",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "Unknown",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/1477423683432792/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Acfbf74b0-f1f0-456a-be64-4eb5b575822d&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:55:50.818595",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-18T13:55:50.818595",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "Samsung S24 Ultra 256GB",
+      "price": {
+        "raw_value": "SEK9,500",
+        "currency": "SEK",
+        "amount": "9500",
+        "note": "Extracted from: SEK9,500"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1738199820904341/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Acfbf74b0-f1f0-456a-be64-4eb5b575822d&__tn__=!%3AD",
+      "id": "mp_1738199820904341",
+      "images": [
+        {
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/531164802_1464371614882514_3027666143502080596_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=101&ccb=1-7&_nc_sid=247b10&_nc_ohc=LbkiBFkXcsEQ7kNvwGNdHJk&_nc_oc=Adl_mhdJm6f0OLUzt0J57hjQAXRlnFtWQ8WLLggiVNKOCFTSo-zMR29fUdeCblcSMwk&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=e0Lisu_Jf-gCcP6zGMfjmA&oh=00_AfUHHC4nZZCHHyLUP-JXhIBmc1SfXBHlifcRdAdEjHNvIg&oe=68A8AA37",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "Unknown",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/1738199820904341/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Acfbf74b0-f1f0-456a-be64-4eb5b575822d&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:55:50.820426",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-18T13:55:50.820426",
       "seller_name": "Private Seller"
     },
     {
@@ -1540,11 +1871,11 @@
         "distance": "Unknown",
         "raw_location": "Not specified"
       },
-      "marketplace_url": "https://www.facebook.com/marketplace/item/1224997052391175/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
-      "id": "mp_1224997052391175",
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1343036090129484/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Acfbf74b0-f1f0-456a-be64-4eb5b575822d&__tn__=!%3AD",
+      "id": "mp_1343036090129484",
       "images": [
         {
-          "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/489852799_1168530107830194_8550718551317939549_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=106&ccb=1-7&_nc_sid=247b10&_nc_ohc=aOkR684s6Y8Q7kNvwHG3Odz&_nc_oc=AdniCk0vG72i2ir_TjHE8FYsqgjUcXUzjNxzW6xsKjYTzQTMdXP_9qJ9Sy89H6ncrNOZJR8DK567uhGh0oIsHz8b&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=odHvBtBEHn-hofUlo3Totg&oh=00_AfVIRDbVlY_TlcK7gPp99kk-ThCHnulQo6-FjEOHx_2ZVw&oe=68A3B14D",
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/508080831_2187755068332716_776669953544971851_n.jpg?stp=c0.16.261.261a_dst-jpg_p261x260_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=WSzPjUf-qEQQ7kNvwGBjv9b&_nc_oc=Adm9SNMH0hXCFOxE9RWm2CizjZBrl7_KW_MkOGAXiPEf1RKQbZ861fjQGbs_hsi5XdE&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=e0Lisu_Jf-gCcP6zGMfjmA&oh=00_AfWThxHwmlH1UxSmmae3pwyDLA09hlumAhzMOV0sK5rNiA&oe=68A8B902",
           "type": "thumbnail",
           "size": "unknown"
         }
@@ -1561,30 +1892,30 @@
       },
       "extraction_method": "automated_scraper",
       "data_quality": "basic",
-      "full_url": "https://www.facebook.com/marketplace/item/1224997052391175/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
-      "added_at": "2025-08-14T16:36:13.834481",
+      "full_url": "https://www.facebook.com/marketplace/item/1343036090129484/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Acfbf74b0-f1f0-456a-be64-4eb5b575822d&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:55:50.821586",
       "source": "facebook_marketplace_scraper",
-      "created_at": "2025-08-14T16:36:13.834481",
+      "created_at": "2025-08-18T13:55:50.821586",
       "seller_name": "Private Seller"
     },
     {
-      "title": "Ny iPhone 8, Space Gray, 256GB",
+      "title": "Samsung z flip 4",
       "price": {
-        "raw_value": "SEK1,495",
+        "raw_value": "SEK4,000",
         "currency": "SEK",
-        "amount": "1495",
-        "note": "Extracted from: SEK1,495"
+        "amount": "4000",
+        "note": "Extracted from: SEK4,000"
       },
       "location": {
         "city": "Stockholm",
         "distance": "Unknown",
         "raw_location": "Not specified"
       },
-      "marketplace_url": "https://www.facebook.com/marketplace/item/1240823253879834/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
-      "id": "mp_1240823253879834",
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1101427125242054/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Acfbf74b0-f1f0-456a-be64-4eb5b575822d&__tn__=!%3AD",
+      "id": "mp_1101427125242054",
       "images": [
         {
-          "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/522636808_1792890594646638_2556723605679201427_n.jpg?stp=c0.71.261.261a_dst-jpg_p261x260_tt6&_nc_cat=104&ccb=1-7&_nc_sid=247b10&_nc_ohc=5yCkd4AMfOkQ7kNvwGOhYaz&_nc_oc=AdnA-2tDTOIIGyDCxFog0mWnYRTjgyFqeQaMAxnOZZhvo5u0Gf0uXuoRezADK54kZi7NbBe3O5_-n_FVT18lzJA1&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=odHvBtBEHn-hofUlo3Totg&oh=00_AfVu4Zsz3ktkMQNUCcYYXxtkeNUzGXWr-ZZNJ3N0eMbIcg&oe=68A3A85C",
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/525774555_1643431449658061_2368024745272425595_n.jpg?stp=c0.5.261.261a_dst-jpg_p261x260_tt6&_nc_cat=110&ccb=1-7&_nc_sid=247b10&_nc_ohc=M7MbGtNrLqoQ7kNvwGLTHGN&_nc_oc=AdmqxfIO5GfXwKD2MdK-pQR_GIBwva0xWxQ1APCXbx6q1y794q-kHSvDLVtMsEFMhdU&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=e0Lisu_Jf-gCcP6zGMfjmA&oh=00_AfUScaQSZo5XeqzVrVOekhHn_AdB5Ws2XVzC2ZRLMNEJ3g&oe=68A8D09D",
           "type": "thumbnail",
           "size": "unknown"
         }
@@ -1594,37 +1925,37 @@
         "profile": null
       },
       "product_details": {
-        "model": "iPhone 8",
+        "model": "Unknown",
         "storage": "Unknown",
         "condition": "Unknown",
         "color": "Unknown"
       },
       "extraction_method": "automated_scraper",
       "data_quality": "basic",
-      "full_url": "https://www.facebook.com/marketplace/item/1240823253879834/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
-      "added_at": "2025-08-14T16:36:13.835971",
+      "full_url": "https://www.facebook.com/marketplace/item/1101427125242054/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Acfbf74b0-f1f0-456a-be64-4eb5b575822d&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:55:50.824161",
       "source": "facebook_marketplace_scraper",
-      "created_at": "2025-08-14T16:36:13.835971",
+      "created_at": "2025-08-18T13:55:50.824161",
       "seller_name": "Private Seller"
     },
     {
-      "title": "Iphone 8 olåst bra skick funkar allt bra",
+      "title": "Samsung Galaxy S25 silver edition",
       "price": {
-        "raw_value": "SEK1,150",
+        "raw_value": "SEK7,500",
         "currency": "SEK",
-        "amount": "1150",
-        "note": "Extracted from: SEK1,150"
+        "amount": "7500",
+        "note": "Extracted from: SEK7,500"
       },
       "location": {
         "city": "Stockholm",
         "distance": "Unknown",
         "raw_location": "Not specified"
       },
-      "marketplace_url": "https://www.facebook.com/marketplace/item/1241843024214244/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
-      "id": "mp_1241843024214244",
+      "marketplace_url": "https://www.facebook.com/marketplace/item/918933396997784/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A8e53c444-f135-4da2-a235-abab330a8a67&__tn__=!%3AD",
+      "id": "mp_918933396997784",
       "images": [
         {
-          "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/494964487_1141781507703952_6218199965522102129_n.jpg?stp=c0.5.261.261a_dst-jpg_p261x260_tt6&_nc_cat=101&ccb=1-7&_nc_sid=247b10&_nc_ohc=9B3dMuV7nkYQ7kNvwEHfjhh&_nc_oc=Adkn7SiQxlPYQr_Q0aoagCSkzcw99NROJjH69zYazgBDY0WfSCgPgKD8flf4UD9ICxxoeXLGRswBukkIENBUaw4O&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=odHvBtBEHn-hofUlo3Totg&oh=00_AfXBaCCPIIpkR7TRrz4gGE6-lq-YdSNEsBJ3O9vZ_P7ghw&oe=68A3B751",
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/502892372_726902103018442_3905247371725079808_n.jpg?stp=c43.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=110&ccb=1-7&_nc_sid=247b10&_nc_ohc=6OFNXVGzr58Q7kNvwF6lPlo&_nc_oc=AdkKZQOhYxzpGwXBA9yRfm0-OqANkxw8kF3VmBHF5uBFEy0o7g8QHjggF44RNI3Wwuk&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=QKXtMHRI9KKLiTgDe4-hRA&oh=00_AfW2taIYW3d1HIrxdVqChQyRODk9eeLLY7t16qWqwYXQHg&oe=68A8BBB6",
           "type": "thumbnail",
           "size": "unknown"
         }
@@ -1634,17 +1965,811 @@
         "profile": null
       },
       "product_details": {
-        "model": "iPhone 8",
+        "model": "Unknown",
         "storage": "Unknown",
         "condition": "Unknown",
         "color": "Unknown"
       },
       "extraction_method": "automated_scraper",
       "data_quality": "basic",
-      "full_url": "https://www.facebook.com/marketplace/item/1241843024214244/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af7f9e58a-e0ac-4056-bd57-f10ffb9c15d4&__tn__=!%3AD",
-      "added_at": "2025-08-14T16:36:13.838402",
+      "full_url": "https://www.facebook.com/marketplace/item/918933396997784/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A8e53c444-f135-4da2-a235-abab330a8a67&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:58:06.262822",
       "source": "facebook_marketplace_scraper",
-      "created_at": "2025-08-14T16:36:13.838402",
+      "created_at": "2025-08-18T13:58:06.262822",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "Mobilskal plombokskal Samsung galaxy s22 +",
+      "price": {
+        "raw_value": "SEK100",
+        "currency": "SEK",
+        "amount": "100",
+        "note": "Extracted from: SEK100"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1148757213965719/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A8e53c444-f135-4da2-a235-abab330a8a67&__tn__=!%3AD",
+      "id": "mp_1148757213965719",
+      "images": [
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/531996356_1081598594152558_4142575637192372198_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=100&ccb=1-7&_nc_sid=247b10&_nc_ohc=xfb9xWo3J8oQ7kNvwHuM9YT&_nc_oc=AdlZfa3BSiDt9mBbA_w0MOFLqy7PvtvFI7fetBHXXTr_mcNr0cPrkqKXVUtGBHOyAe8&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=rS-9Tdz2qxPU5Mo5o4pIkA&oh=00_AfVAz-SC-el8DwumMh-q-2so2fuDr-_4z_CYVpLLW4rPvQ&oe=68A8C23A",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "Unknown",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/1148757213965719/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A8e53c444-f135-4da2-a235-abab330a8a67&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:58:06.266473",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-18T13:58:06.266473",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "Plånboksfodral till Samsung S25 Ultra",
+      "price": {
+        "raw_value": "SEK100",
+        "currency": "SEK",
+        "amount": "100",
+        "note": "Extracted from: SEK100"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/9650155385073973/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A8e53c444-f135-4da2-a235-abab330a8a67&__tn__=!%3AD",
+      "id": "mp_9650155385073973",
+      "images": [
+        {
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/495897348_669768009281762_2820589376179348524_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_ohc=usx4gLGbF-0Q7kNvwHCxEke&_nc_oc=AdkFxhcd7d8ZBnbXTyB1WBVC94qvQ2XaRjwD01vn4unZ_s_wppN-kZRUrxtR7P6qpBM&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=rS-9Tdz2qxPU5Mo5o4pIkA&oh=00_AfWwkmnwpHBKAv-e3zcB5Tj6rF8zKNMJkmFaj1AdtLY_gA&oe=68A8BE81",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "Unknown",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/9650155385073973/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A8e53c444-f135-4da2-a235-abab330a8a67&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:58:06.269328",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-18T13:58:06.269328",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "Samsung S23 Ultra 512gb",
+      "price": {
+        "raw_value": "SEK6,000",
+        "currency": "SEK",
+        "amount": "6000",
+        "note": "Extracted from: SEK6,000"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/742362098647587/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A8e53c444-f135-4da2-a235-abab330a8a67&__tn__=!%3AD",
+      "id": "mp_742362098647587",
+      "images": [
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/528256018_1045350567811532_4795362910568911451_n.jpg?stp=c0.131.261.261a_dst-jpg_p261x260_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=M1bV1X292-kQ7kNvwEMoLJX&_nc_oc=AdmJyJT30-aihObyi4IzJWTBu8a50s4f-lP7-599zcz4Y-oqnSTOlaLZRqTHtXdPng4&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=rS-9Tdz2qxPU5Mo5o4pIkA&oh=00_AfVOYz4UqfpLJhu7iFX9PdcWDq_tNvM5a6UHpfRbFnCBmg&oe=68A8A3F3",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "Unknown",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/742362098647587/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A8e53c444-f135-4da2-a235-abab330a8a67&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:58:06.290942",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-18T13:58:06.290942",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "Samsung s22 ultra 256gb 12gb ram green",
+      "price": {
+        "raw_value": "SEK5,200",
+        "currency": "SEK",
+        "amount": "5200",
+        "note": "Extracted from: SEK5,200"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/770433078885912/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A8e53c444-f135-4da2-a235-abab330a8a67&__tn__=!%3AD",
+      "id": "mp_770433078885912",
+      "images": [
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/521355680_1449571682839636_4228936516076025779_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=106&ccb=1-7&_nc_sid=247b10&_nc_ohc=nigMahStMfgQ7kNvwGC1jcx&_nc_oc=Adm0ejxRoxIhbCvQhozLchjNhAAP2JoCnCVQb5QRvwWyhkQBuvWcY29WxIIZXDv0it8&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=rS-9Tdz2qxPU5Mo5o4pIkA&oh=00_AfWInsBQ-f_o538lKobUabOS4BvOOBhr0FwjwykkFiKEyQ&oe=68A8B807",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "Unknown",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/770433078885912/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A8e53c444-f135-4da2-a235-abab330a8a67&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:58:06.298642",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-18T13:58:06.298642",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "Samsung s25 ultra 1T 16gb ram",
+      "price": {
+        "raw_value": "SEK13,000",
+        "currency": "SEK",
+        "amount": "13000",
+        "note": "Extracted from: SEK13,000"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/763001993052700/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A8e53c444-f135-4da2-a235-abab330a8a67&__tn__=!%3AD",
+      "id": "mp_763001993052700",
+      "images": [
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/519552381_4025615814378282_4511543123163163628_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=KCkdgLJPblAQ7kNvwF_Rk5y&_nc_oc=Adk8vhAGlCFj9JqOeRHoApNS1Xf_jXFFIR2bmQlJYMRnen6vFembUOK1aiXim_LENa4&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=rS-9Tdz2qxPU5Mo5o4pIkA&oh=00_AfV2AkLMTTyBqx1uRmRu6nHQJHOzGqKjyneHqjdocy5hLQ&oe=68A8A7A7",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "Unknown",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/763001993052700/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A8e53c444-f135-4da2-a235-abab330a8a67&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:58:06.300822",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-18T13:58:06.300822",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "Samsung s25 ultra 5G",
+      "price": {
+        "raw_value": "SEK6,500",
+        "currency": "SEK",
+        "amount": "6500",
+        "note": "Extracted from: SEK6,500"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/728497226714015/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A8e53c444-f135-4da2-a235-abab330a8a67&__tn__=!%3AD",
+      "id": "mp_728497226714015",
+      "images": [
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/522663747_731813366245804_2764521406531126324_n.jpg?stp=c0.42.261.261a_dst-jpg_p261x260_tt6&_nc_cat=100&ccb=1-7&_nc_sid=247b10&_nc_ohc=aVw4bUoPU5UQ7kNvwHUJmey&_nc_oc=AdnLTepuNLS9luju6Dy0NR4LecLuT7HFJoN0erqOa9SBk9WRQXWE3mJNzhX9X27pO78&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=rS-9Tdz2qxPU5Mo5o4pIkA&oh=00_AfUVyUUPE9fTQiIYhQFTD5IOVOZtl6vit5O-Dg6CorVLmw&oe=68A8C1E7",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "Unknown",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/728497226714015/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A8e53c444-f135-4da2-a235-abab330a8a67&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:58:06.305967",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-18T13:58:06.305967",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "Number of unread notifications",
+      "price": {
+        "raw_value": "SEK16,000",
+        "currency": "SEK",
+        "amount": "16000",
+        "note": "Extracted from: SEK16,000"
+      },
+      "location": {
+        "city": "Within",
+        "distance": "Unknown",
+        "raw_location": "Within"
+      },
+      "marketplace_url": "",
+      "id": "mp_gen_1755507511_7",
+      "images": [],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "Unknown",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "medium",
+      "full_url": "",
+      "added_at": "2025-08-18T13:58:33.188771",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-18T13:58:33.188771",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "Samsung galaxy S24 ultra 256Gb titanium Grey,använd 1 mån(dödsbo)säljes till bra pris!!Nypris17.990",
+      "price": {
+        "raw_value": "SEK10,500",
+        "currency": "SEK",
+        "amount": "10500",
+        "note": "Extracted from: SEK10,500"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/962783926025367/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A137988ba-cea6-42fd-b895-171bba794f5d&__tn__=!%3AD",
+      "id": "mp_962783926025367",
+      "images": [
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/485894291_1191176192652527_7022649683682900684_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=111&ccb=1-7&_nc_sid=247b10&_nc_ohc=eluC3OVRFuwQ7kNvwH4iplY&_nc_oc=AdlAhQxoZrGWZZP5I2E6dg5b3jYsF0p0Coz3YhnRMlIXsTGv5DFzsDIwzo5KdhZb7_g&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=QEDmHX6slLNnjKJKWeurVQ&oh=00_AfWht_0MMbBGyP4Ug3jWkIBj2pe7C_A-6G9c5FD3oJR2fw&oe=68A8AE25",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "Unknown",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/962783926025367/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A137988ba-cea6-42fd-b895-171bba794f5d&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:59:14.790362",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-18T13:59:14.790362",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "Samsung s24 ultra 512 gb",
+      "price": {
+        "raw_value": "SEK8,500",
+        "currency": "SEK",
+        "amount": "8500",
+        "note": "Extracted from: SEK8,500"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1218792326656666/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A137988ba-cea6-42fd-b895-171bba794f5d&__tn__=!%3AD",
+      "id": "mp_1218792326656666",
+      "images": [
+        {
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/511687922_627371907030815_5713483696218406895_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=110&ccb=1-7&_nc_sid=247b10&_nc_ohc=0dmvug0dRQoQ7kNvwHc8roh&_nc_oc=AdlRw7J8JgUNStvvog98_7Ta7s7PGumDxg1kuOLYjWjvRM8zZrR-J_RZDpLkQ5Qz_5E&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=QEDmHX6slLNnjKJKWeurVQ&oh=00_AfWiq_7e5D-iN4E3CKgXffonATsY-XbpTM7moJ7o_98mGg&oe=68A8B9DA",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "Unknown",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/1218792326656666/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A137988ba-cea6-42fd-b895-171bba794f5d&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:59:14.793430",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-18T13:59:14.793430",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "Samsung Galaxy S25 ultra 1TB - Helt ny",
+      "price": {
+        "raw_value": "SEK11,000",
+        "currency": "SEK",
+        "amount": "11000",
+        "note": "Extracted from: SEK11,000"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1965253287579881/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A137988ba-cea6-42fd-b895-171bba794f5d&__tn__=!%3AD",
+      "id": "mp_1965253287579881",
+      "images": [
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/528550086_779483727989828_6380957293325211614_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=102&ccb=1-7&_nc_sid=247b10&_nc_ohc=aj2xE2V0lZkQ7kNvwHdu8p9&_nc_oc=Adm9s-TMQy98GVS0oGzaS5mxUsPLfGeZA2IqNCMXP9KuyiDcpzz6SVc0cAPheFgR_fo&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=LqnYXan8dnPbGmU_0F9pJg&oh=00_AfXE8wTwoA0_tkJ7fg366xpGusHdFigTRvMKKSSLrw_t2A&oe=68A8D23B",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "Unknown",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/1965253287579881/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A137988ba-cea6-42fd-b895-171bba794f5d&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:59:14.820680",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-18T13:59:14.820680",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "Samsung S25 Ultra 1 TB Olåst & Oanvänd",
+      "price": {
+        "raw_value": "SEK7,800",
+        "currency": "SEK",
+        "amount": "7800",
+        "note": "Extracted from: SEK7,800"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1266361535028211/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A137988ba-cea6-42fd-b895-171bba794f5d&__tn__=!%3AD",
+      "id": "mp_1266361535028211",
+      "images": [
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/530766771_1702622213771534_3390344350043909954_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=100&ccb=1-7&_nc_sid=247b10&_nc_ohc=M0sPfcNYLJsQ7kNvwFPkxpl&_nc_oc=AdmLjzbqdV3-GyM8f2JWUn7VRyzIC9aM3dvWIpi0NU0WAMYYW0A7RRaFs_qsVWiTWH0&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=LqnYXan8dnPbGmU_0F9pJg&oh=00_AfWya4BH8c2bJuzi5FXrjZxKa2gQ86z2AFjgnYXJBXoxuA&oe=68A8BDB3",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "Unknown",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/1266361535028211/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A137988ba-cea6-42fd-b895-171bba794f5d&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:59:14.826099",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-18T13:59:14.826099",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "Samsung S25 Ultra 512GB Olåst",
+      "price": {
+        "raw_value": "SEK9,200",
+        "currency": "SEK",
+        "amount": "9200",
+        "note": "Extracted from: SEK9,200"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/637143609181328/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A137988ba-cea6-42fd-b895-171bba794f5d&__tn__=!%3AD",
+      "id": "mp_637143609181328",
+      "images": [
+        {
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/487929028_1341371433794545_4116469336183196823_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=108&ccb=1-7&_nc_sid=247b10&_nc_ohc=7X1lBAgGTl0Q7kNvwH1wSrq&_nc_oc=Adlszoqz34lCkVorpcwcY0TTqk4h9wc3pYAjcLJ7tH7TjJzlNXJA9mFxG15EWl-k3d0&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=LqnYXan8dnPbGmU_0F9pJg&oh=00_AfV-UlUeknkGsHA0wywiD0XOWV5xfhCjnwFBXtugFAjmAg&oe=68A8A95F",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "Unknown",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/637143609181328/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A137988ba-cea6-42fd-b895-171bba794f5d&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:59:14.835041",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-18T13:59:14.835041",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "Samsung galaxy 25 ultra 512GB/12g",
+      "price": {
+        "raw_value": "SEK8,500",
+        "currency": "SEK",
+        "amount": "8500",
+        "note": "Extracted from: SEK8,500"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1773606953244896/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A137988ba-cea6-42fd-b895-171bba794f5d&__tn__=!%3AD",
+      "id": "mp_1773606953244896",
+      "images": [
+        {
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/526559413_3077292562434432_2254551138875074432_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_ohc=vBCfABagOEQQ7kNvwHOYXgt&_nc_oc=Adlk8sqj1JsHUp2TsUgatqc9Lz_AXjzqCm9aDJIXOZNY3NfD9DBv29JjRw73GxBA4Mk&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=LqnYXan8dnPbGmU_0F9pJg&oh=00_AfUZTy4a0uFnKucwp5EmuuZo9lLwrXlk7QOXEjFnb5X2Ww&oe=68A8D52C",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "Unknown",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/1773606953244896/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A137988ba-cea6-42fd-b895-171bba794f5d&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:59:14.838033",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-18T13:59:14.838033",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "Samsung S23 Ultra, 512 Gb in mint condition. 10/10 ✅ 512 Gb",
+      "price": {
+        "raw_value": "SEK7,000",
+        "currency": "SEK",
+        "amount": "7000",
+        "note": "Extracted from: SEK7,000"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/944867097766847/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A137988ba-cea6-42fd-b895-171bba794f5d&__tn__=!%3AD",
+      "id": "mp_944867097766847",
+      "images": [
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/522683835_1089128933317249_5011756675727617726_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=100&ccb=1-7&_nc_sid=247b10&_nc_ohc=iMKkbJT0b_EQ7kNvwHNjmMD&_nc_oc=AdkpUKjMu-hMjvnzwfhljVcD60RZpUf-Qc8RO6rtpBq9usu8Dotu8SuAVysO8eilU5M&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=LqnYXan8dnPbGmU_0F9pJg&oh=00_AfXAmwRLcHt4IEgRRl2rtB6jUCaA1sK3zd9KLzTUpXc0Lw&oe=68A8B838",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "Unknown",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/944867097766847/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A137988ba-cea6-42fd-b895-171bba794f5d&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:59:14.842610",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-18T13:59:14.842610",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "S23 ultra 256gb green mint",
+      "price": {
+        "raw_value": "SEK6,000",
+        "currency": "SEK",
+        "amount": "6000",
+        "note": "Extracted from: SEK6,000"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1325342379168521/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A137988ba-cea6-42fd-b895-171bba794f5d&__tn__=!%3AD",
+      "id": "mp_1325342379168521",
+      "images": [
+        {
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/532931628_548324561635732_6779998547927317440_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=103&ccb=1-7&_nc_sid=247b10&_nc_ohc=pEWQ2KPOFf4Q7kNvwE8zOzJ&_nc_oc=AdnyokjI2h-pmCbRWRvamdgEI47vgQAT_qxQj1xgEyAnKMMmvCkoaD0sDso4fopI6Eg&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=LqnYXan8dnPbGmU_0F9pJg&oh=00_AfV-ITVTGLrT6FYLA6TitQtaDSwASz9MKkZeI8qH0Bl5Fw&oe=68A8A6C4",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "Unknown",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/1325342379168521/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A137988ba-cea6-42fd-b895-171bba794f5d&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:59:52.511265",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-18T13:59:52.511265",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "Samsung galaxy s25 ultra oöppnad",
+      "price": {
+        "raw_value": "SEK9,000",
+        "currency": "SEK",
+        "amount": "9000",
+        "note": "Extracted from: SEK9,000"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1500402257752353/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A137988ba-cea6-42fd-b895-171bba794f5d&__tn__=!%3AD",
+      "id": "mp_1500402257752353",
+      "images": [
+        {
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/529271208_1395376164869784_8446535807688031497_n.jpg?stp=c43.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=103&ccb=1-7&_nc_sid=247b10&_nc_ohc=co12yeTkfq8Q7kNvwFgpU3V&_nc_oc=Adk6BK0TOk2SkMhpGQ_R5Q2dAoZzAEqe8C5R6AcRLTJWW9BeS96eIhjQl0nmP9aISP4&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=LqnYXan8dnPbGmU_0F9pJg&oh=00_AfVsaO8O2JI4wWLbiglUHXykQMORDUgybXJkf7IAHnxOrA&oe=68A8BEB1",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "Unknown",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/1500402257752353/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A137988ba-cea6-42fd-b895-171bba794f5d&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:59:52.514567",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-18T13:59:52.514567",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "Samsung S25 Ultra 512Gb",
+      "price": {
+        "raw_value": "SEK9,500",
+        "currency": "SEK",
+        "amount": "9500",
+        "note": "Extracted from: SEK9,500"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/2149582355536118/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A137988ba-cea6-42fd-b895-171bba794f5d&__tn__=!%3AD",
+      "id": "mp_2149582355536118",
+      "images": [
+        {
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/530270197_747716497999309_9076852677468855124_n.jpg?stp=c0.22.261.261a_dst-jpg_p261x260_tt6&_nc_cat=101&ccb=1-7&_nc_sid=247b10&_nc_ohc=Pt5M2jIuQEMQ7kNvwHy_Vu1&_nc_oc=AdnM8ZwQNVVv5sXZQLSb3m4EtnEFEW-m4DqWzKcajiT7ehRevsyFnCDsl1JVkTu8o2U&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=LqnYXan8dnPbGmU_0F9pJg&oh=00_AfXs6xRUkdkp70khiga6ibDu2F73Mu1Yp503Fa_iliUP-g&oe=68A8C979",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "Unknown",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/2149582355536118/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A137988ba-cea6-42fd-b895-171bba794f5d&__tn__=!%3AD",
+      "added_at": "2025-08-18T13:59:52.517937",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-18T13:59:52.517937",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "Samsung S24 Ultra 1TB Titanium Grey",
+      "price": {
+        "raw_value": "SEK10,000",
+        "currency": "SEK",
+        "amount": "10000",
+        "note": "Extracted from: SEK10,000"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1328897848567283/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A137988ba-cea6-42fd-b895-171bba794f5d&__tn__=!%3AD",
+      "id": "mp_1328897848567283",
+      "images": [
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/525992628_1387217315711374_353832598678811780_n.jpg?stp=c0.101.261.261a_dst-jpg_p261x260_tt6&_nc_cat=106&ccb=1-7&_nc_sid=247b10&_nc_ohc=eSbHFDxeejUQ7kNvwHGsMQ_&_nc_oc=AdkXTo_uVR86QdyYhGQ92bgwKbCIRBb8LNnHUijhNiG-DTjP_6nJcYseP_QaUitYjXI&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=WLy4TK4tt0g3sOhfyBkv7w&oh=00_AfXJnMLb2zz_GPkMWqFsG2P1QAEKLqatAC937RWM7leMAw&oe=68A8A87C",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "Unknown",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/1328897848567283/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A137988ba-cea6-42fd-b895-171bba794f5d&__tn__=!%3AD",
+      "added_at": "2025-08-18T14:05:00.646750",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-18T14:05:00.646750",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "Samsung Galaxy S24 Ultra 256 GB Black Titanium Upplåst till alla nätverk med garanti",
+      "price": {
+        "raw_value": "SEK1,000",
+        "currency": "SEK",
+        "amount": "1000",
+        "note": "Extracted from: SEK1,000"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1273566981080588/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A137988ba-cea6-42fd-b895-171bba794f5d&__tn__=!%3AD",
+      "id": "mp_1273566981080588",
+      "images": [
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/473211931_946159244128338_8923248678180440055_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=109&ccb=1-7&_nc_sid=247b10&_nc_ohc=3C0sBmvSwR8Q7kNvwHyVj9-&_nc_oc=Adk35wj3liMBqT_F15qPquJ9D1oPGkxty6oy7w_LqtZ941NkblONVoyOeKG8GpEBY0I&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=WLy4TK4tt0g3sOhfyBkv7w&oh=00_AfWiBfJz5ATMAlYKb2odbwZs9VJVlc5-90mGfWJ6_TkMqg&oe=68A8AD0E",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "Unknown",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/1273566981080588/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A137988ba-cea6-42fd-b895-171bba794f5d&__tn__=!%3AD",
+      "added_at": "2025-08-18T14:05:00.651202",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-18T14:05:00.651202",
+      "seller_name": "Private Seller"
+    },
+    {
+      "title": "Samsung S25 Ultra 1TB Ny",
+      "price": {
+        "raw_value": "SEK8,000",
+        "currency": "SEK",
+        "amount": "8000",
+        "note": "Extracted from: SEK8,000"
+      },
+      "location": {
+        "city": "Stockholm",
+        "distance": "Unknown",
+        "raw_location": "Not specified"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1876071353183062/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A137988ba-cea6-42fd-b895-171bba794f5d&__tn__=!%3AD",
+      "id": "mp_1876071353183062",
+      "images": [
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/529304203_786638147037896_7518404011066076465_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=8qAiLAeux3kQ7kNvwEzkMb0&_nc_oc=AdkNsJCvUmsaQX0bkuzlILsXPsTo5ZdQyzIzSRz2d_wmLquCx0xlRGRj8W2Lk7SPs_U&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=WLy4TK4tt0g3sOhfyBkv7w&oh=00_AfV2TXsAeCY4z4gqFXNEvuk-Bkm9gKQA-IefuOstPJPrZQ&oe=68A8B011",
+          "type": "thumbnail",
+          "size": "unknown"
+        }
+      ],
+      "seller": {
+        "info": "Not extracted",
+        "profile": null
+      },
+      "product_details": {
+        "model": "Unknown",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "extraction_method": "automated_scraper",
+      "data_quality": "basic",
+      "full_url": "https://www.facebook.com/marketplace/item/1876071353183062/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A137988ba-cea6-42fd-b895-171bba794f5d&__tn__=!%3AD",
+      "added_at": "2025-08-18T14:05:00.658599",
+      "source": "facebook_marketplace_scraper",
+      "created_at": "2025-08-18T14:05:00.658599",
       "seller_name": "Private Seller"
     }
   ],
@@ -1654,7 +2779,7 @@
     "image_quality": "6 products have high-quality thumbnail images from Facebook's CDN",
     "location_accuracy": "Some locations extracted as 'x' - needs pattern refinement",
     "data_completeness": "6 products have complete data with images and links, 10 products have partial data",
-    "last_updated": "2025-08-14T19:10:59.980786"
+    "last_updated": "2025-08-21T23:14:12.562353"
   },
   "technical_details": {
     "html_source_size": "2,926,700 characters",
@@ -1672,264 +2797,5 @@
       "Samei (2 products)"
     ]
   },
-  "scraping_sessions": [
-    {
-      "start_time": "2025-08-13T00:03:27.699081",
-      "listings_found": 0,
-      "new_listings": 0,
-      "updated_listings": 0,
-      "errors_count": 0,
-      "error_details": [
-        "Failed to navigate to Marketplace"
-      ],
-      "saved_at": "2025-08-13T00:04:50.879745"
-    },
-    {
-      "start_time": "2025-08-13T00:08:56.146143",
-      "listings_found": 0,
-      "new_listings": 0,
-      "updated_listings": 0,
-      "errors_count": 0,
-      "error_details": [
-        "Failed to navigate to Marketplace"
-      ],
-      "saved_at": "2025-08-13T00:10:03.910064"
-    },
-    {
-      "start_time": "2025-08-13T00:12:56.327564",
-      "listings_found": 0,
-      "new_listings": 0,
-      "updated_listings": 0,
-      "errors_count": 0,
-      "error_details": [
-        "Failed to navigate to Marketplace"
-      ],
-      "saved_at": "2025-08-13T00:14:15.548729"
-    },
-    {
-      "start_time": "2025-08-13T00:15:05.962558",
-      "listings_found": 0,
-      "new_listings": 0,
-      "updated_listings": 0,
-      "errors_count": 0,
-      "error_details": [],
-      "end_time": "2025-08-13T00:17:48.785076",
-      "status": "completed",
-      "search_keywords": "iphone 14",
-      "search_location": "Stockholm, Sweden",
-      "saved_at": "2025-08-13T00:17:48.786192"
-    },
-    {
-      "start_time": "2025-08-13T00:18:49.705490",
-      "listings_found": 0,
-      "new_listings": 0,
-      "updated_listings": 0,
-      "errors_count": 0,
-      "error_details": [],
-      "end_time": "2025-08-13T00:21:02.126771",
-      "status": "completed",
-      "search_keywords": "iphone 14",
-      "search_location": "Stockholm, Sweden",
-      "saved_at": "2025-08-13T00:21:02.128032"
-    },
-    {
-      "start_time": "2025-08-13T00:23:49.226373",
-      "listings_found": 0,
-      "new_listings": 0,
-      "updated_listings": 0,
-      "errors_count": 0,
-      "error_details": [],
-      "end_time": "2025-08-13T00:26:09.604526",
-      "status": "completed",
-      "search_keywords": "iphone 14",
-      "search_location": "Stockholm, Sweden",
-      "saved_at": "2025-08-13T00:26:09.607749"
-    },
-    {
-      "start_time": "2025-08-13T00:26:58.686766",
-      "listings_found": 0,
-      "new_listings": 0,
-      "updated_listings": 0,
-      "errors_count": 0,
-      "error_details": [],
-      "end_time": "2025-08-13T00:29:30.446028",
-      "status": "completed",
-      "search_keywords": "iphone 16",
-      "search_location": "Stockholm, Sweden",
-      "saved_at": "2025-08-13T00:29:30.508584"
-    },
-    {
-      "start_time": "2025-08-13T00:31:24.702906",
-      "listings_found": 2,
-      "new_listings": 2,
-      "updated_listings": 0,
-      "errors_count": 0,
-      "error_details": [],
-      "duplicates_found": 0,
-      "end_time": "2025-08-13T00:34:29.229454",
-      "status": "completed",
-      "search_keywords": "iphone 16",
-      "search_location": "Stockholm, Sweden",
-      "saved_at": "2025-08-13T00:34:29.239604"
-    },
-    {
-      "start_time": "2025-08-13T00:36:27.418616",
-      "listings_found": 2,
-      "new_listings": 1,
-      "updated_listings": 0,
-      "errors_count": 0,
-      "error_details": [],
-      "duplicates_found": 1,
-      "end_time": "2025-08-13T00:39:37.810481",
-      "status": "completed",
-      "search_keywords": "iphone 15",
-      "search_location": "Stockholm, Sweden",
-      "saved_at": "2025-08-13T00:39:37.860027"
-    },
-    {
-      "start_time": "2025-08-13T00:40:31.519224",
-      "listings_found": 2,
-      "new_listings": 1,
-      "updated_listings": 0,
-      "errors_count": 0,
-      "error_details": [],
-      "duplicates_found": 1,
-      "end_time": "2025-08-13T00:43:45.692857",
-      "status": "completed",
-      "search_keywords": "iphone 13",
-      "search_location": "Stockholm, Sweden",
-      "saved_at": "2025-08-13T00:43:45.757282"
-    },
-    {
-      "start_time": "2025-08-13T00:45:00.696098",
-      "listings_found": 2,
-      "new_listings": 1,
-      "updated_listings": 0,
-      "errors_count": 0,
-      "error_details": [],
-      "duplicates_found": 1,
-      "end_time": "2025-08-13T00:48:09.230083",
-      "status": "completed",
-      "search_keywords": "iphone 14",
-      "search_location": "Stockholm, Sweden",
-      "saved_at": "2025-08-13T00:48:09.290576"
-    },
-    {
-      "start_time": "2025-08-13T00:52:10.387442",
-      "listings_found": 2,
-      "new_listings": 2,
-      "updated_listings": 0,
-      "errors_count": 0,
-      "error_details": [],
-      "duplicates_found": 0,
-      "end_time": "2025-08-13T00:55:11.576752",
-      "status": "completed",
-      "search_keywords": "iphone 14",
-      "search_location": "Stockholm, Sweden",
-      "saved_at": "2025-08-13T00:55:11.602481"
-    },
-    {
-      "start_time": "2025-08-13T01:01:36.309233",
-      "listings_found": 2,
-      "new_listings": 1,
-      "updated_listings": 0,
-      "errors_count": 0,
-      "error_details": [],
-      "duplicates_found": 0,
-      "end_time": "2025-08-13T01:04:54.621694",
-      "status": "completed",
-      "search_keywords": "iphone 12",
-      "search_location": "Stockholm, Sweden",
-      "saved_at": "2025-08-13T01:04:54.643393"
-    },
-    {
-      "start_time": "2025-08-13T23:18:51.945754",
-      "listings_found": 0,
-      "new_listings": 0,
-      "updated_listings": 0,
-      "errors_count": 0,
-      "error_details": [],
-      "saved_at": "2025-08-13T23:18:55.425210"
-    },
-    {
-      "start_time": "2025-08-13T23:19:57.930689",
-      "listings_found": 0,
-      "new_listings": 0,
-      "updated_listings": 0,
-      "errors_count": 0,
-      "error_details": [],
-      "saved_at": "2025-08-13T23:20:01.299246"
-    },
-    {
-      "start_time": "2025-08-13T23:20:24.889517",
-      "listings_found": 0,
-      "new_listings": 0,
-      "updated_listings": 0,
-      "errors_count": 0,
-      "error_details": [],
-      "saved_at": "2025-08-13T23:22:53.828948"
-    },
-    {
-      "start_time": "2025-08-13T23:38:47.728551",
-      "listings_found": 2,
-      "new_listings": 1,
-      "updated_listings": 0,
-      "errors_count": 0,
-      "error_details": [],
-      "duplicates_found": 0,
-      "end_time": "2025-08-13T23:42:05.973869",
-      "status": "completed",
-      "search_keywords": "iphone 16",
-      "search_location": "Stockholm, Sweden",
-      "saved_at": "2025-08-13T23:42:05.992226"
-    },
-    {
-      "start_time": "2025-08-13T23:44:08.517267",
-      "listings_found": 0,
-      "new_listings": 0,
-      "updated_listings": 0,
-      "errors_count": 0,
-      "error_details": [],
-      "saved_at": "2025-08-13T23:44:58.984544"
-    },
-    {
-      "start_time": "2025-08-13T23:46:26.292848",
-      "listings_found": 0,
-      "new_listings": 0,
-      "updated_listings": 0,
-      "errors_count": 0,
-      "error_details": [
-        "Failed to navigate to Marketplace"
-      ],
-      "saved_at": "2025-08-13T23:48:02.965715"
-    },
-    {
-      "start_time": "2025-08-13T23:51:35.153457",
-      "listings_found": 2,
-      "new_listings": 1,
-      "updated_listings": 0,
-      "errors_count": 0,
-      "error_details": [],
-      "duplicates_found": 0,
-      "end_time": "2025-08-13T23:54:50.377562",
-      "status": "completed",
-      "search_keywords": "iphone 8",
-      "search_location": "Stockholm, Sweden",
-      "saved_at": "2025-08-13T23:54:50.389334"
-    },
-    {
-      "start_time": "2025-08-14T00:33:27.583142",
-      "listings_found": 2,
-      "new_listings": 1,
-      "updated_listings": 0,
-      "errors_count": 0,
-      "error_details": [],
-      "duplicates_found": 0,
-      "end_time": "2025-08-14T00:36:39.172942",
-      "status": "completed",
-      "search_keywords": "iPhone 16",
-      "search_location": "Stockholm, Sweden",
-      "saved_at": "2025-08-14T00:36:39.201319"
-    }
-  ]
+  "scraping_sessions": []
 }

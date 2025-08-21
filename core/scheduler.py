@@ -17,6 +17,7 @@ from apscheduler.jobstores.sqlalchemy import SQLAlchemyJobStore
 
 from core.scraper import FacebookMarketplaceScraper
 from core.json_manager import JSONDataManager
+from core.persistent_session import get_persistent_session
 
 
 class SchedulerManager:
@@ -28,8 +29,15 @@ class SchedulerManager:
         self.logger = logging.getLogger(__name__)
         self.json_manager = JSONDataManager()
         
-        # Scheduler configuration
-        self.scheduler_config = settings.get_scheduler_config()
+        # Scheduler configuration with proper defaults
+        base_config = settings.get_scheduler_config()
+        self.scheduler_config = {
+            'interval_minutes': base_config.get('interval_minutes', 30),
+            'request_delay_min': base_config.get('request_delay_min', 2),
+            'request_delay_max': base_config.get('request_delay_max', 5),
+            'search_query': None,  # Will be set when creating scheduler
+            'city': None  # Will be set when creating scheduler
+        }
         
         # Initialize scheduler
         self.scheduler = None
@@ -169,11 +177,11 @@ class SchedulerManager:
         self.logger.info(f"Starting scheduled scraping job at {job_start_time}")
         
         try:
-            # Create scraper instance
-            scraper = FacebookMarketplaceScraper(self.settings)
+            # Use persistent session for scheduled jobs
+            persistent_session = get_persistent_session(self.settings)
             
-            # Run the scraping
-            results = scraper.scrape_marketplace()
+            # Run the default scraping using persistent session
+            results = persistent_session.run_default_scrape()
             
             # Log results
             job_end_time = datetime.now()
@@ -196,10 +204,12 @@ class SchedulerManager:
             self.logger.info("Starting manual scraping job")
             
             start_time = datetime.now()
-            scraper = FacebookMarketplaceScraper(self.settings)
-            results = scraper.scrape_marketplace()
-            end_time = datetime.now()
             
+            # Use persistent session for manual scraping
+            persistent_session = get_persistent_session(self.settings)
+            results = persistent_session.run_default_scrape()
+            
+            end_time = datetime.now()
             duration = (end_time - start_time).total_seconds()
             
             result = {
@@ -222,14 +232,17 @@ class SchedulerManager:
                 'duration_seconds': 0
             }
     
-    def run_custom_scraping(self, search_query: str) -> dict:
+    def run_custom_scraping(self, search_query: str, notification_manager=None) -> dict:
         """Run custom scraping with user-provided search query."""
         try:
             self.logger.info(f"Starting custom scraping job for: {search_query}")
             
             start_time = datetime.now()
-            scraper = FacebookMarketplaceScraper(self.settings, persistent_session=True)
-            results = scraper.quick_search(search_query)
+            
+            # Use persistent session for custom scraping
+            persistent_session = get_persistent_session(self.settings)
+            results = persistent_session.search_marketplace(search_query, notification_manager)
+            
             end_time = datetime.now()
             
             duration = (end_time - start_time).total_seconds()
@@ -281,6 +294,30 @@ class SchedulerManager:
                 'duration_seconds': 0,
                 'search_query': search_query
             }
+    
+    def update_configuration(self, config: dict) -> bool:
+        """Update scheduler configuration with new settings."""
+        try:
+            # Update internal configuration
+            if 'interval_minutes' in config:
+                self.scheduler_config['interval_minutes'] = config['interval_minutes']
+            
+            if 'search_query' in config:
+                self.scheduler_config['search_query'] = config['search_query']
+                
+            if 'city' in config:
+                self.scheduler_config['city'] = config['city']
+            
+            # If scheduler is running, update the job with new interval
+            if self.is_running() and 'interval_minutes' in config:
+                return self.update_schedule(config['interval_minutes'])
+            
+            self.logger.info(f"Scheduler configuration updated: {config}")
+            return True
+            
+        except Exception as e:
+            self.logger.error(f"Failed to update configuration: {e}")
+            return False
     
     def update_schedule(self, new_interval_minutes: int):
         """Update the scraping schedule interval."""

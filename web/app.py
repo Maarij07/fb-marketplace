@@ -7,11 +7,14 @@ and viewing analytics.
 
 import json
 import logging
+import queue
+import threading
 from datetime import datetime
-from flask import Flask, render_template, jsonify, request
+from flask import Flask, render_template, jsonify, request, Response
 
 from core.json_manager import JSONDataManager
 from core.scheduler import SchedulerManager
+from core.persistent_session import get_persistent_session
 
 
 def calculate_price_distribution(products):
@@ -46,6 +49,46 @@ def calculate_price_distribution(products):
     return list(distribution.items())
 
 
+# Global notification system
+class NotificationManager:
+    """Manages real-time notifications via Server-Sent Events."""
+    
+    def __init__(self):
+        self.clients = set()
+        self.lock = threading.Lock()
+    
+    def add_client(self, client_queue):
+        """Add a new SSE client."""
+        with self.lock:
+            self.clients.add(client_queue)
+    
+    def remove_client(self, client_queue):
+        """Remove an SSE client."""
+        with self.lock:
+            self.clients.discard(client_queue)
+    
+    def broadcast_notification(self, message_type, data):
+        """Send notification to all connected clients."""
+        message = {
+            'type': message_type,
+            'data': data,
+            'timestamp': datetime.now().isoformat()
+        }
+        
+        with self.lock:
+            # Remove disconnected clients
+            disconnected_clients = set()
+            for client_queue in self.clients.copy():
+                try:
+                    client_queue.put(message, block=False)
+                except:
+                    disconnected_clients.add(client_queue)
+            
+            # Clean up disconnected clients
+            for client in disconnected_clients:
+                self.clients.discard(client)
+
+
 def create_app(settings):
     """Create and configure Flask application."""
     app = Flask(__name__)
@@ -54,6 +97,10 @@ def create_app(settings):
     # Initialize components
     json_manager = JSONDataManager()
     scheduler_manager = SchedulerManager(settings)
+    notification_manager = NotificationManager()
+    
+    # Make notification manager accessible to other modules
+    app.notification_manager = notification_manager
     
     logger = logging.getLogger(__name__)
     
@@ -255,6 +302,46 @@ def create_app(settings):
             logger.error(f"Failed to stop scheduler: {e}")
             return jsonify({'success': False, 'error': str(e)})
     
+    @app.route('/api/scheduler/create', methods=['POST'])
+    def api_scheduler_create():
+        """Create a new scheduler configuration."""
+        try:
+            data = request.get_json()
+            search_query = data.get('search_query', '').strip()
+            city = data.get('city', '').strip() or None
+            interval_minutes = data.get('interval_minutes', 30)
+            
+            if not search_query:
+                return jsonify({'success': False, 'message': 'Search query is required'})
+            
+            if interval_minutes not in [15, 30, 60]:
+                return jsonify({'success': False, 'message': 'Invalid interval. Must be 15, 30, or 60 minutes'})
+            
+            # For now, we'll update the scheduler with the new configuration
+            # In a more complex system, you might store multiple scheduler configs
+            success = scheduler_manager.update_configuration({
+                'search_query': search_query,
+                'city': city,
+                'interval_minutes': interval_minutes
+            })
+            
+            if success:
+                # Start the scheduler with new configuration
+                scheduler_manager.start()
+                return jsonify({
+                    'success': True,
+                    'message': f'Scheduler created and started successfully for "{search_query}"'
+                })
+            else:
+                return jsonify({
+                    'success': False,
+                    'message': 'Failed to create scheduler configuration'
+                })
+            
+        except Exception as e:
+            logger.error(f"Failed to create scheduler: {e}")
+            return jsonify({'success': False, 'error': str(e)})
+    
     @app.route('/api/scheduler/status')
     def api_scheduler_status():
         """Get scheduler status."""
@@ -266,6 +353,89 @@ def create_app(settings):
             })
         except Exception as e:
             logger.error(f"Failed to get scheduler status: {e}")
+            return jsonify({'success': False, 'error': str(e)})
+    
+    @app.route('/api/schedulers')
+    def api_get_schedulers():
+        """Get list of schedulers."""
+        try:
+            # For now, we'll simulate multiple schedulers using the current single scheduler
+            # In a real implementation, you'd store multiple scheduler configurations
+            status = scheduler_manager.get_job_status()
+            schedulers = []
+            
+            # Only show scheduler if it has been explicitly configured with a search query
+            config = scheduler_manager.scheduler_config
+            search_query = config.get('search_query')
+            
+            # Only show if there's an actual search query set (not None or empty)
+            if search_query and search_query.strip():
+                is_running = status.get('scheduler_running', False)
+                scheduler_data = {
+                    'id': 1,
+                    'search_query': search_query,
+                    'city': config.get('city', 'Stockholm'),
+                    'interval_minutes': config.get('interval_minutes', 30),
+                    'is_running': is_running,
+                    'created_at': datetime.now().isoformat(),
+                    'next_run': status.get('next_run') if is_running else None
+                }
+                schedulers.append(scheduler_data)
+            
+            return jsonify({
+                'success': True,
+                'data': schedulers
+            })
+        except Exception as e:
+            logger.error(f"Failed to get schedulers: {e}")
+            return jsonify({'success': False, 'error': str(e)})
+    
+    @app.route('/api/scheduler/<int:scheduler_id>/start', methods=['POST'])
+    def api_start_scheduler(scheduler_id):
+        """Start a specific scheduler."""
+        try:
+            success = scheduler_manager.start()
+            return jsonify({
+                'success': success,
+                'message': 'Scheduler started successfully' if success else 'Failed to start scheduler'
+            })
+        except Exception as e:
+            logger.error(f"Failed to start scheduler {scheduler_id}: {e}")
+            return jsonify({'success': False, 'error': str(e)})
+    
+    @app.route('/api/scheduler/<int:scheduler_id>/pause', methods=['POST'])
+    def api_pause_scheduler(scheduler_id):
+        """Pause a specific scheduler."""
+        try:
+            success = scheduler_manager.stop()
+            return jsonify({
+                'success': success,
+                'message': 'Scheduler paused successfully' if success else 'Failed to pause scheduler'
+            })
+        except Exception as e:
+            logger.error(f"Failed to pause scheduler {scheduler_id}: {e}")
+            return jsonify({'success': False, 'error': str(e)})
+    
+    @app.route('/api/scheduler/<int:scheduler_id>', methods=['DELETE'])
+    def api_delete_scheduler(scheduler_id):
+        """Delete a specific scheduler."""
+        try:
+            # Stop the scheduler first
+            scheduler_manager.stop()
+            
+            # Clear the scheduler configuration
+            scheduler_manager.scheduler_config = {
+                'interval_minutes': 30,
+                'search_query': None,
+                'city': None
+            }
+            
+            return jsonify({
+                'success': True,
+                'message': 'Scheduler deleted successfully'
+            })
+        except Exception as e:
+            logger.error(f"Failed to delete scheduler {scheduler_id}: {e}")
             return jsonify({'success': False, 'error': str(e)})
     
     @app.route('/api/scrape/run', methods=['POST'])
@@ -288,7 +458,8 @@ def create_app(settings):
             if not search_query:
                 return jsonify({'success': False, 'error': 'Search query is required'})
             
-            result = scheduler_manager.run_custom_scraping(search_query)
+            # Pass the notification manager for real-time updates
+            result = scheduler_manager.run_custom_scraping(search_query, notification_manager)
             return jsonify(result)
         except Exception as e:
             logger.error(f"Failed to run custom scraping: {e}")
@@ -348,6 +519,77 @@ def create_app(settings):
         except Exception as e:
             logger.error(f"Failed to cleanup data: {e}")
             return jsonify({'success': False, 'error': str(e)})
+    
+    @app.route('/api/session/status')
+    def api_session_status():
+        """Get persistent browser session status."""
+        try:
+            persistent_session = get_persistent_session(settings)
+            status = persistent_session.get_session_status()
+            
+            return jsonify({
+                'success': True,
+                'data': status
+            })
+        except Exception as e:
+            logger.error(f"Failed to get session status: {e}")
+            return jsonify({'success': False, 'error': str(e)})
+    
+    @app.route('/api/session/refresh', methods=['POST'])
+    def api_session_refresh():
+        """Refresh the persistent browser session."""
+        try:
+            persistent_session = get_persistent_session(settings)
+            success = persistent_session.refresh_session()
+            
+            return jsonify({
+                'success': success,
+                'message': 'Session refreshed successfully' if success else 'Failed to refresh session'
+            })
+        except Exception as e:
+            logger.error(f"Failed to refresh session: {e}")
+            return jsonify({'success': False, 'error': str(e)})
+    
+    @app.route('/api/session/close', methods=['POST'])
+    def api_session_close():
+        """Close the persistent browser session."""
+        try:
+            persistent_session = get_persistent_session(settings)
+            persistent_session.close_session()
+            
+            return jsonify({
+                'success': True,
+                'message': 'Session closed successfully'
+            })
+        except Exception as e:
+            logger.error(f"Failed to close session: {e}")
+            return jsonify({'success': False, 'error': str(e)})
+    
+    @app.route('/api/events')
+    def sse_events():
+        """Server-Sent Events endpoint for real-time notifications."""
+        def event_generator():
+            client_queue = queue.Queue()
+            notification_manager.add_client(client_queue)
+            
+            try:
+                # Send initial connection event
+                yield f"data: {json.dumps({'type': 'connected', 'data': 'Connected to notification stream', 'timestamp': datetime.now().isoformat()})}\n\n"
+                
+                while True:
+                    try:
+                        # Wait for message with timeout
+                        message = client_queue.get(timeout=30)
+                        yield f"data: {json.dumps(message)}\n\n"
+                    except queue.Empty:
+                        # Send heartbeat to keep connection alive
+                        yield f"data: {json.dumps({'type': 'heartbeat', 'data': 'ping', 'timestamp': datetime.now().isoformat()})}\n\n"
+            except GeneratorExit:
+                notification_manager.remove_client(client_queue)
+            finally:
+                notification_manager.remove_client(client_queue)
+        
+        return Response(event_generator(), mimetype='text/event-stream')
     
     @app.errorhandler(404)
     def not_found(error):
