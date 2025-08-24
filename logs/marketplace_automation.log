@@ -10210,3 +10210,981 @@ Stacktrace:
 	RtlInitializeExceptionChain [0x0x77ccc3ab+107]
 	RtlClearBits [0x0x77ccc32f+191]
 
+2025-08-24 17:54:53,863 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-24 17:54:53,865 - core.price_monitor - INFO - Price Change Monitor initialized
+2025-08-24 17:54:53,865 - core.notification_monitor - INFO - Notification Monitor initialized
+2025-08-24 17:54:53,865 - web.app - INFO - Browser notification monitoring is available - use dashboard to start manually
+2025-08-24 17:54:53,871 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-24 17:54:53,953 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-08-24 17:54:53,953 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-24 17:54:53,955 - werkzeug - INFO -  * Restarting with stat
+2025-08-24 17:54:54,951 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-24 17:54:54,952 - core.price_monitor - INFO - Price Change Monitor initialized
+2025-08-24 17:54:54,952 - core.notification_monitor - INFO - Notification Monitor initialized
+2025-08-24 17:54:54,953 - web.app - INFO - Browser notification monitoring is available - use dashboard to start manually
+2025-08-24 17:54:54,959 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-24 17:54:54,984 - werkzeug - WARNING -  * Debugger is active!
+2025-08-24 17:54:54,993 - werkzeug - INFO -  * Debugger PIN: 765-752-686
+2025-08-24 17:54:57,889 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 17:54:57] "GET / HTTP/1.1" 200 -
+2025-08-24 17:54:58,025 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 17:54:58] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 17:54:58,028 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 17:54:58] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 17:54:58,030 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 17:54:58] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 17:54:58,032 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 17:54:58] "GET /api/monitoring/status HTTP/1.1" 200 -
+2025-08-24 17:54:58,043 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 17:54:58] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 17:54:58,075 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 17:54:58] "GET /api/events HTTP/1.1" 200 -
+2025-08-24 17:55:05,583 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 17:55:05] "POST /api/scheduler/create HTTP/1.1" 200 -
+2025-08-24 17:55:05,675 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 17:55:05] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 17:55:10,870 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 17:55:10] "POST /api/scheduler/create HTTP/1.1" 200 -
+2025-08-24 17:55:10,900 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 17:55:10] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 17:55:16,508 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 17:55:16] "POST /api/scheduler/create HTTP/1.1" 200 -
+2025-08-24 17:55:16,528 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 17:55:16] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 17:55:25,373 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 17:55:25] "DELETE /api/scheduler/1 HTTP/1.1" 200 -
+2025-08-24 17:55:25,390 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 17:55:25] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 17:55:27,400 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 17:55:27] "DELETE /api/scheduler/2 HTTP/1.1" 200 -
+2025-08-24 17:55:27,411 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 17:55:27] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 17:55:28,030 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 17:55:28] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 17:55:28,032 - core.json_manager - ERROR - Failed to load JSON data: Expecting ',' delimiter: line 180 column 38 (char 8020)
+2025-08-24 17:55:28,041 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 17:55:28] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 17:55:28,057 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 17:55:28] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 17:55:28,090 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 17:55:28] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 17:55:29,219 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 17:55:29] "DELETE /api/scheduler/3 HTTP/1.1" 200 -
+2025-08-24 17:55:29,244 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 17:55:29] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 17:55:58,632 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 17:55:58] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 17:55:58,637 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 17:55:58] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 17:55:58,645 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 17:55:58] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 17:55:58,654 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 17:55:58] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 17:56:28,629 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 17:56:28] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 17:56:28,632 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 17:56:28] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 17:56:28,665 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 17:56:28] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 17:56:28,673 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 17:56:28] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 17:56:58,616 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 17:56:58] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 17:56:58,619 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 17:56:58] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 17:56:58,635 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 17:56:58] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 17:56:58,644 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 17:56:58] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 17:57:28,615 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 17:57:28] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 17:57:28,616 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 17:57:28] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 17:57:28,633 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 17:57:28] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 17:57:28,642 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 17:57:28] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 17:57:58,615 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 17:57:58] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 17:57:58,615 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 17:57:58] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 17:57:58,628 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 17:57:58] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 17:57:58,637 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 17:57:58] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 17:58:28,622 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 17:58:28] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 17:58:28,624 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 17:58:28] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 17:58:28,629 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 17:58:28] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 17:58:28,648 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 17:58:28] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 17:59:02,701 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PMLS\\Desktop\\fb-marketplace\\test_json_data.py', reloading
+2025-08-24 17:59:02,903 - werkzeug - INFO -  * Restarting with stat
+2025-08-24 17:59:04,116 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-24 17:59:04,116 - core.price_monitor - INFO - Price Change Monitor initialized
+2025-08-24 17:59:04,116 - core.notification_monitor - INFO - Notification Monitor initialized
+2025-08-24 17:59:04,117 - web.app - INFO - Browser notification monitoring is available - use dashboard to start manually
+2025-08-24 17:59:04,122 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-24 17:59:04,146 - werkzeug - WARNING -  * Debugger is active!
+2025-08-24 17:59:04,152 - werkzeug - INFO -  * Debugger PIN: 765-752-686
+2025-08-24 17:59:05,907 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 17:59:05] "GET /api/events HTTP/1.1" 200 -
+2025-08-24 17:59:08,617 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 17:59:08] "GET /api/events HTTP/1.1" 200 -
+2025-08-24 17:59:27,627 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 17:59:27] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 17:59:27,630 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 17:59:27] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 17:59:27,682 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-24 17:59:27,686 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-24 17:59:27,715 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 17:59:27] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 17:59:27,816 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 17:59:27] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:00:27,634 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:00:27] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:00:27,639 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:00:27] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:00:27,640 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:00:27] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:00:27,648 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:00:27] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:01:27,613 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:01:27] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:01:27,615 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:01:27] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:01:27,650 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:01:27] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:01:27,651 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:01:27] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:01:45,009 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-24 18:01:45,009 - core.price_monitor - INFO - Price Change Monitor initialized
+2025-08-24 18:01:45,009 - core.notification_monitor - INFO - Notification Monitor initialized
+2025-08-24 18:01:45,009 - web.app - INFO - Browser notification monitoring is available - use dashboard to start manually
+2025-08-24 18:01:45,015 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-24 18:01:45,063 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-08-24 18:01:45,064 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-24 18:01:45,067 - werkzeug - INFO -  * Restarting with stat
+2025-08-24 18:01:45,866 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-24 18:01:45,866 - core.price_monitor - INFO - Price Change Monitor initialized
+2025-08-24 18:01:45,866 - core.notification_monitor - INFO - Notification Monitor initialized
+2025-08-24 18:01:45,866 - web.app - INFO - Browser notification monitoring is available - use dashboard to start manually
+2025-08-24 18:01:45,873 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-24 18:01:45,881 - werkzeug - WARNING -  * Debugger is active!
+2025-08-24 18:01:45,885 - werkzeug - INFO -  * Debugger PIN: 765-752-686
+2025-08-24 18:01:48,342 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:01:48] "GET / HTTP/1.1" 200 -
+2025-08-24 18:01:48,476 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:01:48] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:01:48,476 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:01:48] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:01:48,477 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:01:48] "GET /api/events HTTP/1.1" 200 -
+2025-08-24 18:01:48,477 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:01:48] "GET /api/monitoring/status HTTP/1.1" 200 -
+2025-08-24 18:01:48,517 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-24 18:01:48,538 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:01:48] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:01:48,589 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:01:48] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:01:50,742 - core.scheduler - INFO - Starting custom deep scraping job for: iphone 16
+2025-08-24 18:01:50,742 - core.scheduler - INFO - Starting deep scraping job for: iphone 16
+2025-08-24 18:01:50,745 - core.scraper - INFO - Starting deep scrape for: iphone 16 (max 10 products)
+2025-08-24 18:01:50,842 - WDM - INFO - ====== WebDriver manager ======
+2025-08-24 18:01:51,630 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-24 18:01:52,040 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-24 18:01:52,807 - WDM - INFO - Driver [C:\Users\PMLS\.wdm\drivers\chromedriver\win64\139.0.7258.138\chromedriver-win32/THIRD_PARTY_NOTICES.chromedriver] found in cache
+2025-08-24 18:01:52,883 - core.scraper - WARNING - webdriver-manager failed: [WinError 193] %1 is not a valid Win32 application, trying default Chrome setup
+2025-08-24 18:01:54,585 - core.scraper - INFO - Chrome WebDriver initialized successfully
+2025-08-24 18:01:54,585 - core.scraper - INFO - Starting Facebook login...
+2025-08-24 18:02:18,482 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:02:18] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:02:18,483 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:02:18] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:02:18,508 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:02:18] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:02:18,541 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:02:18] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:02:47,024 - core.scraper - INFO - Successfully logged in to Facebook
+2025-08-24 18:02:47,024 - core.scraper - INFO - Navigating to Facebook Marketplace with search: iphone 16
+2025-08-24 18:02:47,024 - core.scraper - INFO - Opening marketplace URL: https://www.facebook.com/marketplace
+2025-08-24 18:02:48,487 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:02:48] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:02:48,489 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:02:48] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:02:48,506 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-24 18:02:48,522 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:02:48] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:02:48,591 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:02:48] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:02:55,330 - core.scraper - INFO - Navigating to custom search: https://www.facebook.com/marketplace/stockholm/search/?query=iphone%2016
+2025-08-24 18:03:11,156 - core.scraper - INFO - Successfully navigated to Marketplace with search: iphone 16
+2025-08-24 18:03:11,156 - core.scraper - INFO - Finding product cards for deep scraping...
+2025-08-24 18:03:14,167 - core.scraper - INFO - Found 13 marketplace item links
+2025-08-24 18:03:14,379 - core.scraper - INFO - Prepared 13 product cards for deep scraping
+2025-08-24 18:03:14,380 - core.scraper - INFO - Found 13 product cards, will deep scrape first 10
+2025-08-24 18:03:14,380 - core.scraper - INFO - Deep scraping product 1/10: SEK13,000
+iphone 16 16 pro 16 pro max helt ny i ka...
+2025-08-24 18:03:14,384 - core.scraper - INFO - Navigating to product page: SEK13,000
+iphone 16 16 pro 16 pro max helt ny i ka...
+2025-08-24 18:03:18,476 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:03:18] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:03:18,479 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:03:18] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:03:18,535 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:03:18] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:03:18,536 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:03:18] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:03:26,076 - core.scraper - INFO - Looking for 'See Details' button...
+2025-08-24 18:03:30,155 - core.scraper - INFO - Using profile link as 'See details' button
+2025-08-24 18:03:30,165 - core.scraper - INFO - Clicking 'See details' button: Seller details
+2025-08-24 18:03:48,504 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:03:48] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:03:48,507 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:03:48] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:03:48,540 - core.json_manager - ERROR - Failed to load JSON data: Expecting ':' delimiter: line 1048 column 24 (char 48151)
+2025-08-24 18:03:48,547 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:03:48] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:03:48,587 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:03:48] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:04:14,790 - core.scraper - INFO - Navigated to new page, going back...
+2025-08-24 18:04:18,483 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:04:18] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:04:18,486 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:04:18] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:04:18,487 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-24 18:04:18,498 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:04:18] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:04:18,547 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:04:18] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:04:47,670 - core.scraper - ERROR - Failed to save individual report: name 'os' is not defined
+2025-08-24 18:04:47,670 - core.scraper - INFO - Navigating back to search results...
+2025-08-24 18:04:48,504 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:04:48] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:04:48,506 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:04:48] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:04:48,544 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-24 18:04:48,556 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:04:48] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:04:48,608 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:04:48] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:04:51,729 - core.json_manager - INFO - Cleaned up 69 old products and 0 old sessions
+2025-08-24 18:04:51,729 - core.json_manager - WARNING - Skipping product with invalid title: 'SEK13,000
+iphone 16 16 pro 16 pro max helt ny i kartong kvitto och garanti vi är affär
+Stockholm, AB'
+2025-08-24 18:04:51,731 - core.json_manager - INFO - Batch operation completed: 0 added, 0 duplicates, 0 errors
+2025-08-24 18:04:51,970 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:04:51] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:04:51,970 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:04:51] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:04:57,396 - core.scraper - INFO - Deep scraping product 2/10: SEK9,000
+Iphone 16 pro max 512gb
+Stockholm, AB...
+2025-08-24 18:04:57,403 - core.scraper - INFO - Navigating to product page: SEK9,000
+Iphone 16 pro max 512gb
+Stockholm, AB...
+2025-08-24 18:05:09,192 - core.scraper - INFO - Looking for 'See Details' button...
+2025-08-24 18:05:13,407 - core.scraper - INFO - Using profile link as 'See details' button
+2025-08-24 18:05:13,418 - core.scraper - INFO - Clicking 'See details' button: Seller details
+2025-08-24 18:05:18,486 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:05:18] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:05:18,489 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:05:18] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:05:18,505 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:05:18] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:05:18,506 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:05:18] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:05:48,482 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:05:48] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:05:48,483 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:05:48] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:05:48,496 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:05:48] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:05:48,498 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:05:48] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:05:58,046 - core.scraper - INFO - Navigated to new page, going back...
+2025-08-24 18:06:18,479 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:06:18] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:06:18,480 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:06:18] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:06:18,488 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:06:18] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:06:18,488 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:06:18] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:06:32,214 - core.scraper - ERROR - Failed to save individual report: name 'os' is not defined
+2025-08-24 18:06:32,214 - core.scraper - INFO - Navigating back to search results...
+2025-08-24 18:06:36,153 - core.json_manager - WARNING - Skipping product with invalid title: 'SEK9,000
+Iphone 16 pro max 512gb
+Stockholm, AB'
+2025-08-24 18:06:36,155 - core.json_manager - INFO - Batch operation completed: 0 added, 0 duplicates, 0 errors
+2025-08-24 18:06:36,240 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:06:36] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:06:36,242 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:06:36] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:06:37,136 - core.scraper - INFO - Deep scraping product 3/10: SEK780
+iPhone 16 Pro Max 256gb (ATu0026TCricket)
+J...
+2025-08-24 18:06:39,530 - core.scraper - INFO - Navigating to product page: SEK780
+iPhone 16 Pro Max 256gb (ATu0026TCricket)
+J...
+2025-08-24 18:06:45,664 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:06:45] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:06:45,665 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:06:45] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:06:45,677 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:06:45] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:06:45,677 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-24 18:06:45,688 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:06:45] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:06:51,738 - core.scraper - INFO - Looking for 'See Details' button...
+2025-08-24 18:06:56,652 - core.scraper - INFO - Using profile link as 'See details' button
+2025-08-24 18:06:56,665 - core.scraper - INFO - Clicking 'See details' button: Seller details
+2025-08-24 18:07:15,663 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:07:15] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:07:15,664 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:07:15] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:07:15,664 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:07:15] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:07:15,665 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:07:15] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:07:39,998 - core.scraper - INFO - Navigated to new page, going back...
+2025-08-24 18:07:45,677 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:07:45] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:07:45,679 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:07:45] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:07:45,692 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:07:45] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:07:45,716 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:07:45] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:08:11,240 - core.scraper - ERROR - Failed to save individual report: name 'os' is not defined
+2025-08-24 18:08:11,240 - core.scraper - INFO - Navigating back to search results...
+2025-08-24 18:08:15,669 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:08:15] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:08:15,670 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:08:15] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:08:15,674 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:08:15] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:08:15,675 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:08:15] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:08:16,534 - core.json_manager - WARNING - Skipping product with invalid title: 'SEK780
+iPhone 16 Pro Max 256gb (ATu0026TCricket)
+Jakobsberg, AB'
+2025-08-24 18:08:16,537 - core.json_manager - INFO - Batch operation completed: 0 added, 0 duplicates, 0 errors
+2025-08-24 18:08:16,594 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:08:16] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:08:16,595 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:08:16] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:08:23,018 - core.scraper - INFO - Deep scraping product 4/10: SEK780
+Seeing iPhone 16 pro max 256 gb
+Stockholm, ...
+2025-08-24 18:08:23,029 - core.scraper - INFO - Navigating to product page: SEK780
+Seeing iPhone 16 pro max 256 gb
+Stockholm, ...
+2025-08-24 18:08:35,623 - core.scraper - INFO - Looking for 'See Details' button...
+2025-08-24 18:08:39,855 - core.scraper - INFO - Using profile link as 'See details' button
+2025-08-24 18:08:39,866 - core.scraper - INFO - Clicking 'See details' button: Seller details
+2025-08-24 18:08:45,679 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:08:45] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:08:45,680 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:08:45] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:08:45,687 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:08:45] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:08:45,687 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:08:45] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:09:15,673 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:09:15] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:09:15,675 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:09:15] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:09:15,686 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:09:15] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:09:15,686 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-24 18:09:15,719 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:09:15] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:09:24,103 - core.scraper - INFO - Navigated to new page, going back...
+2025-08-24 18:09:45,680 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:09:45] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:09:45,683 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:09:45] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:09:45,684 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-24 18:09:45,685 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:09:45] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:09:45,711 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:09:45] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:09:57,398 - core.scraper - ERROR - Failed to save individual report: name 'os' is not defined
+2025-08-24 18:09:57,399 - core.scraper - INFO - Navigating back to search results...
+2025-08-24 18:10:02,340 - core.json_manager - WARNING - Skipping product with invalid title: 'SEK780
+Seeing iPhone 16 pro max 256 gb
+Stockholm, AB'
+2025-08-24 18:10:02,341 - core.json_manager - INFO - Batch operation completed: 0 added, 0 duplicates, 0 errors
+2025-08-24 18:10:02,391 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:10:02] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:10:02,392 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:10:02] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:10:08,393 - core.scraper - INFO - Deep scraping product 5/10: SEK4,800
+Iphone 16 plus
+Stockholm, AB...
+2025-08-24 18:10:08,407 - core.scraper - INFO - Navigating to product page: SEK4,800
+Iphone 16 plus
+Stockholm, AB...
+2025-08-24 18:10:15,671 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:10:15] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:10:15,673 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:10:15] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:10:15,691 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:10:15] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:10:15,695 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:10:15] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:10:19,249 - core.scraper - INFO - Looking for 'See Details' button...
+2025-08-24 18:10:23,439 - core.scraper - INFO - Using profile link as 'See details' button
+2025-08-24 18:10:23,465 - core.scraper - INFO - Clicking 'See details' button: Seller details
+2025-08-24 18:10:45,672 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:10:45] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:10:45,673 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:10:45] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:10:45,683 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-24 18:10:45,684 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:10:45] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:10:45,710 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:10:45] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:11:08,223 - core.scraper - INFO - Navigated to new page, going back...
+2025-08-24 18:11:15,680 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:11:15] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:11:15,684 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:11:15] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:11:15,686 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-24 18:11:15,687 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:11:15] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:11:15,732 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:11:15] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:11:40,972 - core.scraper - ERROR - Failed to save individual report: name 'os' is not defined
+2025-08-24 18:11:40,973 - core.scraper - INFO - Navigating back to search results...
+2025-08-24 18:11:45,672 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:11:45] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:11:45,675 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:11:45] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:11:45,677 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:11:45] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:11:45,709 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:11:45] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:11:47,787 - core.json_manager - WARNING - Skipping product with invalid title: 'SEK4,800
+Iphone 16 plus
+Stockholm, AB'
+2025-08-24 18:11:47,792 - core.json_manager - INFO - Batch operation completed: 0 added, 0 duplicates, 0 errors
+2025-08-24 18:11:47,836 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:11:47] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:11:47,864 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:11:47] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:11:54,564 - core.scraper - INFO - Deep scraping product 6/10: SEK9,000
+iPhone 16 PRO.
+Hagalund, AB...
+2025-08-24 18:11:54,570 - core.scraper - INFO - Navigating to product page: SEK9,000
+iPhone 16 PRO.
+Hagalund, AB...
+2025-08-24 18:12:06,352 - core.scraper - INFO - Looking for 'See Details' button...
+2025-08-24 18:12:10,365 - core.scraper - INFO - Using profile link as 'See details' button
+2025-08-24 18:12:10,376 - core.scraper - INFO - Clicking 'See details' button: Seller details
+2025-08-24 18:12:15,669 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:12:15] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:12:15,671 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:12:15] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:12:15,671 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:12:15] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:12:15,703 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:12:15] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:12:45,670 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:12:45] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:12:45,672 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:12:45] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:12:45,675 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:12:45] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:12:45,675 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-24 18:12:45,715 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:12:45] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:12:55,269 - core.scraper - INFO - Navigated to new page, going back...
+2025-08-24 18:13:15,665 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:13:15] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:13:15,666 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:13:15] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:13:15,668 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:13:15] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:13:15,669 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:13:15] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:13:27,910 - core.scraper - ERROR - Failed to save individual report: name 'os' is not defined
+2025-08-24 18:13:27,910 - core.scraper - INFO - Navigating back to search results...
+2025-08-24 18:13:32,562 - core.json_manager - WARNING - Skipping product with invalid title: 'SEK9,000
+iPhone 16 PRO.
+Hagalund, AB'
+2025-08-24 18:13:32,564 - core.json_manager - INFO - Batch operation completed: 0 added, 0 duplicates, 0 errors
+2025-08-24 18:13:32,632 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:13:32] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:13:32,634 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:13:32] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:13:36,081 - core.scraper - INFO - Deep scraping product 7/10: SEK6,790
+iPhone 16
+Södertälje, AB...
+2025-08-24 18:13:36,088 - core.scraper - INFO - Navigating to product page: SEK6,790
+iPhone 16
+Södertälje, AB...
+2025-08-24 18:13:45,682 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:13:45] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:13:45,684 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-24 18:13:45,685 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:13:45] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:13:45,688 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:13:45] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:13:45,721 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:13:45] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:13:47,857 - core.scraper - INFO - Looking for 'See Details' button...
+2025-08-24 18:13:51,764 - core.scraper - INFO - Using profile link as 'See details' button
+2025-08-24 18:13:51,777 - core.scraper - INFO - Clicking 'See details' button: Seller details
+2025-08-24 18:14:15,677 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:14:15] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:14:15,680 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:14:15] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:14:15,682 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:14:15] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:14:15,687 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:14:15] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:14:35,577 - core.scraper - INFO - Navigated to new page, going back...
+2025-08-24 18:14:45,673 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:14:45] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:14:45,674 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:14:45] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:14:45,676 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-24 18:14:45,680 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:14:45] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:14:45,703 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:14:45] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:15:07,611 - core.scraper - ERROR - Failed to save individual report: name 'os' is not defined
+2025-08-24 18:15:07,611 - core.scraper - INFO - Navigating back to search results...
+2025-08-24 18:15:12,412 - core.json_manager - WARNING - Skipping product with invalid title: 'SEK6,790
+iPhone 16
+Södertälje, AB'
+2025-08-24 18:15:12,419 - core.json_manager - INFO - Batch operation completed: 0 added, 0 duplicates, 0 errors
+2025-08-24 18:15:12,496 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:15:12] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:15:12,510 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:15:12] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:15:15,672 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:15:15] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:15:15,674 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:15:15] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:15:15,676 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-24 18:15:15,682 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:15:15] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:15:15,715 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:15:15] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:15:16,579 - core.scraper - INFO - Deep scraping product 8/10: SEK8,000
+Säljer öppnad iPhone 16 128 gb i nyskick....
+2025-08-24 18:15:16,587 - core.scraper - INFO - Navigating to product page: SEK8,000
+Säljer öppnad iPhone 16 128 gb i nyskick....
+2025-08-24 18:15:28,693 - core.scraper - INFO - Looking for 'See Details' button...
+2025-08-24 18:15:32,810 - core.scraper - INFO - Using profile link as 'See details' button
+2025-08-24 18:15:32,821 - core.scraper - INFO - Clicking 'See details' button: Seller details
+2025-08-24 18:15:45,670 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:15:45] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:15:45,673 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:15:45] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:15:45,674 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:15:45] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:15:45,674 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:15:45] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:16:15,661 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:16:15] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:16:15,662 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:16:15] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:16:15,670 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:16:15] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:16:15,671 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:16:15] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:16:17,634 - core.scraper - INFO - Navigated to new page, going back...
+2025-08-24 18:16:45,663 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:16:45] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:16:45,664 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:16:45] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:16:45,672 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:16:45] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:16:45,672 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:16:45] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:16:50,131 - core.scraper - ERROR - Failed to save individual report: name 'os' is not defined
+2025-08-24 18:16:50,132 - core.scraper - INFO - Navigating back to search results...
+2025-08-24 18:16:54,819 - core.json_manager - WARNING - Skipping product with invalid title: 'SEK8,000
+Säljer öppnad iPhone 16 128 gb i nyskick.
+Stockholm, AB'
+2025-08-24 18:16:54,823 - core.json_manager - INFO - Batch operation completed: 0 added, 0 duplicates, 0 errors
+2025-08-24 18:16:54,854 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:16:54] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:16:54,870 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:16:54] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:17:00,340 - core.scraper - INFO - Deep scraping product 9/10: SEK850
+Iphone 16 Pro Max 256 GB
+Stockholm, AB...
+2025-08-24 18:17:00,357 - core.scraper - INFO - Navigating to product page: SEK850
+Iphone 16 Pro Max 256 GB
+Stockholm, AB...
+2025-08-24 18:17:13,348 - core.scraper - INFO - Looking for 'See Details' button...
+2025-08-24 18:17:15,663 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:17:15] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:17:15,665 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:17:15] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:17:15,665 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-24 18:17:15,669 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:17:15] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:17:15,684 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:17:15] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:17:17,511 - core.scraper - INFO - Using profile link as 'See details' button
+2025-08-24 18:17:17,521 - core.scraper - INFO - Clicking 'See details' button: Seller details
+2025-08-24 18:17:45,686 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:17:45] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:17:45,688 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:17:45] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:17:45,691 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-24 18:17:45,692 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:17:45] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:17:45,731 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:17:45] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:18:02,565 - core.scraper - INFO - Navigated to new page, going back...
+2025-08-24 18:18:15,667 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:18:15] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:18:15,669 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:18:15] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:18:15,670 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-24 18:18:15,671 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:18:15] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:18:15,700 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:18:15] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:18:35,280 - core.scraper - ERROR - Failed to save individual report: name 'os' is not defined
+2025-08-24 18:18:35,280 - core.scraper - INFO - Navigating back to search results...
+2025-08-24 18:18:40,158 - core.json_manager - WARNING - Skipping product with invalid title: 'SEK850
+Iphone 16 Pro Max 256 GB
+Stockholm, AB'
+2025-08-24 18:18:40,161 - core.json_manager - INFO - Batch operation completed: 0 added, 0 duplicates, 0 errors
+2025-08-24 18:18:40,201 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:18:40] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:18:40,216 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:18:40] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:18:44,735 - core.scraper - INFO - Deep scraping product 10/10: SEK9,000
+iPhone 16 pro max
+Saltsjö-Boo, AB...
+2025-08-24 18:18:44,757 - core.scraper - INFO - Navigating to product page: SEK9,000
+iPhone 16 pro max
+Saltsjö-Boo, AB...
+2025-08-24 18:18:45,672 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:18:45] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:18:45,673 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:18:45] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:18:45,674 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:18:45] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:18:45,674 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:18:45] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:18:57,042 - core.scraper - INFO - Looking for 'See Details' button...
+2025-08-24 18:19:01,106 - core.scraper - INFO - Using profile link as 'See details' button
+2025-08-24 18:19:01,116 - core.scraper - INFO - Clicking 'See details' button: Seller details
+2025-08-24 18:19:15,669 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:19:15] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:19:15,671 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:19:15] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:19:15,679 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:19:15] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:19:15,679 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:19:15] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:19:44,436 - core.scraper - INFO - Navigated to new page, going back...
+2025-08-24 18:19:45,672 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:19:45] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:19:45,673 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:19:45] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:19:45,681 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-24 18:19:45,681 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:19:45] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:19:45,704 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:19:45] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:20:15,676 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:20:15] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:20:15,677 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:20:15] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:20:15,679 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:20:15] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:20:15,679 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:20:15] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:20:17,010 - core.scraper - ERROR - Failed to save individual report: name 'os' is not defined
+2025-08-24 18:20:17,010 - core.scraper - INFO - Navigating back to search results...
+2025-08-24 18:20:21,838 - core.json_manager - WARNING - Skipping product with invalid title: 'SEK9,000
+iPhone 16 pro max
+Saltsjö-Boo, AB'
+2025-08-24 18:20:21,842 - core.json_manager - INFO - Batch operation completed: 0 added, 0 duplicates, 0 errors
+2025-08-24 18:20:21,849 - core.scraper - ERROR - Failed to save deep scrape results: name 'os' is not defined
+2025-08-24 18:20:21,850 - core.scraper - INFO - Deep scraping completed: 10 products with comprehensive data
+2025-08-24 18:20:21,850 - core.scheduler - INFO - Custom deep scraping job completed: 10 products scraped
+2025-08-24 18:20:21,942 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:20:21] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:20:21,944 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:20:21] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:20:21,959 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:20:21] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:20:21,967 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:20:21] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:20:22,001 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:20:22] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:20:22,069 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:20:22] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:20:28,508 - core.scheduler - INFO - Custom deep scraping completed: {'success': True, 'listings_found': 10, 'duration_seconds': 1117.8, 'start_time': '2025-08-24T18:01:50.742787', 'end_time': '2025-08-24T18:20:28.506809', 'search_query': 'iphone 16', 'scraping_method': 'deep'}
+2025-08-24 18:20:28,512 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:20:28] "POST /api/scrape/custom HTTP/1.1" 200 -
+2025-08-24 18:20:28,541 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:20:28] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:20:28,551 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:20:28] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:20:28,552 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:20:28] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:20:28,554 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:20:28] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:20:45,673 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:20:45] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:20:45,674 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:20:45] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:20:45,694 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-24 18:20:45,697 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:20:45] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:20:45,764 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:20:45] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:20:46,621 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:20:46] "POST /api/scheduler/create HTTP/1.1" 200 -
+2025-08-24 18:20:46,651 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:20:46] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:20:52,166 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:20:52] "POST /api/scheduler/create HTTP/1.1" 200 -
+2025-08-24 18:20:52,185 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:20:52] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:20:55,138 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:20:55] "DELETE /api/scheduler/1 HTTP/1.1" 200 -
+2025-08-24 18:20:55,150 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:20:55] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:20:56,982 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:20:56] "DELETE /api/scheduler/2 HTTP/1.1" 200 -
+2025-08-24 18:20:56,986 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:20:56] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:21:15,798 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:21:15] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:21:15,798 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:21:15] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:21:15,799 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:21:15] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:21:15,799 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:21:15] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:21:45,818 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:21:45] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:21:45,820 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:21:45] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:21:45,829 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-24 18:21:45,830 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:21:45] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:21:45,840 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:21:45] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:22:15,804 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:22:15] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:22:15,807 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:22:15] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:22:15,810 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:22:15] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:22:15,818 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:22:15] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:29:24,715 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-24 18:29:24,715 - core.price_monitor - INFO - Price Change Monitor initialized
+2025-08-24 18:29:24,715 - core.notification_monitor - INFO - Notification Monitor initialized
+2025-08-24 18:29:24,715 - web.app - INFO - Browser notification monitoring is available - use dashboard to start manually
+2025-08-24 18:29:24,721 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-24 18:29:24,772 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-08-24 18:29:24,773 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-24 18:29:24,776 - werkzeug - INFO -  * Restarting with stat
+2025-08-24 18:29:25,514 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-24 18:29:25,514 - core.price_monitor - INFO - Price Change Monitor initialized
+2025-08-24 18:29:25,515 - core.notification_monitor - INFO - Notification Monitor initialized
+2025-08-24 18:29:25,515 - web.app - INFO - Browser notification monitoring is available - use dashboard to start manually
+2025-08-24 18:29:25,521 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-24 18:29:25,534 - werkzeug - WARNING -  * Debugger is active!
+2025-08-24 18:29:25,540 - werkzeug - INFO -  * Debugger PIN: 765-752-686
+2025-08-24 18:29:27,613 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:29:27] "GET / HTTP/1.1" 200 -
+2025-08-24 18:29:27,817 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:29:27] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:29:27,820 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:29:27] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:29:27,826 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:29:27] "GET /api/monitoring/status HTTP/1.1" 200 -
+2025-08-24 18:29:27,860 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-24 18:29:27,861 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:29:27] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:29:27,880 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:29:27] "GET /api/events HTTP/1.1" 200 -
+2025-08-24 18:29:27,913 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:29:27] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:29:37,294 - core.scheduler - INFO - Starting custom deep scraping job for: iphone 11
+2025-08-24 18:29:37,294 - core.scheduler - INFO - Starting deep scraping job for: iphone 11
+2025-08-24 18:29:37,297 - core.scraper - INFO - Starting deep scrape for: iphone 11 (max 10 products)
+2025-08-24 18:29:37,469 - WDM - INFO - ====== WebDriver manager ======
+2025-08-24 18:29:38,540 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-24 18:29:39,097 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-24 18:29:39,546 - WDM - INFO - Driver [C:\Users\PMLS\.wdm\drivers\chromedriver\win64\139.0.7258.138\chromedriver-win32/THIRD_PARTY_NOTICES.chromedriver] found in cache
+2025-08-24 18:29:39,610 - core.scraper - WARNING - webdriver-manager failed: [WinError 193] %1 is not a valid Win32 application, trying default Chrome setup
+2025-08-24 18:29:42,163 - core.scraper - INFO - Chrome WebDriver initialized successfully
+2025-08-24 18:29:42,163 - core.scraper - INFO - Starting Facebook login...
+2025-08-24 18:29:57,840 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:29:57] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:29:57,843 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:29:57] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:29:57,851 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:29:57] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:29:57,854 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:29:57] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:30:27,843 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:30:27] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:30:27,845 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:30:27] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:30:27,849 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:30:27] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:30:27,850 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:30:27] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:30:35,021 - core.scraper - INFO - Successfully logged in to Facebook
+2025-08-24 18:30:35,022 - core.scraper - INFO - Navigating to Facebook Marketplace with search: iphone 11
+2025-08-24 18:30:35,022 - core.scraper - INFO - Opening marketplace URL: https://www.facebook.com/marketplace
+2025-08-24 18:30:44,197 - core.scraper - INFO - Navigating to custom search: https://www.facebook.com/marketplace/stockholm/search/?query=iphone%2011
+2025-08-24 18:30:57,826 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:30:57] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:30:57,827 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:30:57] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:30:57,846 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:30:57] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:30:57,849 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:30:57] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:31:00,252 - core.scraper - INFO - Successfully navigated to Marketplace with search: iphone 11
+2025-08-24 18:31:00,252 - core.scraper - INFO - Finding product cards for deep scraping...
+2025-08-24 18:31:03,278 - core.scraper - INFO - Found 13 marketplace item links
+2025-08-24 18:31:03,644 - core.scraper - INFO - Prepared 13 product cards for deep scraping
+2025-08-24 18:31:03,644 - core.scraper - INFO - Found 13 product cards, will deep scrape first 10
+2025-08-24 18:31:03,645 - core.scraper - INFO - Deep scraping product 1/10: SEK1,200
+Iphone 11
+Älvsjö, AB...
+2025-08-24 18:31:03,648 - core.scraper - INFO - Navigating to product page: SEK1,200
+Iphone 11
+Älvsjö, AB...
+2025-08-24 18:31:13,421 - core.scraper - INFO - Looking for 'See Details' button...
+2025-08-24 18:31:17,703 - core.scraper - INFO - Using profile link as 'See details' button
+2025-08-24 18:31:17,717 - core.scraper - INFO - Clicking 'See details' button: Seller details
+2025-08-24 18:31:27,821 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:31:27] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:31:27,822 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:31:27] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:31:27,840 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-24 18:31:27,843 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:31:27] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:31:27,884 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:31:27] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:31:57,842 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:31:57] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:31:57,842 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-24 18:31:57,843 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:31:57] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:31:57,844 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:31:57] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:31:57,856 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:31:57] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:32:02,701 - core.scraper - INFO - Navigated to new page, going back...
+2025-08-24 18:32:27,845 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:32:27] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:32:27,846 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:32:27] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:32:27,848 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:32:27] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:32:27,884 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:32:27] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:32:35,294 - core.scraper - ERROR - Failed to save individual report: name 'os' is not defined
+2025-08-24 18:32:35,294 - core.scraper - INFO - Navigating back to search results...
+2025-08-24 18:32:40,544 - core.json_manager - WARNING - Skipping product with invalid title: 'SEK1,200
+Iphone 11
+Älvsjö, AB'
+2025-08-24 18:32:40,545 - core.json_manager - INFO - Batch operation completed: 0 added, 0 duplicates, 0 errors
+2025-08-24 18:32:40,592 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:32:40] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:32:40,615 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:32:40] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:32:44,446 - core.scraper - INFO - Deep scraping product 2/10: SEK1,800
+iPhone 11 128gb
+Stockholm, AB...
+2025-08-24 18:32:44,456 - core.scraper - INFO - Navigating to product page: SEK1,800
+iPhone 11 128gb
+Stockholm, AB...
+2025-08-24 18:32:56,274 - core.scraper - INFO - Looking for 'See Details' button...
+2025-08-24 18:32:57,835 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:32:57] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:32:57,836 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:32:57] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:32:57,837 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:32:57] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:32:57,852 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:32:57] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:33:00,448 - core.scraper - INFO - Using profile link as 'See details' button
+2025-08-24 18:33:00,459 - core.scraper - INFO - Clicking 'See details' button: Seller details
+2025-08-24 18:33:27,840 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:33:27] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:33:27,843 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:33:27] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:33:27,845 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:33:27] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:33:27,848 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:33:27] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:33:43,924 - core.scraper - INFO - Navigated to new page, going back...
+2025-08-24 18:33:57,842 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:33:57] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:33:57,844 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:33:57] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:33:57,869 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:33:57] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:33:57,869 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-24 18:33:57,892 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:33:57] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:34:16,772 - core.scraper - ERROR - Failed to save individual report: name 'os' is not defined
+2025-08-24 18:34:16,772 - core.scraper - INFO - Navigating back to search results...
+2025-08-24 18:34:24,454 - core.json_manager - WARNING - Skipping product with invalid title: 'SEK1,800
+iPhone 11 128gb
+Stockholm, AB'
+2025-08-24 18:34:24,456 - core.json_manager - INFO - Batch operation completed: 0 added, 0 duplicates, 0 errors
+2025-08-24 18:34:24,503 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-24 18:34:24,503 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:34:24] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:34:24,531 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:34:24] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:34:27,830 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:34:27] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:34:27,832 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:34:27] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:34:27,833 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:34:27] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:34:27,847 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:34:27] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:34:39,715 - core.scraper - INFO - Looking for 'See Details' button...
+2025-08-24 18:34:43,749 - core.scraper - INFO - Using profile link as 'See details' button
+2025-08-24 18:34:43,759 - core.scraper - INFO - Clicking 'See details' button: Seller details
+2025-08-24 18:34:57,833 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:34:57] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:34:57,836 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:34:57] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:34:57,839 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-24 18:34:57,841 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:34:57] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:34:57,881 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:34:57] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:35:28,113 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:35:28] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:35:28,114 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:35:28] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:35:28,115 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:35:28] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:35:28,116 - core.scraper - INFO - Navigated to new page, going back...
+2025-08-24 18:35:28,116 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:35:28] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:35:57,835 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:35:57] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:35:57,836 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:35:57] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:35:57,839 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:35:57] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:35:57,843 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:35:57] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:36:00,066 - core.scraper - ERROR - Failed to save individual report: name 'os' is not defined
+2025-08-24 18:36:00,067 - core.scraper - INFO - Navigating back to search results...
+2025-08-24 18:36:04,062 - core.json_manager - INFO - Batch operation completed: 0 added, 0 duplicates, 0 errors
+2025-08-24 18:36:04,102 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:36:04] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:36:04,125 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:36:04] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:36:07,405 - core.scraper - INFO - Deep scraping product 4/10: SEK1,000
+Iphone 11 64GB
+Råsunda, AB...
+2025-08-24 18:36:07,412 - core.scraper - INFO - Navigating to product page: SEK1,000
+Iphone 11 64GB
+Råsunda, AB...
+2025-08-24 18:36:22,991 - core.scraper - INFO - Looking for 'See Details' button...
+2025-08-24 18:36:26,986 - core.scraper - INFO - Using profile link as 'See details' button
+2025-08-24 18:36:26,998 - core.scraper - INFO - Clicking 'See details' button: Seller details
+2025-08-24 18:36:27,837 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:36:27] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:36:27,839 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:36:27] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:36:27,841 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:36:27] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:36:27,842 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:36:27] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:36:57,834 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:36:57] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:36:57,835 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:36:57] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:36:57,863 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-24 18:36:57,866 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:36:57] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:36:57,901 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:36:57] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:37:11,821 - core.scraper - INFO - Navigated to new page, going back...
+2025-08-24 18:37:27,836 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:37:27] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:37:27,837 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:37:27] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:37:27,837 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:37:27] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:37:27,840 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:37:27] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:37:43,609 - core.scraper - ERROR - Failed to save individual report: name 'os' is not defined
+2025-08-24 18:37:43,609 - core.scraper - INFO - Navigating back to search results...
+2025-08-24 18:37:49,707 - core.json_manager - WARNING - Skipping product with invalid title: 'SEK1,000
+Iphone 11 64GB
+Råsunda, AB'
+2025-08-24 18:37:49,709 - core.json_manager - INFO - Batch operation completed: 0 added, 0 duplicates, 0 errors
+2025-08-24 18:37:49,758 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:37:49] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:37:49,774 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:37:49] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:37:55,075 - core.scraper - INFO - Deep scraping product 5/10: SEK1,017
+Apple iPhone 11 Pro Max – Olåst
+Stockholm...
+2025-08-24 18:37:55,087 - core.scraper - INFO - Navigating to product page: SEK1,017
+Apple iPhone 11 Pro Max – Olåst
+Stockholm...
+2025-08-24 18:37:57,841 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:37:57] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:37:57,843 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:37:57] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:37:57,844 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:37:57] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:37:57,845 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:37:57] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:38:06,583 - core.scraper - INFO - Looking for 'See Details' button...
+2025-08-24 18:38:10,935 - core.scraper - INFO - Using profile link as 'See details' button
+2025-08-24 18:38:10,948 - core.scraper - INFO - Clicking 'See details' button: Seller details
+2025-08-24 18:38:27,844 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:38:27] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:38:27,846 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:38:27] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:38:27,867 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-24 18:38:27,868 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:38:27] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:38:27,895 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:38:27] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:38:55,027 - core.scraper - INFO - Navigated to new page, going back...
+2025-08-24 18:38:57,871 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-24 18:38:57,872 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:38:57] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:38:57,873 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:38:57] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:38:57,874 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:38:57] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:38:57,904 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:38:57] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:39:27,832 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:39:27] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:39:27,833 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:39:27] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:39:27,834 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:39:27] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:39:27,834 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:39:27] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:39:28,354 - core.scraper - ERROR - Failed to save individual report: name 'os' is not defined
+2025-08-24 18:39:28,354 - core.scraper - INFO - Navigating back to search results...
+2025-08-24 18:39:32,153 - core.json_manager - WARNING - Skipping product with invalid title: 'SEK1,017
+Apple iPhone 11 Pro Max – Olåst
+Stockholm, AB'
+2025-08-24 18:39:32,156 - core.json_manager - INFO - Batch operation completed: 0 added, 0 duplicates, 0 errors
+2025-08-24 18:39:32,193 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-24 18:39:32,194 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:39:32] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:39:32,208 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:39:32] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:39:37,773 - core.scraper - INFO - Deep scraping product 6/10: SEK3,500
+iPhone 11
+Lidingö, AB...
+2025-08-24 18:39:37,785 - core.scraper - INFO - Navigating to product page: SEK3,500
+iPhone 11
+Lidingö, AB...
+2025-08-24 18:39:48,698 - core.scraper - INFO - Looking for 'See Details' button...
+2025-08-24 18:39:53,266 - core.scraper - INFO - Using profile link as 'See details' button
+2025-08-24 18:39:53,279 - core.scraper - INFO - Clicking 'See details' button: Seller details
+2025-08-24 18:39:57,845 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:39:57] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:39:57,847 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:39:57] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:39:57,850 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-24 18:39:57,853 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:39:57] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:39:57,887 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:39:57] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:40:27,836 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:40:27] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:40:27,839 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:40:27] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:40:27,845 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:40:27] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:40:27,848 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:40:27] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:40:37,277 - core.scraper - INFO - Navigated to new page, going back...
+2025-08-24 18:40:57,841 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:40:57] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:40:57,842 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:40:57] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:40:57,843 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:40:57] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:40:57,845 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:40:57] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:41:10,864 - core.scraper - ERROR - Failed to save individual report: name 'os' is not defined
+2025-08-24 18:41:10,864 - core.scraper - INFO - Navigating back to search results...
+2025-08-24 18:41:14,790 - core.json_manager - WARNING - Skipping product with invalid title: 'SEK3,500
+iPhone 11
+Lidingö, AB'
+2025-08-24 18:41:14,792 - core.json_manager - INFO - Batch operation completed: 0 added, 0 duplicates, 0 errors
+2025-08-24 18:41:14,831 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:41:14] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:41:14,844 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:41:14] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:41:17,980 - core.scraper - INFO - Deep scraping product 7/10: SEK950
+SEK1,100
+iPhone 11. 64 GB
+Nynäshamn, AB...
+2025-08-24 18:41:17,990 - core.scraper - INFO - Navigating to product page: SEK950
+SEK1,100
+iPhone 11. 64 GB
+Nynäshamn, AB...
+2025-08-24 18:41:27,832 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:41:27] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:41:27,835 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:41:27] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:41:27,839 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:41:27] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:41:27,842 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:41:27] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:41:30,297 - core.scraper - INFO - Looking for 'See Details' button...
+2025-08-24 18:41:34,378 - core.scraper - INFO - Using profile link as 'See details' button
+2025-08-24 18:41:34,391 - core.scraper - INFO - Clicking 'See details' button: Seller details
+2025-08-24 18:41:57,837 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:41:57] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:41:57,838 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:41:57] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:41:57,861 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:41:57] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:41:57,863 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:41:57] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:42:17,921 - core.scraper - INFO - Navigated to new page, going back...
+2025-08-24 18:42:27,835 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:42:27] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:42:27,837 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:42:27] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:42:27,838 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-24 18:42:27,840 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:42:27] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:42:27,878 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:42:27] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:42:49,560 - core.scraper - ERROR - Failed to save individual report: name 'os' is not defined
+2025-08-24 18:42:49,560 - core.scraper - INFO - Navigating back to search results...
+2025-08-24 18:42:53,657 - core.json_manager - WARNING - Skipping product with invalid title: 'SEK950
+SEK1,100
+iPhone 11. 64 GB
+Nynäshamn, AB'
+2025-08-24 18:42:53,660 - core.json_manager - INFO - Batch operation completed: 0 added, 0 duplicates, 0 errors
+2025-08-24 18:42:53,746 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:42:53] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:42:53,797 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:42:53] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:42:57,839 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:42:57] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:42:57,841 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:42:57] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:42:57,845 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:42:57] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:42:57,848 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:42:57] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:43:00,422 - core.scraper - INFO - Deep scraping product 8/10: SEK2,200
+iPhone 11
+Saltsjö-Boo, AB...
+2025-08-24 18:43:00,435 - core.scraper - INFO - Navigating to product page: SEK2,200
+iPhone 11
+Saltsjö-Boo, AB...
+2025-08-24 18:43:11,504 - core.scraper - INFO - Looking for 'See Details' button...
+2025-08-24 18:43:16,122 - core.scraper - INFO - Using profile link as 'See details' button
+2025-08-24 18:43:16,133 - core.scraper - INFO - Clicking 'See details' button: Seller details
+2025-08-24 18:43:27,831 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:43:27] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:43:27,832 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:43:27] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:43:27,846 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-24 18:43:27,848 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:43:27] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:43:27,889 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:43:27] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:43:57,850 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:43:57] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:43:57,854 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:43:57] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:43:57,856 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:43:57] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:43:57,893 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:43:57] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:44:00,287 - core.scraper - INFO - Navigated to new page, going back...
+2025-08-24 18:44:27,833 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:44:27] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:44:27,834 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:44:27] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:44:27,836 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:44:27] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:44:27,839 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:44:27] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:44:34,117 - core.scraper - ERROR - Failed to save individual report: name 'os' is not defined
+2025-08-24 18:44:34,118 - core.scraper - INFO - Navigating back to search results...
+2025-08-24 18:44:37,870 - core.json_manager - WARNING - Skipping product with invalid title: 'SEK2,200
+iPhone 11
+Saltsjö-Boo, AB'
+2025-08-24 18:44:37,872 - core.json_manager - INFO - Batch operation completed: 0 added, 0 duplicates, 0 errors
+2025-08-24 18:44:37,909 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:44:37] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:44:37,924 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:44:37] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:44:41,250 - core.scraper - INFO - Deep scraping product 9/10: $700
+SEK750
+iPhone 11
+Märsta, AB...
+2025-08-24 18:44:41,256 - core.scraper - INFO - Navigating to product page: $700
+SEK750
+iPhone 11
+Märsta, AB...
+2025-08-24 18:44:51,977 - core.scraper - INFO - Looking for 'See Details' button...
+2025-08-24 18:44:56,684 - core.scraper - INFO - Using profile link as 'See details' button
+2025-08-24 18:44:56,696 - core.scraper - INFO - Clicking 'See details' button: Seller details
+2025-08-24 18:44:57,824 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:44:57] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:44:57,825 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:44:57] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:44:57,828 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:44:57] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:44:57,829 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:44:57] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:45:27,825 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:45:27] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:45:27,826 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:45:27] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:45:27,840 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:45:27] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:45:27,841 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:45:27] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:45:40,747 - core.scraper - INFO - Navigated to new page, going back...
+2025-08-24 18:45:57,839 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:45:57] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:45:57,841 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:45:57] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:45:57,844 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:45:57] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:45:57,845 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:45:57] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:46:18,661 - core.scraper - ERROR - Failed to save individual report: name 'os' is not defined
+2025-08-24 18:46:18,662 - core.scraper - INFO - Navigating back to search results...
+2025-08-24 18:46:24,071 - core.json_manager - WARNING - Skipping product with invalid title: '$700
+SEK750
+iPhone 11
+Märsta, AB'
+2025-08-24 18:46:24,074 - core.json_manager - INFO - Batch operation completed: 0 added, 0 duplicates, 0 errors
+2025-08-24 18:46:24,190 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:46:24] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:46:24,192 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:46:24] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:46:27,835 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:46:27] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:46:27,838 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:46:27] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:46:27,872 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:46:27] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:46:27,874 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:46:27] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:46:29,362 - core.scraper - INFO - Deep scraping product 10/10: SEK2,500
+iPhone 11 pro
+Stockholm, AB...
+2025-08-24 18:46:29,397 - core.scraper - INFO - Navigating to product page: SEK2,500
+iPhone 11 pro
+Stockholm, AB...
+2025-08-24 18:46:43,949 - core.scraper - INFO - Looking for 'See Details' button...
+2025-08-24 18:46:55,197 - core.scraper - INFO - Using profile link as 'See details' button
+2025-08-24 18:46:55,240 - core.scraper - INFO - Clicking 'See details' button: Seller details
+2025-08-24 18:46:57,894 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:46:57] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:46:57,898 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:46:57] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:46:57,905 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:46:57] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:46:57,907 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:46:57] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:47:27,891 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:47:27] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:47:27,893 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:47:27] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:47:27,930 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:47:27] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:47:27,932 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:47:27] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:47:39,748 - core.scraper - INFO - Navigated to new page, going back...
+2025-08-24 18:47:57,838 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:47:57] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:47:57,841 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:47:57] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:47:57,869 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:47:57] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:47:57,872 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:47:57] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:48:23,869 - core.scraper - ERROR - Failed to save individual report: name 'os' is not defined
+2025-08-24 18:48:23,869 - core.scraper - INFO - Navigating back to search results...
+2025-08-24 18:48:27,891 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:27] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:48:27,895 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:27] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:48:27,943 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:27] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:48:27,950 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:27] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:48:29,007 - core.json_manager - WARNING - Skipping product with invalid title: 'SEK2,500
+iPhone 11 pro
+Stockholm, AB'
+2025-08-24 18:48:29,011 - core.json_manager - INFO - Batch operation completed: 0 added, 0 duplicates, 0 errors
+2025-08-24 18:48:29,040 - core.scraper - ERROR - Failed to save deep scrape results: name 'os' is not defined
+2025-08-24 18:48:29,041 - core.scraper - INFO - Deep scraping completed: 10 products with comprehensive data
+2025-08-24 18:48:29,043 - core.scheduler - INFO - Custom deep scraping job completed: 10 products scraped
+2025-08-24 18:48:29,080 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:29] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:48:29,092 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:29] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:48:29,170 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:29] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:48:29,245 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:29] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:48:29,247 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:29] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:48:29,265 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:29] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:48:35,897 - core.scheduler - INFO - Custom deep scraping completed: {'success': True, 'listings_found': 10, 'duration_seconds': 1138.6, 'start_time': '2025-08-24T18:29:37.294923', 'end_time': '2025-08-24T18:48:35.896271', 'search_query': 'iphone 11', 'scraping_method': 'deep'}
+2025-08-24 18:48:35,899 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:35] "POST /api/scrape/custom HTTP/1.1" 200 -
+2025-08-24 18:48:35,931 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:35] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:48:35,948 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-24 18:48:35,952 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:35] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:48:35,980 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:35] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:48:36,046 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:36] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:48:45,222 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:45] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:48:45,226 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:45] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:48:45,229 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:45] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:48:45,233 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:45] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:48:47,962 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:47] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:48:47,964 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:47] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:48:47,979 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:47] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:48:47,981 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:47] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:48:49,861 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:49] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:48:49,863 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:49] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:48:49,876 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-24 18:48:49,877 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:49] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:48:49,898 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:49] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:48:51,169 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:51] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:48:51,172 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:51] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:48:51,173 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:51] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:48:51,173 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-24 18:48:51,206 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:51] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:48:51,791 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:51] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:48:51,795 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:51] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:48:51,799 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:51] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:48:51,802 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:51] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:48:52,274 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:52] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:48:52,276 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:52] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:48:52,298 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:52] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:48:52,300 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:52] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:48:52,870 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:52] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:48:52,871 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:52] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:48:52,884 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:52] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:48:52,908 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:52] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:48:53,397 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:53] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:48:53,401 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:53] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:48:53,402 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:53] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:48:53,406 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:53] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:48:54,108 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:54] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:48:54,110 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:54] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:48:54,121 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:54] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:48:54,122 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:54] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:48:54,741 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:54] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:48:54,743 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:54] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:48:54,756 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-24 18:48:54,758 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:54] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:48:54,788 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:54] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:48:55,005 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:55] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:48:55,008 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:55] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:48:55,009 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:55] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:48:55,030 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:55] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:48:55,180 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:55] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:48:55,182 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:55] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:48:55,187 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:55] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:48:55,190 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:55] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:48:55,404 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:55] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:48:55,406 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:55] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:48:55,415 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:55] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:48:55,418 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:55] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:48:55,656 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:55] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:48:55,658 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:55] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:48:55,670 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:55] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:48:55,697 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:55] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:48:55,893 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:55] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:48:55,894 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:55] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:48:55,898 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:55] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:48:55,903 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:55] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 18:48:57,839 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:57] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 18:48:57,841 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:57] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 18:48:57,853 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:57] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 18:48:57,855 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 18:48:57] "GET /api/stats HTTP/1.1" 200 -

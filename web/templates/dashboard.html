@@ -2040,7 +2040,7 @@
         function openSchedulerModal() {
             // Check if we already have 3 schedulers
             if (schedulers.length >= 3) {
-                showNotification('Maximum of 3 schedulers allowed. Please delete an existing scheduler first.', 'warning');
+                showNotification('Limit reached! Maximum 3 schedulers allowed.', 'warning');
                 return;
             }
             
@@ -2142,18 +2142,22 @@
                     );
                     closeSchedulerModal();
                     
-                    // Hot reload: Immediately update the scheduler UI
-                    // Use the correct scheduler ID (1) and get the actual running state from backend
-                    hotReloadSchedulers({
-                        id: 1, // Backend only supports single scheduler with ID 1
+                    // Hot reload: Immediately add new scheduler to list
+                    const newScheduler = result.scheduler || {
+                        id: schedulers.length + 1,
                         search_query: searchQuery,
                         city: city,
                         interval_minutes: parseInt(interval),
-                        is_running: true // New schedulers are started by default according to backend
-                    });
+                        is_running: true,
+                        created_at: new Date().toISOString()
+                    };
                     
-                    // Also refresh stats to get the latest data from server
-                    loadStats();
+                    schedulers.push(newScheduler);
+                    hotUpdateSchedulerDisplay();
+                    hotUpdateSchedulerCount();
+                    
+                    // Also refresh from server to stay in sync
+                    loadSchedulers();
                 } else {
                     showNotification(result.message || 'Failed to create scheduler', 'danger');
                 }
@@ -2185,8 +2189,10 @@
         function hotReloadSchedulers(newScheduler) {
             console.log('🔥 Hot reloading schedulers with new data:', newScheduler);
             
-            // Clear existing schedulers and add the new one (since backend only supports one scheduler)
-            schedulers = [newScheduler];
+            // Add new scheduler to the list (backend now supports up to 3 schedulers)
+            if (newScheduler && !schedulers.find(s => s.id === newScheduler.id)) {
+                schedulers.push(newScheduler);
+            }
             
             // Update the UI immediately with smooth animations
             hotUpdateSchedulerDisplay();

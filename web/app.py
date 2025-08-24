@@ -107,6 +107,10 @@ def create_app(settings):
     notification_manager = NotificationManager()
     excel_manager = ExcelManager()
     
+    # Initialize schedulers storage (max 3 schedulers)
+    app.schedulers = []  # List to store multiple scheduler configurations
+    app.max_schedulers = 3
+    
     # Initialize price monitor with notification callback
     def price_notification_callback(notification_data):
         """Callback for price change notifications."""
@@ -395,26 +399,39 @@ def create_app(settings):
             if interval_minutes not in [15, 30, 60]:
                 return jsonify({'success': False, 'message': 'Invalid interval. Must be 15, 30, or 60 minutes'})
             
-            # For now, we'll update the scheduler with the new configuration
-            # In a more complex system, you might store multiple scheduler configs
-            success = scheduler_manager.update_configuration({
-                'search_query': search_query,
-                'city': city,
-                'interval_minutes': interval_minutes
-            })
+            # Check if we've reached the maximum number of schedulers
+            if len(app.schedulers) >= app.max_schedulers:
+                return jsonify({
+                    'success': False, 
+                    'message': f'Limit reached! Maximum {app.max_schedulers} schedulers allowed.'
+                })
             
-            if success:
-                # Start the scheduler with new configuration
-                scheduler_manager.start()
-                return jsonify({
-                    'success': True,
-                    'message': f'Scheduler created and started successfully for "{search_query}"'
-                })
-            else:
-                return jsonify({
-                    'success': False,
-                    'message': 'Failed to create scheduler configuration'
-                })
+            # Check for duplicate search queries
+            for scheduler in app.schedulers:
+                if scheduler['search_query'].lower() == search_query.lower():
+                    return jsonify({
+                        'success': False,
+                        'message': f'A scheduler for "{search_query}" already exists.'
+                    })
+            
+            # Create new scheduler configuration
+            new_scheduler = {
+                'id': len(app.schedulers) + 1,
+                'search_query': search_query,
+                'city': city or 'Stockholm',
+                'interval_minutes': interval_minutes,
+                'is_running': True,
+                'created_at': datetime.now().isoformat()
+            }
+            
+            # Add to schedulers list
+            app.schedulers.append(new_scheduler)
+            
+            return jsonify({
+                'success': True,
+                'message': f'Scheduler created and started successfully for "{search_query}"',
+                'scheduler': new_scheduler
+            })
             
         except Exception as e:
             logger.error(f"Failed to create scheduler: {e}")
@@ -437,27 +454,18 @@ def create_app(settings):
     def api_get_schedulers():
         """Get list of schedulers."""
         try:
-            # For now, we'll simulate multiple schedulers using the current single scheduler
-            # In a real implementation, you'd store multiple scheduler configurations
-            status = scheduler_manager.get_job_status()
+            # Return the schedulers from our array
             schedulers = []
             
-            # Only show scheduler if it has been explicitly configured with a search query
-            config = scheduler_manager.scheduler_config
-            search_query = config.get('search_query')
-            
-            # Only show if there's an actual search query set (not None or empty)
-            if search_query and search_query.strip():
-                is_running = status.get('scheduler_running', False)
-                scheduler_data = {
-                    'id': 1,
-                    'search_query': search_query,
-                    'city': config.get('city', 'Stockholm'),
-                    'interval_minutes': config.get('interval_minutes', 30),
-                    'is_running': is_running,
-                    'created_at': datetime.now().isoformat(),
-                    'next_run': status.get('next_run') if is_running else None
-                }
+            for scheduler in app.schedulers:
+                # Add next_run information for running schedulers
+                scheduler_data = scheduler.copy()
+                if scheduler_data['is_running']:
+                    status = scheduler_manager.get_job_status()
+                    scheduler_data['next_run'] = status.get('next_run')
+                else:
+                    scheduler_data['next_run'] = None
+                
                 schedulers.append(scheduler_data)
             
             return jsonify({
@@ -472,10 +480,23 @@ def create_app(settings):
     def api_start_scheduler(scheduler_id):
         """Start a specific scheduler."""
         try:
-            success = scheduler_manager.start()
+            # Find the scheduler in our array
+            scheduler_to_start = None
+            for i, scheduler in enumerate(app.schedulers):
+                if scheduler['id'] == scheduler_id:
+                    scheduler_to_start = scheduler
+                    app.schedulers[i]['is_running'] = True
+                    break
+            
+            if not scheduler_to_start:
+                return jsonify({
+                    'success': False,
+                    'message': 'Scheduler not found'
+                })
+            
             return jsonify({
-                'success': success,
-                'message': 'Scheduler started successfully' if success else 'Failed to start scheduler'
+                'success': True,
+                'message': f'Scheduler for "{scheduler_to_start["search_query"]}" started successfully'
             })
         except Exception as e:
             logger.error(f"Failed to start scheduler {scheduler_id}: {e}")
@@ -485,10 +506,23 @@ def create_app(settings):
     def api_pause_scheduler(scheduler_id):
         """Pause a specific scheduler."""
         try:
-            success = scheduler_manager.stop()
+            # Find the scheduler in our array
+            scheduler_to_pause = None
+            for i, scheduler in enumerate(app.schedulers):
+                if scheduler['id'] == scheduler_id:
+                    scheduler_to_pause = scheduler
+                    app.schedulers[i]['is_running'] = False
+                    break
+            
+            if not scheduler_to_pause:
+                return jsonify({
+                    'success': False,
+                    'message': 'Scheduler not found'
+                })
+            
             return jsonify({
-                'success': success,
-                'message': 'Scheduler paused successfully' if success else 'Failed to pause scheduler'
+                'success': True,
+                'message': f'Scheduler for "{scheduler_to_pause["search_query"]}" paused successfully'
             })
         except Exception as e:
             logger.error(f"Failed to pause scheduler {scheduler_id}: {e}")
@@ -498,23 +532,27 @@ def create_app(settings):
     def api_delete_scheduler(scheduler_id):
         """Delete a specific scheduler."""
         try:
-            # Stop the scheduler first
-            scheduler_manager.stop()
+            # Find and remove the scheduler from our array
+            scheduler_to_delete = None
+            for i, scheduler in enumerate(app.schedulers):
+                if scheduler['id'] == scheduler_id:
+                    scheduler_to_delete = app.schedulers.pop(i)
+                    break
             
-            # Clear the scheduler configuration
-            scheduler_manager.scheduler_config = {
-                'interval_minutes': 30,
-                'search_query': None,
-                'city': None
-            }
+            if not scheduler_to_delete:
+                return jsonify({
+                    'success': False,
+                    'message': 'Scheduler not found'
+                })
             
             return jsonify({
                 'success': True,
-                'message': 'Scheduler deleted successfully'
+                'message': f'Scheduler for "{scheduler_to_delete["search_query"]}" deleted successfully'
             })
         except Exception as e:
             logger.error(f"Failed to delete scheduler {scheduler_id}: {e}")
             return jsonify({'success': False, 'error': str(e)})
+    
     
     @app.route('/api/scrape/run', methods=['POST'])
     def api_run_scrape():
