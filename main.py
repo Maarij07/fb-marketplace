@@ -172,10 +172,13 @@ def cleanup_data(logger):
 
 def main():
     """Main entry point with command-line interface."""
-    parser = argparse.ArgumentParser(
-        description='Facebook Marketplace Automation Tool',
-        formatter_class=argparse.RawDescriptionHelpFormatter,
-        epilog="""
+    logger = None
+    
+    try:
+        parser = argparse.ArgumentParser(
+            description='Facebook Marketplace Automation Tool',
+            formatter_class=argparse.RawDescriptionHelpFormatter,
+            epilog="""
 Examples:
   python main.py init-db              # Initialize database
   python main.py scrape               # Run scraper once
@@ -184,54 +187,64 @@ Examples:
   python main.py dashboard            # Launch web dashboard
   python main.py status               # Show system status
   python main.py cleanup              # Clean up old data
-        """
-    )
-    
-    parser.add_argument(
-        'command',
-        choices=['init-db', 'scrape', 'schedule', 'dashboard', 'status', 'cleanup'],
-        help='Command to execute'
-    )
-    
-    parser.add_argument(
-        '--verbose', '-v',
-        action='store_true',
-        help='Enable verbose logging'
-    )
-    
-    args = parser.parse_args()
-    
-    # Setup logging
-    logger = setup_logging(args.verbose)
-    
-    # Execute command
-    success = False
-    
-    try:
-        if args.command == 'init-db':
-            success = init_database(logger)
-        elif args.command == 'scrape':
-            success = run_scraper(logger, args.verbose)
-        elif args.command == 'schedule':
-            success = start_scheduler(logger)
-        elif args.command == 'dashboard':
-            success = start_dashboard(logger)
-        elif args.command == 'status':
-            success = show_status(logger)
-        elif args.command == 'cleanup':
-            success = cleanup_data(logger)
+            """
+        )
         
-    except KeyboardInterrupt:
-        print("\nOperation cancelled by user")
-        success = True
+        parser.add_argument(
+            'command',
+            choices=['init-db', 'scrape', 'schedule', 'dashboard', 'status', 'cleanup'],
+            help='Command to execute'
+        )
+        
+        parser.add_argument(
+            '--verbose', '-v',
+            action='store_true',
+            help='Enable verbose logging'
+        )
+        
+        args = parser.parse_args()
+        
+        # Setup logging
+        logger = setup_logging(args.verbose)
+        
+        # Execute command
+        success = False
+        
+        try:
+            if args.command == 'init-db':
+                success = init_database(logger)
+            elif args.command == 'scrape':
+                success = run_scraper(logger, args.verbose)
+            elif args.command == 'schedule':
+                success = start_scheduler(logger)
+            elif args.command == 'dashboard':
+                success = start_dashboard(logger)
+            elif args.command == 'status':
+                success = show_status(logger)
+            elif args.command == 'cleanup':
+                success = cleanup_data(logger)
+            
+        except KeyboardInterrupt:
+            print("\nOperation cancelled by user")
+            success = True
+        except Exception as e:
+            if logger:
+                logger.error(f"Unexpected error: {e}")
+                if args.verbose:
+                    import traceback
+                    logger.error(traceback.format_exc())
+            else:
+                print(f"Error: {e}")
+        
+        # Exit with appropriate code
+        sys.exit(0 if success else 1)
+        
     except Exception as e:
-        logger.error(f"Unexpected error: {e}")
-        if args.verbose:
-            import traceback
-            logger.error(traceback.format_exc())
-    
-    # Exit with appropriate code
-    sys.exit(0 if success else 1)
+        if logger:
+            logger.error(f"Failed to start dashboard: {e}")
+        else:
+            print(f"Failed to start dashboard: {e}")
+        sys.exit(1)
 
 
 if __name__ == '__main__':

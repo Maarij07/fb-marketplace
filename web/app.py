@@ -9,6 +9,7 @@ import json
 import logging
 import queue
 import threading
+import time
 from datetime import datetime
 from flask import Flask, render_template, jsonify, request, Response
 
@@ -16,6 +17,8 @@ from core.json_manager import JSONDataManager
 from core.scheduler import SchedulerManager
 from core.persistent_session import get_persistent_session
 from core.excel_manager import ExcelManager
+from core.price_monitor import PriceChangeMonitor
+from core.notification_monitor import get_notification_monitor
 
 
 def calculate_price_distribution(products):
@@ -95,16 +98,42 @@ def create_app(settings):
     app = Flask(__name__)
     app.config['SECRET_KEY'] = 'marketplace-automation-secret-key'
     
+    # Initialize logger first
+    logger = logging.getLogger(__name__)
+    
     # Initialize components
     json_manager = JSONDataManager()
     scheduler_manager = SchedulerManager(settings)
     notification_manager = NotificationManager()
     excel_manager = ExcelManager()
     
-    # Make notification manager accessible to other modules
-    app.notification_manager = notification_manager
+    # Initialize price monitor with notification callback
+    def price_notification_callback(notification_data):
+        """Callback for price change notifications."""
+        notification_manager.broadcast_notification(
+            notification_data['type'], 
+            notification_data['data']
+        )
     
-    logger = logging.getLogger(__name__)
+    price_monitor = PriceChangeMonitor(json_manager, price_notification_callback)
+    
+    # Initialize notification monitor with callback
+    def browser_notification_callback(notification_data):
+        """Callback for browser-based notifications."""
+        notification_manager.broadcast_notification(
+            notification_data['type'], 
+            notification_data['data']
+        )
+    
+    notification_monitor = get_notification_monitor(settings, browser_notification_callback)
+    
+    # Auto-start notification monitoring is disabled by default
+    # Users can manually start it via the dashboard button
+    logger.info("Browser notification monitoring is available - use dashboard to start manually")
+    
+    # Make managers accessible to other modules
+    app.notification_manager = notification_manager
+    app.notification_monitor = notification_monitor
     
     @app.route('/')
     def dashboard():
@@ -188,83 +217,87 @@ def create_app(settings):
             logger.error(f"Failed to get listings: {e}")
             return jsonify({'success': False, 'error': str(e)})
     
-    @app.route('/api/price-changes')
-    def api_price_changes():
-        """Get recent price changes (notifications)."""
+    @app.route('/api/listing/<listing_id>')
+    def api_listing_details(listing_id):
+        """Get detailed information for a specific listing."""
         try:
-            limit = int(request.args.get('limit', 50))
+            # Get the listing by ID
+            listing = json_manager.get_product_by_id(listing_id)
             
-            # Since we don't have actual price tracking yet, show dummy notifications
-            # In a real system, this would come from a price tracking database
-            dummy_notifications = [
-                {
-                    'id': 1,
-                    'title': 'iPhone 12 Pro Max 256GB',
-                    'seller': 'Aslihan',
-                    'old_price': 8500,
-                    'new_price': 7800,
-                    'change_amount': -700,
-                    'change_percentage': -8.2,
-                    'detected_at': '2025-08-24T05:30:00Z',
-                    'location': 'Stockholm'
-                },
-                {
-                    'id': 2,
-                    'title': 'iPhone 16 Pro Black Titanium',
-                    'seller': 'Marcus',
-                    'old_price': 12000,
-                    'new_price': 11500,
-                    'change_amount': -500,
-                    'change_percentage': -4.2,
-                    'detected_at': '2025-08-24T04:15:00Z',
-                    'location': 'Stockholm'
-                },
-                {
-                    'id': 3,
-                    'title': 'iPhone 15 Pro Max Natural Titanium',
-                    'seller': 'Sara',
-                    'old_price': 9500,
-                    'new_price': 10200,
-                    'change_amount': 700,
-                    'change_percentage': 7.4,
-                    'detected_at': '2025-08-24T03:45:00Z',
-                    'location': 'Stockholm'
-                }
-            ]
+            if not listing:
+                return jsonify({
+                    'success': False,
+                    'error': 'Listing not found'
+                }), 404
             
-            # Format data for frontend
-            formatted_changes = []
-            for change in dummy_notifications[:limit]:
-                formatted_change = {
-                    'id': change['id'],
-                    'title': change['title'],
-                    'seller': change['seller'],
-                    'old_price': change['old_price'],
-                    'new_price': change['new_price'],
-                    'change_amount': change['change_amount'],
-                    'change_percentage': change['change_percentage'],
-                    'detected_at': change['detected_at'],
-                    'location': change['location']
-                }
-                
-                # Format price displays
-                formatted_change['old_price_display'] = f"{change['old_price']} SEK"
-                formatted_change['new_price_display'] = f"{change['new_price']} SEK"
-                
-                # Format change display
-                sign = "+" if change['change_amount'] > 0 else ""
-                formatted_change['change_display'] = f"{sign}{change['change_amount']} SEK"
-                formatted_change['change_percent_display'] = f"{sign}{change['change_percentage']:.1f}%"
-                
-                # Format notification message
-                action = "increased" if change['change_amount'] > 0 else "decreased"
-                formatted_change['notification_message'] = f"{change['seller']} {action} {change['title'][:30]}... price by {abs(change['change_amount'])} SEK"
-                
-                formatted_changes.append(formatted_change)
+            # Format the listing data for the frontend
+            formatted_listing = dict(listing)
+            
+            # Format price display
+            price_info = formatted_listing.get('price', {})
+            if isinstance(price_info, dict) and price_info.get('amount'):
+                currency = price_info.get('currency', 'SEK')
+                amount = price_info.get('amount', '0')
+                if len(str(amount)) <= 2:
+                    formatted_listing['price_display'] = f"{amount}000+ {currency}"
+                else:
+                    formatted_listing['price_display'] = f"{amount} {currency}"
+            else:
+                formatted_listing['price_display'] = "N/A"
+            
+            # Format location
+            location_info = formatted_listing.get('location', {})
+            if isinstance(location_info, dict):
+                city = location_info.get('city', 'Unknown')
+                formatted_listing['seller_location'] = city
+            else:
+                formatted_listing['seller_location'] = 'Unknown'
+            
+            # Format seller info
+            if not formatted_listing.get('seller_name'):
+                seller_info = formatted_listing.get('seller', {}).get('info', 'Private Seller')
+                formatted_listing['seller_name'] = seller_info if seller_info != 'Not extracted' else 'Private Seller'
+            
+            # Format dates
+            if not formatted_listing.get('created_at'):
+                formatted_listing['created_at'] = formatted_listing.get('added_at', datetime.now().isoformat())
+            
+            # Format posted date if available
+            posted_date = formatted_listing.get('posted_date', '')
+            if posted_date:
+                formatted_listing['posted_date_display'] = posted_date
+            else:
+                formatted_listing['posted_date_display'] = 'Unknown'
+            
+            # Add category
+            product_details = formatted_listing.get('product_details', {})
+            model = product_details.get('model', '')
+            if 'iphone' in model.lower():
+                formatted_listing['category'] = 'Electronics'
+            else:
+                formatted_listing['category'] = 'Other'
             
             return jsonify({
                 'success': True,
-                'data': formatted_changes
+                'data': formatted_listing
+            })
+            
+        except Exception as e:
+            logger.error(f"Failed to get listing details for {listing_id}: {e}")
+            return jsonify({'success': False, 'error': str(e)}), 500
+    
+    @app.route('/api/price-changes')
+    def api_price_changes():
+        """Get recent price changes with dynamic keyword-based notifications."""
+        try:
+            limit = int(request.args.get('limit', 50))
+            
+            # Get price changes from our dynamic monitoring system
+            price_changes = price_monitor.get_recent_price_changes(limit)
+            
+            return jsonify({
+                'success': True,
+                'data': price_changes
             })
         except Exception as e:
             logger.error(f"Failed to get price changes: {e}")
@@ -716,6 +749,59 @@ def create_app(settings):
             })
         except Exception as e:
             logger.error(f"Failed to get Excel files: {e}")
+            return jsonify({'success': False, 'error': str(e)})
+    
+    # Browser Notification Monitoring APIs
+    @app.route('/api/monitoring/status')
+    def api_monitoring_status():
+        """Get notification monitoring status."""
+        try:
+            status = notification_monitor.get_monitoring_status()
+            return jsonify({
+                'success': True,
+                'data': status
+            })
+        except Exception as e:
+            logger.error(f"Failed to get monitoring status: {e}")
+            return jsonify({'success': False, 'error': str(e)})
+    
+    @app.route('/api/monitoring/start', methods=['POST'])
+    def api_monitoring_start():
+        """Start browser notification monitoring."""
+        try:
+            success = notification_monitor.start_monitoring()
+            return jsonify({
+                'success': success,
+                'message': 'Browser monitoring started successfully' if success else 'Failed to start browser monitoring'
+            })
+        except Exception as e:
+            logger.error(f"Failed to start monitoring: {e}")
+            return jsonify({'success': False, 'error': str(e)})
+    
+    @app.route('/api/monitoring/stop', methods=['POST'])
+    def api_monitoring_stop():
+        """Stop browser notification monitoring."""
+        try:
+            notification_monitor.stop_monitoring()
+            return jsonify({
+                'success': True,
+                'message': 'Browser monitoring stopped successfully'
+            })
+        except Exception as e:
+            logger.error(f"Failed to stop monitoring: {e}")
+            return jsonify({'success': False, 'error': str(e)})
+    
+    @app.route('/api/monitoring/refresh', methods=['POST'])
+    def api_monitoring_refresh():
+        """Refresh the monitoring browser page."""
+        try:
+            notification_monitor.refresh_page()
+            return jsonify({
+                'success': True,
+                'message': 'Browser page refreshed successfully'
+            })
+        except Exception as e:
+            logger.error(f"Failed to refresh monitoring page: {e}")
             return jsonify({'success': False, 'error': str(e)})
     
     @app.errorhandler(404)

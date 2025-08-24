@@ -449,6 +449,17 @@ class JSONDataManager:
         
         return matches[:limit]
     
+    def get_product_by_id(self, product_id: str) -> Optional[Dict[str, Any]]:
+        """Get a specific product by its ID."""
+        data = self.load_data()
+        products = data.get("products", [])
+        
+        for product in products:
+            if product.get('id') == product_id:
+                return product
+        
+        return None
+    
     def cleanup_old_data(self, data: Dict[str, Any], retention_hours: int = 48) -> int:
         """Remove products older than retention period."""
         try:

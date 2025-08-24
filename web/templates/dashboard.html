@@ -493,6 +493,29 @@
             animation: schedulerPulse 0.8s ease-out;
         }
         
+        /* 💰 PRICE CHANGE: Special styling for price change notifications */
+        .toast-price-change {
+            border-left: 3px solid #ff6b35 !important;
+            background: linear-gradient(135deg, var(--white) 0%, #fff8f5 100%);
+            box-shadow: 0 10px 25px -5px rgba(255, 107, 53, 0.2), 0 4px 6px -2px rgba(255, 107, 53, 0.05) !important;
+            animation: priceChangePulse 0.8s ease-out;
+        }
+        
+        @keyframes priceChangePulse {
+            0% {
+                transform: translateX(calc(100% + 1rem)) scale(0.95);
+                opacity: 0.8;
+            }
+            20% {
+                transform: translateX(-10px) scale(1.02);
+                opacity: 1;
+            }
+            100% {
+                transform: translateX(0) scale(1);
+                opacity: 1;
+            }
+        }
+        
         @keyframes schedulerPulse {
             0% {
                 transform: translateX(calc(100% + 1rem)) scale(0.95);
@@ -919,6 +942,140 @@
         .modal-sm {
             max-width: 400px;
         }
+        
+        /* Row and column layout for modal content */
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: -0.5rem;
+        }
+        
+        .col-md-6 {
+            flex: 0 0 50%;
+            max-width: 50%;
+            padding: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .col-md-6 {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+        
+        /* Image carousel styles */
+        .image-carousel {
+            position: relative;
+            width: 100%;
+            margin-bottom: 1.5rem;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+        }
+        
+        .carousel-images {
+            display: flex;
+            transition: transform 0.3s ease-in-out;
+            height: 100%;
+        }
+        
+        .carousel-image {
+            min-width: 100%;
+            height: 100%;
+            object-fit: cover;
+            background-color: var(--gray-100);
+        }
+        
+        .carousel-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: all 0.2s ease;
+            z-index: 10;
+        }
+        
+        .carousel-nav:hover {
+            background: rgba(0, 0, 0, 0.9);
+            transform: translateY(-50%) scale(1.1);
+        }
+        
+        .carousel-nav.prev {
+            left: 10px;
+        }
+        
+        .carousel-nav.next {
+            right: 10px;
+        }
+        
+        .carousel-indicators {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+            z-index: 10;
+        }
+        
+        .carousel-indicator {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .carousel-indicator.active {
+            background: white;
+            transform: scale(1.2);
+        }
+        
+        .carousel-counter {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            z-index: 10;
+        }
+        
+        .no-image-placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 300px;
+            background: var(--gray-100);
+            border-radius: 0.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--gray-500);
+        }
+        
+        .no-image-placeholder i {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
     </style>
 </head>
 <body>
@@ -956,6 +1113,9 @@
                         </div>
                     </div>
                     
+                    <button class="btn btn-primary" id="monitoring-btn" onclick="toggleBrowserMonitoring()">
+                        <i class="bi bi-browser-chrome"></i> Start Monitoring
+                    </button>
                     <button class="btn btn-secondary" onclick="refreshData()">
                         <i class="bi bi-arrow-clockwise"></i> Refresh
                     </button>
@@ -1036,11 +1196,12 @@
                                         <th>Location</th>
                                         <th>Category</th>
                                         <th>Date</th>
+                                        <th>Details</th>
                                     </tr>
                                 </thead>
                                 <tbody id="listings-table">
                                     <tr>
-                                        <td colspan="5" class="text-center">
+                                        <td colspan="6" class="text-center">
                                             <div class="loading"></div> Loading...
                                         </td>
                                     </tr>
@@ -1163,6 +1324,33 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" onclick="closeConfirmModal()">Cancel</button>
                     <button type="button" class="btn btn-danger" onclick="confirmAction()" id="confirm-btn">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Listing Details Modal -->
+    <div class="modal" id="listing-details-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="listing-details-title">Listing Details</h5>
+                    <button type="button" class="modal-close" onclick="closeListingDetailsModal()">
+                        <i class="bi bi-x"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="listing-details-content">
+                        <div class="text-center">
+                            <div class="loading"></div> Loading listing details...
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" onclick="closeListingDetailsModal()">Close</button>
+                    <a href="#" id="listing-details-link" class="btn btn-primary" target="_blank" style="display: none;">
+                        <i class="bi bi-box-arrow-up-right"></i> View on Facebook
+                    </a>
                 </div>
             </div>
         </div>
@@ -1320,6 +1508,17 @@
                     loadStats();
                     break;
                     
+                // 💰 PRICE CHANGE: Real-time price change notifications
+                case 'price_change_detected':
+                    showPriceChangeNotification(
+                        data.message,
+                        data.change_type === 'increase' ? 'warning' : 'info',
+                        `${data.change_type === 'increase' ? '↗️' : '↘️'} ${Math.abs(data.change_amount).toFixed(2)} (${data.change_percentage.toFixed(1)}%)`
+                    );
+                    // Immediately refresh price changes section
+                    loadPriceChanges();
+                    break;
+                    
                 case 'items_found':
                     showNotification(
                         `Found ${data.new_items} new items in cycle ${data.cycle}! Total: ${data.total_items} items for "${data.search_query}"`,
@@ -1447,6 +1646,27 @@
             toast.show();
         }
         
+        // 💰 PRICE CHANGE: Special notification for price change events with orange styling
+        function showPriceChangeNotification(message, type = 'info', extra = '') {
+            const toastElement = document.getElementById('notification-toast');
+            const toastBody = document.getElementById('toast-message');
+            const toastContent = `
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <div style="font-weight: 600; margin-bottom: 2px;">${message}</div>
+                        ${extra ? `<div style="font-size: 0.85em; color: var(--gray-600);">${extra}</div>` : ''}
+                    </div>
+                    <button type="button" class="btn-sm" style="background: none; border: none; cursor: pointer;" data-bs-dismiss="toast">
+                        <i class="bi bi-x"></i>
+                    </button>
+                </div>
+            `;
+            
+            toastBody.innerHTML = toastContent;
+            toastElement.className = `toast toast-${type} toast-price-change`;
+            toast.show();
+        }
+        
         // Progress notification for deep scraping
         function showProgressNotification(message, type = 'info') {
             // Use a shorter duration for progress notifications to avoid spam
@@ -1531,7 +1751,7 @@
                     tbody.innerHTML = '';
                     
                     if (result.data.length === 0) {
-                        tbody.innerHTML = '<tr><td colspan="5" class="text-center text-muted">No listings found</td></tr>';
+                        tbody.innerHTML = '<tr><td colspan="6" class="text-center text-muted">No listings found</td></tr>';
                         return;
                     }
                     
@@ -1550,6 +1770,11 @@
                             <td>${listing.seller_location || 'N/A'}</td>
                             <td><span class="badge bg-secondary">${listing.category || 'other'}</span></td>
                             <td><span class="text-xs">${createdAt}</span></td>
+                            <td>
+                                <button class="btn btn-sm btn-secondary" onclick="showListingDetails('${listing.id || 'null'}', '${(listing.title || '').replace(/'/g, "\\'").replace(/"/g, '\\"')}')" title="View details">
+                                    <i class="bi bi-eye"></i>
+                                </button>
+                            </td>
                         `;
                         tbody.appendChild(row);
                     });
@@ -2335,6 +2560,390 @@
                 console.error('❌ Excel button NOT found in DOM!');
             }
         });
+        
+        // Listing Details Modal Functions
+        async function showListingDetails(listingId, listingTitle) {
+            console.log('👁️ showListingDetails called with:', { listingId, listingTitle });
+            
+            try {
+                if (listingId === null || listingId === 'null') {
+                    console.error('❌ Listing ID is null or "null"');
+                    showNotification('Unable to show details - listing ID not available', 'warning');
+                    return;
+                }
+                
+                // Open modal with loading state
+                const modal = document.getElementById('listing-details-modal');
+                const titleElement = document.getElementById('listing-details-title');
+                const contentElement = document.getElementById('listing-details-content');
+                const linkElement = document.getElementById('listing-details-link');
+                
+                titleElement.textContent = listingTitle || 'Listing Details';
+                contentElement.innerHTML = `
+                    <div class="text-center">
+                        <div class="loading"></div> Loading listing details...
+                    </div>
+                `;
+                linkElement.style.display = 'none';
+                modal.classList.add('show');
+                
+                // Fetch listing details
+                const response = await fetch(`/api/listing/${listingId}`);
+                const result = await response.json();
+                
+                if (result.success && result.data) {
+                    const listing = result.data;
+                    
+                    // Parse images from deep_scraped_data if available
+                    let images = [];
+                    try {
+                        if (listing.deep_scraped_data) {
+                            const deepData = JSON.parse(listing.deep_scraped_data);
+                            if (deepData.images && Array.isArray(deepData.images)) {
+                                images = deepData.images.filter(img => img && img.trim());
+                            }
+                        }
+                    } catch (e) {
+                        console.log('Could not parse deep scraped data for images');
+                    }
+                    
+                    // Generate image carousel or placeholder
+                    let imageHtml = '';
+                    if (images.length > 0) {
+                        imageHtml = `
+                            <div class="image-carousel">
+                                <div class="carousel-container">
+                                    <div class="carousel-images" id="carousel-images">
+                                        ${images.map(img => `<img src="${img}" alt="Product image" class="carousel-image" onerror="this.style.display='none'"/>`).join('')}
+                                    </div>
+                                    ${images.length > 1 ? `
+                                        <button class="carousel-nav prev" onclick="changeImage(-1)">
+                                            <i class="bi bi-chevron-left"></i>
+                                        </button>
+                                        <button class="carousel-nav next" onclick="changeImage(1)">
+                                            <i class="bi bi-chevron-right"></i>
+                                        </button>
+                                        <div class="carousel-indicators" id="carousel-indicators">
+                                            ${images.map((_, index) => `<div class="carousel-indicator ${index === 0 ? 'active' : ''}" onclick="goToImage(${index})"></div>`).join('')}
+                                        </div>
+                                        <div class="carousel-counter" id="carousel-counter">1 / ${images.length}</div>
+                                    ` : ''}
+                                </div>
+                            </div>
+                        `;
+                    } else {
+                        imageHtml = `
+                            <div class="no-image-placeholder">
+                                <div style="text-align: center;">
+                                    <i class="bi bi-image"></i>
+                                    <div>No images available</div>
+                                </div>
+                            </div>
+                        `;
+                    }
+                    
+                    // Format the listing details
+                    const content = `
+                        ${imageHtml}
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label"><i class="bi bi-tag"></i> Title</label>
+                                    <div class="fw-bold">${listing.title || 'N/A'}</div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="form-label"><i class="bi bi-cash"></i> Price</label>
+                                    <div class="fw-bold">${listing.price_display || 'N/A'}</div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="form-label"><i class="bi bi-geo-alt"></i> Location</label>
+                                    <div>${listing.seller_location || 'N/A'}</div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="form-label"><i class="bi bi-folder"></i> Category</label>
+                                    <div><span class="badge bg-secondary">${listing.category || 'other'}</span></div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label"><i class="bi bi-person"></i> Seller</label>
+                                    <div>${listing.seller_name || 'N/A'}</div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="form-label"><i class="bi bi-calendar"></i> Date Posted</label>
+                                    <div>${listing.created_at ? new Date(listing.created_at).toLocaleString() : 'N/A'}</div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="form-label"><i class="bi bi-clock"></i> Last Updated</label>
+                                    <div>${listing.updated_at ? new Date(listing.updated_at).toLocaleString() : 'N/A'}</div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="form-label"><i class="bi bi-search"></i> Search Query</label>
+                                    <div><code>${listing.search_query || 'N/A'}</code></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        ${listing.description ? `
+                        <div class="form-group">
+                            <label class="form-label"><i class="bi bi-text-paragraph"></i> Description</label>
+                            <div class="text-sm" style="background: var(--gray-50); padding: 1rem; border-radius: 0.375rem; max-height: 200px; overflow-y: auto;">${listing.description}</div>
+                        </div>
+                        ` : ''}
+                        
+                        ${listing.url ? `
+                        <div class="form-group">
+                            <label class="form-label"><i class="bi bi-link"></i> Facebook URL</label>
+                            <div class="text-sm"><a href="${listing.url}" target="_blank" class="text-primary">${listing.url}</a></div>
+                        </div>
+                        ` : ''}
+                    `;
+                    
+                    contentElement.innerHTML = content;
+                    
+                    // Initialize carousel if there are multiple images
+                    if (images.length > 1) {
+                        setTimeout(() => {
+                            initializeCarousel();
+                        }, 100); // Small delay to ensure DOM is updated
+                    }
+                    
+                    // Show Facebook link button if available
+                    if (listing.url) {
+                        linkElement.href = listing.url;
+                        linkElement.style.display = 'inline-flex';
+                    }
+                } else {
+                    contentElement.innerHTML = `
+                        <div class="text-center text-muted">
+                            <i class="bi bi-exclamation-circle" style="font-size: 2rem; margin-bottom: 1rem;"></i><br>
+                            ${result.error || 'Unable to load listing details'}
+                        </div>
+                    `;
+                }
+            } catch (error) {
+                console.error('Error loading listing details:', error);
+                const contentElement = document.getElementById('listing-details-content');
+                contentElement.innerHTML = `
+                    <div class="text-center text-danger">
+                        <i class="bi bi-exclamation-triangle" style="font-size: 2rem; margin-bottom: 1rem;"></i><br>
+                        Error loading listing details: ${error.message}
+                    </div>
+                `;
+                showNotification('Error loading listing details', 'danger');
+            }
+        }
+        
+        function closeListingDetailsModal() {
+            document.getElementById('listing-details-modal').classList.remove('show');
+        }
+        
+        // Close listing details modal when clicking outside
+        document.addEventListener('click', function(event) {
+            const modal = document.getElementById('listing-details-modal');
+            const modalContent = modal.querySelector('.modal-content');
+            
+            if (event.target === modal && !modalContent.contains(event.target)) {
+                closeListingDetailsModal();
+            }
+        });
+        
+        // Add Escape key support for listing details modal
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeSchedulerModal();
+                closeConfirmModal();
+                closeListingDetailsModal();
+            }
+        });
+        
+        // Browser Monitoring Functions
+        let isMonitoringActive = false;
+        
+        async function toggleBrowserMonitoring() {
+            const monitoringBtn = document.getElementById('monitoring-btn');
+            const icon = monitoringBtn.querySelector('i');
+            
+            try {
+                if (!isMonitoringActive) {
+                    // Start monitoring
+                    monitoringBtn.disabled = true;
+                    monitoringBtn.innerHTML = '<i class="bi bi-hourglass-split"></i> Starting...';
+                    
+                    showNotification('Starting browser monitoring...', 'info');
+                    
+                    const response = await fetch('/api/monitoring/start', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        }
+                    });
+                    
+                    const result = await response.json();
+                    
+                    if (result.success) {
+                        isMonitoringActive = true;
+                        monitoringBtn.innerHTML = '<i class="bi bi-stop-circle"></i> Stop Monitoring';
+                        monitoringBtn.className = 'btn btn-danger';
+                        showNotification('Browser monitoring started! Chrome tab opened for Facebook notifications.', 'success');
+                    } else {
+                        monitoringBtn.innerHTML = '<i class="bi bi-browser-chrome"></i> Start Monitoring';
+                        showNotification('Failed to start monitoring: ' + (result.message || 'Unknown error'), 'danger');
+                    }
+                } else {
+                    // Stop monitoring
+                    monitoringBtn.disabled = true;
+                    monitoringBtn.innerHTML = '<i class="bi bi-hourglass-split"></i> Stopping...';
+                    
+                    showNotification('Stopping browser monitoring...', 'info');
+                    
+                    const response = await fetch('/api/monitoring/stop', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        }
+                    });
+                    
+                    const result = await response.json();
+                    
+                    if (result.success) {
+                        isMonitoringActive = false;
+                        monitoringBtn.innerHTML = '<i class="bi bi-browser-chrome"></i> Start Monitoring';
+                        monitoringBtn.className = 'btn btn-primary';
+                        showNotification('Browser monitoring stopped.', 'info');
+                    } else {
+                        monitoringBtn.innerHTML = '<i class="bi bi-stop-circle"></i> Stop Monitoring';
+                        showNotification('Failed to stop monitoring: ' + (result.message || 'Unknown error'), 'danger');
+                    }
+                }
+            } catch (error) {
+                console.error('Error toggling browser monitoring:', error);
+                monitoringBtn.innerHTML = isMonitoringActive ? 
+                    '<i class="bi bi-stop-circle"></i> Stop Monitoring' : 
+                    '<i class="bi bi-browser-chrome"></i> Start Monitoring';
+                showNotification('Error: ' + error.message, 'danger');
+            } finally {
+                monitoringBtn.disabled = false;
+            }
+        }
+        
+        // Check monitoring status on page load
+        document.addEventListener('DOMContentLoaded', async function() {
+            try {
+                const response = await fetch('/api/monitoring/status');
+                const result = await response.json();
+                
+                if (result.success && result.data) {
+                    const status = result.data;
+                    const monitoringBtn = document.getElementById('monitoring-btn');
+                    
+                    if (status.is_monitoring) {
+                        isMonitoringActive = true;
+                        monitoringBtn.innerHTML = '<i class="bi bi-stop-circle"></i> Stop Monitoring';
+                        monitoringBtn.className = 'btn btn-danger';
+                    } else {
+                        isMonitoringActive = false;
+                        monitoringBtn.innerHTML = '<i class="bi bi-browser-chrome"></i> Start Monitoring';
+                        monitoringBtn.className = 'btn btn-primary';
+                    }
+                }
+            } catch (error) {
+                console.error('Error checking monitoring status:', error);
+            }
+        });
+        
+        // Image Carousel Functions
+        let currentImageIndex = 0;
+        let totalImages = 0;
+        
+        function changeImage(direction) {
+            const carouselImages = document.getElementById('carousel-images');
+            const indicators = document.querySelectorAll('.carousel-indicator');
+            const counter = document.getElementById('carousel-counter');
+            
+            if (!carouselImages || totalImages <= 1) return;
+            
+            // Update current index
+            currentImageIndex += direction;
+            
+            // Handle wrap-around
+            if (currentImageIndex < 0) {
+                currentImageIndex = totalImages - 1;
+            } else if (currentImageIndex >= totalImages) {
+                currentImageIndex = 0;
+            }
+            
+            // Move carousel
+            const translateX = -currentImageIndex * 100;
+            carouselImages.style.transform = `translateX(${translateX}%)`;
+            
+            // Update indicators
+            indicators.forEach((indicator, index) => {
+                indicator.classList.toggle('active', index === currentImageIndex);
+            });
+            
+            // Update counter
+            if (counter) {
+                counter.textContent = `${currentImageIndex + 1} / ${totalImages}`;
+            }
+        }
+        
+        function goToImage(index) {
+            const carouselImages = document.getElementById('carousel-images');
+            const indicators = document.querySelectorAll('.carousel-indicator');
+            const counter = document.getElementById('carousel-counter');
+            
+            if (!carouselImages || index < 0 || index >= totalImages) return;
+            
+            currentImageIndex = index;
+            
+            // Move carousel
+            const translateX = -currentImageIndex * 100;
+            carouselImages.style.transform = `translateX(${translateX}%)`;
+            
+            // Update indicators
+            indicators.forEach((indicator, idx) => {
+                indicator.classList.toggle('active', idx === currentImageIndex);
+            });
+            
+            // Update counter
+            if (counter) {
+                counter.textContent = `${currentImageIndex + 1} / ${totalImages}`;
+            }
+        }
+        
+        // Initialize carousel when modal opens
+        function initializeCarousel() {
+            const carouselImages = document.getElementById('carousel-images');
+            if (carouselImages) {
+                const images = carouselImages.querySelectorAll('.carousel-image');
+                totalImages = images.length;
+                currentImageIndex = 0;
+                
+                // Reset carousel position
+                carouselImages.style.transform = 'translateX(0%)';
+                
+                // Update counter
+                const counter = document.getElementById('carousel-counter');
+                if (counter && totalImages > 1) {
+                    counter.textContent = `1 / ${totalImages}`;
+                }
+                
+                // Set first indicator as active
+                const indicators = document.querySelectorAll('.carousel-indicator');
+                indicators.forEach((indicator, index) => {
+                    indicator.classList.toggle('active', index === 0);
+                });
+            }
+        }
         
     </script>
 </body>
