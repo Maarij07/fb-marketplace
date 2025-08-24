@@ -10,3 +10,5 @@ python-dotenv
 webdriver-manager
 apscheduler
 sqlalchemy
+openpyxl
+xlsxwriter

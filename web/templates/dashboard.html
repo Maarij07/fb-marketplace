@@ -897,8 +897,8 @@
                     <button class="btn btn-secondary" onclick="refreshData()">
                         <i class="bi bi-arrow-clockwise"></i> Refresh
                     </button>
-                    <button class="btn btn-primary" onclick="runScrape()">
-                        <i class="bi bi-play-circle"></i> Default Scrape
+                    <button class="btn btn-secondary" onclick="exportToExcel()">
+                        <i class="bi bi-file-earmark-excel"></i> Export Excel
                     </button>
                 </div>
             </header>
@@ -992,23 +992,10 @@
                         <h5><i class="bi bi-graph-up"></i> Recent Price Changes</h5>
                     </div>
                     <div class="card-body">
-                        <div class="table-container">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>Item</th>
-                                        <th>Change</th>
-                                        <th>Date</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="price-changes-table">
-                                    <tr>
-                                        <td colspan="3" class="text-center">
-                                            <div class="loading"></div> Loading...
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <div id="price-changes-notifications" style="max-height: 24rem; overflow-y: auto;">
+                            <div class="text-center">
+                                <div class="loading"></div> Loading...
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1353,32 +1340,37 @@
                 const result = await response.json();
                 
                 if (result.success) {
-                    const tbody = document.getElementById('price-changes-table');
-                    tbody.innerHTML = '';
+                    const container = document.getElementById('price-changes-notifications');
+                    container.innerHTML = '';
                     
                     if (result.data.length === 0) {
-                        tbody.innerHTML = '<tr><td colspan="3" class="text-center text-muted">No price changes</td></tr>';
+                        container.innerHTML = '<div class="text-center text-muted">No price changes</div>';
                         return;
                     }
                     
                     result.data.forEach(change => {
-                        const row = document.createElement('tr');
-                        const detectedAt = new Date(change.detected_at).toLocaleDateString();
-                        const changeClass = change.change_amount > 0 ? 'price-increase' : 'price-decrease';
-                        const changeIcon = change.change_amount > 0 ? '↑' : '↓';
+                        const notificationItem = document.createElement('div');
+                        notificationItem.className = 'notification-item';
+                        notificationItem.style.marginBottom = '0.75rem';
+                        notificationItem.style.padding = '0.75rem';
+                        notificationItem.style.backgroundColor = 'var(--gray-50)';
+                        notificationItem.style.borderRadius = '0.375rem';
+                        notificationItem.style.border = '1px solid var(--gray-200)';
                         
-                        row.innerHTML = `
-                            <td>
-                                <div class="fw-bold truncate" style="max-width: 180px;" title="${change.title}">
-                                    ${change.title || 'N/A'}
+                        const detectedAt = new Date(change.detected_at);
+                        const timeAgo = getTimeAgo(detectedAt);
+                        const changeIcon = change.change_amount > 0 ? '📈' : '📉';
+                        
+                        notificationItem.innerHTML = `
+                            <div style="display: flex; align-items: flex-start; gap: 0.5rem;">
+                                <span style="font-size: 1rem;">${changeIcon}</span>
+                                <div style="flex: 1; font-size: 0.875rem;">
+                                    <div>${change.notification_message}</div>
+                                    <div class="notification-time" style="font-size: 0.75rem; color: var(--gray-500); margin-top: 0.25rem;">${timeAgo}</div>
                                 </div>
-                            </td>
-                            <td>
-                                <span class="${changeClass}">${changeIcon} ${change.change_display}</span>
-                            </td>
-                            <td><span class="text-xs">${detectedAt}</span></td>
+                            </div>
                         `;
-                        tbody.appendChild(row);
+                        container.appendChild(notificationItem);
                     });
                 }
             } catch (error) {
@@ -1694,7 +1686,19 @@
                 if (result.success) {
                     showNotification(`Scheduler created successfully! Will run every ${interval} minutes for "${searchQuery}"`, 'success');
                     closeSchedulerModal();
-                    loadStats(); // Refresh stats
+                    
+                    // Hot reload: Immediately update the scheduler UI
+                    // Use the correct scheduler ID (1) and get the actual running state from backend
+                    hotReloadSchedulers({
+                        id: 1, // Backend only supports single scheduler with ID 1
+                        search_query: searchQuery,
+                        city: city,
+                        interval_minutes: parseInt(interval),
+                        is_running: true // New schedulers are started by default according to backend
+                    });
+                    
+                    // Also refresh stats to get the latest data from server
+                    loadStats();
                 } else {
                     showNotification(result.message || 'Failed to create scheduler', 'danger');
                 }
@@ -1721,6 +1725,103 @@
                 closeConfirmModal();
             }
         });
+        
+        // Hot Reload System - Updates UI immediately without full page refresh
+        function hotReloadSchedulers(newScheduler) {
+            console.log('🔥 Hot reloading schedulers with new data:', newScheduler);
+            
+            // Clear existing schedulers and add the new one (since backend only supports one scheduler)
+            schedulers = [newScheduler];
+            
+            // Update the UI immediately with smooth animations
+            hotUpdateSchedulerDisplay();
+            hotUpdateSchedulerCount();
+            
+            console.log('✅ Hot reload complete! UI updated without page refresh.');
+        }
+        
+        function hotUpdateSchedulerDisplay() {
+            const schedulerList = document.getElementById('scheduler-list');
+            const noSchedulers = document.getElementById('no-schedulers');
+            
+            // Hide "no schedulers" message
+            if (noSchedulers) {
+                noSchedulers.style.display = 'none';
+            }
+            
+            // Clear existing content (we'll rebuild it)
+            schedulerList.innerHTML = '';
+            
+            // Render all schedulers
+            schedulers.forEach((scheduler, index) => {
+                const isRunning = scheduler.is_running !== false; // Default to true for new schedulers
+                const playPauseIcon = isRunning ? 'pause' : 'play';
+                const playPauseClass = isRunning ? 'btn-pause' : 'btn-play';
+                const intervalText = getIntervalText(scheduler.interval_minutes);
+                
+                const schedulerItem = document.createElement('div');
+                schedulerItem.className = 'scheduler-item';
+                schedulerItem.setAttribute('data-id', scheduler.id);
+                
+                // Add smooth entry animation for new items
+                if (index === schedulers.length - 1) {
+                    schedulerItem.style.opacity = '0';
+                    schedulerItem.style.transform = 'translateY(-10px)';
+                    schedulerItem.style.transition = 'all 0.3s ease';
+                }
+                
+                schedulerItem.innerHTML = `
+                    <div class="scheduler-details">
+                        <div class="scheduler-query">${scheduler.search_query}</div>
+                        <div class="scheduler-meta">${scheduler.city || 'No city'} • ${intervalText}</div>
+                    </div>
+                    <div class="scheduler-actions">
+                        <button class="btn btn-xs ${playPauseClass}" onclick="toggleScheduler(${scheduler.id}, ${isRunning})" title="${isRunning ? 'Pause' : 'Start'} scheduler">
+                            <i class="bi bi-${playPauseIcon}-fill"></i>
+                        </button>
+                        <button class="btn btn-xs btn-delete" onclick="confirmDeleteScheduler(${scheduler.id}, '${scheduler.search_query}')" title="Delete scheduler">
+                            <i class="bi bi-trash"></i>
+                        </button>
+                    </div>
+                `;
+                
+                schedulerList.appendChild(schedulerItem);
+                
+                // Trigger animation for new items
+                if (index === schedulers.length - 1) {
+                    setTimeout(() => {
+                        schedulerItem.style.opacity = '1';
+                        schedulerItem.style.transform = 'translateY(0)';
+                    }, 50);
+                }
+            });
+        }
+        
+        function hotUpdateSchedulerCount() {
+            const countElement = document.getElementById('scheduler-count');
+            const addBtn = document.getElementById('add-scheduler-btn');
+            
+            // Update count with smooth transition
+            countElement.style.transition = 'all 0.2s ease';
+            countElement.style.transform = 'scale(1.1)';
+            countElement.textContent = `${schedulers.length}/3`;
+            
+            // Reset scale animation
+            setTimeout(() => {
+                countElement.style.transform = 'scale(1)';
+            }, 200);
+            
+            // Update add button state
+            if (schedulers.length >= 3) {
+                addBtn.disabled = true;
+                addBtn.innerHTML = '<i class="bi bi-plus-circle"></i> Limit Reached';
+                addBtn.style.opacity = '0.6';
+            } else {
+                addBtn.disabled = false;
+                addBtn.innerHTML = '<i class="bi bi-plus-circle"></i> Add Scheduler';
+                addBtn.style.opacity = '1';
+            }
+        }
         
         // Load and display schedulers
         async function loadSchedulers() {
@@ -1815,7 +1916,18 @@
                 
                 if (result.success) {
                     showNotification(`Scheduler ${action}ed successfully`, 'success');
-                    loadSchedulers(); // Refresh scheduler list
+                    
+                    // Hot reload: Update the scheduler state immediately
+                    if (schedulers.length > 0) {
+                        const scheduler = schedulers.find(s => s.id == schedulerId);
+                        if (scheduler) {
+                            scheduler.is_running = !isCurrentlyRunning;
+                            hotUpdateSchedulerDisplay();
+                        }
+                    }
+                    
+                    // Also refresh from server to get accurate state
+                    loadSchedulers();
                 } else {
                     showNotification(result.message || `Failed to ${action} scheduler`, 'danger');
                 }
@@ -1850,7 +1962,14 @@
                 
                 if (result.success) {
                     showNotification('Scheduler deleted successfully', 'success');
-                    loadSchedulers(); // Refresh scheduler list
+                    
+                    // Hot reload: remove locally and update UI immediately
+                    schedulers = schedulers.filter(s => s.id != schedulerId);
+                    hotUpdateSchedulerDisplay();
+                    hotUpdateSchedulerCount();
+                    
+                    // Also refresh from server to stay in sync
+                    loadSchedulers();
                 } else {
                     showNotification(result.message || 'Failed to delete scheduler', 'danger');
                 }
@@ -1895,6 +2014,57 @@
                 showNotification('Error loading data', 'danger');
             }
         };
+        
+        // Excel Export Function
+        async function exportToExcel() {
+            console.log('📊 exportToExcel function called!');
+            
+            try {
+                showNotification('Creating Excel export...', 'info');
+                
+                const response = await fetch('/api/excel/export', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    }
+                });
+                
+                const result = await response.json();
+                console.log('Excel export API response:', result);
+                
+                if (result.success) {
+                    showNotification(result.message, 'success');
+                } else {
+                    showNotification(result.error || 'Failed to create Excel export', 'danger');
+                }
+            } catch (error) {
+                console.error('Error exporting to Excel:', error);
+                showNotification('Error exporting to Excel: ' + error.message, 'danger');
+            }
+        }
+        
+        // Make sure the function is globally accessible for debugging
+        window.exportToExcel = exportToExcel;
+        
+        // Debug: Test if function is defined after page load
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🔍 Checking if exportToExcel function is defined...');
+            if (typeof exportToExcel === 'function') {
+                console.log('✅ exportToExcel function is properly defined!');
+            } else {
+                console.error('❌ exportToExcel function is NOT defined!');
+            }
+            
+            // Test if the button exists
+            const excelButton = document.querySelector('button[onclick="exportToExcel()"]');
+            if (excelButton) {
+                console.log('✅ Excel button found in DOM:', excelButton);
+                console.log('   Button text:', excelButton.textContent.trim());
+                console.log('   Button onclick:', excelButton.onclick);
+            } else {
+                console.error('❌ Excel button NOT found in DOM!');
+            }
+        });
         
     </script>
 </body>

@@ -1,6 +1,6 @@
 {
   "extraction_info": {
-    "timestamp": "2025-08-21",
+    "timestamp": "2025-08-24",
     "source": "Facebook Marketplace Stockholm",
     "search_query": "iPhone 16",
     "total_products_found": 69,
@@ -2779,7 +2779,7 @@
     "image_quality": "6 products have high-quality thumbnail images from Facebook's CDN",
     "location_accuracy": "Some locations extracted as 'x' - needs pattern refinement",
     "data_completeness": "6 products have complete data with images and links, 10 products have partial data",
-    "last_updated": "2025-08-21T23:14:12.562353"
+    "last_updated": "2025-08-24T11:55:08.386383"
   },
   "technical_details": {
     "html_source_size": "2,926,700 characters",

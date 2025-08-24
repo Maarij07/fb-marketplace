@@ -15,6 +15,7 @@ from flask import Flask, render_template, jsonify, request, Response
 from core.json_manager import JSONDataManager
 from core.scheduler import SchedulerManager
 from core.persistent_session import get_persistent_session
+from core.excel_manager import ExcelManager
 
 
 def calculate_price_distribution(products):
@@ -98,6 +99,7 @@ def create_app(settings):
     json_manager = JSONDataManager()
     scheduler_manager = SchedulerManager(settings)
     notification_manager = NotificationManager()
+    excel_manager = ExcelManager()
     
     # Make notification manager accessible to other modules
     app.notification_manager = notification_manager
@@ -188,32 +190,75 @@ def create_app(settings):
     
     @app.route('/api/price-changes')
     def api_price_changes():
-        """Get recent price changes."""
+        """Get recent price changes (notifications)."""
         try:
             limit = int(request.args.get('limit', 50))
-            # Price changes not tracked in JSON version yet
-            price_changes = []
+            
+            # Since we don't have actual price tracking yet, show dummy notifications
+            # In a real system, this would come from a price tracking database
+            dummy_notifications = [
+                {
+                    'id': 1,
+                    'title': 'iPhone 12 Pro Max 256GB',
+                    'seller': 'Aslihan',
+                    'old_price': 8500,
+                    'new_price': 7800,
+                    'change_amount': -700,
+                    'change_percentage': -8.2,
+                    'detected_at': '2025-08-24T05:30:00Z',
+                    'location': 'Stockholm'
+                },
+                {
+                    'id': 2,
+                    'title': 'iPhone 16 Pro Black Titanium',
+                    'seller': 'Marcus',
+                    'old_price': 12000,
+                    'new_price': 11500,
+                    'change_amount': -500,
+                    'change_percentage': -4.2,
+                    'detected_at': '2025-08-24T04:15:00Z',
+                    'location': 'Stockholm'
+                },
+                {
+                    'id': 3,
+                    'title': 'iPhone 15 Pro Max Natural Titanium',
+                    'seller': 'Sara',
+                    'old_price': 9500,
+                    'new_price': 10200,
+                    'change_amount': 700,
+                    'change_percentage': 7.4,
+                    'detected_at': '2025-08-24T03:45:00Z',
+                    'location': 'Stockholm'
+                }
+            ]
             
             # Format data for frontend
             formatted_changes = []
-            for change in price_changes:
-                formatted_change = dict(change)
-                # Convert prices from cents to dollars
-                if formatted_change['old_price']:
-                    formatted_change['old_price_display'] = f"${formatted_change['old_price'] / 100:.2f}"
-                else:
-                    formatted_change['old_price_display'] = "N/A"
+            for change in dummy_notifications[:limit]:
+                formatted_change = {
+                    'id': change['id'],
+                    'title': change['title'],
+                    'seller': change['seller'],
+                    'old_price': change['old_price'],
+                    'new_price': change['new_price'],
+                    'change_amount': change['change_amount'],
+                    'change_percentage': change['change_percentage'],
+                    'detected_at': change['detected_at'],
+                    'location': change['location']
+                }
                 
-                if formatted_change['new_price']:
-                    formatted_change['new_price_display'] = f"${formatted_change['new_price'] / 100:.2f}"
-                else:
-                    formatted_change['new_price_display'] = "N/A"
+                # Format price displays
+                formatted_change['old_price_display'] = f"{change['old_price']} SEK"
+                formatted_change['new_price_display'] = f"{change['new_price']} SEK"
                 
-                if formatted_change['change_amount']:
-                    sign = "+" if formatted_change['change_amount'] > 0 else ""
-                    formatted_change['change_display'] = f"{sign}${formatted_change['change_amount'] / 100:.2f}"
-                else:
-                    formatted_change['change_display'] = "N/A"
+                # Format change display
+                sign = "+" if change['change_amount'] > 0 else ""
+                formatted_change['change_display'] = f"{sign}{change['change_amount']} SEK"
+                formatted_change['change_percent_display'] = f"{sign}{change['change_percentage']:.1f}%"
+                
+                # Format notification message
+                action = "increased" if change['change_amount'] > 0 else "decreased"
+                formatted_change['notification_message'] = f"{change['seller']} {action} {change['title'][:30]}... price by {abs(change['change_amount'])} SEK"
                 
                 formatted_changes.append(formatted_change)
             
@@ -590,6 +635,88 @@ def create_app(settings):
                 notification_manager.remove_client(client_queue)
         
         return Response(event_generator(), mimetype='text/event-stream')
+    
+    @app.route('/api/excel/export', methods=['POST'])
+    def api_excel_export():
+        """Export data to Excel and open file."""
+        try:
+            # Create Excel export
+            filepath = excel_manager.export_all_products_to_excel()
+            
+            if not filepath:
+                return jsonify({
+                    'success': False,
+                    'error': 'No data available to export'
+                })
+            
+            # Open the Excel file
+            opened_successfully = excel_manager.open_excel_file(filepath)
+            
+            if opened_successfully:
+                return jsonify({
+                    'success': True,
+                    'message': 'Excel file created and opened successfully!',
+                    'filepath': filepath
+                })
+            else:
+                return jsonify({
+                    'success': True,
+                    'message': 'Excel file created successfully, but failed to open automatically',
+                    'filepath': filepath
+                })
+                
+        except Exception as e:
+            logger.error(f"Failed to export to Excel: {e}")
+            return jsonify({'success': False, 'error': str(e)})
+    
+    @app.route('/api/excel/backup', methods=['POST'])
+    def api_excel_backup():
+        """Create Excel backup of recent data."""
+        try:
+            data = request.get_json() or {}
+            hours = int(data.get('hours', 2))
+            
+            # Create backup
+            filepath = excel_manager.create_backup_before_cleanup(hours)
+            
+            if not filepath:
+                return jsonify({
+                    'success': False,
+                    'message': f'No data found in the last {hours} hours to backup'
+                })
+            
+            # Open the Excel file
+            opened_successfully = excel_manager.open_excel_file(filepath)
+            
+            if opened_successfully:
+                return jsonify({
+                    'success': True,
+                    'message': f'Backup created for last {hours} hours and opened successfully!',
+                    'filepath': filepath
+                })
+            else:
+                return jsonify({
+                    'success': True,
+                    'message': f'Backup created for last {hours} hours, but failed to open automatically',
+                    'filepath': filepath
+                })
+                
+        except Exception as e:
+            logger.error(f"Failed to create Excel backup: {e}")
+            return jsonify({'success': False, 'error': str(e)})
+    
+    @app.route('/api/excel/files')
+    def api_excel_files():
+        """Get list of available Excel backup files."""
+        try:
+            files = excel_manager.get_backup_files()
+            return jsonify({
+                'success': True,
+                'data': files
+            })
+        except Exception as e:
+            logger.error(f"Failed to get Excel files: {e}")
+            return jsonify({'success': False, 'error': str(e)})
     
     @app.errorhandler(404)
     def not_found(error):

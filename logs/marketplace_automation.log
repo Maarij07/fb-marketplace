@@ -9722,3 +9722,62 @@ Stacktrace:
 2025-08-21 22:58:54,808 - web.app - INFO - DEBUG - is_running: False, has_jobs: False, has_config: False
 2025-08-21 22:58:54,809 - web.app - INFO - DEBUG - No scheduler to show
 2025-08-21 22:58:54,809 - werkzeug - INFO - 127.0.0.1 - - [21/Aug/2025 22:58:54] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 11:14:56,672 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-24 11:14:56,679 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-24 11:14:56,697 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-08-24 11:14:56,697 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-24 11:14:56,712 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-08-24 11:14:57,533 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-24 11:14:57,540 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-24 11:14:57,549 - werkzeug - WARNING -  * Debugger is active!
+2025-08-24 11:14:57,551 - werkzeug - INFO -  * Debugger PIN: 129-534-001
+2025-08-24 11:14:57,572 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 11:14:57] "GET /api/events HTTP/1.1" 200 -
+2025-08-24 11:15:01,240 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 11:15:01] "GET /api/events HTTP/1.1" 200 -
+2025-08-24 11:15:32,562 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 11:15:32] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 11:15:32,566 - core.json_manager - ERROR - Failed to load JSON data: Expecting ',' delimiter: line 699 column 49 (char 32101)
+2025-08-24 11:15:32,572 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 11:15:32] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 11:15:32,587 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 11:15:32] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 11:16:32,586 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-24 11:16:32,592 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 11:16:32] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 11:16:32,596 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 11:16:32] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 11:16:32,609 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 11:16:32] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 11:17:27,449 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 11:17:27] "GET / HTTP/1.1" 200 -
+2025-08-24 11:17:27,808 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-24 11:17:27,812 - core.json_manager - ERROR - Failed to load JSON data: Expecting property name enclosed in double quotes: line 526 column 9 (char 24072)
+2025-08-24 11:17:27,820 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 11:17:27] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 11:17:27,837 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 11:17:27] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 11:17:27,839 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 11:17:27] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 11:17:27,853 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 11:17:27] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 11:17:27,898 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 11:17:27] "GET /api/events HTTP/1.1" 200 -
+2025-08-24 11:17:32,566 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 11:17:32] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 11:17:32,598 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 11:17:32] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 11:17:32,615 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 11:17:32] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 11:17:39,025 - core.scheduler - INFO - Scheduler configuration updated: {'search_query': 'iphone 12', 'city': 'Stockholm', 'interval_minutes': 15}
+2025-08-24 11:17:39,042 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-08-24 11:17:39,043 - apscheduler.scheduler - INFO - Added job "Facebook Marketplace Scraping" to job store "default"
+2025-08-24 11:17:39,044 - apscheduler.scheduler - INFO - Scheduler started
+2025-08-24 11:17:39,046 - core.scheduler - INFO - Scheduler started with 15 minute intervals
+2025-08-24 11:17:39,047 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 11:17:39] "POST /api/scheduler/create HTTP/1.1" 200 -
+2025-08-24 11:17:39,393 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 11:17:39] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 11:24:40,477 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-24 11:24:40,491 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-24 11:24:40,515 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-08-24 11:24:40,516 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-24 11:24:40,531 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-08-24 11:24:42,113 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-24 11:24:42,122 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-24 11:24:42,133 - werkzeug - WARNING -  * Debugger is active!
+2025-08-24 11:24:42,136 - werkzeug - INFO -  * Debugger PIN: 129-534-001
+2025-08-24 11:24:42,161 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 11:24:42] "GET /api/events HTTP/1.1" 200 -
+2025-08-24 11:24:42,163 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 11:24:42] "GET /api/events HTTP/1.1" 200 -
+2025-08-24 11:24:42,164 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 11:24:42] "GET /api/events HTTP/1.1" 200 -
+2025-08-24 11:24:43,542 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 11:24:43] "GET /api/events HTTP/1.1" 200 -
+2025-08-24 11:24:56,724 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 11:24:56] "GET / HTTP/1.1" 200 -
+2025-08-24 11:24:57,078 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 11:24:57] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 11:24:57,081 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 11:24:57] "GET /api/events HTTP/1.1" 200 -
+2025-08-24 11:24:57,101 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 11:24:57] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 11:24:57,119 - core.json_manager - ERROR - Failed to load JSON data: Expecting ',' delimiter: line 1399 column 443 (char 64561)
+2025-08-24 11:24:57,125 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 11:24:57] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 11:24:57,155 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 11:24:57] "GET /api/stats HTTP/1.1" 200 -
