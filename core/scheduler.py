@@ -177,18 +177,24 @@ class SchedulerManager:
         self.logger.info(f"Starting scheduled scraping job at {job_start_time}")
         
         try:
-            # Use persistent session for scheduled jobs
-            persistent_session = get_persistent_session(self.settings)
+            # Check if deep scraping is enabled
+            enable_deep_scraping = self.settings.get_bool('ENABLE_DEEP_SCRAPING', True)
             
-            # Run the default scraping using persistent session
-            results = persistent_session.run_default_scrape()
+            if enable_deep_scraping:
+                # Use deep scraping for scheduled jobs
+                results = self._run_deep_scraping_job()
+            else:
+                # Use standard scraping with persistent session
+                persistent_session = get_persistent_session(self.settings)
+                results = persistent_session.run_default_scrape()
             
             # Log results
             job_end_time = datetime.now()
             duration = (job_end_time - job_start_time).total_seconds()
             
+            scraping_type = "Deep" if enable_deep_scraping else "Standard"
             self.logger.info(
-                f"Scheduled scraping completed in {duration:.1f} seconds. "
+                f"Scheduled {scraping_type.lower()} scraping completed in {duration:.1f} seconds. "
                 f"Found {len(results)} listings"
             )
             
@@ -201,13 +207,20 @@ class SchedulerManager:
     def run_manual_scraping(self) -> dict:
         """Run scraping manually (outside of schedule)."""
         try:
-            self.logger.info("Starting manual scraping job")
+            enable_deep_scraping = self.settings.get_bool('ENABLE_DEEP_SCRAPING', True)
+            scraping_type = "Deep" if enable_deep_scraping else "Standard"
+            
+            self.logger.info(f"Starting manual {scraping_type.lower()} scraping job")
             
             start_time = datetime.now()
             
-            # Use persistent session for manual scraping
-            persistent_session = get_persistent_session(self.settings)
-            results = persistent_session.run_default_scrape()
+            if enable_deep_scraping:
+                # Use deep scraping for manual jobs
+                results = self._run_deep_scraping_job()
+            else:
+                # Use standard scraping with persistent session
+                persistent_session = get_persistent_session(self.settings)
+                results = persistent_session.run_default_scrape()
             
             end_time = datetime.now()
             duration = (end_time - start_time).total_seconds()
@@ -217,10 +230,11 @@ class SchedulerManager:
                 'listings_found': len(results),
                 'duration_seconds': round(duration, 1),
                 'start_time': start_time.isoformat(),
-                'end_time': end_time.isoformat()
+                'end_time': end_time.isoformat(),
+                'scraping_method': scraping_type.lower()
             }
             
-            self.logger.info(f"Manual scraping completed: {result}")
+            self.logger.info(f"Manual {scraping_type.lower()} scraping completed: {result}")
             return result
             
         except Exception as e:
@@ -235,13 +249,20 @@ class SchedulerManager:
     def run_custom_scraping(self, search_query: str, notification_manager=None) -> dict:
         """Run custom scraping with user-provided search query."""
         try:
-            self.logger.info(f"Starting custom scraping job for: {search_query}")
+            enable_deep_scraping = self.settings.get_bool('ENABLE_DEEP_SCRAPING', True)
+            scraping_type = "Deep" if enable_deep_scraping else "Standard"
+            
+            self.logger.info(f"Starting custom {scraping_type.lower()} scraping job for: {search_query}")
             
             start_time = datetime.now()
             
-            # Use persistent session for custom scraping
-            persistent_session = get_persistent_session(self.settings)
-            results = persistent_session.search_marketplace(search_query, notification_manager)
+            if enable_deep_scraping:
+                # Use deep scraping for custom search
+                results = self._run_custom_deep_scraping(search_query, notification_manager)
+            else:
+                # Use standard scraping with persistent session
+                persistent_session = get_persistent_session(self.settings)
+                results = persistent_session.search_marketplace(search_query, notification_manager)
             
             end_time = datetime.now()
             
@@ -279,10 +300,11 @@ class SchedulerManager:
                 'duration_seconds': round(duration, 1),
                 'start_time': start_time.isoformat(),
                 'end_time': end_time.isoformat(),
-                'search_query': search_query
+                'search_query': search_query,
+                'scraping_method': scraping_type.lower()
             }
             
-            self.logger.info(f"Custom scraping completed: {result}")
+            self.logger.info(f"Custom {scraping_type.lower()} scraping completed: {result}")
             return result
             
         except Exception as e:
@@ -404,6 +426,145 @@ class SchedulerManager:
         except Exception as e:
             self.logger.error(f"Failed to get schedule info: {e}")
             return {'error': str(e)}
+    
+    def _run_deep_scraping_job(self) -> list:
+        """Execute deep scraping job for default iPhone 16 search."""
+        try:
+            self.logger.info("Starting deep scraping job for iPhone 16")
+            
+            # Create a new scraper instance for deep scraping
+            scraper = FacebookMarketplaceScraper(self.settings, persistent_session=False)
+            
+            # Run deep scraping for iPhone 16
+            max_products = self.settings.get_int('DEEP_SCRAPE_MAX_PRODUCTS', 10)
+            results = scraper.deep_scrape_marketplace("iphone 16", max_products=max_products)
+            
+            self.logger.info(f"Deep scraping job completed: {len(results)} products scraped")
+            return results
+            
+        except Exception as e:
+            self.logger.error(f"Deep scraping job failed: {e}")
+            return []
+    
+    def _run_custom_deep_scraping(self, search_query: str, notification_manager=None) -> list:
+        """Execute deep scraping job for custom search query."""
+        try:
+            self.logger.info(f"Starting deep scraping job for: {search_query}")
+            
+            # Create a new scraper instance for deep scraping
+            scraper = FacebookMarketplaceScraper(self.settings, persistent_session=False)
+            
+            # Set notification manager if provided
+            if notification_manager:
+                scraper.set_notification_manager(notification_manager)
+            
+            # Run deep scraping for custom search
+            max_products = self.settings.get_int('DEEP_SCRAPE_MAX_PRODUCTS', 10)
+            results = scraper.deep_scrape_marketplace(search_query, max_products=max_products)
+            
+            self.logger.info(f"Custom deep scraping job completed: {len(results)} products scraped")
+            return results
+            
+        except Exception as e:
+            self.logger.error(f"Custom deep scraping job failed: {e}")
+            return []
+    
+    def run_deep_scraping_manual(self, search_query: str = "iphone 16", max_products: int = None) -> dict:
+        """Run deep scraping manually with full control over parameters."""
+        try:
+            self.logger.info(f"Starting manual deep scraping for: {search_query}")
+            
+            start_time = datetime.now()
+            
+            # Create scraper instance
+            scraper = FacebookMarketplaceScraper(self.settings, persistent_session=False)
+            
+            # Use provided max_products or default from settings
+            if max_products is None:
+                max_products = self.settings.get_int('DEEP_SCRAPE_MAX_PRODUCTS', 10)
+            
+            # Run deep scraping
+            results = scraper.deep_scrape_marketplace(search_query, max_products=max_products)
+            
+            end_time = datetime.now()
+            duration = (end_time - start_time).total_seconds()
+            
+            result = {
+                'success': True,
+                'listings_found': len(results),
+                'duration_seconds': round(duration, 1),
+                'start_time': start_time.isoformat(),
+                'end_time': end_time.isoformat(),
+                'search_query': search_query,
+                'max_products': max_products,
+                'scraping_method': 'deep'
+            }
+            
+            self.logger.info(f"Manual deep scraping completed: {result}")
+            return result
+            
+        except Exception as e:
+            self.logger.error(f"Manual deep scraping failed: {e}")
+            return {
+                'success': False,
+                'error': str(e),
+                'listings_found': 0,
+                'duration_seconds': 0,
+                'search_query': search_query,
+                'scraping_method': 'deep'
+            }
+    
+    def get_deep_scraping_config(self) -> dict:
+        """Get deep scraping configuration settings."""
+        try:
+            return {
+                'enabled': self.settings.get_bool('ENABLE_DEEP_SCRAPING', True),
+                'max_products': self.settings.get_int('DEEP_SCRAPE_MAX_PRODUCTS', 10),
+                'page_load_timeout': self.settings.get_int('DEEP_SCRAPE_PAGE_TIMEOUT', 15),
+                'element_wait_timeout': self.settings.get_int('DEEP_SCRAPE_ELEMENT_TIMEOUT', 8),
+                'inter_product_delay_min': self.settings.get_int('DEEP_SCRAPE_DELAY_MIN', 3),
+                'inter_product_delay_max': self.settings.get_int('DEEP_SCRAPE_DELAY_MAX', 7)
+            }
+        except Exception as e:
+            self.logger.error(f"Failed to get deep scraping config: {e}")
+            return {'error': str(e)}
+    
+    def update_deep_scraping_config(self, config: dict) -> bool:
+        """Update deep scraping configuration."""
+        try:
+            updated_settings = {}
+            
+            if 'enabled' in config:
+                updated_settings['ENABLE_DEEP_SCRAPING'] = str(config['enabled']).lower()
+            
+            if 'max_products' in config:
+                updated_settings['DEEP_SCRAPE_MAX_PRODUCTS'] = str(config['max_products'])
+            
+            if 'page_load_timeout' in config:
+                updated_settings['DEEP_SCRAPE_PAGE_TIMEOUT'] = str(config['page_load_timeout'])
+            
+            if 'element_wait_timeout' in config:
+                updated_settings['DEEP_SCRAPE_ELEMENT_TIMEOUT'] = str(config['element_wait_timeout'])
+            
+            if 'inter_product_delay_min' in config:
+                updated_settings['DEEP_SCRAPE_DELAY_MIN'] = str(config['inter_product_delay_min'])
+            
+            if 'inter_product_delay_max' in config:
+                updated_settings['DEEP_SCRAPE_DELAY_MAX'] = str(config['inter_product_delay_max'])
+            
+            # Update settings if we have any changes
+            if updated_settings:
+                for key, value in updated_settings.items():
+                    self.settings.set(key, value)
+                
+                self.logger.info(f"Deep scraping configuration updated: {config}")
+                return True
+            
+            return False
+            
+        except Exception as e:
+            self.logger.error(f"Failed to update deep scraping config: {e}")
+            return False
     
     def __del__(self):
         """Cleanup when object is destroyed."""

@@ -157,10 +157,19 @@ class PersistentBrowserSession:
             # Update activity timestamp
             self.last_activity = datetime.now()
             
-            # Perform the search using existing session
-            results = self.scraper.quick_search(search_query)
+            # Check if deep scraping is enabled in settings
+            enable_deep_scraping = self.settings.get_bool('ENABLE_DEEP_SCRAPING', False) if self.settings else False
             
-            self.logger.info(f"Search completed: found {len(results)} listings")
+            if enable_deep_scraping:
+                self.logger.info(f"Using deep scraping for search: {search_query}")
+                max_products = self.settings.get_int('DEEP_SCRAPE_MAX_PRODUCTS', 10)
+                results = self.scraper.deep_scrape_marketplace(search_query, max_products=max_products)
+            else:
+                # Standard scraping
+                results = self.scraper.quick_search(search_query)
+            
+            scraping_type = "deep" if enable_deep_scraping else "standard"
+            self.logger.info(f"{scraping_type.title()} search completed: found {len(results)} listings")
             return results
             
         except Exception as e:
@@ -183,10 +192,19 @@ class PersistentBrowserSession:
             # Update activity timestamp
             self.last_activity = datetime.now()
             
-            # Navigate to iPhone 16 search and scrape
-            results = self.scraper.quick_search("iphone 16")
+            # Check if deep scraping is enabled in settings
+            enable_deep_scraping = self.settings.get_bool('ENABLE_DEEP_SCRAPING', False) if self.settings else False
             
-            self.logger.info(f"Default scrape completed: found {len(results)} listings")
+            if enable_deep_scraping:
+                self.logger.info("Using deep scraping for default scrape")
+                max_products = self.settings.get_int('DEEP_SCRAPE_MAX_PRODUCTS', 10)
+                results = self.scraper.deep_scrape_marketplace("iphone 16", max_products=max_products)
+            else:
+                # Standard scraping
+                results = self.scraper.quick_search("iphone 16")
+            
+            scraping_type = "deep" if enable_deep_scraping else "standard"
+            self.logger.info(f"Default {scraping_type} scrape completed: found {len(results)} listings")
             return results
             
         except Exception as e:
@@ -253,6 +271,64 @@ class PersistentBrowserSession:
         """Explicitly close the persistent session."""
         self.logger.info("Closing persistent browser session")
         self._cleanup_session()
+    
+    def run_deep_scrape(self, search_query: str = "iphone 16", max_products: int = None, notification_manager=None) -> list:
+        """
+        Force deep scraping mode regardless of settings for advanced use cases.
+        """
+        try:
+            if not self.start_session():
+                self.logger.error("Could not establish persistent session for deep scrape")
+                return []
+            
+            self.logger.info(f"Starting forced deep scrape for '{search_query}'")
+            
+            # Set notification manager if provided
+            if notification_manager and self.scraper:
+                self.scraper.set_notification_manager(notification_manager)
+            
+            # Update activity timestamp
+            self.last_activity = datetime.now()
+            
+            # Use provided max_products or default
+            if max_products is None:
+                max_products = self.settings.get_int('DEEP_SCRAPE_MAX_PRODUCTS', 10) if self.settings else 10
+            
+            # Perform deep scraping
+            results = self.scraper.deep_scrape_marketplace(search_query, max_products=max_products)
+            
+            self.logger.info(f"Deep scrape completed: found {len(results)} comprehensive listings")
+            return results
+            
+        except Exception as e:
+            self.logger.error(f"Deep scrape failed in persistent session: {e}")
+            # If scrape fails, mark session as invalid for next time
+            self.session_active = False
+            return []
+    
+    def get_scraping_capabilities(self) -> dict:
+        """Get information about available scraping methods and configuration."""
+        try:
+            capabilities = {
+                'standard_scraping': True,
+                'deep_scraping': True,
+                'deep_scraping_enabled_by_default': False,
+                'max_products_per_deep_scrape': 10,
+                'supports_notifications': True,
+                'persistent_session_active': self.session_active
+            }
+            
+            if self.settings:
+                capabilities.update({
+                    'deep_scraping_enabled_by_default': self.settings.get_bool('ENABLE_DEEP_SCRAPING', False),
+                    'max_products_per_deep_scrape': self.settings.get_int('DEEP_SCRAPE_MAX_PRODUCTS', 10)
+                })
+            
+            return capabilities
+            
+        except Exception as e:
+            self.logger.error(f"Failed to get scraping capabilities: {e}")
+            return {'error': str(e)}
     
     def __del__(self):
         """Cleanup when object is destroyed."""

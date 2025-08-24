@@ -9781,3 +9781,432 @@ Stacktrace:
 2025-08-24 11:24:57,119 - core.json_manager - ERROR - Failed to load JSON data: Expecting ',' delimiter: line 1399 column 443 (char 64561)
 2025-08-24 11:24:57,125 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 11:24:57] "GET /api/listings?limit=20 HTTP/1.1" 200 -
 2025-08-24 11:24:57,155 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 11:24:57] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 12:36:07,084 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-24 12:36:07,090 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-24 12:36:07,105 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-08-24 12:36:07,106 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-24 12:36:07,115 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-08-24 12:36:08,078 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-24 12:36:08,084 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-24 12:36:08,091 - werkzeug - WARNING -  * Debugger is active!
+2025-08-24 12:36:08,093 - werkzeug - INFO -  * Debugger PIN: 129-534-001
+2025-08-24 12:36:55,490 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:36:55] "GET / HTTP/1.1" 200 -
+2025-08-24 12:36:55,621 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:36:55] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 12:36:55,841 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:36:55] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 12:36:55,846 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:36:55] "GET /api/events HTTP/1.1" 200 -
+2025-08-24 12:36:55,853 - core.json_manager - ERROR - Failed to load JSON data: Expecting property name enclosed in double quotes: line 526 column 9 (char 24072)
+2025-08-24 12:36:55,877 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:36:55] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 12:36:55,897 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:36:55] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 12:36:59,803 - core.scheduler - INFO - Starting custom deep scraping job for: iphone 16
+2025-08-24 12:36:59,803 - core.scheduler - INFO - Starting deep scraping job for: iphone 16
+2025-08-24 12:36:59,807 - core.scraper - INFO - Starting deep scrape for: iphone 16 (max 10 products)
+2025-08-24 12:37:00,047 - WDM - INFO - ====== WebDriver manager ======
+2025-08-24 12:37:00,988 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-24 12:37:01,627 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-24 12:37:02,277 - WDM - INFO - Driver [C:\Users\PC\.wdm\drivers\chromedriver\win64\139.0.7258.138\chromedriver.exe] found in cache
+2025-08-24 12:37:04,236 - core.scraper - INFO - Chrome WebDriver initialized successfully
+2025-08-24 12:37:04,237 - core.scraper - INFO - Starting Facebook login...
+2025-08-24 12:37:26,557 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:37:26] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 12:37:26,579 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:37:26] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 12:37:26,586 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:37:26] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 12:37:26,596 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:37:26] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 12:37:56,556 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:37:56] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 12:37:56,582 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-24 12:37:56,591 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1223 column 16 (char 56168)
+2025-08-24 12:37:56,602 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:37:56] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 12:37:56,617 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:37:56] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 12:37:56,631 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:37:56] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 12:38:02,705 - core.scraper - INFO - Successfully logged in to Facebook
+2025-08-24 12:38:02,705 - core.scraper - INFO - Navigating to Facebook Marketplace with search: iphone 16
+2025-08-24 12:38:02,706 - core.scraper - INFO - Opening marketplace URL: https://www.facebook.com/marketplace
+2025-08-24 12:38:10,432 - core.scraper - INFO - Navigating to custom search: https://www.facebook.com/marketplace/stockholm/search/?query=iphone%2016
+2025-08-24 12:38:26,555 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:38:26] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 12:38:26,569 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-24 12:38:26,580 - core.json_manager - ERROR - Failed to load JSON data: Expecting ':' delimiter: line 1048 column 24 (char 48151)
+2025-08-24 12:38:26,596 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:38:26] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 12:38:26,602 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:38:26] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 12:38:26,621 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:38:26] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 12:38:27,090 - core.scraper - INFO - Successfully navigated to Marketplace with search: iphone 16
+2025-08-24 12:38:27,090 - core.scraper - INFO - Finding product cards for deep scraping...
+2025-08-24 12:38:30,123 - core.scraper - INFO - Found 3 marketplace item links
+2025-08-24 12:38:30,301 - core.scraper - INFO - Prepared 3 product cards for deep scraping
+2025-08-24 12:38:30,302 - core.scraper - INFO - Found 3 product cards, will deep scrape first 3
+2025-08-24 12:38:30,302 - core.scraper - INFO - Deep scraping product 1/3: SEK8,000
+Säljer öppnad iPhone 16 128 gb i nyskick....
+2025-08-24 12:38:30,313 - core.scraper - INFO - Navigating to product page: SEK8,000
+Säljer öppnad iPhone 16 128 gb i nyskick....
+2025-08-24 12:38:42,118 - core.scraper - INFO - Looking for 'See Details' button...
+2025-08-24 12:38:51,106 - core.scraper - INFO - Using profile link as 'See details' button
+2025-08-24 12:38:51,122 - core.scraper - INFO - Clicking 'See details' button: Seller details
+2025-08-24 12:38:52,201 - core.scraper - ERROR - Failed to click 'See details': Message: element click intercepted: Element <a aria-label="Seller details" class="x1i10hfl x1qjc9v5 xjqpnuy xc5r6h4 xqeqjp1 x1phubyo x972fbf x10w94by x1qhh985 x14e42zd x9f619 xdl72j9 x2lah0s x3ct3a4 x2lwn1j xeuugli x16tdsg8 x1hl2dhg xggy1nq x1ja2u2z x1t137rt x1fmog5m xu25z0z x140muxe xo1y3bh x1q0g3np x87ps6o x1lku1pv x1a2a7pz x1fey0fg x1ypdohk x1ejq31n x18oe1m7 x1sy0etr xstzfhl x1rg5ohu xdj266r x14z9mp xat24cr x1lziwak xexx8yu xyri2b x18d9i69 x1c1uobl x1n2onr6 x3ajldb" href="/marketplace/profile/100093655444451/?product_id=749687374658132" role="link" tabindex="0">...</a> is not clickable at point (1081, 634). Other element would receive the click: <div class="x1uvtmcs x4k7w5x x1h91t0o x1beo9mf xaigb6o x12ejxvf x3igimt xarpa2k xedcshv x1lytzrv x1t2pt76 x7ja8zs x1n2onr6 x1qrby5j x1jfb8zj" tabindex="-1">...</div>
+  (Session info: chrome=139.0.7258.128); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+	GetHandleVerifier [0x0x65ffc3+65331]
+	GetHandleVerifier [0x0x660004+65396]
+	(No symbol) [0x0x453f63]
+	(No symbol) [0x0x4a2ce0]
+	(No symbol) [0x0x4a109a]
+	(No symbol) [0x0x49ebf2]
+	(No symbol) [0x0x49dee1]
+	(No symbol) [0x0x492645]
+	(No symbol) [0x0x4c14dc]
+	(No symbol) [0x0x4920d4]
+	(No symbol) [0x0x4c1754]
+	(No symbol) [0x0x4e2bcb]
+	(No symbol) [0x0x4c12d6]
+	(No symbol) [0x0x490910]
+	(No symbol) [0x0x491784]
+	GetHandleVerifier [0x0x8a38b3+2439203]
+	GetHandleVerifier [0x0x89eae2+2419282]
+	GetHandleVerifier [0x0x68712a+225434]
+	GetHandleVerifier [0x0x676e08+159096]
+	GetHandleVerifier [0x0x67dd5d+187597]
+	GetHandleVerifier [0x0x667ad8+96840]
+	GetHandleVerifier [0x0x667c62+97234]
+	GetHandleVerifier [0x0x65277a+9962]
+	BaseThreadInitThunk [0x0x76a97ba9+25]
+	RtlInitializeExceptionChain [0x0x77ccc3ab+107]
+	RtlClearBits [0x0x77ccc32f+191]
+
+2025-08-24 12:38:56,538 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:38:56] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 12:38:56,563 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:38:56] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 12:38:56,574 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:38:56] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 12:38:56,578 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:38:56] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 12:39:26,556 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:39:26] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 12:39:26,589 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:39:26] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 12:39:26,590 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-24 12:39:26,616 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:39:26] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 12:39:26,629 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:39:26] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 12:39:29,510 - core.scraper - ERROR - Failed to save individual report: name 'os' is not defined
+2025-08-24 12:39:29,512 - core.scraper - INFO - Navigating back to search results...
+2025-08-24 12:39:34,743 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\logging\\__init__.py', reloading
+2025-08-24 12:39:34,853 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\encodings\\cp1252.py', reloading
+2025-08-24 12:39:34,854 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\flask\\app.py', reloading
+2025-08-24 12:39:34,854 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\werkzeug\\debug\\__init__.py', reloading
+2025-08-24 12:39:34,855 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\werkzeug\\serving.py', reloading
+2025-08-24 12:39:34,855 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\http\\server.py', reloading
+2025-08-24 12:39:34,856 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\socketserver.py', reloading
+2025-08-24 12:39:34,856 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\threading.py', reloading
+2025-08-24 12:39:35,959 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-08-24 12:39:37,171 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-24 12:39:37,178 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-24 12:39:37,184 - werkzeug - WARNING -  * Debugger is active!
+2025-08-24 12:39:37,186 - werkzeug - INFO -  * Debugger PIN: 129-534-001
+2025-08-24 12:39:37,202 - core.scheduler - INFO - Starting custom deep scraping job for: iphone 16
+2025-08-24 12:39:37,202 - core.scheduler - INFO - Starting deep scraping job for: iphone 16
+2025-08-24 12:39:37,203 - core.scraper - INFO - Starting deep scrape for: iphone 16 (max 10 products)
+2025-08-24 12:39:37,246 - WDM - INFO - ====== WebDriver manager ======
+2025-08-24 12:39:38,036 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-24 12:39:38,379 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-24 12:39:38,710 - WDM - INFO - Driver [C:\Users\PC\.wdm\drivers\chromedriver\win64\139.0.7258.138\chromedriver.exe] found in cache
+2025-08-24 12:39:39,265 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:39:39] "GET /api/events HTTP/1.1" 200 -
+2025-08-24 12:39:39,786 - core.scraper - INFO - Chrome WebDriver initialized successfully
+2025-08-24 12:39:39,786 - core.scraper - INFO - Starting Facebook login...
+2025-08-24 12:39:41,534 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:39:41] "GET /api/events HTTP/1.1" 200 -
+2025-08-24 12:39:56,543 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:39:56] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 12:39:56,577 - core.json_manager - ERROR - Failed to load JSON data: Expecting ',' delimiter: line 699 column 49 (char 32101)
+2025-08-24 12:39:56,578 - core.json_manager - ERROR - Failed to load JSON data: Expecting property name enclosed in double quotes: line 877 column 7 (char 40122)
+2025-08-24 12:39:56,594 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:39:56] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 12:39:56,610 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:39:56] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 12:39:56,632 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:39:56] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 12:40:26,542 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:40:26] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 12:40:26,560 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:40:26] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 12:40:26,561 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:40:26] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 12:40:26,573 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:40:26] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 12:40:42,581 - core.scraper - INFO - Successfully logged in to Facebook
+2025-08-24 12:40:42,586 - core.scraper - INFO - Navigating to Facebook Marketplace with search: iphone 16
+2025-08-24 12:40:42,587 - core.scraper - INFO - Opening marketplace URL: https://www.facebook.com/marketplace
+2025-08-24 12:40:50,180 - core.scraper - INFO - Navigating to custom search: https://www.facebook.com/marketplace/stockholm/search/?query=iphone%2016
+2025-08-24 12:41:06,471 - core.scraper - INFO - Successfully navigated to Marketplace with search: iphone 16
+2025-08-24 12:41:06,472 - core.scraper - INFO - Finding product cards for deep scraping...
+2025-08-24 12:41:09,488 - core.scraper - INFO - Found 21 marketplace item links
+2025-08-24 12:41:09,982 - core.scraper - INFO - Prepared 21 product cards for deep scraping
+2025-08-24 12:41:09,982 - core.scraper - INFO - Found 21 product cards, will deep scrape first 10
+2025-08-24 12:41:09,983 - core.scraper - INFO - Deep scraping product 1/10: SEK8,000
+Säljer öppnad iPhone 16 128 gb i nyskick....
+2025-08-24 12:41:09,995 - core.scraper - INFO - Navigating to product page: SEK8,000
+Säljer öppnad iPhone 16 128 gb i nyskick....
+2025-08-24 12:41:20,332 - core.scraper - INFO - Looking for 'See Details' button...
+2025-08-24 12:41:27,550 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:41:27] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 12:41:27,583 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:41:27] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 12:41:27,584 - core.scraper - INFO - Using profile link as 'See details' button
+2025-08-24 12:41:27,589 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:41:27] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 12:41:27,603 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:41:27] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 12:41:27,612 - core.scraper - INFO - Clicking 'See details' button: Seller details
+2025-08-24 12:42:12,143 - core.scraper - INFO - Navigated to new page, going back...
+2025-08-24 12:42:28,540 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:42:28] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 12:42:28,567 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-24 12:42:28,577 - core.json_manager - ERROR - Failed to load JSON data: Expecting ':' delimiter: line 1048 column 24 (char 48151)
+2025-08-24 12:42:28,586 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:42:28] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 12:42:28,594 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:42:28] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 12:42:28,605 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:42:28] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 12:42:50,139 - core.scraper - ERROR - Failed to save individual report: name 'os' is not defined
+2025-08-24 12:42:50,140 - core.scraper - INFO - Navigating back to search results...
+2025-08-24 12:42:58,581 - core.scraper - INFO - Deep scraping product 2/10: SEK4,800
+Iphone 16 plus
+Stockholm, AB...
+2025-08-24 12:42:58,596 - core.scraper - INFO - Navigating to product page: SEK4,800
+Iphone 16 plus
+Stockholm, AB...
+2025-08-24 12:43:08,422 - core.scraper - INFO - Looking for 'See Details' button...
+2025-08-24 12:43:15,516 - core.scraper - INFO - Using profile link as 'See details' button
+2025-08-24 12:43:15,537 - core.scraper - INFO - Clicking 'See details' button: Seller details
+2025-08-24 12:43:29,537 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:43:29] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 12:43:29,547 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:43:29] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 12:43:29,560 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-24 12:43:29,567 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:43:29] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 12:43:29,590 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:43:29] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 12:43:59,637 - core.scraper - INFO - Navigated to new page, going back...
+2025-08-24 12:44:30,550 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:44:30] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 12:44:30,559 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-24 12:44:30,559 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-24 12:44:30,568 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:44:30] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 12:44:30,582 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:44:30] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 12:44:30,582 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:44:30] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 12:44:37,946 - core.scraper - ERROR - Failed to save individual report: name 'os' is not defined
+2025-08-24 12:44:37,949 - core.scraper - INFO - Navigating back to search results...
+2025-08-24 12:44:48,412 - core.scraper - INFO - Deep scraping product 3/10: SEK750
+Iphone 16 Pro Max 256gb Unlocked
+Stockholm,...
+2025-08-24 12:44:48,439 - core.scraper - INFO - Navigating to product page: SEK750
+Iphone 16 Pro Max 256gb Unlocked
+Stockholm,...
+2025-08-24 12:45:02,065 - core.scraper - INFO - Looking for 'See Details' button...
+2025-08-24 12:45:08,615 - core.scraper - INFO - Using profile link as 'See details' button
+2025-08-24 12:45:08,629 - core.scraper - INFO - Clicking 'See details' button: Seller details
+2025-08-24 12:45:31,560 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-24 12:45:31,561 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:45:31] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 12:45:31,563 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-24 12:45:31,576 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:45:31] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 12:45:31,605 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:45:31] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 12:45:31,613 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:45:31] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 12:45:54,438 - core.scraper - INFO - Navigated to new page, going back...
+2025-08-24 12:46:32,922 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:46:32] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 12:46:32,933 - core.scraper - ERROR - Failed to save individual report: name 'os' is not defined
+2025-08-24 12:46:32,943 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:46:32] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 12:46:32,945 - core.scraper - INFO - Navigating back to search results...
+2025-08-24 12:46:32,955 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:46:32] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 12:46:32,975 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:46:32] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 12:46:43,178 - core.scraper - INFO - Deep scraping product 4/10: SEK6,790
+iPhone 16
+Södertälje, AB...
+2025-08-24 12:46:43,191 - core.scraper - INFO - Navigating to product page: SEK6,790
+iPhone 16
+Södertälje, AB...
+2025-08-24 12:46:53,623 - core.scraper - INFO - Looking for 'See Details' button...
+2025-08-24 12:47:00,840 - core.scraper - INFO - Using profile link as 'See details' button
+2025-08-24 12:47:00,855 - core.scraper - INFO - Clicking 'See details' button: Seller details
+2025-08-24 12:47:32,558 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:47:32] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 12:47:32,583 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-24 12:47:32,605 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:47:32] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 12:47:32,612 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:47:32] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 12:47:32,622 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:47:32] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 12:47:45,747 - core.scraper - INFO - Navigated to new page, going back...
+2025-08-24 12:48:23,758 - core.scraper - ERROR - Failed to save individual report: name 'os' is not defined
+2025-08-24 12:48:23,758 - core.scraper - INFO - Navigating back to search results...
+2025-08-24 12:48:32,555 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:48:32] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 12:48:32,578 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:48:32] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 12:48:32,584 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-24 12:48:32,598 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:48:32] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 12:48:32,604 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:48:32] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 12:48:34,823 - core.scraper - INFO - Deep scraping product 5/10: SEK11,500
+iPhone 16 PRO Max.
+Hagalund, AB...
+2025-08-24 12:48:34,840 - core.scraper - INFO - Navigating to product page: SEK11,500
+iPhone 16 PRO Max.
+Hagalund, AB...
+2025-08-24 12:48:45,981 - core.scraper - INFO - Looking for 'See Details' button...
+2025-08-24 12:48:55,976 - core.scraper - INFO - Using profile link as 'See details' button
+2025-08-24 12:48:55,994 - core.scraper - INFO - Clicking 'See details' button: Seller details
+2025-08-24 12:49:32,544 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:49:32] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 12:49:32,576 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:49:32] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 12:49:32,586 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:49:32] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 12:49:32,612 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:49:32] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 12:49:40,463 - core.scraper - INFO - Navigated to new page, going back...
+2025-08-24 12:50:18,740 - core.scraper - ERROR - Failed to save individual report: name 'os' is not defined
+2025-08-24 12:50:18,740 - core.scraper - INFO - Navigating back to search results...
+2025-08-24 12:50:26,638 - core.scraper - INFO - Deep scraping product 6/10: SEK9,000
+iPhone 16 PRO.
+Hagalund, AB...
+2025-08-24 12:50:26,657 - core.scraper - INFO - Navigating to product page: SEK9,000
+iPhone 16 PRO.
+Hagalund, AB...
+2025-08-24 12:50:32,553 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:50:32] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 12:50:32,563 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:50:32] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 12:50:32,570 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:50:32] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 12:50:32,597 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:50:32] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 12:50:38,028 - core.scraper - INFO - Looking for 'See Details' button...
+2025-08-24 12:50:45,673 - core.scraper - INFO - Using profile link as 'See details' button
+2025-08-24 12:50:45,691 - core.scraper - INFO - Clicking 'See details' button: Seller details
+2025-08-24 12:51:31,375 - core.scraper - INFO - Navigated to new page, going back...
+2025-08-24 12:51:32,561 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:51:32] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 12:51:32,571 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-24 12:51:32,583 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:51:32] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 12:51:32,587 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:51:32] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 12:51:32,593 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:51:32] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 12:52:09,425 - core.scraper - ERROR - Failed to save individual report: name 'os' is not defined
+2025-08-24 12:52:09,428 - core.scraper - INFO - Navigating back to search results...
+2025-08-24 12:52:19,835 - core.scraper - INFO - Deep scraping product 7/10: SEK1,029
+iPhone 16 pro max 512gb
+Stockholm, AB...
+2025-08-24 12:52:19,850 - core.scraper - INFO - Navigating to product page: SEK1,029
+iPhone 16 pro max 512gb
+Stockholm, AB...
+2025-08-24 12:52:29,150 - core.scraper - INFO - Looking for 'See Details' button...
+2025-08-24 12:52:32,552 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:52:32] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 12:52:32,575 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:52:32] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 12:52:32,578 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:52:32] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 12:52:32,586 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:52:32] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 12:52:38,135 - core.scraper - INFO - Using profile link as 'See details' button
+2025-08-24 12:52:38,155 - core.scraper - INFO - Clicking 'See details' button: Seller details
+2025-08-24 12:52:55,860 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:52:55] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 12:52:55,886 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:52:55] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 12:52:55,889 - core.json_manager - ERROR - Failed to load JSON data: Expecting ',' delimiter: line 180 column 38 (char 8020)
+2025-08-24 12:52:55,904 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:52:55] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 12:52:55,912 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:52:55] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 12:53:22,889 - core.scraper - INFO - Navigated to new page, going back...
+2025-08-24 12:53:26,558 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:53:26] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 12:53:26,575 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:53:26] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 12:53:26,579 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:53:26] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 12:53:26,598 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:53:26] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 12:53:56,554 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:53:56] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-24 12:53:56,579 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:53:56] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-24 12:53:56,580 - core.json_manager - ERROR - Failed to load JSON data: Expecting value: line 1 column 1 (char 0)
+2025-08-24 12:53:56,585 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:53:56] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-24 12:53:56,597 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:53:56] "GET /api/stats HTTP/1.1" 200 -
+2025-08-24 12:54:06,836 - core.scraper - ERROR - Failed to save individual report: name 'os' is not defined
+2025-08-24 12:54:06,837 - core.scraper - INFO - Navigating back to search results...
+2025-08-24 12:54:16,613 - core.scraper - INFO - Deep scraping product 8/10: SEK13,000
+iphone 16 16 pro 16 pro max helt ny i ka...
+2025-08-24 12:54:16,621 - core.scraper - INFO - Navigating to product page: SEK13,000
+iphone 16 16 pro 16 pro max helt ny i ka...
+2025-08-24 12:54:25,702 - core.scraper - INFO - Looking for 'See Details' button...
+2025-08-24 12:54:27,977 - core.scraper - WARNING - 'See details' button not found
+2025-08-24 12:54:27,978 - core.scraper - ERROR - Failed to extract comprehensive product details: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=139.0.7258.128)
+Stacktrace:
+	GetHandleVerifier [0x0x65ffc3+65331]
+	GetHandleVerifier [0x0x660004+65396]
+	(No symbol) [0x0x453f63]
+	(No symbol) [0x0x432e69]
+	(No symbol) [0x0x4c7c7e]
+	(No symbol) [0x0x4e24d9]
+	(No symbol) [0x0x4c12d6]
+	(No symbol) [0x0x490910]
+	(No symbol) [0x0x491784]
+	GetHandleVerifier [0x0x8a38b3+2439203]
+	GetHandleVerifier [0x0x89eae2+2419282]
+	GetHandleVerifier [0x0x68712a+225434]
+	GetHandleVerifier [0x0x676e08+159096]
+	GetHandleVerifier [0x0x67dd5d+187597]
+	GetHandleVerifier [0x0x667ad8+96840]
+	GetHandleVerifier [0x0x667c62+97234]
+	GetHandleVerifier [0x0x65277a+9962]
+	BaseThreadInitThunk [0x0x76a97ba9+25]
+	RtlInitializeExceptionChain [0x0x77ccc3ab+107]
+	RtlClearBits [0x0x77ccc32f+191]
+
+2025-08-24 12:54:27,979 - core.scraper - ERROR - Failed to extract marketplace metadata: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=139.0.7258.128)
+Stacktrace:
+	GetHandleVerifier [0x0x65ffc3+65331]
+	GetHandleVerifier [0x0x660004+65396]
+	(No symbol) [0x0x453f63]
+	(No symbol) [0x0x432e69]
+	(No symbol) [0x0x4c7c7e]
+	(No symbol) [0x0x4e24d9]
+	(No symbol) [0x0x4c12d6]
+	(No symbol) [0x0x490910]
+	(No symbol) [0x0x491784]
+	GetHandleVerifier [0x0x8a38b3+2439203]
+	GetHandleVerifier [0x0x89eae2+2419282]
+	GetHandleVerifier [0x0x68712a+225434]
+	GetHandleVerifier [0x0x676e08+159096]
+	GetHandleVerifier [0x0x67dd5d+187597]
+	GetHandleVerifier [0x0x667ad8+96840]
+	GetHandleVerifier [0x0x667c62+97234]
+	GetHandleVerifier [0x0x65277a+9962]
+	BaseThreadInitThunk [0x0x76a97ba9+25]
+	RtlInitializeExceptionChain [0x0x77ccc3ab+107]
+	RtlClearBits [0x0x77ccc32f+191]
+
+2025-08-24 12:54:27,980 - core.scraper - ERROR - Failed to extract images: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=139.0.7258.128)
+Stacktrace:
+	GetHandleVerifier [0x0x65ffc3+65331]
+	GetHandleVerifier [0x0x660004+65396]
+	(No symbol) [0x0x453f63]
+	(No symbol) [0x0x432e69]
+	(No symbol) [0x0x4c7c7e]
+	(No symbol) [0x0x4e24d9]
+	(No symbol) [0x0x4c12d6]
+	(No symbol) [0x0x490910]
+	(No symbol) [0x0x491784]
+	GetHandleVerifier [0x0x8a38b3+2439203]
+	GetHandleVerifier [0x0x89eae2+2419282]
+	GetHandleVerifier [0x0x68712a+225434]
+	GetHandleVerifier [0x0x676e08+159096]
+	GetHandleVerifier [0x0x67dd5d+187597]
+	GetHandleVerifier [0x0x667ad8+96840]
+	GetHandleVerifier [0x0x667c62+97234]
+	GetHandleVerifier [0x0x65277a+9962]
+	BaseThreadInitThunk [0x0x76a97ba9+25]
+	RtlInitializeExceptionChain [0x0x77ccc3ab+107]
+	RtlClearBits [0x0x77ccc32f+191]
+
+2025-08-24 12:54:27,987 - core.scraper - ERROR - Failed to extract timing info: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=139.0.7258.128)
+Stacktrace:
+	GetHandleVerifier [0x0x65ffc3+65331]
+	GetHandleVerifier [0x0x660004+65396]
+	(No symbol) [0x0x453f63]
+	(No symbol) [0x0x432e69]
+	(No symbol) [0x0x4c7c7e]
+	(No symbol) [0x0x4e24d9]
+	(No symbol) [0x0x4c12d6]
+	(No symbol) [0x0x490910]
+	(No symbol) [0x0x491784]
+	GetHandleVerifier [0x0x8a38b3+2439203]
+	GetHandleVerifier [0x0x89eae2+2419282]
+	GetHandleVerifier [0x0x68712a+225434]
+	GetHandleVerifier [0x0x676e08+159096]
+	GetHandleVerifier [0x0x67dd5d+187597]
+	GetHandleVerifier [0x0x667ad8+96840]
+	GetHandleVerifier [0x0x667c62+97234]
+	GetHandleVerifier [0x0x65277a+9962]
+	BaseThreadInitThunk [0x0x76a97ba9+25]
+	RtlInitializeExceptionChain [0x0x77ccc3ab+107]
+	RtlClearBits [0x0x77ccc32f+191]
+
+2025-08-24 12:54:27,988 - core.scraper - ERROR - Failed to save individual report: name 'os' is not defined
+2025-08-24 12:54:27,988 - core.scraper - INFO - Navigating back to search results...
+2025-08-24 12:54:27,990 - core.scraper - ERROR - Failed to extract deep data for product 8: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=139.0.7258.128)
+Stacktrace:
+	GetHandleVerifier [0x0x65ffc3+65331]
+	GetHandleVerifier [0x0x660004+65396]
+	(No symbol) [0x0x453f63]
+	(No symbol) [0x0x432e69]
+	(No symbol) [0x0x4c7c7e]
+	(No symbol) [0x0x4e24d9]
+	(No symbol) [0x0x4c12d6]
+	(No symbol) [0x0x490910]
+	(No symbol) [0x0x491784]
+	GetHandleVerifier [0x0x8a38b3+2439203]
+	GetHandleVerifier [0x0x89eae2+2419282]
+	GetHandleVerifier [0x0x68712a+225434]
+	GetHandleVerifier [0x0x676e08+159096]
+	GetHandleVerifier [0x0x67dd5d+187597]
+	GetHandleVerifier [0x0x667ad8+96840]
+	GetHandleVerifier [0x0x667c62+97234]
+	GetHandleVerifier [0x0x65277a+9962]
+	BaseThreadInitThunk [0x0x76a97ba9+25]
+	RtlInitializeExceptionChain [0x0x77ccc3ab+107]
+	RtlClearBits [0x0x77ccc32f+191]
+

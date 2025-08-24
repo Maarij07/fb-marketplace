@@ -477,6 +477,68 @@
             border-left: 3px solid var(--gray-600);
         }
         
+        /* 🔥 HOT RELOAD: Special styling for real-time product notifications */
+        .toast-hot-reload {
+            border-left: 3px solid #007bff !important;
+            background: linear-gradient(135deg, var(--white) 0%, #f8f9ff 100%);
+            box-shadow: 0 10px 25px -5px rgba(0, 123, 255, 0.2), 0 4px 6px -2px rgba(0, 123, 255, 0.05) !important;
+            animation: hotReloadPulse 0.8s ease-out;
+        }
+        
+        /* 🔄 SCHEDULER: Special styling for scheduler notifications */
+        .toast-scheduler {
+            border-left: 3px solid #6c5ce7 !important;
+            background: linear-gradient(135deg, var(--white) 0%, #f8f4ff 100%);
+            box-shadow: 0 10px 25px -5px rgba(108, 92, 231, 0.2), 0 4px 6px -2px rgba(108, 92, 231, 0.05) !important;
+            animation: schedulerPulse 0.8s ease-out;
+        }
+        
+        @keyframes schedulerPulse {
+            0% {
+                transform: translateX(calc(100% + 1rem)) scale(0.95);
+                opacity: 0.8;
+            }
+            20% {
+                transform: translateX(-10px) scale(1.02);
+                opacity: 1;
+            }
+            100% {
+                transform: translateX(0) scale(1);
+                opacity: 1;
+            }
+        }
+        
+        .toast-progress {
+            border-left: 2px solid var(--gray-400);
+            animation: progressSlide 0.3s ease-out;
+        }
+        
+        @keyframes hotReloadPulse {
+            0% {
+                transform: translateX(calc(100% + 1rem)) scale(0.95);
+                opacity: 0.8;
+            }
+            20% {
+                transform: translateX(-10px) scale(1.02);
+                opacity: 1;
+            }
+            100% {
+                transform: translateX(0) scale(1);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes progressSlide {
+            0% {
+                transform: translateX(calc(100% + 1rem));
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
         /* Footer info */
         .system-info {
             display: flex;
@@ -1179,6 +1241,85 @@
             const { type, data } = notification;
             
             switch (type) {
+                // 🔥 HOT RELOAD: Individual product added - refresh immediately
+                case 'product_added':
+                    showHotReloadNotification(
+                        `📦 ${data.message}`,
+                        'success',
+                        `${data.product_price} ${data.product_currency}`
+                    );
+                    // Immediately refresh listings to show new product
+                    loadListings();
+                    loadStats(); // Update counters too
+                    break;
+                    
+                // 🔥 HOT RELOAD: Deep scraped product completed
+                case 'deep_product_completed':
+                    showHotReloadNotification(
+                        `✅ ${data.message}`,
+                        'success',
+                        `Deep scrape: ${data.progress_percentage}%`
+                    );
+                    // Immediately refresh to show deep scraped data
+                    loadListings();
+                    loadStats();
+                    break;
+                    
+                // 🔥 HOT RELOAD: Standard scraped product completed
+                case 'standard_product_completed':
+                    showHotReloadNotification(
+                        `📦 ${data.message}`,
+                        'info',
+                        `Progress: ${data.progress_percentage}%`
+                    );
+                    // Immediately refresh to show new product
+                    loadListings();
+                    loadStats();
+                    break;
+                    
+                // 🔄 SCHEDULER: Scheduler started notification
+                case 'scheduler_started':
+                    showSchedulerNotification(
+                        `🚀 Scheduler Started`,
+                        'success',
+                        `Query: "${data.search_query}" • Interval: ${getIntervalText(data.interval_minutes)}`
+                    );
+                    // Immediately refresh scheduler UI
+                    loadSchedulers();
+                    break;
+                    
+                // 🔄 SCHEDULER: Scheduler paused notification
+                case 'scheduler_paused':
+                    showSchedulerNotification(
+                        `⏸️ Scheduler Paused`,
+                        'info',
+                        `Query: "${data.search_query}"`
+                    );
+                    // Immediately refresh scheduler UI
+                    loadSchedulers();
+                    break;
+                    
+                // 🔄 SCHEDULER: Scheduler run started notification
+                case 'scheduler_run_started':
+                    showSchedulerNotification(
+                        `▶️ Scheduled Run Started`,
+                        'info',
+                        `Query: "${data.search_query}" • Run #${data.run_number}`
+                    );
+                    break;
+                    
+                // 🔄 SCHEDULER: Scheduler run completed notification
+                case 'scheduler_run_completed':
+                    showSchedulerNotification(
+                        `✅ Scheduled Run Completed`,
+                        'success',
+                        `Found ${data.items_found} items • Next run: ${data.next_run_time}`
+                    );
+                    // Refresh listings and stats after scheduler run
+                    loadListings();
+                    loadStats();
+                    break;
+                    
                 case 'items_found':
                     showNotification(
                         `Found ${data.new_items} new items in cycle ${data.cycle}! Total: ${data.total_items} items for "${data.search_query}"`,
@@ -1190,6 +1331,26 @@
                     
                 case 'scraping_started':
                     showNotification(`Started scraping for "${data.search_query}"...`, 'info');
+                    break;
+                    
+                case 'deep_scrape_started':
+                    showNotification(`🔍 Started deep scraping for "${data.search_query}" (${data.max_products} products)...`, 'info');
+                    break;
+                    
+                case 'deep_scrape_progress':
+                    showProgressNotification(
+                        `🔍 Deep scraping: ${data.current_product}/${data.total_products} - ${data.product_title}...`,
+                        'info'
+                    );
+                    break;
+                    
+                case 'deep_scrape_completed':
+                    showNotification(
+                        `✅ Deep scraping completed! Successfully processed ${data.successful}/${data.attempted} products for "${data.search_query}"`,
+                        'success'
+                    );
+                    // Refresh all data to show final results
+                    loadData();
                     break;
                     
                 case 'scraping_completed':
@@ -1242,6 +1403,70 @@
             toastBody.innerHTML = toastContent;
             toastElement.className = `toast toast-${type}`;
             toast.show();
+        }
+        
+        // 🔥 HOT RELOAD: Special notification for individual products with enhanced styling
+        function showHotReloadNotification(message, type = 'info', extra = '') {
+            const toastElement = document.getElementById('notification-toast');
+            const toastBody = document.getElementById('toast-message');
+            const toastContent = `
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <div style="font-weight: 600; margin-bottom: 2px;">${message}</div>
+                        ${extra ? `<div style="font-size: 0.85em; color: var(--gray-600);">${extra}</div>` : ''}
+                    </div>
+                    <button type="button" class="btn-sm" style="background: none; border: none; cursor: pointer;" data-bs-dismiss="toast">
+                        <i class="bi bi-x"></i>
+                    </button>
+                </div>
+            `;
+            
+            toastBody.innerHTML = toastContent;
+            toastElement.className = `toast toast-${type} toast-hot-reload`;
+            toast.show();
+        }
+        
+        // 🔄 SCHEDULER: Special notification for scheduler events with unique styling
+        function showSchedulerNotification(message, type = 'info', extra = '') {
+            const toastElement = document.getElementById('notification-toast');
+            const toastBody = document.getElementById('toast-message');
+            const toastContent = `
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <div style="font-weight: 600; margin-bottom: 2px;">${message}</div>
+                        ${extra ? `<div style="font-size: 0.85em; color: var(--gray-600);">${extra}</div>` : ''}
+                    </div>
+                    <button type="button" class="btn-sm" style="background: none; border: none; cursor: pointer;" data-bs-dismiss="toast">
+                        <i class="bi bi-x"></i>
+                    </button>
+                </div>
+            `;
+            
+            toastBody.innerHTML = toastContent;
+            toastElement.className = `toast toast-${type} toast-scheduler`;
+            toast.show();
+        }
+        
+        // Progress notification for deep scraping
+        function showProgressNotification(message, type = 'info') {
+            // Use a shorter duration for progress notifications to avoid spam
+            const toastElement = document.getElementById('notification-toast');
+            const toastBody = document.getElementById('toast-message');
+            const toastContent = `
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div style="font-size: 0.9em;">${message}</div>
+                    <button type="button" class="btn-sm" style="background: none; border: none; cursor: pointer;" data-bs-dismiss="toast">
+                        <i class="bi bi-x"></i>
+                    </button>
+                </div>
+            `;
+            
+            toastBody.innerHTML = toastContent;
+            toastElement.className = `toast toast-${type} toast-progress`;
+            
+            // Auto-hide after shorter time for progress notifications
+            const progressToast = new bootstrap.Toast(toastElement, { delay: 2000 });
+            progressToast.show();
         }
 
         async function loadData() {
@@ -1667,7 +1892,7 @@
                 const city = document.getElementById('city-modal').value.trim();
                 const interval = document.getElementById('interval-modal').value;
                 
-                showNotification('Creating new scheduler...', 'info');
+                showSchedulerNotification('🔄 Creating new scheduler...', 'info', `Query: "${searchQuery}" • City: ${city}`);
                 
                 const response = await fetch('/api/scheduler/create', {
                     method: 'POST',
@@ -1684,7 +1909,12 @@
                 const result = await response.json();
                 
                 if (result.success) {
-                    showNotification(`Scheduler created successfully! Will run every ${interval} minutes for "${searchQuery}"`, 'success');
+                    // Use the new scheduler notification with enhanced styling
+                    showSchedulerNotification(
+                        `🚀 Scheduler Created Successfully!`,
+                        'success',
+                        `Query: "${searchQuery}" • Interval: ${getIntervalText(parseInt(interval))}`
+                    );
                     closeSchedulerModal();
                     
                     // Hot reload: Immediately update the scheduler UI
@@ -1770,6 +2000,9 @@
                     schedulerItem.style.transition = 'all 0.3s ease';
                 }
                 
+                // Properly escape search query to prevent XSS and JS injection
+                const escapedSearchQuery = scheduler.search_query.replace(/'/g, '\\&apos;').replace(/"/g, '&quot;');
+                
                 schedulerItem.innerHTML = `
                     <div class="scheduler-details">
                         <div class="scheduler-query">${scheduler.search_query}</div>
@@ -1779,7 +2012,7 @@
                         <button class="btn btn-xs ${playPauseClass}" onclick="toggleScheduler(${scheduler.id}, ${isRunning})" title="${isRunning ? 'Pause' : 'Start'} scheduler">
                             <i class="bi bi-${playPauseIcon}-fill"></i>
                         </button>
-                        <button class="btn btn-xs btn-delete" onclick="confirmDeleteScheduler(${scheduler.id}, '${scheduler.search_query}')" title="Delete scheduler">
+                        <button class="btn btn-xs btn-delete" onclick="confirmDeleteScheduler(${scheduler.id}, '${escapedSearchQuery}')" title="Delete scheduler">
                             <i class="bi bi-trash"></i>
                         </button>
                     </div>
@@ -1846,18 +2079,25 @@
             const noSchedulers = document.getElementById('no-schedulers');
             
             if (schedulers.length === 0) {
-                noSchedulers.style.display = 'block';
+                if (noSchedulers) {
+                    noSchedulers.style.display = 'block';
+                }
                 schedulerList.innerHTML = '<div class="text-muted text-xs" id="no-schedulers">No schedulers created</div>';
                 return;
             }
             
-            noSchedulers.style.display = 'none';
+            if (noSchedulers) {
+                noSchedulers.style.display = 'none';
+            }
             
             const schedulerHtml = schedulers.map(scheduler => {
                 const isRunning = scheduler.is_running || false;
                 const playPauseIcon = isRunning ? 'pause' : 'play';
                 const playPauseClass = isRunning ? 'btn-pause' : 'btn-play';
                 const intervalText = getIntervalText(scheduler.interval_minutes);
+                
+                // Properly escape search query to prevent XSS and JS injection
+                const escapedSearchQuery = scheduler.search_query.replace(/'/g, '\\&apos;').replace(/"/g, '&quot;');
                 
                 return `
                     <div class="scheduler-item" data-id="${scheduler.id}">
@@ -1869,7 +2109,7 @@
                             <button class="btn btn-xs ${playPauseClass}" onclick="toggleScheduler(${scheduler.id}, ${isRunning})" title="${isRunning ? 'Pause' : 'Start'} scheduler">
                                 <i class="bi bi-${playPauseIcon}-fill"></i>
                             </button>
-                            <button class="btn btn-xs btn-delete" onclick="confirmDeleteScheduler(${scheduler.id}, '${scheduler.search_query}')" title="Delete scheduler">
+                            <button class="btn btn-xs btn-delete" onclick="confirmDeleteScheduler(${scheduler.id}, '${escapedSearchQuery}')" title="Delete scheduler">
                                 <i class="bi bi-trash"></i>
                             </button>
                         </div>
@@ -1915,7 +2155,26 @@
                 const result = await response.json();
                 
                 if (result.success) {
-                    showNotification(`Scheduler ${action}ed successfully`, 'success');
+                    // Use the new scheduler notification instead of regular notification
+                    const scheduler = schedulers.find(s => s.id == schedulerId);
+                    const searchQuery = scheduler ? scheduler.search_query : 'Unknown';
+                    const intervalMinutes = scheduler ? scheduler.interval_minutes : 60;
+                    
+                    if (!isCurrentlyRunning) {
+                        // Scheduler starting
+                        showSchedulerNotification(
+                            `🚀 Scheduler Started`,
+                            'success',
+                            `Query: "${searchQuery}" • Interval: ${getIntervalText(intervalMinutes)}`
+                        );
+                    } else {
+                        // Scheduler pausing
+                        showSchedulerNotification(
+                            `⏸️ Scheduler Paused`,
+                            'info',
+                            `Query: "${searchQuery}"`
+                        );
+                    }
                     
                     // Hot reload: Update the scheduler state immediately
                     if (schedulers.length > 0) {
@@ -1954,6 +2213,10 @@
         
         async function deleteScheduler(schedulerId) {
             try {
+                // Get scheduler details before deleting for notification
+                const scheduler = schedulers.find(s => s.id == schedulerId);
+                const searchQuery = scheduler ? scheduler.search_query : 'Unknown';
+                
                 const response = await fetch(`/api/scheduler/${schedulerId}`, {
                     method: 'DELETE'
                 });
@@ -1961,7 +2224,12 @@
                 const result = await response.json();
                 
                 if (result.success) {
-                    showNotification('Scheduler deleted successfully', 'success');
+                    // Use scheduler notification with special styling
+                    showSchedulerNotification(
+                        `🗑️ Scheduler Deleted`,
+                        'info',
+                        `Query: "${searchQuery}" has been removed`
+                    );
                     
                     // Hot reload: remove locally and update UI immediately
                     schedulers = schedulers.filter(s => s.id != schedulerId);
@@ -2006,7 +2274,9 @@
         loadData = async function() {
             try {
                 await Promise.all([
-                    originalLoadData(),
+                    loadStats(),
+                    loadListings(),
+                    loadPriceChanges(),
                     loadSchedulers()
                 ]);
             } catch (error) {
