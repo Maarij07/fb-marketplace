@@ -449,24 +449,48 @@ class SchedulerManager:
     def _run_custom_deep_scraping(self, search_query: str, notification_manager=None) -> list:
         """Execute deep scraping job for custom search query."""
         try:
-            self.logger.info(f"Starting deep scraping job for: {search_query}")
+            self.logger.info(f"Starting custom scraping job for: {search_query}")
             
-            # Create a new scraper instance for deep scraping
-            scraper = FacebookMarketplaceScraper(self.settings, persistent_session=False)
+            # Check if deep scraping is available, fallback to regular scraping
+            try:
+                from core.deep_scraper import DeepMarketplaceScraper
+                
+                # Create deep scraper instance
+                scraper = DeepMarketplaceScraper(self.settings, persistent_session=False)
+                
+                # Set notification manager if provided for real-time updates
+                if notification_manager:
+                    scraper.set_notification_manager(notification_manager)
+                
+                # Run deep scraping for custom search
+                max_products = self.settings.get_int('DEEP_SCRAPE_MAX_PRODUCTS', 10)
+                results = scraper.deep_scrape_marketplace(search_query, max_products=max_products)
+                
+            except ImportError:
+                self.logger.warning("Deep scraper not available, using standard scraper")
+                
+                # Fallback to regular scraper
+                scraper = FacebookMarketplaceScraper(self.settings, persistent_session=False)
+                
+                # Set notification manager for real-time updates
+                if notification_manager:
+                    scraper.set_notification_manager(notification_manager)
+                
+                # Run custom marketplace search
+                results = scraper.search_marketplace_custom(search_query)
             
-            # Set notification manager if provided
-            if notification_manager:
-                scraper.set_notification_manager(notification_manager)
-            
-            # Run deep scraping for custom search
-            max_products = self.settings.get_int('DEEP_SCRAPE_MAX_PRODUCTS', 10)
-            results = scraper.deep_scrape_marketplace(search_query, max_products=max_products)
-            
-            self.logger.info(f"Custom deep scraping job completed: {len(results)} products scraped")
+            self.logger.info(f"Custom scraping job completed: {len(results)} products scraped")
             return results
             
         except Exception as e:
-            self.logger.error(f"Custom deep scraping job failed: {e}")
+            self.logger.error(f"Custom scraping job failed: {e}")
+            # Send error notification
+            if notification_manager:
+                notification_manager.broadcast_notification('scrape_error', {
+                    'error': str(e),
+                    'search_query': search_query,
+                    'message': f'Scraping failed for "{search_query}": {str(e)}'
+                })
             return []
     
     def run_deep_scraping_manual(self, search_query: str = "iphone 16", max_products: int = None) -> dict:

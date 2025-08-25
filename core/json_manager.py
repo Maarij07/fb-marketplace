@@ -64,29 +64,76 @@ class JSONDataManager:
             self.logger.info("Initialized new products.json file")
     
     def load_data(self) -> Dict[str, Any]:
-        """Load data from JSON file."""
-        try:
-            with open(self.json_path, 'r', encoding='utf-8') as f:
-                data = json.load(f)
-            return data
-        except (FileNotFoundError, json.JSONDecodeError) as e:
-            self.logger.error(f"Failed to load JSON data: {e}")
-            self.initialize_json_file()
-            return self.load_data()
+        """Load data from JSON file with retry mechanism for concurrent access."""
+        max_retries = 3
+        for attempt in range(max_retries):
+            try:
+                with open(self.json_path, 'r', encoding='utf-8') as f:
+                    content = f.read().strip()
+                    if not content:
+                        if attempt == max_retries - 1:
+                            self.logger.warning("JSON file is empty, initializing...")
+                            self.initialize_json_file()
+                            return self.load_data()
+                        else:
+                            import time
+                            time.sleep(0.1)  # Brief delay for concurrent access
+                            continue
+                    data = json.loads(content)
+                return data
+            except (FileNotFoundError, json.JSONDecodeError) as e:
+                if attempt == max_retries - 1:
+                    self.logger.error(f"Failed to load JSON data after {max_retries} attempts: {e}")
+                    self.initialize_json_file()
+                    return self.load_data()
+                else:
+                    self.logger.debug(f"JSON load attempt {attempt + 1} failed, retrying: {e}")
+                    import time
+                    time.sleep(0.1)
+                    continue
     
     def save_data(self, data: Dict[str, Any]) -> bool:
-        """Save data to JSON file."""
-        try:
-            # Update extraction info timestamp
-            data["extraction_info"]["timestamp"] = datetime.now().strftime("%Y-%m-%d")
-            data["extraction_notes"]["last_updated"] = datetime.now().isoformat()
-            
-            with open(self.json_path, 'w', encoding='utf-8') as f:
-                json.dump(data, f, indent=2, ensure_ascii=False)
-            return True
-        except Exception as e:
-            self.logger.error(f"Failed to save JSON data: {e}")
-            return False
+        """Save data to JSON file with atomic write and retry mechanism."""
+        import tempfile
+        import shutil
+        
+        max_retries = 3
+        for attempt in range(max_retries):
+            try:
+                # Update extraction info timestamp
+                data["extraction_info"]["timestamp"] = datetime.now().strftime("%Y-%m-%d")
+                data["extraction_notes"]["last_updated"] = datetime.now().isoformat()
+                
+                # Atomic write using temporary file
+                temp_path = None
+                with tempfile.NamedTemporaryFile(mode='w', suffix='.json', 
+                                               dir=os.path.dirname(self.json_path), 
+                                               delete=False, encoding='utf-8') as temp_file:
+                    temp_path = temp_file.name
+                    json.dump(data, temp_file, indent=2, ensure_ascii=False)
+                    temp_file.flush()  # Ensure data is written to disk
+                    os.fsync(temp_file.fileno())  # Force write to disk
+                
+                # Move temp file to final location (atomic operation)
+                shutil.move(temp_path, self.json_path)
+                return True
+                
+            except Exception as e:
+                # Clean up temp file if it exists
+                if temp_path and os.path.exists(temp_path):
+                    try:
+                        os.unlink(temp_path)
+                    except OSError:
+                        pass
+                
+                if attempt == max_retries - 1:
+                    self.logger.error(f"Failed to save JSON data after {max_retries} attempts: {e}")
+                    return False
+                else:
+                    self.logger.debug(f"JSON save attempt {attempt + 1} failed, retrying: {e}")
+                    import time
+                    time.sleep(0.1)
+                    continue
     
     def add_product(self, product_data: Dict[str, Any]) -> bool:
         """Add a single product with duplicate checking."""
@@ -160,12 +207,58 @@ class JSONDataManager:
         
         return True
     
-    def add_products_batch(self, products: List[Dict[str, Any]]) -> Dict[str, int]:
+    def add_product_hot_reload(self, product_data: Dict[str, Any]) -> bool:
+        """🔥 HOT RELOAD: Add product immediately without extensive validation for real-time updates."""
+        data = self.load_data()
+        
+        # Minimal title validation - just check it exists and isn't empty
+        title = product_data.get('title', '').strip()
+        if not title or len(title) < 2:
+            self.logger.warning(f"Hot reload: Skipping product with empty/too short title: '{title}'")
+            return False
+        
+        # Relaxed duplicate checking - only check exact ID matches
+        new_id = product_data.get('id')
+        if new_id:
+            for existing in data["products"]:
+                if existing.get('id') == new_id:
+                    self.logger.debug(f"Hot reload: Duplicate ID found, skipping: {new_id}")
+                    return False
+        
+        # Add unique ID if not present
+        if not product_data.get('id'):
+            product_data['id'] = self.generate_product_id(product_data)
+        
+        # Add hot reload metadata
+        current_time = datetime.now().isoformat()
+        product_data['added_at'] = current_time
+        product_data['created_at'] = current_time
+        product_data['source'] = 'facebook_marketplace_scraper'
+        product_data['hot_reload'] = True
+        product_data['hot_reload_timestamp'] = current_time
+        
+        # Add to products list (at the beginning for immediate visibility)
+        data["products"].insert(0, product_data)
+        
+        # Update summary
+        self.update_summary(data)
+        
+        # Save immediately without cleanup
+        success = self.save_data(data)
+        if success:
+            self.logger.info(f"🔥 Hot reload: Added product immediately: {product_data.get('title', 'Unknown')[:50]}...")
+        else:
+            self.logger.error(f"🔥 Hot reload: Failed to save product: {product_data.get('title', 'Unknown')[:50]}...")
+        
+        return success
+    
+    def add_products_batch(self, products: List[Dict[str, Any]], skip_cleanup: bool = False) -> Dict[str, int]:
         """Add multiple products with duplicate checking."""
         data = self.load_data()
         
-        # Cleanup old data before adding new products
-        self.cleanup_old_data(data)
+        # Cleanup old data before adding new products (skip for hot reload)
+        if not skip_cleanup:
+            self.cleanup_old_data(data)
         
         stats = {
             'added': 0,

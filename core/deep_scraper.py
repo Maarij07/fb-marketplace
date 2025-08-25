@@ -139,6 +139,13 @@ class DeepMarketplaceScraper(FacebookMarketplaceScraper):
                         deep_scraped_products.append(deep_data)
                         self.deep_scrape_stats['products_successful'] += 1
                         self.logger.info(f"✅ Successfully deep scraped product {i+1}")
+                        
+                        # 🔥 HOT RELOAD: Save product immediately to JSON
+                        self._save_product_immediately_deep(deep_data, i + 1)
+                        
+                        # Send real-time notification
+                        self._send_product_completion_notification(deep_data, i + 1, len(cards_to_process))
+                        
                     else:
                         self.logger.warning(f"❌ Failed to deep scrape product {i+1}")
                         self.deep_scrape_stats['errors'].append(f"Product {i+1}: Failed to extract data")
@@ -191,6 +198,7 @@ class DeepMarketplaceScraper(FacebookMarketplaceScraper):
             self.logger.info(f"Found {len(marketplace_links)} marketplace item links")
             
             product_cards = []
+            
             for i, link in enumerate(marketplace_links):
                 try:
                     url = link.get_attribute('href')
@@ -217,6 +225,57 @@ class DeepMarketplaceScraper(FacebookMarketplaceScraper):
         except Exception as e:
             self.logger.error(f"Failed to find product cards: {e}")
             return []
+    
+    def _save_product_immediately_deep(self, deep_data: Dict[str, Any], product_index: int):
+        """🔥 HOT RELOAD: Save deep scraped product immediately to JSON for real-time dashboard updates."""
+        try:
+            # Convert to standard format
+            standard_product = self._convert_to_standard_format(deep_data)
+            
+            if standard_product:
+                # Add hot reload metadata
+                standard_product['hot_reload'] = True
+                standard_product['hot_reload_timestamp'] = datetime.now().isoformat()
+                standard_product['scraping_status'] = 'completed'
+                standard_product['scraping_method'] = 'deep'
+                
+                # Save immediately using hot reload method
+                success = self.json_manager.add_product_hot_reload(standard_product)
+                if success:
+                    self.logger.info(f"🔥 Hot reload: Saved deep product {product_index} successfully")
+                else:
+                    self.logger.warning(f"🔥 Hot reload: Failed to save deep product {product_index}")
+                
+        except Exception as e:
+            self.logger.error(f"Hot reload save failed for deep product {product_index}: {e}")
+    
+    def _send_product_completion_notification(self, deep_data: Dict[str, Any], product_index: int, total_products: int):
+        """Send real-time notification when a deep scraped product is completed."""
+        try:
+            basic_info = deep_data.get('basic_info', {})
+            title = basic_info.get('title', 'Unknown Product')
+            price_info = basic_info.get('price', {})
+            price_amount = price_info.get('amount', '0')
+            price_currency = price_info.get('currency', 'SEK')
+            
+            # Get seller info if available
+            seller_details = deep_data.get('seller_details', {})
+            seller_name = seller_details.get('seller_name', 'Unknown Seller')
+            
+            self._send_scraping_notification('deep_product_completed', {
+                'product_index': product_index,
+                'total_products': total_products,
+                'product_title': title[:50],
+                'product_price': price_amount,
+                'product_currency': price_currency,
+                'seller_name': seller_name,
+                'completion_timestamp': datetime.now().isoformat(),
+                'progress_percentage': round((product_index / total_products) * 100, 1),
+                'message': f'✅ Completed {product_index}/{total_products}: {title[:30]}... ({price_amount} {price_currency})'
+            })
+            
+        except Exception as e:
+            self.logger.error(f"Failed to send product completion notification: {e}")
     
     def _extract_title_from_link(self, link, index: int) -> str:
         """Extract product title from link element or its parents."""
@@ -250,6 +309,96 @@ class DeepMarketplaceScraper(FacebookMarketplaceScraper):
             
         except Exception as e:
             return f"Product {index+1}"
+    
+    def _is_outside_search_result(self, link) -> bool:
+        """Check if a product is from 'Results from outside your search' section."""
+        try:
+            # Look for indicators that this product is from outside search results
+            # These products typically appear in sections labeled as such
+            
+            # Check parent elements for "outside" text indicators
+            current_element = link
+            for level in range(10):  # Check up to 10 parent levels
+                try:
+                    current_element = current_element.find_element(By.XPATH, "..")
+                    element_text = current_element.text.lower()
+                    
+                    # Common phrases that indicate results from outside the search
+                    outside_indicators = [
+                        'results from outside your search',
+                        'outside your search',
+                        'suggested for you',
+                        'sponsored',
+                        'recommended',
+                        'you might also like',
+                        'similar items',
+                        'related products'
+                    ]
+                    
+                    # Check if any outside indicator is present
+                    for indicator in outside_indicators:
+                        if indicator in element_text:
+                            self.logger.debug(f"Found outside search indicator: '{indicator}' in element text")
+                            return True
+                    
+                    # Also check for specific CSS classes or attributes that might indicate sponsored/suggested content
+                    class_name = current_element.get_attribute('class') or ''
+                    data_attrs = ' '.join([current_element.get_attribute(attr) or '' for attr in ['data-testid', 'data-surface', 'aria-label']])
+                    
+                    combined_attrs = (class_name + ' ' + data_attrs).lower()
+                    attr_indicators = ['sponsor', 'suggest', 'recommend', 'related', 'outside']
+                    
+                    for indicator in attr_indicators:
+                        if indicator in combined_attrs:
+                            self.logger.debug(f"Found outside search indicator: '{indicator}' in element attributes")
+                            return True
+                    
+                except Exception as e:
+                    # If we can't get parent element, break the loop
+                    break
+            
+            # Additional check: look for section headers that might indicate this is an "outside search" section
+            # Find all text elements on the page and check for section headers
+            try:
+                page_source = self.driver.page_source.lower()
+                # Check if the page contains "Results from outside your search" section
+                if 'results from outside your search' in page_source or 'outside your search' in page_source:
+                    # If such section exists, we need to determine if this specific link is in that section
+                    # This is a more complex check that would require analyzing the DOM structure
+                    # For now, we'll use a heuristic approach
+                    
+                    # Get the link's position on the page
+                    try:
+                        link_location = link.location_once_scrolled_into_view
+                        # If we can find section headers, we could compare positions
+                        # This is a simplified approach - in practice you might need more sophisticated DOM analysis
+                        
+                        # For now, let's check if this link appears after any "outside search" text in the DOM
+                        link_html = link.get_attribute('outerHTML')
+                        page_before_link = page_source.split(link_html)[0] if link_html in page_source else page_source
+                        
+                        # Count occurrences of outside search indicators before this link
+                        outside_count = sum(page_before_link.count(indicator) for indicator in [
+                            'results from outside your search',
+                            'outside your search',
+                            'suggested for you'
+                        ])
+                        
+                        if outside_count > 0:
+                            self.logger.debug(f"Link appears after {outside_count} 'outside search' indicators")
+                            # This is a heuristic - if outside search text appears before this link, it might be in that section
+                            return True
+                            
+                    except Exception:
+                        pass
+            except Exception:
+                pass
+            
+            return False
+            
+        except Exception as e:
+            self.logger.debug(f"Error checking outside search result: {e}")
+            return False  # If we can't determine, assume it's a valid search result
     
     def _extract_deep_product_data(self, card: Dict[str, Any], product_index: int) -> Optional[Dict[str, Any]]:
         """Extract comprehensive data from a product's detail page."""
@@ -402,7 +551,7 @@ class DeepMarketplaceScraper(FacebookMarketplaceScraper):
             location_patterns = [
                 r'([A-Za-z\s]+)\s+(\d+)\s*km',  # City X km
                 r'(\d+)\s*km\s+from\s+([A-Za-z\s]+)',  # X km from City
-                r'Stockholm[^<]*'  # Any Stockholm reference
+                r'Sydney[^<]*'  # Any Sydney reference
             ]
             
             for pattern in location_patterns:
@@ -416,12 +565,12 @@ class DeepMarketplaceScraper(FacebookMarketplaceScraper):
                         }
                     else:
                         return {
-                            'city': 'Stockholm',
+                            'city': 'Sydney',
                             'distance': 'Unknown',
                             'raw_location': matches[0]
                         }
             
-            return {'city': 'Stockholm', 'distance': 'Unknown', 'raw_location': 'Not specified'}
+            return {'city': 'Sydney', 'distance': 'Unknown', 'raw_location': 'Not specified'}
             
         except Exception as e:
             self.logger.error(f"Failed to extract location: {e}")

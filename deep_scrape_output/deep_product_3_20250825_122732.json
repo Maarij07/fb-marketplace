@@ -1,0 +1,44 @@
+{
+  "basic_info": {
+    "title": "SEK1,947\niphone 15\nStockholm, AB",
+    "url": "https://www.facebook.com/marketplace/item/1293529442486068/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A32bd2103-99a2-4572-bd7f-69ed853ae3bb&__tn__=!%3AD",
+    "extraction_timestamp": "2025-08-25T12:27:31.212376",
+    "page_title": "(2) Marketplace – iphone 15 | Facebook",
+    "current_url": "https://www.facebook.com/marketplace/item/1293529442486068/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A32bd2103-99a2-4572-bd7f-69ed853ae3bb",
+    "price": {
+      "amount": "1947",
+      "currency": "SEK",
+      "raw_price_text": "sek 1,947"
+    },
+    "location": {
+      "city": "Unknown",
+      "distance": "Unknown",
+      "error": "Message: invalid session id: session deleted as the browser has closed the connection\nfrom disconnected: not connected to DevTools\n  (Session info: chrome=139.0.7258.139); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception\nStacktrace:\n\tGetHandleVerifier [0x0xceffc3+65331]\n\tGetHandleVerifier [0x0xcf0004+65396]\n\t(No symbol) [0x0xae3f63]\n\t(No symbol) [0x0xad38e0]\n\t(No symbol) [0x0xaf1709]\n\t(No symbol) [0x0xb57e4c]\n\t(No symbol) [0x0xb724d9]\n\t(No symbol) [0x0xb512d6]\n\t(No symbol) [0x0xb20910]\n\t(No symbol) [0x0xb21784]\n\tGetHandleVerifier [0x0xf338b3+2439203]\n\tGetHandleVerifier [0x0xf2eae2+2419282]\n\tGetHandleVerifier [0x0xd1712a+225434]\n\tGetHandleVerifier [0x0xd06e08+159096]\n\tGetHandleVerifier [0x0xd0dd5d+187597]\n\tGetHandleVerifier [0x0xcf7ad8+96840]\n\tGetHandleVerifier [0x0xcf7c62+97234]\n\tGetHandleVerifier [0x0xce277a+9962]\n\tBaseThreadInitThunk [0x0x76c37ba9+25]\n\tRtlInitializeExceptionChain [0x0x77c4c3ab+107]\n\tRtlClearBits [0x0x77c4c32f+191]\n"
+    },
+    "product_id": "1293529442486068"
+  },
+  "seller_details": {
+    "button_found": false,
+    "extraction_timestamp": "2025-08-25T12:27:32.459316",
+    "error": "Button not found"
+  },
+  "seller_metrics": {
+    "basic_info": {}
+  },
+  "product_comprehensive": {
+    "error": "Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception\nStacktrace:\n\tGetHandleVerifier [0x0xceffc3+65331]\n\tGetHandleVerifier [0x0xcf0004+65396]\n\t(No symbol) [0x0xae3dc0]\n\t(No symbol) [0x0xb1fbd8]\n\t(No symbol) [0x0xb51396]\n\t(No symbol) [0x0xb4cf70]\n\t(No symbol) [0x0xb4c4f6]\n\t(No symbol) [0x0xab59b5]\n\t(No symbol) [0x0xab5f0e]\n\t(No symbol) [0x0xab639d]\n\tGetHandleVerifier [0x0xf338b3+2439203]\n\tGetHandleVerifier [0x0xf2eae2+2419282]\n\tGetHandleVerifier [0x0xd1712a+225434]\n\tGetHandleVerifier [0x0xd06e08+159096]\n\tGetHandleVerifier [0x0xd0dd5d+187597]\n\t(No symbol) [0x0xab5680]\n\t(No symbol) [0x0xab4e8e]\n\tGetHandleVerifier [0x0x104a2ec+3580508]\n\tBaseThreadInitThunk [0x0x76c37ba9+25]\n\tRtlInitializeExceptionChain [0x0x77c4c3ab+107]\n\tRtlClearBits [0x0x77c4c32f+191]\n",
+    "images": [],
+    "description": ""
+  },
+  "marketplace_metadata": {
+    "error": "Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception\nStacktrace:\n\tGetHandleVerifier [0x0xceffc3+65331]\n\tGetHandleVerifier [0x0xcf0004+65396]\n\t(No symbol) [0x0xae3dc0]\n\t(No symbol) [0x0xb1fbd8]\n\t(No symbol) [0x0xb51396]\n\t(No symbol) [0x0xb4cf70]\n\t(No symbol) [0x0xb4c4f6]\n\t(No symbol) [0x0xab59b5]\n\t(No symbol) [0x0xab5f0e]\n\t(No symbol) [0x0xab639d]\n\tGetHandleVerifier [0x0xf338b3+2439203]\n\tGetHandleVerifier [0x0xf2eae2+2419282]\n\tGetHandleVerifier [0x0xd1712a+225434]\n\tGetHandleVerifier [0x0xd06e08+159096]\n\tGetHandleVerifier [0x0xd0dd5d+187597]\n\t(No symbol) [0x0xab5680]\n\t(No symbol) [0x0xab4e8e]\n\tGetHandleVerifier [0x0x104a2ec+3580508]\n\tBaseThreadInitThunk [0x0x76c37ba9+25]\n\tRtlInitializeExceptionChain [0x0x77c4c3ab+107]\n\tRtlClearBits [0x0x77c4c32f+191]\n",
+    "timing": {
+      "error": "Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception\nStacktrace:\n\tGetHandleVerifier [0x0xceffc3+65331]\n\tGetHandleVerifier [0x0xcf0004+65396]\n\t(No symbol) [0x0xae3dc0]\n\t(No symbol) [0x0xb1fbd8]\n\t(No symbol) [0x0xb51396]\n\t(No symbol) [0x0xb4cf70]\n\t(No symbol) [0x0xb4c4f6]\n\t(No symbol) [0x0xab59b5]\n\t(No symbol) [0x0xab5f0e]\n\t(No symbol) [0x0xab639d]\n\tGetHandleVerifier [0x0xf338b3+2439203]\n\tGetHandleVerifier [0x0xf2eae2+2419282]\n\tGetHandleVerifier [0x0xd1712a+225434]\n\tGetHandleVerifier [0x0xd06e08+159096]\n\tGetHandleVerifier [0x0xd0dd5d+187597]\n\t(No symbol) [0x0xab5680]\n\t(No symbol) [0x0xab4e8e]\n\tGetHandleVerifier [0x0x104a2ec+3580508]\n\tBaseThreadInitThunk [0x0x76c37ba9+25]\n\tRtlInitializeExceptionChain [0x0x77c4c3ab+107]\n\tRtlClearBits [0x0x77c4c32f+191]\n"
+    }
+  },
+  "extraction_metadata": {
+    "method": "deep_scraper",
+    "product_index": 3,
+    "data_quality": "comprehensive"
+  }
+}

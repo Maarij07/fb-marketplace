@@ -1,0 +1,129 @@
+{
+  "basic_info": {
+    "title": "SEK2,900\niPhone 13\nStockholm, AB",
+    "url": "https://www.facebook.com/marketplace/item/1094562042647743/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A84daed1f-61ed-4c9a-a192-453f36fcde28&__tn__=!%3AD",
+    "extraction_timestamp": "2025-08-25T11:17:41.212695",
+    "page_title": "(2) Marketplace – iPhone 13 | Facebook",
+    "current_url": "https://www.facebook.com/marketplace/item/1094562042647743/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A84daed1f-61ed-4c9a-a192-453f36fcde28",
+    "price": {
+      "amount": "70",
+      "currency": "KR",
+      "raw_price_text": "70 kr"
+    },
+    "location": {
+      "city": "Within",
+      "distance": "51km",
+      "raw_location": "Within 51"
+    },
+    "product_id": "1094562042647743"
+  },
+  "seller_details": {
+    "button_found": true,
+    "extraction_timestamp": "2025-08-25T11:17:52.722932",
+    "button_text": "Seller details",
+    "button_href": "https://www.facebook.com/marketplace/profile/550800349/?product_id=1094562042647743",
+    "join_date": "joined facebook in 2007"
+  },
+  "seller_metrics": {
+    "basic_info": {
+      "seller_name": "Seller details",
+      "profile_url": "https://www.facebook.com/marketplace/profile/550800349/?product_id=1094562042647743"
+    }
+  },
+  "product_comprehensive": {
+    "model_name": "iPhone 13",
+    "storage": "29 TB",
+    "color": "Black",
+    "condition": "new_in_box",
+    "images": [
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/531764923_1453551922530411_5682361872591983977_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=102&ccb=1-7&_nc_sid=247b10&_nc_ohc=3pQoRUiAV6wQ7kNvwGn1mFD&_nc_oc=Adlxbz1fg-Lf71lfyVkse_sX_EqiWlTNwWlXq0t-e5by5vexIk99K0JBW9ex7fAAMLRgD6y_FJ_ATYuU6XqNOqP8&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=zahf4j6WvJ8KvWD7bPc6xQ&oh=00_AfUVJUhtr7N8dITZXT0QVgosCGGj2e94iAmQPhD7LmpBrQ&oe=68B1B6E2",
+        "alt_text": "",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/531764923_1453551922530411_5682361872591983977_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=102&ccb=1-7&_nc_sid=247b10&_nc_ohc=3pQoRUiAV6wQ7kNvwGn1mFD&_nc_oc=Adlxbz1fg-Lf71lfyVkse_sX_EqiWlTNwWlXq0t-e5by5vexIk99K0JBW9ex7fAAMLRgD6y_FJ_ATYuU6XqNOqP8&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=zahf4j6WvJ8KvWD7bPc6xQ&oh=00_AfUVJUhtr7N8dITZXT0QVgosCGGj2e94iAmQPhD7LmpBrQ&oe=68B1B6E2",
+        "alt_text": "Product photo of iPhone 13",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/531764923_1453551922530411_5682361872591983977_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=102&ccb=1-7&_nc_sid=247b10&_nc_ohc=3pQoRUiAV6wQ7kNvwGn1mFD&_nc_oc=Adlxbz1fg-Lf71lfyVkse_sX_EqiWlTNwWlXq0t-e5by5vexIk99K0JBW9ex7fAAMLRgD6y_FJ_ATYuU6XqNOqP8&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=zahf4j6WvJ8KvWD7bPc6xQ&oh=00_AfUVJUhtr7N8dITZXT0QVgosCGGj2e94iAmQPhD7LmpBrQ&oe=68B1B6E2",
+        "alt_text": "Product photo of iPhone 13",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/533025222_1296588558669285_8670544950304733912_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=103&ccb=1-7&_nc_sid=247b10&_nc_ohc=qPCasZpeDlkQ7kNvwHsiMk-&_nc_oc=AdmjB_k5pbVvNqMqV_XGWrreOkXJakDtBB-phOJQazm7Ix4RS0t93CGlhiz5E2M7aql3lTH2ECsLbqEtkBXLgPaV&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=zahf4j6WvJ8KvWD7bPc6xQ&oh=00_AfVfBpztSsGinA4ZFv_nfCDY4LRZEBEHvGV4yO1sW_qDlg&oe=68B1DF5A",
+        "alt_text": "Product photo of iPhone 13",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/533533599_776811491391670_1349399027206628594_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=102&ccb=1-7&_nc_sid=247b10&_nc_ohc=N1XIS6YaQyAQ7kNvwE0ZZi6&_nc_oc=AdlMJdR6lq4nazbWZCpMXU_1_EEzgSxhTuwrVc7wrgoW_wvRKDXYevxxxTt7F8fFqrqVZmeiAbOxPgm_iSf2hB-2&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=zahf4j6WvJ8KvWD7bPc6xQ&oh=00_AfXrMqj5oORKSRYr8ULOug8Zfy9UZ_1adVWsj2Y1PZomtQ&oe=68B1D885",
+        "alt_text": "Product photo of iPhone 13",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/533006199_763447633076579_3885779753043002739_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=102&ccb=1-7&_nc_sid=247b10&_nc_ohc=EdXNUNBkKE8Q7kNvwHnjuxo&_nc_oc=Adk7qB81fUnwpQZuYu4zF_6EkSqicJONXAY8L-Bd7AsmqcqQFw6N5usK0s00q2HQzSNlYHnQVVpzpxmt9pExsB62&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=zahf4j6WvJ8KvWD7bPc6xQ&oh=00_AfWqmRpl7NII4tjFkgesKcYPuPeWABckcCreVknBszsSNQ&oe=68B1D1F2",
+        "alt_text": "Product photo of iPhone 13",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/532944740_622803467253919_3552235120127526266_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=106&ccb=1-7&_nc_sid=247b10&_nc_ohc=_sZGTt1t3WEQ7kNvwHw-P7i&_nc_oc=AdlWrpMRABYxNczN1I4b9Mg4B4nhHjtzWjkZWO5Y3Qh22bAHjq5_QhidgGivrF9Oy27G6foCAAyhC4G-2BIqqrVQ&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=zahf4j6WvJ8KvWD7bPc6xQ&oh=00_AfUUyr4yl9lsKel0-PIrfar9AxdA2e9oZ3ss0Seq-FAJxQ&oe=68B1D4D0",
+        "alt_text": "Product photo of iPhone 13",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/534387857_1337076061362747_4435458208730578884_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=106&ccb=1-7&_nc_sid=247b10&_nc_ohc=dz199G-pjZ8Q7kNvwGy51qI&_nc_oc=Adm-9_jdtU6Jl1M-rQHyKcpukeF8-gInAqqF5yFDw9mr3vof6DOZACgcDza4RhC_Z-U5WAUh9sQ2ruTjwYllnONt&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=zahf4j6WvJ8KvWD7bPc6xQ&oh=00_AfXnm2JoOLJQ7wHxj691U6UAG5xRnd_oHs5YgAoBf413vg&oe=68B1C146",
+        "alt_text": "Product photo of iPhone 13",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t15.13418-10/530373343_819287933766413_8094984033381311054_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=110&ccb=1-7&_nc_sid=ace027&_nc_ohc=U3L6rfk7AqoQ7kNvwFbPn2v&_nc_oc=Adkl6BenM-QGfhD39A20qu8yRzK5kP7QyWQ-chNitNUacZw6iYfb6HzjbHPsWuuyTn_DteQ9RCVvNz88qYZiGyuY&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=nb7a6wfvAPpmYOwsjXyE0g&oh=00_AfXQhQ3bFLhT1oWLCrDDd1So3-4J2vhjrsjahqktP7EhYw&oe=68B1C5C9",
+        "alt_text": "",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t15.13418-10/459046484_1960830924389740_7726537646017745674_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=111&ccb=1-7&_nc_sid=ace027&_nc_ohc=WozPvYLh854Q7kNvwGSDFXY&_nc_oc=Adm7lcbN-JnxlgswgHVx6dVkA2vdF88VNoMAbgnISBtNhYF19zlMzJOgKacb5u2rRDG07umwxEOQ7fWmHHP4fd9f&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=zahf4j6WvJ8KvWD7bPc6xQ&oh=00_AfWeKRXbxwaGLiQ9SPwdOqfz193NywqPnTLxenW9mTuM9Q&oe=68B1E873",
+        "alt_text": "",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/533078508_4150459021884587_7606897391666424290_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=104&ccb=1-7&_nc_sid=247b10&_nc_ohc=fks0ofx24DYQ7kNvwEsdoFH&_nc_oc=AdmCTTtSRzxVeRiHiGTjjnQ5ZIZDowR1oApsrphsNKD3zwuRraw6tKTiFZdVeopea1Obu4DbjBBzGSnDFjb8zgKb&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=nb7a6wfvAPpmYOwsjXyE0g&oh=00_AfUobUZyMFHMU9aq6VVtCzemFR9ABVILaspfSJfwnIYXWA&oe=68B1E6D5",
+        "alt_text": "Google pixel 8 pro 5G 128gb blue $1700 RRP. Cheapest working unlocked phone. Screen not cracked in Sydney, NSW",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/534454122_1963737681067144_1653194640128755664_n.jpg?stp=c0.152.261.261a_dst-jpg_p261x260_tt6&_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_ohc=9tE6OHypNAAQ7kNvwEub5kQ&_nc_oc=AdnuktY4pRt3E0Npwvu3iFonPy-VI_oCzeXTk4hZF7qfkadoPvr1SnFPU6JZVCQvdwIsEZMIBy3m4B-20Qg3rnK_&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=nb7a6wfvAPpmYOwsjXyE0g&oh=00_AfXKYpWvmQDm7GdPf-_NRRdr1q_5-vdPnNKoP44QKwPoNQ&oe=68B1CF1F",
+        "alt_text": "iPhone 14 Pro Max cases in Sydney, NSW",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/529412190_1054037690213724_3372631210679514565_n.jpg?stp=c0.61.261.261a_dst-jpg_p261x260_tt6&_nc_cat=104&ccb=1-7&_nc_sid=247b10&_nc_ohc=BvrJLz6UBBIQ7kNvwG670YY&_nc_oc=AdkehDwin3VgsiBbp-BySlvc1Dxu73nNDYnihAaaUxuBzq2u5ryKjfp8AeUmv955VYSG70HBcnc5w9L4TH5ukrlf&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=nb7a6wfvAPpmYOwsjXyE0g&oh=00_AfW78nusqR7vskuZc9vOLqGZi1A6GbFT563zjv8CMlxWgg&oe=68B1C692",
+        "alt_text": "Global Android smartphone in Sydney, NSW",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/533046289_2565255503845209_7471853510458497514_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=101&ccb=1-7&_nc_sid=247b10&_nc_ohc=cAo4CppIKOIQ7kNvwG0vLzh&_nc_oc=AdkWc-xbeDvy5fCLeTS3EpyoogKbtmgo-bHj2GFRQ5RVCDT76WOOjuVtXkN_739KFYW09fqoARhv1o2VUb8b-Kzt&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=nb7a6wfvAPpmYOwsjXyE0g&oh=00_AfXFuKMs3hD3LBW8ASB8JZANvTwHw_WozlwD3nz4V7Zjog&oe=68B1BF28",
+        "alt_text": "iPhone 16pro 256gb unused in Sydney, NSW",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/532252359_709074582298274_457488944368671070_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_ohc=L2ltOhN9sQ8Q7kNvwGDg5ES&_nc_oc=Adkc_MoG5kPtZiJdqIcf5jCN6U-YHLItKT9m3ORbXtFGoTmAkM--Iu0ztCdFMw9WWwOIxpPIl9GyIK-9RNcNminL&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=nb7a6wfvAPpmYOwsjXyE0g&oh=00_AfXJ_Sb23kKZIlHCsZ1DNVz78UHU_pIq0QSY4lgOFK0GVQ&oe=68B1DD4D",
+        "alt_text": "Samsung leagoo phone in Sydney, NSW",
+        "type": "product_image"
+      }
+    ],
+    "description": "Listed 3 days ago in Stockholm, AB\n\nEn iPhone 13 som fungerar som den ska. Köpt på Tele2 för drygt två år sen. \n\n128gb och 84% batterihä... See more\n\nLocation is approximate"
+  },
+  "marketplace_metadata": {
+    "fb_listing_id": "1094562042647743",
+    "is_sold": true,
+    "timing": {
+      "posted_time": "22 minutes"
+    }
+  },
+  "extraction_metadata": {
+    "method": "deep_scraper",
+    "product_index": 1,
+    "data_quality": "comprehensive"
+  }
+}

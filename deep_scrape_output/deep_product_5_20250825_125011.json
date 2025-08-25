@@ -1,0 +1,130 @@
+{
+  "basic_info": {
+    "title": "AU$1,500\niPhone 15 Pro 1TB Titanium\nSydney, NSW",
+    "url": "https://www.facebook.com/marketplace/item/742097972041996/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A18f064f7-bb0c-4dd4-b4e2-ab49553ddfa5&__tn__=!%3AD",
+    "extraction_timestamp": "2025-08-25T12:48:41.022066",
+    "page_title": "(4) Marketplace – iPhone 15 Pro 1TB Titanium | Facebook",
+    "current_url": "https://www.facebook.com/marketplace/item/742097972041996/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A18f064f7-bb0c-4dd4-b4e2-ab49553ddfa5",
+    "price": {
+      "amount": "42",
+      "currency": "KR",
+      "raw_price_text": "42 kr"
+    },
+    "location": {
+      "city": "Within",
+      "distance": "51km",
+      "raw_location": "Within 51"
+    },
+    "product_id": "742097972041996"
+  },
+  "seller_details": {
+    "button_found": true,
+    "extraction_timestamp": "2025-08-25T12:48:50.707739",
+    "button_text": "Seller details",
+    "button_href": "https://www.facebook.com/marketplace/profile/100001748398977/?product_id=742097972041996",
+    "join_date": "joined facebook in 2010"
+  },
+  "seller_metrics": {
+    "basic_info": {
+      "seller_name": "Seller details",
+      "profile_url": "https://www.facebook.com/marketplace/profile/100001748398977/?product_id=742097972041996"
+    }
+  },
+  "product_comprehensive": {
+    "model_name": "iPhone 15 pro",
+    "storage": "1 TB",
+    "color": "Black",
+    "condition": "new_in_box",
+    "battery_health": "89%",
+    "images": [
+      {
+        "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/533034266_1058286466114205_2907349621679752341_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=103&ccb=1-7&_nc_sid=247b10&_nc_ohc=zUBtR7S27CgQ7kNvwGYQ3IJ&_nc_oc=AdkH0RiPGQjllvXxS3RvzI05Ovi9xXUF_A9UWgxtclV9IY6kp5l8S157B-M-RTtVhYynd9p61j5k3QGb5K1tOznF&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=BHvMYHrkmN_kC-HaGfOxAw&oh=00_AfVKkeD2mK6zBc3e9AB2eQ0ooXi0LzaGixuNqfTSnMZoXw&oe=68B1D512",
+        "alt_text": "",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/533034266_1058286466114205_2907349621679752341_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=103&ccb=1-7&_nc_sid=247b10&_nc_ohc=zUBtR7S27CgQ7kNvwGYQ3IJ&_nc_oc=AdkH0RiPGQjllvXxS3RvzI05Ovi9xXUF_A9UWgxtclV9IY6kp5l8S157B-M-RTtVhYynd9p61j5k3QGb5K1tOznF&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=BHvMYHrkmN_kC-HaGfOxAw&oh=00_AfVKkeD2mK6zBc3e9AB2eQ0ooXi0LzaGixuNqfTSnMZoXw&oe=68B1D512",
+        "alt_text": "Product photo of iPhone 15 Pro 1TB Titanium",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/533034266_1058286466114205_2907349621679752341_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=103&ccb=1-7&_nc_sid=247b10&_nc_ohc=zUBtR7S27CgQ7kNvwGYQ3IJ&_nc_oc=AdkH0RiPGQjllvXxS3RvzI05Ovi9xXUF_A9UWgxtclV9IY6kp5l8S157B-M-RTtVhYynd9p61j5k3QGb5K1tOznF&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=BHvMYHrkmN_kC-HaGfOxAw&oh=00_AfVKkeD2mK6zBc3e9AB2eQ0ooXi0LzaGixuNqfTSnMZoXw&oe=68B1D512",
+        "alt_text": "Product photo of iPhone 15 Pro 1TB Titanium",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/533306129_1402593254154420_4948017178033370492_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=110&ccb=1-7&_nc_sid=247b10&_nc_ohc=VgcpEACb0t0Q7kNvwEw5qgm&_nc_oc=Adm7pEGwOm8XxVoHE5RpBinQ745x6lxiEPWkDOzqlphnEtOu2IvSu2bY1dx6Y5AOqDaQg464zzmR85A0myVI3QgC&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=BHvMYHrkmN_kC-HaGfOxAw&oh=00_AfUTCglGgrvG5QfHXXmvIYWmnpV8xSmnjROBySzFOLJgig&oe=68B201C9",
+        "alt_text": "Product photo of iPhone 15 Pro 1TB Titanium",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/534943403_3750340195269349_761463402666559393_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=103&ccb=1-7&_nc_sid=247b10&_nc_ohc=yqXvFp5ePfcQ7kNvwFKHjZm&_nc_oc=Adk91mQYs5CA9GMH8quBU2EkEpSRbVI85VTeIg-ikOdpt_6qRu4K2Btx1lBI3xEIpVpqCOwd-2FvIoCuBJW-bFet&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=BHvMYHrkmN_kC-HaGfOxAw&oh=00_AfXKKBwrslkVjzZKCuXK6BgMsn02UZfJAvhckNLS7CHdwQ&oe=68B1F8B0",
+        "alt_text": "Product photo of iPhone 15 Pro 1TB Titanium",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.1600-4/480245706_120216985457580285_255220091115087271_n.jpg?stp=cp0_dst-jpg_q75_s960x960_spS444_tt6&_nc_cat=108&ccb=1-7&_nc_sid=c02adf&_nc_ohc=EjivQafuSdgQ7kNvwFOqrKJ&_nc_oc=Adl2sJiVCOiZ4gLtrsv7HPIfbghPaHo6h71QPcc-F4c5YqB-JGVd3Z0UxEbkXiVoW0rbdOeAvc0BDZfDL-to-iIt&_nc_zt=1&_nc_ht=scontent.fisb1-2.fna&_nc_gid=BHvMYHrkmN_kC-HaGfOxAw&oh=00_AfX2SnNztwh_66dyy5sz37j2uURSYZd94_ENjMSElJJamA&oe=68B1F5AC",
+        "alt_text": "",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t15.5256-10/469530701_568033412747993_2197728263720452896_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=108&ccb=1-7&_nc_sid=7965db&_nc_ohc=fiBzlBUuYG0Q7kNvwFCoud-&_nc_oc=AdkPXNpDa_rVLlnTDmfPUPf9We9rllvr77rLKOl-x1PgADFBHzTSpSyxF_CG3hOSaiWXjhuQ2SkKcFtKcF6CG9j4&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=BHvMYHrkmN_kC-HaGfOxAw&oh=00_AfVxZ5jg_5gQWAB_FVQlTicxbBBOdIfsCTUJv3-7vpi-HA&oe=68B1E93C",
+        "alt_text": "",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/535380515_1079573414384406_6985808676826469409_n.jpg?stp=c0.0.261.261a_dst-jpg_p261x260_tt6&_nc_cat=104&ccb=1-7&_nc_sid=247b10&_nc_ohc=63IjhgjYgogQ7kNvwEo3sUX&_nc_oc=AdleQJKbYXuRv8FzLsktchPatA8kBL8vBBV0apWyo-FE2p29xTuFOlI6yzKq5xfbv_ZXG3EGWAwsXX_KUFz0N1up&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=ulc71xroyCeXa2HdjxPJMQ&oh=00_AfV4VJ9TBi6XXOLM9kRHNg4mY4E2iOGTxJZ-uR27kWoedw&oe=68B1ED7E",
+        "alt_text": "Free Samsung S23 Ultra & S7 Edge cases in Sydney, NSW",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/533082083_1421577855724445_8614328567638045012_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_ohc=39_V4yWP7bIQ7kNvwH_irJI&_nc_oc=AdnBhUw9NF0lyxx14tA2FPpsGeWWLBppdyWW0z0DllLMZJu7JNwN8tIeoQ4ORK9wm-zdPLGpNRGt3204s9rEqRoF&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=ulc71xroyCeXa2HdjxPJMQ&oh=00_AfWIfaWCpvjG6pgzvUIxPJvOjK02t0or8Cpa0ys71AzfmA&oe=68B1D550",
+        "alt_text": "Biryani available today in Sydney, NSW",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/491828705_1043916177603050_641158637870267865_n.jpg?stp=c43.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=Xb1OJ4JCYY4Q7kNvwG99vrQ&_nc_oc=AdkMee5Hj_bP9_iMnmtpt5V9AKfRC6pXfo19wGZ2TqA-rqZymV8_FugFZm0RXeh1yoRwzQMW60Kzs0QsGGyAcGu1&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=ulc71xroyCeXa2HdjxPJMQ&oh=00_AfUmY18BovS8UAIAFnQfvEXgy1dpopqG7Z5jOg5voMYDzw&oe=68B1DE85",
+        "alt_text": "LG 65”inch 4K Smart TV UHD HDR in Sydney, NSW",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/533059324_668766186232799_3957515211177148451_n.jpg?stp=c0.66.261.261a_dst-jpg_p261x260_tt6&_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_ohc=6mXZv6jL58QQ7kNvwFi8Sqe&_nc_oc=AdlhpZkDXG4_XCcGEXZTQzmfKHmUDRRs9pmAK0CLfMU5xbFh45SeZLGTTMhsqFAP_r5UO_a41XbqSDs3FHUZ5rK9&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=ulc71xroyCeXa2HdjxPJMQ&oh=00_AfXoGuNt51zg8lVJkv1p6DQs40lnZAh55s3AYX_ozVsouw&oe=68B1E7CB",
+        "alt_text": "ELECTROLUX CLOTHES DRIER in Sydney, NSW",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/535535605_1663493267657757_7794717729710336884_n.jpg?stp=c43.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_ohc=2cfso5wmBB0Q7kNvwFKNwMy&_nc_oc=Adl6k_JBK4O4UEa-MmJhA7FzYW7BNTvATjPTtdW6fY_5J1xw4LRHY4OxKXxGniABFpOtrf7hNd9N2Es0N3VwUCke&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=ulc71xroyCeXa2HdjxPJMQ&oh=00_AfUAfyhROylfU2K_5K_y3-SSzeM1YaCGQstqK75nSemUWQ&oe=68B1F4C5",
+        "alt_text": "FREE Fish tank in Sydney, NSW",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/534962862_769022619353306_3750988436746866176_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=109&ccb=1-7&_nc_sid=247b10&_nc_ohc=nPCC1WAr77YQ7kNvwGHHduP&_nc_oc=AdnUEyDnvGyj4TbuFe9i6yH8d1OilHFsp0RfrTsTLLbA2eqNvO6NJ5tKhz0hmEerhceSLoU0t7MQcBrjxuNM1gs7&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=ulc71xroyCeXa2HdjxPJMQ&oh=00_AfXenIV0-CgQRqt4tUoDMGHy-VXe0d5Pf0RN7T8gsc2ymA&oe=68B1FADE",
+        "alt_text": "Aeropress coffee maker free in Sydney, NSW",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/533041782_704470392647979_6169961488017340987_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=102&ccb=1-7&_nc_sid=247b10&_nc_ohc=N7FQPybyFuUQ7kNvwHNl1Ux&_nc_oc=Adn-LfTzGhuiPvio89-gtpv2b56AJyQXn3i8A5xJKS8Nr0tlV09bEE8rUeUg0nUcJwgGxwlZnyCz_PdyMxQqZ5xz&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=ulc71xroyCeXa2HdjxPJMQ&oh=00_AfWEnLA_2IALW92QLNY5TFoqNnmmb9wn3vSo2Kg4jSUkmw&oe=68B1CBD6",
+        "alt_text": "Natural 5 carat diamond necklace 18k white gold in Sydney, NSW",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/533681748_1480077960111054_2315243221581348282_n.jpg?stp=c18.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=4-UDN5b77bMQ7kNvwH4nwYL&_nc_oc=Adn_3kPj9Crj3W5i8yWkX_kuSEVPg_qSzYQxxz-uoDsBhjrgPDnL8PpFoTGyD4NbvZog7oGzmbC0lMe2ouRNQkMk&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=ulc71xroyCeXa2HdjxPJMQ&oh=00_AfXUJ3S61tEAtdeg3nyggmXnJTZHUhlODRAqp-HpzqZiQg&oe=68B1D3CD",
+        "alt_text": "2020 32GB RAM 1TB SSD MacBook Pro 16” Touch Bar Retina Touch ID w/Box: i9 8-Core, 32GB, 1TB, Sequoia in Sydney, NSW",
+        "type": "product_image"
+      }
+    ],
+    "description": "iPhone 15 Pro 1TB Titanium\n\nListed a day ago in Sydney, NSW\n\nLike new, no scratches or cracks well protected. Battery 89%. Cash on pick up."
+  },
+  "marketplace_metadata": {
+    "fb_listing_id": "742097972041996",
+    "is_sold": true,
+    "timing": {
+      "posted_time": "31 minutes"
+    }
+  },
+  "extraction_metadata": {
+    "method": "deep_scraper",
+    "product_index": 5,
+    "data_quality": "comprehensive"
+  }
+}

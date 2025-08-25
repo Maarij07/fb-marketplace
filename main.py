@@ -15,7 +15,7 @@ from typing import Optional
 # Add project root to Python path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from core.database import DatabaseManager
+from core.json_manager import JSONDataManager
 from core.scraper import FacebookMarketplaceScraper
 from core.scheduler import SchedulerManager
 from web.app import create_app
@@ -42,15 +42,15 @@ def setup_logging(verbose: bool = False):
     return logging.getLogger(__name__)
 
 
-def init_database(logger):
-    """Initialize the database with required tables."""
+def init_json_storage(logger):
+    """Initialize the JSON data storage."""
     try:
-        db_manager = DatabaseManager()
-        db_manager.initialize_database()
-        logger.info("Database initialized successfully")
+        json_manager = JSONDataManager()
+        json_manager.initialize_json_file()
+        logger.info("JSON data storage initialized successfully")
         return True
     except Exception as e:
-        logger.error(f"Failed to initialize database: {e}")
+        logger.error(f"Failed to initialize JSON storage: {e}")
         return False
 
 
@@ -72,6 +72,30 @@ def run_scraper(logger, verbose: bool = False):
             
     except Exception as e:
         logger.error(f"Scraping failed: {e}")
+        if verbose:
+            import traceback
+            logger.error(traceback.format_exc())
+        return False
+
+
+def run_deep_scraper(logger, search_query: str = "iPhone 16", max_products: int = 5, verbose: bool = False):
+    """Run the Facebook Marketplace deep scraper."""
+    try:
+        settings = Settings()
+        scraper = FacebookMarketplaceScraper(settings)
+        
+        logger.info(f"Starting deep scraping for: {search_query}")
+        results = scraper.deep_scrape_marketplace(search_query, max_products)
+        
+        if results:
+            logger.info(f"Successfully deep scraped {len(results)} products")
+            return True
+        else:
+            logger.warning("No products found in deep scraping")
+            return False
+            
+    except Exception as e:
+        logger.error(f"Deep scraping failed: {e}")
         if verbose:
             import traceback
             logger.error(traceback.format_exc())
@@ -126,8 +150,8 @@ def start_dashboard(logger):
 def show_status(logger):
     """Show system status and statistics."""
     try:
-        db_manager = DatabaseManager()
-        stats = db_manager.get_system_stats()
+        json_manager = JSONDataManager()
+        stats = json_manager.get_system_stats()
         
         print("\n=== Facebook Marketplace Automation Status ===")
         print(f"Total listings: {stats.get('total_listings', 0)}")
@@ -156,11 +180,14 @@ def show_status(logger):
 def cleanup_data(logger):
     """Clean up old data based on retention policy."""
     try:
-        db_manager = DatabaseManager()
+        json_manager = JSONDataManager()
         settings = Settings()
         
         retention_hours = int(settings.get('DATA_RETENTION_HOURS', 48))
-        deleted_count = db_manager.cleanup_old_data(retention_hours)
+        data = json_manager.load_data()
+        deleted_count = json_manager.cleanup_old_data(data, retention_hours)
+        if deleted_count > 0:
+            json_manager.save_data(data)
         
         logger.info(f"Cleaned up {deleted_count} old records")
         print(f"Successfully cleaned up {deleted_count} old records")
@@ -192,7 +219,7 @@ Examples:
         
         parser.add_argument(
             'command',
-            choices=['init-db', 'scrape', 'schedule', 'dashboard', 'status', 'cleanup'],
+            choices=['init-db', 'scrape', 'schedule', 'dashboard', 'status', 'cleanup', 'deep_scrape'],
             help='Command to execute'
         )
         
@@ -200,6 +227,20 @@ Examples:
             '--verbose', '-v',
             action='store_true',
             help='Enable verbose logging'
+        )
+        
+        parser.add_argument(
+            '--query', '-q',
+            type=str,
+            default='iPhone 16',
+            help='Search query for deep scraping (default: iPhone 16)'
+        )
+        
+        parser.add_argument(
+            '--max-products', '-m',
+            type=int,
+            default=5,
+            help='Maximum products to deep scrape (default: 5)'
         )
         
         args = parser.parse_args()
@@ -212,7 +253,7 @@ Examples:
         
         try:
             if args.command == 'init-db':
-                success = init_database(logger)
+                success = init_json_storage(logger)
             elif args.command == 'scrape':
                 success = run_scraper(logger, args.verbose)
             elif args.command == 'schedule':
@@ -223,6 +264,8 @@ Examples:
                 success = show_status(logger)
             elif args.command == 'cleanup':
                 success = cleanup_data(logger)
+            elif args.command == 'deep_scrape':
+                success = run_deep_scraper(logger, args.query, args.max_products, args.verbose)
             
         except KeyboardInterrupt:
             print("\nOperation cancelled by user")

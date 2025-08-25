@@ -1,0 +1,136 @@
+{
+  "basic_info": {
+    "title": "SEK4,000\niPhone 13 Pro Max\nStockholm, AB",
+    "url": "https://www.facebook.com/marketplace/item/1160545916094724/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A84daed1f-61ed-4c9a-a192-453f36fcde28&__tn__=!%3AD",
+    "extraction_timestamp": "2025-08-25T11:29:06.926952",
+    "page_title": "(2) Marketplace – iPhone 13 Pro Max | Facebook",
+    "current_url": "https://www.facebook.com/marketplace/item/1160545916094724/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A84daed1f-61ed-4c9a-a192-453f36fcde28",
+    "price": {
+      "amount": "41",
+      "currency": "SEK",
+      "raw_price_text": "41 sek"
+    },
+    "location": {
+      "city": "Within",
+      "distance": "51km",
+      "raw_location": "Within 51"
+    },
+    "product_id": "1160545916094724"
+  },
+  "seller_details": {
+    "button_found": true,
+    "extraction_timestamp": "2025-08-25T11:29:17.810331",
+    "button_text": "Seller details",
+    "button_href": "https://www.facebook.com/marketplace/profile/100023564345027/?product_id=1160545916094724",
+    "ratings": [
+      "4.3 out of 5 stars, from one review",
+      "4.3 out of 5 rating",
+      "4 out of 5 stars, from one review",
+      "5 out of 5 stars, from one review",
+      "5 out of 5 stars, from one review"
+    ],
+    "join_date": "joined facebook in 2017"
+  },
+  "seller_metrics": {
+    "basic_info": {
+      "seller_name": "Seller details",
+      "profile_url": "https://www.facebook.com/marketplace/profile/100023564345027/?product_id=1160545916094724"
+    }
+  },
+  "product_comprehensive": {
+    "model_name": "iPhone 13 pro max",
+    "storage": "29 TB",
+    "color": "Black",
+    "condition": "new_in_box",
+    "images": [
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/531511203_24298066903190811_2431497019474245696_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=D6XSpYYjiMUQ7kNvwGm0aDB&_nc_oc=AdnPJJlwNn29xlMZUFxLif0PvlWGOvbnFI-X_M-YV9qOZV3lboARoiGTjBDZ4bBJCY_z1jSvcHmmJ_8q7zVFFcYU&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=e5qA1rTfXNYYp-jUNlEFkQ&oh=00_AfV4RAvlkcM9gBRoXmgADK-PhVW4TvuzXWeeZ9ipMEtk2Q&oe=68B1E013",
+        "alt_text": "",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/531511203_24298066903190811_2431497019474245696_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=D6XSpYYjiMUQ7kNvwGm0aDB&_nc_oc=AdnPJJlwNn29xlMZUFxLif0PvlWGOvbnFI-X_M-YV9qOZV3lboARoiGTjBDZ4bBJCY_z1jSvcHmmJ_8q7zVFFcYU&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=e5qA1rTfXNYYp-jUNlEFkQ&oh=00_AfV4RAvlkcM9gBRoXmgADK-PhVW4TvuzXWeeZ9ipMEtk2Q&oe=68B1E013",
+        "alt_text": "Product photo of iPhone 13 Pro Max",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/531511203_24298066903190811_2431497019474245696_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=D6XSpYYjiMUQ7kNvwGm0aDB&_nc_oc=AdnPJJlwNn29xlMZUFxLif0PvlWGOvbnFI-X_M-YV9qOZV3lboARoiGTjBDZ4bBJCY_z1jSvcHmmJ_8q7zVFFcYU&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=e5qA1rTfXNYYp-jUNlEFkQ&oh=00_AfV4RAvlkcM9gBRoXmgADK-PhVW4TvuzXWeeZ9ipMEtk2Q&oe=68B1E013",
+        "alt_text": "Product photo of iPhone 13 Pro Max",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/535547896_4094327460830157_5832596358755846018_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=108&ccb=1-7&_nc_sid=247b10&_nc_ohc=xXWZdJOTiNsQ7kNvwHln_Mz&_nc_oc=AdlVmHTIi6ha7m7BXyt3QoEuevrc4e2sZKljWgMWvqCl1Be37Dcr9yvrCscBfT1Vg6HDURrfnMXwHlNUWzrBjIbd&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=e5qA1rTfXNYYp-jUNlEFkQ&oh=00_AfWwFVRJUDzNUtELDFS7p5ClMUGzIOQBzGUXGtwWPRiHRQ&oe=68B1DC32",
+        "alt_text": "Product photo of iPhone 13 Pro Max",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.1600-4/503730191_2761383404054320_3165077565533085790_n.jpg?stp=cp0_dst-jpg_q75_s960x960_spS444_tt6&_nc_cat=111&ccb=1-7&_nc_sid=c02adf&_nc_ohc=OkhN-vWHHx4Q7kNvwFTpqJM&_nc_oc=AdkyjNNqJktrGVFLrTMkI2jRNFg1xkq28RSJIaKStTU_QqnvRLOp7HPOdnWh5aKkZU2OQhvwZvScmuFJpqinnS53&_nc_zt=1&_nc_ht=scontent.fisb17-1.fna&_nc_gid=e5qA1rTfXNYYp-jUNlEFkQ&oh=00_AfVHTVp_eTByKWe80pUhUULqr2dhCuhWoFdPX9kwyXhgYA&oe=68B1C843",
+        "alt_text": "",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t15.5256-10/530916609_3178381235678879_1575055668223762628_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=110&ccb=1-7&_nc_sid=7965db&_nc_ohc=Q81LdeTxJIwQ7kNvwHDi-am&_nc_oc=Adm5qf-VnEjZk63cbiYNgOrGBuHV1cQvdpALKOEoB6hCA308x36VhRYF07ti8T3LtWCtosJyokQ6mvOnZbRJPccB&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=e5qA1rTfXNYYp-jUNlEFkQ&oh=00_AfUrKj1Pww-rmaoHBXw6VRWYl7ci93tpNbqel2VZDG4Dig&oe=68B1D0C0",
+        "alt_text": "",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/534711663_2617240305280430_4379475219088529912_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=111&ccb=1-7&_nc_sid=247b10&_nc_ohc=pwDB2grnV_IQ7kNvwFc8TTu&_nc_oc=AdlfrgGDLwl-SilwvJUnvuXHYXF-rtuH7sjxZyjol72tRnQdsMePv-nForF-EaXuL_RZ8hwHtDT-dhwof1ktQ6ph&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=n8v6f6LNkHRefabZmm2yaw&oh=00_AfVvGyab199OdTJTeF252HYE45cYyr470orVRWO6IPu00Q&oe=68B1EA3C",
+        "alt_text": "Flat sharing in Sydney, NSW",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/532999076_1280220796841802_7967290195015872577_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=111&ccb=1-7&_nc_sid=247b10&_nc_ohc=jMOtV7nKDRcQ7kNvwFBqCB-&_nc_oc=AdkNhT0FiEgylhNaoaBQP8r0phl_J2OFxsxkQWxNpzbfnajcEuFhKY24pzlbDznO-B0MnKnZDkQGvaxUBBYIfyWC&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=n8v6f6LNkHRefabZmm2yaw&oh=00_AfWFIR58w65twnWkq3nmC0261autOA7m9IZ5LWbdxCBzhw&oe=68B1EE18",
+        "alt_text": "1000s of fair condition golf balls for cheap! in Sydney, NSW",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/533579437_2853464371493986_4242617681392184659_n.jpg?stp=c43.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=101&ccb=1-7&_nc_sid=247b10&_nc_ohc=9-foD9j7sxcQ7kNvwErut1d&_nc_oc=AdkkC9dTACFfbQl51LfUg2xa3Nsf1ngAxFPmGgYL3UU3gvcEtA1aOW-rXOilRbNAqFiBkdp-iK_9g7nOiEt9Zzg5&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=n8v6f6LNkHRefabZmm2yaw&oh=00_AfUlT0_9IHWJU3vvNZpT68PWS-cV-qBXbDFBKWSGd1gdeQ&oe=68B1B92D",
+        "alt_text": "Free bread use by 27 August in Sydney, NSW",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/427294023_7000649673396498_4971610891723564432_n.jpg?stp=c43.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=103&ccb=1-7&_nc_sid=247b10&_nc_ohc=cmu-evzfRM0Q7kNvwEDRHAo&_nc_oc=Adn_qLcrERtNiWo8ifTwlgBO5Z6FCTpgG1jMv-D3MCCo5y1OK84bIr_G_NlhuoUJZ_MN_l8gy_IgYMWEkj-sOsNS&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=n8v6f6LNkHRefabZmm2yaw&oh=00_AfUnWWOsxVFf2wcN8jSlD1RcBQp_pszf7r_S2IyL3Shwig&oe=68B1CA4E",
+        "alt_text": "Hisense Smart TV in Sydney, NSW",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/532925620_753763960918433_1576385607472279844_n.jpg?stp=c0.0.261.261a_dst-jpg_p261x260_tt6&_nc_cat=108&ccb=1-7&_nc_sid=247b10&_nc_ohc=-GzOmtWL7EsQ7kNvwEbz8aq&_nc_oc=AdlwYEYBXZhdyUgwNW51laVoG9-CSILsXVQzoXpkBpZYKKNFZs62hF6FT4M2uoui6FUL7MFwBGFLg4TuwD4HIdBc&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=n8v6f6LNkHRefabZmm2yaw&oh=00_AfUA_yl11C4PZcKtAB8RUN9-ev1AIzsnk8e07h4_rowYPQ&oe=68B1D6B9",
+        "alt_text": "Punjabi tiffin service in Sydney, NSW",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/533078508_4150459021884587_7606897391666424290_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=104&ccb=1-7&_nc_sid=247b10&_nc_ohc=fks0ofx24DYQ7kNvwEsdoFH&_nc_oc=AdmCTTtSRzxVeRiHiGTjjnQ5ZIZDowR1oApsrphsNKD3zwuRraw6tKTiFZdVeopea1Obu4DbjBBzGSnDFjb8zgKb&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=n8v6f6LNkHRefabZmm2yaw&oh=00_AfURIEMUf9iJXm-1zxfAAHk5CtNuKbwWz8NdvDxjRIzRDA&oe=68B1E6D5",
+        "alt_text": "Google pixel 8 pro 5G 128gb blue $1700 RRP. Cheapest working unlocked phone. Screen not cracked in Sydney, NSW",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/532580979_1102351751333367_848203335299552368_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_ohc=9fdsrmDLPk8Q7kNvwHyfENW&_nc_oc=Adk_6fwO5XdS6hBkvtG2m4OoCEQGWLZO6Iat2BtpDKeEvW0odLpaDWBMrGmgyvPg6GZzKcwMk15Wvp0cqPFkWkZO&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=n8v6f6LNkHRefabZmm2yaw&oh=00_AfWKV0qS9arOblQ2ASXnqTTzkjvUgKhEI7pLZ9Vec4YFsg&oe=68B1C771",
+        "alt_text": "iPhone 11 black  64gb  96% battery health  Excellent  condition  Warranty in Sydney, NSW",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/533404718_1488654375893613_3992483258010427413_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=o8sPyXCUN6cQ7kNvwHiwWaj&_nc_oc=Adk6r174Ss40_JSl-wPjmGFtZfK6SiXHUBP2Gii8ybnRdu4MjxbUpTCA8KtBfo05d61NNT4DZiuYlInG_wPXDBE3&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=n8v6f6LNkHRefabZmm2yaw&oh=00_AfUc7UMue_kN1GEXMj3s-OT1bpM567plZR3SUWJq1V3u5A&oe=68B1E76B",
+        "alt_text": "Nothing phone 3a 256 GB version with 3 years warranty in Sydney, NSW",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/531831254_1723297891718255_1459981506203848403_n.jpg?stp=c0.54.261.261a_dst-jpg_p261x260_tt6&_nc_cat=100&ccb=1-7&_nc_sid=247b10&_nc_ohc=JOjV4arqrh8Q7kNvwFm5wj5&_nc_oc=Adk1JtwAgKmyKEZ4sJvDHqgNL68MbJ5vU_NPZFnZ1ue_0gxH4PLy1MsfCAfc_e6TqmLiS51UNZktyBRpb2EIQ3tr&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=n8v6f6LNkHRefabZmm2yaw&oh=00_AfVC_qQZppKV9ufrQhSUVZkD7bWFGSHsWVkXTqBvFWzVsA&oe=68B1C57F",
+        "alt_text": "iPhone 14 Pro Max 128gb 84% battery health in Sydney, NSW",
+        "type": "product_image"
+      }
+    ],
+    "description": "Listed 13 hours ago in Stockholm, AB\n\niPhone 13 Pro Max 128 gb , batteri 89% med ny premium OLED skärm , mobilen funkar som den ska och är... See more\n\nLocation is approximate"
+  },
+  "marketplace_metadata": {
+    "fb_listing_id": "1160545916094724",
+    "is_sold": true,
+    "timing": {
+      "posted_time": "34 minutes"
+    }
+  },
+  "extraction_metadata": {
+    "method": "deep_scraper",
+    "product_index": 7,
+    "data_quality": "comprehensive"
+  }
+}

@@ -65,14 +65,14 @@ class FacebookMarketplaceScraper:
             'error_details': []
         }
         
-        # Deep scraping configuration
+        # Deep scraping configuration - Optimized for speed
         self.deep_scrape_config = {
             'max_products_per_session': self.settings.get_int('DEEP_SCRAPE_MAX_PRODUCTS', 10),
-            'page_load_timeout': 15,
-            'element_wait_timeout': 8,
-            'inter_product_delay': (3, 7),  # Random delay between products
-            'click_delay': (1, 3),          # Random delay after clicks
-            'scroll_delay': (2, 4),         # Random delay after scrolling
+            'page_load_timeout': 10,
+            'element_wait_timeout': 5,
+            'inter_product_delay': (0.2, 0.5),  # Much faster between products
+            'click_delay': (0.1, 0.3),          # Much faster after clicks
+            'scroll_delay': (0.5, 1),           # Faster scrolling
             'enable_deep_scraping': self.settings.get_bool('ENABLE_DEEP_SCRAPING', True)
         }
         
@@ -238,8 +238,8 @@ class FacebookMarketplaceScraper:
             # Wait 1 second as requested
             time.sleep(1)
             
-            # Then navigate to iPhone 16 search in Stockholm (using correct syntax)
-            search_url = "https://www.facebook.com/marketplace/stockholm/search/?query=iphone%2016"
+            # Then navigate to iPhone 16 search in Sydney (using correct syntax)
+            search_url = "https://www.facebook.com/marketplace/sydney/search/?query=iphone%2016"
             self.logger.info(f"Navigating to iPhone 16 search: {search_url}")
             self.driver.get(search_url)
             self._random_delay(3, 5)
@@ -869,97 +869,147 @@ class FacebookMarketplaceScraper:
         
         return all_listings
     
-    def scrape_marketplace_custom(self, search_query: str) -> List[Dict[str, Any]]:
-        """Custom scraping method with user-provided search query."""
+    def search_marketplace_custom(self, search_query: str) -> List[Dict[str, Any]]:
+        """Search marketplace with custom query and return results."""
         all_listings = []
         
         try:
+            # Send start notification
+            self._send_scraping_notification('scrape_started', {
+                'search_query': search_query,
+                'message': f'Started scraping for "{search_query}"'
+            })
+            
             # Setup WebDriver
-            if not self.setup_driver():
-                return []
+            if not self.driver:
+                if not self.setup_driver():
+                    return []
             
             # Login to Facebook
-            if not self.login_to_facebook():
-                self.session_stats['error_details'].append("Login failed")
-                return []
+            if not self.is_logged_in_flag:
+                if not self.login_to_facebook():
+                    self.session_stats['error_details'].append("Login failed")
+                    self._send_scraping_notification('scrape_error', {
+                        'error': 'Login failed',
+                        'message': 'Failed to login to Facebook'
+                    })
+                    return []
+                self.is_logged_in_flag = True
             
             # Navigate to Marketplace with custom search
             if not self.navigate_to_marketplace_custom(search_query):
                 self.session_stats['error_details'].append("Failed to navigate to Marketplace")
+                self._send_scraping_notification('scrape_error', {
+                    'error': 'Navigation failed',
+                    'message': 'Failed to navigate to Marketplace'
+                })
                 return []
             
-            # Extract listings
+            # Extract listings from search results
             try:
-                self.logger.info(f"Extracting {search_query} listings from current page...")
+                self.logger.info(f"Extracting {search_query} listings from search results...")
+                
+                # Send progress notification
+                self._send_scraping_notification('scrape_progress', {
+                    'message': f'Extracting listings for "{search_query}"...',
+                    'status': 'extracting'
+                })
+                
                 listings = self.extract_listings()
                 
-                self.logger.info(f"Raw extraction returned {len(listings)} listings for '{search_query}'")
-                
-                # Save listings to JSON with duplicate prevention FIRST
+                # Save listings to JSON with real-time updates
                 if listings:
-                    self.logger.info(f"Attempting to save {len(listings)} {search_query} listings to JSON...")
-                    stats = self.json_manager.add_products_batch(listings)
-                    self.session_stats['new_listings'] = stats['added']
-                    self.session_stats['duplicates_found'] = stats['duplicates'] 
-                    self.session_stats['errors_count'] += stats['errors']
-                    self.logger.info(f"JSON save stats: {stats['added']} added, {stats['duplicates']} duplicates, {stats['errors']} errors")
+                    self.logger.info(f"Processing {len(listings)} listings for real-time updates...")
                     
-                    # Add to return list
-                    all_listings.extend(listings)
+                    # Process listings one by one for real-time updates
+                    saved_count = 0
+                    for i, listing in enumerate(listings):
+                        try:
+                            # Add individual product
+                            if self.json_manager.add_product(listing):
+                                saved_count += 1
+                                
+                                # Send real-time update notification
+                                self._send_scraping_notification('product_found', {
+                                    'product_title': listing.get('title', 'Unknown'),
+                                    'product_price': listing.get('price', {}).get('amount', 'N/A'),
+                                    'product_location': listing.get('location', {}).get('city', 'Unknown'),
+                                    'current_count': saved_count,
+                                    'total_processed': i + 1,
+                                    'message': f'Found: {listing.get("title", "Unknown")[:40]}...',
+                                    'search_query': search_query
+                                })
+                                
+                                # Quick delay for UI updates
+                                import time
+                                time.sleep(0.1)
+                        except Exception as e:
+                            self.logger.warning(f"Failed to save individual listing: {e}")
                     
-                    # Log the actual titles found for debugging
-                    for i, listing in enumerate(listings[:5]):
-                        self.logger.info(f"Found listing {i+1}: {listing.get('title', 'NO TITLE')[:60]}...")
+                    self.session_stats['new_listings'] = saved_count
+                    self.logger.info(f"Saved {saved_count} new listings from {len(listings)} total")
                     
+                    # Send completion notification
+                    self._send_scraping_notification('scrape_completed', {
+                        'search_query': search_query,
+                        'total_found': len(listings),
+                        'total_saved': saved_count,
+                        'message': f'Completed! Found {saved_count} new listings for "{search_query}"'
+                    })
                 else:
-                    self.logger.warning(f"No {search_query} listings extracted from page")
-                    # Check if page loaded correctly by looking for any elements
-                    try:
-                        page_source_snippet = self.driver.page_source[:500] if self.driver else "No driver"
-                        self.logger.debug(f"Page source snippet: {page_source_snippet}")
-                        
-                        # Check if we can find any products in general (not just matching search)
-                        all_elements = self.driver.find_elements(By.CSS_SELECTOR, "[data-surface-wrapper='1'] > div > div")
-                        self.logger.info(f"Total elements found on page: {len(all_elements)}")
-                        
-                        if all_elements:
-                            self.logger.info(f"Sample element text: {all_elements[0].text[:200]}..." if all_elements[0].text else "Empty text")
-                    except Exception as debug_error:
-                        self.logger.error(f"Debug info extraction failed: {debug_error}")
+                    self.logger.warning("No listings extracted")
+                    self._send_scraping_notification('scrape_completed', {
+                        'search_query': search_query,
+                        'total_found': 0,
+                        'total_saved': 0,
+                        'message': f'No listings found for "{search_query}"'
+                    })
                 
-                self.logger.info(f"Final count for '{search_query}': {len(all_listings)} listings will be returned")
+                all_listings.extend(listings)
+                self.logger.info(f"Found {len(listings)} listings for {search_query}")
                 
             except Exception as e:
                 self.logger.error(f"Failed to extract {search_query} listings: {e}")
                 self.session_stats['errors_count'] += 1
                 self.session_stats['error_details'].append(f"{search_query} extraction: {str(e)}")
+                self._send_scraping_notification('scrape_error', {
+                    'error': str(e),
+                    'search_query': search_query,
+                    'message': f'Error extracting listings: {str(e)}'
+                })
             
             # Update session stats
             self.session_stats['end_time'] = datetime.now().isoformat()
             self.session_stats['status'] = 'completed'
             self.session_stats['search_keywords'] = search_query
-            self.session_stats['search_location'] = 'Stockholm, Sweden'
+            self.session_stats['search_location'] = 'Sydney, Australia'
             
-            self.logger.info(f"Custom scraping completed. Total listings: {len(all_listings)}")
+            self.logger.info(f"Custom search scraping completed. Total listings: {len(all_listings)}")
             
         except Exception as e:
-            self.logger.error(f"Custom scraping failed: {e}")
+            self.logger.error(f"Custom search scraping failed: {e}")
             self.session_stats['status'] = 'failed'
             self.session_stats['error_details'].append(f"General error: {str(e)}")
             self.session_stats['end_time'] = datetime.now().isoformat()
+            self._send_scraping_notification('scrape_error', {
+                'error': str(e),
+                'search_query': search_query,
+                'message': f'Scraping failed: {str(e)}'
+            })
         
         finally:
             # Save session data
             self.json_manager.save_scraping_session(self.session_stats)
             
-            # Close WebDriver
-            if self.driver:
-                try:
-                    self.driver.quit()
-                except:
-                    pass
+            # Don't close driver here - let it persist for potential next use
+            # if self.driver:
+            #     try:
+            #         self.driver.quit()
+            #     except:
+            #         pass
         
         return all_listings
+    
     
     def navigate_to_marketplace_custom(self, search_query: str) -> bool:
         """Navigate to Facebook Marketplace with custom search query."""
@@ -977,7 +1027,7 @@ class FacebookMarketplaceScraper:
             # Build search URL with custom query
             import urllib.parse
             encoded_query = urllib.parse.quote(search_query)
-            search_url = f"https://www.facebook.com/marketplace/stockholm/search/?query={encoded_query}"
+            search_url = f"https://www.facebook.com/marketplace/sydney/search/?query={encoded_query}"
             
             self.logger.info(f"Navigating to custom search: {search_url}")
             self.driver.get(search_url)
@@ -1019,7 +1069,7 @@ class FacebookMarketplaceScraper:
             
             # Navigate to marketplace if not already there
             if not self.is_on_marketplace:
-                marketplace_url = "https://www.facebook.com/marketplace/stockholm"
+                marketplace_url = "https://www.facebook.com/marketplace/sydney"
                 self.logger.info(f"Navigating to marketplace: {marketplace_url}")
                 self.driver.get(marketplace_url)
                 self._random_delay(2, 3)
@@ -1047,7 +1097,7 @@ class FacebookMarketplaceScraper:
             # Build search URL and navigate directly in the current tab
             import urllib.parse
             encoded_query = urllib.parse.quote(search_query)
-            search_url = f"https://www.facebook.com/marketplace/stockholm/search/?query={encoded_query}"
+            search_url = f"https://www.facebook.com/marketplace/sydney/search/?query={encoded_query}"
             
             self.logger.info(f"Navigating to search in current tab: {search_url}")
             self.driver.get(search_url)
@@ -1145,9 +1195,17 @@ class FacebookMarketplaceScraper:
                     # 🔥 HOT RELOAD FEATURE: Save each product immediately as it's found
                     for idx, listing in enumerate(new_listings):
                         try:
-                            # Save individual product immediately
-                            individual_stats = self.json_manager.add_products_batch([listing])
-                            self.logger.debug(f"Hot reload: Saved product {idx+1}/{len(new_listings)}")
+                            # Add hot reload metadata
+                            listing['hot_reload_timestamp'] = datetime.now().isoformat()
+                            listing['scraping_status'] = 'completed'
+                            listing['scraping_method'] = 'continuous'
+                            
+                            # Save individual product immediately using hot reload
+                            success = self.json_manager.add_product_hot_reload(listing)
+                            if success:
+                                self.logger.debug(f"🔥 Hot reload: Saved product {idx+1}/{len(new_listings)} successfully")
+                            else:
+                                self.logger.warning(f"🔥 Hot reload: Failed to save product {idx+1}/{len(new_listings)}")
                             
                             # Send individual product notification
                             self._send_scraping_notification('product_added', {
@@ -1189,7 +1247,7 @@ class FacebookMarketplaceScraper:
                     self.logger.debug(f"Scrolled from {current_height} to {new_scroll_pos}")
                     
                     # Wait for new content to load
-                    self._random_delay(3, 5)
+                    self._random_delay(1, 2)
                     
                     # Check if we've reached the bottom or no new content loaded
                     new_height = self.driver.execute_script("return document.body.scrollHeight;")
@@ -1197,10 +1255,7 @@ class FacebookMarketplaceScraper:
                         self.logger.info("Reached near bottom of page")
                         break
                 
-                # Every 30 seconds cycle (approximate)
-                if cycle_count % 3 == 0:  # Roughly every 3 cycles = ~30 seconds
-                    self.logger.info(f"Completed {cycle_count} cycles, brief pause...")
-                    self._random_delay(1, 2)
+                # No inter-cycle delays for maximum speed
         
         except Exception as e:
             self.logger.error(f"Error during continuous scrolling: {e}")
@@ -1293,6 +1348,9 @@ class FacebookMarketplaceScraper:
                     return []
                 self.is_logged_in_flag = True
             
+            # Store current search query for navigation back
+            self._current_search_query = search_query
+            
             # Navigate to marketplace search
             if not self.navigate_to_marketplace_custom(search_query):
                 self.session_stats['error_details'].append("Failed to navigate to Marketplace")
@@ -1383,7 +1441,7 @@ class FacebookMarketplaceScraper:
             self.logger.info("Finding product cards for deep scraping...")
             
             # Wait for content to load
-            time.sleep(3)
+            time.sleep(1.5)
             
             # Find marketplace item links
             marketplace_links = self.driver.find_elements(By.CSS_SELECTOR, "a[href*='/marketplace/item/']")
@@ -1461,7 +1519,7 @@ class FacebookMarketplaceScraper:
             
             # Navigate to product detail page
             self.driver.get(product_url)
-            time.sleep(random.uniform(3, 5))
+            time.sleep(random.uniform(0.5, 1.0))
             
             # Initialize comprehensive data structure
             comprehensive_data = {
@@ -1513,8 +1571,33 @@ class FacebookMarketplaceScraper:
             
             # Navigate back to search results for next product
             self.logger.info("Navigating back to search results...")
-            self.driver.get(original_url)
-            time.sleep(random.uniform(2, 4))
+            try:
+                # Try to go back using browser history first
+                self.driver.back()
+                time.sleep(0.5)
+                
+                # Check if we're back on search results
+                if 'marketplace' not in self.driver.current_url.lower() or 'search' not in self.driver.current_url.lower():
+                    # If not on search page, construct search URL manually
+                    search_query = getattr(self, '_current_search_query', 'iphone')
+                    search_url = f"https://www.facebook.com/marketplace/sydney/search/?query={search_query.replace(' ', '%20')}"
+                    self.logger.info(f"Going back to search URL: {search_url}")
+                    self.driver.get(search_url)
+                    
+                time.sleep(random.uniform(0.5, 1.0))
+                
+            except Exception as nav_error:
+                self.logger.error(f"Navigation back failed: {nav_error}")
+                # Fallback: reconstruct search URL
+                try:
+                    search_query = getattr(self, '_current_search_query', 'iphone')
+                    search_url = f"https://www.facebook.com/marketplace/sydney/search/?query={search_query.replace(' ', '%20')}"
+                    self.logger.info(f"Fallback: navigating to search URL: {search_url}")
+                    self.driver.get(search_url)
+                    time.sleep(1.5)
+                except Exception as fallback_error:
+                    self.logger.error(f"Fallback navigation failed: {fallback_error}")
+                    raise
             
             return comprehensive_data
             
@@ -1524,8 +1607,14 @@ class FacebookMarketplaceScraper:
             # Try to navigate back to search results even on error
             try:
                 if hasattr(self, 'driver') and self.driver:
-                    self.driver.get(original_url)
-                    time.sleep(2)
+                    self.driver.back()
+                    time.sleep(0.5)
+                    # If back doesn't work, try search URL
+                    if 'marketplace' not in self.driver.current_url.lower():
+                        search_query = getattr(self, '_current_search_query', 'iphone')
+                        search_url = f"https://www.facebook.com/marketplace/sydney/search/?query={search_query.replace(' ', '%20')}"
+                        self.driver.get(search_url)
+                        time.sleep(1.0)
             except:
                 pass
             
@@ -1601,7 +1690,7 @@ class FacebookMarketplaceScraper:
             location_patterns = [
                 r'([A-Za-z\s]+)\s+(\d+)\s*km',  # City X km
                 r'(\d+)\s*km\s+from\s+([A-Za-z\s]+)',  # X km from City
-                r'Stockholm[^<]*'  # Any Stockholm reference
+                r'Sydney[^<]*'  # Any Sydney reference
             ]
             
             for pattern in location_patterns:
@@ -1615,12 +1704,12 @@ class FacebookMarketplaceScraper:
                         }
                     else:
                         return {
-                            'city': 'Stockholm',
+                            'city': 'Sydney',
                             'distance': 'Unknown',
                             'raw_location': matches[0]
                         }
             
-            return {'city': 'Stockholm', 'distance': 'Unknown', 'raw_location': 'Not specified'}
+            return {'city': 'Sydney', 'distance': 'Unknown', 'raw_location': 'Not specified'}
             
         except Exception as e:
             self.logger.error(f"Failed to extract location: {e}")
@@ -1732,7 +1821,7 @@ class FacebookMarketplaceScraper:
                     # Click the button
                     try:
                         see_details_button.click()
-                        time.sleep(random.uniform(2, 4))
+                        time.sleep(random.uniform(0.5, 1.5))
                         
                         # Extract information from details page/popup
                         detailed_seller_data = self._extract_from_seller_details_page()
@@ -1745,21 +1834,21 @@ class FacebookMarketplaceScraper:
                         if self.driver.current_url != data['basic_info']['current_url']:
                             self.logger.info("Navigated to new page, going back...")
                             self.driver.back()
-                            time.sleep(2)
+                            time.sleep(0.5)
                         
                     except ElementNotInteractableException:
                         # Try JavaScript click as fallback
                         self.logger.info("Direct click failed, trying JavaScript click")
                         try:
                             self.driver.execute_script("arguments[0].click();", see_details_button)
-                            time.sleep(3)
+                            time.sleep(1.0)
                             
                             detailed_seller_data = self._extract_from_seller_details_page()
                             seller_details_info.update(detailed_seller_data)
                             
                             if self.driver.current_url != data['basic_info']['current_url']:
                                 self.driver.back()
-                                time.sleep(2)
+                                time.sleep(0.5)
                                 
                         except Exception as js_error:
                             self.logger.error(f"JavaScript click failed: {js_error}")
@@ -2166,10 +2255,14 @@ class FacebookMarketplaceScraper:
                 # Add hot reload timestamp
                 standard_product['hot_reload_timestamp'] = datetime.now().isoformat()
                 standard_product['scraping_status'] = 'completed'
+                standard_product['scraping_method'] = 'deep'
                 
-                # Save immediately
-                stats = self.json_manager.add_products_batch([standard_product])
-                self.logger.info(f"🔥 Hot reload: Saved product {product_index} immediately - {stats['added']} added")
+                # Save immediately using hot reload method
+                success = self.json_manager.add_product_hot_reload(standard_product)
+                if success:
+                    self.logger.info(f"🔥 Hot reload: Saved deep product {product_index} successfully")
+                else:
+                    self.logger.warning(f"🔥 Hot reload: Failed to save deep product {product_index}")
                 
         except Exception as e:
             self.logger.error(f"Hot reload save failed for product {product_index}: {e}")
@@ -2182,9 +2275,12 @@ class FacebookMarketplaceScraper:
             listing_data['scraping_status'] = 'completed'
             listing_data['scraping_method'] = 'standard'
             
-            # Save immediately
-            stats = self.json_manager.add_products_batch([listing_data])
-            self.logger.debug(f"🔥 Hot reload: Standard product {product_index} saved - {stats['added']} added")
+            # Save immediately using hot reload method
+            success = self.json_manager.add_product_hot_reload(listing_data)
+            if success:
+                self.logger.debug(f"🔥 Hot reload: Standard product {product_index} saved successfully")
+            else:
+                self.logger.warning(f"🔥 Hot reload: Failed to save standard product {product_index}")
             
         except Exception as e:
             self.logger.error(f"Hot reload save failed for standard product {product_index}: {e}")

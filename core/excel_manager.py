@@ -157,7 +157,14 @@ class ExcelManager:
                 images = product.get('images', [])
                 for i in range(3):
                     if i < len(images):
-                        row[f'Image_URL_{i+1}'] = images[i].get('url', 'N/A')
+                        # Handle both string URLs and dict image objects
+                        image = images[i]
+                        if isinstance(image, dict):
+                            row[f'Image_URL_{i+1}'] = image.get('url', 'N/A')
+                        elif isinstance(image, str):
+                            row[f'Image_URL_{i+1}'] = image
+                        else:
+                            row[f'Image_URL_{i+1}'] = 'N/A'
                     else:
                         row[f'Image_URL_{i+1}'] = 'N/A'
                 

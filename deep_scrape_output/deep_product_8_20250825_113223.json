@@ -1,0 +1,129 @@
+{
+  "basic_info": {
+    "title": "SEK3,000\niPhone 13 128 gb\nVega, AB",
+    "url": "https://www.facebook.com/marketplace/item/1100582635376134/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A84daed1f-61ed-4c9a-a192-453f36fcde28&__tn__=!%3AD",
+    "extraction_timestamp": "2025-08-25T11:30:47.964291",
+    "page_title": "(2) Marketplace – iPhone 13 128 gb | Facebook",
+    "current_url": "https://www.facebook.com/marketplace/item/1100582635376134/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A84daed1f-61ed-4c9a-a192-453f36fcde28",
+    "price": {
+      "amount": "17",
+      "currency": "SEK",
+      "raw_price_text": "17 sek"
+    },
+    "location": {
+      "city": "Within",
+      "distance": "51km",
+      "raw_location": "Within 51"
+    },
+    "product_id": "1100582635376134"
+  },
+  "seller_details": {
+    "button_found": true,
+    "extraction_timestamp": "2025-08-25T11:30:58.449430",
+    "button_text": "Seller details",
+    "button_href": "https://www.facebook.com/marketplace/profile/1193781434/?product_id=1100582635376134",
+    "join_date": "joined facebook in 2009"
+  },
+  "seller_metrics": {
+    "basic_info": {
+      "seller_name": "Seller details",
+      "profile_url": "https://www.facebook.com/marketplace/profile/1193781434/?product_id=1100582635376134"
+    }
+  },
+  "product_comprehensive": {
+    "model_name": "iPhone 13",
+    "storage": "128 GB",
+    "color": "Black",
+    "condition": "new_in_box",
+    "images": [
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/531578843_1449823446050958_4348532027849310303_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=109&ccb=1-7&_nc_sid=247b10&_nc_ohc=6NWhDkZlFNwQ7kNvwEPCbpQ&_nc_oc=Adn1sOGcOFrvjokE8gIUUpCvbZnZgBcD45d1xD8S2LByn-WojCBqhFl7fwvvAfQg8VaKV_6RGolfProHSJOyc5wU&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=GcmkpHiR1nvjMwEAn-OOqw&oh=00_AfXTg7SZ90dUKTqoVDUtfK3x69utqyQ7gm2hioF2ddBOjg&oe=68B1BDBD",
+        "alt_text": "",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/531578843_1449823446050958_4348532027849310303_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=109&ccb=1-7&_nc_sid=247b10&_nc_ohc=6NWhDkZlFNwQ7kNvwEPCbpQ&_nc_oc=Adn1sOGcOFrvjokE8gIUUpCvbZnZgBcD45d1xD8S2LByn-WojCBqhFl7fwvvAfQg8VaKV_6RGolfProHSJOyc5wU&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=GcmkpHiR1nvjMwEAn-OOqw&oh=00_AfXTg7SZ90dUKTqoVDUtfK3x69utqyQ7gm2hioF2ddBOjg&oe=68B1BDBD",
+        "alt_text": "Product photo of iPhone 13 128 gb",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/531578843_1449823446050958_4348532027849310303_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=109&ccb=1-7&_nc_sid=247b10&_nc_ohc=6NWhDkZlFNwQ7kNvwEPCbpQ&_nc_oc=Adn1sOGcOFrvjokE8gIUUpCvbZnZgBcD45d1xD8S2LByn-WojCBqhFl7fwvvAfQg8VaKV_6RGolfProHSJOyc5wU&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=GcmkpHiR1nvjMwEAn-OOqw&oh=00_AfXTg7SZ90dUKTqoVDUtfK3x69utqyQ7gm2hioF2ddBOjg&oe=68B1BDBD",
+        "alt_text": "Product photo of iPhone 13 128 gb",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/530990645_1498810318158178_8569717346876899891_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_ohc=4dx926tWJ1EQ7kNvwGGbpZK&_nc_oc=AdlXDU2RvkIENueNq6GZN9mCWSiKm5750EQ5A6-QG29210zT5TA488viOXCdOrOnfAf2b43ZuMejKXgjnlSwNS1a&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=GcmkpHiR1nvjMwEAn-OOqw&oh=00_AfVaosy9wsYR88RVhZ3K5hBGizdEVZIn4GQy0mWVmLIqXg&oe=68B1DA93",
+        "alt_text": "Product photo of iPhone 13 128 gb",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/533276066_631215499608638_989784144264039514_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=102&ccb=1-7&_nc_sid=247b10&_nc_ohc=nwMLsK1Rg8IQ7kNvwHxVWPK&_nc_oc=AdnShbIwEZDlwbFogcpVWpwBJ6dWUL8YbZkjdSJ0tN9B4l0Uu5TmzsOP4Vm9doXBwdpAmFcwnWNZq5hsLhvr97DQ&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=GcmkpHiR1nvjMwEAn-OOqw&oh=00_AfVYaWZvToKu0am1UhW9seFvq8dvNDmKzhL1YkOmYscdGw&oe=68B1EAF2",
+        "alt_text": "Product photo of iPhone 13 128 gb",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.1600-4/503730191_2761383404054320_3165077565533085790_n.jpg?stp=cp0_dst-jpg_q75_s960x960_spS444_tt6&_nc_cat=111&ccb=1-7&_nc_sid=c02adf&_nc_ohc=OkhN-vWHHx4Q7kNvwFTpqJM&_nc_oc=AdkyjNNqJktrGVFLrTMkI2jRNFg1xkq28RSJIaKStTU_QqnvRLOp7HPOdnWh5aKkZU2OQhvwZvScmuFJpqinnS53&_nc_zt=1&_nc_ht=scontent.fisb17-1.fna&_nc_gid=GcmkpHiR1nvjMwEAn-OOqw&oh=00_AfVry5NA0t6905la3cEsS574vGBrQSr_f6hFI6UWHSiZgA&oe=68B1C843",
+        "alt_text": "",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t15.5256-10/533530791_1244517294092380_8268295827716143478_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=107&ccb=1-7&_nc_sid=7965db&_nc_ohc=oBaSDBrqKhwQ7kNvwG3WVWw&_nc_oc=AdndKSmZUyzH8qWey3hcVTs0Lqo97LWOS1QwasMxsyZ4PG3IDM5BO091HY5ODq4crA4QBTxDu83yNjLiMMaHkRlF&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=GcmkpHiR1nvjMwEAn-OOqw&oh=00_AfWO21MPB4sDvK8YzsP9QDQ9kuv6P50FbkcQO-W9zskXAg&oe=68B1E7E7",
+        "alt_text": "",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/533069284_1093709079035972_2905902935539294376_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=100&ccb=1-7&_nc_sid=247b10&_nc_ohc=yWsYtS_4-W8Q7kNvwGOvK6r&_nc_oc=Adkv2pisXArau2xld2iQxynNlAWneMQ4a5koy86t9FzL_yKcAQe7YZAxckGwDOdUK_44HvSGNgAE3VtnTBj7b46O&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=Xp1GrF9vMhS3T2ctvLdoPA&oh=00_AfW8g9evXUb11YXygoFcOJiMXomn3Tjqf52OupWCBRFs5A&oe=68B1D7ED",
+        "alt_text": "Granny flat in Sydney, NSW",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/533579437_2853464371493986_4242617681392184659_n.jpg?stp=c43.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=101&ccb=1-7&_nc_sid=247b10&_nc_ohc=9-foD9j7sxcQ7kNvwErut1d&_nc_oc=AdkkC9dTACFfbQl51LfUg2xa3Nsf1ngAxFPmGgYL3UU3gvcEtA1aOW-rXOilRbNAqFiBkdp-iK_9g7nOiEt9Zzg5&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=Xp1GrF9vMhS3T2ctvLdoPA&oh=00_AfWAuO5JmUB0saY2shQIGSUDVNLMemF4jNF928EXks73tQ&oe=68B1F16D",
+        "alt_text": "Free bread use by 27 August in Sydney, NSW",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/533511959_24225299240412345_2091500472727895370_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=101&ccb=1-7&_nc_sid=247b10&_nc_ohc=lp2VImVyMY0Q7kNvwHR9sQx&_nc_oc=AdnGXfQxxUdqKcNK86aRx8tIUayR-MqsVbV6G1FTcSSfOiz6HIW7xGYECLi2TxV_mvyE-I3HPXeehRSWTHvRS2sM&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=Xp1GrF9vMhS3T2ctvLdoPA&oh=00_AfWwFI2F1hcIkFHp-r4jfKIsZ6iPMQKpHQWPvP9EU6P9UQ&oe=68B1EC92",
+        "alt_text": "TCL 50” Smart TV in Sydney, NSW",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/524927203_601483482772037_6558492422556911945_n.jpg?stp=c0.148.261.261a_dst-jpg_p261x260_tt6&_nc_cat=102&ccb=1-7&_nc_sid=247b10&_nc_ohc=AQgmVVJZWe8Q7kNvwFugV3C&_nc_oc=AdmQk0kdyaAZllgsutwe5n0V_sdZeF0zpqbdAEdf3dDJKu5xat3yog2gVB8ECuHJpAykrnQCWm8ayAJ83dHEpiEI&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=Xp1GrF9vMhS3T2ctvLdoPA&oh=00_AfVNV4toRnrWdbqHaJphrxDHUj_5Ce93MEooG8P-YjZbbg&oe=68B1D291",
+        "alt_text": "KingGee Worker Pants Khaki Colour Size 77R in Sydney, NSW",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/533078508_4150459021884587_7606897391666424290_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=104&ccb=1-7&_nc_sid=247b10&_nc_ohc=fks0ofx24DYQ7kNvwEsdoFH&_nc_oc=AdmCTTtSRzxVeRiHiGTjjnQ5ZIZDowR1oApsrphsNKD3zwuRraw6tKTiFZdVeopea1Obu4DbjBBzGSnDFjb8zgKb&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=Xp1GrF9vMhS3T2ctvLdoPA&oh=00_AfUp3fZodwkprZYSygcpOjf0CNEKpObmZccMmtwD0gee1Q&oe=68B1E6D5",
+        "alt_text": "Google pixel 8 pro 5G 128gb blue $1700 RRP. Cheapest working unlocked phone. Screen not cracked in Sydney, NSW",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/532580979_1102351751333367_848203335299552368_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_ohc=9fdsrmDLPk8Q7kNvwHyfENW&_nc_oc=Adk_6fwO5XdS6hBkvtG2m4OoCEQGWLZO6Iat2BtpDKeEvW0odLpaDWBMrGmgyvPg6GZzKcwMk15Wvp0cqPFkWkZO&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=Xp1GrF9vMhS3T2ctvLdoPA&oh=00_AfUPVuqHC1CYiXGEgpeGxuUboRhHsYm6LFXRlOEmgqvllQ&oe=68B1C771",
+        "alt_text": "iPhone 11 black  64gb  96% battery health  Excellent  condition  Warranty in Sydney, NSW",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/533404718_1488654375893613_3992483258010427413_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=o8sPyXCUN6cQ7kNvwHiwWaj&_nc_oc=Adk6r174Ss40_JSl-wPjmGFtZfK6SiXHUBP2Gii8ybnRdu4MjxbUpTCA8KtBfo05d61NNT4DZiuYlInG_wPXDBE3&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=Xp1GrF9vMhS3T2ctvLdoPA&oh=00_AfUytFLgaYg6R7Q2OvdDhLOkNV2p3k9mYXyR2ZF2sKaEXA&oe=68B1E76B",
+        "alt_text": "Nothing phone 3a 256 GB version with 3 years warranty in Sydney, NSW",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/531573534_1260303768898806_4760048932940157704_n.jpg?stp=c43.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_ohc=gAtdt4EAvGkQ7kNvwHycO4W&_nc_oc=AdnCeK0aW5JuehrhrdwZEBggXd7RMG5qSy21MKhrwgYGLQ3IPNroUiMv4YCb3HV_kcXkoIV_3RgmTvY3mswd_F51&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=Xp1GrF9vMhS3T2ctvLdoPA&oh=00_AfVX73mxdd3pE3GA70sBupTpygYlu8v-33O4t4ZDb6480Q&oe=68B1D967",
+        "alt_text": "Nubia focus 5G phone brand new in box never opened\n\nGenuine buyers only in Sydney, NSW",
+        "type": "product_image"
+      }
+    ],
+    "description": "Listed 3 days ago in Vega, AB\n\niPhone 13 128 GB i bra skick. Inga sprickor, någon liten repa här och där. 81% batterihälsa. Finns i... See more\n\nLocation is approximate"
+  },
+  "marketplace_metadata": {
+    "fb_listing_id": "1100582635376134",
+    "is_sold": true,
+    "timing": {
+      "posted_time": "36 minutes"
+    }
+  },
+  "extraction_metadata": {
+    "method": "deep_scraper",
+    "product_index": 8,
+    "data_quality": "comprehensive"
+  }
+}

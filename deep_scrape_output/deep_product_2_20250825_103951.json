@@ -1,0 +1,129 @@
+{
+  "basic_info": {
+    "title": "SEK800\niPhone 8 64gb\nKista, AB",
+    "url": "https://www.facebook.com/marketplace/item/1059836812613180/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af728d6b8-be4a-47b8-9597-5a5dfddf9382&__tn__=!%3AD",
+    "extraction_timestamp": "2025-08-25T10:38:07.001470",
+    "page_title": "(1) Marketplace – iPhone 8 64gb | Facebook",
+    "current_url": "https://www.facebook.com/marketplace/item/1059836812613180/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af728d6b8-be4a-47b8-9597-5a5dfddf9382",
+    "price": {
+      "amount": "800",
+      "currency": "KR",
+      "raw_price_text": "800 kr"
+    },
+    "location": {
+      "city": "Within",
+      "distance": "51km",
+      "raw_location": "Within 51"
+    },
+    "product_id": "1059836812613180"
+  },
+  "seller_details": {
+    "button_found": true,
+    "extraction_timestamp": "2025-08-25T10:38:21.513958",
+    "button_text": "Seller details",
+    "button_href": "https://www.facebook.com/marketplace/profile/571989028/?product_id=1059836812613180",
+    "join_date": "joined facebook in 2009"
+  },
+  "seller_metrics": {
+    "basic_info": {
+      "seller_name": "Seller details",
+      "profile_url": "https://www.facebook.com/marketplace/profile/571989028/?product_id=1059836812613180"
+    }
+  },
+  "product_comprehensive": {
+    "model_name": "iPhone 8",
+    "storage": "64 GB",
+    "color": "Black",
+    "condition": "new_in_box",
+    "images": [
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/533654880_2678081949203515_2160541172126617759_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=e3H9NF-BP-cQ7kNvwE9ivkj&_nc_oc=Adkp_pSysZJALvBHuIBd2jkPOdfXxNFWckJnKC-C_LZD6Da7Bb1rWkNbDZoMSTzFL2zoB0NSJ2WGbMUnjMsai4d6&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=PY--Arcvr0gzG6g3rQ9rCw&oh=00_AfUi_gUd07AelGinzAN8SXG3a8G1RgcATtU4eNgi3w3Uxw&oe=68B1B170",
+        "alt_text": "",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/533654880_2678081949203515_2160541172126617759_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=e3H9NF-BP-cQ7kNvwE9ivkj&_nc_oc=Adkp_pSysZJALvBHuIBd2jkPOdfXxNFWckJnKC-C_LZD6Da7Bb1rWkNbDZoMSTzFL2zoB0NSJ2WGbMUnjMsai4d6&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=PY--Arcvr0gzG6g3rQ9rCw&oh=00_AfUi_gUd07AelGinzAN8SXG3a8G1RgcATtU4eNgi3w3Uxw&oe=68B1B170",
+        "alt_text": "Product photo of iPhone 8 64gb",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t15.13418-10/536685142_1344781300607396_2262116262856867843_n.jpg?stp=dst-jpg_tt6&_nc_cat=109&ccb=1-7&_nc_sid=ace027&_nc_ohc=a7eIKlBGozQQ7kNvwHFv4RU&_nc_oc=AdnPXxq4MmggMjoqmI4BBWw5kL0MCoZKFT8xpzzQOBMM62xqIWkqE2euzoKIbya5V8mL7PDRveBT5FDHzIkFMQO8&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=PY--Arcvr0gzG6g3rQ9rCw&oh=00_AfUrkT25WJ0R_oGxQKhoR05YSI2m31_Fsm7idW0u9BYl8A&oe=68B1D510",
+        "alt_text": "",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t15.13418-10/460484620_551238064088406_2819323557483391130_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=101&ccb=1-7&_nc_sid=ace027&_nc_ohc=fRmSH1GUE9AQ7kNvwGqsH3W&_nc_oc=Adktm7JmEyUjLbE34bk2e0-Z4H_dD5mXnzW_Z-1T4sxNdbcoX8dtKKo5kpEPPLBwT0PuR6LkCZwjdgpppT0lradW&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=PY--Arcvr0gzG6g3rQ9rCw&oh=00_AfWb4w5vG1lzWXgWNPweMAtcHBCFaiL5Bcz-HGJn031FIg&oe=68B1BB88",
+        "alt_text": "",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/533026017_1039039718090371_463452448342660932_n.jpg?stp=c0.101.261.261a_dst-jpg_p261x260_tt6&_nc_cat=100&ccb=1-7&_nc_sid=247b10&_nc_ohc=Rk0wYeNCfNAQ7kNvwH1llrY&_nc_oc=AdkyoqmysFdmtvVB3iecIfJW3UHCOpdzgpd-g9N1UCAjqncrdvcTvb1VZD5wkpH6AGOmrrqqhAuEKlRE_as9ZWVk&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=asjo2Iemx9PwH0Zk7iDxkg&oh=00_AfXlfzKn4nvATnjRWDtrFkx1QgeBLvkNx7XK7QJTxDErgQ&oe=68B1E06D",
+        "alt_text": "NEED GONE ASAP!! Jordan 4s Oreo Negotiable in Sydney, NSW",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/528682162_721325617458391_6548779585167509565_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=104&ccb=1-7&_nc_sid=247b10&_nc_ohc=4MDYfUErN_kQ7kNvwH-crGX&_nc_oc=AdnqBpF_EAuBTHh7rZp9RyTvMckGwGvoLa9qXIxnSzOVVVAzxaZ9cCxTIhbCZ-p5H2cjqC3kSv0b8aF1Em1Qfoae&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=asjo2Iemx9PwH0Zk7iDxkg&oh=00_AfVQ39yt_T9yRVdzlKI4JvS3MEwdY6cORskCghAkFZQxrg&oe=68B1B69C",
+        "alt_text": "Samsung Galaxy￼ A16 in Sydney, NSW",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t39.30808-6/538079055_747433508136647_8287520643627536054_n.jpg?stp=c0.220.1333.1333a_dst-jpg_s261x260_tt6&_nc_cat=102&ccb=1-7&_nc_sid=454cf4&_nc_ohc=HWVg4m4qF1UQ7kNvwHVCZry&_nc_oc=AdnSYl4i7cEdBbtUh1BJSf5AiwXeUVyPGElvoKVy2d3tnbiCsqr4SmAKU0x8x6wXEXHveMjwmeGuCCYKh7vtOl86&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=asjo2Iemx9PwH0Zk7iDxkg&oh=00_AfWzSoOsig9ACOS--YpPaDUQL0vhAgqunKnnCy2u2SrX0A&oe=68B1D0BF",
+        "alt_text": "“Big Range Self-Help Books – Bundle & Save 📚💡” in Sydney, NSW",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/524735151_1836364393892523_894844620665118783_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=109&ccb=1-7&_nc_sid=247b10&_nc_ohc=fMZ7bUp6u7UQ7kNvwGUDCQq&_nc_oc=AdmuMuidQ1-dPfOJ3h9rasl5vdc4IJzqRpj13-Z1xH-ze00IO9RDeVjGAflfIfpSlZHmU9UkHXhuocLNETqd6MjM&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=asjo2Iemx9PwH0Zk7iDxkg&oh=00_AfUFdYg9U5j0wmCfCNDKPcqJp4T02kmZS4ouuu-L6T9ihg&oe=68B1D87A",
+        "alt_text": "Sale🔥Bluetooth speaker wireless portable speaker with microphone,colorful LED light,rechargeable in Sydney, NSW",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/532990458_1102758178031300_1905960405678093869_n.jpg?stp=c0.42.261.261a_dst-jpg_p261x260_tt6&_nc_cat=103&ccb=1-7&_nc_sid=247b10&_nc_ohc=XFuweUEghWYQ7kNvwGGqBiY&_nc_oc=Adn1-yajHNR-XfTBqOFifGB-Qz4Yg32xoXWXpAHDKYJh7J9zk0zen4R42psUzCtD_zl2iO1bw5RaTnRwhOUBbIAa&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=asjo2Iemx9PwH0Zk7iDxkg&oh=00_AfUDf5Rb1gwPztcZmLz513wt_pWanbXfKz0L7ulbxw9QKg&oe=68B1DD97",
+        "alt_text": "Electrolux sensordry dryer 5.5kg in Sydney, NSW",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/418705238_7025992077502845_2052487158208030469_n.jpg?stp=c0.42.261.261a_dst-jpg_p261x260_tt6&_nc_cat=109&ccb=1-7&_nc_sid=247b10&_nc_ohc=WYjxzidT538Q7kNvwE_esaC&_nc_oc=AdmTre6ETC_Kv5kYfctznTCkLPiJFMyouvkJRG3xEP6ZsuM03W7t83bgExCevJeF66RRuNcTAU9xPm1OYLNu5-Oq&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=asjo2Iemx9PwH0Zk7iDxkg&oh=00_AfVOfvdfkH_EYHkg039OqK7QIP3QghZnj0m45EzydsuNqA&oe=68B1C78D",
+        "alt_text": "Huawei P30 Pro 256gb in Sydney, NSW",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/533045516_757417880209577_5723813479245080926_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=eMv8qkg5FcsQ7kNvwEaXWjK&_nc_oc=AdkTufhM65-C1jy_ssvFbyivyrcd1xkNcenf_Cl9Q8SWpEpp7Ue2csnt2EuFu7I4O4CEMKubZC93F1Rwcw2YHAzb&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=asjo2Iemx9PwH0Zk7iDxkg&oh=00_AfWBISWJf2jK5CZrhdP46EMlsmV3BrYEN1Rhoy-puIcv8Q&oe=68B1DEED",
+        "alt_text": "RayBan Meta Glasses RW4006 in Sydney, NSW",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/533045729_3684862385151023_1701694071495248888_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=104&ccb=1-7&_nc_sid=247b10&_nc_ohc=Hj-my2keiQoQ7kNvwEcMrOB&_nc_oc=AdkOr46t1jA9EQFmrBKQRbvti9VGcVtwexa7cE4UuUimnndz8a2H2KiJJXeVDik5znt7PU8iyAftxcdv9kXav1au&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=asjo2Iemx9PwH0Zk7iDxkg&oh=00_AfXSLqM3SjjwjdGlHdki6TSWu4IDvN4Bt5qBTkIANrv-Gg&oe=68B1C65B",
+        "alt_text": "Nintendo Switch Console32GB Excellent Condition in Sydney, NSW",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/534490188_2972722019577050_2673784396367205878_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=109&ccb=1-7&_nc_sid=247b10&_nc_ohc=1q51ChGM0OAQ7kNvwE0H0n1&_nc_oc=AdkOVBGjfbikGwI3IKjeMe6VD_F8HZDPllu5eFuEPr3q-jytax8vhub8zV2fSw21XQyVbqMZ9MDh9NBRh8ed57u_&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=asjo2Iemx9PwH0Zk7iDxkg&oh=00_AfXjRQKWC2xk41TNGzL6O_0_0qW8aj9odVJrDnTJUBeRrQ&oe=68B1D750",
+        "alt_text": "Google Nest in Sydney, NSW",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/534387197_1118424820277765_91279359989529656_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=Xv2WvihYngcQ7kNvwGvlskU&_nc_oc=Adm7v_qc0Gi_AH9JSsdt5j2yCg_CcVQzUQYhiSEqnSw5oKALQp2MS6jfbgXU5Zma02GaRIESJ8SV2hrJqwxlDn7p&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=asjo2Iemx9PwH0Zk7iDxkg&oh=00_AfXr2QZlELx9Cu8DdFCvsToXsmFQrZe_eG57Ytzqr_6VIQ&oe=68B1C9E1",
+        "alt_text": "All items free in Sydney, NSW",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/525767982_1310422017261202_3342253707553260388_n.jpg?stp=c0.101.261.261a_dst-jpg_p261x260_tt6&_nc_cat=109&ccb=1-7&_nc_sid=247b10&_nc_ohc=77DO5ANh95sQ7kNvwEPGEeL&_nc_oc=AdneYuTapaFH3Id1M8ZwMoPzMehh3SSneznqE_57oATu9UMF6Fh-2VpF79wLWZrUbTCAMIYoJjZOSI8rX_DkJeha&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=asjo2Iemx9PwH0Zk7iDxkg&oh=00_AfX292eUM8uyQcPHF1cRlIIssvEKIPy6X2b9qCVQZg9qyw&oe=68B1C3F0",
+        "alt_text": "Samsung Galaxy A05s brand new in Sydney, NSW",
+        "type": "product_image"
+      }
+    ],
+    "description": "Listed 4 days ago in Kista, AB\n\niPhone 8 rosa 64gb \nFast pris 800kr finns I Akalla\n\nLocation is approximate"
+  },
+  "marketplace_metadata": {
+    "fb_listing_id": "1059836812613180",
+    "is_sold": true,
+    "timing": {
+      "posted_time": "45 minutes"
+    }
+  },
+  "extraction_metadata": {
+    "method": "deep_scraper",
+    "product_index": 2,
+    "data_quality": "comprehensive"
+  }
+}
