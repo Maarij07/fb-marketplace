@@ -13748,3 +13748,290 @@ Stacktrace:
 2025-08-25 13:00:02,887 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:00:02] "GET /api/stats HTTP/1.1" 200 -
 2025-08-25 13:00:02,905 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:00:02] "GET /api/listings?limit=20 HTTP/1.1" 200 -
 2025-08-25 13:00:02,908 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:00:02] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-25 13:30:06,453 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-25 13:30:06,454 - core.price_monitor - INFO - Price Change Monitor initialized
+2025-08-25 13:30:06,454 - core.notification_monitor - INFO - Notification Monitor initialized
+2025-08-25 13:30:06,454 - web.app - INFO - Browser notification monitoring is available - use dashboard to start manually
+2025-08-25 13:30:06,459 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-25 13:30:06,496 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-08-25 13:30:06,497 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-25 13:30:06,499 - werkzeug - INFO -  * Restarting with stat
+2025-08-25 13:30:07,403 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-25 13:30:07,404 - core.price_monitor - INFO - Price Change Monitor initialized
+2025-08-25 13:30:07,404 - core.notification_monitor - INFO - Notification Monitor initialized
+2025-08-25 13:30:07,404 - web.app - INFO - Browser notification monitoring is available - use dashboard to start manually
+2025-08-25 13:30:07,410 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-25 13:30:07,420 - werkzeug - WARNING -  * Debugger is active!
+2025-08-25 13:30:07,423 - werkzeug - INFO -  * Debugger PIN: 765-752-686
+2025-08-25 13:30:11,190 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:30:11] "GET / HTTP/1.1" 200 -
+2025-08-25 13:30:11,353 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:30:11] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-25 13:30:11,354 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:30:11] "GET /api/stats HTTP/1.1" 200 -
+2025-08-25 13:30:11,355 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:30:11] "GET /api/monitoring/status HTTP/1.1" 200 -
+2025-08-25 13:30:11,386 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:30:11] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-25 13:30:11,392 - core.price_monitor - WARNING - Error processing product 3 for price change: float division by zero
+2025-08-25 13:30:11,394 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:30:11] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-25 13:30:11,507 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:30:11] "GET /api/events HTTP/1.1" 200 -
+2025-08-25 13:30:12,226 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:30:12] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-08-25 13:30:19,376 - core.excel_manager - ERROR - Error creating Excel file: No module named 'openpyxl'
+2025-08-25 13:30:19,377 - core.excel_manager - ERROR - Error exporting to Excel: No module named 'openpyxl'
+2025-08-25 13:30:19,377 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:30:19] "POST /api/excel/export HTTP/1.1" 200 -
+2025-08-25 13:30:19,680 - core.excel_manager - ERROR - Error creating Excel file: No module named 'openpyxl'
+2025-08-25 13:30:19,681 - core.excel_manager - ERROR - Error exporting to Excel: No module named 'openpyxl'
+2025-08-25 13:30:19,682 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:30:19] "POST /api/excel/export HTTP/1.1" 200 -
+2025-08-25 13:30:41,406 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:30:41] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-25 13:30:41,411 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:30:41] "GET /api/stats HTTP/1.1" 200 -
+2025-08-25 13:30:41,426 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:30:41] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-25 13:30:41,429 - core.price_monitor - WARNING - Error processing product 8 for price change: float division by zero
+2025-08-25 13:30:41,430 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:30:41] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-25 13:31:11,394 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:31:11] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-25 13:31:11,416 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:31:11] "GET /api/stats HTTP/1.1" 200 -
+2025-08-25 13:31:11,429 - core.price_monitor - WARNING - Error processing product 4 for price change: float division by zero
+2025-08-25 13:31:11,431 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:31:11] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-25 13:31:11,434 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:31:11] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-25 13:31:41,403 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:31:41] "GET /api/stats HTTP/1.1" 200 -
+2025-08-25 13:31:41,405 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:31:41] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-25 13:31:41,421 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:31:41] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-25 13:31:41,425 - core.price_monitor - WARNING - Error processing product 1 for price change: float division by zero
+2025-08-25 13:31:41,426 - core.price_monitor - WARNING - Error processing product 2 for price change: float division by zero
+2025-08-25 13:31:41,428 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:31:41] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-25 13:32:11,399 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:32:11] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-25 13:32:11,424 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:32:11] "GET /api/stats HTTP/1.1" 200 -
+2025-08-25 13:32:11,434 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:32:11] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-25 13:32:11,438 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:32:11] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-25 13:32:41,390 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:32:41] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-25 13:32:41,404 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:32:41] "GET /api/stats HTTP/1.1" 200 -
+2025-08-25 13:32:41,429 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:32:41] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-25 13:32:41,434 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:32:41] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-25 13:33:11,393 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:33:11] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-25 13:33:11,410 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:33:11] "GET /api/stats HTTP/1.1" 200 -
+2025-08-25 13:33:11,426 - core.price_monitor - WARNING - Error processing product 7 for price change: float division by zero
+2025-08-25 13:33:11,427 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:33:11] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-25 13:33:11,431 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:33:11] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-25 13:33:32,951 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:33:32] "GET /api/listing/test_product_1_1756041908 HTTP/1.1" 200 -
+2025-08-25 13:33:38,665 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:33:38] "GET /api/listing/mp_gen_3c7d6866 HTTP/1.1" 200 -
+2025-08-25 13:33:41,358 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:33:41] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-25 13:33:41,359 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:33:41] "GET /api/stats HTTP/1.1" 200 -
+2025-08-25 13:33:41,382 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:33:41] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-25 13:33:41,386 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:33:41] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-25 13:33:45,093 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:33:45] "GET /api/listing/batch_test_67890 HTTP/1.1" 200 -
+2025-08-25 13:33:50,013 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:33:50] "GET /api/listing/batch_test_67890 HTTP/1.1" 200 -
+2025-08-25 13:34:11,401 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:34:11] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-25 13:34:11,413 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:34:11] "GET /api/stats HTTP/1.1" 200 -
+2025-08-25 13:34:11,425 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:34:11] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-25 13:34:11,431 - core.price_monitor - WARNING - Error processing product 4 for price change: float division by zero
+2025-08-25 13:34:11,433 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:34:11] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-25 13:34:41,389 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:34:41] "GET /api/stats HTTP/1.1" 200 -
+2025-08-25 13:34:41,394 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:34:41] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-25 13:34:41,409 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:34:41] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-25 13:34:41,412 - core.price_monitor - WARNING - Error processing product 1 for price change: float division by zero
+2025-08-25 13:34:41,414 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:34:41] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-25 13:35:47,818 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PMLS\\Desktop\\fb-marketplace\\web\\app.py', reloading
+2025-08-25 13:35:47,945 - werkzeug - INFO -  * Restarting with stat
+2025-08-25 13:35:48,844 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-25 13:35:48,845 - core.price_monitor - INFO - Price Change Monitor initialized
+2025-08-25 13:35:48,845 - core.notification_monitor - INFO - Notification Monitor initialized
+2025-08-25 13:35:48,845 - web.app - INFO - Browser notification monitoring is available - use dashboard to start manually
+2025-08-25 13:35:48,851 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-25 13:35:48,859 - werkzeug - WARNING -  * Debugger is active!
+2025-08-25 13:35:48,861 - werkzeug - INFO -  * Debugger PIN: 765-752-686
+2025-08-25 13:35:50,950 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:35:50] "GET /api/events HTTP/1.1" 200 -
+2025-08-25 13:35:53,383 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:35:53] "GET /api/events HTTP/1.1" 200 -
+2025-08-25 13:36:08,403 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:36:08] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-25 13:36:08,417 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:36:08] "GET /api/stats HTTP/1.1" 200 -
+2025-08-25 13:36:08,443 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:36:08] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-25 13:36:08,445 - core.price_monitor - WARNING - Error processing product 1 for price change: float division by zero
+2025-08-25 13:36:08,447 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:36:08] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-25 13:36:09,318 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-25 13:36:09,318 - core.price_monitor - INFO - Price Change Monitor initialized
+2025-08-25 13:36:09,319 - core.notification_monitor - INFO - Notification Monitor initialized
+2025-08-25 13:36:09,319 - web.app - INFO - Browser notification monitoring is available - use dashboard to start manually
+2025-08-25 13:36:09,326 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-25 13:36:09,346 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-08-25 13:36:09,347 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-25 13:36:09,348 - werkzeug - INFO -  * Restarting with stat
+2025-08-25 13:36:15,006 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:36:15] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-25 13:36:15,046 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:36:15] "GET /api/stats HTTP/1.1" 200 -
+2025-08-25 13:36:15,062 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:36:15] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-25 13:36:15,065 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:36:15] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-25 13:36:19,116 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:36:19] "GET / HTTP/1.1" 200 -
+2025-08-25 13:36:19,156 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:36:19] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-25 13:36:19,158 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:36:19] "GET /api/monitoring/status HTTP/1.1" 200 -
+2025-08-25 13:36:19,160 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:36:19] "GET /api/events HTTP/1.1" 200 -
+2025-08-25 13:36:19,181 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:36:19] "GET /api/stats HTTP/1.1" 200 -
+2025-08-25 13:36:19,195 - core.price_monitor - WARNING - Error processing product 5 for price change: float division by zero
+2025-08-25 13:36:19,195 - core.price_monitor - WARNING - Error processing product 7 for price change: float division by zero
+2025-08-25 13:36:19,196 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:36:19] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-25 13:36:19,199 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:36:19] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-25 13:36:21,484 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:36:21] "GET /api/listing/deep_1091991559707762 HTTP/1.1" 200 -
+2025-08-25 13:36:25,821 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:36:25] "GET /api/listing/deep_1117215446558285 HTTP/1.1" 200 -
+2025-08-25 13:36:49,395 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:36:49] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-25 13:36:49,399 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:36:49] "GET /api/stats HTTP/1.1" 200 -
+2025-08-25 13:36:49,415 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:36:49] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-25 13:36:49,420 - core.price_monitor - WARNING - Error processing product 6 for price change: float division by zero
+2025-08-25 13:36:49,422 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:36:49] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-25 13:37:19,382 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:37:19] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-25 13:37:19,399 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:37:19] "GET /api/stats HTTP/1.1" 200 -
+2025-08-25 13:37:19,414 - core.price_monitor - WARNING - Error processing product 0 for price change: float division by zero
+2025-08-25 13:37:19,416 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:37:19] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-25 13:37:19,419 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:37:19] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-25 13:37:49,389 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:37:49] "GET /api/stats HTTP/1.1" 200 -
+2025-08-25 13:37:49,391 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:37:49] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-25 13:37:49,411 - core.price_monitor - WARNING - Error processing product 5 for price change: float division by zero
+2025-08-25 13:37:49,413 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:37:49] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-25 13:37:49,415 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:37:49] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-25 13:38:19,406 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:38:19] "GET /api/stats HTTP/1.1" 200 -
+2025-08-25 13:38:19,409 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:38:19] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-25 13:38:19,433 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:38:19] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-25 13:38:19,439 - core.price_monitor - WARNING - Error processing product 2 for price change: float division by zero
+2025-08-25 13:38:19,441 - core.price_monitor - WARNING - Error processing product 5 for price change: float division by zero
+2025-08-25 13:38:19,445 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:38:19] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-25 13:38:40,422 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:38:40] "GET / HTTP/1.1" 200 -
+2025-08-25 13:38:40,487 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:38:40] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-25 13:38:40,491 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:38:40] "GET /api/monitoring/status HTTP/1.1" 200 -
+2025-08-25 13:38:40,499 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:38:40] "GET /api/events HTTP/1.1" 200 -
+2025-08-25 13:38:40,565 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:38:40] "GET /api/stats HTTP/1.1" 200 -
+2025-08-25 13:38:40,593 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:38:40] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-25 13:38:40,594 - core.price_monitor - WARNING - Error processing product 1 for price change: float division by zero
+2025-08-25 13:38:40,595 - core.price_monitor - WARNING - Error processing product 4 for price change: float division by zero
+2025-08-25 13:38:40,596 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:38:40] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-25 13:38:41,989 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:38:41] "GET /api/listing/deep_1091991559707762 HTTP/1.1" 200 -
+2025-08-25 13:38:44,772 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:38:44] "GET /api/listing/deep_742097972041996 HTTP/1.1" 200 -
+2025-08-25 13:38:47,474 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:38:47] "GET /api/listing/deep_747957021357991 HTTP/1.1" 200 -
+2025-08-25 13:39:05,776 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:39:05] "GET / HTTP/1.1" 200 -
+2025-08-25 13:39:05,831 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:39:05] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-25 13:39:05,834 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:39:05] "GET /api/stats HTTP/1.1" 200 -
+2025-08-25 13:39:05,841 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:39:05] "GET /api/monitoring/status HTTP/1.1" 200 -
+2025-08-25 13:39:05,855 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:39:05] "GET /api/events HTTP/1.1" 200 -
+2025-08-25 13:39:05,888 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:39:05] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-25 13:39:05,889 - core.price_monitor - WARNING - Error processing product 2 for price change: float division by zero
+2025-08-25 13:39:05,891 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:39:05] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-25 13:39:07,744 - core.excel_manager - INFO - Excel file created successfully: ./data/excel_backups\marketplace_data_export_20250825_133907.xlsx
+2025-08-25 13:39:07,744 - core.excel_manager - INFO - Created export Excel file: ./data/excel_backups\marketplace_data_export_20250825_133907.xlsx
+2025-08-25 13:39:07,833 - core.excel_manager - INFO - Opened Excel file: C:\Users\PMLS\Desktop\fb-marketplace\data\excel_backups\marketplace_data_export_20250825_133907.xlsx
+2025-08-25 13:39:07,834 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:39:07] "POST /api/excel/export HTTP/1.1" 200 -
+2025-08-25 13:39:36,395 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:39:36] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-25 13:39:36,409 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:39:36] "GET /api/stats HTTP/1.1" 200 -
+2025-08-25 13:39:36,429 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:39:36] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-25 13:39:36,439 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:39:36] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-25 13:40:06,393 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:40:06] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-25 13:40:06,415 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:40:06] "GET /api/stats HTTP/1.1" 200 -
+2025-08-25 13:40:06,436 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:40:06] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-25 13:40:06,446 - core.price_monitor - WARNING - Error processing product 6 for price change: float division by zero
+2025-08-25 13:40:06,447 - core.price_monitor - WARNING - Error processing product 9 for price change: float division by zero
+2025-08-25 13:40:06,450 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:40:06] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-25 13:40:36,395 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:40:36] "GET /api/stats HTTP/1.1" 200 -
+2025-08-25 13:40:36,399 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:40:36] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-25 13:40:36,418 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:40:36] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-25 13:40:36,420 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:40:36] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-25 13:41:06,385 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:41:06] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-25 13:41:06,413 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:41:06] "GET /api/stats HTTP/1.1" 200 -
+2025-08-25 13:41:06,427 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:41:06] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-25 13:41:06,431 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:41:06] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-25 13:41:16,284 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:41:16] "GET / HTTP/1.1" 200 -
+2025-08-25 13:41:16,332 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:41:16] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-25 13:41:16,338 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:41:16] "GET /api/monitoring/status HTTP/1.1" 200 -
+2025-08-25 13:41:16,345 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:41:16] "GET /api/events HTTP/1.1" 200 -
+2025-08-25 13:41:16,393 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:41:16] "GET /api/stats HTTP/1.1" 200 -
+2025-08-25 13:41:16,405 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:41:16] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-25 13:41:16,416 - core.price_monitor - WARNING - Error processing product 1 for price change: float division by zero
+2025-08-25 13:41:16,417 - core.price_monitor - WARNING - Error processing product 4 for price change: float division by zero
+2025-08-25 13:41:16,418 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:41:16] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-25 13:41:22,624 - core.scheduler - INFO - Starting custom deep scraping job for: iphone 11
+2025-08-25 13:41:22,624 - core.scheduler - INFO - Starting custom scraping job for: iphone 11
+2025-08-25 13:41:22,644 - core.scraper - INFO - Starting deep scrape for: iphone 11 (max 10 products)
+2025-08-25 13:41:22,815 - WDM - INFO - ====== WebDriver manager ======
+2025-08-25 13:41:23,493 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-25 13:41:23,967 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-25 13:41:24,415 - WDM - INFO - Driver [C:\Users\PMLS\.wdm\drivers\chromedriver\win64\139.0.7258.138\chromedriver-win32/THIRD_PARTY_NOTICES.chromedriver] found in cache
+2025-08-25 13:41:24,424 - core.scraper - WARNING - webdriver-manager failed: [WinError 193] %1 is not a valid Win32 application, trying default Chrome setup
+2025-08-25 13:41:26,011 - core.scraper - INFO - Chrome WebDriver initialized successfully
+2025-08-25 13:41:26,012 - core.scraper - INFO - Starting Facebook login...
+2025-08-25 13:41:46,338 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:41:46] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-25 13:41:46,372 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:41:46] "GET /api/stats HTTP/1.1" 200 -
+2025-08-25 13:41:46,392 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:41:46] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-25 13:41:46,396 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:41:46] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-25 13:42:16,335 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:42:16] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-25 13:42:16,369 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:42:16] "GET /api/stats HTTP/1.1" 200 -
+2025-08-25 13:42:16,388 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:42:16] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-25 13:42:16,394 - core.price_monitor - WARNING - Error processing product 6 for price change: float division by zero
+2025-08-25 13:42:16,395 - core.price_monitor - WARNING - Error processing product 8 for price change: float division by zero
+2025-08-25 13:42:16,397 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:42:16] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-25 13:42:19,208 - core.scraper - INFO - Successfully logged in to Facebook
+2025-08-25 13:42:19,208 - core.scraper - INFO - Navigating to Facebook Marketplace with search: iphone 11
+2025-08-25 13:42:19,209 - core.scraper - INFO - Opening marketplace URL: https://www.facebook.com/marketplace
+2025-08-25 13:42:29,873 - core.scraper - INFO - Navigating to custom search: https://www.facebook.com/marketplace/sydney/search/?query=iphone%2011
+2025-08-25 13:42:45,105 - core.scraper - INFO - Successfully navigated to Marketplace with search: iphone 11
+2025-08-25 13:42:45,106 - core.scraper - INFO - Finding product cards for deep scraping...
+2025-08-25 13:42:46,333 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:42:46] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-25 13:42:46,354 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:42:46] "GET /api/stats HTTP/1.1" 200 -
+2025-08-25 13:42:46,383 - core.price_monitor - WARNING - Error processing product 1 for price change: float division by zero
+2025-08-25 13:42:46,386 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:42:46] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-25 13:42:46,393 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:42:46] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-25 13:42:48,134 - core.scraper - INFO - Found 16 marketplace item links
+2025-08-25 13:42:48,536 - core.scraper - INFO - Prepared 16 product cards for deep scraping
+2025-08-25 13:42:48,536 - core.scraper - INFO - Found 16 product cards, will deep scrape first 10
+2025-08-25 13:42:48,536 - core.scraper - INFO - Deep scraping product 1/10: AU$200
+iphone 11
+Sydney, NSW...
+2025-08-25 13:42:48,543 - core.scraper - INFO - Navigating to product page: AU$200
+iphone 11
+Sydney, NSW...
+2025-08-25 13:42:58,590 - core.scraper - INFO - Looking for 'See Details' button...
+2025-08-25 13:43:04,446 - core.scraper - INFO - Using profile link as 'See details' button
+2025-08-25 13:43:04,459 - core.scraper - INFO - Clicking 'See details' button: Seller details
+2025-08-25 13:43:16,330 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:43:16] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-25 13:43:16,359 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:43:16] "GET /api/stats HTTP/1.1" 200 -
+2025-08-25 13:43:16,385 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:43:16] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-25 13:43:16,388 - core.price_monitor - WARNING - Error processing product 4 for price change: float division by zero
+2025-08-25 13:43:16,389 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:43:16] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-25 13:43:46,338 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:43:46] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-25 13:43:46,364 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:43:46] "GET /api/stats HTTP/1.1" 200 -
+2025-08-25 13:43:46,393 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:43:46] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-25 13:43:46,399 - core.price_monitor - WARNING - Error processing product 2 for price change: float division by zero
+2025-08-25 13:43:46,402 - core.price_monitor - WARNING - Error processing product 7 for price change: float division by zero
+2025-08-25 13:43:46,406 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:43:46] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-25 13:43:49,696 - core.scraper - INFO - Navigated to new page, going back...
+2025-08-25 13:44:16,335 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:44:16] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-25 13:44:16,402 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:44:16] "GET /api/stats HTTP/1.1" 200 -
+2025-08-25 13:44:16,421 - core.price_monitor - WARNING - Error processing product 3 for price change: float division by zero
+2025-08-25 13:44:16,423 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:44:16] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-25 13:44:16,426 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:44:16] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-25 13:44:25,102 - core.scraper - INFO - Navigating back to search results...
+2025-08-25 13:44:30,139 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:44:30] "GET /api/stats HTTP/1.1" 200 -
+2025-08-25 13:44:30,151 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:44:30] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-25 13:44:33,820 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:44:33] "GET /api/listing/deep_2009941163075261 HTTP/1.1" 200 -
+2025-08-25 13:44:35,703 - core.scraper - INFO - Deep scraping product 2/10: AU$170
+iPhone 11 64gb
+Sydney, NSW...
+2025-08-25 13:44:35,730 - core.scraper - INFO - Navigating to product page: AU$170
+iPhone 11 64gb
+Sydney, NSW...
+2025-08-25 13:44:38,921 - core.excel_manager - INFO - Excel file created successfully: ./data/excel_backups\marketplace_data_export_20250825_134438.xlsx
+2025-08-25 13:44:38,921 - core.excel_manager - INFO - Created export Excel file: ./data/excel_backups\marketplace_data_export_20250825_134438.xlsx
+2025-08-25 13:44:39,012 - core.excel_manager - INFO - Opened Excel file: C:\Users\PMLS\Desktop\fb-marketplace\data\excel_backups\marketplace_data_export_20250825_134438.xlsx
+2025-08-25 13:44:39,013 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:44:39] "POST /api/excel/export HTTP/1.1" 200 -
+2025-08-25 13:44:45,215 - core.scraper - INFO - Looking for 'See Details' button...
+2025-08-25 13:44:46,400 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:44:46] "GET /api/stats HTTP/1.1" 200 -
+2025-08-25 13:44:46,404 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:44:46] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-25 13:44:46,439 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:44:46] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-25 13:44:46,443 - core.price_monitor - WARNING - Error processing product 5 for price change: float division by zero
+2025-08-25 13:44:46,450 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:44:46] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-25 13:45:16,327 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:45:16] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-25 13:45:16,389 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:45:16] "GET /api/stats HTTP/1.1" 200 -
+2025-08-25 13:45:16,439 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:45:16] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-25 13:45:16,444 - core.price_monitor - WARNING - Error processing product 2 for price change: float division by zero
+2025-08-25 13:45:16,450 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:45:16] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-25 13:45:21,211 - core.scraper - INFO - Using profile link as 'See details' button
+2025-08-25 13:45:21,301 - core.scraper - INFO - Clicking 'See details' button: Seller details
+2025-08-25 13:45:37,957 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:45:37] "GET /api/listing/deep_2009941163075261 HTTP/1.1" 200 -
+2025-08-25 13:45:46,343 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:45:46] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-25 13:45:46,345 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:45:46] "GET /api/stats HTTP/1.1" 200 -
+2025-08-25 13:45:46,378 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:45:46] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-25 13:45:46,427 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:45:46] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-25 13:45:46,770 - core.excel_manager - INFO - Excel file created successfully: ./data/excel_backups\marketplace_data_export_20250825_134546.xlsx
+2025-08-25 13:45:46,770 - core.excel_manager - INFO - Created export Excel file: ./data/excel_backups\marketplace_data_export_20250825_134546.xlsx
+2025-08-25 13:45:46,889 - core.excel_manager - INFO - Opened Excel file: C:\Users\PMLS\Desktop\fb-marketplace\data\excel_backups\marketplace_data_export_20250825_134546.xlsx
+2025-08-25 13:45:46,890 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:45:46] "POST /api/excel/export HTTP/1.1" 200 -
+2025-08-25 13:46:12,654 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002029F9B3ED0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/cb90e23ad92b3550b10581895de81faa/url

@@ -281,6 +281,49 @@ def create_app(settings):
             else:
                 formatted_listing['category'] = 'Other'
             
+            # Extract and format images for the frontend
+            images = []
+            
+            # First, try to get images from the main images array
+            if formatted_listing.get('images') and isinstance(formatted_listing['images'], list):
+                for img in formatted_listing['images']:
+                    if isinstance(img, dict) and img.get('url'):
+                        images.append(img['url'])
+                    elif isinstance(img, str):
+                        images.append(img)
+            
+            # Also try to get images from deep_data if available
+            deep_data = formatted_listing.get('deep_data', {})
+            if isinstance(deep_data, dict):
+                # Check comprehensive_product images
+                comp_product = deep_data.get('comprehensive_product', {})
+                if comp_product.get('images') and isinstance(comp_product['images'], list):
+                    for img in comp_product['images']:
+                        if isinstance(img, dict) and img.get('url'):
+                            url = img['url']
+                            if url not in images:  # Avoid duplicates
+                                images.append(url)
+                        elif isinstance(img, str) and img not in images:
+                            images.append(img)
+            
+            # Create deep_scraped_data JSON string for the frontend 
+            # (the frontend expects this format for image parsing)
+            if images:
+                formatted_listing['deep_scraped_data'] = json.dumps({
+                    'images': images,
+                    'product_details': product_details
+                })
+            
+            # Add description from multiple possible sources
+            if not formatted_listing.get('description'):
+                # Try to get description from deep_data
+                if deep_data.get('comprehensive_product', {}).get('description'):
+                    formatted_listing['description'] = deep_data['comprehensive_product']['description']
+            
+            # Add marketplace URL if available
+            if not formatted_listing.get('url') and formatted_listing.get('marketplace_url'):
+                formatted_listing['url'] = formatted_listing['marketplace_url']
+            
             return jsonify({
                 'success': True,
                 'data': formatted_listing

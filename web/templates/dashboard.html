@@ -1759,9 +1759,16 @@
                         const row = document.createElement('tr');
                         const createdAt = new Date(listing.created_at).toLocaleDateString();
                         
+                        // Safely escape title for HTML attributes and JavaScript
+                        const listingTitle = listing.title || 'N/A';
+                        const escapedTitle = listingTitle.replace(/"/g, '&quot;').replace(/'/g, '&#x27;');
+                        const listingId = listing.id || 'null';
+                        
+                        console.log('Creating button for listing:', { listingId, listingTitle });
+                        
                         row.innerHTML = `
                             <td>
-                                <div class="fw-bold truncate" style="max-width: 240px;" title="${listing.title || 'N/A'}">${listing.title || 'N/A'}</div>
+                                <div class="fw-bold truncate" style="max-width: 240px;" title="${escapedTitle}">${listingTitle}</div>
                                 ${listing.seller_name ? `<div class="text-xs text-muted">by ${listing.seller_name}</div>` : ''}
                             </td>
                             <td>
@@ -1771,7 +1778,7 @@
                             <td><span class="badge bg-secondary">${listing.category || 'other'}</span></td>
                             <td><span class="text-xs">${createdAt}</span></td>
                             <td>
-                                <button class="btn btn-sm btn-secondary" onclick="showListingDetails('${listing.id || 'null'}', '${(listing.title || '').replace(/'/g, "\\'").replace(/"/g, '\\"')}')" title="View details">
+                                <button class="btn btn-sm btn-secondary" data-listing-id="${listingId}" data-listing-title="${escapedTitle}" onclick="showListingDetailsById(this)" title="View details">
                                     <i class="bi bi-eye"></i>
                                 </button>
                             </td>
@@ -2568,12 +2575,19 @@
         });
         
         // Listing Details Modal Functions
+        function showListingDetailsById(buttonElement) {
+            const listingId = buttonElement.getAttribute('data-listing-id');
+            const listingTitle = buttonElement.getAttribute('data-listing-title');
+            console.log('👁️ showListingDetailsById called from button with:', { listingId, listingTitle });
+            showListingDetails(listingId, listingTitle);
+        }
+        
         async function showListingDetails(listingId, listingTitle) {
             console.log('👁️ showListingDetails called with:', { listingId, listingTitle });
             
             try {
-                if (listingId === null || listingId === 'null') {
-                    console.error('❌ Listing ID is null or "null"');
+                if (!listingId || listingId === null || listingId === 'null' || listingId === 'undefined') {
+                    console.error('❌ Listing ID is invalid:', listingId);
                     showNotification('Unable to show details - listing ID not available', 'warning');
                     return;
                 }
