@@ -731,6 +731,12 @@
             margin: 0 auto;
         }
         
+        /* Landscape layout for listing details modal */
+        .modal-dialog.modal-lg {
+            max-width: 900px;
+            width: 95%;
+        }
+        
         .modal-content {
             background: var(--white);
             border-radius: 0.75rem;
@@ -1331,7 +1337,7 @@
 
     <!-- Listing Details Modal -->
     <div class="modal" id="listing-details-modal">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="listing-details-title">Listing Details</h5>
@@ -2662,69 +2668,70 @@
                         `;
                     }
                     
-                    // Format the listing details
+                    // Format the listing details with 40% image / 60% details layout
                     const content = `
-                        ${imageHtml}
-                        
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label class="form-label"><i class="bi bi-tag"></i> Title</label>
-                                    <div class="fw-bold">${listing.title || 'N/A'}</div>
-                                </div>
-                                
-                                <div class="form-group">
-                                    <label class="form-label"><i class="bi bi-cash"></i> Price</label>
-                                    <div class="fw-bold">${listing.price_display || 'N/A'}</div>
-                                </div>
-                                
-                                <div class="form-group">
-                                    <label class="form-label"><i class="bi bi-geo-alt"></i> Location</label>
-                                    <div>${listing.seller_location || 'N/A'}</div>
-                                </div>
-                                
-                                <div class="form-group">
-                                    <label class="form-label"><i class="bi bi-folder"></i> Category</label>
-                                    <div><span class="badge bg-secondary">${listing.category || 'other'}</span></div>
-                                </div>
+                        <div class="row" style="margin: 0;">
+                            <!-- Left side: Images (40%) -->
+                            <div style="flex: 0 0 40%; max-width: 40%; padding-right: 1rem;">
+                                ${imageHtml}
                             </div>
                             
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label class="form-label"><i class="bi bi-person"></i> Seller</label>
-                                    <div>${listing.seller_name || 'N/A'}</div>
+                            <!-- Right side: Details (60%) -->
+                            <div style="flex: 0 0 60%; max-width: 60%; padding-left: 1rem;">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-label"><i class="bi bi-tag"></i> Title</label>
+                                            <div class="fw-bold">${listing.title || 'N/A'}</div>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label class="form-label"><i class="bi bi-cash"></i> Price</label>
+                                            <div class="fw-bold">${listing.price_display || 'N/A'}</div>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label class="form-label"><i class="bi bi-geo-alt"></i> Location</label>
+                                            <div>${listing.seller_location || 'N/A'}</div>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label class="form-label"><i class="bi bi-folder"></i> Category</label>
+                                            <div><span class="badge bg-secondary">${listing.category || 'other'}</span></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-label"><i class="bi bi-person"></i> Seller</label>
+                                            <div>${listing.seller_name || 'N/A'}</div>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label class="form-label"><i class="bi bi-calendar"></i> Date Posted</label>
+                                            <div>${listing.created_at ? new Date(listing.created_at).toLocaleString() : 'N/A'}</div>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label class="form-label"><i class="bi bi-clock"></i> Last Updated</label>
+                                            <div>${listing.updated_at ? new Date(listing.updated_at).toLocaleString() : 'N/A'}</div>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label class="form-label"><i class="bi bi-search"></i> Search Query</label>
+                                            <div><code>${listing.search_query || 'N/A'}</code></div>
+                                        </div>
+                                    </div>
                                 </div>
                                 
+                                ${listing.description ? `
                                 <div class="form-group">
-                                    <label class="form-label"><i class="bi bi-calendar"></i> Date Posted</label>
-                                    <div>${listing.created_at ? new Date(listing.created_at).toLocaleString() : 'N/A'}</div>
+                                    <label class="form-label"><i class="bi bi-text-paragraph"></i> Description</label>
+                                    <div class="text-sm" style="background: var(--gray-50); padding: 1rem; border-radius: 0.375rem; max-height: 200px; overflow-y: auto;">${listing.description}</div>
                                 </div>
-                                
-                                <div class="form-group">
-                                    <label class="form-label"><i class="bi bi-clock"></i> Last Updated</label>
-                                    <div>${listing.updated_at ? new Date(listing.updated_at).toLocaleString() : 'N/A'}</div>
-                                </div>
-                                
-                                <div class="form-group">
-                                    <label class="form-label"><i class="bi bi-search"></i> Search Query</label>
-                                    <div><code>${listing.search_query || 'N/A'}</code></div>
-                                </div>
+                                ` : ''}
                             </div>
                         </div>
-                        
-                        ${listing.description ? `
-                        <div class="form-group">
-                            <label class="form-label"><i class="bi bi-text-paragraph"></i> Description</label>
-                            <div class="text-sm" style="background: var(--gray-50); padding: 1rem; border-radius: 0.375rem; max-height: 200px; overflow-y: auto;">${listing.description}</div>
-                        </div>
-                        ` : ''}
-                        
-                        ${listing.url ? `
-                        <div class="form-group">
-                            <label class="form-label"><i class="bi bi-link"></i> Facebook URL</label>
-                            <div class="text-sm"><a href="${listing.url}" target="_blank" class="text-primary">${listing.url}</a></div>
-                        </div>
-                        ` : ''}
                     `;
                     
                     contentElement.innerHTML = content;

@@ -1,0 +1,128 @@
+{
+  "basic_info": {
+    "title": "AU$1,100\nIphone 16 (128GB) 8 Weeks Old\nSydney, NSW",
+    "url": "https://www.facebook.com/marketplace/item/788038106966491/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A1930bfd6-e9e3-413a-a961-f3b184626e2f&__tn__=!%3AD",
+    "extraction_timestamp": "2025-08-26T11:03:52.830627",
+    "page_title": "(9) Marketplace – Iphone 16 (128GB) 8 Weeks Old | Facebook",
+    "current_url": "https://www.facebook.com/marketplace/item/788038106966491/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A1930bfd6-e9e3-413a-a961-f3b184626e2f",
+    "price": {
+      "amount": "94",
+      "currency": "KR",
+      "raw_price_text": "94 kr"
+    },
+    "location": {
+      "city": "Within",
+      "distance": "51km",
+      "raw_location": "Within 51"
+    },
+    "product_id": "788038106966491"
+  },
+  "seller_details": {
+    "button_found": true,
+    "extraction_timestamp": "2025-08-26T11:04:06.483010",
+    "button_text": "Seller details",
+    "button_href": "https://www.facebook.com/marketplace/profile/100009097649627/?product_id=788038106966491"
+  },
+  "seller_metrics": {
+    "basic_info": {
+      "seller_name": "Seller details",
+      "profile_url": "https://www.facebook.com/marketplace/profile/100009097649627/?product_id=788038106966491"
+    }
+  },
+  "product_comprehensive": {
+    "model_name": "iPhone 16",
+    "storage": "128 GB",
+    "color": "Black",
+    "condition": "like_new",
+    "images": [
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t39.30808-1/348275887_914205606302972_2180412001916335337_n.png?stp=dst-png_s100x100&_nc_cat=1&ccb=1-7&_nc_sid=11a88f&_nc_ohc=xCVlsvZhlygQ7kNvwGKwU-4&_nc_oc=Adn4kTBbbjQPxz6U1cPN3za9pdCNcPdi2Rs6CI3qUX7Uxi6STZVaZrCBRuc__aZKsQ8&_nc_ad=z-m&_nc_cid=0&_nc_zt=24&_nc_ht=scontent.fisb17-1.fna&_nc_gid=w1lCCwWPDF1h920eIA0amQ&oh=00_AfWOlz2p89VwxrOfJIxiKwBxmXALJ9cZG2VPEjCP_7k9vg&oe=68B33962",
+        "alt_text": "",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/533028482_1848956849016248_4680054367786574573_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=247b10&_nc_ohc=NCOTVcglVIsQ7kNvwGrbDH4&_nc_oc=AdnpbgnT-FlAFs-gX74QXBifWyVzlJieJMyJ4qnhwqyfhHuKd7gQgLd_x0eO6-dWdug&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=eZUuO_tZluJEBw7ZcBhXzQ&oh=00_AfU__6Mrb9kXnED44jiJR2YJOP-8Pk2Dd2haS-7aqL4qww&oe=68B3195F",
+        "alt_text": "",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/533028482_1848956849016248_4680054367786574573_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=247b10&_nc_ohc=NCOTVcglVIsQ7kNvwGrbDH4&_nc_oc=AdnpbgnT-FlAFs-gX74QXBifWyVzlJieJMyJ4qnhwqyfhHuKd7gQgLd_x0eO6-dWdug&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=eZUuO_tZluJEBw7ZcBhXzQ&oh=00_AfU__6Mrb9kXnED44jiJR2YJOP-8Pk2Dd2haS-7aqL4qww&oe=68B3195F",
+        "alt_text": "Product photo of Iphone 16 (128GB) 8 Weeks Old",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/533028482_1848956849016248_4680054367786574573_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=247b10&_nc_ohc=NCOTVcglVIsQ7kNvwGrbDH4&_nc_oc=AdnpbgnT-FlAFs-gX74QXBifWyVzlJieJMyJ4qnhwqyfhHuKd7gQgLd_x0eO6-dWdug&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=eZUuO_tZluJEBw7ZcBhXzQ&oh=00_AfU__6Mrb9kXnED44jiJR2YJOP-8Pk2Dd2haS-7aqL4qww&oe=68B3195F",
+        "alt_text": "Product photo of Iphone 16 (128GB) 8 Weeks Old",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/534940001_801447702314941_1087377858271252308_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_ohc=QlIycY34aEEQ7kNvwF1fmCB&_nc_oc=AdnC-igsT3AFqBDV36jUyInqD1kz-CZRWAIGO53mmJi4itc2irMVsIlUX6hKrb-Rw_k&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=eZUuO_tZluJEBw7ZcBhXzQ&oh=00_AfXj8t0FVElhjMrXwpc7n__NV3HG4LkGrIjDlNP23Uvu2A&oe=68B33C6E",
+        "alt_text": "Product photo of Iphone 16 (128GB) 8 Weeks Old",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/532913874_1979666962842488_8058477916635858598_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=3220SnfuURYQ7kNvwGBTE8C&_nc_oc=AdkYcSR2eNxTYJHEnKORHmfWr1qqn8KHwrwFXop3Yr5u6RgguWD_J5l2e9zYQmhoUFs&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=eZUuO_tZluJEBw7ZcBhXzQ&oh=00_AfVCzGMFRw-QWIy_ADPOaRw2XPWGVoXXfe9hQFh32mtYyg&oe=68B3399C",
+        "alt_text": "Product photo of Iphone 16 (128GB) 8 Weeks Old",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/532110418_1822947601906526_5337326361352278098_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=247b10&_nc_ohc=cLJC9eGuR_8Q7kNvwHnjRdC&_nc_oc=AdlecUO8wVCzZIIuehzkl_PVOWgOI8pT5uPYE3otZSLBBWpht5J_u2CESNgrelaInOk&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=eZUuO_tZluJEBw7ZcBhXzQ&oh=00_AfXyrpscJfE4-gSkQp5O2cUjAMUxPvfWmoN62sEoSxnCRQ&oe=68B323CA",
+        "alt_text": "Product photo of Iphone 16 (128GB) 8 Weeks Old",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/532952642_744502448387661_4786302987540861794_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=247b10&_nc_ohc=j44Qn_ylUqQQ7kNvwFcW-VS&_nc_oc=AdlXypIIA2woUpVh8cH-T7MSz8h0LzmCyl8XCvw5YSXr5IGASnpVoX_Z7_-cNL4JE_Q&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=eZUuO_tZluJEBw7ZcBhXzQ&oh=00_AfUHi93efy-5GG2mtbOgv-x3-qr3OLjUyUtCw3oa6nrscw&oe=68B30C82",
+        "alt_text": "Product photo of Iphone 16 (128GB) 8 Weeks Old",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/533024540_765740962527598_8031385790533350775_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=91wWfpUe7fQQ7kNvwFX-8ul&_nc_oc=AdldrYfxkFvQu0xZoxQUXfDMz4eP5AMq4MQxqxVJ9UpG4jWgGGs2rkPD26eoGbMLXJA&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=eZUuO_tZluJEBw7ZcBhXzQ&oh=00_AfWWvnLVmuLtSErV7nOF7A54f9fg4a6-u8xGoU3dbZHviw&oe=68B32CC1",
+        "alt_text": "Product photo of Iphone 16 (128GB) 8 Weeks Old",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.1600-4/508816719_1983797595361107_3308171668594923101_n.jpg?stp=cp0_dst-jpg_q75_s960x960_spS444_tt6&_nc_cat=1&ccb=1-7&_nc_sid=c02adf&_nc_ohc=6vzJwpOvfkkQ7kNvwH2z8my&_nc_oc=AdkTSF8hutivgoexchxj2VlS_06LMLwgU-wio5PFLVkSTXVyRjB-Q2SXvZd3yrOAsCU&_nc_zt=1&_nc_ht=scontent.fisb17-1.fna&_nc_gid=eZUuO_tZluJEBw7ZcBhXzQ&oh=00_AfUSKXXaj0SG12VMMvzZV5ZJCFzdYgdBiOFIY3jIpsnxgw&oe=68B30A2F",
+        "alt_text": "",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t15.13418-10/460484620_551238064088406_2819323557483391130_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=101&ccb=1-7&_nc_sid=ace027&_nc_ohc=fRmSH1GUE9AQ7kNvwGaFBM2&_nc_oc=AdlZvgCMB8wziQ2lTKpMquNU_rRnUvcg-3geXH3qwQDbYaiiCmlFJZJeEju1xJFgtzY&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=eZUuO_tZluJEBw7ZcBhXzQ&oh=00_AfXg7IbqNZT6LZD16z_3G9rnVvDpBX6UggNEViwB9ehC0Q&oe=68B30D08",
+        "alt_text": "",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/513938494_2644603382408771_5360708048300607702_n.jpg?stp=c0.6.261.261a_dst-jpg_p261x260_tt6&_nc_cat=106&ccb=1-7&_nc_sid=247b10&_nc_ohc=1Idym9WtQG0Q7kNvwH8Jus5&_nc_oc=AdnAo5-BnWI9CenlQxY-nv7RLSyOX1LoXTUrrA1rF-R1BPv-3baxqQuf1wIIpZVDBfg&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=BZxUFFie5WVscB8sMgGPtw&oh=00_AfV3QRFaGkKWnSztVvdwTp94oM_cpWz5bN8UsnHO-ollyg&oe=68B32389",
+        "alt_text": "Nike Giannis antetokounmpo basketball tracksuit set in Sydney, NSW",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/532910363_655258827056060_9117410234824860383_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=101&ccb=1-7&_nc_sid=247b10&_nc_ohc=aFNgiqqKUUAQ7kNvwGoK-Cx&_nc_oc=AdmBJclkRpTMx0WJyOGL20pqA1NpxJpXP0Z47X0pmblOmrse4xPWz3QuYPULU5HZJv8&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=BZxUFFie5WVscB8sMgGPtw&oh=00_AfXKMEooqJ6hB3fyjR98RTW8HqQC-8gh1-Y-sBnCIpobsQ&oe=68B30613",
+        "alt_text": "Free fridge in Sydney, NSW",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/534920481_1140186284626670_5418485390996520888_n.jpg?stp=c43.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=111&ccb=1-7&_nc_sid=247b10&_nc_ohc=-WRlKTFRdE8Q7kNvwF5DBa9&_nc_oc=AdkJsXJxycrp6GQjskUsJ5FfdmlgNX_WAPydkDt4WYMzBSH90s5ZBHnDenaRexd97oY&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=BZxUFFie5WVscB8sMgGPtw&oh=00_AfWu_q18Wj9dwRPHeSgK3q1MnS5Vc-7ak44WcKacRq6ndA&oe=68B31FA9",
+        "alt_text": "Magic keyboard for 11 inch iPad m4 in Sydney, NSW",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/533638873_1444013960186419_8481958849306012099_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=108&ccb=1-7&_nc_sid=247b10&_nc_ohc=pDudJmgMnzgQ7kNvwFDX72d&_nc_oc=AdnZAtHaM7hJ_prLEwqOkV2tnBC4M-psoSi6fT6NwJFAsOx5EIVO4l9Wx7wdXUE7IjM&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=BZxUFFie5WVscB8sMgGPtw&oh=00_AfVtEkA-Xsh2tbkA-DSSu8UpceZua0zuTBObNdjHIX-yPQ&oe=68B32244",
+        "alt_text": "Lafufu in Sydney, NSW",
+        "type": "product_image"
+      }
+    ],
+    "description": "Iphone 16 (128GB) 8 Weeks Old\n\nAU$1,100\n  · In stock\n\nListed in Sydney, NSW"
+  },
+  "marketplace_metadata": {
+    "fb_listing_id": "788038106966491",
+    "is_sold": true,
+    "timing": {
+      "posted_time": "2 hours"
+    }
+  },
+  "extraction_metadata": {
+    "method": "deep_scraper",
+    "product_index": 2,
+    "data_quality": "comprehensive"
+  }
+}

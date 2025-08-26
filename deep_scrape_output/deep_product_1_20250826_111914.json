@@ -1,0 +1,129 @@
+{
+  "basic_info": {
+    "title": "AU$150\niPhone 8 256 GB\nSydney, NSW",
+    "url": "https://www.facebook.com/marketplace/item/3973126712950783/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Aae767dfc-9c86-42fe-84d9-1356d1773225&__tn__=!%3AD",
+    "extraction_timestamp": "2025-08-26T11:17:36.289323",
+    "page_title": "(9) Marketplace – iPhone 8 256 GB | Facebook",
+    "current_url": "https://www.facebook.com/marketplace/item/3973126712950783/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Aae767dfc-9c86-42fe-84d9-1356d1773225",
+    "price": {
+      "amount": "00",
+      "currency": "KR",
+      "raw_price_text": "kr 00"
+    },
+    "location": {
+      "city": "Within",
+      "distance": "51km",
+      "raw_location": "Within 51"
+    },
+    "product_id": "3973126712950783"
+  },
+  "seller_details": {
+    "button_found": true,
+    "extraction_timestamp": "2025-08-26T11:17:48.505422",
+    "button_text": "Seller details",
+    "button_href": "https://www.facebook.com/marketplace/profile/100005723165203/?product_id=3973126712950783",
+    "join_date": "joined facebook in 2013"
+  },
+  "seller_metrics": {
+    "basic_info": {
+      "seller_name": "Seller details",
+      "profile_url": "https://www.facebook.com/marketplace/profile/100005723165203/?product_id=3973126712950783"
+    }
+  },
+  "product_comprehensive": {
+    "model_name": "iPhone 8",
+    "storage": "256 GB",
+    "color": "Black",
+    "condition": "new_in_box",
+    "images": [
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t39.30808-1/348275887_914205606302972_2180412001916335337_n.png?stp=dst-png_s100x100&_nc_cat=1&ccb=1-7&_nc_sid=11a88f&_nc_ohc=xCVlsvZhlygQ7kNvwGKwU-4&_nc_oc=Adn4kTBbbjQPxz6U1cPN3za9pdCNcPdi2Rs6CI3qUX7Uxi6STZVaZrCBRuc__aZKsQ8&_nc_ad=z-m&_nc_cid=0&_nc_zt=24&_nc_ht=scontent.fisb17-1.fna&_nc_gid=lBjLxbCS694iHIoZJbmdog&oh=00_AfWWwtHEsAeRwch5k1UvwaR1BjLOb_LGyfftWaqd4Ms-QQ&oe=68B33962",
+        "alt_text": "",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/533072983_679005501880018_3150484884396230017_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=111&ccb=1-7&_nc_sid=247b10&_nc_ohc=I7LPFFQZWf8Q7kNvwGLZQWD&_nc_oc=Adkk42SKIPxH86bOv_kvy91zIednzM14aNVhrbinM7xs12DuxXkY7eM56eLJMLdAJ6U&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=OpG55A52HxqIKDmecZuXOg&oh=00_AfVzxeGbY8qMm68W77R9GFsiqNpHNsgEDxIbAkyWpJG-sg&oe=68B325BC",
+        "alt_text": "",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/533072983_679005501880018_3150484884396230017_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=111&ccb=1-7&_nc_sid=247b10&_nc_ohc=I7LPFFQZWf8Q7kNvwGLZQWD&_nc_oc=Adkk42SKIPxH86bOv_kvy91zIednzM14aNVhrbinM7xs12DuxXkY7eM56eLJMLdAJ6U&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=OpG55A52HxqIKDmecZuXOg&oh=00_AfVzxeGbY8qMm68W77R9GFsiqNpHNsgEDxIbAkyWpJG-sg&oe=68B325BC",
+        "alt_text": "Product photo of iPhone 8 256 GB",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/533072983_679005501880018_3150484884396230017_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=111&ccb=1-7&_nc_sid=247b10&_nc_ohc=I7LPFFQZWf8Q7kNvwGLZQWD&_nc_oc=Adkk42SKIPxH86bOv_kvy91zIednzM14aNVhrbinM7xs12DuxXkY7eM56eLJMLdAJ6U&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=OpG55A52HxqIKDmecZuXOg&oh=00_AfVzxeGbY8qMm68W77R9GFsiqNpHNsgEDxIbAkyWpJG-sg&oe=68B325BC",
+        "alt_text": "Product photo of iPhone 8 256 GB",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/534501586_848411681032738_8801999167336364801_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=111&ccb=1-7&_nc_sid=247b10&_nc_ohc=qa5uaxynJLkQ7kNvwFyXBZi&_nc_oc=AdkAKtPLUULBu8FlVl2ShJsy6r3xWZP24_OC0dJ_WjOx4dvXYMB3sSPu0GF3jd0c53A&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=OpG55A52HxqIKDmecZuXOg&oh=00_AfU7Xy1iIZq01v4_ejWb6WINH6v9UfBqskRbJlLHXBuU5A&oe=68B325F4",
+        "alt_text": "Product photo of iPhone 8 256 GB",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t15.13418-10/503986165_1242181774308611_4247738044222135562_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=109&ccb=1-7&_nc_sid=ace027&_nc_ohc=FVzxrFmzqEEQ7kNvwG404FH&_nc_oc=AdnPVJWQIsVDxmR9uajksf9qLFSJQnHnCXATswmqbOdQwzwIt8_-TkcUrv5Yg3qtca0&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=OpG55A52HxqIKDmecZuXOg&oh=00_AfVl6-8_lvttuhvq11Hn7CMiOg81uy5BZLFPvj0goHPwzQ&oe=68B33066",
+        "alt_text": "",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t15.5256-10/532188641_1489709022444410_6960682116019006648_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=102&ccb=1-7&_nc_sid=282d23&_nc_ohc=hzK4Fl-EWmsQ7kNvwEp9Rhw&_nc_oc=Adlih0mcpk_NEi4f79tyZPen2D4L4lgtkGs5IDr5iJyejt9pZLU2Oy98Obc863YpRpo&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=OpG55A52HxqIKDmecZuXOg&oh=00_AfVNaS4N2T91GXHCR1AHnlaEl3q5vGr_W4GX-mBGQr19qw&oe=68B33B24",
+        "alt_text": "",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/530686447_3918036218508542_7791925309898763659_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=111&ccb=1-7&_nc_sid=247b10&_nc_ohc=6UbDlUZA1rAQ7kNvwGwktz4&_nc_oc=Adm-BlSDdjo27EWZfth5Wbu9_dQkACWG9r4rO3rkMqBI0IwJeJs3pn2FNzbaahpqmr4&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=NQsb980nkXhqCkX3t5bejA&oh=00_AfWv199ZA2iUaOhcsYHGVGHK646HJfQBNzpyZZXzRxakCg&oe=68B32252",
+        "alt_text": "iPhone 16 128GB brand new , sealed in Sydney, NSW",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/462930536_3841135216207906_6770635008940520716_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=103&ccb=1-7&_nc_sid=247b10&_nc_ohc=2yf7AVhrEVwQ7kNvwG1VcI7&_nc_oc=Adl3w44pkBrrEwBio5-IgrDPI2Ah0oOpSeRUKyPS6xQl7dsws2UaLxM5jK_xo2TQ2fA&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=NQsb980nkXhqCkX3t5bejA&oh=00_AfVcVlfNDDQfblPS4DZ28Lmphk6ZCtV52CUppPQ_LsrhMA&oe=68B315CA",
+        "alt_text": "As new Oppo A54 -5g 64 gb LIMITED STOCK in Sydney, NSW",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/532934943_650096930949971_6450439473731711990_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=104&ccb=1-7&_nc_sid=247b10&_nc_ohc=-A4KC2R7DEYQ7kNvwFQf4Sh&_nc_oc=AdmhSHs6_K2orRuNi0lNAr_2c9f0hN2iAtU8tZyVkCi2r10erWm-t_wgrZDwMfGkxUc&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=NQsb980nkXhqCkX3t5bejA&oh=00_AfW1BcEqKYSK6sN-dwsJ4PDpl-dA2kgibu1MvQWclC5xuw&oe=68B3252E",
+        "alt_text": "iPad (A16) Wi-Fi 128GB- Silver in Sydney, NSW",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/531676889_740430828783310_614436164976198902_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=102&ccb=1-7&_nc_sid=247b10&_nc_ohc=FBiprlXyhywQ7kNvwFWL0tT&_nc_oc=AdnkuH7a2tzF_EjvtbukMyD81uSH-cBOdpsYBIg5jVJu2YDiKjgzFmUk6FbtsIYK7OA&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=NQsb980nkXhqCkX3t5bejA&oh=00_AfWLPOUjz0OFG_RD6SfzRIlUREpt2vLVL8GOjaxbb_KowA&oe=68B336FF",
+        "alt_text": "iPhone 16 in Sydney, NSW",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/532552042_1392661939526685_1380781754178732822_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=103&ccb=1-7&_nc_sid=247b10&_nc_ohc=FTeVRRklDXkQ7kNvwE_i-A7&_nc_oc=Adn4Oh5KYLroDZXa98O8Um5Uc4SO_EKdUxSz9D0ooC3hZRgMoi9GRw-e56zKpBqymyY&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=NQsb980nkXhqCkX3t5bejA&oh=00_AfUpGyNGcSq1FaR_l5vmIDiM3_DMAk_FzOFG6CUY3BbDsw&oe=68B32CDD",
+        "alt_text": "Samsung Galaxy S24 FE – 256GB in Sydney, NSW",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/533650091_1939831436848982_2222622735048486484_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=104&ccb=1-7&_nc_sid=247b10&_nc_ohc=KDktZVsnjR4Q7kNvwHqpkE_&_nc_oc=AdkRe9o6siW8DbXVpXdzGZRkAnfPTPz2xXRadEJovB9GU2O13WQHhcZekO62xw0RR7w&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=NQsb980nkXhqCkX3t5bejA&oh=00_AfWphDLB8feFC5oLcN1Fa3jLkQb8-yu227qpFMx_G1ue3g&oe=68B30AA0",
+        "alt_text": "iPhone 16e 512GB black in Sydney, NSW",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/535434109_770281522057793_5095580392113442360_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=109&ccb=1-7&_nc_sid=247b10&_nc_ohc=_u3rpehW3_8Q7kNvwHtQ7CC&_nc_oc=Adk01UBoGfcuTJ3z8zNfEwmspvDbWWqnw6CSDG9jQhO0bpzjm1oxY-vSmD78YURzhuY&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=NQsb980nkXhqCkX3t5bejA&oh=00_AfWW0J4c3_QhZ74NIO9w8PECOl-0yc0UPFhSKfHAxFZI9Q&oe=68B324C5",
+        "alt_text": "iPhone 14 – 99% Battery Health in Central Coast, NSW",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/533079800_726787703527072_20735065391713317_n.jpg?stp=c0.23.261.261a_dst-jpg_p261x260_tt6&_nc_cat=110&ccb=1-7&_nc_sid=247b10&_nc_ohc=GfbyQaPNr80Q7kNvwE8GT4H&_nc_oc=AdnQ-tjEguVhYp8KZQRpaUF7vrSxfK8jKqx15Allb2rYOzpGYbHzMRk2HvuNcy53ZYk&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=NQsb980nkXhqCkX3t5bejA&oh=00_AfWvF2ByHXlBUxg2KeYV9MpqKTGexfs46mGvuxej7NGpXw&oe=68B312BC",
+        "alt_text": "Bunnings hoodie in Sydney, NSW",
+        "type": "product_image"
+      }
+    ],
+    "description": "Listed 2 hours ago in Sydney, NSW\n\nSelling iPhone 8 256 GB in great condition. I upgraded so no longer use this.\n\nLocation is approximate"
+  },
+  "marketplace_metadata": {
+    "fb_listing_id": "3973126712950783",
+    "is_sold": true,
+    "timing": {
+      "posted_time": "2 hours"
+    }
+  },
+  "extraction_metadata": {
+    "method": "deep_scraper",
+    "product_index": 1,
+    "data_quality": "comprehensive"
+  }
+}

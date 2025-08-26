@@ -1,0 +1,129 @@
+{
+  "basic_info": {
+    "title": "AU$1,200\niPhone 16\nSydney, NSW",
+    "url": "https://www.facebook.com/marketplace/item/791982119882991/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A1930bfd6-e9e3-413a-a961-f3b184626e2f&__tn__=!%3AD",
+    "extraction_timestamp": "2025-08-26T11:01:54.800314",
+    "page_title": "(9) Marketplace – iPhone 16 | Facebook",
+    "current_url": "https://www.facebook.com/marketplace/item/791982119882991/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A1930bfd6-e9e3-413a-a961-f3b184626e2f",
+    "price": {
+      "amount": "0",
+      "currency": "SEK",
+      "raw_price_text": "Not found"
+    },
+    "location": {
+      "city": "Within",
+      "distance": "51km",
+      "raw_location": "Within 51"
+    },
+    "product_id": "791982119882991"
+  },
+  "seller_details": {
+    "button_found": true,
+    "extraction_timestamp": "2025-08-26T11:02:09.332776",
+    "button_text": "Seller details",
+    "button_href": "https://www.facebook.com/marketplace/profile/61575949376733/?product_id=791982119882991",
+    "join_date": "joined facebook in 2025"
+  },
+  "seller_metrics": {
+    "basic_info": {
+      "seller_name": "Seller details",
+      "profile_url": "https://www.facebook.com/marketplace/profile/61575949376733/?product_id=791982119882991"
+    }
+  },
+  "product_comprehensive": {
+    "model_name": "iPhone 16",
+    "storage": "29 TB",
+    "color": "Black",
+    "condition": "like_new",
+    "images": [
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t39.30808-1/348275887_914205606302972_2180412001916335337_n.png?stp=dst-png_s100x100&_nc_cat=1&ccb=1-7&_nc_sid=11a88f&_nc_ohc=xCVlsvZhlygQ7kNvwGKwU-4&_nc_oc=Adn4kTBbbjQPxz6U1cPN3za9pdCNcPdi2Rs6CI3qUX7Uxi6STZVaZrCBRuc__aZKsQ8&_nc_ad=z-m&_nc_cid=0&_nc_zt=24&_nc_ht=scontent.fisb17-1.fna&_nc_gid=pKQCtNJKKgoA0CV5WSwrLQ&oh=00_AfWjTkj85PqzpIqodSpfaR2xdKU2NUPZVKN5-CZlGnBu4g&oe=68B33962",
+        "alt_text": "",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/532956461_706779872361145_3969930080335545590_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=101&ccb=1-7&_nc_sid=247b10&_nc_ohc=sZKZKdGFx74Q7kNvwFWy8Z9&_nc_oc=AdkBo1vssc8uP6UgyKucygyaaJ1EroNqp0vDVsn7nfqMEmA_BpyO3GjsIGbGrdxty5E&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=0F-sRl_y4fJa7Dj9Jse2sw&oh=00_AfUA40BcnUkiTSKmXVwyL25e_Nkmq2PmiRMOOC1mD5eG_A&oe=68B31A17",
+        "alt_text": "",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/532956461_706779872361145_3969930080335545590_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=101&ccb=1-7&_nc_sid=247b10&_nc_ohc=sZKZKdGFx74Q7kNvwFWy8Z9&_nc_oc=AdkBo1vssc8uP6UgyKucygyaaJ1EroNqp0vDVsn7nfqMEmA_BpyO3GjsIGbGrdxty5E&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=0F-sRl_y4fJa7Dj9Jse2sw&oh=00_AfUA40BcnUkiTSKmXVwyL25e_Nkmq2PmiRMOOC1mD5eG_A&oe=68B31A17",
+        "alt_text": "Product photo of iPhone 16",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/532956461_706779872361145_3969930080335545590_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=101&ccb=1-7&_nc_sid=247b10&_nc_ohc=sZKZKdGFx74Q7kNvwFWy8Z9&_nc_oc=AdkBo1vssc8uP6UgyKucygyaaJ1EroNqp0vDVsn7nfqMEmA_BpyO3GjsIGbGrdxty5E&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=0F-sRl_y4fJa7Dj9Jse2sw&oh=00_AfUA40BcnUkiTSKmXVwyL25e_Nkmq2PmiRMOOC1mD5eG_A&oe=68B31A17",
+        "alt_text": "Product photo of iPhone 16",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/532993308_1076881574514833_6565470659821024669_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=103&ccb=1-7&_nc_sid=247b10&_nc_ohc=Ed5pGvFncXkQ7kNvwEYxPT6&_nc_oc=Adkh_tORhBisYynJxePjrScmLWSzce3QdX5IKVbHkBC6c38XbLzKUmtat5AhL5OwjcY&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=0F-sRl_y4fJa7Dj9Jse2sw&oh=00_AfV5WlL2cICXaOdVXxLsLxlUGBMdsZVRxc8oCGhBJwPc8w&oe=68B3189C",
+        "alt_text": "Product photo of iPhone 16",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/532470657_1287810353124179_8842914140489050195_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_ohc=0ZmtO3y99UcQ7kNvwFssQ2R&_nc_oc=AdnQRb1NMq7Bs74hPfGA-wRmIht8-dGb-BjvHyRcGWQH5-Z0xSbapr5SHVRCXuAae1Y&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=0F-sRl_y4fJa7Dj9Jse2sw&oh=00_AfXhmG_spXQG3jwYt8KKSqVqpfmcOuT5ceuFQ5nZG7kV8Q&oe=68B3090C",
+        "alt_text": "Product photo of iPhone 16",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.1600-4/529386982_1929182027927969_170712721263629605_n.jpg?stp=cp0_dst-jpg_q75_s960x960_spS444_tt6&_nc_cat=1&ccb=1-7&_nc_sid=c02adf&_nc_ohc=2F2eQZeK-y4Q7kNvwHyYPe0&_nc_oc=Adkc2KKatWUbF-auP1vMf4lwyDnV_jeqfK2UTneeoqEy5Uc9ODGTjSE9syilOSO9yck&_nc_zt=1&_nc_ht=scontent.fisb17-1.fna&_nc_gid=ysvuL2Hh4rpfbT4NcMvaKg&oh=00_AfVgo6v1Kq11nMYU72HLQ0MeZVVLBVgw7oQV0ixIb9IuOQ&oe=68B33369",
+        "alt_text": "",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.1600-4/524899811_1414456396505527_5330951017829452927_n.jpg?stp=cp0_dst-jpg_p75x225_q75_spS444_tt6&_nc_cat=1&ccb=1-7&_nc_sid=c02adf&_nc_ohc=s25srtXST8cQ7kNvwFfePJ9&_nc_oc=AdkAGD0DZ1ehKegNb05N8eRPP8xeZWBz6ifUFa5HSeayNKUZ_s0zmiVveImCjuD7iHw&_nc_zt=1&_nc_ht=scontent.fisb17-1.fna&_nc_gid=0F-sRl_y4fJa7Dj9Jse2sw&oh=00_AfXLLI5zxWWpKUfyGLtm31IMvtFaTgHBcrcD2OdHAQweWQ&oe=68B3204F",
+        "alt_text": "",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.1600-4/525437140_645418261324533_3562135159386585180_n.jpg?stp=cp0_dst-jpg_p75x225_q75_spS444_tt6&_nc_cat=105&ccb=1-7&_nc_sid=c02adf&_nc_ohc=QL8FJowl03IQ7kNvwEyMkwS&_nc_oc=Adnz8C4z9w3rKpESiAQIqtnCBjszjgD3uO1--n7DQshYnGpGT4Ad-o-cp63YYSfLGa0&_nc_zt=1&_nc_ht=scontent.fisb1-2.fna&_nc_gid=0F-sRl_y4fJa7Dj9Jse2sw&oh=00_AfViEaiEG4SWQo_WdBi7pJJYlJ4vIWLxnjg5t6YMRZXV5g&oe=68B31415",
+        "alt_text": "",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.1600-4/524924072_2150364308798027_4105897915682034589_n.jpg?stp=cp0_dst-jpg_p75x225_q75_spS444_tt6&_nc_cat=107&ccb=1-7&_nc_sid=c02adf&_nc_ohc=KfTNR6J6q_4Q7kNvwGvNbbH&_nc_oc=AdlAibBUVJR2RAt-BmTUMMiW156qWRRXJjStMT-kZqLkDqvPUIW5cGvUh2DdWO5Brz4&_nc_zt=1&_nc_ht=scontent.fisb17-1.fna&_nc_gid=0F-sRl_y4fJa7Dj9Jse2sw&oh=00_AfXBuH6EL7SdvswK72BEDYByIOJSsTr4ad5RBClILf-jIw&oe=68B3149B",
+        "alt_text": "",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.1600-4/524903684_1246268650288265_6400770334147783495_n.jpg?stp=cp0_dst-jpg_p75x225_q75_spS444_tt6&_nc_cat=108&ccb=1-7&_nc_sid=c02adf&_nc_ohc=MH4tlqDiJfsQ7kNvwFXcxc8&_nc_oc=AdnTBV2kqN5hABuXr7ncFDR2VwxAgHW2XaVhYapKAtEElrT4yAQsG8S1ufgu6DNymQ0&_nc_zt=1&_nc_ht=scontent.fisb1-2.fna&_nc_gid=0F-sRl_y4fJa7Dj9Jse2sw&oh=00_AfU2tvh8_UWwTB1dM0NhMRDAKCNzOBFaVOggFSo7wu16Xg&oe=68B33278",
+        "alt_text": "",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.1600-4/525384323_1089448483251861_3457067135995861239_n.jpg?stp=cp0_dst-jpg_p75x225_q75_spS444_tt6&_nc_cat=108&ccb=1-7&_nc_sid=c02adf&_nc_ohc=gbdDKY_xgowQ7kNvwGM-ses&_nc_oc=AdkJofHBEWJgPWB00RFBVNF2f24JkB7_wfStKKrjCuvtQE6qxx0Xp50azYTAVrCCt50&_nc_zt=1&_nc_ht=scontent.fisb1-2.fna&_nc_gid=0F-sRl_y4fJa7Dj9Jse2sw&oh=00_AfUeYEtgmKKXQ7j_KpVPaAdimJP5aB1LEp4DgeimOFyeqA&oe=68B31554",
+        "alt_text": "",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/513938494_2644603382408771_5360708048300607702_n.jpg?stp=c0.6.261.261a_dst-jpg_p261x260_tt6&_nc_cat=106&ccb=1-7&_nc_sid=247b10&_nc_ohc=1Idym9WtQG0Q7kNvwH8Jus5&_nc_oc=AdnAo5-BnWI9CenlQxY-nv7RLSyOX1LoXTUrrA1rF-R1BPv-3baxqQuf1wIIpZVDBfg&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=ysvuL2Hh4rpfbT4NcMvaKg&oh=00_AfWVWB6dbom1gDi4BzrvbDG9GnH5sKgkOlumZgFbVyRSdg&oe=68B32389",
+        "alt_text": "Nike Giannis antetokounmpo basketball tracksuit set in Sydney, NSW",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/532910363_655258827056060_9117410234824860383_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=101&ccb=1-7&_nc_sid=247b10&_nc_ohc=aFNgiqqKUUAQ7kNvwGoK-Cx&_nc_oc=AdmBJclkRpTMx0WJyOGL20pqA1NpxJpXP0Z47X0pmblOmrse4xPWz3QuYPULU5HZJv8&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=ysvuL2Hh4rpfbT4NcMvaKg&oh=00_AfX16T2yRxkT1uLqjYPPD_ZAvaBFS__kTpYJEGQP8JAfBg&oe=68B30613",
+        "alt_text": "Free fridge in Sydney, NSW",
+        "type": "product_image"
+      },
+      {
+        "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/472135051_988045922868475_1655725529971918961_n.jpg?stp=c0.46.258.258a_dst-jpg_p235x350_tt6&_nc_cat=103&ccb=1-7&_nc_sid=247b10&_nc_ohc=hT-RfubRg-AQ7kNvwE4yczM&_nc_oc=AdnTubaVHLPmEYS-CXYj9Mo8Kgza6oRrWWJSQLI1uRXeMhI5-Myoj3D8OzRP-rBXbug&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=ysvuL2Hh4rpfbT4NcMvaKg&oh=00_AfWBVwp5xhfQOA9JG1tn6GDHndKUB685Q8nFilN3WcvVAw&oe=68B31415",
+        "alt_text": "New Black/Blue Man Shoulder Backpack Chest Bag Sling Cross Body Satchel Outdoor Charging Port in Sydney, NSW",
+        "type": "product_image"
+      }
+    ],
+    "description": "Listed 3 days ago in Sydney, NSW\n\nSelling my iPhone 16 black 128gb\nUsed for a few months \nStill good battery health \nComes with case a... See more\n\nLocation is approximate"
+  },
+  "marketplace_metadata": {
+    "fb_listing_id": "791982119882991",
+    "is_sold": true,
+    "timing": {
+      "posted_time": "2 hours"
+    }
+  },
+  "extraction_metadata": {
+    "method": "deep_scraper",
+    "product_index": 1,
+    "data_quality": "comprehensive"
+  }
+}

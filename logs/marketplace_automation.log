@@ -14035,3 +14035,859 @@ Sydney, NSW...
 2025-08-25 13:45:46,889 - core.excel_manager - INFO - Opened Excel file: C:\Users\PMLS\Desktop\fb-marketplace\data\excel_backups\marketplace_data_export_20250825_134546.xlsx
 2025-08-25 13:45:46,890 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 13:45:46] "POST /api/excel/export HTTP/1.1" 200 -
 2025-08-25 13:46:12,654 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002029F9B3ED0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/cb90e23ad92b3550b10581895de81faa/url
+2025-08-26 11:00:03,018 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-26 11:00:03,018 - core.price_monitor - INFO - Price Change Monitor initialized
+2025-08-26 11:00:03,018 - core.notification_monitor - INFO - Notification Monitor initialized
+2025-08-26 11:00:03,019 - web.app - INFO - Browser notification monitoring is available - use dashboard to start manually
+2025-08-26 11:00:03,027 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-26 11:00:03,052 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-08-26 11:00:03,053 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-26 11:00:03,065 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-08-26 11:00:04,597 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-26 11:00:04,597 - core.price_monitor - INFO - Price Change Monitor initialized
+2025-08-26 11:00:04,597 - core.notification_monitor - INFO - Notification Monitor initialized
+2025-08-26 11:00:04,598 - web.app - INFO - Browser notification monitoring is available - use dashboard to start manually
+2025-08-26 11:00:04,608 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-26 11:00:04,618 - werkzeug - WARNING -  * Debugger is active!
+2025-08-26 11:00:04,623 - werkzeug - INFO -  * Debugger PIN: 129-534-001
+2025-08-26 11:00:04,650 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:00:04] "GET /api/events HTTP/1.1" 200 -
+2025-08-26 11:00:05,321 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:00:05] "GET /api/events HTTP/1.1" 200 -
+2025-08-26 11:00:10,047 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:00:10] "GET / HTTP/1.1" 200 -
+2025-08-26 11:00:10,374 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:00:10] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-26 11:00:10,376 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:00:10] "GET /api/monitoring/status HTTP/1.1" 200 -
+2025-08-26 11:00:10,378 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:00:10] "GET /api/events HTTP/1.1" 200 -
+2025-08-26 11:00:10,413 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:00:10] "GET /api/stats HTTP/1.1" 200 -
+2025-08-26 11:00:10,424 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:00:10] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-26 11:00:10,536 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:00:10] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-26 11:00:11,636 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:00:11] "GET /api/listing/deep_2009941163075261 HTTP/1.1" 200 -
+2025-08-26 11:00:13,844 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:00:13] "GET /api/listing/deep_2009941163075261 HTTP/1.1" 200 -
+2025-08-26 11:00:17,188 - core.scheduler - INFO - Starting custom deep scraping job for: iphone 16
+2025-08-26 11:00:17,189 - core.scheduler - INFO - Starting custom scraping job for: iphone 16
+2025-08-26 11:00:17,240 - core.scraper - INFO - Starting deep scrape for: iphone 16 (max 10 products)
+2025-08-26 11:00:17,386 - WDM - INFO - ====== WebDriver manager ======
+2025-08-26 11:00:18,238 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-26 11:00:19,002 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-26 11:00:19,692 - WDM - INFO - Driver [C:\Users\PC\.wdm\drivers\chromedriver\win64\139.0.7258.138\chromedriver-win32/chromedriver.exe] found in cache
+2025-08-26 11:00:21,028 - core.scraper - INFO - Chrome WebDriver initialized successfully
+2025-08-26 11:00:21,029 - core.scraper - INFO - Starting Facebook login...
+2025-08-26 11:00:40,402 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:00:40] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-26 11:00:40,418 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:00:40] "GET /api/stats HTTP/1.1" 200 -
+2025-08-26 11:00:40,450 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:00:40] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-26 11:00:40,459 - core.price_monitor - WARNING - Error processing product 8 for price change: float division by zero
+2025-08-26 11:00:40,464 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:00:40] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-26 11:01:10,379 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:01:10] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-26 11:01:10,402 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:01:10] "GET /api/stats HTTP/1.1" 200 -
+2025-08-26 11:01:10,428 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:01:10] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-26 11:01:10,431 - core.price_monitor - WARNING - Error processing product 7 for price change: float division by zero
+2025-08-26 11:01:10,431 - core.price_monitor - WARNING - Error processing product 8 for price change: float division by zero
+2025-08-26 11:01:10,433 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:01:10] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-26 11:01:20,488 - core.scraper - INFO - Successfully logged in to Facebook
+2025-08-26 11:01:20,489 - core.scraper - INFO - Navigating to Facebook Marketplace with search: iphone 16
+2025-08-26 11:01:20,489 - core.scraper - INFO - Opening marketplace URL: https://www.facebook.com/marketplace
+2025-08-26 11:01:27,959 - core.scraper - INFO - Navigating to custom search: https://www.facebook.com/marketplace/sydney/search/?query=iphone%2016
+2025-08-26 11:01:40,379 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:01:40] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-26 11:01:40,401 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:01:40] "GET /api/stats HTTP/1.1" 200 -
+2025-08-26 11:01:40,427 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:01:40] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-26 11:01:40,428 - core.price_monitor - WARNING - Error processing product 2 for price change: float division by zero
+2025-08-26 11:01:40,430 - core.price_monitor - WARNING - Error processing product 3 for price change: float division by zero
+2025-08-26 11:01:40,432 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:01:40] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-26 11:01:43,115 - core.scraper - INFO - Successfully navigated to Marketplace with search: iphone 16
+2025-08-26 11:01:43,115 - core.scraper - INFO - Finding product cards for deep scraping...
+2025-08-26 11:01:46,141 - core.scraper - INFO - Found 22 marketplace item links
+2025-08-26 11:01:46,838 - core.scraper - INFO - Prepared 22 product cards for deep scraping
+2025-08-26 11:01:46,838 - core.scraper - INFO - Found 22 product cards, will deep scrape first 10
+2025-08-26 11:01:46,838 - core.scraper - INFO - Deep scraping product 1/10: AU$1,200
+iPhone 16
+Sydney, NSW...
+2025-08-26 11:01:46,846 - core.scraper - INFO - Navigating to product page: AU$1,200
+iPhone 16
+Sydney, NSW...
+2025-08-26 11:01:58,702 - core.scraper - INFO - Looking for 'See Details' button...
+2025-08-26 11:02:09,332 - core.scraper - INFO - Using profile link as 'See details' button
+2025-08-26 11:02:09,358 - core.scraper - INFO - Clicking 'See details' button: Seller details
+2025-08-26 11:02:10,394 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:02:10] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-26 11:02:10,453 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:02:10] "GET /api/stats HTTP/1.1" 200 -
+2025-08-26 11:02:10,483 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:02:10] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-26 11:02:10,485 - core.price_monitor - WARNING - Error processing product 5 for price change: float division by zero
+2025-08-26 11:02:10,486 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:02:10] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-26 11:02:40,393 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:02:40] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-26 11:02:40,414 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:02:40] "GET /api/stats HTTP/1.1" 200 -
+2025-08-26 11:02:40,441 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:02:40] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-26 11:02:40,443 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:02:40] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-26 11:03:10,390 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:03:10] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-26 11:03:10,415 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:03:10] "GET /api/stats HTTP/1.1" 200 -
+2025-08-26 11:03:10,440 - core.price_monitor - WARNING - Error processing product 4 for price change: float division by zero
+2025-08-26 11:03:10,441 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:03:10] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-26 11:03:10,446 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:03:10] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-26 11:03:32,807 - core.scraper - INFO - Navigating back to search results...
+2025-08-26 11:03:40,377 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:03:40] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-26 11:03:40,414 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:03:40] "GET /api/stats HTTP/1.1" 200 -
+2025-08-26 11:03:40,420 - core.price_monitor - WARNING - Error processing product 8 for price change: float division by zero
+2025-08-26 11:03:40,421 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:03:40] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-26 11:03:40,429 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:03:40] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-26 11:03:40,892 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:03:40] "GET /api/stats HTTP/1.1" 200 -
+2025-08-26 11:03:40,910 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:03:40] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-26 11:03:45,320 - core.scraper - INFO - Deep scraping product 2/10: AU$1,100
+Iphone 16 (128GB) 8 Weeks Old
+Sydney, NSW...
+2025-08-26 11:03:45,330 - core.scraper - INFO - Navigating to product page: AU$1,100
+Iphone 16 (128GB) 8 Weeks Old
+Sydney, NSW...
+2025-08-26 11:03:55,709 - core.scraper - INFO - Looking for 'See Details' button...
+2025-08-26 11:04:06,482 - core.scraper - INFO - Using profile link as 'See details' button
+2025-08-26 11:04:06,513 - core.scraper - INFO - Clicking 'See details' button: Seller details
+2025-08-26 11:04:10,378 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:04:10] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-26 11:04:10,415 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:04:10] "GET /api/stats HTTP/1.1" 200 -
+2025-08-26 11:04:10,432 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:04:10] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-26 11:04:10,434 - core.price_monitor - WARNING - Error processing product 0 for price change: float division by zero
+2025-08-26 11:04:10,435 - core.price_monitor - WARNING - Error processing product 1 for price change: float division by zero
+2025-08-26 11:04:10,437 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:04:10] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-26 11:04:40,380 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:04:40] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-26 11:04:40,405 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:04:40] "GET /api/stats HTTP/1.1" 200 -
+2025-08-26 11:04:40,424 - core.price_monitor - WARNING - Error processing product 9 for price change: float division by zero
+2025-08-26 11:04:40,428 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:04:40] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-26 11:04:40,436 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:04:40] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-26 11:05:10,392 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:05:10] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-26 11:05:10,429 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:05:10] "GET /api/stats HTTP/1.1" 200 -
+2025-08-26 11:05:10,452 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:05:10] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-26 11:05:10,453 - core.price_monitor - WARNING - Error processing product 0 for price change: float division by zero
+2025-08-26 11:05:10,453 - core.price_monitor - WARNING - Error processing product 5 for price change: float division by zero
+2025-08-26 11:05:10,454 - core.price_monitor - WARNING - Error processing product 6 for price change: float division by zero
+2025-08-26 11:05:10,455 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:05:10] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-26 11:05:33,271 - core.scraper - INFO - Navigating back to search results...
+2025-08-26 11:05:37,999 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:05:37] "GET /api/stats HTTP/1.1" 200 -
+2025-08-26 11:05:38,007 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:05:38] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-26 11:05:40,378 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:05:40] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-26 11:05:40,397 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:05:40] "GET /api/stats HTTP/1.1" 200 -
+2025-08-26 11:05:40,425 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:05:40] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-26 11:05:40,431 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:05:40] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-26 11:05:41,671 - core.scraper - INFO - Deep scraping product 3/10: AU$20
+iPhone 16 pro cool blue cover with MagSafe
+S...
+2025-08-26 11:05:41,679 - core.scraper - INFO - Navigating to product page: AU$20
+iPhone 16 pro cool blue cover with MagSafe
+S...
+2025-08-26 11:05:48,098 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:05:48] "GET /api/listing/deep_788038106966491 HTTP/1.1" 200 -
+2025-08-26 11:05:52,505 - core.scraper - INFO - Looking for 'See Details' button...
+2025-08-26 11:06:04,663 - core.scraper - INFO - Using profile link as 'See details' button
+2025-08-26 11:06:04,692 - core.scraper - INFO - Clicking 'See details' button: Seller details
+2025-08-26 11:06:10,646 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:06:10] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-26 11:06:10,666 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:06:10] "GET /api/stats HTTP/1.1" 200 -
+2025-08-26 11:06:10,681 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:06:10] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-26 11:06:10,684 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:06:10] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-26 11:06:40,654 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:06:40] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-26 11:06:40,679 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:06:40] "GET /api/stats HTTP/1.1" 200 -
+2025-08-26 11:06:40,685 - core.price_monitor - WARNING - Error processing product 2 for price change: float division by zero
+2025-08-26 11:06:40,687 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:06:40] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-26 11:06:40,688 - core.price_monitor - WARNING - Error processing product 6 for price change: float division by zero
+2025-08-26 11:06:40,689 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:06:40] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-26 11:06:49,154 - core.scraper - INFO - Navigated to new page, going back...
+2025-08-26 11:07:35,691 - core.scraper - INFO - Navigating back to search results...
+2025-08-26 11:07:41,644 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:07:41] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-26 11:07:41,679 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:07:41] "GET /api/stats HTTP/1.1" 200 -
+2025-08-26 11:07:41,684 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:07:41] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-26 11:07:41,686 - core.price_monitor - WARNING - Error processing product 0 for price change: float division by zero
+2025-08-26 11:07:41,694 - core.price_monitor - WARNING - Error processing product 3 for price change: float division by zero
+2025-08-26 11:07:41,701 - core.price_monitor - WARNING - Error processing product 5 for price change: float division by zero
+2025-08-26 11:07:41,701 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:07:41] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-26 11:07:42,042 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:07:42] "GET /api/stats HTTP/1.1" 200 -
+2025-08-26 11:07:42,048 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:07:42] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-26 11:07:46,417 - core.scraper - INFO - Deep scraping product 4/10: AU$850
+AU$970
+IPHONE 16 128GB - STILL UNDER WARRAN...
+2025-08-26 11:07:46,423 - core.scraper - INFO - Navigating to product page: AU$850
+AU$970
+IPHONE 16 128GB - STILL UNDER WARRAN...
+2025-08-26 11:07:57,801 - core.scraper - INFO - Looking for 'See Details' button...
+2025-08-26 11:08:07,258 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:08:07] "GET /api/listing/deep_1091991559707762 HTTP/1.1" 200 -
+2025-08-26 11:08:10,648 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:08:10] "GET /api/stats HTTP/1.1" 200 -
+2025-08-26 11:08:10,661 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:08:10] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-26 11:08:10,686 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:08:10] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-26 11:08:10,690 - core.price_monitor - WARNING - Error processing product 2 for price change: float division by zero
+2025-08-26 11:08:10,692 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:08:10] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-26 11:08:11,153 - core.scraper - INFO - Using profile link as 'See details' button
+2025-08-26 11:08:11,176 - core.scraper - INFO - Clicking 'See details' button: Seller details
+2025-08-26 11:08:40,648 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:08:40] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-26 11:08:40,683 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:08:40] "GET /api/stats HTTP/1.1" 200 -
+2025-08-26 11:08:40,705 - core.price_monitor - WARNING - Error processing product 3 for price change: float division by zero
+2025-08-26 11:08:40,706 - core.price_monitor - WARNING - Error processing product 7 for price change: float division by zero
+2025-08-26 11:08:40,708 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:08:40] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-26 11:08:40,709 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:08:40] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-26 11:08:56,883 - core.scraper - INFO - Navigated to new page, going back...
+2025-08-26 11:09:41,647 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:09:41] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-26 11:09:41,683 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:09:41] "GET /api/stats HTTP/1.1" 200 -
+2025-08-26 11:09:41,717 - core.price_monitor - WARNING - Error processing product 5 for price change: float division by zero
+2025-08-26 11:09:41,719 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:09:41] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-26 11:09:41,726 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:09:41] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-26 11:09:45,698 - core.scraper - INFO - Navigating back to search results...
+2025-08-26 11:09:50,555 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:09:50] "GET /api/stats HTTP/1.1" 200 -
+2025-08-26 11:09:50,570 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:09:50] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-26 11:10:08,201 - core.scraper - INFO - Looking for 'See Details' button...
+2025-08-26 11:10:20,587 - core.scraper - INFO - Using profile link as 'See details' button
+2025-08-26 11:10:20,612 - core.scraper - INFO - Clicking 'See details' button: Seller details
+2025-08-26 11:10:42,643 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:10:42] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-26 11:10:42,673 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:10:42] "GET /api/stats HTTP/1.1" 200 -
+2025-08-26 11:10:42,692 - core.price_monitor - WARNING - Error processing product 0 for price change: float division by zero
+2025-08-26 11:10:42,693 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:10:42] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-26 11:10:42,696 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:10:42] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-26 11:11:05,573 - core.scraper - INFO - Navigated to new page, going back...
+2025-08-26 11:11:42,653 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:11:42] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-26 11:11:42,686 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:11:42] "GET /api/stats HTTP/1.1" 200 -
+2025-08-26 11:11:42,712 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:11:42] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-26 11:11:42,721 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:11:42] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-26 11:11:57,635 - core.scraper - INFO - Navigating back to search results...
+2025-08-26 11:12:02,824 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:12:02] "GET /api/stats HTTP/1.1" 200 -
+2025-08-26 11:12:02,839 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:12:02] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-26 11:12:03,194 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\re\\__init__.py', reloading
+2025-08-26 11:12:03,231 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\datetime.py', reloading
+2025-08-26 11:12:03,263 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\_pydatetime.py', reloading
+2025-08-26 11:12:04,026 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-08-26 11:12:05,278 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-26 11:12:05,278 - core.price_monitor - INFO - Price Change Monitor initialized
+2025-08-26 11:12:05,279 - core.notification_monitor - INFO - Notification Monitor initialized
+2025-08-26 11:12:05,279 - web.app - INFO - Browser notification monitoring is available - use dashboard to start manually
+2025-08-26 11:12:05,287 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-26 11:12:05,295 - werkzeug - WARNING -  * Debugger is active!
+2025-08-26 11:12:05,297 - werkzeug - INFO -  * Debugger PIN: 129-534-001
+2025-08-26 11:12:07,184 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\concurrent\\__init__.py', reloading
+2025-08-26 11:12:07,196 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\idlelib\\__init__.py', reloading
+2025-08-26 11:12:07,209 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\test\\__init__.py', reloading
+2025-08-26 11:12:07,223 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\turtledemo\\__init__.py', reloading
+2025-08-26 11:12:07,239 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\wsgiref\\__init__.py', reloading
+2025-08-26 11:12:07,241 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\xmlrpc\\__init__.py', reloading
+2025-08-26 11:12:07,255 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\__phello__\\__init__.py', reloading
+2025-08-26 11:12:07,484 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-08-26 11:12:08,768 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-26 11:12:08,769 - core.price_monitor - INFO - Price Change Monitor initialized
+2025-08-26 11:12:08,769 - core.notification_monitor - INFO - Notification Monitor initialized
+2025-08-26 11:12:08,769 - web.app - INFO - Browser notification monitoring is available - use dashboard to start manually
+2025-08-26 11:12:08,776 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-26 11:12:08,788 - werkzeug - WARNING -  * Debugger is active!
+2025-08-26 11:12:08,789 - werkzeug - INFO -  * Debugger PIN: 129-534-001
+2025-08-26 11:12:08,807 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:12:08] "GET /api/events HTTP/1.1" 200 -
+2025-08-26 11:12:08,817 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\cachecontrol\\adapter.py', reloading
+2025-08-26 11:12:08,833 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\cachecontrol\\controller.py', reloading
+2025-08-26 11:12:08,855 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\cachecontrol\\wrapper.py', reloading
+2025-08-26 11:12:08,868 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\certifi\\__init__.py', reloading
+2025-08-26 11:12:08,886 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\certifi\\core.py', reloading
+2025-08-26 11:12:08,908 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\charset_normalizer\\__init__.py', reloading
+2025-08-26 11:12:08,925 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\charset_normalizer\\api.py', reloading
+2025-08-26 11:12:08,947 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\charset_normalizer\\legacy.py', reloading
+2025-08-26 11:12:08,967 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\charset_normalizer\\models.py', reloading
+2025-08-26 11:12:08,992 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\charset_normalizer\\utils.py', reloading
+2025-08-26 11:12:09,006 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\charset_normalizer\\version.py', reloading
+2025-08-26 11:12:09,025 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\click\\__init__.py', reloading
+2025-08-26 11:12:09,044 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\click\\core.py', reloading
+2025-08-26 11:12:09,077 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\click\\decorators.py', reloading
+2025-08-26 11:12:09,100 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\click\\exceptions.py', reloading
+2025-08-26 11:12:09,122 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\click\\formatting.py', reloading
+2025-08-26 11:12:09,140 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\click\\globals.py', reloading
+2025-08-26 11:12:09,159 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\click\\parser.py', reloading
+2025-08-26 11:12:09,178 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\click\\termui.py', reloading
+2025-08-26 11:12:09,202 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\click\\types.py', reloading
+2025-08-26 11:12:09,227 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\click\\utils.py', reloading
+2025-08-26 11:12:09,244 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\contourpy\\__init__.py', reloading
+2025-08-26 11:12:09,277 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\contourpy\\_version.py', reloading
+2025-08-26 11:12:09,296 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\contourpy\\convert.py', reloading
+2025-08-26 11:12:09,317 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\contourpy\\dechunk.py', reloading
+2025-08-26 11:12:09,332 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\cpuinfo\\__init__.py', reloading
+2025-08-26 11:12:09,335 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:12:09] "GET /api/events HTTP/1.1" 200 -
+2025-08-26 11:12:09,343 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\cryptography\\__init__.py', reloading
+2025-08-26 11:12:09,356 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\cryptography\\__about__.py', reloading
+2025-08-26 11:12:09,472 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\cv2\\mat_wrapper\\__init__.py', reloading
+2025-08-26 11:12:09,512 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\cycler\\__init__.py', reloading
+2025-08-26 11:12:09,525 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\distro\\__init__.py', reloading
+2025-08-26 11:12:09,544 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\distro\\distro.py', reloading
+2025-08-26 11:12:09,562 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\dotenv\\__init__.py', reloading
+2025-08-26 11:12:09,583 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\dotenv\\main.py', reloading
+2025-08-26 11:12:09,600 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\et_xmlfile\\__init__.py', reloading
+2025-08-26 11:12:09,639 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\fastapi\\applications.py', reloading
+2025-08-26 11:12:09,668 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\fastapi\\background.py', reloading
+2025-08-26 11:12:09,682 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\fastapi\\cli.py', reloading
+2025-08-26 11:12:09,698 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\fastapi\\concurrency.py', reloading
+2025-08-26 11:12:09,721 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\starlette\\concurrency.py', reloading
+2025-08-26 11:12:09,740 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\fastapi\\datastructures.py', reloading
+2025-08-26 11:12:09,763 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\starlette\\datastructures.py', reloading
+2025-08-26 11:12:09,785 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\fastapi\\encoders.py', reloading
+2025-08-26 11:12:09,984 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-08-26 11:12:11,582 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-26 11:12:11,582 - core.price_monitor - INFO - Price Change Monitor initialized
+2025-08-26 11:12:11,583 - core.notification_monitor - INFO - Notification Monitor initialized
+2025-08-26 11:12:11,583 - web.app - INFO - Browser notification monitoring is available - use dashboard to start manually
+2025-08-26 11:12:11,595 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-26 11:12:11,608 - werkzeug - WARNING -  * Debugger is active!
+2025-08-26 11:12:11,611 - werkzeug - INFO -  * Debugger PIN: 129-534-001
+2025-08-26 11:12:12,538 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\gradio\\data_classes.py', reloading
+2025-08-26 11:12:12,564 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\gradio\\events.py', reloading
+2025-08-26 11:12:12,586 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\gradio\\exceptions.py', reloading
+2025-08-26 11:12:12,608 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\gradio\\external.py', reloading
+2025-08-26 11:12:12,639 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\gradio\\flagging.py', reloading
+2025-08-26 11:12:12,815 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-08-26 11:12:14,427 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-26 11:12:14,428 - core.price_monitor - INFO - Price Change Monitor initialized
+2025-08-26 11:12:14,428 - core.notification_monitor - INFO - Notification Monitor initialized
+2025-08-26 11:12:14,428 - web.app - INFO - Browser notification monitoring is available - use dashboard to start manually
+2025-08-26 11:12:14,436 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-26 11:12:14,447 - werkzeug - WARNING -  * Debugger is active!
+2025-08-26 11:12:14,449 - werkzeug - INFO -  * Debugger PIN: 129-534-001
+2025-08-26 11:12:14,468 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:12:14] "GET /api/events HTTP/1.1" 200 -
+2025-08-26 11:12:14,471 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\httpx\\_exceptions.py', reloading
+2025-08-26 11:12:14,495 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\httpx\\_models.py', reloading
+2025-08-26 11:12:14,537 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\httpx\\_status_codes.py', reloading
+2025-08-26 11:12:14,557 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\httpx\\_transports\\__init__.py', reloading
+2025-08-26 11:12:14,595 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\httpx\\_transports\\asgi.py', reloading
+2025-08-26 11:12:14,630 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\httpx\\_transports\\base.py', reloading
+2025-08-26 11:12:14,669 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\httpx\\_transports\\default.py', reloading
+2025-08-26 11:12:14,697 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\httpx\\_transports\\mock.py', reloading
+2025-08-26 11:12:14,735 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\httpx\\_transports\\wsgi.py', reloading
+2025-08-26 11:12:14,762 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\httpx\\_types.py', reloading
+2025-08-26 11:12:14,795 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\httpx\\_urls.py', reloading
+2025-08-26 11:12:14,824 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\httpx\\__version__.py', reloading
+2025-08-26 11:12:14,865 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\__init__.py', reloading
+2025-08-26 11:12:14,966 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\_commit_scheduler.py', reloading
+2025-08-26 11:12:14,993 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\_inference_endpoints.py', reloading
+2025-08-26 11:12:15,021 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\errors.py', reloading
+2025-08-26 11:12:15,045 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\_login.py', reloading
+2025-08-26 11:12:15,077 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\_oauth.py', reloading
+2025-08-26 11:12:15,102 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\_snapshot_download.py', reloading
+2025-08-26 11:12:15,131 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\_space_api.py', reloading
+2025-08-26 11:12:15,164 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\_tensorboard_logger.py', reloading
+2025-08-26 11:12:15,213 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\_webhooks_payload.py', reloading
+2025-08-26 11:12:15,256 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\_webhooks_server.py', reloading
+2025-08-26 11:12:15,300 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\community.py', reloading
+2025-08-26 11:12:15,324 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:12:15] "GET /api/events HTTP/1.1" 200 -
+2025-08-26 11:12:15,335 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\constants.py', reloading
+2025-08-26 11:12:15,371 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\fastai_utils.py', reloading
+2025-08-26 11:12:15,425 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\file_download.py', reloading
+2025-08-26 11:12:15,629 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-08-26 11:12:16,657 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-26 11:12:16,658 - core.price_monitor - INFO - Price Change Monitor initialized
+2025-08-26 11:12:16,658 - core.notification_monitor - INFO - Notification Monitor initialized
+2025-08-26 11:12:16,658 - web.app - INFO - Browser notification monitoring is available - use dashboard to start manually
+2025-08-26 11:12:16,665 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-26 11:12:16,672 - werkzeug - WARNING -  * Debugger is active!
+2025-08-26 11:12:16,674 - werkzeug - INFO -  * Debugger PIN: 129-534-001
+2025-08-26 11:12:16,712 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\utils\\_hf_folder.py', reloading
+2025-08-26 11:12:16,786 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\utils\\_cache_assets.py', reloading
+2025-08-26 11:12:16,815 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\utils\\_http.py', reloading
+2025-08-26 11:12:16,840 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\utils\\_runtime.py', reloading
+2025-08-26 11:12:16,859 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\utils\\_auth.py', reloading
+2025-08-26 11:12:16,883 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\hyperframe\\__init__.py', reloading
+2025-08-26 11:12:16,894 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\idna\\__init__.py', reloading
+2025-08-26 11:12:16,934 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\idna\\core.py', reloading
+2025-08-26 11:12:16,984 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\idna\\intranges.py', reloading
+2025-08-26 11:12:16,996 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\idna\\package_data.py', reloading
+2025-08-26 11:12:17,017 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\imageio\\__init__.py', reloading
+2025-08-26 11:12:17,081 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\itsdangerous\\__init__.py', reloading
+2025-08-26 11:12:17,093 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\itsdangerous\\encoding.py', reloading
+2025-08-26 11:12:17,111 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\itsdangerous\\exc.py', reloading
+2025-08-26 11:12:17,141 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\itsdangerous\\serializer.py', reloading
+2025-08-26 11:12:17,179 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\itsdangerous\\signer.py', reloading
+2025-08-26 11:12:17,213 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\itsdangerous\\timed.py', reloading
+2025-08-26 11:12:17,250 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\itsdangerous\\url_safe.py', reloading
+2025-08-26 11:12:17,284 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\jinja2\\__init__.py', reloading
+2025-08-26 11:12:17,327 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\jinja2\\bccache.py', reloading
+2025-08-26 11:12:17,366 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\jinja2\\environment.py', reloading
+2025-08-26 11:12:17,401 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\jinja2\\exceptions.py', reloading
+2025-08-26 11:12:17,443 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\jinja2\\loaders.py', reloading
+2025-08-26 11:12:17,472 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\jinja2\\runtime.py', reloading
+2025-08-26 11:12:17,511 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\jinja2\\utils.py', reloading
+2025-08-26 11:12:17,573 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\jwt\\__init__.py', reloading
+2025-08-26 11:12:17,615 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\jwt\\api_jwk.py', reloading
+2025-08-26 11:12:17,644 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\jwt\\api_jws.py', reloading
+2025-08-26 11:12:17,666 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\jwt\\api_jwt.py', reloading
+2025-08-26 11:12:17,682 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\jwt\\exceptions.py', reloading
+2025-08-26 11:12:17,833 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-08-26 11:12:18,959 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-26 11:12:18,959 - core.price_monitor - INFO - Price Change Monitor initialized
+2025-08-26 11:12:18,959 - core.notification_monitor - INFO - Notification Monitor initialized
+2025-08-26 11:12:18,960 - web.app - INFO - Browser notification monitoring is available - use dashboard to start manually
+2025-08-26 11:12:18,967 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-26 11:12:18,975 - werkzeug - WARNING -  * Debugger is active!
+2025-08-26 11:12:18,977 - werkzeug - INFO -  * Debugger PIN: 129-534-001
+2025-08-26 11:12:18,996 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:12:18] "GET /api/events HTTP/1.1" 200 -
+2025-08-26 11:12:19,154 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\openai\\__init__.py', reloading
+2025-08-26 11:12:19,204 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\openai\\lib\\_old_api.py', reloading
+2025-08-26 11:12:19,232 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\openai\\_types.py', reloading
+2025-08-26 11:12:19,259 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\openai\\_utils\\__init__.py', reloading
+2025-08-26 11:12:19,303 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\openai\\_utils\\_utils.py', reloading
+2025-08-26 11:12:19,343 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\openai\\_client.py', reloading
+2025-08-26 11:12:19,418 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\openai\\_streaming.py', reloading
+2025-08-26 11:12:19,457 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\openai\\_models.py', reloading
+2025-08-26 11:12:19,490 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\openai\\_version.py', reloading
+2025-08-26 11:12:19,525 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\openai\\_response.py', reloading
+2025-08-26 11:12:19,566 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\openai\\_constants.py', reloading
+2025-08-26 11:12:19,594 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\openai\\_exceptions.py', reloading
+2025-08-26 11:12:19,620 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\openai\\_base_client.py', reloading
+2025-08-26 11:12:19,648 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\openai\\_legacy_response.py', reloading
+2025-08-26 11:12:19,663 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\openai\\lib\\__init__.py', reloading
+2025-08-26 11:12:19,694 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\openai\\lib\\_tools.py', reloading
+2025-08-26 11:12:19,724 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\openai\\version.py', reloading
+2025-08-26 11:12:19,743 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\openai\\lib\\azure.py', reloading
+2025-08-26 11:12:19,772 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\openai\\lib\\streaming\\__init__.py', reloading
+2025-08-26 11:12:19,800 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\openai\\lib\\streaming\\_assistants.py', reloading
+2025-08-26 11:12:19,872 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\openai\\_module_client.py', reloading
+2025-08-26 11:12:19,984 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\OpenGL\\__init__.py', reloading
+2025-08-26 11:12:20,163 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-08-26 11:12:21,217 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-26 11:12:21,218 - core.price_monitor - INFO - Price Change Monitor initialized
+2025-08-26 11:12:21,218 - core.notification_monitor - INFO - Notification Monitor initialized
+2025-08-26 11:12:21,218 - web.app - INFO - Browser notification monitoring is available - use dashboard to start manually
+2025-08-26 11:12:21,226 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-26 11:12:21,233 - werkzeug - WARNING -  * Debugger is active!
+2025-08-26 11:12:21,236 - werkzeug - INFO -  * Debugger PIN: 129-534-001
+2025-08-26 11:12:21,531 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pyparsing\\__init__.py', reloading
+2025-08-26 11:12:21,557 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pyparsing\\util.py', reloading
+2025-08-26 11:12:21,584 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pyparsing\\exceptions.py', reloading
+2025-08-26 11:12:21,608 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pyparsing\\actions.py', reloading
+2025-08-26 11:12:21,632 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pyparsing\\results.py', reloading
+2025-08-26 11:12:21,639 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:12:21] "GET /api/events HTTP/1.1" 200 -
+2025-08-26 11:12:21,668 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pyparsing\\core.py', reloading
+2025-08-26 11:12:21,735 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pyparsing\\helpers.py', reloading
+2025-08-26 11:12:21,814 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pyparsing\\unicode.py', reloading
+2025-08-26 11:12:22,074 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pytesseract\\__init__.py', reloading
+2025-08-26 11:12:22,099 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\python_multipart\\multipart.py', reloading
+2025-08-26 11:12:22,128 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\rich\\__init__.py', reloading
+2025-08-26 11:12:22,161 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\rsa\\__init__.py', reloading
+2025-08-26 11:12:22,199 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\rsa\\key.py', reloading
+2025-08-26 11:12:22,419 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-08-26 11:12:23,658 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-26 11:12:23,659 - core.price_monitor - INFO - Price Change Monitor initialized
+2025-08-26 11:12:23,659 - core.notification_monitor - INFO - Notification Monitor initialized
+2025-08-26 11:12:23,659 - web.app - INFO - Browser notification monitoring is available - use dashboard to start manually
+2025-08-26 11:12:23,668 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-26 11:12:23,678 - werkzeug - WARNING -  * Debugger is active!
+2025-08-26 11:12:23,680 - werkzeug - INFO -  * Debugger PIN: 129-534-001
+2025-08-26 11:12:23,716 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\io\\__init__.py', reloading
+2025-08-26 11:12:23,759 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\linalg\\__init__.py', reloading
+2025-08-26 11:12:23,800 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\linalg\\_misc.py', reloading
+2025-08-26 11:12:23,903 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\linalg\\_basic.py', reloading
+2025-08-26 11:12:23,967 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\linalg\\_decomp.py', reloading
+2025-08-26 11:12:24,017 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\linalg\\_decomp_lu.py', reloading
+2025-08-26 11:12:24,063 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\linalg\\_decomp_ldl.py', reloading
+2025-08-26 11:12:24,081 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\linalg\\_decomp_cholesky.py', reloading
+2025-08-26 11:12:24,095 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\linalg\\_decomp_qr.py', reloading
+2025-08-26 11:12:24,120 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\linalg\\_decomp_qz.py', reloading
+2025-08-26 11:12:24,139 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\linalg\\_decomp_svd.py', reloading
+2025-08-26 11:12:24,173 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\linalg\\_decomp_schur.py', reloading
+2025-08-26 11:12:24,203 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\linalg\\_decomp_polar.py', reloading
+2025-08-26 11:12:24,235 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\linalg\\_matfuncs.py', reloading
+2025-08-26 11:12:24,272 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\linalg\\blas.py', reloading
+2025-08-26 11:12:24,297 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\linalg\\lapack.py', reloading
+2025-08-26 11:12:24,357 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\linalg\\_special_matrices.py', reloading
+2025-08-26 11:12:24,411 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\linalg\\_solvers.py', reloading
+2025-08-26 11:12:24,452 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\linalg\\_procrustes.py', reloading
+2025-08-26 11:12:24,478 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\linalg\\_sketches.py', reloading
+2025-08-26 11:12:24,548 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\linalg\\_decomp_cossin.py', reloading
+2025-08-26 11:12:24,575 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\misc\\__init__.py', reloading
+2025-08-26 11:12:24,595 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\ndimage\\__init__.py', reloading
+2025-08-26 11:12:24,620 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\ndimage\\_support_alternative_backends.py', reloading
+2025-08-26 11:12:24,637 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\ndimage\\_ndimage_api.py', reloading
+2025-08-26 11:12:24,678 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\ndimage\\_filters.py', reloading
+2025-08-26 11:12:24,945 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-08-26 11:12:27,053 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-26 11:12:27,054 - core.price_monitor - INFO - Price Change Monitor initialized
+2025-08-26 11:12:27,054 - core.notification_monitor - INFO - Notification Monitor initialized
+2025-08-26 11:12:27,055 - web.app - INFO - Browser notification monitoring is available - use dashboard to start manually
+2025-08-26 11:12:27,067 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-26 11:12:27,076 - werkzeug - WARNING -  * Debugger is active!
+2025-08-26 11:12:27,078 - werkzeug - INFO -  * Debugger PIN: 129-534-001
+2025-08-26 11:12:27,096 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:12:27] "GET /api/events HTTP/1.1" 200 -
+2025-08-26 11:12:27,199 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\stats\\distributions.py', reloading
+2025-08-26 11:12:27,255 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\stats\\_continuous_distns.py', reloading
+2025-08-26 11:12:27,370 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\stats\\_discrete_distns.py', reloading
+2025-08-26 11:12:27,399 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\stats\\_morestats.py', reloading
+2025-08-26 11:12:27,459 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\stats\\_multicomp.py', reloading
+2025-08-26 11:12:27,479 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\stats\\_binned_statistic.py', reloading
+2025-08-26 11:12:27,496 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\stats\\_multivariate.py', reloading
+2025-08-26 11:12:27,583 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\stats\\_entropy.py', reloading
+2025-08-26 11:12:27,634 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\stats\\_hypotests.py', reloading
+2025-08-26 11:12:27,671 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\stats\\_sensitivity_analysis.py', reloading
+2025-08-26 11:12:27,704 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\stats\\_survival.py', reloading
+2025-08-26 11:12:27,733 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\version.py', reloading
+2025-08-26 11:12:27,758 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\__config__.py', reloading
+2025-08-26 11:12:27,795 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\__init__.py', reloading
+2025-08-26 11:12:27,822 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\selenium\\__init__.py', reloading
+2025-08-26 11:12:27,847 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\semantic_version\\__init__.py', reloading
+2025-08-26 11:12:27,875 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\shellingham\\__init__.py', reloading
+2025-08-26 11:12:27,895 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\sniffio\\__init__.py', reloading
+2025-08-26 11:12:27,928 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\sniffio\\_impl.py', reloading
+2025-08-26 11:12:27,955 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\sortedcontainers\\__init__.py', reloading
+2025-08-26 11:12:27,992 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\sortedcontainers\\sortedlist.py', reloading
+2025-08-26 11:12:28,061 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\sortedcontainers\\sortedset.py', reloading
+2025-08-26 11:12:28,084 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\sortedcontainers\\sorteddict.py', reloading
+2025-08-26 11:12:28,272 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-08-26 11:12:29,500 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-26 11:12:29,501 - core.price_monitor - INFO - Price Change Monitor initialized
+2025-08-26 11:12:29,501 - core.notification_monitor - INFO - Notification Monitor initialized
+2025-08-26 11:12:29,502 - web.app - INFO - Browser notification monitoring is available - use dashboard to start manually
+2025-08-26 11:12:29,509 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-26 11:12:29,520 - werkzeug - WARNING -  * Debugger is active!
+2025-08-26 11:12:29,523 - werkzeug - INFO -  * Debugger PIN: 129-534-001
+2025-08-26 11:12:29,548 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:12:29] "GET /api/events HTTP/1.1" 200 -
+2025-08-26 11:12:29,551 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\tests\\__init__.py', reloading
+2025-08-26 11:12:29,577 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\thop\\__init__.py', reloading
+2025-08-26 11:12:29,591 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\tifffile\\__init__.py', reloading
+2025-08-26 11:12:29,680 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\tifffile\\tifffile.py', reloading
+2025-08-26 11:12:29,830 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\tomlkit\\__init__.py', reloading
+2025-08-26 11:12:29,847 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\tomlkit\\api.py', reloading
+2025-08-26 11:12:29,861 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\tomlkit\\toml_document.py', reloading
+2025-08-26 11:12:29,877 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\tomlkit\\items.py', reloading
+2025-08-26 11:12:29,914 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\torch\\__init__.py', reloading
+2025-08-26 11:12:30,374 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\torch\\functional.py', reloading
+2025-08-26 11:12:30,434 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\torch\\_tensor.py', reloading
+2025-08-26 11:12:30,476 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\torch\\storage.py', reloading
+2025-08-26 11:12:30,519 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\torch\\_tensor_str.py', reloading
+2025-08-26 11:12:30,541 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\torch\\amp\\__init__.py', reloading
+2025-08-26 11:12:30,748 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-08-26 11:12:31,961 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-26 11:12:31,962 - core.price_monitor - INFO - Price Change Monitor initialized
+2025-08-26 11:12:31,962 - core.notification_monitor - INFO - Notification Monitor initialized
+2025-08-26 11:12:31,962 - web.app - INFO - Browser notification monitoring is available - use dashboard to start manually
+2025-08-26 11:12:31,970 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-26 11:12:31,980 - werkzeug - WARNING -  * Debugger is active!
+2025-08-26 11:12:31,983 - werkzeug - INFO -  * Debugger PIN: 129-534-001
+2025-08-26 11:12:32,012 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\trio\\_version.py', reloading
+2025-08-26 11:12:32,027 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\trio_websocket\\__init__.py', reloading
+2025-08-26 11:12:32,063 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\trio_websocket\\_impl.py', reloading
+2025-08-26 11:12:32,118 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\trio_websocket\\_version.py', reloading
+2025-08-26 11:12:32,130 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\typer\\__init__.py', reloading
+2025-08-26 11:12:32,180 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\typer\\main.py', reloading
+2025-08-26 11:12:32,216 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\typer\\models.py', reloading
+2025-08-26 11:12:32,248 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\typer\\params.py', reloading
+2025-08-26 11:12:32,283 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\tzdata\\__init__.py', reloading
+2025-08-26 11:12:32,303 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\tzlocal\\__init__.py', reloading
+2025-08-26 11:12:32,332 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\tzlocal\\win32.py', reloading
+2025-08-26 11:12:32,366 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\tzlocal\\utils.py', reloading
+2025-08-26 11:12:32,392 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\ultralytics\\__init__.py', reloading
+2025-08-26 11:12:32,429 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\ultralytics\\models\\__init__.py', reloading
+2025-08-26 11:12:32,478 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\ultralytics\\models\\nas\\__init__.py', reloading
+2025-08-26 11:12:32,507 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\ultralytics\\models\\nas\\model.py', reloading
+2025-08-26 11:12:32,534 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\ultralytics\\models\\rtdetr\\__init__.py', reloading
+2025-08-26 11:12:32,566 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\ultralytics\\models\\rtdetr\\model.py', reloading
+2025-08-26 11:12:32,594 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\ultralytics\\models\\sam\\__init__.py', reloading
+2025-08-26 11:12:32,627 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\ultralytics\\models\\sam\\model.py', reloading
+2025-08-26 11:12:32,658 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\ultralytics\\models\\yolo\\__init__.py', reloading
+2025-08-26 11:12:32,691 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\ultralytics\\models\\yolo\\model.py', reloading
+2025-08-26 11:12:32,715 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\ultralytics\\models\\fastsam\\__init__.py', reloading
+2025-08-26 11:12:32,746 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\ultralytics\\models\\fastsam\\model.py', reloading
+2025-08-26 11:12:32,783 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\ultralytics\\utils\\__init__.py', reloading
+2025-08-26 11:12:32,820 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\ultralytics\\utils\\checks.py', reloading
+2025-08-26 11:12:32,856 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\ultralytics\\utils\\downloads.py', reloading
+2025-08-26 11:12:32,880 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\uritemplate\\__init__.py', reloading
+2025-08-26 11:12:32,913 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\uritemplate\\api.py', reloading
+2025-08-26 11:12:32,947 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\uritemplate\\template.py', reloading
+2025-08-26 11:12:32,984 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\urllib3\\__init__.py', reloading
+2025-08-26 11:12:33,183 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-08-26 11:12:34,354 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-26 11:12:34,355 - core.price_monitor - INFO - Price Change Monitor initialized
+2025-08-26 11:12:34,356 - core.notification_monitor - INFO - Notification Monitor initialized
+2025-08-26 11:12:34,356 - web.app - INFO - Browser notification monitoring is available - use dashboard to start manually
+2025-08-26 11:12:34,365 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-26 11:12:34,413 - werkzeug - WARNING -  * Debugger is active!
+2025-08-26 11:12:34,420 - werkzeug - INFO -  * Debugger PIN: 129-534-001
+2025-08-26 11:12:34,475 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:12:34] "GET /api/events HTTP/1.1" 200 -
+2025-08-26 11:12:36,332 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:12:36] "GET /api/events HTTP/1.1" 200 -
+2025-08-26 11:12:42,652 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:12:42] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-26 11:12:42,688 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:12:42] "GET /api/stats HTTP/1.1" 200 -
+2025-08-26 11:12:42,708 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:12:42] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-26 11:12:42,711 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:12:42] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-26 11:13:42,642 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:13:42] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-26 11:13:42,679 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:13:42] "GET /api/stats HTTP/1.1" 200 -
+2025-08-26 11:13:42,710 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:13:42] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-26 11:13:42,714 - core.price_monitor - WARNING - Error processing product 4 for price change: float division by zero
+2025-08-26 11:13:42,714 - core.price_monitor - WARNING - Error processing product 7 for price change: float division by zero
+2025-08-26 11:13:42,716 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:13:42] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-26 11:14:25,759 - werkzeug - INFO -  * Detected change in 'D:\\temp\\development\\fb-marketplace\\debug_custom_scrape.py', reloading
+2025-08-26 11:14:26,078 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-08-26 11:14:27,299 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-26 11:14:27,300 - core.price_monitor - INFO - Price Change Monitor initialized
+2025-08-26 11:14:27,300 - core.notification_monitor - INFO - Notification Monitor initialized
+2025-08-26 11:14:27,300 - web.app - INFO - Browser notification monitoring is available - use dashboard to start manually
+2025-08-26 11:14:27,307 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-26 11:14:27,317 - werkzeug - WARNING -  * Debugger is active!
+2025-08-26 11:14:27,320 - werkzeug - INFO -  * Debugger PIN: 129-534-001
+2025-08-26 11:14:29,382 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:14:29] "GET /api/events HTTP/1.1" 200 -
+2025-08-26 11:14:30,913 - werkzeug - INFO -  * Detected change in 'D:\\temp\\development\\fb-marketplace\\debug_save_issue.py', reloading
+2025-08-26 11:14:30,914 - werkzeug - INFO -  * Detected change in 'D:\\temp\\development\\fb-marketplace\\debug_scraping.py', reloading
+2025-08-26 11:14:30,915 - werkzeug - INFO -  * Detected change in 'D:\\temp\\development\\fb-marketplace\\debug_selectors.py', reloading
+2025-08-26 11:14:30,915 - werkzeug - INFO -  * Detected change in 'D:\\temp\\development\\fb-marketplace\\debug_test.py', reloading
+2025-08-26 11:14:31,328 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:14:31] "GET /api/events HTTP/1.1" 200 -
+2025-08-26 11:14:31,536 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-08-26 11:14:32,707 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-26 11:14:32,707 - core.price_monitor - INFO - Price Change Monitor initialized
+2025-08-26 11:14:32,707 - core.notification_monitor - INFO - Notification Monitor initialized
+2025-08-26 11:14:32,708 - web.app - INFO - Browser notification monitoring is available - use dashboard to start manually
+2025-08-26 11:14:32,717 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-26 11:14:32,725 - werkzeug - WARNING -  * Debugger is active!
+2025-08-26 11:14:32,728 - werkzeug - INFO -  * Debugger PIN: 129-534-001
+2025-08-26 11:14:34,854 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:14:34] "GET /api/events HTTP/1.1" 200 -
+2025-08-26 11:14:34,859 - werkzeug - INFO -  * Detected change in 'D:\\temp\\development\\fb-marketplace\\test_api.py', reloading
+2025-08-26 11:14:34,859 - werkzeug - INFO -  * Detected change in 'D:\\temp\\development\\fb-marketplace\\test_dashboard.py', reloading
+2025-08-26 11:14:34,860 - werkzeug - INFO -  * Detected change in 'D:\\temp\\development\\fb-marketplace\\test_dashboard_data.py', reloading
+2025-08-26 11:14:34,861 - werkzeug - INFO -  * Detected change in 'D:\\temp\\development\\fb-marketplace\\test_deep_hot_reload.py', reloading
+2025-08-26 11:14:34,862 - werkzeug - INFO -  * Detected change in 'D:\\temp\\development\\fb-marketplace\\test_deep_scraping_integration.py', reloading
+2025-08-26 11:14:34,863 - werkzeug - INFO -  * Detected change in 'D:\\temp\\development\\fb-marketplace\\test_excel_export.py', reloading
+2025-08-26 11:14:34,864 - werkzeug - INFO -  * Detected change in 'D:\\temp\\development\\fb-marketplace\\test_hot_reload.py', reloading
+2025-08-26 11:14:34,864 - werkzeug - INFO -  * Detected change in 'D:\\temp\\development\\fb-marketplace\\test_hot_reload_fix.py', reloading
+2025-08-26 11:14:34,866 - werkzeug - INFO -  * Detected change in 'D:\\temp\\development\\fb-marketplace\\test_hot_save.py', reloading
+2025-08-26 11:14:34,867 - werkzeug - INFO -  * Detected change in 'D:\\temp\\development\\fb-marketplace\\test_json_save.py', reloading
+2025-08-26 11:14:34,867 - werkzeug - INFO -  * Detected change in 'D:\\temp\\development\\fb-marketplace\\test_persistent_session.py', reloading
+2025-08-26 11:14:34,868 - werkzeug - INFO -  * Detected change in 'D:\\temp\\development\\fb-marketplace\\test_retention_fix.py', reloading
+2025-08-26 11:14:34,869 - werkzeug - INFO -  * Detected change in 'D:\\temp\\development\\fb-marketplace\\test_scheduler_api.py', reloading
+2025-08-26 11:14:34,869 - werkzeug - INFO -  * Detected change in 'D:\\temp\\development\\fb-marketplace\\test_scraper_format.py', reloading
+2025-08-26 11:14:35,917 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-08-26 11:14:37,201 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-26 11:14:37,201 - core.price_monitor - INFO - Price Change Monitor initialized
+2025-08-26 11:14:37,202 - core.notification_monitor - INFO - Notification Monitor initialized
+2025-08-26 11:14:37,202 - web.app - INFO - Browser notification monitoring is available - use dashboard to start manually
+2025-08-26 11:14:37,209 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-26 11:14:37,219 - werkzeug - WARNING -  * Debugger is active!
+2025-08-26 11:14:37,222 - werkzeug - INFO -  * Debugger PIN: 129-534-001
+2025-08-26 11:14:37,644 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:14:37] "GET /api/events HTTP/1.1" 200 -
+2025-08-26 11:14:39,508 - werkzeug - INFO -  * Detected change in 'D:\\temp\\development\\fb-marketplace\\direct_test.py', reloading
+2025-08-26 11:14:39,509 - werkzeug - INFO -  * Detected change in 'D:\\temp\\development\\fb-marketplace\\facebook_login_demo.py', reloading
+2025-08-26 11:14:39,509 - werkzeug - INFO -  * Detected change in 'D:\\temp\\development\\fb-marketplace\\simple_api_test.py', reloading
+2025-08-26 11:14:40,381 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-08-26 11:14:41,529 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-26 11:14:41,529 - core.price_monitor - INFO - Price Change Monitor initialized
+2025-08-26 11:14:41,530 - core.notification_monitor - INFO - Notification Monitor initialized
+2025-08-26 11:14:41,530 - web.app - INFO - Browser notification monitoring is available - use dashboard to start manually
+2025-08-26 11:14:41,538 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-26 11:14:41,548 - werkzeug - WARNING -  * Debugger is active!
+2025-08-26 11:14:41,550 - werkzeug - INFO -  * Debugger PIN: 129-534-001
+2025-08-26 11:14:41,644 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:14:41] "GET /api/events HTTP/1.1" 200 -
+2025-08-26 11:14:42,346 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:14:42] "GET /api/stats HTTP/1.1" 200 -
+2025-08-26 11:14:42,634 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:14:42] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-26 11:14:42,659 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:14:42] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-26 11:14:42,662 - core.price_monitor - WARNING - Error processing product 0 for price change: float division by zero
+2025-08-26 11:14:42,663 - core.price_monitor - WARNING - Error processing product 8 for price change: float division by zero
+2025-08-26 11:14:42,665 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:14:42] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-26 11:14:44,237 - werkzeug - INFO -  * Detected change in 'D:\\temp\\development\\fb-marketplace\\check_current_data.py', reloading
+2025-08-26 11:14:44,238 - werkzeug - INFO -  * Detected change in 'D:\\temp\\development\\fb-marketplace\\check_data.py', reloading
+2025-08-26 11:14:44,239 - werkzeug - INFO -  * Detected change in 'D:\\temp\\development\\fb-marketplace\\check_recent.py', reloading
+2025-08-26 11:14:44,239 - werkzeug - INFO -  * Detected change in 'D:\\temp\\development\\fb-marketplace\\check_retention.py', reloading
+2025-08-26 11:14:44,240 - werkzeug - INFO -  * Detected change in 'D:\\temp\\development\\fb-marketplace\\clean_data.py', reloading
+2025-08-26 11:14:44,240 - werkzeug - INFO -  * Detected change in 'D:\\temp\\development\\fb-marketplace\\quick_check.py', reloading
+2025-08-26 11:14:44,733 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-08-26 11:14:45,795 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-26 11:14:45,795 - core.price_monitor - INFO - Price Change Monitor initialized
+2025-08-26 11:14:45,796 - core.notification_monitor - INFO - Notification Monitor initialized
+2025-08-26 11:14:45,796 - web.app - INFO - Browser notification monitoring is available - use dashboard to start manually
+2025-08-26 11:14:45,802 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-26 11:14:45,812 - werkzeug - WARNING -  * Debugger is active!
+2025-08-26 11:14:45,814 - werkzeug - INFO -  * Debugger PIN: 129-534-001
+2025-08-26 11:14:46,642 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:14:46] "GET /api/events HTTP/1.1" 200 -
+2025-08-26 11:14:50,331 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:14:50] "GET /api/events HTTP/1.1" 200 -
+2025-08-26 11:14:58,921 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:14:58] "GET / HTTP/1.1" 200 -
+2025-08-26 11:14:59,266 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:14:59] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-26 11:14:59,267 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:14:59] "GET /api/monitoring/status HTTP/1.1" 200 -
+2025-08-26 11:14:59,268 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:14:59] "GET /api/events HTTP/1.1" 200 -
+2025-08-26 11:14:59,305 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:14:59] "GET /api/stats HTTP/1.1" 200 -
+2025-08-26 11:14:59,330 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:14:59] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-26 11:14:59,335 - core.price_monitor - WARNING - Error processing product 0 for price change: float division by zero
+2025-08-26 11:14:59,336 - core.price_monitor - WARNING - Error processing product 1 for price change: float division by zero
+2025-08-26 11:14:59,337 - core.price_monitor - WARNING - Error processing product 7 for price change: float division by zero
+2025-08-26 11:14:59,339 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:14:59] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-26 11:15:29,288 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:15:29] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-26 11:15:29,336 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:15:29] "GET /api/stats HTTP/1.1" 200 -
+2025-08-26 11:15:29,391 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:15:29] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-26 11:15:29,395 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:15:29] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-26 11:15:45,467 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:15:45] "GET / HTTP/1.1" 200 -
+2025-08-26 11:15:45,811 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:15:45] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-26 11:15:45,812 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:15:45] "GET /api/monitoring/status HTTP/1.1" 200 -
+2025-08-26 11:15:45,814 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:15:45] "GET /api/events HTTP/1.1" 200 -
+2025-08-26 11:15:45,868 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:15:45] "GET /api/stats HTTP/1.1" 200 -
+2025-08-26 11:15:45,896 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:15:45] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-26 11:15:45,907 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:15:45] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-26 11:15:52,141 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:15:52] "GET / HTTP/1.1" 200 -
+2025-08-26 11:15:52,472 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:15:52] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-26 11:15:52,476 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:15:52] "GET /api/monitoring/status HTTP/1.1" 200 -
+2025-08-26 11:15:52,484 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:15:52] "GET /api/events HTTP/1.1" 200 -
+2025-08-26 11:15:52,548 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:15:52] "GET /api/stats HTTP/1.1" 200 -
+2025-08-26 11:15:52,581 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:15:52] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-26 11:15:52,583 - core.price_monitor - WARNING - Error processing product 2 for price change: float division by zero
+2025-08-26 11:15:52,585 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:15:52] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-26 11:15:56,139 - core.scheduler - INFO - Starting custom deep scraping job for: iphone 8
+2025-08-26 11:15:56,139 - core.scheduler - INFO - Starting custom scraping job for: iphone 8
+2025-08-26 11:15:56,160 - core.scraper - INFO - Starting deep scrape for: iphone 8 (max 10 products)
+2025-08-26 11:15:56,212 - WDM - INFO - ====== WebDriver manager ======
+2025-08-26 11:15:57,034 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-26 11:15:57,466 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-26 11:15:57,957 - WDM - INFO - Driver [C:\Users\PC\.wdm\drivers\chromedriver\win64\139.0.7258.138\chromedriver-win32/chromedriver.exe] found in cache
+2025-08-26 11:15:59,026 - core.scraper - INFO - Chrome WebDriver initialized successfully
+2025-08-26 11:15:59,026 - core.scraper - INFO - Starting Facebook login...
+2025-08-26 11:16:22,483 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:16:22] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-26 11:16:22,512 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:16:22] "GET /api/stats HTTP/1.1" 200 -
+2025-08-26 11:16:22,528 - core.price_monitor - WARNING - Error processing product 2 for price change: float division by zero
+2025-08-26 11:16:22,529 - core.price_monitor - WARNING - Error processing product 9 for price change: float division by zero
+2025-08-26 11:16:22,530 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:16:22] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-26 11:16:22,533 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:16:22] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-26 11:16:50,854 - core.scraper - INFO - Successfully logged in to Facebook
+2025-08-26 11:16:50,855 - core.scraper - INFO - Navigating to Facebook Marketplace with search: iphone 8
+2025-08-26 11:16:50,855 - core.scraper - INFO - Opening marketplace URL: https://www.facebook.com/marketplace
+2025-08-26 11:16:52,462 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:16:52] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-26 11:16:52,496 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:16:52] "GET /api/stats HTTP/1.1" 200 -
+2025-08-26 11:16:52,512 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:16:52] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-26 11:16:52,515 - core.price_monitor - WARNING - Error processing product 1 for price change: float division by zero
+2025-08-26 11:16:52,515 - core.price_monitor - WARNING - Error processing product 3 for price change: float division by zero
+2025-08-26 11:16:52,516 - core.price_monitor - WARNING - Error processing product 5 for price change: float division by zero
+2025-08-26 11:16:52,517 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:16:52] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-26 11:17:02,914 - core.scraper - INFO - Navigating to custom search: https://www.facebook.com/marketplace/sydney/search/?query=iphone%208
+2025-08-26 11:17:20,266 - core.scraper - INFO - Successfully navigated to Marketplace with search: iphone 8
+2025-08-26 11:17:20,267 - core.scraper - INFO - Finding product cards for deep scraping...
+2025-08-26 11:17:22,477 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:17:22] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-26 11:17:22,512 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:17:22] "GET /api/stats HTTP/1.1" 200 -
+2025-08-26 11:17:22,529 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:17:22] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-26 11:17:22,539 - core.price_monitor - WARNING - Error processing product 6 for price change: float division by zero
+2025-08-26 11:17:22,540 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:17:22] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-26 11:17:23,282 - core.scraper - INFO - Found 22 marketplace item links
+2025-08-26 11:17:23,846 - core.scraper - INFO - Prepared 22 product cards for deep scraping
+2025-08-26 11:17:23,846 - core.scraper - INFO - Found 22 product cards, will deep scrape first 10
+2025-08-26 11:17:23,846 - core.scraper - INFO - Deep scraping product 1/10: AU$150
+iPhone 8 256 GB
+Sydney, NSW...
+2025-08-26 11:17:23,856 - core.scraper - INFO - Navigating to product page: AU$150
+iPhone 8 256 GB
+Sydney, NSW...
+2025-08-26 11:17:38,410 - core.scraper - INFO - Looking for 'See Details' button...
+2025-08-26 11:17:48,504 - core.scraper - INFO - Using profile link as 'See details' button
+2025-08-26 11:17:48,529 - core.scraper - INFO - Clicking 'See details' button: Seller details
+2025-08-26 11:17:52,488 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:17:52] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-26 11:17:52,511 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:17:52] "GET /api/stats HTTP/1.1" 200 -
+2025-08-26 11:17:52,526 - core.price_monitor - WARNING - Error processing product 1 for price change: float division by zero
+2025-08-26 11:17:52,526 - core.price_monitor - WARNING - Error processing product 6 for price change: float division by zero
+2025-08-26 11:17:52,527 - core.price_monitor - WARNING - Error processing product 9 for price change: float division by zero
+2025-08-26 11:17:52,529 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:17:52] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-26 11:17:52,530 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:17:52] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-26 11:18:22,476 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:18:22] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-26 11:18:22,503 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:18:22] "GET /api/stats HTTP/1.1" 200 -
+2025-08-26 11:18:22,513 - core.price_monitor - WARNING - Error processing product 0 for price change: float division by zero
+2025-08-26 11:18:22,514 - core.price_monitor - WARNING - Error processing product 6 for price change: float division by zero
+2025-08-26 11:18:22,517 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:18:22] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-26 11:18:22,518 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:18:22] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-26 11:18:32,748 - core.scraper - INFO - Navigated to new page, going back...
+2025-08-26 11:18:52,483 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:18:52] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-26 11:18:52,513 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:18:52] "GET /api/stats HTTP/1.1" 200 -
+2025-08-26 11:18:52,530 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:18:52] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-26 11:18:52,532 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:18:52] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-26 11:19:14,333 - core.scraper - INFO - Navigating back to search results...
+2025-08-26 11:19:18,885 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:19:18] "GET /api/stats HTTP/1.1" 200 -
+2025-08-26 11:19:18,891 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:19:18] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-26 11:19:22,482 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:19:22] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-26 11:19:22,509 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:19:22] "GET /api/stats HTTP/1.1" 200 -
+2025-08-26 11:19:22,529 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:19:22] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-26 11:19:22,533 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:19:22] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-26 11:19:24,683 - core.scraper - INFO - Deep scraping product 2/10: AU$95
+AU$110
+iPhone 8 plus 64GB
+Sydney, NSW...
+2025-08-26 11:19:24,690 - core.scraper - INFO - Navigating to product page: AU$95
+AU$110
+iPhone 8 plus 64GB
+Sydney, NSW...
+2025-08-26 11:19:43,793 - core.scraper - INFO - Looking for 'See Details' button...
+2025-08-26 11:20:08,504 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-26 11:20:08,505 - core.price_monitor - INFO - Price Change Monitor initialized
+2025-08-26 11:20:08,505 - core.notification_monitor - INFO - Notification Monitor initialized
+2025-08-26 11:20:08,505 - web.app - INFO - Browser notification monitoring is available - use dashboard to start manually
+2025-08-26 11:20:08,514 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-26 11:20:08,545 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-08-26 11:20:08,545 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-26 11:20:08,556 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-08-26 11:20:09,567 - core.scheduler - INFO - Scheduler initialized successfully
+2025-08-26 11:20:09,568 - core.price_monitor - INFO - Price Change Monitor initialized
+2025-08-26 11:20:09,568 - core.notification_monitor - INFO - Notification Monitor initialized
+2025-08-26 11:20:09,568 - web.app - INFO - Browser notification monitoring is available - use dashboard to start manually
+2025-08-26 11:20:09,574 - __main__ - INFO - Starting web dashboard at http://127.0.0.1:5000
+2025-08-26 11:20:09,583 - werkzeug - WARNING -  * Debugger is active!
+2025-08-26 11:20:09,585 - werkzeug - INFO -  * Debugger PIN: 129-534-001
+2025-08-26 11:20:09,601 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:20:09] "GET /api/events HTTP/1.1" 200 -
+2025-08-26 11:20:11,326 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:20:11] "GET /api/events HTTP/1.1" 200 -
+2025-08-26 11:20:18,208 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:20:18] "GET / HTTP/1.1" 200 -
+2025-08-26 11:20:18,546 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:20:18] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-26 11:20:18,548 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:20:18] "GET /api/monitoring/status HTTP/1.1" 200 -
+2025-08-26 11:20:18,550 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:20:18] "GET /api/events HTTP/1.1" 200 -
+2025-08-26 11:20:18,580 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:20:18] "GET /api/stats HTTP/1.1" 200 -
+2025-08-26 11:20:18,593 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:20:18] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-26 11:20:18,595 - core.price_monitor - WARNING - Error processing product 4 for price change: float division by zero
+2025-08-26 11:20:18,596 - core.price_monitor - WARNING - Error processing product 9 for price change: float division by zero
+2025-08-26 11:20:18,597 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:20:18] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-26 11:20:19,871 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:20:19] "GET /api/listing/deep_3973126712950783 HTTP/1.1" 200 -
+2025-08-26 11:20:48,653 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:20:48] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-26 11:20:48,668 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:20:48] "GET /api/stats HTTP/1.1" 200 -
+2025-08-26 11:20:48,689 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:20:48] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-26 11:20:48,691 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:20:48] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-26 11:21:18,653 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:21:18] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-26 11:21:18,674 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:21:18] "GET /api/stats HTTP/1.1" 200 -
+2025-08-26 11:21:18,692 - core.price_monitor - WARNING - Error processing product 1 for price change: float division by zero
+2025-08-26 11:21:18,693 - core.price_monitor - WARNING - Error processing product 2 for price change: float division by zero
+2025-08-26 11:21:18,693 - core.price_monitor - WARNING - Error processing product 7 for price change: float division by zero
+2025-08-26 11:21:18,695 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:21:18] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-26 11:21:18,696 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:21:18] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-26 11:21:48,646 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:21:48] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-26 11:21:48,674 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:21:48] "GET /api/stats HTTP/1.1" 200 -
+2025-08-26 11:21:48,681 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:21:48] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-26 11:21:48,690 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:21:48] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-26 11:22:18,629 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:22:18] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-26 11:22:18,651 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:22:18] "GET /api/stats HTTP/1.1" 200 -
+2025-08-26 11:22:18,665 - core.price_monitor - WARNING - Error processing product 0 for price change: float division by zero
+2025-08-26 11:22:18,667 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:22:18] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-26 11:22:18,669 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:22:18] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-26 11:22:25,084 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:22:25] "GET / HTTP/1.1" 200 -
+2025-08-26 11:22:25,405 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:22:25] "GET /api/monitoring/status HTTP/1.1" 200 -
+2025-08-26 11:22:25,406 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:22:25] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-26 11:22:25,422 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:22:25] "GET /api/events HTTP/1.1" 200 -
+2025-08-26 11:22:25,449 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:22:25] "GET /api/stats HTTP/1.1" 200 -
+2025-08-26 11:22:25,453 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:22:25] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-26 11:22:25,455 - core.price_monitor - WARNING - Error processing product 0 for price change: float division by zero
+2025-08-26 11:22:25,456 - core.price_monitor - WARNING - Error processing product 3 for price change: float division by zero
+2025-08-26 11:22:25,457 - core.price_monitor - WARNING - Error processing product 7 for price change: float division by zero
+2025-08-26 11:22:25,458 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:22:25] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-26 11:22:27,180 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:22:27] "GET /api/listing/deep_3973126712950783 HTTP/1.1" 200 -
+2025-08-26 11:22:55,647 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:22:55] "GET /api/stats HTTP/1.1" 200 -
+2025-08-26 11:22:55,651 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:22:55] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-26 11:22:55,675 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:22:55] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-26 11:22:55,677 - core.price_monitor - WARNING - Error processing product 8 for price change: float division by zero
+2025-08-26 11:22:55,677 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:22:55] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-26 11:23:25,641 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:23:25] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-26 11:23:25,666 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:23:25] "GET /api/stats HTTP/1.1" 200 -
+2025-08-26 11:23:25,699 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:23:25] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-26 11:23:25,700 - core.price_monitor - WARNING - Error processing product 2 for price change: float division by zero
+2025-08-26 11:23:25,701 - core.price_monitor - WARNING - Error processing product 7 for price change: float division by zero
+2025-08-26 11:23:25,702 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:23:25] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-26 11:23:55,636 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:23:55] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-26 11:23:55,669 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:23:55] "GET /api/stats HTTP/1.1" 200 -
+2025-08-26 11:23:55,680 - core.price_monitor - WARNING - Error processing product 7 for price change: float division by zero
+2025-08-26 11:23:55,683 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:23:55] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-26 11:23:55,685 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:23:55] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-26 11:24:25,642 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:24:25] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-26 11:24:25,669 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:24:25] "GET /api/stats HTTP/1.1" 200 -
+2025-08-26 11:24:25,693 - core.price_monitor - WARNING - Error processing product 3 for price change: float division by zero
+2025-08-26 11:24:25,694 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:24:25] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-26 11:24:25,696 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:24:25] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-26 11:24:30,270 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:24:30] "GET / HTTP/1.1" 200 -
+2025-08-26 11:24:30,600 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:24:30] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-26 11:24:30,601 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:24:30] "GET /api/monitoring/status HTTP/1.1" 200 -
+2025-08-26 11:24:30,603 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:24:30] "GET /api/events HTTP/1.1" 200 -
+2025-08-26 11:24:30,634 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:24:30] "GET /api/stats HTTP/1.1" 200 -
+2025-08-26 11:24:30,645 - core.price_monitor - WARNING - Error processing product 0 for price change: float division by zero
+2025-08-26 11:24:30,647 - core.price_monitor - WARNING - Error processing product 7 for price change: float division by zero
+2025-08-26 11:24:30,649 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:24:30] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-26 11:24:30,650 - core.price_monitor - WARNING - Error processing product 9 for price change: float division by zero
+2025-08-26 11:24:30,652 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:24:30] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-26 11:24:33,217 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:24:33] "GET /api/listing/deep_3973126712950783 HTTP/1.1" 200 -
+2025-08-26 11:25:00,631 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:25:00] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-26 11:25:00,632 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:25:00] "GET /api/stats HTTP/1.1" 200 -
+2025-08-26 11:25:00,659 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:25:00] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-26 11:25:00,660 - core.price_monitor - WARNING - Error processing product 4 for price change: float division by zero
+2025-08-26 11:25:00,662 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:25:00] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
+2025-08-26 11:25:30,612 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:25:30] "GET /api/schedulers HTTP/1.1" 200 -
+2025-08-26 11:25:30,650 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:25:30] "GET /api/stats HTTP/1.1" 200 -
+2025-08-26 11:25:30,659 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:25:30] "GET /api/listings?limit=20 HTTP/1.1" 200 -
+2025-08-26 11:25:30,664 - core.price_monitor - WARNING - Error processing product 3 for price change: float division by zero
+2025-08-26 11:25:30,665 - core.price_monitor - WARNING - Error processing product 6 for price change: float division by zero
+2025-08-26 11:25:30,665 - core.price_monitor - WARNING - Error processing product 8 for price change: float division by zero
+2025-08-26 11:25:30,666 - werkzeug - INFO - 127.0.0.1 - - [26/Aug/2025 11:25:30] "GET /api/price-changes?limit=10 HTTP/1.1" 200 -
