@@ -1,0 +1,50 @@
+{
+  "basic_info": {
+    "title": "AU$335\niPhone 11 64GB & 128GB\nSydney, NSW",
+    "url": "https://www.facebook.com/marketplace/item/1462903418180714/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A52779942-960b-4c5f-9afc-c03fb19d839b&__tn__=!%3AD",
+    "extraction_timestamp": "2025-08-26T12:44:37.585748",
+    "page_title": "(12) Marketplace – iPhone 11 64GB & 128GB | Facebook",
+    "current_url": "https://www.facebook.com/marketplace/item/1462903418180714/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A52779942-960b-4c5f-9afc-c03fb19d839b",
+    "price": {
+      "amount": "85",
+      "currency": "KR",
+      "raw_price_text": "85 kr"
+    },
+    "location": {
+      "city": "Within",
+      "distance": "51km",
+      "raw_location": "Within 51"
+    },
+    "product_id": "1462903418180714"
+  },
+  "seller_details": {
+    "button_found": true,
+    "extraction_timestamp": "2025-08-26T12:45:00.888341",
+    "button_text": "Seller details",
+    "button_href": "https://www.facebook.com/marketplace/profile/61563444297555/?product_id=1462903418180714",
+    "join_date": "joined facebook in 2024",
+    "click_error": "Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception\nStacktrace:\n\tGetHandleVerifier [0x0xf5ffc3+65331]\n\tGetHandleVerifier [0x0xf60004+65396]\n\t(No symbol) [0x0xd53dc0]\n\t(No symbol) [0x0xd8fbd8]\n\t(No symbol) [0x0xdc1396]\n\t(No symbol) [0x0xdbcf70]\n\t(No symbol) [0x0xdbc4f6]\n\t(No symbol) [0x0xd259b5]\n\t(No symbol) [0x0xd25f0e]\n\t(No symbol) [0x0xd2639d]\n\tGetHandleVerifier [0x0x11a38b3+2439203]\n\tGetHandleVerifier [0x0x119eae2+2419282]\n\tGetHandleVerifier [0x0xf8712a+225434]\n\tGetHandleVerifier [0x0xf76e08+159096]\n\tGetHandleVerifier [0x0xf7dd5d+187597]\n\t(No symbol) [0x0xd25680]\n\t(No symbol) [0x0xd24e8e]\n\tGetHandleVerifier [0x0x12ba2ec+3580508]\n\tBaseThreadInitThunk [0x0x76c37ba9+25]\n\tRtlInitializeExceptionChain [0x0x77c4c3ab+107]\n\tRtlClearBits [0x0x77c4c32f+191]\n"
+  },
+  "seller_metrics": {
+    "basic_info": {
+      "seller_name": "Seller details",
+      "profile_url": "https://www.facebook.com/marketplace/profile/61563444297555/?product_id=1462903418180714"
+    }
+  },
+  "product_comprehensive": {
+    "error": "Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception\nStacktrace:\n\tGetHandleVerifier [0x0xf5ffc3+65331]\n\tGetHandleVerifier [0x0xf60004+65396]\n\t(No symbol) [0x0xd53dc0]\n\t(No symbol) [0x0xd8fbd8]\n\t(No symbol) [0x0xdc1396]\n\t(No symbol) [0x0xdbcf70]\n\t(No symbol) [0x0xdbc4f6]\n\t(No symbol) [0x0xd259b5]\n\t(No symbol) [0x0xd25f0e]\n\t(No symbol) [0x0xd2639d]\n\tGetHandleVerifier [0x0x11a38b3+2439203]\n\tGetHandleVerifier [0x0x119eae2+2419282]\n\tGetHandleVerifier [0x0xf8712a+225434]\n\tGetHandleVerifier [0x0xf76e08+159096]\n\tGetHandleVerifier [0x0xf7dd5d+187597]\n\t(No symbol) [0x0xd25680]\n\t(No symbol) [0x0xd24e8e]\n\tGetHandleVerifier [0x0x12ba2ec+3580508]\n\tBaseThreadInitThunk [0x0x76c37ba9+25]\n\tRtlInitializeExceptionChain [0x0x77c4c3ab+107]\n\tRtlClearBits [0x0x77c4c32f+191]\n",
+    "images": [],
+    "description": ""
+  },
+  "marketplace_metadata": {
+    "error": "Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception\nStacktrace:\n\tGetHandleVerifier [0x0xf5ffc3+65331]\n\tGetHandleVerifier [0x0xf60004+65396]\n\t(No symbol) [0x0xd53dc0]\n\t(No symbol) [0x0xd8fbd8]\n\t(No symbol) [0x0xdc1396]\n\t(No symbol) [0x0xdbcf70]\n\t(No symbol) [0x0xdbc4f6]\n\t(No symbol) [0x0xd259b5]\n\t(No symbol) [0x0xd25f0e]\n\t(No symbol) [0x0xd2639d]\n\tGetHandleVerifier [0x0x11a38b3+2439203]\n\tGetHandleVerifier [0x0x119eae2+2419282]\n\tGetHandleVerifier [0x0xf8712a+225434]\n\tGetHandleVerifier [0x0xf76e08+159096]\n\tGetHandleVerifier [0x0xf7dd5d+187597]\n\t(No symbol) [0x0xd25680]\n\t(No symbol) [0x0xd24e8e]\n\tGetHandleVerifier [0x0x12ba2ec+3580508]\n\tBaseThreadInitThunk [0x0x76c37ba9+25]\n\tRtlInitializeExceptionChain [0x0x77c4c3ab+107]\n\tRtlClearBits [0x0x77c4c32f+191]\n",
+    "timing": {
+      "error": "Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception\nStacktrace:\n\tGetHandleVerifier [0x0xf5ffc3+65331]\n\tGetHandleVerifier [0x0xf60004+65396]\n\t(No symbol) [0x0xd53dc0]\n\t(No symbol) [0x0xd8fbd8]\n\t(No symbol) [0x0xdc1396]\n\t(No symbol) [0x0xdbcf70]\n\t(No symbol) [0x0xdbc4f6]\n\t(No symbol) [0x0xd259b5]\n\t(No symbol) [0x0xd25f0e]\n\t(No symbol) [0x0xd2639d]\n\tGetHandleVerifier [0x0x11a38b3+2439203]\n\tGetHandleVerifier [0x0x119eae2+2419282]\n\tGetHandleVerifier [0x0xf8712a+225434]\n\tGetHandleVerifier [0x0xf76e08+159096]\n\tGetHandleVerifier [0x0xf7dd5d+187597]\n\t(No symbol) [0x0xd25680]\n\t(No symbol) [0x0xd24e8e]\n\tGetHandleVerifier [0x0x12ba2ec+3580508]\n\tBaseThreadInitThunk [0x0x76c37ba9+25]\n\tRtlInitializeExceptionChain [0x0x77c4c3ab+107]\n\tRtlClearBits [0x0x77c4c32f+191]\n"
+    }
+  },
+  "extraction_metadata": {
+    "method": "deep_scraper",
+    "product_index": 2,
+    "data_quality": "comprehensive"
+  }
+}

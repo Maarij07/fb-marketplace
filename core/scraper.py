@@ -85,6 +85,15 @@ class FacebookMarketplaceScraper:
             'errors': []
         }
         
+        # Enhanced extraction settings
+        self.enhanced_extraction = {
+            'enabled': True,
+            'extract_real_prices': True,
+            'extract_real_seller_names': True,
+            'visit_seller_profiles': True,
+            'save_enhanced_data': True
+        }
+        
         # Create output directory for detailed reports
         import os
         self.output_dir = "deep_scrape_output"
@@ -639,6 +648,10 @@ class FacebookMarketplaceScraper:
                 self.logger.info(f"Successfully extracted listing: {safe_title}... Price: {listing_data['price']['amount']} {listing_data['price']['currency']} ID: {listing_data['id']}")
             except Exception:
                 self.logger.info(f"Successfully extracted listing (title contains special chars) Price: {listing_data['price']['amount']} {listing_data['price']['currency']} ID: {listing_data['id']}")
+            
+            # 🔥 ENHANCED EXTRACTION: If enabled, enhance this listing with real data
+            if self.enhanced_extraction['enabled']:
+                listing_data = self._enhance_listing_with_real_data(listing_data)
             
             return listing_data
             
@@ -2334,6 +2347,281 @@ class FacebookMarketplaceScraper:
             
         except Exception as e:
             self.logger.error(f"Failed to send standard product notification: {e}")
+    
+    def _enhance_listing_with_real_data(self, listing_data: Dict[str, Any]) -> Dict[str, Any]:
+        """🔥 ENHANCED EXTRACTION: Visit product page and extract real data."""
+        try:
+            if not self.enhanced_extraction['enabled']:
+                return listing_data
+            
+            product_url = listing_data.get('marketplace_url')
+            if not product_url:
+                return listing_data
+            
+            original_url = self.driver.current_url
+            product_id = listing_data.get('id', 'unknown')
+            
+            self.logger.info(f"🔥 Enhancing listing {product_id} with real data from product page")
+            
+            try:
+                # Navigate to product page
+                self.driver.get(product_url)
+                time.sleep(2)
+                
+                # Extract real price
+                if self.enhanced_extraction['extract_real_prices']:
+                    real_price = self._extract_enhanced_price_from_page()
+                    if real_price:
+                        listing_data['enhanced_price'] = real_price
+                        # Update main price with real data
+                        listing_data['price'] = {
+                            'amount': real_price.get('amount', listing_data['price']['amount']),
+                            'currency': real_price.get('currency', listing_data['price']['currency']),
+                            'raw_value': real_price.get('raw', listing_data['price']['raw_value'])
+                        }
+                
+                # Extract real location
+                real_location = self._extract_enhanced_location_from_page()
+                if real_location:
+                    listing_data['enhanced_location'] = real_location
+                    # Update main location with real data
+                    listing_data['location'] = real_location
+                
+                # Extract real seller information
+                if self.enhanced_extraction['extract_real_seller_names']:
+                    real_seller = self._extract_enhanced_seller_from_page(product_id)
+                    if real_seller:
+                        listing_data['enhanced_seller'] = real_seller
+                        # Update main seller info
+                        if real_seller.get('name'):
+                            listing_data['seller'] = {
+                                'info': real_seller['name'],
+                                'profile': real_seller.get('profile_url', listing_data['seller'].get('profile'))
+                            }
+                            listing_data['seller_name'] = real_seller['name']
+                
+                # Extract enhanced product details
+                enhanced_details = self._extract_enhanced_product_details_from_page()
+                if enhanced_details:
+                    listing_data['enhanced_details'] = enhanced_details
+                    
+                    # Update main product details
+                    for key, value in enhanced_details.items():
+                        if key in listing_data['product_details'] and value != 'Unknown':
+                            listing_data['product_details'][key] = value
+                
+                # Mark as enhanced
+                listing_data['enhancement_status'] = 'enhanced'
+                listing_data['enhancement_timestamp'] = datetime.now().isoformat()
+                
+                # Navigate back
+                self.driver.get(original_url)
+                time.sleep(1)
+                
+                self.logger.info(f"✅ Successfully enhanced listing {product_id}")
+                
+            except Exception as e:
+                self.logger.error(f"Failed to enhance listing {product_id}: {e}")
+                listing_data['enhancement_status'] = 'failed'
+                listing_data['enhancement_error'] = str(e)
+                
+                # Try to navigate back even on error
+                try:
+                    self.driver.get(original_url)
+                    time.sleep(1)
+                except:
+                    pass
+            
+            return listing_data
+            
+        except Exception as e:
+            self.logger.error(f"Enhanced extraction failed: {e}")
+            return listing_data
+    
+    def _extract_enhanced_price_from_page(self) -> Optional[Dict[str, Any]]:
+        """Extract real price from product page."""
+        try:
+            # Multiple price selectors for different layouts
+            price_selectors = [
+                "[data-testid*='price']",
+                ".x193iq5w.xeuugli.x13faqbe.x1vvkbs.x1s688f",
+                ".x1n2onr6.x1ja2u2z.x78zum5.x2lah0s.xl56j7k"
+            ]
+            
+            for selector in price_selectors:
+                try:
+                    price_elem = self.driver.find_element(By.CSS_SELECTOR, selector)
+                    if price_elem and price_elem.text.strip():
+                        raw_price = price_elem.text.strip()
+                        
+                        # Parse the price
+                        price_match = re.search(r'(AU\$|USD\$|\$)?\s*([0-9,]+)', raw_price)
+                        if price_match:
+                            return {
+                                'currency_symbol': price_match.group(1) or '$',
+                                'amount': price_match.group(2).replace(',', ''),
+                                'currency': 'AUD' if 'AU' in raw_price else 'USD',
+                                'raw': raw_price
+                            }
+                except NoSuchElementException:
+                    continue
+            
+            return None
+            
+        except Exception as e:
+            self.logger.error(f"Failed to extract enhanced price: {e}")
+            return None
+    
+    def _extract_enhanced_location_from_page(self) -> Optional[Dict[str, Any]]:
+        """Extract real location from product page."""
+        try:
+            location_selectors = [
+                "[data-testid*='location']",
+                ".x1i10hfl.x1qjc9v5.xjbqb8w.xjqpnuy",
+                "*[class*='location']"
+            ]
+            
+            for selector in location_selectors:
+                try:
+                    loc_elem = self.driver.find_element(By.CSS_SELECTOR, selector)
+                    if loc_elem and loc_elem.text.strip():
+                        location_text = loc_elem.text.strip()
+                        if len(location_text) < 100:  # Reasonable location length
+                            return {
+                                'city': location_text,
+                                'distance': 'Unknown',
+                                'raw_location': location_text
+                            }
+                except NoSuchElementException:
+                    continue
+            
+            return None
+            
+        except Exception as e:
+            self.logger.error(f"Failed to extract enhanced location: {e}")
+            return None
+    
+    def _extract_enhanced_seller_from_page(self, product_id: str) -> Optional[Dict[str, Any]]:
+        """Extract real seller information by visiting seller profile."""
+        try:
+            if not self.enhanced_extraction['visit_seller_profiles']:
+                return None
+            
+            seller_data = {
+                'extraction_method': 'enhanced_scraper',
+                'extraction_timestamp': datetime.now().isoformat()
+            }
+            
+            # Look for seller profile links
+            profile_link_selectors = [
+                "a[href*='/marketplace/profile/']",
+                "a[href*='facebook.com/profile.php']",
+                "a[href*='/people/']"
+            ]
+            
+            seller_profile_url = None
+            for selector in profile_link_selectors:
+                try:
+                    link_elems = self.driver.find_elements(By.CSS_SELECTOR, selector)
+                    for link_elem in link_elems:
+                        href = link_elem.get_attribute('href')
+                        if href and ('profile' in href or 'people' in href):
+                            seller_profile_url = href
+                            break
+                    if seller_profile_url:
+                        break
+                except Exception:
+                    continue
+            
+            if not seller_profile_url:
+                return seller_data
+            
+            # Visit seller profile
+            current_url = self.driver.current_url
+            try:
+                self.driver.get(seller_profile_url)
+                time.sleep(2)
+                
+                # Extract seller name
+                name_selectors = [
+                    "h1[data-testid*='name']",
+                    ".x1heor9g.x1qlqyl8.x1pd3egz.x1a2a7pz h1",
+                    "h1.x1heor9g",
+                    "h1"
+                ]
+                
+                for selector in name_selectors:
+                    try:
+                        name_elem = self.driver.find_element(By.CSS_SELECTOR, selector)
+                        if name_elem and name_elem.text.strip():
+                            name_text = name_elem.text.strip()
+                            if len(name_text) < 100 and name_text.lower() not in ['facebook', 'marketplace']:
+                                seller_data['name'] = name_text
+                                break
+                    except NoSuchElementException:
+                        continue
+                
+                seller_data['profile_url'] = seller_profile_url
+                seller_data['profile_visited'] = True
+                
+                # Navigate back
+                self.driver.get(current_url)
+                time.sleep(1)
+                
+                return seller_data
+                
+            except Exception as e:
+                # Navigate back on error
+                try:
+                    self.driver.get(current_url)
+                    time.sleep(1)
+                except:
+                    pass
+                
+                seller_data['error'] = str(e)
+                seller_data['profile_visited'] = False
+                return seller_data
+            
+        except Exception as e:
+            self.logger.error(f"Failed to extract enhanced seller info: {e}")
+            return None
+    
+    def _extract_enhanced_product_details_from_page(self) -> Optional[Dict[str, Any]]:
+        """Extract enhanced product details from current page."""
+        try:
+            details = {}
+            page_text = self.driver.page_source.lower()
+            
+            # Extract storage information
+            storage_matches = re.findall(r'(\d+)\s*(gb|tb)', page_text, re.IGNORECASE)
+            if storage_matches:
+                details['storage'] = f"{storage_matches[0][0]} {storage_matches[0][1].upper()}"
+            
+            # Extract color information
+            colors = ['black', 'white', 'blue', 'red', 'green', 'purple', 'pink', 'gold', 'silver', 'titanium']
+            for color in colors:
+                if color in page_text:
+                    details['color'] = color.title()
+                    break
+            
+            # Extract condition
+            condition_phrases = {
+                'new_in_box': ['new in box', 'sealed', 'unopened', 'brand new'],
+                'like_new': ['like new', 'mint condition', 'as new'],
+                'good': ['good condition', 'well maintained'],
+                'fair': ['fair condition', 'used', 'visible wear']
+            }
+            
+            for condition_type, phrases in condition_phrases.items():
+                if any(phrase in page_text for phrase in phrases):
+                    details['condition'] = condition_type
+                    break
+            
+            return details if details else None
+            
+        except Exception as e:
+            self.logger.error(f"Failed to extract enhanced product details: {e}")
+            return None
     
     def __del__(self):
         """Cleanup when object is destroyed."""

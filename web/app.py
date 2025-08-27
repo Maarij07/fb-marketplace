@@ -17,6 +17,7 @@ from core.json_manager import JSONDataManager
 from core.scheduler import SchedulerManager
 from core.persistent_session import get_persistent_session
 from core.excel_manager import ExcelManager
+from core.google_sheets_manager import GoogleSheetsManager
 from core.price_monitor import PriceChangeMonitor
 from core.notification_monitor import get_notification_monitor
 
@@ -106,6 +107,7 @@ def create_app(settings):
     scheduler_manager = SchedulerManager(settings)
     notification_manager = NotificationManager()
     excel_manager = ExcelManager()
+    google_sheets_manager = GoogleSheetsManager()
     
     # Initialize schedulers storage (max 3 schedulers)
     app.schedulers = []  # List to store multiple scheduler configurations
@@ -436,6 +438,18 @@ def create_app(settings):
             city = data.get('city', '').strip() or None
             interval_minutes = data.get('interval_minutes', 30)
             
+            # Sydney cities list - alphabetical order
+            sydney_cities = [
+                'Alexandria', 'Ashfield', 'Auburn', 'Balmain', 'Bankstown',
+                'Blacktown', 'Bondi Beach', 'Bondi Junction', 'Burwood', 'Castle Hill',
+                'Chatswood', 'Cronulla', 'Darlinghurst', 'Five Dock', 'Homebush',
+                'Hornsby', 'Kirribilli', 'Leichhardt', 'Liverpool', 'Macquarie Park',
+                'Manly', 'Maroubra', 'Mascot', 'Milsons Point', 'Miranda',
+                'Neutral Bay', 'Newtown', 'North Sydney', 'Paddington', 'Parramatta',
+                'Potts Point', 'Randwick', 'Rhodes', 'Ryde', 'Surry Hills',
+                'Sydney CBD', 'Wetherill Park'
+            ]
+            
             if not search_query:
                 return jsonify({'success': False, 'message': 'Search query is required'})
             
@@ -461,10 +475,11 @@ def create_app(settings):
             new_scheduler = {
                 'id': len(app.schedulers) + 1,
                 'search_query': search_query,
-                'city': city or 'Stockholm',
+                'city': city or sydney_cities[0],
                 'interval_minutes': interval_minutes,
                 'is_running': True,
-                'created_at': datetime.now().isoformat()
+                'created_at': datetime.now().isoformat(),
+                'sydney_cities': sydney_cities
             }
             
             # Add to schedulers list
@@ -491,6 +506,29 @@ def create_app(settings):
             })
         except Exception as e:
             logger.error(f"Failed to get scheduler status: {e}")
+            return jsonify({'success': False, 'error': str(e)})
+    
+    @app.route('/api/sydney-cities')
+    def api_sydney_cities():
+        """Get list of Sydney cities for scheduler configuration."""
+        try:
+            sydney_cities = [
+                'Alexandria', 'Ashfield', 'Auburn', 'Balmain', 'Bankstown',
+                'Blacktown', 'Bondi Beach', 'Bondi Junction', 'Burwood', 'Castle Hill',
+                'Chatswood', 'Cronulla', 'Darlinghurst', 'Five Dock', 'Homebush',
+                'Hornsby', 'Kirribilli', 'Leichhardt', 'Liverpool', 'Macquarie Park',
+                'Manly', 'Maroubra', 'Mascot', 'Milsons Point', 'Miranda',
+                'Neutral Bay', 'Newtown', 'North Sydney', 'Paddington', 'Parramatta',
+                'Potts Point', 'Randwick', 'Rhodes', 'Ryde', 'Surry Hills',
+                'Sydney CBD', 'Wetherill Park'
+            ]
+            
+            return jsonify({
+                'success': True,
+                'data': sydney_cities
+            })
+        except Exception as e:
+            logger.error(f"Failed to get Sydney cities: {e}")
             return jsonify({'success': False, 'error': str(e)})
     
     @app.route('/api/schedulers')
@@ -752,72 +790,97 @@ def create_app(settings):
     
     @app.route('/api/excel/export', methods=['POST'])
     def api_excel_export():
-        """Export data to Excel and open file."""
+        """Export data to Google Sheets and open spreadsheet."""
         try:
-            # Create Excel export
-            filepath = excel_manager.export_all_products_to_excel()
+            # Your Google Sheets URL
+            sheet_url = "https://docs.google.com/spreadsheets/d/1plNlmsrbvE0fRYLrfBqt6rawPYiXwsJrhyqJa6-5BpI/edit?usp=sharing"
+            worksheet_name = "Products"
             
-            if not filepath:
-                return jsonify({
-                    'success': False,
-                    'error': 'No data available to export'
-                })
+            # Export to Google Sheets
+            success = google_sheets_manager.export_all_products_to_sheets(sheet_url, worksheet_name)
             
-            # Open the Excel file
-            opened_successfully = excel_manager.open_excel_file(filepath)
-            
-            if opened_successfully:
-                return jsonify({
-                    'success': True,
-                    'message': 'Excel file created and opened successfully!',
-                    'filepath': filepath
-                })
+            if success:
+                # Open the Google Sheets in browser
+                import webbrowser
+                try:
+                    webbrowser.open(sheet_url)
+                    return jsonify({
+                        'success': True,
+                        'message': 'Data exported to Google Sheets and opened successfully!',
+                        'sheet_url': sheet_url,
+                        'action': 'google_sheets_export'
+                    })
+                except Exception as browser_error:
+                    logger.warning(f"Failed to open browser: {browser_error}")
+                    return jsonify({
+                        'success': True,
+                        'message': 'Data exported to Google Sheets successfully, but failed to open browser automatically.',
+                        'sheet_url': sheet_url,
+                        'action': 'google_sheets_export'
+                    })
             else:
                 return jsonify({
-                    'success': True,
-                    'message': 'Excel file created successfully, but failed to open automatically',
-                    'filepath': filepath
+                    'success': False,
+                    'error': 'Failed to export data to Google Sheets. Please check your credentials and permissions.',
+                    'help': 'Make sure you have set up Google API credentials and shared the spreadsheet with your service account.'
                 })
                 
         except Exception as e:
-            logger.error(f"Failed to export to Excel: {e}")
-            return jsonify({'success': False, 'error': str(e)})
+            logger.error(f"Failed to export to Google Sheets: {e}")
+            return jsonify({
+                'success': False, 
+                'error': f'Google Sheets export failed: {str(e)}',
+                'help': 'Check the GOOGLE_SHEETS_SETUP.md file for setup instructions.'
+            })
     
     @app.route('/api/excel/backup', methods=['POST'])
     def api_excel_backup():
-        """Create Excel backup of recent data."""
+        """Create Google Sheets backup of recent data."""
         try:
             data = request.get_json() or {}
             hours = int(data.get('hours', 2))
             
-            # Create backup
-            filepath = excel_manager.create_backup_before_cleanup(hours)
+            # Your Google Sheets URL
+            sheet_url = "https://docs.google.com/spreadsheets/d/1plNlmsrbvE0fRYLrfBqt6rawPYiXwsJrhyqJa6-5BpI/edit?usp=sharing"
             
-            if not filepath:
-                return jsonify({
-                    'success': False,
-                    'message': f'No data found in the last {hours} hours to backup'
-                })
+            # Create backup in Google Sheets with timestamped worksheet name
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            worksheet_name = f"Backup_{hours}h_{timestamp}"
             
-            # Open the Excel file
-            opened_successfully = excel_manager.open_excel_file(filepath)
+            success = google_sheets_manager.create_backup_in_sheets(sheet_url, hours, "Backup")
             
-            if opened_successfully:
-                return jsonify({
-                    'success': True,
-                    'message': f'Backup created for last {hours} hours and opened successfully!',
-                    'filepath': filepath
-                })
+            if success:
+                # Open the Google Sheets in browser
+                import webbrowser
+                try:
+                    webbrowser.open(sheet_url)
+                    return jsonify({
+                        'success': True,
+                        'message': f'Backup created for last {hours} hours in Google Sheets and opened successfully!',
+                        'sheet_url': sheet_url,
+                        'action': 'google_sheets_backup'
+                    })
+                except Exception as browser_error:
+                    logger.warning(f"Failed to open browser: {browser_error}")
+                    return jsonify({
+                        'success': True,
+                        'message': f'Backup created for last {hours} hours in Google Sheets successfully, but failed to open browser automatically.',
+                        'sheet_url': sheet_url,
+                        'action': 'google_sheets_backup'
+                    })
             else:
                 return jsonify({
-                    'success': True,
-                    'message': f'Backup created for last {hours} hours, but failed to open automatically',
-                    'filepath': filepath
+                    'success': False,
+                    'message': f'No data found in the last {hours} hours to backup, or Google Sheets export failed.'
                 })
                 
         except Exception as e:
-            logger.error(f"Failed to create Excel backup: {e}")
-            return jsonify({'success': False, 'error': str(e)})
+            logger.error(f"Failed to create Google Sheets backup: {e}")
+            return jsonify({
+                'success': False, 
+                'error': f'Google Sheets backup failed: {str(e)}',
+                'help': 'Check the GOOGLE_SHEETS_SETUP.md file for setup instructions.'
+            })
     
     @app.route('/api/excel/files')
     def api_excel_files():
@@ -830,6 +893,160 @@ def create_app(settings):
             })
         except Exception as e:
             logger.error(f"Failed to get Excel files: {e}")
+            return jsonify({'success': False, 'error': str(e)})
+    
+    # Google Sheets Export APIs
+    @app.route('/api/sheets/export', methods=['POST'])
+    def api_sheets_export():
+        """Export all products to Google Sheets."""
+        try:
+            data = request.get_json() or {}
+            sheet_url = data.get('sheet_url', '').strip()
+            worksheet_name = data.get('worksheet_name', 'Products')
+            
+            if not sheet_url:
+                return jsonify({
+                    'success': False,
+                    'error': 'Google Sheets URL is required'
+                })
+            
+            # Export to Google Sheets
+            success = google_sheets_manager.export_all_products_to_sheets(sheet_url, worksheet_name)
+            
+            if success:
+                return jsonify({
+                    'success': True,
+                    'message': f'Successfully exported all products to Google Sheets worksheet "{worksheet_name}"!',
+                    'sheet_url': sheet_url
+                })
+            else:
+                return jsonify({
+                    'success': False,
+                    'error': 'Failed to export data to Google Sheets. Check credentials and permissions.'
+                })
+                
+        except Exception as e:
+            logger.error(f"Failed to export to Google Sheets: {e}")
+            return jsonify({'success': False, 'error': str(e)})
+    
+    @app.route('/api/sheets/backup', methods=['POST'])
+    def api_sheets_backup():
+        """Create backup of recent data in Google Sheets."""
+        try:
+            data = request.get_json() or {}
+            sheet_url = data.get('sheet_url', '').strip()
+            hours = int(data.get('hours', 2))
+            worksheet_name = data.get('worksheet_name', 'Backup')
+            
+            if not sheet_url:
+                return jsonify({
+                    'success': False,
+                    'error': 'Google Sheets URL is required'
+                })
+            
+            # Create backup in Google Sheets
+            success = google_sheets_manager.create_backup_in_sheets(sheet_url, hours, worksheet_name)
+            
+            if success:
+                return jsonify({
+                    'success': True,
+                    'message': f'Successfully created backup of last {hours} hours in Google Sheets!',
+                    'sheet_url': sheet_url
+                })
+            else:
+                return jsonify({
+                    'success': False,
+                    'message': f'No data found in the last {hours} hours to backup, or export failed.'
+                })
+                
+        except Exception as e:
+            logger.error(f"Failed to create Google Sheets backup: {e}")
+            return jsonify({'success': False, 'error': str(e)})
+    
+    @app.route('/api/sheets/analytics', methods=['POST'])
+    def api_sheets_analytics():
+        """Create analytics summary in Google Sheets."""
+        try:
+            data = request.get_json() or {}
+            sheet_url = data.get('sheet_url', '').strip()
+            worksheet_name = data.get('worksheet_name', 'Analytics')
+            
+            if not sheet_url:
+                return jsonify({
+                    'success': False,
+                    'error': 'Google Sheets URL is required'
+                })
+            
+            # Create analytics sheet
+            success = google_sheets_manager.create_analytics_sheet(sheet_url, worksheet_name)
+            
+            if success:
+                return jsonify({
+                    'success': True,
+                    'message': f'Successfully created analytics summary in Google Sheets worksheet "{worksheet_name}"!',
+                    'sheet_url': sheet_url
+                })
+            else:
+                return jsonify({
+                    'success': False,
+                    'error': 'Failed to create analytics sheet. Check credentials and permissions.'
+                })
+                
+        except Exception as e:
+            logger.error(f"Failed to create Google Sheets analytics: {e}")
+            return jsonify({'success': False, 'error': str(e)})
+    
+    @app.route('/api/sheets/info', methods=['POST'])
+    def api_sheets_info():
+        """Get information about a Google Sheets document."""
+        try:
+            data = request.get_json() or {}
+            sheet_url = data.get('sheet_url', '').strip()
+            
+            if not sheet_url:
+                return jsonify({
+                    'success': False,
+                    'error': 'Google Sheets URL is required'
+                })
+            
+            # Get sheet information
+            sheet_info = google_sheets_manager.get_sheet_info(sheet_url)
+            
+            if sheet_info:
+                return jsonify({
+                    'success': True,
+                    'data': sheet_info
+                })
+            else:
+                return jsonify({
+                    'success': False,
+                    'error': 'Failed to get sheet information. Check URL and permissions.'
+                })
+                
+        except Exception as e:
+            logger.error(f"Failed to get Google Sheets info: {e}")
+            return jsonify({'success': False, 'error': str(e)})
+    
+    @app.route('/api/sheets/test', methods=['GET'])
+    def api_sheets_test():
+        """Test Google Sheets API connection."""
+        try:
+            # Test connection
+            connection_ok = google_sheets_manager.test_connection()
+            
+            if connection_ok:
+                return jsonify({
+                    'success': True,
+                    'message': 'Google Sheets API connection is working!'
+                })
+            else:
+                return jsonify({
+                    'success': False,
+                    'error': 'Google Sheets API connection failed. Check credentials.'
+                })
+                
+        except Exception as e:
+            logger.error(f"Failed to test Google Sheets connection: {e}")
             return jsonify({'success': False, 'error': str(e)})
     
     # Browser Notification Monitoring APIs

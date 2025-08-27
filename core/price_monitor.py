@@ -342,15 +342,9 @@ class PriceChangeMonitor:
             List of recent price change data
         """
         try:
-            # Get real products from JSON manager instead of fake data
-            all_products = self.json_manager.get_recent_products(limit * 3)  # Get more to have variety
-            
-            if not all_products:
-                # Fallback to realistic examples if no real data
-                return self._generate_realistic_price_changes(limit)
-            
-            # Generate price changes based on real products
-            return self._generate_price_changes_from_real_data(all_products, limit)
+            # Return empty list until real monitoring is active
+            # This will show the "Start Monitoring" empty state on dashboard
+            return []
             
         except Exception as e:
             self.logger.error(f"Error getting recent price changes: {e}")

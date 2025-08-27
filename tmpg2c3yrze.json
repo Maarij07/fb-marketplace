@@ -1,0 +1,1139 @@
+{
+  "extraction_info": {
+    "timestamp": "2025-08-26",
+    "source": "Facebook Marketplace Stockholm",
+    "search_query": "iPhone 16",
+    "total_products_found": 26,
+    "extraction_method": "targeted_swedish_marketplace",
+    "last_cleaned": "2025-08-13T00:59:29.240999"
+  },
+  "summary": {
+    "products_with_complete_data": 26,
+    "products_with_images": 19,
+    "products_with_links": 26,
+    "products_with_locations": 26,
+    "products_with_prices": 26,
+    "unique_locations": [
+      "Stockholm",
+      "Within"
+    ]
+  },
+  "products": [
+    {
+      "id": "deep_3973126712950783",
+      "title": "AU$150\niPhone 8 256 GB\nSydney, NSW",
+      "price": {
+        "amount": "00",
+        "currency": "KR",
+        "raw_value": "kr 00"
+      },
+      "location": {
+        "city": "Within",
+        "distance": "51km",
+        "raw_location": "Within 51"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/3973126712950783/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Aae767dfc-9c86-42fe-84d9-1356d1773225&__tn__=!%3AD",
+      "seller": {
+        "info": "Private Seller",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 8",
+        "storage": "256 GB",
+        "condition": "new_in_box",
+        "color": "Black"
+      },
+      "images": [
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t39.30808-1/348275887_914205606302972_2180412001916335337_n.png?stp=dst-png_s100x100&_nc_cat=1&ccb=1-7&_nc_sid=11a88f&_nc_ohc=xCVlsvZhlygQ7kNvwGKwU-4&_nc_oc=Adn4kTBbbjQPxz6U1cPN3za9pdCNcPdi2Rs6CI3qUX7Uxi6STZVaZrCBRuc__aZKsQ8&_nc_ad=z-m&_nc_cid=0&_nc_zt=24&_nc_ht=scontent.fisb17-1.fna&_nc_gid=lBjLxbCS694iHIoZJbmdog&oh=00_AfWWwtHEsAeRwch5k1UvwaR1BjLOb_LGyfftWaqd4Ms-QQ&oe=68B33962",
+          "alt_text": "",
+          "type": "product_image"
+        },
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/533072983_679005501880018_3150484884396230017_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=111&ccb=1-7&_nc_sid=247b10&_nc_ohc=I7LPFFQZWf8Q7kNvwGLZQWD&_nc_oc=Adkk42SKIPxH86bOv_kvy91zIednzM14aNVhrbinM7xs12DuxXkY7eM56eLJMLdAJ6U&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=OpG55A52HxqIKDmecZuXOg&oh=00_AfVzxeGbY8qMm68W77R9GFsiqNpHNsgEDxIbAkyWpJG-sg&oe=68B325BC",
+          "alt_text": "",
+          "type": "product_image"
+        },
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/533072983_679005501880018_3150484884396230017_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=111&ccb=1-7&_nc_sid=247b10&_nc_ohc=I7LPFFQZWf8Q7kNvwGLZQWD&_nc_oc=Adkk42SKIPxH86bOv_kvy91zIednzM14aNVhrbinM7xs12DuxXkY7eM56eLJMLdAJ6U&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=OpG55A52HxqIKDmecZuXOg&oh=00_AfVzxeGbY8qMm68W77R9GFsiqNpHNsgEDxIbAkyWpJG-sg&oe=68B325BC",
+          "alt_text": "Product photo of iPhone 8 256 GB",
+          "type": "product_image"
+        }
+      ],
+      "extraction_method": "deep_scraper",
+      "data_quality": "comprehensive",
+      "added_at": "2025-08-26T11:19:18.498709",
+      "source": "facebook_marketplace_scraper",
+      "deep_data": {
+        "seller_details": {
+          "button_found": true,
+          "extraction_timestamp": "2025-08-26T11:17:48.505422",
+          "button_text": "Seller details",
+          "button_href": "https://www.facebook.com/marketplace/profile/100005723165203/?product_id=3973126712950783",
+          "join_date": "joined facebook in 2013"
+        },
+        "marketplace_metadata": {
+          "fb_listing_id": "3973126712950783",
+          "is_sold": true,
+          "timing": {
+            "posted_time": "2 hours"
+          }
+        },
+        "comprehensive_product": {
+          "model_name": "iPhone 8",
+          "storage": "256 GB",
+          "color": "Black",
+          "condition": "new_in_box",
+          "images": [
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t39.30808-1/348275887_914205606302972_2180412001916335337_n.png?stp=dst-png_s100x100&_nc_cat=1&ccb=1-7&_nc_sid=11a88f&_nc_ohc=xCVlsvZhlygQ7kNvwGKwU-4&_nc_oc=Adn4kTBbbjQPxz6U1cPN3za9pdCNcPdi2Rs6CI3qUX7Uxi6STZVaZrCBRuc__aZKsQ8&_nc_ad=z-m&_nc_cid=0&_nc_zt=24&_nc_ht=scontent.fisb17-1.fna&_nc_gid=lBjLxbCS694iHIoZJbmdog&oh=00_AfWWwtHEsAeRwch5k1UvwaR1BjLOb_LGyfftWaqd4Ms-QQ&oe=68B33962",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/533072983_679005501880018_3150484884396230017_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=111&ccb=1-7&_nc_sid=247b10&_nc_ohc=I7LPFFQZWf8Q7kNvwGLZQWD&_nc_oc=Adkk42SKIPxH86bOv_kvy91zIednzM14aNVhrbinM7xs12DuxXkY7eM56eLJMLdAJ6U&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=OpG55A52HxqIKDmecZuXOg&oh=00_AfVzxeGbY8qMm68W77R9GFsiqNpHNsgEDxIbAkyWpJG-sg&oe=68B325BC",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/533072983_679005501880018_3150484884396230017_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=111&ccb=1-7&_nc_sid=247b10&_nc_ohc=I7LPFFQZWf8Q7kNvwGLZQWD&_nc_oc=Adkk42SKIPxH86bOv_kvy91zIednzM14aNVhrbinM7xs12DuxXkY7eM56eLJMLdAJ6U&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=OpG55A52HxqIKDmecZuXOg&oh=00_AfVzxeGbY8qMm68W77R9GFsiqNpHNsgEDxIbAkyWpJG-sg&oe=68B325BC",
+              "alt_text": "Product photo of iPhone 8 256 GB",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/533072983_679005501880018_3150484884396230017_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=111&ccb=1-7&_nc_sid=247b10&_nc_ohc=I7LPFFQZWf8Q7kNvwGLZQWD&_nc_oc=Adkk42SKIPxH86bOv_kvy91zIednzM14aNVhrbinM7xs12DuxXkY7eM56eLJMLdAJ6U&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=OpG55A52HxqIKDmecZuXOg&oh=00_AfVzxeGbY8qMm68W77R9GFsiqNpHNsgEDxIbAkyWpJG-sg&oe=68B325BC",
+              "alt_text": "Product photo of iPhone 8 256 GB",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/534501586_848411681032738_8801999167336364801_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=111&ccb=1-7&_nc_sid=247b10&_nc_ohc=qa5uaxynJLkQ7kNvwFyXBZi&_nc_oc=AdkAKtPLUULBu8FlVl2ShJsy6r3xWZP24_OC0dJ_WjOx4dvXYMB3sSPu0GF3jd0c53A&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=OpG55A52HxqIKDmecZuXOg&oh=00_AfU7Xy1iIZq01v4_ejWb6WINH6v9UfBqskRbJlLHXBuU5A&oe=68B325F4",
+              "alt_text": "Product photo of iPhone 8 256 GB",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t15.13418-10/503986165_1242181774308611_4247738044222135562_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=109&ccb=1-7&_nc_sid=ace027&_nc_ohc=FVzxrFmzqEEQ7kNvwG404FH&_nc_oc=AdnPVJWQIsVDxmR9uajksf9qLFSJQnHnCXATswmqbOdQwzwIt8_-TkcUrv5Yg3qtca0&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=OpG55A52HxqIKDmecZuXOg&oh=00_AfVl6-8_lvttuhvq11Hn7CMiOg81uy5BZLFPvj0goHPwzQ&oe=68B33066",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t15.5256-10/532188641_1489709022444410_6960682116019006648_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=102&ccb=1-7&_nc_sid=282d23&_nc_ohc=hzK4Fl-EWmsQ7kNvwEp9Rhw&_nc_oc=Adlih0mcpk_NEi4f79tyZPen2D4L4lgtkGs5IDr5iJyejt9pZLU2Oy98Obc863YpRpo&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=OpG55A52HxqIKDmecZuXOg&oh=00_AfVNaS4N2T91GXHCR1AHnlaEl3q5vGr_W4GX-mBGQr19qw&oe=68B33B24",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/530686447_3918036218508542_7791925309898763659_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=111&ccb=1-7&_nc_sid=247b10&_nc_ohc=6UbDlUZA1rAQ7kNvwGwktz4&_nc_oc=Adm-BlSDdjo27EWZfth5Wbu9_dQkACWG9r4rO3rkMqBI0IwJeJs3pn2FNzbaahpqmr4&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=NQsb980nkXhqCkX3t5bejA&oh=00_AfWv199ZA2iUaOhcsYHGVGHK646HJfQBNzpyZZXzRxakCg&oe=68B32252",
+              "alt_text": "iPhone 16 128GB brand new , sealed in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/462930536_3841135216207906_6770635008940520716_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=103&ccb=1-7&_nc_sid=247b10&_nc_ohc=2yf7AVhrEVwQ7kNvwG1VcI7&_nc_oc=Adl3w44pkBrrEwBio5-IgrDPI2Ah0oOpSeRUKyPS6xQl7dsws2UaLxM5jK_xo2TQ2fA&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=NQsb980nkXhqCkX3t5bejA&oh=00_AfVcVlfNDDQfblPS4DZ28Lmphk6ZCtV52CUppPQ_LsrhMA&oe=68B315CA",
+              "alt_text": "As new Oppo A54 -5g 64 gb LIMITED STOCK in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/532934943_650096930949971_6450439473731711990_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=104&ccb=1-7&_nc_sid=247b10&_nc_ohc=-A4KC2R7DEYQ7kNvwFQf4Sh&_nc_oc=AdmhSHs6_K2orRuNi0lNAr_2c9f0hN2iAtU8tZyVkCi2r10erWm-t_wgrZDwMfGkxUc&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=NQsb980nkXhqCkX3t5bejA&oh=00_AfW1BcEqKYSK6sN-dwsJ4PDpl-dA2kgibu1MvQWclC5xuw&oe=68B3252E",
+              "alt_text": "iPad (A16) Wi-Fi 128GB- Silver in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/531676889_740430828783310_614436164976198902_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=102&ccb=1-7&_nc_sid=247b10&_nc_ohc=FBiprlXyhywQ7kNvwFWL0tT&_nc_oc=AdnkuH7a2tzF_EjvtbukMyD81uSH-cBOdpsYBIg5jVJu2YDiKjgzFmUk6FbtsIYK7OA&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=NQsb980nkXhqCkX3t5bejA&oh=00_AfWLPOUjz0OFG_RD6SfzRIlUREpt2vLVL8GOjaxbb_KowA&oe=68B336FF",
+              "alt_text": "iPhone 16 in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/532552042_1392661939526685_1380781754178732822_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=103&ccb=1-7&_nc_sid=247b10&_nc_ohc=FTeVRRklDXkQ7kNvwE_i-A7&_nc_oc=Adn4Oh5KYLroDZXa98O8Um5Uc4SO_EKdUxSz9D0ooC3hZRgMoi9GRw-e56zKpBqymyY&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=NQsb980nkXhqCkX3t5bejA&oh=00_AfUpGyNGcSq1FaR_l5vmIDiM3_DMAk_FzOFG6CUY3BbDsw&oe=68B32CDD",
+              "alt_text": "Samsung Galaxy S24 FE – 256GB in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/533650091_1939831436848982_2222622735048486484_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=104&ccb=1-7&_nc_sid=247b10&_nc_ohc=KDktZVsnjR4Q7kNvwHqpkE_&_nc_oc=AdkRe9o6siW8DbXVpXdzGZRkAnfPTPz2xXRadEJovB9GU2O13WQHhcZekO62xw0RR7w&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=NQsb980nkXhqCkX3t5bejA&oh=00_AfWphDLB8feFC5oLcN1Fa3jLkQb8-yu227qpFMx_G1ue3g&oe=68B30AA0",
+              "alt_text": "iPhone 16e 512GB black in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/535434109_770281522057793_5095580392113442360_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=109&ccb=1-7&_nc_sid=247b10&_nc_ohc=_u3rpehW3_8Q7kNvwHtQ7CC&_nc_oc=Adk01UBoGfcuTJ3z8zNfEwmspvDbWWqnw6CSDG9jQhO0bpzjm1oxY-vSmD78YURzhuY&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=NQsb980nkXhqCkX3t5bejA&oh=00_AfWW0J4c3_QhZ74NIO9w8PECOl-0yc0UPFhSKfHAxFZI9Q&oe=68B324C5",
+              "alt_text": "iPhone 14 – 99% Battery Health in Central Coast, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/533079800_726787703527072_20735065391713317_n.jpg?stp=c0.23.261.261a_dst-jpg_p261x260_tt6&_nc_cat=110&ccb=1-7&_nc_sid=247b10&_nc_ohc=GfbyQaPNr80Q7kNvwE8GT4H&_nc_oc=AdnQ-tjEguVhYp8KZQRpaUF7vrSxfK8jKqx15Allb2rYOzpGYbHzMRk2HvuNcy53ZYk&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=NQsb980nkXhqCkX3t5bejA&oh=00_AfWvF2ByHXlBUxg2KeYV9MpqKTGexfs46mGvuxej7NGpXw&oe=68B312BC",
+              "alt_text": "Bunnings hoodie in Sydney, NSW",
+              "type": "product_image"
+            }
+          ],
+          "description": "Listed 2 hours ago in Sydney, NSW\n\nSelling iPhone 8 256 GB in great condition. I upgraded so no longer use this.\n\nLocation is approximate"
+        }
+      },
+      "hot_reload": true,
+      "hot_reload_timestamp": "2025-08-26T11:19:18.498709",
+      "scraping_status": "completed",
+      "scraping_method": "deep",
+      "created_at": "2025-08-26T11:19:18.498709",
+      "seller_name": "Private Seller"
+    },
+    {
+      "id": "deep_1158936032951434",
+      "title": "AU$989\niPhone 16 Pro Max 💛 iPhone 16 Pro 💛 iPhone 16 Plus 💛 iPhone 16🛍️🛍️\nSydney, NSW",
+      "price": {
+        "amount": "60",
+        "currency": "KR",
+        "raw_value": "60 kr"
+      },
+      "location": {
+        "city": "Within",
+        "distance": "51km",
+        "raw_location": "Within 51"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1158936032951434/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A1930bfd6-e9e3-413a-a961-f3b184626e2f&__tn__=!%3AD",
+      "seller": {
+        "info": "Private Seller",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 16 pro max",
+        "storage": "29 TB",
+        "condition": "new_in_box",
+        "color": "Black"
+      },
+      "images": [
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t39.30808-1/348275887_914205606302972_2180412001916335337_n.png?stp=dst-png_s100x100&_nc_cat=1&ccb=1-7&_nc_sid=11a88f&_nc_ohc=xCVlsvZhlygQ7kNvwGKwU-4&_nc_oc=Adn4kTBbbjQPxz6U1cPN3za9pdCNcPdi2Rs6CI3qUX7Uxi6STZVaZrCBRuc__aZKsQ8&_nc_ad=z-m&_nc_cid=0&_nc_zt=24&_nc_ht=scontent.fisb17-1.fna&_nc_gid=7b2UDKJhGkH8zQVRQtTlrw&oh=00_AfVqbSx2tCDHqUCkIeLs7Wyh6St5uzIPAsY-SPXf1uXtqw&oe=68B33962",
+          "alt_text": "",
+          "type": "product_image"
+        },
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/529690643_1123677809638597_6749888273719988924_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=111&ccb=1-7&_nc_sid=247b10&_nc_ohc=s__JE-SJD-wQ7kNvwFIYP8f&_nc_oc=Admw0Y_al3pnWqi0Jx27_17StuHM_M3lWr9EJjiJ5xkYQbnbwRyvaYM1Fnva7Scqclo&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=VUrkmj3ClDG8r8DRJU0xuw&oh=00_AfWPQ_xlHJNKBTfJtMkadIXTF_1e2yQu6kyNiplCYC731g&oe=68B32BFB",
+          "alt_text": "",
+          "type": "product_image"
+        },
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/529690643_1123677809638597_6749888273719988924_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=111&ccb=1-7&_nc_sid=247b10&_nc_ohc=s__JE-SJD-wQ7kNvwFIYP8f&_nc_oc=Admw0Y_al3pnWqi0Jx27_17StuHM_M3lWr9EJjiJ5xkYQbnbwRyvaYM1Fnva7Scqclo&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=VUrkmj3ClDG8r8DRJU0xuw&oh=00_AfWPQ_xlHJNKBTfJtMkadIXTF_1e2yQu6kyNiplCYC731g&oe=68B32BFB",
+          "alt_text": "Product photo of iPhone 16 Pro Max 💛 iPhone 16 Pro 💛 iPhone 16 Plus 💛 iPhone 16🛍️🛍️",
+          "type": "product_image"
+        }
+      ],
+      "extraction_method": "deep_scraper",
+      "data_quality": "comprehensive",
+      "added_at": "2025-08-26T11:12:02.333797",
+      "source": "facebook_marketplace_scraper",
+      "deep_data": {
+        "seller_details": {
+          "button_found": true,
+          "extraction_timestamp": "2025-08-26T11:10:20.587475",
+          "button_text": "Seller details",
+          "button_href": "https://www.facebook.com/marketplace/profile/100002307995600/?product_id=1158936032951434",
+          "join_date": "joined facebook in 2011"
+        },
+        "marketplace_metadata": {
+          "fb_listing_id": "1158936032951434",
+          "is_sold": true,
+          "timing": {
+            "posted_time": "2 hours"
+          }
+        },
+        "comprehensive_product": {
+          "model_name": "iPhone 16 pro max",
+          "storage": "29 TB",
+          "color": "Black",
+          "condition": "new_in_box",
+          "images": [
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t39.30808-1/348275887_914205606302972_2180412001916335337_n.png?stp=dst-png_s100x100&_nc_cat=1&ccb=1-7&_nc_sid=11a88f&_nc_ohc=xCVlsvZhlygQ7kNvwGKwU-4&_nc_oc=Adn4kTBbbjQPxz6U1cPN3za9pdCNcPdi2Rs6CI3qUX7Uxi6STZVaZrCBRuc__aZKsQ8&_nc_ad=z-m&_nc_cid=0&_nc_zt=24&_nc_ht=scontent.fisb17-1.fna&_nc_gid=7b2UDKJhGkH8zQVRQtTlrw&oh=00_AfVqbSx2tCDHqUCkIeLs7Wyh6St5uzIPAsY-SPXf1uXtqw&oe=68B33962",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/529690643_1123677809638597_6749888273719988924_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=111&ccb=1-7&_nc_sid=247b10&_nc_ohc=s__JE-SJD-wQ7kNvwFIYP8f&_nc_oc=Admw0Y_al3pnWqi0Jx27_17StuHM_M3lWr9EJjiJ5xkYQbnbwRyvaYM1Fnva7Scqclo&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=VUrkmj3ClDG8r8DRJU0xuw&oh=00_AfWPQ_xlHJNKBTfJtMkadIXTF_1e2yQu6kyNiplCYC731g&oe=68B32BFB",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/529690643_1123677809638597_6749888273719988924_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=111&ccb=1-7&_nc_sid=247b10&_nc_ohc=s__JE-SJD-wQ7kNvwFIYP8f&_nc_oc=Admw0Y_al3pnWqi0Jx27_17StuHM_M3lWr9EJjiJ5xkYQbnbwRyvaYM1Fnva7Scqclo&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=VUrkmj3ClDG8r8DRJU0xuw&oh=00_AfWPQ_xlHJNKBTfJtMkadIXTF_1e2yQu6kyNiplCYC731g&oe=68B32BFB",
+              "alt_text": "Product photo of iPhone 16 Pro Max 💛 iPhone 16 Pro 💛 iPhone 16 Plus 💛 iPhone 16🛍️🛍️",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/529690643_1123677809638597_6749888273719988924_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=111&ccb=1-7&_nc_sid=247b10&_nc_ohc=s__JE-SJD-wQ7kNvwFIYP8f&_nc_oc=Admw0Y_al3pnWqi0Jx27_17StuHM_M3lWr9EJjiJ5xkYQbnbwRyvaYM1Fnva7Scqclo&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=VUrkmj3ClDG8r8DRJU0xuw&oh=00_AfWPQ_xlHJNKBTfJtMkadIXTF_1e2yQu6kyNiplCYC731g&oe=68B32BFB",
+              "alt_text": "Product photo of iPhone 16 Pro Max 💛 iPhone 16 Pro 💛 iPhone 16 Plus 💛 iPhone 16🛍️🛍️",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/531410908_1588614088768001_8017479879976786851_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=110&ccb=1-7&_nc_sid=247b10&_nc_ohc=s15_Mb-7Dc0Q7kNvwHFVzQc&_nc_oc=AdlBaOgcFp1wdo1pYS4vS0KSkm4L3WmHALkCRIUeZ--6vEgLzB_cRJd38D1_8M1XqoM&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=VUrkmj3ClDG8r8DRJU0xuw&oh=00_AfUGRO8rQOaV3oiyh7PfggzgbBvyGF0--oLs7AdZnK97Ag&oe=68B31C51",
+              "alt_text": "Product photo of iPhone 16 Pro Max 💛 iPhone 16 Pro 💛 iPhone 16 Plus 💛 iPhone 16🛍️🛍️",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/532927432_1265048911772930_4578808098133876875_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=111&ccb=1-7&_nc_sid=247b10&_nc_ohc=aM8ICf1A16MQ7kNvwF8K96y&_nc_oc=Adl0GewdOJ4iT0DozmsMfgaeHGiJQkabE9hwIetBP0N2_yhyjgBSzfrWFsrGLqPN0x4&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=VUrkmj3ClDG8r8DRJU0xuw&oh=00_AfW0W0bJbSed9Wuh4ghBrP8lr82DoOCP_JvSlKyvl9F4qg&oe=68B33A15",
+              "alt_text": "Product photo of iPhone 16 Pro Max 💛 iPhone 16 Pro 💛 iPhone 16 Plus 💛 iPhone 16🛍️🛍️",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/532928306_779828451654400_5856237854222939787_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=106&ccb=1-7&_nc_sid=247b10&_nc_ohc=N6OBKObmspAQ7kNvwHe4fOu&_nc_oc=AdnCa83-uatrXnByHdEfW6YTEhjllws07iUvtxn8P1Aa0PLB-kmRuKav2-anpB7VC4E&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=VUrkmj3ClDG8r8DRJU0xuw&oh=00_AfV0yv031W0-zqsSraG7fdlSSfJ4MbRpnRcMNOo0EYNjLA&oe=68B335FE",
+              "alt_text": "Product photo of iPhone 16 Pro Max 💛 iPhone 16 Pro 💛 iPhone 16 Plus 💛 iPhone 16🛍️🛍️",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/535368186_1784169245802540_8559440060406369235_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=110&ccb=1-7&_nc_sid=247b10&_nc_ohc=qZ2ej2vQiDcQ7kNvwGx6N1a&_nc_oc=Adk9laxfkCzvtQIOYPzaHcTuaFKolh9l1h41WsHEtfVtO0IIN2_RHAtAc79p8bqJj0U&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=VUrkmj3ClDG8r8DRJU0xuw&oh=00_AfWPhIRXz6RCic3iHxqwn754vCYwYwmDvkcC2yfajsm8ng&oe=68B32AF8",
+              "alt_text": "Product photo of iPhone 16 Pro Max 💛 iPhone 16 Pro 💛 iPhone 16 Plus 💛 iPhone 16🛍️🛍️",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/532339919_1103968941251266_936889619003223225_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=108&ccb=1-7&_nc_sid=247b10&_nc_ohc=CpudkuUW8_EQ7kNvwEBinI6&_nc_oc=AdkvdKyhDCRw04XLmRn82QEvsU3Wt1YErLatG84zhgEutLbZAQbIxev9irkYJW5l88Q&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=VUrkmj3ClDG8r8DRJU0xuw&oh=00_AfVjXIznPWKNbgFqDgq8o2PrGqCbodx6xAH-8QRAdsRdkQ&oe=68B3182E",
+              "alt_text": "Product photo of iPhone 16 Pro Max 💛 iPhone 16 Pro 💛 iPhone 16 Plus 💛 iPhone 16🛍️🛍️",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t15.13418-10/531674828_1750273013031020_7381279516721276854_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=100&ccb=1-7&_nc_sid=ace027&_nc_ohc=xlLZBmmpDjgQ7kNvwH70Bvj&_nc_oc=AdnPrWkDmFQWSc9RmfOxh5GXfRpODAVCIAgO1dY2qPrxRedaukK7WWi8OH6hjBfnp9w&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=VUrkmj3ClDG8r8DRJU0xuw&oh=00_AfWO80CFBKpD7kY_Ginmk2jkLPj2JSADPt_jH8NngK2Jtg&oe=68B31E4E",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.1600-4/523724736_636506219458595_7610442742123265393_n.jpg?stp=cp0_dst-jpg_q75_s960x960_spS444_tt6&_nc_cat=106&ccb=1-7&_nc_sid=c02adf&_nc_ohc=WYZp0_JZtQcQ7kNvwE5N2W_&_nc_oc=AdnRzICNALjl_vAIp2USP7s7MNQuVmy9aJothWH06jKvjNcWSsdGBVM8LWPKFVOTIHI&_nc_zt=1&_nc_ht=scontent.fisb17-1.fna&_nc_gid=VUrkmj3ClDG8r8DRJU0xuw&oh=00_AfXtPW8WTTRbMAy2mKe8FBLdDDMfa_F5e34SBYXRAcEjig&oe=68B330B8",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/531039564_4031547677096078_3937478052282083344_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=111&ccb=1-7&_nc_sid=247b10&_nc_ohc=sDgcQWcN_C0Q7kNvwH1yZhf&_nc_oc=AdknQJIMifqkUxREFIDgG_UZn5sYhWvChlOarTLrn4KEt2ZK3TTPpyeqiN-iGms2E7w&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=zNjdFueaGOmhKK_USJ-Ptw&oh=00_AfXfUG-d65kD-znsMeNP_-II-ANjnR7HqwwZP6dvN_Wuuw&oe=68B3261B",
+              "alt_text": "iPhone 12 in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/533030768_1501667847503281_9004905797468729345_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=108&ccb=1-7&_nc_sid=247b10&_nc_ohc=RKKQbl-oBmoQ7kNvwGVdEIO&_nc_oc=AdnGSbA-pxsdVi7wAsHSfZVpOLg0xwkn5FGrzfkK6sjkqXfopBO37BjxpxsGCOEsTlY&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=zNjdFueaGOmhKK_USJ-Ptw&oh=00_AfUn6LfxImEudl1BaRmnp8G81NH_EHpGY2pPNmAJGVUXYw&oe=68B31E7F",
+              "alt_text": "Bearbrick 400% nike tech fleece in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/536023271_1772952939996113_7398062889753100404_n.jpg?stp=c4.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=101&ccb=1-7&_nc_sid=247b10&_nc_ohc=4ZuxVkGPsnAQ7kNvwHsMYS0&_nc_oc=Adk-9n8Y6SgWEY8R1Tbls74tbG5gtDS7mX7X2VsJCa7l4Q5d0JyIDdAJALiAdkKSSXQ&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=zNjdFueaGOmhKK_USJ-Ptw&oh=00_AfWHLjraEXKs2VIsMBbQoaqsO2lqGvsk_jVgHLInl3VE9A&oe=68B331D1",
+              "alt_text": "22K Gold plated bangles in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/532910363_655258827056060_9117410234824860383_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=101&ccb=1-7&_nc_sid=247b10&_nc_ohc=aFNgiqqKUUAQ7kNvwGoK-Cx&_nc_oc=AdmBJclkRpTMx0WJyOGL20pqA1NpxJpXP0Z47X0pmblOmrse4xPWz3QuYPULU5HZJv8&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=zNjdFueaGOmhKK_USJ-Ptw&oh=00_AfXeaGagGsb9eR-N5MWFdUYm6u5jb_durb-JZa_9UAr3gw&oe=68B33E53",
+              "alt_text": "Free fridge in Sydney, NSW",
+              "type": "product_image"
+            }
+          ],
+          "description": "iPhone 16 Pro Max 💛 iPhone 16 Pro 💛 iPhone 16 Plus 💛 iPhone 16🛍️🛍️\n\nListed in Sydney, NSW\n\niPhone 16 Pro Max from $1679  \niPhone 16 Pro from $1329  \niPhone 16 Plus from $1139  \niPhone 16 from... See more"
+        }
+      },
+      "hot_reload": true,
+      "hot_reload_timestamp": "2025-08-26T11:12:02.333797",
+      "scraping_status": "completed",
+      "scraping_method": "deep",
+      "created_at": "2025-08-26T11:12:02.333797",
+      "seller_name": "Private Seller"
+    },
+    {
+      "id": "deep_1293633832292380",
+      "title": "AU$850\nAU$970\nIPHONE 16 128GB - STILL UNDER WARRANTY\nSydney, NSW",
+      "price": {
+        "amount": "36",
+        "currency": "KR",
+        "raw_value": "36 kr"
+      },
+      "location": {
+        "city": "Within",
+        "distance": "51km",
+        "raw_location": "Within 51"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1293633832292380/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A1930bfd6-e9e3-413a-a961-f3b184626e2f&__tn__=!%3AD",
+      "seller": {
+        "info": "Private Seller",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 16",
+        "storage": "128 GB",
+        "condition": "like_new",
+        "color": "Black"
+      },
+      "images": [
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t39.30808-1/348275887_914205606302972_2180412001916335337_n.png?stp=dst-png_s100x100&_nc_cat=1&ccb=1-7&_nc_sid=11a88f&_nc_ohc=xCVlsvZhlygQ7kNvwGKwU-4&_nc_oc=Adn4kTBbbjQPxz6U1cPN3za9pdCNcPdi2Rs6CI3qUX7Uxi6STZVaZrCBRuc__aZKsQ8&_nc_ad=z-m&_nc_cid=0&_nc_zt=24&_nc_ht=scontent.fisb17-1.fna&_nc_gid=gZ4FAkRJySUUHY9icfbVCg&oh=00_AfWygd7UZPDu46Ey9_8GVit8rQJ-qXLTRi9zvHJxum2P2w&oe=68B33962",
+          "alt_text": "",
+          "type": "product_image"
+        },
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/533591549_972098545021958_1516505035915393102_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=109&ccb=1-7&_nc_sid=247b10&_nc_ohc=2iX3u7WvbDwQ7kNvwGmxVeC&_nc_oc=AdkyWS12Nmrgu-FWFdjUbx5mnDnp2LThFt-ClWOaPN-IPwfo1weamU5lWs9axSo8ntQ&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=yXtDhhbaiibkmfNs1uSwXQ&oh=00_AfXQkqcRluipBpQkswdtKNEt_Tq4ByiEZpr2FZolwkgYYQ&oe=68B31B6D",
+          "alt_text": "",
+          "type": "product_image"
+        },
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/533591549_972098545021958_1516505035915393102_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=109&ccb=1-7&_nc_sid=247b10&_nc_ohc=2iX3u7WvbDwQ7kNvwGmxVeC&_nc_oc=AdkyWS12Nmrgu-FWFdjUbx5mnDnp2LThFt-ClWOaPN-IPwfo1weamU5lWs9axSo8ntQ&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=yXtDhhbaiibkmfNs1uSwXQ&oh=00_AfXQkqcRluipBpQkswdtKNEt_Tq4ByiEZpr2FZolwkgYYQ&oe=68B31B6D",
+          "alt_text": "Product photo of IPHONE 16 128GB - STILL UNDER WARRANTY",
+          "type": "product_image"
+        }
+      ],
+      "extraction_method": "deep_scraper",
+      "data_quality": "comprehensive",
+      "added_at": "2025-08-26T11:09:50.159711",
+      "source": "facebook_marketplace_scraper",
+      "deep_data": {
+        "seller_details": {
+          "button_found": true,
+          "extraction_timestamp": "2025-08-26T11:08:11.154283",
+          "button_text": "Seller details",
+          "button_href": "https://www.facebook.com/marketplace/profile/100062351598122/?product_id=1293633832292380",
+          "join_date": "joined facebook in 2021"
+        },
+        "marketplace_metadata": {
+          "fb_listing_id": "1293633832292380",
+          "is_sold": true,
+          "timing": {
+            "posted_time": "2 hours"
+          }
+        },
+        "comprehensive_product": {
+          "model_name": "iPhone 16",
+          "storage": "128 GB",
+          "color": "Black",
+          "condition": "like_new",
+          "images": [
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t39.30808-1/348275887_914205606302972_2180412001916335337_n.png?stp=dst-png_s100x100&_nc_cat=1&ccb=1-7&_nc_sid=11a88f&_nc_ohc=xCVlsvZhlygQ7kNvwGKwU-4&_nc_oc=Adn4kTBbbjQPxz6U1cPN3za9pdCNcPdi2Rs6CI3qUX7Uxi6STZVaZrCBRuc__aZKsQ8&_nc_ad=z-m&_nc_cid=0&_nc_zt=24&_nc_ht=scontent.fisb17-1.fna&_nc_gid=gZ4FAkRJySUUHY9icfbVCg&oh=00_AfWygd7UZPDu46Ey9_8GVit8rQJ-qXLTRi9zvHJxum2P2w&oe=68B33962",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/533591549_972098545021958_1516505035915393102_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=109&ccb=1-7&_nc_sid=247b10&_nc_ohc=2iX3u7WvbDwQ7kNvwGmxVeC&_nc_oc=AdkyWS12Nmrgu-FWFdjUbx5mnDnp2LThFt-ClWOaPN-IPwfo1weamU5lWs9axSo8ntQ&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=yXtDhhbaiibkmfNs1uSwXQ&oh=00_AfXQkqcRluipBpQkswdtKNEt_Tq4ByiEZpr2FZolwkgYYQ&oe=68B31B6D",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/533591549_972098545021958_1516505035915393102_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=109&ccb=1-7&_nc_sid=247b10&_nc_ohc=2iX3u7WvbDwQ7kNvwGmxVeC&_nc_oc=AdkyWS12Nmrgu-FWFdjUbx5mnDnp2LThFt-ClWOaPN-IPwfo1weamU5lWs9axSo8ntQ&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=yXtDhhbaiibkmfNs1uSwXQ&oh=00_AfXQkqcRluipBpQkswdtKNEt_Tq4ByiEZpr2FZolwkgYYQ&oe=68B31B6D",
+              "alt_text": "Product photo of IPHONE 16 128GB - STILL UNDER WARRANTY",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/533591549_972098545021958_1516505035915393102_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=109&ccb=1-7&_nc_sid=247b10&_nc_ohc=2iX3u7WvbDwQ7kNvwGmxVeC&_nc_oc=AdkyWS12Nmrgu-FWFdjUbx5mnDnp2LThFt-ClWOaPN-IPwfo1weamU5lWs9axSo8ntQ&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=yXtDhhbaiibkmfNs1uSwXQ&oh=00_AfXQkqcRluipBpQkswdtKNEt_Tq4ByiEZpr2FZolwkgYYQ&oe=68B31B6D",
+              "alt_text": "Product photo of IPHONE 16 128GB - STILL UNDER WARRANTY",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/533036330_1428629875079219_5578898133140701503_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_ohc=isNnkys_rxoQ7kNvwHor17S&_nc_oc=AdmvtYj8IshmNRuhEpL1I4aKXxr_d266l3x3sGz6C8zfP-NjqVdbl2gfbauLYdgdK68&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=yXtDhhbaiibkmfNs1uSwXQ&oh=00_AfVCNzmxX3K7F1Soh6QHOZqWVSkpLRq74qswD61Sd3lOtg&oe=68B30DE7",
+              "alt_text": "Product photo of IPHONE 16 128GB - STILL UNDER WARRANTY",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/533029104_751305360968815_857655604547202856_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_ohc=9JOMgM7FzNsQ7kNvwEIkoId&_nc_oc=AdlrHXHo1Tgv5Eq4zU4XysDyiAhBrPwX0g9QDDzUk8WnEtvKPYloHLU121aXXsLniJg&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=yXtDhhbaiibkmfNs1uSwXQ&oh=00_AfUzw2oMy8ITaAaJLhUjvuWqcw9aFpB6knSWDHqS8F45bQ&oe=68B3368B",
+              "alt_text": "Product photo of IPHONE 16 128GB - STILL UNDER WARRANTY",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/532486289_1942953219811531_1888576375769902100_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=100&ccb=1-7&_nc_sid=247b10&_nc_ohc=MbFo_69kyc8Q7kNvwGyF4_X&_nc_oc=AdkLWlcKFNrRd8fSAojOzVhlfaaTHd_4qSyny32VxW9IlnwpGNTfdH3pTpbqf3XWlGI&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=yXtDhhbaiibkmfNs1uSwXQ&oh=00_AfXqxqnMWEOfmysO5XYPdPMB9yUffVue1U9fr8TDv00S4Q&oe=68B32603",
+              "alt_text": "Product photo of IPHONE 16 128GB - STILL UNDER WARRANTY",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/534705243_1288523659398219_1179498383139778126_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=103&ccb=1-7&_nc_sid=247b10&_nc_ohc=AQHOohbFZaIQ7kNvwF9bDe5&_nc_oc=AdmofFMdnAmahuwb6kocB4g0yhOE6UXJQNvjWwySh6NRK69BkftDA9ea3-JaBbG6QyE&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=yXtDhhbaiibkmfNs1uSwXQ&oh=00_AfX_TpJqZck0JuwQhPeDz_ldDGKQi59fj0oFn9p2_Vlntw&oe=68B32B97",
+              "alt_text": "Product photo of IPHONE 16 128GB - STILL UNDER WARRANTY",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/531912399_2220586918365073_7093027694694426328_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=111&ccb=1-7&_nc_sid=247b10&_nc_ohc=9m2T-pBXcVUQ7kNvwHh-aad&_nc_oc=AdltTf3W3BWXtK6hvLFRm1XaeKIU1a1Jqvbp4Res0Be8g_aRb13nwUYucVU9qACFhUg&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=yXtDhhbaiibkmfNs1uSwXQ&oh=00_AfVk6zfjHBdFdyZBsci79W4K55gSIYNKKr6SSE8nZ39zcA&oe=68B3120D",
+              "alt_text": "Product photo of IPHONE 16 128GB - STILL UNDER WARRANTY",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/532103517_667272365708531_2560974459514077230_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=103&ccb=1-7&_nc_sid=247b10&_nc_ohc=W8P4425q_0oQ7kNvwG5h-JG&_nc_oc=AdkscDxRQGZ-zL23PY7iqQ4pBwTUxaFOz3WudtJ1EHGUNHY5s8NCX2NK14Q5FfiYz2I&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=yXtDhhbaiibkmfNs1uSwXQ&oh=00_AfXUPqDRKpaOYryGoJjpAfN9HHrvfm-Av5ufPX9MZeA-oA&oe=68B3179A",
+              "alt_text": "Product photo of IPHONE 16 128GB - STILL UNDER WARRANTY",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.1600-4/523490681_695020223700459_6298728964891332559_n.jpg?stp=cp0_dst-jpg_q75_s960x960_spS444_tt6&_nc_cat=1&ccb=1-7&_nc_sid=c02adf&_nc_ohc=JUx0ZSCQsgcQ7kNvwHR3b0B&_nc_oc=Adl5meVh4yCnI9Asy0aHQCv2s4Yh4_DAPmDkWqDztLhWgSixIPgnrYBIB47FQIDshIQ&_nc_zt=1&_nc_ht=scontent.fisb17-1.fna&_nc_gid=yXtDhhbaiibkmfNs1uSwXQ&oh=00_AfV4wIVqjedkNkJaWfGEaIejwt7DYFaS1f4Jp9aePQEYxQ&oe=68B32952",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t15.13418-10/531674828_1750273013031020_7381279516721276854_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=100&ccb=1-7&_nc_sid=ace027&_nc_ohc=xlLZBmmpDjgQ7kNvwH70Bvj&_nc_oc=AdnPrWkDmFQWSc9RmfOxh5GXfRpODAVCIAgO1dY2qPrxRedaukK7WWi8OH6hjBfnp9w&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=yXtDhhbaiibkmfNs1uSwXQ&oh=00_AfWrAhyHw160BDYgtHXzhpoHCAdr2EDuD9ykh2k4EQ_Dpg&oe=68B31E4E",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/513938494_2644603382408771_5360708048300607702_n.jpg?stp=c0.6.261.261a_dst-jpg_p261x260_tt6&_nc_cat=106&ccb=1-7&_nc_sid=247b10&_nc_ohc=1Idym9WtQG0Q7kNvwH8Jus5&_nc_oc=AdnAo5-BnWI9CenlQxY-nv7RLSyOX1LoXTUrrA1rF-R1BPv-3baxqQuf1wIIpZVDBfg&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=g-jlhz4tEyTJqbSx3x3neQ&oh=00_AfW9vGoRTGDmzGxGNO0kjAK89Nkczu1NnpJ-JuPqk-E03Q&oe=68B32389",
+              "alt_text": "Nike Giannis antetokounmpo basketball tracksuit set in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/532910363_655258827056060_9117410234824860383_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=101&ccb=1-7&_nc_sid=247b10&_nc_ohc=aFNgiqqKUUAQ7kNvwGoK-Cx&_nc_oc=AdmBJclkRpTMx0WJyOGL20pqA1NpxJpXP0Z47X0pmblOmrse4xPWz3QuYPULU5HZJv8&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=g-jlhz4tEyTJqbSx3x3neQ&oh=00_AfVa8hYkit3gU0oDTT32Zscl_wOBYxS84JWktDX5w1VtgA&oe=68B30613",
+              "alt_text": "Free fridge in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/534920481_1140186284626670_5418485390996520888_n.jpg?stp=c43.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=111&ccb=1-7&_nc_sid=247b10&_nc_ohc=-WRlKTFRdE8Q7kNvwF5DBa9&_nc_oc=AdkJsXJxycrp6GQjskUsJ5FfdmlgNX_WAPydkDt4WYMzBSH90s5ZBHnDenaRexd97oY&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=g-jlhz4tEyTJqbSx3x3neQ&oh=00_AfVqKxDft51EBUQIJuQT8XTjvLLWJyWtbgN5kHBQQcyAaA&oe=68B31FA9",
+              "alt_text": "Magic keyboard for 11 inch iPad m4 in Sydney, NSW",
+              "type": "product_image"
+            }
+          ],
+          "description": "IPHONE 16 128GB - STILL UNDER WARRANTY\n\nAU$850AU$970\n  · In stock\n\nListed in Sydney, NSW"
+        }
+      },
+      "hot_reload": true,
+      "hot_reload_timestamp": "2025-08-26T11:09:50.159711",
+      "scraping_status": "completed",
+      "scraping_method": "deep",
+      "created_at": "2025-08-26T11:09:50.159711",
+      "seller_name": "Private Seller"
+    },
+    {
+      "id": "deep_788038106966491",
+      "title": "AU$1,100\nIphone 16 (128GB) 8 Weeks Old\nSydney, NSW",
+      "price": {
+        "amount": "94",
+        "currency": "KR",
+        "raw_value": "94 kr"
+      },
+      "location": {
+        "city": "Within",
+        "distance": "51km",
+        "raw_location": "Within 51"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/788038106966491/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A1930bfd6-e9e3-413a-a961-f3b184626e2f&__tn__=!%3AD",
+      "seller": {
+        "info": "Private Seller",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 16",
+        "storage": "128 GB",
+        "condition": "like_new",
+        "color": "Black"
+      },
+      "images": [
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t39.30808-1/348275887_914205606302972_2180412001916335337_n.png?stp=dst-png_s100x100&_nc_cat=1&ccb=1-7&_nc_sid=11a88f&_nc_ohc=xCVlsvZhlygQ7kNvwGKwU-4&_nc_oc=Adn4kTBbbjQPxz6U1cPN3za9pdCNcPdi2Rs6CI3qUX7Uxi6STZVaZrCBRuc__aZKsQ8&_nc_ad=z-m&_nc_cid=0&_nc_zt=24&_nc_ht=scontent.fisb17-1.fna&_nc_gid=w1lCCwWPDF1h920eIA0amQ&oh=00_AfWOlz2p89VwxrOfJIxiKwBxmXALJ9cZG2VPEjCP_7k9vg&oe=68B33962",
+          "alt_text": "",
+          "type": "product_image"
+        },
+        {
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/533028482_1848956849016248_4680054367786574573_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=247b10&_nc_ohc=NCOTVcglVIsQ7kNvwGrbDH4&_nc_oc=AdnpbgnT-FlAFs-gX74QXBifWyVzlJieJMyJ4qnhwqyfhHuKd7gQgLd_x0eO6-dWdug&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=eZUuO_tZluJEBw7ZcBhXzQ&oh=00_AfU__6Mrb9kXnED44jiJR2YJOP-8Pk2Dd2haS-7aqL4qww&oe=68B3195F",
+          "alt_text": "",
+          "type": "product_image"
+        },
+        {
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/533028482_1848956849016248_4680054367786574573_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=247b10&_nc_ohc=NCOTVcglVIsQ7kNvwGrbDH4&_nc_oc=AdnpbgnT-FlAFs-gX74QXBifWyVzlJieJMyJ4qnhwqyfhHuKd7gQgLd_x0eO6-dWdug&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=eZUuO_tZluJEBw7ZcBhXzQ&oh=00_AfU__6Mrb9kXnED44jiJR2YJOP-8Pk2Dd2haS-7aqL4qww&oe=68B3195F",
+          "alt_text": "Product photo of Iphone 16 (128GB) 8 Weeks Old",
+          "type": "product_image"
+        }
+      ],
+      "extraction_method": "deep_scraper",
+      "data_quality": "comprehensive",
+      "added_at": "2025-08-26T11:05:37.583167",
+      "source": "facebook_marketplace_scraper",
+      "deep_data": {
+        "seller_details": {
+          "button_found": true,
+          "extraction_timestamp": "2025-08-26T11:04:06.483010",
+          "button_text": "Seller details",
+          "button_href": "https://www.facebook.com/marketplace/profile/100009097649627/?product_id=788038106966491"
+        },
+        "marketplace_metadata": {
+          "fb_listing_id": "788038106966491",
+          "is_sold": true,
+          "timing": {
+            "posted_time": "2 hours"
+          }
+        },
+        "comprehensive_product": {
+          "model_name": "iPhone 16",
+          "storage": "128 GB",
+          "color": "Black",
+          "condition": "like_new",
+          "images": [
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t39.30808-1/348275887_914205606302972_2180412001916335337_n.png?stp=dst-png_s100x100&_nc_cat=1&ccb=1-7&_nc_sid=11a88f&_nc_ohc=xCVlsvZhlygQ7kNvwGKwU-4&_nc_oc=Adn4kTBbbjQPxz6U1cPN3za9pdCNcPdi2Rs6CI3qUX7Uxi6STZVaZrCBRuc__aZKsQ8&_nc_ad=z-m&_nc_cid=0&_nc_zt=24&_nc_ht=scontent.fisb17-1.fna&_nc_gid=w1lCCwWPDF1h920eIA0amQ&oh=00_AfWOlz2p89VwxrOfJIxiKwBxmXALJ9cZG2VPEjCP_7k9vg&oe=68B33962",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/533028482_1848956849016248_4680054367786574573_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=247b10&_nc_ohc=NCOTVcglVIsQ7kNvwGrbDH4&_nc_oc=AdnpbgnT-FlAFs-gX74QXBifWyVzlJieJMyJ4qnhwqyfhHuKd7gQgLd_x0eO6-dWdug&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=eZUuO_tZluJEBw7ZcBhXzQ&oh=00_AfU__6Mrb9kXnED44jiJR2YJOP-8Pk2Dd2haS-7aqL4qww&oe=68B3195F",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/533028482_1848956849016248_4680054367786574573_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=247b10&_nc_ohc=NCOTVcglVIsQ7kNvwGrbDH4&_nc_oc=AdnpbgnT-FlAFs-gX74QXBifWyVzlJieJMyJ4qnhwqyfhHuKd7gQgLd_x0eO6-dWdug&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=eZUuO_tZluJEBw7ZcBhXzQ&oh=00_AfU__6Mrb9kXnED44jiJR2YJOP-8Pk2Dd2haS-7aqL4qww&oe=68B3195F",
+              "alt_text": "Product photo of Iphone 16 (128GB) 8 Weeks Old",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/533028482_1848956849016248_4680054367786574573_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=247b10&_nc_ohc=NCOTVcglVIsQ7kNvwGrbDH4&_nc_oc=AdnpbgnT-FlAFs-gX74QXBifWyVzlJieJMyJ4qnhwqyfhHuKd7gQgLd_x0eO6-dWdug&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=eZUuO_tZluJEBw7ZcBhXzQ&oh=00_AfU__6Mrb9kXnED44jiJR2YJOP-8Pk2Dd2haS-7aqL4qww&oe=68B3195F",
+              "alt_text": "Product photo of Iphone 16 (128GB) 8 Weeks Old",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/534940001_801447702314941_1087377858271252308_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_ohc=QlIycY34aEEQ7kNvwF1fmCB&_nc_oc=AdnC-igsT3AFqBDV36jUyInqD1kz-CZRWAIGO53mmJi4itc2irMVsIlUX6hKrb-Rw_k&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=eZUuO_tZluJEBw7ZcBhXzQ&oh=00_AfXj8t0FVElhjMrXwpc7n__NV3HG4LkGrIjDlNP23Uvu2A&oe=68B33C6E",
+              "alt_text": "Product photo of Iphone 16 (128GB) 8 Weeks Old",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/532913874_1979666962842488_8058477916635858598_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=3220SnfuURYQ7kNvwGBTE8C&_nc_oc=AdkYcSR2eNxTYJHEnKORHmfWr1qqn8KHwrwFXop3Yr5u6RgguWD_J5l2e9zYQmhoUFs&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=eZUuO_tZluJEBw7ZcBhXzQ&oh=00_AfVCzGMFRw-QWIy_ADPOaRw2XPWGVoXXfe9hQFh32mtYyg&oe=68B3399C",
+              "alt_text": "Product photo of Iphone 16 (128GB) 8 Weeks Old",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/532110418_1822947601906526_5337326361352278098_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=247b10&_nc_ohc=cLJC9eGuR_8Q7kNvwHnjRdC&_nc_oc=AdlecUO8wVCzZIIuehzkl_PVOWgOI8pT5uPYE3otZSLBBWpht5J_u2CESNgrelaInOk&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=eZUuO_tZluJEBw7ZcBhXzQ&oh=00_AfXyrpscJfE4-gSkQp5O2cUjAMUxPvfWmoN62sEoSxnCRQ&oe=68B323CA",
+              "alt_text": "Product photo of Iphone 16 (128GB) 8 Weeks Old",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/532952642_744502448387661_4786302987540861794_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=247b10&_nc_ohc=j44Qn_ylUqQQ7kNvwFcW-VS&_nc_oc=AdlXypIIA2woUpVh8cH-T7MSz8h0LzmCyl8XCvw5YSXr5IGASnpVoX_Z7_-cNL4JE_Q&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=eZUuO_tZluJEBw7ZcBhXzQ&oh=00_AfUHi93efy-5GG2mtbOgv-x3-qr3OLjUyUtCw3oa6nrscw&oe=68B30C82",
+              "alt_text": "Product photo of Iphone 16 (128GB) 8 Weeks Old",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/533024540_765740962527598_8031385790533350775_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=91wWfpUe7fQQ7kNvwFX-8ul&_nc_oc=AdldrYfxkFvQu0xZoxQUXfDMz4eP5AMq4MQxqxVJ9UpG4jWgGGs2rkPD26eoGbMLXJA&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=eZUuO_tZluJEBw7ZcBhXzQ&oh=00_AfWWvnLVmuLtSErV7nOF7A54f9fg4a6-u8xGoU3dbZHviw&oe=68B32CC1",
+              "alt_text": "Product photo of Iphone 16 (128GB) 8 Weeks Old",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.1600-4/508816719_1983797595361107_3308171668594923101_n.jpg?stp=cp0_dst-jpg_q75_s960x960_spS444_tt6&_nc_cat=1&ccb=1-7&_nc_sid=c02adf&_nc_ohc=6vzJwpOvfkkQ7kNvwH2z8my&_nc_oc=AdkTSF8hutivgoexchxj2VlS_06LMLwgU-wio5PFLVkSTXVyRjB-Q2SXvZd3yrOAsCU&_nc_zt=1&_nc_ht=scontent.fisb17-1.fna&_nc_gid=eZUuO_tZluJEBw7ZcBhXzQ&oh=00_AfUSKXXaj0SG12VMMvzZV5ZJCFzdYgdBiOFIY3jIpsnxgw&oe=68B30A2F",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t15.13418-10/460484620_551238064088406_2819323557483391130_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=101&ccb=1-7&_nc_sid=ace027&_nc_ohc=fRmSH1GUE9AQ7kNvwGaFBM2&_nc_oc=AdlZvgCMB8wziQ2lTKpMquNU_rRnUvcg-3geXH3qwQDbYaiiCmlFJZJeEju1xJFgtzY&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=eZUuO_tZluJEBw7ZcBhXzQ&oh=00_AfXg7IbqNZT6LZD16z_3G9rnVvDpBX6UggNEViwB9ehC0Q&oe=68B30D08",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/513938494_2644603382408771_5360708048300607702_n.jpg?stp=c0.6.261.261a_dst-jpg_p261x260_tt6&_nc_cat=106&ccb=1-7&_nc_sid=247b10&_nc_ohc=1Idym9WtQG0Q7kNvwH8Jus5&_nc_oc=AdnAo5-BnWI9CenlQxY-nv7RLSyOX1LoXTUrrA1rF-R1BPv-3baxqQuf1wIIpZVDBfg&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=BZxUFFie5WVscB8sMgGPtw&oh=00_AfV3QRFaGkKWnSztVvdwTp94oM_cpWz5bN8UsnHO-ollyg&oe=68B32389",
+              "alt_text": "Nike Giannis antetokounmpo basketball tracksuit set in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/532910363_655258827056060_9117410234824860383_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=101&ccb=1-7&_nc_sid=247b10&_nc_ohc=aFNgiqqKUUAQ7kNvwGoK-Cx&_nc_oc=AdmBJclkRpTMx0WJyOGL20pqA1NpxJpXP0Z47X0pmblOmrse4xPWz3QuYPULU5HZJv8&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=BZxUFFie5WVscB8sMgGPtw&oh=00_AfXKMEooqJ6hB3fyjR98RTW8HqQC-8gh1-Y-sBnCIpobsQ&oe=68B30613",
+              "alt_text": "Free fridge in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/534920481_1140186284626670_5418485390996520888_n.jpg?stp=c43.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=111&ccb=1-7&_nc_sid=247b10&_nc_ohc=-WRlKTFRdE8Q7kNvwF5DBa9&_nc_oc=AdkJsXJxycrp6GQjskUsJ5FfdmlgNX_WAPydkDt4WYMzBSH90s5ZBHnDenaRexd97oY&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=BZxUFFie5WVscB8sMgGPtw&oh=00_AfWu_q18Wj9dwRPHeSgK3q1MnS5Vc-7ak44WcKacRq6ndA&oe=68B31FA9",
+              "alt_text": "Magic keyboard for 11 inch iPad m4 in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/533638873_1444013960186419_8481958849306012099_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=108&ccb=1-7&_nc_sid=247b10&_nc_ohc=pDudJmgMnzgQ7kNvwFDX72d&_nc_oc=AdnZAtHaM7hJ_prLEwqOkV2tnBC4M-psoSi6fT6NwJFAsOx5EIVO4l9Wx7wdXUE7IjM&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=BZxUFFie5WVscB8sMgGPtw&oh=00_AfVtEkA-Xsh2tbkA-DSSu8UpceZua0zuTBObNdjHIX-yPQ&oe=68B32244",
+              "alt_text": "Lafufu in Sydney, NSW",
+              "type": "product_image"
+            }
+          ],
+          "description": "Iphone 16 (128GB) 8 Weeks Old\n\nAU$1,100\n  · In stock\n\nListed in Sydney, NSW"
+        }
+      },
+      "hot_reload": true,
+      "hot_reload_timestamp": "2025-08-26T11:05:37.583167",
+      "scraping_status": "completed",
+      "scraping_method": "deep",
+      "created_at": "2025-08-26T11:05:37.583167",
+      "seller_name": "Private Seller"
+    },
+    {
+      "id": "deep_791982119882991",
+      "title": "AU$1,200\niPhone 16\nSydney, NSW",
+      "price": {
+        "amount": "0",
+        "currency": "SEK",
+        "raw_value": "Not found"
+      },
+      "location": {
+        "city": "Within",
+        "distance": "51km",
+        "raw_location": "Within 51"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/791982119882991/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A1930bfd6-e9e3-413a-a961-f3b184626e2f&__tn__=!%3AD",
+      "seller": {
+        "info": "Private Seller",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 16",
+        "storage": "29 TB",
+        "condition": "like_new",
+        "color": "Black"
+      },
+      "images": [
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t39.30808-1/348275887_914205606302972_2180412001916335337_n.png?stp=dst-png_s100x100&_nc_cat=1&ccb=1-7&_nc_sid=11a88f&_nc_ohc=xCVlsvZhlygQ7kNvwGKwU-4&_nc_oc=Adn4kTBbbjQPxz6U1cPN3za9pdCNcPdi2Rs6CI3qUX7Uxi6STZVaZrCBRuc__aZKsQ8&_nc_ad=z-m&_nc_cid=0&_nc_zt=24&_nc_ht=scontent.fisb17-1.fna&_nc_gid=pKQCtNJKKgoA0CV5WSwrLQ&oh=00_AfWjTkj85PqzpIqodSpfaR2xdKU2NUPZVKN5-CZlGnBu4g&oe=68B33962",
+          "alt_text": "",
+          "type": "product_image"
+        },
+        {
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/532956461_706779872361145_3969930080335545590_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=101&ccb=1-7&_nc_sid=247b10&_nc_ohc=sZKZKdGFx74Q7kNvwFWy8Z9&_nc_oc=AdkBo1vssc8uP6UgyKucygyaaJ1EroNqp0vDVsn7nfqMEmA_BpyO3GjsIGbGrdxty5E&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=0F-sRl_y4fJa7Dj9Jse2sw&oh=00_AfUA40BcnUkiTSKmXVwyL25e_Nkmq2PmiRMOOC1mD5eG_A&oe=68B31A17",
+          "alt_text": "",
+          "type": "product_image"
+        },
+        {
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/532956461_706779872361145_3969930080335545590_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=101&ccb=1-7&_nc_sid=247b10&_nc_ohc=sZKZKdGFx74Q7kNvwFWy8Z9&_nc_oc=AdkBo1vssc8uP6UgyKucygyaaJ1EroNqp0vDVsn7nfqMEmA_BpyO3GjsIGbGrdxty5E&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=0F-sRl_y4fJa7Dj9Jse2sw&oh=00_AfUA40BcnUkiTSKmXVwyL25e_Nkmq2PmiRMOOC1mD5eG_A&oe=68B31A17",
+          "alt_text": "Product photo of iPhone 16",
+          "type": "product_image"
+        }
+      ],
+      "extraction_method": "deep_scraper",
+      "data_quality": "comprehensive",
+      "added_at": "2025-08-26T11:03:40.479597",
+      "source": "facebook_marketplace_scraper",
+      "deep_data": {
+        "seller_details": {
+          "button_found": true,
+          "extraction_timestamp": "2025-08-26T11:02:09.332776",
+          "button_text": "Seller details",
+          "button_href": "https://www.facebook.com/marketplace/profile/61575949376733/?product_id=791982119882991",
+          "join_date": "joined facebook in 2025"
+        },
+        "marketplace_metadata": {
+          "fb_listing_id": "791982119882991",
+          "is_sold": true,
+          "timing": {
+            "posted_time": "2 hours"
+          }
+        },
+        "comprehensive_product": {
+          "model_name": "iPhone 16",
+          "storage": "29 TB",
+          "color": "Black",
+          "condition": "like_new",
+          "images": [
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t39.30808-1/348275887_914205606302972_2180412001916335337_n.png?stp=dst-png_s100x100&_nc_cat=1&ccb=1-7&_nc_sid=11a88f&_nc_ohc=xCVlsvZhlygQ7kNvwGKwU-4&_nc_oc=Adn4kTBbbjQPxz6U1cPN3za9pdCNcPdi2Rs6CI3qUX7Uxi6STZVaZrCBRuc__aZKsQ8&_nc_ad=z-m&_nc_cid=0&_nc_zt=24&_nc_ht=scontent.fisb17-1.fna&_nc_gid=pKQCtNJKKgoA0CV5WSwrLQ&oh=00_AfWjTkj85PqzpIqodSpfaR2xdKU2NUPZVKN5-CZlGnBu4g&oe=68B33962",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/532956461_706779872361145_3969930080335545590_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=101&ccb=1-7&_nc_sid=247b10&_nc_ohc=sZKZKdGFx74Q7kNvwFWy8Z9&_nc_oc=AdkBo1vssc8uP6UgyKucygyaaJ1EroNqp0vDVsn7nfqMEmA_BpyO3GjsIGbGrdxty5E&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=0F-sRl_y4fJa7Dj9Jse2sw&oh=00_AfUA40BcnUkiTSKmXVwyL25e_Nkmq2PmiRMOOC1mD5eG_A&oe=68B31A17",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/532956461_706779872361145_3969930080335545590_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=101&ccb=1-7&_nc_sid=247b10&_nc_ohc=sZKZKdGFx74Q7kNvwFWy8Z9&_nc_oc=AdkBo1vssc8uP6UgyKucygyaaJ1EroNqp0vDVsn7nfqMEmA_BpyO3GjsIGbGrdxty5E&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=0F-sRl_y4fJa7Dj9Jse2sw&oh=00_AfUA40BcnUkiTSKmXVwyL25e_Nkmq2PmiRMOOC1mD5eG_A&oe=68B31A17",
+              "alt_text": "Product photo of iPhone 16",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/532956461_706779872361145_3969930080335545590_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=101&ccb=1-7&_nc_sid=247b10&_nc_ohc=sZKZKdGFx74Q7kNvwFWy8Z9&_nc_oc=AdkBo1vssc8uP6UgyKucygyaaJ1EroNqp0vDVsn7nfqMEmA_BpyO3GjsIGbGrdxty5E&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=0F-sRl_y4fJa7Dj9Jse2sw&oh=00_AfUA40BcnUkiTSKmXVwyL25e_Nkmq2PmiRMOOC1mD5eG_A&oe=68B31A17",
+              "alt_text": "Product photo of iPhone 16",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/532993308_1076881574514833_6565470659821024669_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=103&ccb=1-7&_nc_sid=247b10&_nc_ohc=Ed5pGvFncXkQ7kNvwEYxPT6&_nc_oc=Adkh_tORhBisYynJxePjrScmLWSzce3QdX5IKVbHkBC6c38XbLzKUmtat5AhL5OwjcY&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=0F-sRl_y4fJa7Dj9Jse2sw&oh=00_AfV5WlL2cICXaOdVXxLsLxlUGBMdsZVRxc8oCGhBJwPc8w&oe=68B3189C",
+              "alt_text": "Product photo of iPhone 16",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/532470657_1287810353124179_8842914140489050195_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_ohc=0ZmtO3y99UcQ7kNvwFssQ2R&_nc_oc=AdnQRb1NMq7Bs74hPfGA-wRmIht8-dGb-BjvHyRcGWQH5-Z0xSbapr5SHVRCXuAae1Y&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=0F-sRl_y4fJa7Dj9Jse2sw&oh=00_AfXhmG_spXQG3jwYt8KKSqVqpfmcOuT5ceuFQ5nZG7kV8Q&oe=68B3090C",
+              "alt_text": "Product photo of iPhone 16",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.1600-4/529386982_1929182027927969_170712721263629605_n.jpg?stp=cp0_dst-jpg_q75_s960x960_spS444_tt6&_nc_cat=1&ccb=1-7&_nc_sid=c02adf&_nc_ohc=2F2eQZeK-y4Q7kNvwHyYPe0&_nc_oc=Adkc2KKatWUbF-auP1vMf4lwyDnV_jeqfK2UTneeoqEy5Uc9ODGTjSE9syilOSO9yck&_nc_zt=1&_nc_ht=scontent.fisb17-1.fna&_nc_gid=ysvuL2Hh4rpfbT4NcMvaKg&oh=00_AfVgo6v1Kq11nMYU72HLQ0MeZVVLBVgw7oQV0ixIb9IuOQ&oe=68B33369",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.1600-4/524899811_1414456396505527_5330951017829452927_n.jpg?stp=cp0_dst-jpg_p75x225_q75_spS444_tt6&_nc_cat=1&ccb=1-7&_nc_sid=c02adf&_nc_ohc=s25srtXST8cQ7kNvwFfePJ9&_nc_oc=AdkAGD0DZ1ehKegNb05N8eRPP8xeZWBz6ifUFa5HSeayNKUZ_s0zmiVveImCjuD7iHw&_nc_zt=1&_nc_ht=scontent.fisb17-1.fna&_nc_gid=0F-sRl_y4fJa7Dj9Jse2sw&oh=00_AfXLLI5zxWWpKUfyGLtm31IMvtFaTgHBcrcD2OdHAQweWQ&oe=68B3204F",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.1600-4/525437140_645418261324533_3562135159386585180_n.jpg?stp=cp0_dst-jpg_p75x225_q75_spS444_tt6&_nc_cat=105&ccb=1-7&_nc_sid=c02adf&_nc_ohc=QL8FJowl03IQ7kNvwEyMkwS&_nc_oc=Adnz8C4z9w3rKpESiAQIqtnCBjszjgD3uO1--n7DQshYnGpGT4Ad-o-cp63YYSfLGa0&_nc_zt=1&_nc_ht=scontent.fisb1-2.fna&_nc_gid=0F-sRl_y4fJa7Dj9Jse2sw&oh=00_AfViEaiEG4SWQo_WdBi7pJJYlJ4vIWLxnjg5t6YMRZXV5g&oe=68B31415",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.1600-4/524924072_2150364308798027_4105897915682034589_n.jpg?stp=cp0_dst-jpg_p75x225_q75_spS444_tt6&_nc_cat=107&ccb=1-7&_nc_sid=c02adf&_nc_ohc=KfTNR6J6q_4Q7kNvwGvNbbH&_nc_oc=AdlAibBUVJR2RAt-BmTUMMiW156qWRRXJjStMT-kZqLkDqvPUIW5cGvUh2DdWO5Brz4&_nc_zt=1&_nc_ht=scontent.fisb17-1.fna&_nc_gid=0F-sRl_y4fJa7Dj9Jse2sw&oh=00_AfXBuH6EL7SdvswK72BEDYByIOJSsTr4ad5RBClILf-jIw&oe=68B3149B",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.1600-4/524903684_1246268650288265_6400770334147783495_n.jpg?stp=cp0_dst-jpg_p75x225_q75_spS444_tt6&_nc_cat=108&ccb=1-7&_nc_sid=c02adf&_nc_ohc=MH4tlqDiJfsQ7kNvwFXcxc8&_nc_oc=AdnTBV2kqN5hABuXr7ncFDR2VwxAgHW2XaVhYapKAtEElrT4yAQsG8S1ufgu6DNymQ0&_nc_zt=1&_nc_ht=scontent.fisb1-2.fna&_nc_gid=0F-sRl_y4fJa7Dj9Jse2sw&oh=00_AfU2tvh8_UWwTB1dM0NhMRDAKCNzOBFaVOggFSo7wu16Xg&oe=68B33278",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.1600-4/525384323_1089448483251861_3457067135995861239_n.jpg?stp=cp0_dst-jpg_p75x225_q75_spS444_tt6&_nc_cat=108&ccb=1-7&_nc_sid=c02adf&_nc_ohc=gbdDKY_xgowQ7kNvwGM-ses&_nc_oc=AdkJofHBEWJgPWB00RFBVNF2f24JkB7_wfStKKrjCuvtQE6qxx0Xp50azYTAVrCCt50&_nc_zt=1&_nc_ht=scontent.fisb1-2.fna&_nc_gid=0F-sRl_y4fJa7Dj9Jse2sw&oh=00_AfUeYEtgmKKXQ7j_KpVPaAdimJP5aB1LEp4DgeimOFyeqA&oe=68B31554",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/513938494_2644603382408771_5360708048300607702_n.jpg?stp=c0.6.261.261a_dst-jpg_p261x260_tt6&_nc_cat=106&ccb=1-7&_nc_sid=247b10&_nc_ohc=1Idym9WtQG0Q7kNvwH8Jus5&_nc_oc=AdnAo5-BnWI9CenlQxY-nv7RLSyOX1LoXTUrrA1rF-R1BPv-3baxqQuf1wIIpZVDBfg&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=ysvuL2Hh4rpfbT4NcMvaKg&oh=00_AfWVWB6dbom1gDi4BzrvbDG9GnH5sKgkOlumZgFbVyRSdg&oe=68B32389",
+              "alt_text": "Nike Giannis antetokounmpo basketball tracksuit set in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/532910363_655258827056060_9117410234824860383_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=101&ccb=1-7&_nc_sid=247b10&_nc_ohc=aFNgiqqKUUAQ7kNvwGoK-Cx&_nc_oc=AdmBJclkRpTMx0WJyOGL20pqA1NpxJpXP0Z47X0pmblOmrse4xPWz3QuYPULU5HZJv8&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=ysvuL2Hh4rpfbT4NcMvaKg&oh=00_AfX16T2yRxkT1uLqjYPPD_ZAvaBFS__kTpYJEGQP8JAfBg&oe=68B30613",
+              "alt_text": "Free fridge in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/472135051_988045922868475_1655725529971918961_n.jpg?stp=c0.46.258.258a_dst-jpg_p235x350_tt6&_nc_cat=103&ccb=1-7&_nc_sid=247b10&_nc_ohc=hT-RfubRg-AQ7kNvwE4yczM&_nc_oc=AdnTubaVHLPmEYS-CXYj9Mo8Kgza6oRrWWJSQLI1uRXeMhI5-Myoj3D8OzRP-rBXbug&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=ysvuL2Hh4rpfbT4NcMvaKg&oh=00_AfWBVwp5xhfQOA9JG1tn6GDHndKUB685Q8nFilN3WcvVAw&oe=68B31415",
+              "alt_text": "New Black/Blue Man Shoulder Backpack Chest Bag Sling Cross Body Satchel Outdoor Charging Port in Sydney, NSW",
+              "type": "product_image"
+            }
+          ],
+          "description": "Listed 3 days ago in Sydney, NSW\n\nSelling my iPhone 16 black 128gb\nUsed for a few months \nStill good battery health \nComes with case a... See more\n\nLocation is approximate"
+        }
+      },
+      "hot_reload": true,
+      "hot_reload_timestamp": "2025-08-26T11:03:40.479597",
+      "scraping_status": "completed",
+      "scraping_method": "deep",
+      "created_at": "2025-08-26T11:03:40.479597",
+      "seller_name": "Private Seller"
+    },
+    {
+      "id": "deep_2009941163075261",
+      "title": "AU$200\niphone 11\nSydney, NSW",
+      "price": {
+        "amount": "05",
+        "currency": "KR",
+        "raw_value": "05 kr"
+      },
+      "location": {
+        "city": "Within",
+        "distance": "51km",
+        "raw_location": "Within 51"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/2009941163075261/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A02b25ebb-1b35-4c1b-b910-725539da3940&__tn__=!%3AD",
+      "seller": {
+        "info": "Private Seller",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 11",
+        "storage": "29 TB",
+        "condition": "new_in_box",
+        "color": "Black"
+      },
+      "images": [
+        {
+          "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/533590773_597361960122192_6415520003608110229_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=100&ccb=1-7&_nc_sid=247b10&_nc_ohc=O3vu0prZoAMQ7kNvwGemaae&_nc_oc=Adlo1kPraY09mtCPtbtfA4aLImG4OIaJMIdvEubNV-46_eqpdO9HP07s1DHIe7RsXXI&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=gYS_2aO_ldEVA8ezKSq6nw&oh=00_AfWDVBc2pUA9idMoU9B2v7nsumwqxnUnMHlXxQGxg0DfDA&oe=68B1F69F",
+          "alt_text": "",
+          "type": "product_image"
+        },
+        {
+          "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/533590773_597361960122192_6415520003608110229_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=100&ccb=1-7&_nc_sid=247b10&_nc_ohc=O3vu0prZoAMQ7kNvwGemaae&_nc_oc=Adlo1kPraY09mtCPtbtfA4aLImG4OIaJMIdvEubNV-46_eqpdO9HP07s1DHIe7RsXXI&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=gYS_2aO_ldEVA8ezKSq6nw&oh=00_AfWDVBc2pUA9idMoU9B2v7nsumwqxnUnMHlXxQGxg0DfDA&oe=68B1F69F",
+          "alt_text": "Product photo of iphone 11",
+          "type": "product_image"
+        },
+        {
+          "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/533590773_597361960122192_6415520003608110229_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=100&ccb=1-7&_nc_sid=247b10&_nc_ohc=O3vu0prZoAMQ7kNvwGemaae&_nc_oc=Adlo1kPraY09mtCPtbtfA4aLImG4OIaJMIdvEubNV-46_eqpdO9HP07s1DHIe7RsXXI&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=gYS_2aO_ldEVA8ezKSq6nw&oh=00_AfWDVBc2pUA9idMoU9B2v7nsumwqxnUnMHlXxQGxg0DfDA&oe=68B1F69F",
+          "alt_text": "Product photo of iphone 11",
+          "type": "product_image"
+        }
+      ],
+      "extraction_method": "deep_scraper",
+      "data_quality": "comprehensive",
+      "added_at": "2025-08-25T13:44:30.022816",
+      "source": "facebook_marketplace_scraper",
+      "deep_data": {
+        "seller_details": {
+          "button_found": true,
+          "extraction_timestamp": "2025-08-25T13:43:04.446816",
+          "button_text": "Seller details",
+          "button_href": "https://www.facebook.com/marketplace/profile/61574838517059/?product_id=2009941163075261",
+          "join_date": "joined facebook in 2025"
+        },
+        "marketplace_metadata": {
+          "fb_listing_id": "2009941163075261",
+          "is_sold": true,
+          "timing": {
+            "posted_time": "27 minutes"
+          }
+        },
+        "comprehensive_product": {
+          "model_name": "iPhone 11",
+          "storage": "29 TB",
+          "color": "Black",
+          "condition": "new_in_box",
+          "images": [
+            {
+              "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/533590773_597361960122192_6415520003608110229_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=100&ccb=1-7&_nc_sid=247b10&_nc_ohc=O3vu0prZoAMQ7kNvwGemaae&_nc_oc=Adlo1kPraY09mtCPtbtfA4aLImG4OIaJMIdvEubNV-46_eqpdO9HP07s1DHIe7RsXXI&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=gYS_2aO_ldEVA8ezKSq6nw&oh=00_AfWDVBc2pUA9idMoU9B2v7nsumwqxnUnMHlXxQGxg0DfDA&oe=68B1F69F",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/533590773_597361960122192_6415520003608110229_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=100&ccb=1-7&_nc_sid=247b10&_nc_ohc=O3vu0prZoAMQ7kNvwGemaae&_nc_oc=Adlo1kPraY09mtCPtbtfA4aLImG4OIaJMIdvEubNV-46_eqpdO9HP07s1DHIe7RsXXI&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=gYS_2aO_ldEVA8ezKSq6nw&oh=00_AfWDVBc2pUA9idMoU9B2v7nsumwqxnUnMHlXxQGxg0DfDA&oe=68B1F69F",
+              "alt_text": "Product photo of iphone 11",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/533590773_597361960122192_6415520003608110229_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=100&ccb=1-7&_nc_sid=247b10&_nc_ohc=O3vu0prZoAMQ7kNvwGemaae&_nc_oc=Adlo1kPraY09mtCPtbtfA4aLImG4OIaJMIdvEubNV-46_eqpdO9HP07s1DHIe7RsXXI&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=gYS_2aO_ldEVA8ezKSq6nw&oh=00_AfWDVBc2pUA9idMoU9B2v7nsumwqxnUnMHlXxQGxg0DfDA&oe=68B1F69F",
+              "alt_text": "Product photo of iphone 11",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/533320080_4066647686983601_328494604468544506_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=110&ccb=1-7&_nc_sid=247b10&_nc_ohc=76Z4lTW4BOUQ7kNvwHH6L7F&_nc_oc=Admsk5a_EnCRO-cn1yo4SWY9Sn59WsyMVZ_o1_R5dtB0YJWo4L6qx3mRkbdn8ySGSb8&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=gYS_2aO_ldEVA8ezKSq6nw&oh=00_AfVxeVCyl8a2BiiCOFJSurgSVQpQRbrDArhW9iLpaydc7A&oe=68B203FE",
+              "alt_text": "Product photo of iphone 11",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/533266627_1300456038532110_3000443606178376796_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=102&ccb=1-7&_nc_sid=247b10&_nc_ohc=tCpwSo_DBzMQ7kNvwEnYn4S&_nc_oc=AdmfZTTpsatBN_qxoG-Mn5dpS4TETvEBBXKxgaklFtuMg8PrM3IUtic32qkYilNslYg&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=gYS_2aO_ldEVA8ezKSq6nw&oh=00_AfU22f-SSd2VT48uvRCgf88kn0rUWE9D_wkPJ7cMdcIHQA&oe=68B1F55F",
+              "alt_text": "Product photo of iphone 11",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/534960606_1406967287038058_990061435448488649_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=100&ccb=1-7&_nc_sid=247b10&_nc_ohc=-NiFfJKKZHAQ7kNvwGlhHzJ&_nc_oc=AdnvM0LfHaLoCqJ4iMglHJhqWwgFguxSPay4MzVsMk3w0ZGepOt6Q75GvossMoF_abk&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=gYS_2aO_ldEVA8ezKSq6nw&oh=00_AfXl8LZ-zDX0HPe3Uwemvmc5qeIXmazen2sOHaQCWFTxCw&oe=68B20674",
+              "alt_text": "Product photo of iphone 11",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/536358473_1277549553430629_1672938867677789056_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=104&ccb=1-7&_nc_sid=247b10&_nc_ohc=lgi4MJKQOMcQ7kNvwFiA2Hp&_nc_oc=AdnNZuUhHq5IO9pO9vVP79bw4NfejmvhNhq5ErAXk4RBeTcGPgA563ZnE2iTDV0cvhs&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=gYS_2aO_ldEVA8ezKSq6nw&oh=00_AfWEfVAoQer56UQA0J_OcPp3kIkxIGqlb-PNAML_gpYLyA&oe=68B20ED3",
+              "alt_text": "Product photo of iphone 11",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t15.5256-10/496285404_711786611289110_2172208916691846573_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=105&ccb=1-7&_nc_sid=7965db&_nc_ohc=YcmAdsklMewQ7kNvwH7sa-K&_nc_oc=AdmRFv-zxdMysgS0dZ08ND4ZiCzjUtpk1wGm72gueEHvoZi9DIEv1HN4EDAlYsh0CyI&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=gYS_2aO_ldEVA8ezKSq6nw&oh=00_AfWZ3_J2nHaATujBYhFlGZbPVjyUAt4B8R1zVduwgXLSDg&oe=68B1F481",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.1600-4/489370151_3974220802829252_208279090510610177_n.jpg?stp=cp0_dst-jpg_q75_s960x960_spS444_tt6&_nc_cat=1&ccb=1-7&_nc_sid=c02adf&_nc_ohc=lFG9-JBtawcQ7kNvwHazogr&_nc_oc=AdnN2i6exaknog3W4-N7JIzoYhke_vmKLZBxJPc04jrWX-HcXR9Oj6ryDvAJ3Pn-IFY&_nc_zt=1&_nc_ht=scontent.fisb13-1.fna&_nc_gid=gYS_2aO_ldEVA8ezKSq6nw&oh=00_AfXd-Dfi3-6aEKDUEOyYuh9HxV-2gls6Z2n4ygvLW5VVGA&oe=68B1E6DF",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/530828814_1878327103082619_6583844973465239013_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=104&ccb=1-7&_nc_sid=247b10&_nc_ohc=3Djx9je1onAQ7kNvwFdWU3F&_nc_oc=AdksFIqqL5cQKsF02t4oYFqGvintczmkxhHOpny1FRo8fwUOifBxu6UGp6VHefvtiOs&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=MuBj6jTfQQOpAD9g4xTZKg&oh=00_AfWbetQxHYturkloObmh9nQtwGgBdemaPDiIC3JG3no3Zw&oe=68B1E056",
+              "alt_text": "iPhone 16 (128GB) in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/533023688_2939078606481015_1511091346683751389_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=100&ccb=1-7&_nc_sid=247b10&_nc_ohc=aD8M6puFw-4Q7kNvwG5u9_J&_nc_oc=Adm9EW0LeX3FyEr-hIOE5Pmn7lAwea_Bp-ms2YJ0OyvppecWBve8ADJIZzCikYpYwzE&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=MuBj6jTfQQOpAD9g4xTZKg&oh=00_AfXdk0ubZRS6OfMREA1ZyC8AYbHlJdZOWETap6meB_aM7g&oe=68B1ECF7",
+              "alt_text": "Brand new iPhone 13 sealed in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/531758426_3826124097678523_8164445933473929639_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=101&ccb=1-7&_nc_sid=247b10&_nc_ohc=q8DBjYizI28Q7kNvwGOYQy2&_nc_oc=AdneugTBY7hYGlLYYRsdVfoPXP2fsTCuqiZKsZhqCFy6K6EGOZpG3hsMDtLlFLS7MCI&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=MuBj6jTfQQOpAD9g4xTZKg&oh=00_AfVDqHwokmxpL-PQ779ZxFqWCI5yqodHwLJEp-cg9UEk-w&oe=68B1EB95",
+              "alt_text": "Iphone 16 pro max - 256gb - under warranty in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/535380515_1079573414384406_6985808676826469409_n.jpg?stp=c0.0.261.261a_dst-jpg_p261x260_tt6&_nc_cat=104&ccb=1-7&_nc_sid=247b10&_nc_ohc=63IjhgjYgogQ7kNvwGUdOYz&_nc_oc=AdkEq6O-H4TascxA01B_qpC3L_RE0fytn2X8tvFM8YRmV_i1fu4dFL7cS63LvCgNjI8&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=MuBj6jTfQQOpAD9g4xTZKg&oh=00_AfWCiUhemkBdDwb_MBbDTVGM3a5QJWZamg_fCkiZUDZS4A&oe=68B1ED7E",
+              "alt_text": "Free Samsung S23 Ultra & S7 Edge cases in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/533027762_567100929729685_9009410877274834360_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=110&ccb=1-7&_nc_sid=247b10&_nc_ohc=9SFwCTL-acoQ7kNvwHRsPtW&_nc_oc=Adnk7-_jhEWK95mqqs5fMEi-2OQkPpvzmRN_yOnGLbYPI9s8JBZHaY5DR4Itw6Qg7us&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=MuBj6jTfQQOpAD9g4xTZKg&oh=00_AfV-hhaGTz1HlkKQKNtDIji836cxxM_PfgLQrz0eO5AXmg&oe=68B1FE85",
+              "alt_text": "IPHONE 15 256GB BLACK in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb13-1.fna.fbcdn.net/v/t45.5328-4/539268763_2365620027237102_9138511040001064399_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=110&ccb=1-7&_nc_sid=247b10&_nc_ohc=bEdW-TJQxaoQ7kNvwHgxtXA&_nc_oc=AdlgERNanRMqC7cOuqx6Q_4aLugGQVsM51KPCNjmJHAePwy4s_x84DZMrbGASK3fhWk&_nc_zt=23&_nc_ht=scontent.fisb13-1.fna&_nc_gid=MuBj6jTfQQOpAD9g4xTZKg&oh=00_AfVL3FFHIRydAoUMcfeJQCeFWJvSFw1JkM03ElVSV8tLXA&oe=68B1EA76",
+              "alt_text": "iPhone 11 64gb in Sydney, NSW",
+              "type": "product_image"
+            }
+          ],
+          "description": "Listed 38 minutes ago in Sydney, NSW\n\niPhone 11 - Good condition just a couple of minor scratches on the screen. Selling due to upgrade, E... See more\n\nLocation is approximate"
+        }
+      },
+      "hot_reload": true,
+      "hot_reload_timestamp": "2025-08-25T13:44:30.022816",
+      "scraping_status": "completed",
+      "scraping_method": "deep",
+      "created_at": "2025-08-25T13:44:30.022816",
+      "seller_name": "Private Seller"
+    },
+    {
+      "id": "deep_1091991559707762",
+      "title": "AU$10\niPhone 15/16 Pro Max cases (READ DESCRIPTION)\nSydney, NSW",
+      "price": {
+        "amount": "286",
+        "currency": "KR",
+        "raw_value": "286 kr"
+      },
+      "location": {
+        "city": "Within",
+        "distance": "51km",
+        "raw_location": "Within 51"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1091991559707762/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A18f064f7-bb0c-4dd4-b4e2-ab49553ddfa5&__tn__=!%3AD",
+      "seller": {
+        "info": "Private Seller",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 15",
+        "storage": "29 TB",
+        "condition": "new_in_box",
+        "color": "Black"
+      },
+      "images": [
+        {
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/489375561_1456859295721195_8268450583494362226_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=108&ccb=1-7&_nc_sid=247b10&_nc_ohc=7H1RSimHT3EQ7kNvwFYh91K&_nc_oc=AdmNXbHjMfydyXGIZ3feoZSWlHDssd7YTJ5-gGoDmIMODpM10Q6IcgfRmIvY7LKZa0xDO-EeE_pZYDhMYC_I4gIc&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=CldcFZTZia1zkZVZsUu68g&oh=00_AfVzgFnWIxo-ShbkVJc-0Jb2_hSOJtEQ4VCM3YxyTRuNaQ&oe=68B1ECB2",
+          "alt_text": "",
+          "type": "product_image"
+        },
+        {
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/489375561_1456859295721195_8268450583494362226_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=108&ccb=1-7&_nc_sid=247b10&_nc_ohc=7H1RSimHT3EQ7kNvwFYh91K&_nc_oc=AdmNXbHjMfydyXGIZ3feoZSWlHDssd7YTJ5-gGoDmIMODpM10Q6IcgfRmIvY7LKZa0xDO-EeE_pZYDhMYC_I4gIc&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=CldcFZTZia1zkZVZsUu68g&oh=00_AfVzgFnWIxo-ShbkVJc-0Jb2_hSOJtEQ4VCM3YxyTRuNaQ&oe=68B1ECB2",
+          "alt_text": "Product photo of iPhone 15/16 Pro Max cases (READ DESCRIPTION)",
+          "type": "product_image"
+        },
+        {
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/489375561_1456859295721195_8268450583494362226_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=108&ccb=1-7&_nc_sid=247b10&_nc_ohc=7H1RSimHT3EQ7kNvwFYh91K&_nc_oc=AdmNXbHjMfydyXGIZ3feoZSWlHDssd7YTJ5-gGoDmIMODpM10Q6IcgfRmIvY7LKZa0xDO-EeE_pZYDhMYC_I4gIc&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=CldcFZTZia1zkZVZsUu68g&oh=00_AfVzgFnWIxo-ShbkVJc-0Jb2_hSOJtEQ4VCM3YxyTRuNaQ&oe=68B1ECB2",
+          "alt_text": "Product photo of iPhone 15/16 Pro Max cases (READ DESCRIPTION)",
+          "type": "product_image"
+        }
+      ],
+      "extraction_method": "deep_scraper",
+      "data_quality": "comprehensive",
+      "added_at": "2025-08-25T12:58:04.778358",
+      "source": "facebook_marketplace_scraper",
+      "deep_data": {
+        "seller_details": {
+          "button_found": true,
+          "extraction_timestamp": "2025-08-25T12:56:21.776397",
+          "button_text": "Seller details",
+          "button_href": "https://www.facebook.com/marketplace/profile/100080371650253/?product_id=1091991559707762",
+          "ratings": [
+            "4.2 out of 5 stars, from one review",
+            "4.2 out of 5 rating",
+            "5 out of 5 stars, from one review",
+            "5 out of 5 stars, from one review",
+            "5 out of 5 stars, from one review"
+          ],
+          "join_date": "joined facebook in 2022"
+        },
+        "marketplace_metadata": {
+          "fb_listing_id": "1091991559707762",
+          "is_sold": true,
+          "timing": {
+            "posted_time": "38 minutes"
+          }
+        },
+        "comprehensive_product": {
+          "model_name": "iPhone 15",
+          "storage": "29 TB",
+          "color": "Black",
+          "condition": "new_in_box",
+          "images": [
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/489375561_1456859295721195_8268450583494362226_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=108&ccb=1-7&_nc_sid=247b10&_nc_ohc=7H1RSimHT3EQ7kNvwFYh91K&_nc_oc=AdmNXbHjMfydyXGIZ3feoZSWlHDssd7YTJ5-gGoDmIMODpM10Q6IcgfRmIvY7LKZa0xDO-EeE_pZYDhMYC_I4gIc&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=CldcFZTZia1zkZVZsUu68g&oh=00_AfVzgFnWIxo-ShbkVJc-0Jb2_hSOJtEQ4VCM3YxyTRuNaQ&oe=68B1ECB2",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/489375561_1456859295721195_8268450583494362226_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=108&ccb=1-7&_nc_sid=247b10&_nc_ohc=7H1RSimHT3EQ7kNvwFYh91K&_nc_oc=AdmNXbHjMfydyXGIZ3feoZSWlHDssd7YTJ5-gGoDmIMODpM10Q6IcgfRmIvY7LKZa0xDO-EeE_pZYDhMYC_I4gIc&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=CldcFZTZia1zkZVZsUu68g&oh=00_AfVzgFnWIxo-ShbkVJc-0Jb2_hSOJtEQ4VCM3YxyTRuNaQ&oe=68B1ECB2",
+              "alt_text": "Product photo of iPhone 15/16 Pro Max cases (READ DESCRIPTION)",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/489375561_1456859295721195_8268450583494362226_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=108&ccb=1-7&_nc_sid=247b10&_nc_ohc=7H1RSimHT3EQ7kNvwFYh91K&_nc_oc=AdmNXbHjMfydyXGIZ3feoZSWlHDssd7YTJ5-gGoDmIMODpM10Q6IcgfRmIvY7LKZa0xDO-EeE_pZYDhMYC_I4gIc&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=CldcFZTZia1zkZVZsUu68g&oh=00_AfVzgFnWIxo-ShbkVJc-0Jb2_hSOJtEQ4VCM3YxyTRuNaQ&oe=68B1ECB2",
+              "alt_text": "Product photo of iPhone 15/16 Pro Max cases (READ DESCRIPTION)",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/489370211_1173106791277190_8247813535667979253_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=101&ccb=1-7&_nc_sid=247b10&_nc_ohc=L247tqrcIxIQ7kNvwE0SUsb&_nc_oc=AdlxFRVD0bNf8rwYdNXjg9S0t1vG5-OVzeXSbqQBGI3PKMofZ-1p7LeawvicELXNnascFaLtNUWhMjHL5TTcURfA&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=CldcFZTZia1zkZVZsUu68g&oh=00_AfUgTdM9zx2xdJC6SNw2LuuRInKriInPgANaMiTZ2JvYOg&oe=68B1D805",
+              "alt_text": "Product photo of iPhone 15/16 Pro Max cases (READ DESCRIPTION)",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/489773427_1398980781458358_4175268914583315996_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_ohc=lTMrkNu_PZUQ7kNvwFCAoIl&_nc_oc=AdnA3h2XrsGpeD3EmJOLV5kndt6Do6xxIETHtw1xXuCRw4-9MusGRhptp6HWJ-8r6ZC_YSndfZ9xLkR4EIqkJW69&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=CldcFZTZia1zkZVZsUu68g&oh=00_AfVaP0leLqgRweBsL8kedywBoiDIwIOQS5rfI5-hvLjxpQ&oe=68B1FD96",
+              "alt_text": "Product photo of iPhone 15/16 Pro Max cases (READ DESCRIPTION)",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/490328204_1648891465759965_6020642273628947898_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=104&ccb=1-7&_nc_sid=247b10&_nc_ohc=5_kNfOBWOZQQ7kNvwHSh3_m&_nc_oc=AdlbPUr5V5J4mFN83x_c6VbFqu739e8wb_HhFr3VgIN-9WjdOil-outYud8A8fnYlSIOSygDDPP6-7S4DDaBrKEh&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=CldcFZTZia1zkZVZsUu68g&oh=00_AfWpua30fo08Scrxyyq074-gi5GiXv2A7agrhlsV42Z32Q&oe=68B1F3AC",
+              "alt_text": "Product photo of iPhone 15/16 Pro Max cases (READ DESCRIPTION)",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/489370550_1198038895207168_9175376673405601791_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=101&ccb=1-7&_nc_sid=247b10&_nc_ohc=sqVStTqkOTwQ7kNvwHqjzu-&_nc_oc=AdnbfVHFxC7yg0nRyQGAALsUPmmSryz_SKBBcepdzFtdYttzZYhz1yNAOcMEsKwXETVNvCJ-e3_pfSWRKGMPn5_a&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=CldcFZTZia1zkZVZsUu68g&oh=00_AfVeV6KDnGDE2Ja8J0VBIrl-4fL4uqcpN7y6bJ1sscaNrg&oe=68B1EDFE",
+              "alt_text": "Product photo of iPhone 15/16 Pro Max cases (READ DESCRIPTION)",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/490261852_1044998287497797_3139870374703946518_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=111&ccb=1-7&_nc_sid=247b10&_nc_ohc=WYAGeyhFaCsQ7kNvwECqSp2&_nc_oc=AdmqLZ0qa3AQ9S0_hm8xyqhugrAzkSNTtXdzMgqw6uyUTNZP7I9TzAirGsCqo-xivPZAeCntEBaBesT-q0EdBH8_&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=CldcFZTZia1zkZVZsUu68g&oh=00_AfVq6ZMKpoNTDRtZTsUV-z8Iuvx6CGqizXj9Yd3xtC8Mrg&oe=68B2020A",
+              "alt_text": "Product photo of iPhone 15/16 Pro Max cases (READ DESCRIPTION)",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/489331513_3059402360892855_3662695681357301580_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=102&ccb=1-7&_nc_sid=247b10&_nc_ohc=UkEw75-y050Q7kNvwGIvbxy&_nc_oc=AdkeGr8Qc3xwBaz8XUo__kqTeaM2mTD9gIm_0UDoIveUT-hUXgq1zN5CWfCS26vbBUpDhgseYFVjPu03jsf1l9lp&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=CldcFZTZia1zkZVZsUu68g&oh=00_AfUiAoEFZyGaYM4gwgRfy2m9tgoEwB_UxmGHPJMHd0FmLg&oe=68B1E3BE",
+              "alt_text": "Product photo of iPhone 15/16 Pro Max cases (READ DESCRIPTION)",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/489370267_1006977364276923_1940226165845634510_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=103&ccb=1-7&_nc_sid=247b10&_nc_ohc=uwYKVf0XpBQQ7kNvwEK01jq&_nc_oc=Adl7NId0s5pqEjghbEBJO-Mp-xWrFW2CQn1vKSf7ERPvXO9xRdupRNmAqmZTmCvph1Ce_dM1FzBQj1ARGQHWTKgp&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=CldcFZTZia1zkZVZsUu68g&oh=00_AfWV0nWh007opMCGaq3CA5ndiD7BLDkZqqj0Q8AAhvDqiw&oe=68B1FAE1",
+              "alt_text": "Product photo of iPhone 15/16 Pro Max cases (READ DESCRIPTION)",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/489859311_848933777421067_3672101928022813277_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=106&ccb=1-7&_nc_sid=247b10&_nc_ohc=cTn8LeSvTQIQ7kNvwFu4JmF&_nc_oc=AdmSSUsaDBqABqVHZD4UarSaIm2Upxtt1OuEYIdWqssrvA9RqxnifvzYffGAMAEqqr81kBk76EMKziXfguTr8q_D&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=CldcFZTZia1zkZVZsUu68g&oh=00_AfW1V59zDZlL33iKtqBcaoFUOzjkCh0-WMXg0_cqH8sJOg&oe=68B1FF2C",
+              "alt_text": "Product photo of iPhone 15/16 Pro Max cases (READ DESCRIPTION)",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/488922209_659017776843088_3545958964617953563_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=110&ccb=1-7&_nc_sid=247b10&_nc_ohc=MHxy5nYOxBwQ7kNvwF0eyhZ&_nc_oc=AdlpVPnxFh3xEDcDwtd6mKeRb0x37qQ4RcBvbqp5LdvGEDb9Yfp8nD-7oRreCBGMRaBiM0-7BM1inxKW6OzbFRfb&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=CldcFZTZia1zkZVZsUu68g&oh=00_AfVHF_U70QCmS3qZjHwco4FVQA4OJfijt0OqFts7wgvcvw&oe=68B1CF5C",
+              "alt_text": "Product photo of iPhone 15/16 Pro Max cases (READ DESCRIPTION)",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.1600-4/491884024_1700150207558208_7238235919387520760_n.png?stp=cp0_dst-jpg_p75x225_q90_spS444_tt6&_nc_cat=101&ccb=1-7&_nc_sid=c02adf&_nc_ohc=IopCBPryduIQ7kNvwEwUs38&_nc_oc=AdkHBpQc4QWcR7apS09mV3KTKp-UygBs3caZ3iz_RhQKsB0Q3XmS3c7tTQXofd8TgNNwxHf9wiMztSwIV8A2KFVY&_nc_zt=1&_nc_ht=scontent.fisb1-2.fna&_nc_gid=CldcFZTZia1zkZVZsUu68g&oh=00_AfVJI55euQFGkylEByjTEO_TDEDO39OaOPYrGPFXJKsxWg&oe=68B204E5",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.1600-4/491888966_666655609625279_4057667400630472219_n.png?stp=cp0_dst-jpg_p75x225_q90_spS444_tt6&_nc_cat=110&ccb=1-7&_nc_sid=c02adf&_nc_ohc=lauXNzsaCBoQ7kNvwGQ5a0k&_nc_oc=AdkKDCzbdyHbhZTGAVEFdD3o_7psHa04j44hf9CYHdP8aYn5OWeizDBnsrj4PeBOKROuXF7mV6hlk7C5b7QByJ07&_nc_zt=1&_nc_ht=scontent.fisb1-2.fna&_nc_gid=CldcFZTZia1zkZVZsUu68g&oh=00_AfVrzyiUv1ePYrlw7Cxr5U8j0Xj1E-Yprn4OD1Gi9QN_kA&oe=68B1E100",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.1600-4/491889157_1071110581520395_5456576789109392711_n.png?stp=cp0_dst-jpg_p75x225_q90_spS444_tt6&_nc_cat=103&ccb=1-7&_nc_sid=c02adf&_nc_ohc=y8tt8pTes9gQ7kNvwHMzW0I&_nc_oc=Adlnhv_KeU_Xwb7a7G6jSVorFzBuJ3DHp1B8qzY7ZBkeDQ-6kgu6Mu-5ImnaX6isBgxTjyHo3T_RQRjQ6-UP79fK&_nc_zt=1&_nc_ht=scontent.fisb1-2.fna&_nc_gid=CldcFZTZia1zkZVZsUu68g&oh=00_AfWEWM9KZbO1RCwJvasksBxddmohoUb6H5I6huvCpzpiOg&oe=68B1D72A",
+              "alt_text": "",
+              "type": "product_image"
+            }
+          ],
+          "description": "iPhone 15/16 Pro Max cases (READ DESCRIPTION)\n\nListed in Sydney, NSW\n\nSelling these cases cause don't need them anymore and worth a lot, DM me for reasonable offers.\n\n1st... See more"
+        }
+      },
+      "hot_reload": true,
+      "hot_reload_timestamp": "2025-08-25T12:58:04.778358",
+      "scraping_status": "completed",
+      "scraping_method": "deep",
+      "created_at": "2025-08-25T12:58:04.778358",
+      "seller_name": "Private Seller"
+    },
+    {
+      "id": "deep_827674086495587",
+      "title": "AU$900\niPhone 15 Pro Max 512GB\nSydney, NSW",
+      "price": {
+        "amount": "90",
+        "currency": "KR",
+        "raw_value": "90 kr"
+      },
+      "location": {
+        "city": "Within",
+        "distance": "51km",
+        "raw_location": "Within 51"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/827674086495587/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A18f064f7-bb0c-4dd4-b4e2-ab49553ddfa5&__tn__=!%3AD",
+      "seller": {
+        "info": "Private Seller",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 15 pro max",
+        "storage": "512 GB",
+        "condition": "new_in_box",
+        "color": "Black"
+      },
+      "images": [
+        {
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/533643363_1928424797952448_5872631346548335797_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_ohc=h1-y_wZ9N0MQ7kNvwEFW6_K&_nc_oc=Adn7wxhvVyQlOwUzl7U4CvOFGo9gGKjWdZEQ_zkh9MY4kVaEOWRsS2Pgf-Z4MqNNHNPQCGrMUvYvuWfvsypxRJBD&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=LMrtoG58WYKpUIQNmtSlkw&oh=00_AfUEDetTi05WZOc9p3d4x13o5QXIXOjo0kDVxKtE0Uuriw&oe=68B1D728",
+          "alt_text": "",
+          "type": "product_image"
+        },
+        {
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/533643363_1928424797952448_5872631346548335797_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_ohc=h1-y_wZ9N0MQ7kNvwEFW6_K&_nc_oc=Adn7wxhvVyQlOwUzl7U4CvOFGo9gGKjWdZEQ_zkh9MY4kVaEOWRsS2Pgf-Z4MqNNHNPQCGrMUvYvuWfvsypxRJBD&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=LMrtoG58WYKpUIQNmtSlkw&oh=00_AfUEDetTi05WZOc9p3d4x13o5QXIXOjo0kDVxKtE0Uuriw&oe=68B1D728",
+          "alt_text": "Product photo of iPhone 15 Pro Max 512GB",
+          "type": "product_image"
+        },
+        {
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/533643363_1928424797952448_5872631346548335797_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_ohc=h1-y_wZ9N0MQ7kNvwEFW6_K&_nc_oc=Adn7wxhvVyQlOwUzl7U4CvOFGo9gGKjWdZEQ_zkh9MY4kVaEOWRsS2Pgf-Z4MqNNHNPQCGrMUvYvuWfvsypxRJBD&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=LMrtoG58WYKpUIQNmtSlkw&oh=00_AfUEDetTi05WZOc9p3d4x13o5QXIXOjo0kDVxKtE0Uuriw&oe=68B1D728",
+          "alt_text": "Product photo of iPhone 15 Pro Max 512GB",
+          "type": "product_image"
+        }
+      ],
+      "extraction_method": "deep_scraper",
+      "data_quality": "comprehensive",
+      "added_at": "2025-08-25T12:55:53.420871",
+      "source": "facebook_marketplace_scraper",
+      "deep_data": {
+        "seller_details": {
+          "button_found"

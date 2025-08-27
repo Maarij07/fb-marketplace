@@ -1270,26 +1270,43 @@
                             <label for="city-modal" class="form-label">City</label>
                             <select id="city-modal" class="form-select" required>
                                 <option value="">Select a city...</option>
-                                <option value="Stockholm" selected>Stockholm</option>
-                                <option value="Sydney">Sydney</option>
-                                <option value="Melbourne">Melbourne</option>
-                                <option value="Brisbane">Brisbane</option>
-                                <option value="Perth">Perth</option>
-                                <option value="Adelaide">Adelaide</option>
-                                <option value="Gold Coast">Gold Coast</option>
-                                <option value="Newcastle">Newcastle</option>
-                                <option value="Canberra">Canberra</option>
-                                <option value="Sunshine Coast">Sunshine Coast</option>
-                                <option value="Wollongong">Wollongong</option>
-                                <option value="Hobart">Hobart</option>
-                                <option value="Geelong">Geelong</option>
-                                <option value="Townsville">Townsville</option>
-                                <option value="Cairns">Cairns</option>
-                                <option value="Darwin">Darwin</option>
-                                <option value="Toowoomba">Toowoomba</option>
-                                <option value="Ballarat">Ballarat</option>
-                                <option value="Bendigo">Bendigo</option>
-                                <option value="Albury">Albury</option>
+                                <option value="Alexandria">Alexandria</option>
+                                <option value="Ashfield">Ashfield</option>
+                                <option value="Auburn">Auburn</option>
+                                <option value="Balmain">Balmain</option>
+                                <option value="Bankstown">Bankstown</option>
+                                <option value="Blacktown">Blacktown</option>
+                                <option value="Bondi Beach">Bondi Beach</option>
+                                <option value="Bondi Junction">Bondi Junction</option>
+                                <option value="Burwood">Burwood</option>
+                                <option value="Castle Hill">Castle Hill</option>
+                                <option value="Chatswood">Chatswood</option>
+                                <option value="Cronulla">Cronulla</option>
+                                <option value="Darlinghurst">Darlinghurst</option>
+                                <option value="Five Dock">Five Dock</option>
+                                <option value="Homebush">Homebush</option>
+                                <option value="Hornsby">Hornsby</option>
+                                <option value="Kirribilli">Kirribilli</option>
+                                <option value="Leichhardt">Leichhardt</option>
+                                <option value="Liverpool">Liverpool</option>
+                                <option value="Macquarie Park">Macquarie Park</option>
+                                <option value="Manly">Manly</option>
+                                <option value="Maroubra">Maroubra</option>
+                                <option value="Mascot">Mascot</option>
+                                <option value="Milsons Point">Milsons Point</option>
+                                <option value="Miranda">Miranda</option>
+                                <option value="Neutral Bay">Neutral Bay</option>
+                                <option value="Newtown">Newtown</option>
+                                <option value="North Sydney">North Sydney</option>
+                                <option value="Paddington">Paddington</option>
+                                <option value="Parramatta">Parramatta</option>
+                                <option value="Potts Point">Potts Point</option>
+                                <option value="Randwick">Randwick</option>
+                                <option value="Rhodes">Rhodes</option>
+                                <option value="Ryde">Ryde</option>
+                                <option value="Surry Hills">Surry Hills</option>
+                                <option value="Sydney CBD" selected>Sydney CBD</option>
+                                <option value="Wetherill Park">Wetherill Park</option>
                             </select>
                             <div class="error-message" id="city-error">Please select a city</div>
                         </div>
@@ -1807,7 +1824,17 @@
                     container.innerHTML = '';
                     
                     if (result.data.length === 0) {
-                        container.innerHTML = '<div class="text-center text-muted">No price changes</div>';
+                        // Show empty state with monitoring prompt
+                        container.innerHTML = `
+                            <div class="text-center" style="padding: 2rem 1rem; color: var(--gray-600);">
+                                <i class="bi bi-graph-up" style="font-size: 2.5rem; color: var(--gray-400); margin-bottom: 1rem;"></i>
+                                <div style="font-weight: 500; margin-bottom: 0.5rem;">No Price Changes Found</div>
+                                <div style="font-size: 0.875rem; margin-bottom: 1.5rem;">Start monitoring to track real-time price changes</div>
+                                <button class="btn btn-sm btn-primary" onclick="document.getElementById('monitoring-btn').click()" style="font-size: 0.8125rem;">
+                                    <i class="bi bi-browser-chrome"></i> Start Monitoring
+                                </button>
+                            </div>
+                        `;
                         return;
                     }
                     
@@ -1838,6 +1865,15 @@
                 }
             } catch (error) {
                 console.error('Error loading price changes:', error);
+                // Show error state
+                const container = document.getElementById('price-changes-notifications');
+                container.innerHTML = `
+                    <div class="text-center" style="padding: 2rem 1rem; color: var(--gray-600);">
+                        <i class="bi bi-exclamation-triangle" style="font-size: 2.5rem; color: var(--gray-400); margin-bottom: 1rem;"></i>
+                        <div style="font-weight: 500; margin-bottom: 0.5rem;">Unable to Load Price Changes</div>
+                        <div style="font-size: 0.875rem;">Please try refreshing the page</div>
+                    </div>
+                `;
             }
         }
 
