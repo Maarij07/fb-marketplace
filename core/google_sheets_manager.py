@@ -138,6 +138,95 @@ class GoogleSheetsManager:
             logger.error(f"Error exporting to Google Sheets: {e}")
             return False
     
+    def append_products_to_sheets(self, sheet_url: str, worksheet_name: str = "Products") -> bool:
+        """
+        Append all current products to Google Sheets without removing existing data.
+        Perfect for daily automated exports.
+        
+        Args:
+            sheet_url: Google Sheets URL or ID
+            worksheet_name: Name of the worksheet to append to
+            
+        Returns:
+            True if successful, False otherwise
+        """
+        try:
+            if not self.client:
+                logger.error("Google Sheets client not initialized")
+                return False
+            
+            # Load current products
+            products = self._load_products_json()
+            if not products:
+                logger.warning("No products found to append")
+                return False
+            
+            all_products = products.get('products', [])
+            if not all_products:
+                logger.warning("No products in the data")
+                return False
+            
+            # Extract sheet ID from URL if needed
+            sheet_id = self.extract_sheet_id_from_url(sheet_url)
+            if not sheet_id:
+                sheet_id = sheet_url
+            
+            # Open the spreadsheet
+            spreadsheet = self.client.open_by_key(sheet_id)
+            
+            # Create or get the worksheet
+            try:
+                worksheet = spreadsheet.worksheet(worksheet_name)
+            except gspread.WorksheetNotFound:
+                # Create new worksheet with headers
+                worksheet = spreadsheet.add_worksheet(title=worksheet_name, rows=1000, cols=30)
+                # Add headers first
+                headers = [
+                    'ID', 'Title', 'Price_Amount', 'Price_Currency', 'Price_Raw',
+                    'City', 'Distance', 'Marketplace_URL', 'Seller_Name', 'Seller_Info',
+                    'Model', 'Storage', 'Condition', 'Color', 'Added_At', 'Created_At',
+                    'Source', 'Data_Quality', 'Extraction_Method', 
+                    'Image_URL_1', 'Image_URL_2', 'Image_URL_3', 'Export_Timestamp'
+                ]
+                worksheet.update('A1', [headers])
+                self._apply_basic_formatting(worksheet, 1)
+            
+            # Find the next empty row
+            try:
+                # Get all values to find the last row with data
+                all_values = worksheet.get_all_values()
+                next_row = len([row for row in all_values if any(cell.strip() for cell in row)]) + 1
+            except:
+                # If there's an error, assume we start from row 2 (after headers)
+                next_row = 2
+            
+            # Prepare data for Google Sheets (without headers since we're appending)
+            sheet_data = self._prepare_products_data_for_append(all_products)
+            
+            if not sheet_data:
+                logger.warning("No data prepared for append")
+                return False
+            
+            # Ensure worksheet has enough rows
+            required_rows = next_row + len(sheet_data)
+            current_rows = worksheet.row_count
+            if required_rows > current_rows:
+                worksheet.add_rows(required_rows - current_rows + 10)  # Add some extra
+            
+            # Append the data starting from the next empty row
+            range_name = f'A{next_row}'
+            worksheet.update(range_name, sheet_data)
+            
+            logger.info(f"Successfully appended {len(all_products)} products to Google Sheets at row {next_row}")
+            return True
+            
+        except GoogleAuthError as e:
+            logger.error(f"Google authentication error: {e}")
+            return False
+        except Exception as e:
+            logger.error(f"Error appending to Google Sheets: {e}")
+            return False
+    
     def create_backup_in_sheets(self, sheet_url: str, hours_to_backup: int = 2, worksheet_name: str = "Backup") -> bool:
         """
         Create backup of recent products in Google Sheets.
@@ -343,6 +432,60 @@ class GoogleSheetsManager:
         except Exception as e:
             logger.error(f"Error preparing products data: {e}")
             return [['Error preparing data']]
+    
+    def _prepare_products_data_for_append(self, products: List[Dict[str, Any]]) -> List[List[str]]:
+        """Prepare product data for appending to Google Sheets (no headers, with timestamp)."""
+        try:
+            sheet_data = []
+            current_timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            
+            for product in products:
+                row = [
+                    str(product.get('id', 'N/A')),
+                    str(product.get('title', 'N/A')),
+                    str(product.get('price', {}).get('amount', 'N/A')),
+                    str(product.get('price', {}).get('currency', 'N/A')),
+                    str(product.get('price', {}).get('raw_value', 'N/A')),
+                    str(product.get('location', {}).get('city', 'N/A')),
+                    str(product.get('location', {}).get('distance', 'N/A')),
+                    str(product.get('marketplace_url', 'N/A')),
+                    str(product.get('seller_name', 'N/A')),
+                    str(product.get('seller', {}).get('info', 'N/A')),
+                    str(product.get('product_details', {}).get('model', 'N/A')),
+                    str(product.get('product_details', {}).get('storage', 'N/A')),
+                    str(product.get('product_details', {}).get('condition', 'N/A')),
+                    str(product.get('product_details', {}).get('color', 'N/A')),
+                    str(product.get('added_at', 'N/A')),
+                    str(product.get('created_at', 'N/A')),
+                    str(product.get('source', 'N/A')),
+                    str(product.get('data_quality', 'N/A')),
+                    str(product.get('extraction_method', 'N/A'))
+                ]
+                
+                # Add image URLs (first 3)
+                images = product.get('images', [])
+                for i in range(3):
+                    if i < len(images):
+                        image = images[i]
+                        if isinstance(image, dict):
+                            row.append(str(image.get('url', 'N/A')))
+                        elif isinstance(image, str):
+                            row.append(str(image))
+                        else:
+                            row.append('N/A')
+                    else:
+                        row.append('N/A')
+                
+                # Add export timestamp
+                row.append(current_timestamp)
+                
+                sheet_data.append(row)
+            
+            return sheet_data
+            
+        except Exception as e:
+            logger.error(f"Error preparing products data for append: {e}")
+            return []
     
     def _create_analytics_data(self, products: List[Dict[str, Any]]) -> List[List[str]]:
         """Create analytics summary data."""

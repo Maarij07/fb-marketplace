@@ -326,6 +326,21 @@ def create_app(settings):
             if not formatted_listing.get('url') and formatted_listing.get('marketplace_url'):
                 formatted_listing['url'] = formatted_listing['marketplace_url']
             
+            # Add updated_at field from FacebookTimeParser timing data
+            timing_info = formatted_listing.get('timing', {})
+            if isinstance(timing_info, dict) and timing_info.get('timestamp'):
+                # Use the parsed timestamp from FacebookTimeParser
+                formatted_listing['updated_at'] = timing_info['timestamp']
+            elif deep_data.get('basic_info', {}).get('extraction_timestamp'):
+                # Fallback to extraction timestamp from deep scrape data
+                formatted_listing['updated_at'] = deep_data['basic_info']['extraction_timestamp']
+            elif formatted_listing.get('created_at'):
+                # Final fallback to created_at if available
+                formatted_listing['updated_at'] = formatted_listing['created_at']
+            else:
+                # Last resort - current time
+                formatted_listing['updated_at'] = datetime.now().isoformat()
+            
             return jsonify({
                 'success': True,
                 'data': formatted_listing
@@ -996,9 +1011,41 @@ def create_app(settings):
             logger.error(f"Failed to create Google Sheets analytics: {e}")
             return jsonify({'success': False, 'error': str(e)})
     
-    @app.route('/api/sheets/info', methods=['POST'])
+    @app.route('/api/sheets/append', methods=['POST'])
+    def api_sheets_append():
+        """Append current products to Google Sheets without removing existing data."""
+        try:
+            data = request.get_json() or {}
+            sheet_url = data.get('sheet_url')
+            
+            if not sheet_url:
+                return jsonify({
+                    'success': False, 
+                    'error': 'sheet_url is required'
+                })
+            
+            worksheet_name = data.get('worksheet_name', 'Products')
+            
+            success = google_sheets_manager.append_products_to_sheets(sheet_url, worksheet_name)
+            
+            if success:
+                return jsonify({
+                    'success': True,
+                    'message': f'Successfully appended products to {worksheet_name} worksheet'
+                })
+            else:
+                return jsonify({
+                    'success': False,
+                    'error': 'Failed to append products to Google Sheets'
+                })
+                
+        except Exception as e:
+            logger.error(f"Sheets append API error: {e}")
+            return jsonify({'success': False, 'error': str(e)})
+    
+    @app.route('/api/sheets/info')
     def api_sheets_info():
-        """Get information about a Google Sheets document."""
+        """Get information about connected Google Sheets."""
         try:
             data = request.get_json() or {}
             sheet_url = data.get('sheet_url', '').strip()

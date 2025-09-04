@@ -1,24 +1,2350 @@
 {
   "extraction_info": {
-    "timestamp": "2025-08-27",
+    "timestamp": "2025-09-02",
     "source": "Facebook Marketplace Stockholm",
     "search_query": "iPhone 16",
-    "total_products_found": 28,
+    "total_products_found": 43,
     "extraction_method": "targeted_swedish_marketplace",
     "last_cleaned": "2025-08-13T00:59:29.240999"
   },
   "summary": {
-    "products_with_complete_data": 28,
-    "products_with_images": 21,
-    "products_with_links": 28,
-    "products_with_locations": 28,
-    "products_with_prices": 28,
+    "products_with_complete_data": 43,
+    "products_with_images": 35,
+    "products_with_links": 43,
+    "products_with_locations": 43,
+    "products_with_prices": 43,
     "unique_locations": [
       "Stockholm",
       "Within"
     ]
   },
   "products": [
+    {
+      "id": "deep_1819928582263172",
+      "title": "AU$1,500\nSamsung Galaxy S25 Ultra\nSydney, NSW",
+      "price": {
+        "amount": "47",
+        "currency": "KR",
+        "raw_value": "kr 47"
+      },
+      "location": {
+        "city": "Within",
+        "distance": "51km",
+        "raw_location": "Within 51"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1819928582263172/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A16b23647-2ee2-4f7d-a567-b2cc27d71b41&__tn__=!%3AD",
+      "seller": {
+        "info": "Private Seller",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 11",
+        "storage": "31 GB",
+        "condition": "new_in_box",
+        "color": "Black"
+      },
+      "images": [
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/533036199_1127561539224345_9137536302968697245_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=100&ccb=1-7&_nc_sid=247b10&_nc_ohc=Hsf0I2vtEJMQ7kNvwGNpmSp&_nc_oc=AdnobRVNh9GNUumjzY6fwJqLFR8E58NqIv5nC2OrScYo9oH6EQQdcTn6e_zql7WKvDueOUSKAtqIqMF79nyJLMXZ&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=4gIiKF1cLM9PPE3EOlkoGg&oh=00_AfUL1FsBKrVJpF4v7jjSlqXRwOpm1gkP--CwWPw2hpQBDg&oe=68BC6D4F",
+          "alt_text": "",
+          "type": "product_image"
+        },
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/533036199_1127561539224345_9137536302968697245_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=100&ccb=1-7&_nc_sid=247b10&_nc_ohc=Hsf0I2vtEJMQ7kNvwGNpmSp&_nc_oc=AdnobRVNh9GNUumjzY6fwJqLFR8E58NqIv5nC2OrScYo9oH6EQQdcTn6e_zql7WKvDueOUSKAtqIqMF79nyJLMXZ&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=4gIiKF1cLM9PPE3EOlkoGg&oh=00_AfUL1FsBKrVJpF4v7jjSlqXRwOpm1gkP--CwWPw2hpQBDg&oe=68BC6D4F",
+          "alt_text": "Product photo of Samsung Galaxy S25 Ultra",
+          "type": "product_image"
+        },
+        {
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/532032316_726315610282744_1385694223644412142_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=103&ccb=1-7&_nc_sid=247b10&_nc_ohc=pUvAAi0etgEQ7kNvwEQeVtp&_nc_oc=AdlWaDtIOSBtYUmV1gAaU_efgvqYoG7ASzv2Ox23FEpeuTw4Abm6Q7HR09sqSqpecNjl_zF45AWBz2-o3VGf4ask&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=4gIiKF1cLM9PPE3EOlkoGg&oh=00_AfWho7WXT-gjLI3TLPQ3nBOJsAPJfPgOgoAPD9ZyXzvt9w&oe=68BC8E09",
+          "alt_text": "Product photo of Samsung Galaxy S25 Ultra",
+          "type": "product_image"
+        }
+      ],
+      "extraction_method": "deep_scraper",
+      "data_quality": "comprehensive",
+      "added_at": "2025-09-02T13:11:21.643806",
+      "source": "facebook_marketplace_scraper",
+      "deep_data": {
+        "seller_details": {
+          "button_found": true,
+          "extraction_timestamp": "2025-09-02T13:09:28.328012",
+          "button_text": "Seller details",
+          "button_href": "https://www.facebook.com/marketplace/profile/61580078612162/?product_id=1819928582263172",
+          "join_date": "joined facebook in 2025"
+        },
+        "marketplace_metadata": {
+          "fb_listing_id": "1819928582263172",
+          "is_sold": true,
+          "timing": {
+            "facebook_time_text": "30m",
+            "parsed_minutes_ago": 30.0,
+            "calculated_timestamp": "2025-09-02T12:41:17.380364",
+            "extraction_method": "facebook_time_parser",
+            "all_expressions_found": [
+              "30m",
+              "34m",
+              "26m",
+              "1d",
+              "3d"
+            ]
+          }
+        },
+        "comprehensive_product": {
+          "model_name": "iPhone 11",
+          "storage": "31 GB",
+          "color": "Black",
+          "condition": "new_in_box",
+          "images": [
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/533036199_1127561539224345_9137536302968697245_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=100&ccb=1-7&_nc_sid=247b10&_nc_ohc=Hsf0I2vtEJMQ7kNvwGNpmSp&_nc_oc=AdnobRVNh9GNUumjzY6fwJqLFR8E58NqIv5nC2OrScYo9oH6EQQdcTn6e_zql7WKvDueOUSKAtqIqMF79nyJLMXZ&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=4gIiKF1cLM9PPE3EOlkoGg&oh=00_AfUL1FsBKrVJpF4v7jjSlqXRwOpm1gkP--CwWPw2hpQBDg&oe=68BC6D4F",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/533036199_1127561539224345_9137536302968697245_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=100&ccb=1-7&_nc_sid=247b10&_nc_ohc=Hsf0I2vtEJMQ7kNvwGNpmSp&_nc_oc=AdnobRVNh9GNUumjzY6fwJqLFR8E58NqIv5nC2OrScYo9oH6EQQdcTn6e_zql7WKvDueOUSKAtqIqMF79nyJLMXZ&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=4gIiKF1cLM9PPE3EOlkoGg&oh=00_AfUL1FsBKrVJpF4v7jjSlqXRwOpm1gkP--CwWPw2hpQBDg&oe=68BC6D4F",
+              "alt_text": "Product photo of Samsung Galaxy S25 Ultra",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/532032316_726315610282744_1385694223644412142_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=103&ccb=1-7&_nc_sid=247b10&_nc_ohc=pUvAAi0etgEQ7kNvwEQeVtp&_nc_oc=AdlWaDtIOSBtYUmV1gAaU_efgvqYoG7ASzv2Ox23FEpeuTw4Abm6Q7HR09sqSqpecNjl_zF45AWBz2-o3VGf4ask&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=4gIiKF1cLM9PPE3EOlkoGg&oh=00_AfWho7WXT-gjLI3TLPQ3nBOJsAPJfPgOgoAPD9ZyXzvt9w&oe=68BC8E09",
+              "alt_text": "Product photo of Samsung Galaxy S25 Ultra",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/531769052_720971510919067_7329787946721895311_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=111&ccb=1-7&_nc_sid=247b10&_nc_ohc=safsXXnusf4Q7kNvwFswaBq&_nc_oc=Adk1SidCudWCEe5YCys05aV2R6R0aLObRb__pc7sCLiZnb9kHp3eLNGRhUZ06WISZIqsEhC1NLAwZRnwj5UPjszw&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=4gIiKF1cLM9PPE3EOlkoGg&oh=00_AfXV5lwMO8jzwSch6EiBvKtTQs9d8S5B6faPrf0FU3P4OA&oe=68BC8BA6",
+              "alt_text": "Product photo of Samsung Galaxy S25 Ultra",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/531087202_1498068474458303_7675292314904488915_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=101&ccb=1-7&_nc_sid=247b10&_nc_ohc=1vxmAhMI51kQ7kNvwEmuNIf&_nc_oc=AdlPASGzBfyNO1Ah6LfL1YZzrP3LcDyciAl3n-dcuwLpc7TaD5DqIWPxo7wIq3Rws7Fnr3XEKFuYVE5WLkLuNyyy&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=4gIiKF1cLM9PPE3EOlkoGg&oh=00_AfWiNnk5_7Cp1bFMOhsQLqwof1lgQg2lBBj6MaOjP97ndQ&oe=68BC74B0",
+              "alt_text": "Product photo of Samsung Galaxy S25 Ultra",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/533559560_1308308814011199_1328585952983759026_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=106&ccb=1-7&_nc_sid=247b10&_nc_ohc=-gGSAGLvoIYQ7kNvwGP4fZV&_nc_oc=AdmDtRjhAAJY_4ltesUxbJKfTKb5kMAp2_sA-4KULVgt6GZdOlb1rkonCihqc3NqbuWYY_8qj5HMwXXAnsU6yRM_&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=4gIiKF1cLM9PPE3EOlkoGg&oh=00_AfXWEJVf52J4ky4FOhb7sZKTKZSQDe2AgjUXjWBlZAadMQ&oe=68BC706F",
+              "alt_text": "Product photo of Samsung Galaxy S25 Ultra",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t15.5256-10/525765418_785265470622697_2939912168314881142_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=104&ccb=1-7&_nc_sid=282d23&_nc_ohc=cq2i2HM8lEcQ7kNvwEQLWpw&_nc_oc=Adkr0yVKAig3Bd_tcwkZtJMm_W6DbbI9AjLQILc56yWR0WifQ16mcVfoF_PMTuj-l8whLh-aIE9d_K80y7HzlJfU&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=AaqIWSEOxa_KESPAfzAhEA&oh=00_AfWGRtvwpXsHBLRPNgjWuxu1BZxh9yaZ7gLYTgfNK72_pw&oe=68BC8D74",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.1600-4/534886435_4112373889037210_3171915521060189282_n.png?stp=cp0_dst-jpg_q90_s960x960_spS444_tt6&_nc_cat=100&ccb=1-7&_nc_sid=19da1b&_nc_ohc=V2trU4U97TIQ7kNvwHmDhES&_nc_oc=AdlyoCw_fNd4cze2Xqwqo4bmwJMvxQYJ40SB7kiFcK9550Z4sNtcnaPs6Sgt1JgtVAyzXPk8i4CM-1Sp8VVcab4q&_nc_zt=1&_nc_ht=scontent.fisb17-1.fna&_nc_gid=4gIiKF1cLM9PPE3EOlkoGg&oh=00_AfWOilSArWGBo_vg1NQElDLENVr1XO0I7Kd5hqD9IaqCpg&oe=68BC6BD0",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/540089373_3911263642352439_8189627821270836350_n.jpg?stp=c148.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=100&ccb=1-7&_nc_sid=247b10&_nc_ohc=1WtzY813UHwQ7kNvwFheOsu&_nc_oc=AdlrnTQp1R0LqHOPULBL8UiUm-uloGxcV7ZVRsk8k4w0KhD07FtBzh0yubU-T7jtpR-aN5ToEaQ7CAjNHhPE1Iuv&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=AaqIWSEOxa_KESPAfzAhEA&oh=00_AfVfK0sZrHmNGTSo2WCzrnchatVfQ8Ll-blbKePLVFdXTA&oe=68BC8CF8",
+              "alt_text": "Fisher & Paykel 5.5kg Quicksmart Top Loader Washing Machine in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/530331347_3678672409103420_8097551881528430768_n.jpg?stp=c0.152.261.261a_dst-jpg_p261x260_tt6&_nc_cat=104&ccb=1-7&_nc_sid=247b10&_nc_ohc=imTD-KKTZbQQ7kNvwEbn8BX&_nc_oc=AdmpFFxMOprgh-mtOY0K-tJXeN-D_v_DztCrojJdtuUXtIlNoM0hPAseAKrldnnSEFTWQOpci88geqJojRuzI0C6&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=AaqIWSEOxa_KESPAfzAhEA&oh=00_AfVvKOoD9ZgQ4nRG2OmXELqM7F6NDzsKJmbDbv18BNV_vg&oe=68BC5D97",
+              "alt_text": "IPhone XR Black - 128GB in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/476898386_665394665912312_7512133511743495865_n.jpg?stp=c93.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_ohc=7_BUpJmskm4Q7kNvwEhjK39&_nc_oc=AdlIPvZqCe603h7geyp_wvdOT_ZBaiX-qv5NjfmC9sBY63wtqGo82S-13dBSKys53MEA-kb6CUH3Do_x_4pNbPz0&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=AaqIWSEOxa_KESPAfzAhEA&oh=00_AfV693oXkcdljWrrg-vU0XZCFt8UVuaNsM70p6gDScjScg&oe=68BC6D0E",
+              "alt_text": "Tradie pants in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/539661804_1879515416310462_7032391621165246438_n.jpg?stp=c0.101.261.261a_dst-jpg_p261x260_tt6&_nc_cat=100&ccb=1-7&_nc_sid=247b10&_nc_ohc=HDdmTVzXRkgQ7kNvwFw8wwy&_nc_oc=Adl_hbQlbqkE5qiWoGHlVY1ySus4PUUNnPBBmmF9w9vfj8_IVPgm51vQha8z3qqhGW-Y2YXlygUqfqyJX6wnSn2g&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=AaqIWSEOxa_KESPAfzAhEA&oh=00_AfWlSnfsJNwbp1fpXDYgNT_nzWi6ZA1am_hMERnRSw3atw&oe=68BC6A23",
+              "alt_text": "iPhone 11 in Menangle, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/540349218_603489472695109_1736079653530639419_n.jpg?stp=c0.101.261.261a_dst-jpg_p261x260_tt6&_nc_cat=108&ccb=1-7&_nc_sid=247b10&_nc_ohc=_W3W-oedydIQ7kNvwE_F_Cu&_nc_oc=Adl2jY7iPiD1Y17AUiQ4ZXAIMrFl0eBX1WHgTwJdLIkWgQG_tzXff5VrwoTXfQbUgZ3Sb-MtDCPpKbX32RnNyDNq&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=AaqIWSEOxa_KESPAfzAhEA&oh=00_AfW28JLH9Su-E4AVhfYU9LWa_jO678tLm-WrqC1abOE5pQ&oe=68BC9373",
+              "alt_text": "Gaming computer in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/540687840_819465037583963_6428144001804315460_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=vunb4mywy_UQ7kNvwEH5Lqm&_nc_oc=AdkOPl2MzNOVweFushaiUbg933gV9DR6R5UZ6uYapmomRJHEZfQnqJ5Oi2AdX226lJMoO1V4tQAbFQ-_bXu25hZ7&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=AaqIWSEOxa_KESPAfzAhEA&oh=00_AfWVPCUlfxK4bxn7k8RYvSE4ZThjrygl1jU4BxSrwk95dQ&oe=68BC6172",
+              "alt_text": "LG 6.5 kg top loader washing machine and Simpson 5.5 kg vented dryers.Selling as package in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/529836196_766966982532156_7625289461526219471_n.jpg?stp=c0.0.261.261a_dst-jpg_p261x260_tt6&_nc_cat=104&ccb=1-7&_nc_sid=247b10&_nc_ohc=Gk24Unm3YjEQ7kNvwF70TvH&_nc_oc=AdmFTYraJMsUwTP7kHDMIbM_ywUm07phgAVpA0mVs6kiyFcggCxOoDEemMOYx-Gc-oW02XAJPrJgjysWI5_it0WZ&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=AaqIWSEOxa_KESPAfzAhEA&oh=00_AfWfbpVJ29bmEuBIjegKoKyuBXvq44K6O8vNSOzqzJW4Fw&oe=68BC93F6",
+              "alt_text": "New rug luxury brand new in Sydney, NSW",
+              "type": "product_image"
+            }
+          ],
+          "description": "Samsung Galaxy S25 Ultra\n\nListed a day ago in Sydney, NSW\n\nSamsung Galaxy S25 Ultra Black \nNeed Gone asap unwanted gift"
+        }
+      },
+      "hot_reload_timestamp": "2025-09-02T13:11:21.643806",
+      "scraping_status": "completed",
+      "scraping_method": "deep",
+      "created_at": "2025-09-02T13:11:21.643806",
+      "hot_reload": true,
+      "seller_name": "Private Seller"
+    },
+    {
+      "id": "deep_1537872914052464",
+      "title": "AU$1,400\nSamsung S25 ULTRA 1TB*\nSydney, NSW",
+      "price": {
+        "amount": "36",
+        "currency": "KR",
+        "raw_value": "36 kr"
+      },
+      "location": {
+        "city": "Within",
+        "distance": "51km",
+        "raw_location": "Within 51"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1537872914052464/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A16b23647-2ee2-4f7d-a567-b2cc27d71b41&__tn__=!%3AD",
+      "seller": {
+        "info": "Private Seller",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 11",
+        "storage": "1 TB",
+        "condition": "new_in_box",
+        "color": "Black"
+      },
+      "images": [
+        {
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/504829118_1737716893485396_4887499420772158777_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=110&ccb=1-7&_nc_sid=247b10&_nc_ohc=qvYNuzdm0UsQ7kNvwEIJdMp&_nc_oc=Admt95NBIUDUks83SLMbywpDqgAh_RW3Fy9HqsLpqcZZ4p3NZfmrtNQI6TvUZuiZWENS4khIOQiFCARcdiuoOjt3&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=3JwN2LAunwza6Xh_zabBaw&oh=00_AfUAEkY4QTdUHOgz3k0ICb5__y0KY4p6XfYSoKeVjWJMFw&oe=68BC9151",
+          "alt_text": "",
+          "type": "product_image"
+        },
+        {
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/504829118_1737716893485396_4887499420772158777_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=110&ccb=1-7&_nc_sid=247b10&_nc_ohc=qvYNuzdm0UsQ7kNvwEIJdMp&_nc_oc=Admt95NBIUDUks83SLMbywpDqgAh_RW3Fy9HqsLpqcZZ4p3NZfmrtNQI6TvUZuiZWENS4khIOQiFCARcdiuoOjt3&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=3JwN2LAunwza6Xh_zabBaw&oh=00_AfUAEkY4QTdUHOgz3k0ICb5__y0KY4p6XfYSoKeVjWJMFw&oe=68BC9151",
+          "alt_text": "Product photo of Samsung S25 ULTRA 1TB*",
+          "type": "product_image"
+        },
+        {
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/504599406_1896753284472224_1356080843787648784_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=101&ccb=1-7&_nc_sid=247b10&_nc_ohc=XSjWNKs4XYwQ7kNvwGLZK_F&_nc_oc=AdnTcITbLLUszvwabn9AnYll4lMVcD7kr-EVrwuAQMNf11O49cvU0MwjJ_5PpjjAq5NuIEDrZPbGpcF7lW2zRHzT&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=3JwN2LAunwza6Xh_zabBaw&oh=00_AfXh0BYLFN1I59ZhBkYQAMRYrTWFZ_fcdsEamS-T9B7lNg&oe=68BC8C09",
+          "alt_text": "Product photo of Samsung S25 ULTRA 1TB*",
+          "type": "product_image"
+        }
+      ],
+      "extraction_method": "deep_scraper",
+      "data_quality": "comprehensive",
+      "added_at": "2025-09-02T13:08:51.128812",
+      "source": "facebook_marketplace_scraper",
+      "deep_data": {
+        "seller_details": {
+          "button_found": true,
+          "extraction_timestamp": "2025-09-02T13:06:51.705199",
+          "button_text": "Seller details",
+          "button_href": "https://www.facebook.com/marketplace/profile/100090128796459/?product_id=1537872914052464",
+          "join_date": "joined facebook in 2023"
+        },
+        "marketplace_metadata": {
+          "fb_listing_id": "1537872914052464",
+          "is_sold": true,
+          "timing": {
+            "facebook_time_text": "27m",
+            "parsed_minutes_ago": 27.0,
+            "calculated_timestamp": "2025-09-02T12:41:46.155422",
+            "extraction_method": "facebook_time_parser",
+            "all_expressions_found": [
+              "27m",
+              "32m",
+              "23m",
+              "1d",
+              "3d"
+            ]
+          }
+        },
+        "comprehensive_product": {
+          "model_name": "iPhone 11",
+          "storage": "1 TB",
+          "color": "Black",
+          "condition": "new_in_box",
+          "images": [
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/504829118_1737716893485396_4887499420772158777_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=110&ccb=1-7&_nc_sid=247b10&_nc_ohc=qvYNuzdm0UsQ7kNvwEIJdMp&_nc_oc=Admt95NBIUDUks83SLMbywpDqgAh_RW3Fy9HqsLpqcZZ4p3NZfmrtNQI6TvUZuiZWENS4khIOQiFCARcdiuoOjt3&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=3JwN2LAunwza6Xh_zabBaw&oh=00_AfUAEkY4QTdUHOgz3k0ICb5__y0KY4p6XfYSoKeVjWJMFw&oe=68BC9151",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/504829118_1737716893485396_4887499420772158777_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=110&ccb=1-7&_nc_sid=247b10&_nc_ohc=qvYNuzdm0UsQ7kNvwEIJdMp&_nc_oc=Admt95NBIUDUks83SLMbywpDqgAh_RW3Fy9HqsLpqcZZ4p3NZfmrtNQI6TvUZuiZWENS4khIOQiFCARcdiuoOjt3&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=3JwN2LAunwza6Xh_zabBaw&oh=00_AfUAEkY4QTdUHOgz3k0ICb5__y0KY4p6XfYSoKeVjWJMFw&oe=68BC9151",
+              "alt_text": "Product photo of Samsung S25 ULTRA 1TB*",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/504599406_1896753284472224_1356080843787648784_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=101&ccb=1-7&_nc_sid=247b10&_nc_ohc=XSjWNKs4XYwQ7kNvwGLZK_F&_nc_oc=AdnTcITbLLUszvwabn9AnYll4lMVcD7kr-EVrwuAQMNf11O49cvU0MwjJ_5PpjjAq5NuIEDrZPbGpcF7lW2zRHzT&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=3JwN2LAunwza6Xh_zabBaw&oh=00_AfXh0BYLFN1I59ZhBkYQAMRYrTWFZ_fcdsEamS-T9B7lNg&oe=68BC8C09",
+              "alt_text": "Product photo of Samsung S25 ULTRA 1TB*",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/504004067_738874351948210_7554780544715041190_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=106&ccb=1-7&_nc_sid=247b10&_nc_ohc=ESA4e7x2QogQ7kNvwEjHzZx&_nc_oc=AdlhqUCrsKbyqKiTPnghjK72ajK0Pv483uAtAD9TkseL04bne_1oztXPZ8I1XwzXph-aOU2l6Y962laN5b-wrWgB&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=3JwN2LAunwza6Xh_zabBaw&oh=00_AfU9VVZ3P3FnSQK0OCRAFT2Dzaa8OxdPJBVtS7irKbFNbA&oe=68BC6C36",
+              "alt_text": "Product photo of Samsung S25 ULTRA 1TB*",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/504160756_711408175174568_944409139290331083_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=102&ccb=1-7&_nc_sid=247b10&_nc_ohc=40GZqaqAnqUQ7kNvwEKi0qV&_nc_oc=AdliaT0HkQNmqPkHBQ_i9wQmQCOV5MT7SMYHytHBaIL31sftPSN9Bi6jxuEdC4NYCtjc5B22jQIHPtviKjdKfsKo&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=3JwN2LAunwza6Xh_zabBaw&oh=00_AfXax6KDqlc4QzoxNsKWAuC69bPlTAdDJo5joeWxp4JeNw&oe=68BC8831",
+              "alt_text": "Product photo of Samsung S25 ULTRA 1TB*",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t15.5256-10/525765418_785265470622697_2939912168314881142_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=104&ccb=1-7&_nc_sid=282d23&_nc_ohc=cq2i2HM8lEcQ7kNvwEQLWpw&_nc_oc=Adkr0yVKAig3Bd_tcwkZtJMm_W6DbbI9AjLQILc56yWR0WifQ16mcVfoF_PMTuj-l8whLh-aIE9d_K80y7HzlJfU&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=3JwN2LAunwza6Xh_zabBaw&oh=00_AfUPC0U5yZ8yHIMdjp2FZYLrEMEqsHHmsWaWuCuI1BolSw&oe=68BC8D74",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t15.5256-10/351309759_2525815594223012_8076846003917022948_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=100&ccb=1-7&_nc_sid=7965db&_nc_ohc=NYWNhSCVOGUQ7kNvwGkmS-d&_nc_oc=AdkYci7oth7QAFXBIxCeAOhvHMXxntYomOJscI7cDAXkdIYSXDAZDG1yOCHhJ8G0AZa0Odq24imzrI304t4Z9nbO&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=3JwN2LAunwza6Xh_zabBaw&oh=00_AfVS5eP6Zzv2XVPGd9jvgSYSaGRQkQd35Y5hXqhLJDf2tQ&oe=68BC5D38",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/540089373_3911263642352439_8189627821270836350_n.jpg?stp=c148.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=100&ccb=1-7&_nc_sid=247b10&_nc_ohc=1WtzY813UHwQ7kNvwFheOsu&_nc_oc=AdlrnTQp1R0LqHOPULBL8UiUm-uloGxcV7ZVRsk8k4w0KhD07FtBzh0yubU-T7jtpR-aN5ToEaQ7CAjNHhPE1Iuv&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=4IJTR4loQtPqkUggsBeGpg&oh=00_AfVkNFImvYmv_3fgnhbrzaSU7WOc4_GvoZyopjE_RHIF0g&oe=68BC8CF8",
+              "alt_text": "Fisher & Paykel 5.5kg Quicksmart Top Loader Washing Machine in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/530331347_3678672409103420_8097551881528430768_n.jpg?stp=c0.152.261.261a_dst-jpg_p261x260_tt6&_nc_cat=104&ccb=1-7&_nc_sid=247b10&_nc_ohc=imTD-KKTZbQQ7kNvwEbn8BX&_nc_oc=AdmpFFxMOprgh-mtOY0K-tJXeN-D_v_DztCrojJdtuUXtIlNoM0hPAseAKrldnnSEFTWQOpci88geqJojRuzI0C6&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=4IJTR4loQtPqkUggsBeGpg&oh=00_AfXyu0EkCH01JtxGUCI3xcIyLlMkFPDXOSSUnNaF5zGe-A&oe=68BC5D97",
+              "alt_text": "IPhone XR Black - 128GB in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/476898386_665394665912312_7512133511743495865_n.jpg?stp=c93.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_ohc=7_BUpJmskm4Q7kNvwEhjK39&_nc_oc=AdlIPvZqCe603h7geyp_wvdOT_ZBaiX-qv5NjfmC9sBY63wtqGo82S-13dBSKys53MEA-kb6CUH3Do_x_4pNbPz0&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=4IJTR4loQtPqkUggsBeGpg&oh=00_AfXVlNoyxEcdjNyhiaN-iDJBssfu61yxMurMmy8ETOJXiQ&oe=68BC6D0E",
+              "alt_text": "Tradie pants in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/539661804_1879515416310462_7032391621165246438_n.jpg?stp=c0.101.261.261a_dst-jpg_p261x260_tt6&_nc_cat=100&ccb=1-7&_nc_sid=247b10&_nc_ohc=HDdmTVzXRkgQ7kNvwFw8wwy&_nc_oc=Adl_hbQlbqkE5qiWoGHlVY1ySus4PUUNnPBBmmF9w9vfj8_IVPgm51vQha8z3qqhGW-Y2YXlygUqfqyJX6wnSn2g&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=4IJTR4loQtPqkUggsBeGpg&oh=00_AfVdtTPYi9PSfRsdpPxE7rAUxHMi1HWiq0lwXFi_9zAl7w&oe=68BC6A23",
+              "alt_text": "iPhone 11 in Menangle, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/540349218_603489472695109_1736079653530639419_n.jpg?stp=c0.101.261.261a_dst-jpg_p261x260_tt6&_nc_cat=108&ccb=1-7&_nc_sid=247b10&_nc_ohc=_W3W-oedydIQ7kNvwE_F_Cu&_nc_oc=Adl2jY7iPiD1Y17AUiQ4ZXAIMrFl0eBX1WHgTwJdLIkWgQG_tzXff5VrwoTXfQbUgZ3Sb-MtDCPpKbX32RnNyDNq&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=4IJTR4loQtPqkUggsBeGpg&oh=00_AfVYiQK1HgF2C-WnTtUbBNSQjp4X2cP1Q3DgH9J4cCFe4g&oe=68BC9373",
+              "alt_text": "Gaming computer in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/540687840_819465037583963_6428144001804315460_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=vunb4mywy_UQ7kNvwEH5Lqm&_nc_oc=AdkOPl2MzNOVweFushaiUbg933gV9DR6R5UZ6uYapmomRJHEZfQnqJ5Oi2AdX226lJMoO1V4tQAbFQ-_bXu25hZ7&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=4IJTR4loQtPqkUggsBeGpg&oh=00_AfXhht0ciG4RApi1Y6K8iu3H3Y7VAhom_R0F_NuPtwvocw&oe=68BC6172",
+              "alt_text": "LG 6.5 kg top loader washing machine and Simpson 5.5 kg vented dryers.Selling as package in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/529836196_766966982532156_7625289461526219471_n.jpg?stp=c0.0.261.261a_dst-jpg_p261x260_tt6&_nc_cat=104&ccb=1-7&_nc_sid=247b10&_nc_ohc=Gk24Unm3YjEQ7kNvwF70TvH&_nc_oc=AdmFTYraJMsUwTP7kHDMIbM_ywUm07phgAVpA0mVs6kiyFcggCxOoDEemMOYx-Gc-oW02XAJPrJgjysWI5_it0WZ&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=4IJTR4loQtPqkUggsBeGpg&oh=00_AfWa-_rWauDWs-Sa1dr7Dbf2DT966BQ0uYkHqz9cJQ3YMw&oe=68BC93F6",
+              "alt_text": "New rug luxury brand new in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/517882300_624353387346787_8306521407497808216_n.jpg?stp=c50.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=PPw_0LmNDVwQ7kNvwFu7xb2&_nc_oc=AdkX__d8UFec94r7yKNq_OGP0c6azntrRb2BSDLiaOI-VBVNhQgAc_QeHP8Xhg8ewidXPtCVENAI6Bji36QCjqUS&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=4IJTR4loQtPqkUggsBeGpg&oh=00_AfX7uqCU7tdX1Ahs-h8tmhTODJmhQqzisxB1ywAhUrpzrg&oe=68BC8B33",
+              "alt_text": "2Colors Stainless Steel Handheld Douche Bidet Toilet Spray Shower Shattaf Diverter in Sydney, NSW",
+              "type": "product_image"
+            }
+          ],
+          "description": "Samsung S25 ULTRA 1TB*\n\nAU$1,400\n  · In stock\n\nListed in Sydney, NSW"
+        }
+      },
+      "hot_reload_timestamp": "2025-09-02T13:08:51.128812",
+      "scraping_status": "completed",
+      "scraping_method": "deep",
+      "created_at": "2025-09-02T13:08:51.128812",
+      "hot_reload": true,
+      "seller_name": "Private Seller"
+    },
+    {
+      "id": "deep_2519102178465753",
+      "title": "AU$250\nSamsung S25 Ultra 512gb\nSydney, NSW",
+      "price": {
+        "amount": "47",
+        "currency": "KR",
+        "raw_value": "kr 47"
+      },
+      "location": {
+        "city": "Within",
+        "distance": "51km",
+        "raw_location": "Within 51"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/2519102178465753/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A16b23647-2ee2-4f7d-a567-b2cc27d71b41&__tn__=!%3AD",
+      "seller": {
+        "info": "Private Seller",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 11",
+        "storage": "512 GB",
+        "condition": "new_in_box",
+        "color": "Black"
+      },
+      "images": [
+        {
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/540527291_788072996997489_3543321400053262857_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=247b10&_nc_ohc=7_oGHDLsuEwQ7kNvwEdsIic&_nc_oc=AdnKZBBbt3WH0BqwzvyRrt7kCP88PYWfRBOLpYKVsn79sxCKpsl-_E0tzJtGfsaHvDD8OWQoU-RcAOqqRyWfJatV&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=A0QZDWYITX3YR1_aTi-8dw&oh=00_AfVtU9Pw35Kdw64LvGk8sAERTwWoJB5hiJv0mMEZs-bxqQ&oe=68BC6EEA",
+          "alt_text": "",
+          "type": "product_image"
+        },
+        {
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/540527291_788072996997489_3543321400053262857_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=247b10&_nc_ohc=7_oGHDLsuEwQ7kNvwEdsIic&_nc_oc=AdnKZBBbt3WH0BqwzvyRrt7kCP88PYWfRBOLpYKVsn79sxCKpsl-_E0tzJtGfsaHvDD8OWQoU-RcAOqqRyWfJatV&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=A0QZDWYITX3YR1_aTi-8dw&oh=00_AfVtU9Pw35Kdw64LvGk8sAERTwWoJB5hiJv0mMEZs-bxqQ&oe=68BC6EEA",
+          "alt_text": "Product photo of Samsung S25 Ultra 512gb",
+          "type": "product_image"
+        },
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/539671162_1459025952106853_4608647933165843403_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=247b10&_nc_ohc=BuqkbdOfreEQ7kNvwGKFr0m&_nc_oc=AdnHvnsheDgfiJ36JBA-y0wp07ivn6I78ELVcupqVruvhQPLy0a5pgJaMy9ZYir44TA-dh6_MHJyu4X5BKhT1d_X&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=A0QZDWYITX3YR1_aTi-8dw&oh=00_AfUDOql4bLdgR6eRhmYX5AgQSKv1DosHC9-64teWjMpaDw&oe=68BC6D17",
+          "alt_text": "Product photo of Samsung S25 Ultra 512gb",
+          "type": "product_image"
+        }
+      ],
+      "extraction_method": "deep_scraper",
+      "data_quality": "comprehensive",
+      "added_at": "2025-09-02T13:06:14.211229",
+      "source": "facebook_marketplace_scraper",
+      "deep_data": {
+        "seller_details": {
+          "button_found": true,
+          "extraction_timestamp": "2025-09-02T13:04:18.811207",
+          "button_text": "Seller details",
+          "button_href": "https://www.facebook.com/marketplace/profile/61579937075290/?product_id=2519102178465753",
+          "join_date": "joined facebook in 2025"
+        },
+        "marketplace_metadata": {
+          "fb_listing_id": "2519102178465753",
+          "is_sold": true,
+          "timing": {
+            "facebook_time_text": "25m",
+            "parsed_minutes_ago": 25.0,
+            "calculated_timestamp": "2025-09-02T12:41:08.854909",
+            "extraction_method": "facebook_time_parser",
+            "all_expressions_found": [
+              "25m",
+              "30m",
+              "21m",
+              "1d",
+              "3d"
+            ]
+          }
+        },
+        "comprehensive_product": {
+          "model_name": "iPhone 11",
+          "storage": "512 GB",
+          "color": "Black",
+          "condition": "new_in_box",
+          "images": [
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/540527291_788072996997489_3543321400053262857_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=247b10&_nc_ohc=7_oGHDLsuEwQ7kNvwEdsIic&_nc_oc=AdnKZBBbt3WH0BqwzvyRrt7kCP88PYWfRBOLpYKVsn79sxCKpsl-_E0tzJtGfsaHvDD8OWQoU-RcAOqqRyWfJatV&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=A0QZDWYITX3YR1_aTi-8dw&oh=00_AfVtU9Pw35Kdw64LvGk8sAERTwWoJB5hiJv0mMEZs-bxqQ&oe=68BC6EEA",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/540527291_788072996997489_3543321400053262857_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=247b10&_nc_ohc=7_oGHDLsuEwQ7kNvwEdsIic&_nc_oc=AdnKZBBbt3WH0BqwzvyRrt7kCP88PYWfRBOLpYKVsn79sxCKpsl-_E0tzJtGfsaHvDD8OWQoU-RcAOqqRyWfJatV&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=A0QZDWYITX3YR1_aTi-8dw&oh=00_AfVtU9Pw35Kdw64LvGk8sAERTwWoJB5hiJv0mMEZs-bxqQ&oe=68BC6EEA",
+              "alt_text": "Product photo of Samsung S25 Ultra 512gb",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/539671162_1459025952106853_4608647933165843403_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=247b10&_nc_ohc=BuqkbdOfreEQ7kNvwGKFr0m&_nc_oc=AdnHvnsheDgfiJ36JBA-y0wp07ivn6I78ELVcupqVruvhQPLy0a5pgJaMy9ZYir44TA-dh6_MHJyu4X5BKhT1d_X&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=A0QZDWYITX3YR1_aTi-8dw&oh=00_AfUDOql4bLdgR6eRhmYX5AgQSKv1DosHC9-64teWjMpaDw&oe=68BC6D17",
+              "alt_text": "Product photo of Samsung S25 Ultra 512gb",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/540499849_768489235915500_7530935720665988445_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_ohc=BkS7mK_Dx1wQ7kNvwG3CFav&_nc_oc=Adkl3o-BRDG4JGptd3mZXc-vTkzbUIM6V01yj51yfl4_vfdcjNmpJNNy28nUaQJKMnaCDJi0DOWLqtHdzuZKhpcg&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=A0QZDWYITX3YR1_aTi-8dw&oh=00_AfVzE7_QpYoULs4pODhjUPE6drjBFRY5JClW0x7BU-lsfA&oe=68BC6789",
+              "alt_text": "Product photo of Samsung S25 Ultra 512gb",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/540785498_24543439358622984_9028909260937493506_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=247b10&_nc_ohc=QdeFzOQt-3AQ7kNvwF2Cesr&_nc_oc=AdmqO9KQH2qtMys_8diC5-e1IW0ZWCOgmXJhq_v1l62aTTAzVZ4wRV5c0xveNuOuuvjWw4IR7CA0bT8O-oty0-dM&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=A0QZDWYITX3YR1_aTi-8dw&oh=00_AfU_x6pHY6CK1bqyYT9X5t6oqqEaT1Ts-S3_4qto8U5mQA&oe=68BC7FC5",
+              "alt_text": "Product photo of Samsung S25 Ultra 512gb",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t15.5256-10/525765418_785265470622697_2939912168314881142_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=104&ccb=1-7&_nc_sid=282d23&_nc_ohc=cq2i2HM8lEcQ7kNvwEQLWpw&_nc_oc=Adkr0yVKAig3Bd_tcwkZtJMm_W6DbbI9AjLQILc56yWR0WifQ16mcVfoF_PMTuj-l8whLh-aIE9d_K80y7HzlJfU&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=A0QZDWYITX3YR1_aTi-8dw&oh=00_AfVj4gca3oYaPeYvzwn_s2ZErkS1F0C6FxC4h0omx6BGMw&oe=68BC8D74",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.1600-4/534886435_4112373889037210_3171915521060189282_n.png?stp=cp0_dst-jpg_q90_s960x960_spS444_tt6&_nc_cat=100&ccb=1-7&_nc_sid=19da1b&_nc_ohc=V2trU4U97TIQ7kNvwHmDhES&_nc_oc=AdlyoCw_fNd4cze2Xqwqo4bmwJMvxQYJ40SB7kiFcK9550Z4sNtcnaPs6Sgt1JgtVAyzXPk8i4CM-1Sp8VVcab4q&_nc_zt=1&_nc_ht=scontent.fisb17-1.fna&_nc_gid=A0QZDWYITX3YR1_aTi-8dw&oh=00_AfVg3jhkPmtPvNCZpJdu4ip3F7aIyFMWyPmO9i9i9bLtxA&oe=68BC6BD0",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/540089373_3911263642352439_8189627821270836350_n.jpg?stp=c148.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=100&ccb=1-7&_nc_sid=247b10&_nc_ohc=1WtzY813UHwQ7kNvwFheOsu&_nc_oc=AdlrnTQp1R0LqHOPULBL8UiUm-uloGxcV7ZVRsk8k4w0KhD07FtBzh0yubU-T7jtpR-aN5ToEaQ7CAjNHhPE1Iuv&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=mt8Bd50H3L10a448CHtCFw&oh=00_AfUXTzhSvsd8u2n0i3RbzcE7caAz-ZFJBI0aBBDMW3RsAQ&oe=68BC8CF8",
+              "alt_text": "Fisher & Paykel 5.5kg Quicksmart Top Loader Washing Machine in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/530331347_3678672409103420_8097551881528430768_n.jpg?stp=c0.152.261.261a_dst-jpg_p261x260_tt6&_nc_cat=104&ccb=1-7&_nc_sid=247b10&_nc_ohc=imTD-KKTZbQQ7kNvwEbn8BX&_nc_oc=AdmpFFxMOprgh-mtOY0K-tJXeN-D_v_DztCrojJdtuUXtIlNoM0hPAseAKrldnnSEFTWQOpci88geqJojRuzI0C6&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=mt8Bd50H3L10a448CHtCFw&oh=00_AfUm8Q-Bfy_sW5FyVBu-1eRLuhM-uB5l7g7qOqfqxct-EQ&oe=68BC5D97",
+              "alt_text": "IPhone XR Black - 128GB in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/476898386_665394665912312_7512133511743495865_n.jpg?stp=c93.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_ohc=7_BUpJmskm4Q7kNvwEhjK39&_nc_oc=AdlIPvZqCe603h7geyp_wvdOT_ZBaiX-qv5NjfmC9sBY63wtqGo82S-13dBSKys53MEA-kb6CUH3Do_x_4pNbPz0&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=mt8Bd50H3L10a448CHtCFw&oh=00_AfXrADujzX8Dnwiy2lfxj4VXelpVWRrJ3UyXHfI_B5JAlQ&oe=68BC6D0E",
+              "alt_text": "Tradie pants in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/539661804_1879515416310462_7032391621165246438_n.jpg?stp=c0.101.261.261a_dst-jpg_p261x260_tt6&_nc_cat=100&ccb=1-7&_nc_sid=247b10&_nc_ohc=HDdmTVzXRkgQ7kNvwFw8wwy&_nc_oc=Adl_hbQlbqkE5qiWoGHlVY1ySus4PUUNnPBBmmF9w9vfj8_IVPgm51vQha8z3qqhGW-Y2YXlygUqfqyJX6wnSn2g&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=mt8Bd50H3L10a448CHtCFw&oh=00_AfWa5_nGxsEv7760_VC2l4PxBphLg3jlm7rbWIWMkkUf7w&oe=68BC6A23",
+              "alt_text": "iPhone 11 in Menangle, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/540349218_603489472695109_1736079653530639419_n.jpg?stp=c0.101.261.261a_dst-jpg_p261x260_tt6&_nc_cat=108&ccb=1-7&_nc_sid=247b10&_nc_ohc=_W3W-oedydIQ7kNvwE_F_Cu&_nc_oc=Adl2jY7iPiD1Y17AUiQ4ZXAIMrFl0eBX1WHgTwJdLIkWgQG_tzXff5VrwoTXfQbUgZ3Sb-MtDCPpKbX32RnNyDNq&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=mt8Bd50H3L10a448CHtCFw&oh=00_AfWccPCg-ui8Jb6eGnrkLKgQ1pvHeV7djNNWHhkSHIaSSQ&oe=68BC9373",
+              "alt_text": "Gaming computer in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/540687840_819465037583963_6428144001804315460_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=vunb4mywy_UQ7kNvwEH5Lqm&_nc_oc=AdkOPl2MzNOVweFushaiUbg933gV9DR6R5UZ6uYapmomRJHEZfQnqJ5Oi2AdX226lJMoO1V4tQAbFQ-_bXu25hZ7&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=mt8Bd50H3L10a448CHtCFw&oh=00_AfWm4S2SQuRt-TUCvSd0SmAwz8NCURP4dgDZkJOmhhPjrQ&oe=68BC6172",
+              "alt_text": "LG 6.5 kg top loader washing machine and Simpson 5.5 kg vented dryers.Selling as package in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/529836196_766966982532156_7625289461526219471_n.jpg?stp=c0.0.261.261a_dst-jpg_p261x260_tt6&_nc_cat=104&ccb=1-7&_nc_sid=247b10&_nc_ohc=Gk24Unm3YjEQ7kNvwF70TvH&_nc_oc=AdmFTYraJMsUwTP7kHDMIbM_ywUm07phgAVpA0mVs6kiyFcggCxOoDEemMOYx-Gc-oW02XAJPrJgjysWI5_it0WZ&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=mt8Bd50H3L10a448CHtCFw&oh=00_AfVmKQg7QEQ1OUfss-R265UxQgQfBkJ76k51X7JlEU7RTA&oe=68BC5BB6",
+              "alt_text": "New rug luxury brand new in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/517882300_624353387346787_8306521407497808216_n.jpg?stp=c50.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=PPw_0LmNDVwQ7kNvwFu7xb2&_nc_oc=AdkX__d8UFec94r7yKNq_OGP0c6azntrRb2BSDLiaOI-VBVNhQgAc_QeHP8Xhg8ewidXPtCVENAI6Bji36QCjqUS&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=mt8Bd50H3L10a448CHtCFw&oh=00_AfU_BjYVwWiJOe-PMBCY3K8wGCZlufFDSv_pqHrWl8Ivyg&oe=68BC8B33",
+              "alt_text": "2Colors Stainless Steel Handheld Douche Bidet Toilet Spray Shower Shattaf Diverter in Sydney, NSW",
+              "type": "product_image"
+            }
+          ],
+          "description": "Samsung S25 Ultra 512gb\n\nListed in Sydney, NSW\n\nPerfect working\nUsed like new"
+        }
+      },
+      "hot_reload_timestamp": "2025-09-02T13:06:14.211229",
+      "scraping_status": "completed",
+      "scraping_method": "deep",
+      "created_at": "2025-09-02T13:06:14.211229",
+      "hot_reload": true,
+      "seller_name": "Private Seller"
+    },
+    {
+      "id": "deep_1314138836807520",
+      "title": "AU$1,100\nAU$1,200\nSamsung S25 Ultra 1TB\nSydney, NSW",
+      "price": {
+        "amount": "07",
+        "currency": "KR",
+        "raw_value": "07 kr"
+      },
+      "location": {
+        "city": "Within",
+        "distance": "51km",
+        "raw_location": "Within 51"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1314138836807520/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A16b23647-2ee2-4f7d-a567-b2cc27d71b41&__tn__=!%3AD",
+      "seller": {
+        "info": "Private Seller",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 11",
+        "storage": "1 TB",
+        "condition": "new_in_box",
+        "color": "Black"
+      },
+      "images": [
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/533251326_2392254314506062_3142708656489423839_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=109&ccb=1-7&_nc_sid=247b10&_nc_ohc=X-uWLi2EjlQQ7kNvwHLZrgc&_nc_oc=Adklmi20LzAZ4UO3BAiOu7OSELDK_F25KD5Ddp1SV4xhJuu6zBwEMQ3YH-W1axqgVbY-eAmE5igl1X3SHYpqrROE&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=TKqPEaGhWb_ddrcJNRzkvA&oh=00_AfXn-Qv1CNZ6nSOaUtuK21hDeTeemB8dymOdkQC3EioLWg&oe=68BC5FAA",
+          "alt_text": "",
+          "type": "product_image"
+        },
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/533251326_2392254314506062_3142708656489423839_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=109&ccb=1-7&_nc_sid=247b10&_nc_ohc=X-uWLi2EjlQQ7kNvwHLZrgc&_nc_oc=Adklmi20LzAZ4UO3BAiOu7OSELDK_F25KD5Ddp1SV4xhJuu6zBwEMQ3YH-W1axqgVbY-eAmE5igl1X3SHYpqrROE&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=TKqPEaGhWb_ddrcJNRzkvA&oh=00_AfXn-Qv1CNZ6nSOaUtuK21hDeTeemB8dymOdkQC3EioLWg&oe=68BC5FAA",
+          "alt_text": "Product photo of Samsung S25 Ultra 1TB",
+          "type": "product_image"
+        },
+        {
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/532165925_1422112872404021_5961051156354406525_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=104&ccb=1-7&_nc_sid=247b10&_nc_ohc=DxmIAnlYtLoQ7kNvwHtv3Jk&_nc_oc=Adn2Y2ENx9ZtdZj_25S3nm7iStyMMOACzThOhrkWD4VT3FrMnlFobBzUv3-cFkal9V2dmXjcuUY3gPPbYrdJNwGA&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=TKqPEaGhWb_ddrcJNRzkvA&oh=00_AfV40TeK162d_AbmZ6GkMCYP2_bwxMC7elv5YyUUrBnHYA&oe=68BC8505",
+          "alt_text": "Product photo of Samsung S25 Ultra 1TB",
+          "type": "product_image"
+        }
+      ],
+      "extraction_method": "deep_scraper",
+      "data_quality": "comprehensive",
+      "added_at": "2025-09-02T13:03:43.690259",
+      "source": "facebook_marketplace_scraper",
+      "deep_data": {
+        "seller_details": {
+          "button_found": true,
+          "extraction_timestamp": "2025-09-02T13:01:51.034650",
+          "button_text": "Seller details",
+          "button_href": "https://www.facebook.com/marketplace/profile/61571907371372/?product_id=1314138836807520",
+          "join_date": "joined facebook in 2025"
+        },
+        "marketplace_metadata": {
+          "fb_listing_id": "1314138836807520",
+          "is_sold": true,
+          "timing": {
+            "facebook_time_text": "22m",
+            "parsed_minutes_ago": 22.0,
+            "calculated_timestamp": "2025-09-02T12:41:38.886452",
+            "extraction_method": "facebook_time_parser",
+            "all_expressions_found": [
+              "22m",
+              "27m",
+              "18m",
+              "1d",
+              "3d"
+            ]
+          }
+        },
+        "comprehensive_product": {
+          "model_name": "iPhone 11",
+          "storage": "1 TB",
+          "color": "Black",
+          "condition": "new_in_box",
+          "images": [
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/533251326_2392254314506062_3142708656489423839_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=109&ccb=1-7&_nc_sid=247b10&_nc_ohc=X-uWLi2EjlQQ7kNvwHLZrgc&_nc_oc=Adklmi20LzAZ4UO3BAiOu7OSELDK_F25KD5Ddp1SV4xhJuu6zBwEMQ3YH-W1axqgVbY-eAmE5igl1X3SHYpqrROE&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=TKqPEaGhWb_ddrcJNRzkvA&oh=00_AfXn-Qv1CNZ6nSOaUtuK21hDeTeemB8dymOdkQC3EioLWg&oe=68BC5FAA",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/533251326_2392254314506062_3142708656489423839_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=109&ccb=1-7&_nc_sid=247b10&_nc_ohc=X-uWLi2EjlQQ7kNvwHLZrgc&_nc_oc=Adklmi20LzAZ4UO3BAiOu7OSELDK_F25KD5Ddp1SV4xhJuu6zBwEMQ3YH-W1axqgVbY-eAmE5igl1X3SHYpqrROE&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=TKqPEaGhWb_ddrcJNRzkvA&oh=00_AfXn-Qv1CNZ6nSOaUtuK21hDeTeemB8dymOdkQC3EioLWg&oe=68BC5FAA",
+              "alt_text": "Product photo of Samsung S25 Ultra 1TB",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/532165925_1422112872404021_5961051156354406525_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=104&ccb=1-7&_nc_sid=247b10&_nc_ohc=DxmIAnlYtLoQ7kNvwHtv3Jk&_nc_oc=Adn2Y2ENx9ZtdZj_25S3nm7iStyMMOACzThOhrkWD4VT3FrMnlFobBzUv3-cFkal9V2dmXjcuUY3gPPbYrdJNwGA&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=TKqPEaGhWb_ddrcJNRzkvA&oh=00_AfV40TeK162d_AbmZ6GkMCYP2_bwxMC7elv5YyUUrBnHYA&oe=68BC8505",
+              "alt_text": "Product photo of Samsung S25 Ultra 1TB",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t15.5256-10/525765418_785265470622697_2939912168314881142_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=104&ccb=1-7&_nc_sid=282d23&_nc_ohc=cq2i2HM8lEcQ7kNvwEQLWpw&_nc_oc=Adkr0yVKAig3Bd_tcwkZtJMm_W6DbbI9AjLQILc56yWR0WifQ16mcVfoF_PMTuj-l8whLh-aIE9d_K80y7HzlJfU&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=TKqPEaGhWb_ddrcJNRzkvA&oh=00_AfXch0PtZsoMS7QxUCeYOz9ZqVimTHToyaNoUgc_n40QLg&oe=68BC8D74",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.1600-4/534886435_4112373889037210_3171915521060189282_n.png?stp=cp0_dst-jpg_q90_s960x960_spS444_tt6&_nc_cat=100&ccb=1-7&_nc_sid=19da1b&_nc_ohc=V2trU4U97TIQ7kNvwHmDhES&_nc_oc=AdlyoCw_fNd4cze2Xqwqo4bmwJMvxQYJ40SB7kiFcK9550Z4sNtcnaPs6Sgt1JgtVAyzXPk8i4CM-1Sp8VVcab4q&_nc_zt=1&_nc_ht=scontent.fisb17-1.fna&_nc_gid=TKqPEaGhWb_ddrcJNRzkvA&oh=00_AfUmvp0DTyBntf4sBoUJx8PvUxNGAi67QmDFbSHoeahsfQ&oe=68BC6BD0",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/540089373_3911263642352439_8189627821270836350_n.jpg?stp=c148.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=100&ccb=1-7&_nc_sid=247b10&_nc_ohc=1WtzY813UHwQ7kNvwFheOsu&_nc_oc=AdlrnTQp1R0LqHOPULBL8UiUm-uloGxcV7ZVRsk8k4w0KhD07FtBzh0yubU-T7jtpR-aN5ToEaQ7CAjNHhPE1Iuv&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=ZmT3HQyyoZ053msFnL_T5Q&oh=00_AfXqlMG12ejzuIgr6s9xG1yIFi0glO9sWVVYwyUAIma_MQ&oe=68BC8CF8",
+              "alt_text": "Fisher & Paykel 5.5kg Quicksmart Top Loader Washing Machine in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/530331347_3678672409103420_8097551881528430768_n.jpg?stp=c0.152.261.261a_dst-jpg_p261x260_tt6&_nc_cat=104&ccb=1-7&_nc_sid=247b10&_nc_ohc=imTD-KKTZbQQ7kNvwEbn8BX&_nc_oc=AdmpFFxMOprgh-mtOY0K-tJXeN-D_v_DztCrojJdtuUXtIlNoM0hPAseAKrldnnSEFTWQOpci88geqJojRuzI0C6&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=ZmT3HQyyoZ053msFnL_T5Q&oh=00_AfVjSEAmGntFNoDNbhNpyF2bn-ypwLr28yGI2KXhpqUdhA&oe=68BC5D97",
+              "alt_text": "IPhone XR Black - 128GB in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/476898386_665394665912312_7512133511743495865_n.jpg?stp=c93.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_ohc=7_BUpJmskm4Q7kNvwEhjK39&_nc_oc=AdlIPvZqCe603h7geyp_wvdOT_ZBaiX-qv5NjfmC9sBY63wtqGo82S-13dBSKys53MEA-kb6CUH3Do_x_4pNbPz0&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=ZmT3HQyyoZ053msFnL_T5Q&oh=00_AfWBst-xIbMxN7303QtoMcUG-z8SEC-IOmuZD4cAN7eiIA&oe=68BC6D0E",
+              "alt_text": "Tradie pants in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/539661804_1879515416310462_7032391621165246438_n.jpg?stp=c0.101.261.261a_dst-jpg_p261x260_tt6&_nc_cat=100&ccb=1-7&_nc_sid=247b10&_nc_ohc=HDdmTVzXRkgQ7kNvwFw8wwy&_nc_oc=Adl_hbQlbqkE5qiWoGHlVY1ySus4PUUNnPBBmmF9w9vfj8_IVPgm51vQha8z3qqhGW-Y2YXlygUqfqyJX6wnSn2g&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=ZmT3HQyyoZ053msFnL_T5Q&oh=00_AfWUxOqdCFjlKGMP2LGoHdD7VDeamAt6eh7PLpLAIje4Sw&oe=68BC6A23",
+              "alt_text": "iPhone 11 in Menangle, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/540349218_603489472695109_1736079653530639419_n.jpg?stp=c0.101.261.261a_dst-jpg_p261x260_tt6&_nc_cat=108&ccb=1-7&_nc_sid=247b10&_nc_ohc=_W3W-oedydIQ7kNvwE_F_Cu&_nc_oc=Adl2jY7iPiD1Y17AUiQ4ZXAIMrFl0eBX1WHgTwJdLIkWgQG_tzXff5VrwoTXfQbUgZ3Sb-MtDCPpKbX32RnNyDNq&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=ZmT3HQyyoZ053msFnL_T5Q&oh=00_AfVvVJwmxn77z_i4ff2FXdz597CPWdwnbksQSBk6xtpPKg&oe=68BC5B33",
+              "alt_text": "Gaming computer in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/540687840_819465037583963_6428144001804315460_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=vunb4mywy_UQ7kNvwEH5Lqm&_nc_oc=AdkOPl2MzNOVweFushaiUbg933gV9DR6R5UZ6uYapmomRJHEZfQnqJ5Oi2AdX226lJMoO1V4tQAbFQ-_bXu25hZ7&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=ZmT3HQyyoZ053msFnL_T5Q&oh=00_AfWvUV6rfMSfueU-_jA51Sa-iSjHa1jEAY8Dpb0DzlMadQ&oe=68BC6172",
+              "alt_text": "LG 6.5 kg top loader washing machine and Simpson 5.5 kg vented dryers.Selling as package in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/529836196_766966982532156_7625289461526219471_n.jpg?stp=c0.0.261.261a_dst-jpg_p261x260_tt6&_nc_cat=104&ccb=1-7&_nc_sid=247b10&_nc_ohc=Gk24Unm3YjEQ7kNvwF70TvH&_nc_oc=AdmFTYraJMsUwTP7kHDMIbM_ywUm07phgAVpA0mVs6kiyFcggCxOoDEemMOYx-Gc-oW02XAJPrJgjysWI5_it0WZ&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=ZmT3HQyyoZ053msFnL_T5Q&oh=00_AfUMcePjc4TUCju4KomH1-tF0WbZIxSxzG0xHrfTQZvvaQ&oe=68BC5BB6",
+              "alt_text": "New rug luxury brand new in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/540674983_807805238585440_6822367752288139596_n.jpg?stp=c43.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=1&ccb=1-7&_nc_sid=247b10&_nc_ohc=xqo42nLMbngQ7kNvwFDuXzb&_nc_oc=AdneCuS-j03uYTggjS4SgdpzUx9IzWhKQQp6eOkJKi6pJOKtwh_DJLQL2T6qZNjyuvIY46KEO-9vLP5gGxwIY7-x&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=ZmT3HQyyoZ053msFnL_T5Q&oh=00_AfXanyjzj_yKsYFtv86S3hZGOscX65gF58LSz3qpT1EJ5A&oe=68BC8299",
+              "alt_text": "Couch in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/517882300_624353387346787_8306521407497808216_n.jpg?stp=c50.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=PPw_0LmNDVwQ7kNvwFu7xb2&_nc_oc=AdkX__d8UFec94r7yKNq_OGP0c6azntrRb2BSDLiaOI-VBVNhQgAc_QeHP8Xhg8ewidXPtCVENAI6Bji36QCjqUS&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=ZmT3HQyyoZ053msFnL_T5Q&oh=00_AfX7QqJZJQASrIXBvEQDZxoknnozJwX7wF3F7fUVdZv8-g&oe=68BC8B33",
+              "alt_text": "2Colors Stainless Steel Handheld Douche Bidet Toilet Spray Shower Shattaf Diverter in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/541189408_4183455698536268_4565259117991321338_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=111&ccb=1-7&_nc_sid=247b10&_nc_ohc=19Z2v7k7Z0IQ7kNvwF7EsRv&_nc_oc=AdkTkr47bmD0ka_cF2U0F4DiVp1PbY3cfh0VI5YJPtswDjEcDj-egB8qW1uYYmU6XZ0hUYQeblsq9ijynESynnWB&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=ZmT3HQyyoZ053msFnL_T5Q&oh=00_AfVWtOgKJEVeoQFw8LWu_syDrh3wmS1vnt0gHYjzzbW5_g&oe=68BC9239",
+              "alt_text": "Granny Flat in Sydney, NSW",
+              "type": "product_image"
+            }
+          ],
+          "description": "Samsung S25 Ultra 1TB\n\nListed 4 days ago in Sydney, NSW\n\nUnwanted gift for pickup in Parramatta. Please message for further details."
+        }
+      },
+      "hot_reload_timestamp": "2025-09-02T13:03:43.690259",
+      "scraping_status": "completed",
+      "scraping_method": "deep",
+      "created_at": "2025-09-02T13:03:43.690259",
+      "hot_reload": true,
+      "seller_name": "Private Seller"
+    },
+    {
+      "id": "deep_1127623899301868",
+      "title": "AU$1,200\nSamsung S25 Ultra Titanium Jetblack 1TB\nSydney, NSW",
+      "price": {
+        "amount": "47",
+        "currency": "KR",
+        "raw_value": "kr 47"
+      },
+      "location": {
+        "city": "Within",
+        "distance": "51km",
+        "raw_location": "Within 51"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1127623899301868/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A16b23647-2ee2-4f7d-a567-b2cc27d71b41&__tn__=!%3AD",
+      "seller": {
+        "info": "Private Seller",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 11",
+        "storage": "1 TB",
+        "condition": "new_in_box",
+        "color": "Black"
+      },
+      "images": [
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/532310328_636214719211806_66285422248233314_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=106&ccb=1-7&_nc_sid=247b10&_nc_ohc=cDw56Cw2WdAQ7kNvwEjns4R&_nc_oc=Adl7MSkvm8tr5PLLVJWa9PyeovAyU_Q38Sf0fckixX6QYI8uPfPb_1kptOgDUNRFOoqVX59htFUp2But35gcD3Vm&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=5TSc1QEuLjuPWjCzfy34_w&oh=00_AfUG_qAaIqjP0j2LWYTqi1UHZy5I_3yKo-6ZQ75XsH-m5A&oe=68BC6704",
+          "alt_text": "",
+          "type": "product_image"
+        },
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/532310328_636214719211806_66285422248233314_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=106&ccb=1-7&_nc_sid=247b10&_nc_ohc=cDw56Cw2WdAQ7kNvwEjns4R&_nc_oc=Adl7MSkvm8tr5PLLVJWa9PyeovAyU_Q38Sf0fckixX6QYI8uPfPb_1kptOgDUNRFOoqVX59htFUp2But35gcD3Vm&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=5TSc1QEuLjuPWjCzfy34_w&oh=00_AfUG_qAaIqjP0j2LWYTqi1UHZy5I_3yKo-6ZQ75XsH-m5A&oe=68BC6704",
+          "alt_text": "Product photo of Samsung S25 Ultra Titanium Jetblack 1TB",
+          "type": "product_image"
+        },
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/540328574_739715882210010_6911784410288098897_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=QlusMVmVw60Q7kNvwEI1IE_&_nc_oc=AdmlN6A4h5sHmdW6evBwz-oVpjIF3tOGlg4HqlvGuXHVjYm8TpTNPJtu-ZlDp3vYmuN-_Tt-kgIiiCKCRcjA-K98&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=5TSc1QEuLjuPWjCzfy34_w&oh=00_AfWBQXW2zBnaLGwjzfR8qlpVisTGdKydF3h-yybyTXAo9w&oe=68BC812B",
+          "alt_text": "Product photo of Samsung S25 Ultra Titanium Jetblack 1TB",
+          "type": "product_image"
+        }
+      ],
+      "extraction_method": "deep_scraper",
+      "data_quality": "comprehensive",
+      "added_at": "2025-09-02T13:01:13.456725",
+      "source": "facebook_marketplace_scraper",
+      "deep_data": {
+        "seller_details": {
+          "button_found": true,
+          "extraction_timestamp": "2025-09-02T12:59:21.374742",
+          "button_text": "Seller details",
+          "button_href": "https://www.facebook.com/marketplace/profile/61579129206860/?product_id=1127623899301868",
+          "join_date": "joined facebook in 2025"
+        },
+        "marketplace_metadata": {
+          "fb_listing_id": "1127623899301868",
+          "is_sold": true,
+          "timing": {
+            "facebook_time_text": "20m",
+            "parsed_minutes_ago": 20.0,
+            "calculated_timestamp": "2025-09-02T12:41:08.154879",
+            "extraction_method": "facebook_time_parser",
+            "all_expressions_found": [
+              "20m",
+              "24m",
+              "16m",
+              "1d",
+              "3d"
+            ]
+          }
+        },
+        "comprehensive_product": {
+          "model_name": "iPhone 11",
+          "storage": "1 TB",
+          "color": "Black",
+          "condition": "new_in_box",
+          "images": [
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/532310328_636214719211806_66285422248233314_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=106&ccb=1-7&_nc_sid=247b10&_nc_ohc=cDw56Cw2WdAQ7kNvwEjns4R&_nc_oc=Adl7MSkvm8tr5PLLVJWa9PyeovAyU_Q38Sf0fckixX6QYI8uPfPb_1kptOgDUNRFOoqVX59htFUp2But35gcD3Vm&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=5TSc1QEuLjuPWjCzfy34_w&oh=00_AfUG_qAaIqjP0j2LWYTqi1UHZy5I_3yKo-6ZQ75XsH-m5A&oe=68BC6704",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/532310328_636214719211806_66285422248233314_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=106&ccb=1-7&_nc_sid=247b10&_nc_ohc=cDw56Cw2WdAQ7kNvwEjns4R&_nc_oc=Adl7MSkvm8tr5PLLVJWa9PyeovAyU_Q38Sf0fckixX6QYI8uPfPb_1kptOgDUNRFOoqVX59htFUp2But35gcD3Vm&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=5TSc1QEuLjuPWjCzfy34_w&oh=00_AfUG_qAaIqjP0j2LWYTqi1UHZy5I_3yKo-6ZQ75XsH-m5A&oe=68BC6704",
+              "alt_text": "Product photo of Samsung S25 Ultra Titanium Jetblack 1TB",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/540328574_739715882210010_6911784410288098897_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=QlusMVmVw60Q7kNvwEI1IE_&_nc_oc=AdmlN6A4h5sHmdW6evBwz-oVpjIF3tOGlg4HqlvGuXHVjYm8TpTNPJtu-ZlDp3vYmuN-_Tt-kgIiiCKCRcjA-K98&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=5TSc1QEuLjuPWjCzfy34_w&oh=00_AfWBQXW2zBnaLGwjzfR8qlpVisTGdKydF3h-yybyTXAo9w&oe=68BC812B",
+              "alt_text": "Product photo of Samsung S25 Ultra Titanium Jetblack 1TB",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t15.5256-10/525765418_785265470622697_2939912168314881142_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=104&ccb=1-7&_nc_sid=282d23&_nc_ohc=cq2i2HM8lEcQ7kNvwEQLWpw&_nc_oc=Adkr0yVKAig3Bd_tcwkZtJMm_W6DbbI9AjLQILc56yWR0WifQ16mcVfoF_PMTuj-l8whLh-aIE9d_K80y7HzlJfU&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=5TSc1QEuLjuPWjCzfy34_w&oh=00_AfUVk5LQlGCUnnAb8ImRO38r1nea-ubjT7vG0BQW5chmQQ&oe=68BC8D74",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.1600-4/534886435_4112373889037210_3171915521060189282_n.png?stp=cp0_dst-jpg_q90_s960x960_spS444_tt6&_nc_cat=100&ccb=1-7&_nc_sid=19da1b&_nc_ohc=V2trU4U97TIQ7kNvwHmDhES&_nc_oc=AdlyoCw_fNd4cze2Xqwqo4bmwJMvxQYJ40SB7kiFcK9550Z4sNtcnaPs6Sgt1JgtVAyzXPk8i4CM-1Sp8VVcab4q&_nc_zt=1&_nc_ht=scontent.fisb17-1.fna&_nc_gid=5TSc1QEuLjuPWjCzfy34_w&oh=00_AfWdh8tC4cW2rAc7t8rV9stTR_v2k7I6MgtocIbfcQpd9g&oe=68BC6BD0",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/540089373_3911263642352439_8189627821270836350_n.jpg?stp=c148.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=100&ccb=1-7&_nc_sid=247b10&_nc_ohc=1WtzY813UHwQ7kNvwFheOsu&_nc_oc=AdlrnTQp1R0LqHOPULBL8UiUm-uloGxcV7ZVRsk8k4w0KhD07FtBzh0yubU-T7jtpR-aN5ToEaQ7CAjNHhPE1Iuv&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=dci59Nl0yASV-ckD4sEDeg&oh=00_AfV8i21bsQkMKzeGE20GO4EISTfyKzda28Oq1BYRB77TKQ&oe=68BC8CF8",
+              "alt_text": "Fisher & Paykel 5.5kg Quicksmart Top Loader Washing Machine in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/530331347_3678672409103420_8097551881528430768_n.jpg?stp=c0.152.261.261a_dst-jpg_p261x260_tt6&_nc_cat=104&ccb=1-7&_nc_sid=247b10&_nc_ohc=imTD-KKTZbQQ7kNvwEbn8BX&_nc_oc=AdmpFFxMOprgh-mtOY0K-tJXeN-D_v_DztCrojJdtuUXtIlNoM0hPAseAKrldnnSEFTWQOpci88geqJojRuzI0C6&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=dci59Nl0yASV-ckD4sEDeg&oh=00_AfUA0VGXb5y6SnjdSv-GzUyOUUBk1ZAFkToD2dyCrIYh5Q&oe=68BC5D97",
+              "alt_text": "IPhone XR Black - 128GB in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/476898386_665394665912312_7512133511743495865_n.jpg?stp=c93.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_ohc=7_BUpJmskm4Q7kNvwEhjK39&_nc_oc=AdlIPvZqCe603h7geyp_wvdOT_ZBaiX-qv5NjfmC9sBY63wtqGo82S-13dBSKys53MEA-kb6CUH3Do_x_4pNbPz0&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=dci59Nl0yASV-ckD4sEDeg&oh=00_AfVFpO97HBDXhh34JAP9mSo2_UoH0k7fTXq1hy3laFAL3Q&oe=68BC6D0E",
+              "alt_text": "Tradie pants in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/539661804_1879515416310462_7032391621165246438_n.jpg?stp=c0.101.261.261a_dst-jpg_p261x260_tt6&_nc_cat=100&ccb=1-7&_nc_sid=247b10&_nc_ohc=HDdmTVzXRkgQ7kNvwFw8wwy&_nc_oc=Adl_hbQlbqkE5qiWoGHlVY1ySus4PUUNnPBBmmF9w9vfj8_IVPgm51vQha8z3qqhGW-Y2YXlygUqfqyJX6wnSn2g&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=dci59Nl0yASV-ckD4sEDeg&oh=00_AfXiOPSUGzUWLMWGtVf7YyQejn6ZlFbwyKhNAmbaHcex8A&oe=68BC6A23",
+              "alt_text": "iPhone 11 in Menangle, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/540349218_603489472695109_1736079653530639419_n.jpg?stp=c0.101.261.261a_dst-jpg_p261x260_tt6&_nc_cat=108&ccb=1-7&_nc_sid=247b10&_nc_ohc=_W3W-oedydIQ7kNvwE_F_Cu&_nc_oc=Adl2jY7iPiD1Y17AUiQ4ZXAIMrFl0eBX1WHgTwJdLIkWgQG_tzXff5VrwoTXfQbUgZ3Sb-MtDCPpKbX32RnNyDNq&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=dci59Nl0yASV-ckD4sEDeg&oh=00_AfVKlcjsZmoiLwpwrRrwUP7ZJ5qvLlv5UZ9Gls934FZVbw&oe=68BC5B33",
+              "alt_text": "Gaming computer in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/540687840_819465037583963_6428144001804315460_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=vunb4mywy_UQ7kNvwEH5Lqm&_nc_oc=AdkOPl2MzNOVweFushaiUbg933gV9DR6R5UZ6uYapmomRJHEZfQnqJ5Oi2AdX226lJMoO1V4tQAbFQ-_bXu25hZ7&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=dci59Nl0yASV-ckD4sEDeg&oh=00_AfUX6h4-1koMINisBMA7ZAgL0XPdTQpLcjQaJcn7ajNMnQ&oe=68BC6172",
+              "alt_text": "LG 6.5 kg top loader washing machine and Simpson 5.5 kg vented dryers.Selling as package in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/529836196_766966982532156_7625289461526219471_n.jpg?stp=c0.0.261.261a_dst-jpg_p261x260_tt6&_nc_cat=104&ccb=1-7&_nc_sid=247b10&_nc_ohc=Gk24Unm3YjEQ7kNvwF70TvH&_nc_oc=AdmFTYraJMsUwTP7kHDMIbM_ywUm07phgAVpA0mVs6kiyFcggCxOoDEemMOYx-Gc-oW02XAJPrJgjysWI5_it0WZ&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=dci59Nl0yASV-ckD4sEDeg&oh=00_AfVbDSgOwkihm6SknzNWiBOtCSI2fRsKjLgCAKqa3KqXwg&oe=68BC5BB6",
+              "alt_text": "New rug luxury brand new in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/540674983_807805238585440_6822367752288139596_n.jpg?stp=c43.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=1&ccb=1-7&_nc_sid=247b10&_nc_ohc=xqo42nLMbngQ7kNvwFDuXzb&_nc_oc=AdneCuS-j03uYTggjS4SgdpzUx9IzWhKQQp6eOkJKi6pJOKtwh_DJLQL2T6qZNjyuvIY46KEO-9vLP5gGxwIY7-x&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=dci59Nl0yASV-ckD4sEDeg&oh=00_AfXiLPxKSkbwPBthD2MpUAWJCTCutoJouwENo557QvjkEw&oe=68BC8299",
+              "alt_text": "Couch in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/517882300_624353387346787_8306521407497808216_n.jpg?stp=c50.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=PPw_0LmNDVwQ7kNvwFu7xb2&_nc_oc=AdkX__d8UFec94r7yKNq_OGP0c6azntrRb2BSDLiaOI-VBVNhQgAc_QeHP8Xhg8ewidXPtCVENAI6Bji36QCjqUS&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=dci59Nl0yASV-ckD4sEDeg&oh=00_AfVS_Le2ZkJAL4MbsQmVfW55ghjsrmmfZwanCr8SN1blfQ&oe=68BC8B33",
+              "alt_text": "2Colors Stainless Steel Handheld Douche Bidet Toilet Spray Shower Shattaf Diverter in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/541189408_4183455698536268_4565259117991321338_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=111&ccb=1-7&_nc_sid=247b10&_nc_ohc=19Z2v7k7Z0IQ7kNvwF7EsRv&_nc_oc=AdkTkr47bmD0ka_cF2U0F4DiVp1PbY3cfh0VI5YJPtswDjEcDj-egB8qW1uYYmU6XZ0hUYQeblsq9ijynESynnWB&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=dci59Nl0yASV-ckD4sEDeg&oh=00_AfWHh-oYBlKof5aWBlDPCFY1_UCBjfVgnhpybYbY5CKbEw&oe=68BC9239",
+              "alt_text": "Granny Flat in Sydney, NSW",
+              "type": "product_image"
+            }
+          ],
+          "description": "Samsung S25 Ultra Titanium Jetblack 1TB\n\nListed 4 days ago in Sydney, NSW\n\nWarranty Active until 2026!\nRecipients included\nNegotiable price or Swaps\nPickup 2147"
+        }
+      },
+      "hot_reload_timestamp": "2025-09-02T13:01:13.456725",
+      "scraping_status": "completed",
+      "scraping_method": "deep",
+      "created_at": "2025-09-02T13:01:13.456725",
+      "hot_reload": true,
+      "seller_name": "Private Seller"
+    },
+    {
+      "id": "deep_750768817821395",
+      "title": "AU$1,000\nSamsung s25\nSydney, NSW",
+      "price": {
+        "amount": "74",
+        "currency": "KR",
+        "raw_value": "74 kr"
+      },
+      "location": {
+        "city": "Within",
+        "distance": "51km",
+        "raw_location": "Within 51"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/750768817821395/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A16b23647-2ee2-4f7d-a567-b2cc27d71b41&__tn__=!%3AD",
+      "seller": {
+        "info": "Private Seller",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 13 mini",
+        "storage": "9 TB",
+        "condition": "new_in_box",
+        "color": "Black"
+      },
+      "images": [
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/541640233_1055029673376007_5914032794667603899_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=100&ccb=1-7&_nc_sid=247b10&_nc_ohc=ZEyHXWdfpckQ7kNvwEfSqdW&_nc_oc=AdnAe6xnNWvK9D88_HHV1af7zn21H6gaRqQlR8GLrIZwFpghK2KM3OEbqjoBZ3k71sjSrXcHfWf-UhaIM0b41h0L&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=mN289JvcC_F2rIPVcdL2Tg&oh=00_AfX7iWpkf6ysDwW7RmaqJidNrhOav3QvCrz34i5McWxZng&oe=68BC89F3",
+          "alt_text": "",
+          "type": "product_image"
+        },
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/541640233_1055029673376007_5914032794667603899_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=100&ccb=1-7&_nc_sid=247b10&_nc_ohc=ZEyHXWdfpckQ7kNvwEfSqdW&_nc_oc=AdnAe6xnNWvK9D88_HHV1af7zn21H6gaRqQlR8GLrIZwFpghK2KM3OEbqjoBZ3k71sjSrXcHfWf-UhaIM0b41h0L&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=mN289JvcC_F2rIPVcdL2Tg&oh=00_AfX7iWpkf6ysDwW7RmaqJidNrhOav3QvCrz34i5McWxZng&oe=68BC89F3",
+          "alt_text": "Product photo of Samsung s25",
+          "type": "product_image"
+        },
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/536642745_3151437521682354_2466034334889674358_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=106&ccb=1-7&_nc_sid=247b10&_nc_ohc=gMdDjI2CB_gQ7kNvwEjJ0rV&_nc_oc=AdkAVd9og9jlGFrhrY0SPJJuUcJm4A4X4DrV3x0KuVPCDONptXctB83_gi5t4Pn6r4Z81BFZR5pRTsbSwt7j4Jqc&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=mN289JvcC_F2rIPVcdL2Tg&oh=00_AfX4SzOTy3fGNWJIFQCEEKnp_4tZeFJJFu8pwqauyJFtTw&oe=68BC76A2",
+          "alt_text": "Product photo of Samsung s25",
+          "type": "product_image"
+        }
+      ],
+      "extraction_method": "deep_scraper",
+      "data_quality": "comprehensive",
+      "added_at": "2025-09-02T12:58:45.540053",
+      "source": "facebook_marketplace_scraper",
+      "deep_data": {
+        "seller_details": {
+          "button_found": true,
+          "extraction_timestamp": "2025-09-02T12:56:59.265211",
+          "button_text": "Seller details",
+          "button_href": "https://www.facebook.com/marketplace/profile/61579864324224/?product_id=750768817821395",
+          "join_date": "joined facebook in 2025"
+        },
+        "marketplace_metadata": {
+          "fb_listing_id": "750768817821395",
+          "is_sold": true,
+          "timing": {
+            "facebook_time_text": "17m",
+            "parsed_minutes_ago": 17.0,
+            "calculated_timestamp": "2025-09-02T12:41:40.638580",
+            "extraction_method": "facebook_time_parser",
+            "all_expressions_found": [
+              "17m",
+              "22m",
+              "14m",
+              "1d",
+              "3d"
+            ]
+          }
+        },
+        "comprehensive_product": {
+          "model_name": "iPhone 13 mini",
+          "storage": "9 TB",
+          "color": "Black",
+          "condition": "new_in_box",
+          "images": [
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/541640233_1055029673376007_5914032794667603899_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=100&ccb=1-7&_nc_sid=247b10&_nc_ohc=ZEyHXWdfpckQ7kNvwEfSqdW&_nc_oc=AdnAe6xnNWvK9D88_HHV1af7zn21H6gaRqQlR8GLrIZwFpghK2KM3OEbqjoBZ3k71sjSrXcHfWf-UhaIM0b41h0L&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=mN289JvcC_F2rIPVcdL2Tg&oh=00_AfX7iWpkf6ysDwW7RmaqJidNrhOav3QvCrz34i5McWxZng&oe=68BC89F3",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/541640233_1055029673376007_5914032794667603899_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=100&ccb=1-7&_nc_sid=247b10&_nc_ohc=ZEyHXWdfpckQ7kNvwEfSqdW&_nc_oc=AdnAe6xnNWvK9D88_HHV1af7zn21H6gaRqQlR8GLrIZwFpghK2KM3OEbqjoBZ3k71sjSrXcHfWf-UhaIM0b41h0L&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=mN289JvcC_F2rIPVcdL2Tg&oh=00_AfX7iWpkf6ysDwW7RmaqJidNrhOav3QvCrz34i5McWxZng&oe=68BC89F3",
+              "alt_text": "Product photo of Samsung s25",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/536642745_3151437521682354_2466034334889674358_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=106&ccb=1-7&_nc_sid=247b10&_nc_ohc=gMdDjI2CB_gQ7kNvwEjJ0rV&_nc_oc=AdkAVd9og9jlGFrhrY0SPJJuUcJm4A4X4DrV3x0KuVPCDONptXctB83_gi5t4Pn6r4Z81BFZR5pRTsbSwt7j4Jqc&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=mN289JvcC_F2rIPVcdL2Tg&oh=00_AfX4SzOTy3fGNWJIFQCEEKnp_4tZeFJJFu8pwqauyJFtTw&oe=68BC76A2",
+              "alt_text": "Product photo of Samsung s25",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t15.5256-10/351309759_2525815594223012_8076846003917022948_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=100&ccb=1-7&_nc_sid=7965db&_nc_ohc=NYWNhSCVOGUQ7kNvwGkmS-d&_nc_oc=AdkYci7oth7QAFXBIxCeAOhvHMXxntYomOJscI7cDAXkdIYSXDAZDG1yOCHhJ8G0AZa0Odq24imzrI304t4Z9nbO&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=mN289JvcC_F2rIPVcdL2Tg&oh=00_AfVMlf57jJtHEhhClqgrc9_hpUZrW1TIQcJ1iRSez4GMuA&oe=68BC5D38",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.1600-4/480245706_120216985457580285_255220091115087271_n.jpg?stp=cp0_dst-jpg_q75_s960x960_spS444_tt6&_nc_cat=108&ccb=1-7&_nc_sid=c02adf&_nc_ohc=OkXT8v5SXncQ7kNvwEQj2rW&_nc_oc=Admi0VJgqm9bpEuTsBcvJ36_C3eddDdrLmSpX8QSEWH7-Kbhj80_TKiXCfy_ISPTrRLtB35z67nXc_r5wLxYvk_Y&_nc_zt=1&_nc_ht=scontent.fisb1-2.fna&_nc_gid=0Uc6BGXjyXEFcGQCQTwRjw&oh=00_AfXPjDw3r6gz-pTYb_OxiuV0MbYHI_PprcAA7BmT9GZctg&oe=68BC81AC",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/532325084_1297128568591067_7893992186039688746_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=6efaEgEtIIwQ7kNvwEKScpp&_nc_oc=AdlGKpjIy0Nzh_YWtxU0CtbbsLoaPdFfUHNhDoGERaB6fbgQ9Bm9OG8lDE8qi8Ggdu6yLN6bBtnpVvsU091KClhY&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=0Uc6BGXjyXEFcGQCQTwRjw&oh=00_AfWWtuFlI1U9lIrp4C_XpD64kWudem2p6ylRPJwbIL6Xew&oe=68BC839E",
+              "alt_text": "iPhone 13 Mini 128gb with back cover and screen protector in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/540089373_3911263642352439_8189627821270836350_n.jpg?stp=c148.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=100&ccb=1-7&_nc_sid=247b10&_nc_ohc=1WtzY813UHwQ7kNvwFheOsu&_nc_oc=AdlrnTQp1R0LqHOPULBL8UiUm-uloGxcV7ZVRsk8k4w0KhD07FtBzh0yubU-T7jtpR-aN5ToEaQ7CAjNHhPE1Iuv&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=0Uc6BGXjyXEFcGQCQTwRjw&oh=00_AfVkmAK2L-2MuWTpDua0qY1Zvt67gC8XrkQfMrjQd713tg&oe=68BC8CF8",
+              "alt_text": "Fisher & Paykel 5.5kg Quicksmart Top Loader Washing Machine in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/530331347_3678672409103420_8097551881528430768_n.jpg?stp=c0.152.261.261a_dst-jpg_p261x260_tt6&_nc_cat=104&ccb=1-7&_nc_sid=247b10&_nc_ohc=imTD-KKTZbQQ7kNvwEbn8BX&_nc_oc=AdmpFFxMOprgh-mtOY0K-tJXeN-D_v_DztCrojJdtuUXtIlNoM0hPAseAKrldnnSEFTWQOpci88geqJojRuzI0C6&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=0Uc6BGXjyXEFcGQCQTwRjw&oh=00_AfVryJ-7nKT0ynll_ZBFu9wZCLVj8ykVjWd8DmkhOavzaQ&oe=68BC5D97",
+              "alt_text": "IPhone XR Black - 128GB in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/476898386_665394665912312_7512133511743495865_n.jpg?stp=c93.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_ohc=7_BUpJmskm4Q7kNvwEhjK39&_nc_oc=AdlIPvZqCe603h7geyp_wvdOT_ZBaiX-qv5NjfmC9sBY63wtqGo82S-13dBSKys53MEA-kb6CUH3Do_x_4pNbPz0&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=0Uc6BGXjyXEFcGQCQTwRjw&oh=00_AfVAGP6rXTgdTMaj-hFO2ixsRIoLDW89zZg4OYfT--HuBg&oe=68BC6D0E",
+              "alt_text": "Tradie pants in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/540687840_819465037583963_6428144001804315460_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=vunb4mywy_UQ7kNvwEH5Lqm&_nc_oc=AdkOPl2MzNOVweFushaiUbg933gV9DR6R5UZ6uYapmomRJHEZfQnqJ5Oi2AdX226lJMoO1V4tQAbFQ-_bXu25hZ7&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=0Uc6BGXjyXEFcGQCQTwRjw&oh=00_AfUf6PhpeSq23AarfWxGFtXOq3pHvU46m76SM-jeZjz-Fg&oe=68BC6172",
+              "alt_text": "LG 6.5 kg top loader washing machine and Simpson 5.5 kg vented dryers.Selling as package in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/529836196_766966982532156_7625289461526219471_n.jpg?stp=c0.0.261.261a_dst-jpg_p261x260_tt6&_nc_cat=104&ccb=1-7&_nc_sid=247b10&_nc_ohc=Gk24Unm3YjEQ7kNvwF70TvH&_nc_oc=AdmFTYraJMsUwTP7kHDMIbM_ywUm07phgAVpA0mVs6kiyFcggCxOoDEemMOYx-Gc-oW02XAJPrJgjysWI5_it0WZ&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=0Uc6BGXjyXEFcGQCQTwRjw&oh=00_AfWfil818mm7o_QWTX_aE5bb20x0zhd3luC2-fM0SqbtiQ&oe=68BC5BB6",
+              "alt_text": "New rug luxury brand new in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/540674983_807805238585440_6822367752288139596_n.jpg?stp=c43.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=1&ccb=1-7&_nc_sid=247b10&_nc_ohc=xqo42nLMbngQ7kNvwFDuXzb&_nc_oc=AdneCuS-j03uYTggjS4SgdpzUx9IzWhKQQp6eOkJKi6pJOKtwh_DJLQL2T6qZNjyuvIY46KEO-9vLP5gGxwIY7-x&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=0Uc6BGXjyXEFcGQCQTwRjw&oh=00_AfVMEYFkzqNstoH-NQ52gGDTuI_Z7oZP3LVeqsXhmjEr7A&oe=68BC8299",
+              "alt_text": "Couch in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/517882300_624353387346787_8306521407497808216_n.jpg?stp=c50.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=PPw_0LmNDVwQ7kNvwFu7xb2&_nc_oc=AdkX__d8UFec94r7yKNq_OGP0c6azntrRb2BSDLiaOI-VBVNhQgAc_QeHP8Xhg8ewidXPtCVENAI6Bji36QCjqUS&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=0Uc6BGXjyXEFcGQCQTwRjw&oh=00_AfV_BuUUta6Z-1K18vJbJDtYuqUHOUXxwnvD4FI2bsuLkQ&oe=68BC8B33",
+              "alt_text": "2Colors Stainless Steel Handheld Douche Bidet Toilet Spray Shower Shattaf Diverter in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/541189408_4183455698536268_4565259117991321338_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=111&ccb=1-7&_nc_sid=247b10&_nc_ohc=19Z2v7k7Z0IQ7kNvwF7EsRv&_nc_oc=AdkTkr47bmD0ka_cF2U0F4DiVp1PbY3cfh0VI5YJPtswDjEcDj-egB8qW1uYYmU6XZ0hUYQeblsq9ijynESynnWB&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=0Uc6BGXjyXEFcGQCQTwRjw&oh=00_AfURPicM2vUDPhH6lUpW1G2ZLmv36_CLt-WFKLThmMwnfw&oe=68BC59F9",
+              "alt_text": "Granny Flat in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t39.30808-6/534556995_24462542170033801_3987505397217999091_n.jpg?stp=c0.169.1537.1537a_dst-jpg_s261x260_tt6&_nc_cat=111&ccb=1-7&_nc_sid=454cf4&_nc_ohc=0VKKXBGI1OoQ7kNvwFGSQIr&_nc_oc=AdnyYXlq4ZXbW8mb6KDopYQ_vqoYNcODBicRY6WgyFXX-FBwS6pxhl5PH1xHqL2KDGiqpzr2H6F3WvZ0OE6U2H1R&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=0Uc6BGXjyXEFcGQCQTwRjw&oh=00_AfU9rKzctB4CeW7hrDBtRmOpbrI56zQKNr5jLB_5WP5qtA&oe=68BC7832",
+              "alt_text": "2005 Ford focus in Sydney, NSW",
+              "type": "product_image"
+            }
+          ],
+          "description": "Listed 2 days ago in Sydney, NSW\n\nUnused but the box is opened, my auntie and uncle bought it for me. Also have receipt but it’s past ... See more\n\nLocation is approximate"
+        }
+      },
+      "hot_reload_timestamp": "2025-09-02T12:58:45.540053",
+      "scraping_status": "completed",
+      "scraping_method": "deep",
+      "created_at": "2025-09-02T12:58:45.540053",
+      "hot_reload": true,
+      "seller_name": "Private Seller"
+    },
+    {
+      "id": "deep_720539037688821",
+      "title": "AU$30\nSamsung S25 ultra clear case\nSydney, NSW",
+      "price": {
+        "amount": "985",
+        "currency": "SEK",
+        "raw_value": "985 sek"
+      },
+      "location": {
+        "city": "Within",
+        "distance": "51km",
+        "raw_location": "Within 51"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/720539037688821/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A16b23647-2ee2-4f7d-a567-b2cc27d71b41&__tn__=!%3AD",
+      "seller": {
+        "info": "Private Seller",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 13 mini",
+        "storage": "9 TB",
+        "condition": "new_in_box",
+        "color": "Black"
+      },
+      "images": [
+        {
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/524993006_1164753102340838_7612388937044669953_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=110&ccb=1-7&_nc_sid=247b10&_nc_ohc=Y1h-P4ySAfEQ7kNvwFoInDb&_nc_oc=AdlINuip-aRAVKsah0y2M-Dzn5kO0LMmbISGUz1viaoGRdXqNNOUFc26prNSLCppQcAQ1jqdTYJTH87VLiBMPRYx&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=mF-Fw1ALOgvwbLKdi2EC3Q&oh=00_AfUh7YF5oQ98bb4jHV9ZX5Hy1ZhAlmSmNrtCE7P_O-udOg&oe=68BC6506",
+          "alt_text": "",
+          "type": "product_image"
+        },
+        {
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/524993006_1164753102340838_7612388937044669953_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=110&ccb=1-7&_nc_sid=247b10&_nc_ohc=Y1h-P4ySAfEQ7kNvwFoInDb&_nc_oc=AdlINuip-aRAVKsah0y2M-Dzn5kO0LMmbISGUz1viaoGRdXqNNOUFc26prNSLCppQcAQ1jqdTYJTH87VLiBMPRYx&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=mF-Fw1ALOgvwbLKdi2EC3Q&oh=00_AfUh7YF5oQ98bb4jHV9ZX5Hy1ZhAlmSmNrtCE7P_O-udOg&oe=68BC6506",
+          "alt_text": "Product photo of Samsung S25 ultra clear case",
+          "type": "product_image"
+        },
+        {
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/524997841_520120544492004_2735750932692199764_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=108&ccb=1-7&_nc_sid=247b10&_nc_ohc=VBL3gxr3TDsQ7kNvwFV2Z-T&_nc_oc=Adk44yUmACkT7zmWtonzTIVGgaQ5ebPeSKef8ZTpmKwGLM-ofKdlZPvyfWxNpzFJ7dV9k3x2gHDCpU8Omn7LWNOU&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=mF-Fw1ALOgvwbLKdi2EC3Q&oh=00_AfV45B5mwpjjWZHnDCQPdpfTPyhEQqN_EPWQWbwnSjfveQ&oe=68BC7BF1",
+          "alt_text": "Product photo of Samsung S25 ultra clear case",
+          "type": "product_image"
+        }
+      ],
+      "extraction_method": "deep_scraper",
+      "data_quality": "comprehensive",
+      "added_at": "2025-09-02T12:56:31.477954",
+      "source": "facebook_marketplace_scraper",
+      "deep_data": {
+        "seller_details": {
+          "button_found": true,
+          "extraction_timestamp": "2025-09-02T12:55:05.813168",
+          "button_text": "Seller details",
+          "button_href": "https://www.facebook.com/marketplace/profile/100024331900916/?product_id=720539037688821",
+          "ratings": [
+            "3.9 out of 5 stars, from one review",
+            "3.9 out of 5 stars, from one review"
+          ],
+          "join_date": "joined facebook in 2018"
+        },
+        "marketplace_metadata": {
+          "fb_listing_id": "720539037688821",
+          "is_sold": true,
+          "timing": {
+            "facebook_time_text": "14m",
+            "parsed_minutes_ago": 14.0,
+            "calculated_timestamp": "2025-09-02T12:42:27.618109",
+            "extraction_method": "facebook_time_parser",
+            "all_expressions_found": [
+              "14m",
+              "19m",
+              "11m",
+              "1d",
+              "3d"
+            ]
+          }
+        },
+        "comprehensive_product": {
+          "model_name": "iPhone 13 mini",
+          "storage": "9 TB",
+          "color": "Black",
+          "condition": "new_in_box",
+          "images": [
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/524993006_1164753102340838_7612388937044669953_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=110&ccb=1-7&_nc_sid=247b10&_nc_ohc=Y1h-P4ySAfEQ7kNvwFoInDb&_nc_oc=AdlINuip-aRAVKsah0y2M-Dzn5kO0LMmbISGUz1viaoGRdXqNNOUFc26prNSLCppQcAQ1jqdTYJTH87VLiBMPRYx&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=mF-Fw1ALOgvwbLKdi2EC3Q&oh=00_AfUh7YF5oQ98bb4jHV9ZX5Hy1ZhAlmSmNrtCE7P_O-udOg&oe=68BC6506",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/524993006_1164753102340838_7612388937044669953_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=110&ccb=1-7&_nc_sid=247b10&_nc_ohc=Y1h-P4ySAfEQ7kNvwFoInDb&_nc_oc=AdlINuip-aRAVKsah0y2M-Dzn5kO0LMmbISGUz1viaoGRdXqNNOUFc26prNSLCppQcAQ1jqdTYJTH87VLiBMPRYx&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=mF-Fw1ALOgvwbLKdi2EC3Q&oh=00_AfUh7YF5oQ98bb4jHV9ZX5Hy1ZhAlmSmNrtCE7P_O-udOg&oe=68BC6506",
+              "alt_text": "Product photo of Samsung S25 ultra clear case",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/524997841_520120544492004_2735750932692199764_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=108&ccb=1-7&_nc_sid=247b10&_nc_ohc=VBL3gxr3TDsQ7kNvwFV2Z-T&_nc_oc=Adk44yUmACkT7zmWtonzTIVGgaQ5ebPeSKef8ZTpmKwGLM-ofKdlZPvyfWxNpzFJ7dV9k3x2gHDCpU8Omn7LWNOU&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=mF-Fw1ALOgvwbLKdi2EC3Q&oh=00_AfV45B5mwpjjWZHnDCQPdpfTPyhEQqN_EPWQWbwnSjfveQ&oe=68BC7BF1",
+              "alt_text": "Product photo of Samsung S25 ultra clear case",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t15.5256-10/351309759_2525815594223012_8076846003917022948_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=100&ccb=1-7&_nc_sid=7965db&_nc_ohc=NYWNhSCVOGUQ7kNvwGkmS-d&_nc_oc=AdkYci7oth7QAFXBIxCeAOhvHMXxntYomOJscI7cDAXkdIYSXDAZDG1yOCHhJ8G0AZa0Odq24imzrI304t4Z9nbO&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=mF-Fw1ALOgvwbLKdi2EC3Q&oh=00_AfULwpWGzXJ91dqdD8soYuKMt6zL-7VNPX3h7ZJ8WRK30Q&oe=68BC5D38",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.1600-4/480245706_120216985457580285_255220091115087271_n.jpg?stp=cp0_dst-jpg_q75_s960x960_spS444_tt6&_nc_cat=108&ccb=1-7&_nc_sid=c02adf&_nc_ohc=OkXT8v5SXncQ7kNvwEQj2rW&_nc_oc=Admi0VJgqm9bpEuTsBcvJ36_C3eddDdrLmSpX8QSEWH7-Kbhj80_TKiXCfy_ISPTrRLtB35z67nXc_r5wLxYvk_Y&_nc_zt=1&_nc_ht=scontent.fisb1-2.fna&_nc_gid=_Z-2xAF5xDIXLFjbylmVHQ&oh=00_AfWX75rB0Gn3Gm4nVoDqk482qZe0ta2lYC55dQ6eu84row&oe=68BC81AC",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/532325084_1297128568591067_7893992186039688746_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=6efaEgEtIIwQ7kNvwEKScpp&_nc_oc=AdlGKpjIy0Nzh_YWtxU0CtbbsLoaPdFfUHNhDoGERaB6fbgQ9Bm9OG8lDE8qi8Ggdu6yLN6bBtnpVvsU091KClhY&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=_Z-2xAF5xDIXLFjbylmVHQ&oh=00_AfWj4LaIo0GU0DTJTnGi9r-ZHyKoVFASc_MlAe9dXYhAvg&oe=68BC839E",
+              "alt_text": "iPhone 13 Mini 128gb with back cover and screen protector in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/540089373_3911263642352439_8189627821270836350_n.jpg?stp=c148.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=100&ccb=1-7&_nc_sid=247b10&_nc_ohc=1WtzY813UHwQ7kNvwFheOsu&_nc_oc=AdlrnTQp1R0LqHOPULBL8UiUm-uloGxcV7ZVRsk8k4w0KhD07FtBzh0yubU-T7jtpR-aN5ToEaQ7CAjNHhPE1Iuv&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=_Z-2xAF5xDIXLFjbylmVHQ&oh=00_AfVcr9LfP6jxiqgFa-jS8h9G5RZ57XaV0knqwvX_wsOaLg&oe=68BC8CF8",
+              "alt_text": "Fisher & Paykel 5.5kg Quicksmart Top Loader Washing Machine in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/530331347_3678672409103420_8097551881528430768_n.jpg?stp=c0.152.261.261a_dst-jpg_p261x260_tt6&_nc_cat=104&ccb=1-7&_nc_sid=247b10&_nc_ohc=imTD-KKTZbQQ7kNvwEbn8BX&_nc_oc=AdmpFFxMOprgh-mtOY0K-tJXeN-D_v_DztCrojJdtuUXtIlNoM0hPAseAKrldnnSEFTWQOpci88geqJojRuzI0C6&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=_Z-2xAF5xDIXLFjbylmVHQ&oh=00_AfW8CIsZj_kdoKpal1sO05Rmjdw60ZXpFnx9SAEGnMRDwA&oe=68BC5D97",
+              "alt_text": "IPhone XR Black - 128GB in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/476898386_665394665912312_7512133511743495865_n.jpg?stp=c93.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_ohc=7_BUpJmskm4Q7kNvwEhjK39&_nc_oc=AdlIPvZqCe603h7geyp_wvdOT_ZBaiX-qv5NjfmC9sBY63wtqGo82S-13dBSKys53MEA-kb6CUH3Do_x_4pNbPz0&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=_Z-2xAF5xDIXLFjbylmVHQ&oh=00_AfW66yjXhTU-9o3-bAeKxetcx83mdJNccUMxGgQ0zlDItA&oe=68BC6D0E",
+              "alt_text": "Tradie pants in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/540687840_819465037583963_6428144001804315460_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=vunb4mywy_UQ7kNvwEH5Lqm&_nc_oc=AdkOPl2MzNOVweFushaiUbg933gV9DR6R5UZ6uYapmomRJHEZfQnqJ5Oi2AdX226lJMoO1V4tQAbFQ-_bXu25hZ7&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=_Z-2xAF5xDIXLFjbylmVHQ&oh=00_AfX985q5kun9vxbZpNtl-5yC2S7OB4EQIWEn713UaFkK_A&oe=68BC6172",
+              "alt_text": "LG 6.5 kg top loader washing machine and Simpson 5.5 kg vented dryers.Selling as package in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/529836196_766966982532156_7625289461526219471_n.jpg?stp=c0.0.261.261a_dst-jpg_p261x260_tt6&_nc_cat=104&ccb=1-7&_nc_sid=247b10&_nc_ohc=Gk24Unm3YjEQ7kNvwF70TvH&_nc_oc=AdmFTYraJMsUwTP7kHDMIbM_ywUm07phgAVpA0mVs6kiyFcggCxOoDEemMOYx-Gc-oW02XAJPrJgjysWI5_it0WZ&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=_Z-2xAF5xDIXLFjbylmVHQ&oh=00_AfU-JLKkZAVYCr0BXQ0VxToz77FcE6RUF_y5w63BQN7Pcw&oe=68BC5BB6",
+              "alt_text": "New rug luxury brand new in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/540674983_807805238585440_6822367752288139596_n.jpg?stp=c43.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=1&ccb=1-7&_nc_sid=247b10&_nc_ohc=xqo42nLMbngQ7kNvwFDuXzb&_nc_oc=AdneCuS-j03uYTggjS4SgdpzUx9IzWhKQQp6eOkJKi6pJOKtwh_DJLQL2T6qZNjyuvIY46KEO-9vLP5gGxwIY7-x&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=_Z-2xAF5xDIXLFjbylmVHQ&oh=00_AfUaCig5jqm1NxTjcz0KQd98unXrak46x9nL6pCeR_JR_w&oe=68BC8299",
+              "alt_text": "Couch in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/517882300_624353387346787_8306521407497808216_n.jpg?stp=c50.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=PPw_0LmNDVwQ7kNvwFu7xb2&_nc_oc=AdkX__d8UFec94r7yKNq_OGP0c6azntrRb2BSDLiaOI-VBVNhQgAc_QeHP8Xhg8ewidXPtCVENAI6Bji36QCjqUS&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=_Z-2xAF5xDIXLFjbylmVHQ&oh=00_AfVWng7qn7c5rBS29q4z0vYj33cm9LNnVo6HQbc0JcBbhA&oe=68BC8B33",
+              "alt_text": "2Colors Stainless Steel Handheld Douche Bidet Toilet Spray Shower Shattaf Diverter in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t39.30808-6/534556995_24462542170033801_3987505397217999091_n.jpg?stp=c0.169.1537.1537a_dst-jpg_s261x260_tt6&_nc_cat=111&ccb=1-7&_nc_sid=454cf4&_nc_ohc=0VKKXBGI1OoQ7kNvwFGSQIr&_nc_oc=AdnyYXlq4ZXbW8mb6KDopYQ_vqoYNcODBicRY6WgyFXX-FBwS6pxhl5PH1xHqL2KDGiqpzr2H6F3WvZ0OE6U2H1R&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=_Z-2xAF5xDIXLFjbylmVHQ&oh=00_AfUQ1HOjPBBMC8zHk0f0feyXtCuKnyKKEERV0ssJ9kz78w&oe=68BC7832",
+              "alt_text": "2005 Ford focus in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t39.30808-6/541111854_2825226454344906_3263656193606905766_n.jpg?stp=c200.0.1200.1200a_dst-jpg_s261x260_tt6&_nc_cat=107&ccb=1-7&_nc_sid=454cf4&_nc_ohc=uCqFdXbl980Q7kNvwGlw6Ji&_nc_oc=AdlO6VPZndto4gl3vFgVh36FhWQ403iTvVSedu8r1xTqAe0DHU44NqHoN_ejoPvG69X-uNNlZ4Ea8xX-5Hj1EsvN&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=_Z-2xAF5xDIXLFjbylmVHQ&oh=00_AfVsy80ovzungjCkXVQST0rumRi1LJHHor2x6jpaLrrYiA&oe=68BC8001",
+              "alt_text": "Single room available near Flemington in Sydney, NSW",
+              "type": "product_image"
+            }
+          ],
+          "description": "Samsung S25 ultra clear case\n\nListed 2 days ago in Sydney, NSW\n\nNew unopened\nOriginal Samsung case\nPick up kogarah\nCash only"
+        }
+      },
+      "hot_reload_timestamp": "2025-09-02T12:56:31.477954",
+      "scraping_status": "completed",
+      "scraping_method": "deep",
+      "created_at": "2025-09-02T12:56:31.477954",
+      "hot_reload": true,
+      "seller_name": "Private Seller"
+    },
+    {
+      "id": "deep_985564463667800",
+      "title": "AU$950\nSamsung S25\nSydney, NSW",
+      "price": {
+        "amount": "23",
+        "currency": "KR",
+        "raw_value": "23 kr"
+      },
+      "location": {
+        "city": "Within",
+        "distance": "51km",
+        "raw_location": "Within 51"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/985564463667800/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A16b23647-2ee2-4f7d-a567-b2cc27d71b41&__tn__=!%3AD",
+      "seller": {
+        "info": "Private Seller",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 13 mini",
+        "storage": "9 TB",
+        "condition": "new_in_box",
+        "color": "Black"
+      },
+      "images": [
+        {
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/540751781_1565256534447177_6254842249883050242_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=104&ccb=1-7&_nc_sid=247b10&_nc_ohc=FiE9wXgLQmYQ7kNvwHLTA58&_nc_oc=AdnjWbb-W0aaAauAZpmgaUv8n_0MPKvO0wK9jHpoZlElmmVY9YW1L0rC_aTO_rKZ_WwhTzynxc07N3ZMmmJvnurv&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=uFcjM1vIIyDKuD7-ICcJ9w&oh=00_AfW7wp43ThNSXjx-xmBkPcN-z87zp0JyG76V0KYwHJPO6g&oe=68BC739B",
+          "alt_text": "",
+          "type": "product_image"
+        },
+        {
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.1600-4/480245706_120216985457580285_255220091115087271_n.jpg?stp=cp0_dst-jpg_q75_s960x960_spS444_tt6&_nc_cat=108&ccb=1-7&_nc_sid=c02adf&_nc_ohc=OkXT8v5SXncQ7kNvwEQj2rW&_nc_oc=Admi0VJgqm9bpEuTsBcvJ36_C3eddDdrLmSpX8QSEWH7-Kbhj80_TKiXCfy_ISPTrRLtB35z67nXc_r5wLxYvk_Y&_nc_zt=1&_nc_ht=scontent.fisb1-2.fna&_nc_gid=uFcjM1vIIyDKuD7-ICcJ9w&oh=00_AfWDXF4QO-a9lsTm8Ee1sLAt5o1TdLhTmnyrl8ezPwAv7g&oe=68BC81AC",
+          "alt_text": "",
+          "type": "product_image"
+        },
+        {
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t15.5256-10/525765418_785265470622697_2939912168314881142_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=104&ccb=1-7&_nc_sid=282d23&_nc_ohc=cq2i2HM8lEcQ7kNvwEQLWpw&_nc_oc=Adkr0yVKAig3Bd_tcwkZtJMm_W6DbbI9AjLQILc56yWR0WifQ16mcVfoF_PMTuj-l8whLh-aIE9d_K80y7HzlJfU&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=uFcjM1vIIyDKuD7-ICcJ9w&oh=00_AfW2A59r6C36wDeAx80RUvPRvshyXqQi5In1jEAEww0Dqw&oe=68BC8D74",
+          "alt_text": "",
+          "type": "product_image"
+        }
+      ],
+      "extraction_method": "deep_scraper",
+      "data_quality": "comprehensive",
+      "added_at": "2025-09-02T12:54:40.004752",
+      "source": "facebook_marketplace_scraper",
+      "deep_data": {
+        "seller_details": {
+          "button_found": true,
+          "extraction_timestamp": "2025-09-02T12:53:10.591233",
+          "button_text": "Seller details",
+          "button_href": "https://www.facebook.com/marketplace/profile/100007045237379/?product_id=985564463667800",
+          "join_date": "joined facebook in 2013"
+        },
+        "marketplace_metadata": {
+          "fb_listing_id": "985564463667800",
+          "is_sold": true,
+          "timing": {
+            "facebook_time_text": "13m",
+            "parsed_minutes_ago": 13.0,
+            "calculated_timestamp": "2025-09-02T12:41:36.006577",
+            "extraction_method": "facebook_time_parser",
+            "all_expressions_found": [
+              "13m",
+              "17m",
+              "9m",
+              "1d",
+              "3d"
+            ]
+          }
+        },
+        "comprehensive_product": {
+          "model_name": "iPhone 13 mini",
+          "storage": "9 TB",
+          "color": "Black",
+          "condition": "new_in_box",
+          "images": [
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/540751781_1565256534447177_6254842249883050242_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=104&ccb=1-7&_nc_sid=247b10&_nc_ohc=FiE9wXgLQmYQ7kNvwHLTA58&_nc_oc=AdnjWbb-W0aaAauAZpmgaUv8n_0MPKvO0wK9jHpoZlElmmVY9YW1L0rC_aTO_rKZ_WwhTzynxc07N3ZMmmJvnurv&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=uFcjM1vIIyDKuD7-ICcJ9w&oh=00_AfW7wp43ThNSXjx-xmBkPcN-z87zp0JyG76V0KYwHJPO6g&oe=68BC739B",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.1600-4/480245706_120216985457580285_255220091115087271_n.jpg?stp=cp0_dst-jpg_q75_s960x960_spS444_tt6&_nc_cat=108&ccb=1-7&_nc_sid=c02adf&_nc_ohc=OkXT8v5SXncQ7kNvwEQj2rW&_nc_oc=Admi0VJgqm9bpEuTsBcvJ36_C3eddDdrLmSpX8QSEWH7-Kbhj80_TKiXCfy_ISPTrRLtB35z67nXc_r5wLxYvk_Y&_nc_zt=1&_nc_ht=scontent.fisb1-2.fna&_nc_gid=uFcjM1vIIyDKuD7-ICcJ9w&oh=00_AfWDXF4QO-a9lsTm8Ee1sLAt5o1TdLhTmnyrl8ezPwAv7g&oe=68BC81AC",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t15.5256-10/525765418_785265470622697_2939912168314881142_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=104&ccb=1-7&_nc_sid=282d23&_nc_ohc=cq2i2HM8lEcQ7kNvwEQLWpw&_nc_oc=Adkr0yVKAig3Bd_tcwkZtJMm_W6DbbI9AjLQILc56yWR0WifQ16mcVfoF_PMTuj-l8whLh-aIE9d_K80y7HzlJfU&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=uFcjM1vIIyDKuD7-ICcJ9w&oh=00_AfW2A59r6C36wDeAx80RUvPRvshyXqQi5In1jEAEww0Dqw&oe=68BC8D74",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/535470093_1449572239629654_7091577343484135749_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=110&ccb=1-7&_nc_sid=247b10&_nc_ohc=NEE7Ze6-qdEQ7kNvwETkw7w&_nc_oc=AdlIx1dA32DEHAWXylxzsGufUSClHoCpz7qA1cg32BZOU7jkA1Dkee2Cy4_CjUpu3SxHT_aG9MuTh_j73Q6WqnWo&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=H_gOF_sUB1rbIn_50s8RrQ&oh=00_AfWT-U9jkTEO0yq4lHNhCYTI2mmDyyz2sTylCZbuxyBGcA&oe=68BC882C",
+              "alt_text": "LG Front Loader 7.5kg Washing Machine in Central Coast, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/532325084_1297128568591067_7893992186039688746_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=6efaEgEtIIwQ7kNvwEKScpp&_nc_oc=AdlGKpjIy0Nzh_YWtxU0CtbbsLoaPdFfUHNhDoGERaB6fbgQ9Bm9OG8lDE8qi8Ggdu6yLN6bBtnpVvsU091KClhY&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=H_gOF_sUB1rbIn_50s8RrQ&oh=00_AfV0Z2I3Rcx5xrcvuDVOpKvN7UWSC6zGdScponlseav1uA&oe=68BC839E",
+              "alt_text": "iPhone 13 Mini 128gb with back cover and screen protector in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/530331347_3678672409103420_8097551881528430768_n.jpg?stp=c0.152.261.261a_dst-jpg_p261x260_tt6&_nc_cat=104&ccb=1-7&_nc_sid=247b10&_nc_ohc=imTD-KKTZbQQ7kNvwEbn8BX&_nc_oc=AdmpFFxMOprgh-mtOY0K-tJXeN-D_v_DztCrojJdtuUXtIlNoM0hPAseAKrldnnSEFTWQOpci88geqJojRuzI0C6&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=H_gOF_sUB1rbIn_50s8RrQ&oh=00_AfUUBnK7_rDnTqWQqUWaNodsuKqxUJdhHJAMar8rxduOcg&oe=68BC5D97",
+              "alt_text": "IPhone XR Black - 128GB in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/476898386_665394665912312_7512133511743495865_n.jpg?stp=c93.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_ohc=7_BUpJmskm4Q7kNvwEhjK39&_nc_oc=AdlIPvZqCe603h7geyp_wvdOT_ZBaiX-qv5NjfmC9sBY63wtqGo82S-13dBSKys53MEA-kb6CUH3Do_x_4pNbPz0&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=H_gOF_sUB1rbIn_50s8RrQ&oh=00_AfVT9B-0A1jlBngVE46tXuu0UtK8F51xpTmB5lxy3RyVFw&oe=68BC6D0E",
+              "alt_text": "Tradie pants in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/529836196_766966982532156_7625289461526219471_n.jpg?stp=c0.0.261.261a_dst-jpg_p261x260_tt6&_nc_cat=104&ccb=1-7&_nc_sid=247b10&_nc_ohc=Gk24Unm3YjEQ7kNvwF70TvH&_nc_oc=AdmFTYraJMsUwTP7kHDMIbM_ywUm07phgAVpA0mVs6kiyFcggCxOoDEemMOYx-Gc-oW02XAJPrJgjysWI5_it0WZ&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=H_gOF_sUB1rbIn_50s8RrQ&oh=00_AfXtcR6IBneRcCbI2k3EEUAWW0rOu_LlSnDiBy4UZGxCww&oe=68BC5BB6",
+              "alt_text": "New rug luxury brand new in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/540674983_807805238585440_6822367752288139596_n.jpg?stp=c43.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=1&ccb=1-7&_nc_sid=247b10&_nc_ohc=xqo42nLMbngQ7kNvwFDuXzb&_nc_oc=AdneCuS-j03uYTggjS4SgdpzUx9IzWhKQQp6eOkJKi6pJOKtwh_DJLQL2T6qZNjyuvIY46KEO-9vLP5gGxwIY7-x&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=H_gOF_sUB1rbIn_50s8RrQ&oh=00_AfWNqSyepFW33twSgBkS5lVO9UhVa1FLF0IH2Madex2IQw&oe=68BC8299",
+              "alt_text": "Couch in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/517882300_624353387346787_8306521407497808216_n.jpg?stp=c50.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=PPw_0LmNDVwQ7kNvwFu7xb2&_nc_oc=AdkX__d8UFec94r7yKNq_OGP0c6azntrRb2BSDLiaOI-VBVNhQgAc_QeHP8Xhg8ewidXPtCVENAI6Bji36QCjqUS&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=H_gOF_sUB1rbIn_50s8RrQ&oh=00_AfUiB1cZG8OgOizN5M3YuugG9IOozSGnKapmRpAVqujGXg&oe=68BC8B33",
+              "alt_text": "2Colors Stainless Steel Handheld Douche Bidet Toilet Spray Shower Shattaf Diverter in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/540687840_819465037583963_6428144001804315460_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=vunb4mywy_UQ7kNvwEH5Lqm&_nc_oc=AdkOPl2MzNOVweFushaiUbg933gV9DR6R5UZ6uYapmomRJHEZfQnqJ5Oi2AdX226lJMoO1V4tQAbFQ-_bXu25hZ7&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=H_gOF_sUB1rbIn_50s8RrQ&oh=00_AfX2CmUArmEvbuBulV3iaoWUAcEUlVriqXB6nPwvmmsXxg&oe=68BC6172",
+              "alt_text": "LG 6.5 kg top loader washing machine and Simpson 5.5 kg vented dryers.Selling as package in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t39.30808-6/534556995_24462542170033801_3987505397217999091_n.jpg?stp=c0.169.1537.1537a_dst-jpg_s261x260_tt6&_nc_cat=111&ccb=1-7&_nc_sid=454cf4&_nc_ohc=0VKKXBGI1OoQ7kNvwFGSQIr&_nc_oc=AdnyYXlq4ZXbW8mb6KDopYQ_vqoYNcODBicRY6WgyFXX-FBwS6pxhl5PH1xHqL2KDGiqpzr2H6F3WvZ0OE6U2H1R&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=H_gOF_sUB1rbIn_50s8RrQ&oh=00_AfUsgBLXBiNJ59DgDshibVkUnt0co6igq4DSYjeDNb5Rsw&oe=68BC7832",
+              "alt_text": "2005 Ford focus in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t39.30808-6/541111854_2825226454344906_3263656193606905766_n.jpg?stp=c200.0.1200.1200a_dst-jpg_s261x260_tt6&_nc_cat=107&ccb=1-7&_nc_sid=454cf4&_nc_ohc=uCqFdXbl980Q7kNvwGlw6Ji&_nc_oc=AdlO6VPZndto4gl3vFgVh36FhWQ403iTvVSedu8r1xTqAe0DHU44NqHoN_ejoPvG69X-uNNlZ4Ea8xX-5Hj1EsvN&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=H_gOF_sUB1rbIn_50s8RrQ&oh=00_AfUkQ8aut0qcSkYW4dZYRbm3qev2edGdDy5fOcZxlvM94w&oe=68BC8001",
+              "alt_text": "Single room available near Flemington in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/539661804_1879515416310462_7032391621165246438_n.jpg?stp=c0.101.261.261a_dst-jpg_p261x260_tt6&_nc_cat=100&ccb=1-7&_nc_sid=247b10&_nc_ohc=HDdmTVzXRkgQ7kNvwFw8wwy&_nc_oc=Adl_hbQlbqkE5qiWoGHlVY1ySus4PUUNnPBBmmF9w9vfj8_IVPgm51vQha8z3qqhGW-Y2YXlygUqfqyJX6wnSn2g&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=H_gOF_sUB1rbIn_50s8RrQ&oh=00_AfVudOcMoXRZFc1L5_kZIHcGfAcrWWM8iRD9AyW5kjX57w&oe=68BC6A23",
+              "alt_text": "iPhone 11 in Menangle, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/506895864_23943843645251657_54574871105520312_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=103&ccb=1-7&_nc_sid=247b10&_nc_ohc=-9_-QNsd_OAQ7kNvwEAEnqy&_nc_oc=AdnwPvW26WQrQa6-UpzSfyhucG6_ytPoaNbbGgre9b3_fBiL04p2wdIxEotsvuGQQAsA08NfOuVDXgA3hx6UXpVA&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=H_gOF_sUB1rbIn_50s8RrQ&oh=00_AfViNda1mqZa7x37hm9MIkaNGXyz5vKiDIPkTt-uLvcDhA&oe=68BC8564",
+              "alt_text": "Various mens activewear pants in Sydney, NSW",
+              "type": "product_image"
+            }
+          ],
+          "description": "Listed in Sydney, NSW\n\nBrand New Samsung S25\n\nSelling a brand new, unused Samsung S25 256GB Navy  – still in box and unused... See more\n\nLocation is approximate"
+        }
+      },
+      "hot_reload_timestamp": "2025-09-02T12:54:40.004752",
+      "scraping_status": "completed",
+      "scraping_method": "deep",
+      "created_at": "2025-09-02T12:54:40.004752",
+      "hot_reload": true,
+      "seller_name": "Private Seller"
+    },
+    {
+      "id": "deep_788608363718492",
+      "title": "AU$1,250\nSamsung Galaxy S25 – Near New\nSydney, NSW",
+      "price": {
+        "amount": "50",
+        "currency": "KR",
+        "raw_value": "50 kr"
+      },
+      "location": {
+        "city": "Within",
+        "distance": "51km",
+        "raw_location": "Within 51"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/788608363718492/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A16b23647-2ee2-4f7d-a567-b2cc27d71b41&__tn__=!%3AD",
+      "seller": {
+        "info": "Private Seller",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 13 mini",
+        "storage": "9 TB",
+        "condition": "new_in_box",
+        "color": "Black"
+      },
+      "images": [
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/541929505_821199390335182_4633818884794043167_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=106&ccb=1-7&_nc_sid=247b10&_nc_ohc=clfWnXMgupgQ7kNvwHHAO3w&_nc_oc=Adlwtxki7N2Snl5F3ZrhdiTQKnufz13BckHnNqwN-Akl6fppd47tXS0eQp9t9mZZotkCcBwQO7XRON40ra0xCVEg&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=ZVq_zSFB2ULpNHlSFiOBsg&oh=00_AfUSKsgIciSikcE3jYAs5b9JS4XDbGCK2UzeWa-ffvNTcg&oe=68BC74E6",
+          "alt_text": "",
+          "type": "product_image"
+        },
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/541929505_821199390335182_4633818884794043167_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=106&ccb=1-7&_nc_sid=247b10&_nc_ohc=clfWnXMgupgQ7kNvwHHAO3w&_nc_oc=Adlwtxki7N2Snl5F3ZrhdiTQKnufz13BckHnNqwN-Akl6fppd47tXS0eQp9t9mZZotkCcBwQO7XRON40ra0xCVEg&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=ZVq_zSFB2ULpNHlSFiOBsg&oh=00_AfUSKsgIciSikcE3jYAs5b9JS4XDbGCK2UzeWa-ffvNTcg&oe=68BC74E6",
+          "alt_text": "Product photo of Samsung Galaxy S25 – Near New",
+          "type": "product_image"
+        },
+        {
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/541873252_1109559064485980_8030617278527220347_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=101&ccb=1-7&_nc_sid=247b10&_nc_ohc=LYd4ItYdY-8Q7kNvwFtQG4D&_nc_oc=AdmvqNSvb-ZqlBr3nbQSsFOAsr5ktc51bQluI5DlNSccs3ne4kfOnB8oOmA9YahLy8XzZjP5Fznx0slkWDvMHd80&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=ZVq_zSFB2ULpNHlSFiOBsg&oh=00_AfVwkxOGqnmkyCFsNKRQZMZPCelmhtIwnv_Wm4HfYuh3HQ&oe=68BC6596",
+          "alt_text": "Product photo of Samsung Galaxy S25 – Near New",
+          "type": "product_image"
+        }
+      ],
+      "extraction_method": "deep_scraper",
+      "data_quality": "comprehensive",
+      "added_at": "2025-09-02T12:52:48.621774",
+      "source": "facebook_marketplace_scraper",
+      "deep_data": {
+        "seller_details": {
+          "button_found": true,
+          "extraction_timestamp": "2025-09-02T12:51:16.094681",
+          "button_text": "Seller details",
+          "button_href": "https://www.facebook.com/marketplace/profile/100039040813467/?product_id=788608363718492",
+          "join_date": "joined facebook in 2019"
+        },
+        "marketplace_metadata": {
+          "fb_listing_id": "788608363718492",
+          "is_sold": true,
+          "timing": {
+            "facebook_time_text": "11m",
+            "parsed_minutes_ago": 11.0,
+            "calculated_timestamp": "2025-09-02T12:41:44.789629",
+            "extraction_method": "facebook_time_parser",
+            "all_expressions_found": [
+              "11m",
+              "15m",
+              "7m",
+              "1d",
+              "3d"
+            ]
+          }
+        },
+        "comprehensive_product": {
+          "model_name": "iPhone 13 mini",
+          "storage": "9 TB",
+          "color": "Black",
+          "condition": "new_in_box",
+          "images": [
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/541929505_821199390335182_4633818884794043167_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=106&ccb=1-7&_nc_sid=247b10&_nc_ohc=clfWnXMgupgQ7kNvwHHAO3w&_nc_oc=Adlwtxki7N2Snl5F3ZrhdiTQKnufz13BckHnNqwN-Akl6fppd47tXS0eQp9t9mZZotkCcBwQO7XRON40ra0xCVEg&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=ZVq_zSFB2ULpNHlSFiOBsg&oh=00_AfUSKsgIciSikcE3jYAs5b9JS4XDbGCK2UzeWa-ffvNTcg&oe=68BC74E6",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/541929505_821199390335182_4633818884794043167_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=106&ccb=1-7&_nc_sid=247b10&_nc_ohc=clfWnXMgupgQ7kNvwHHAO3w&_nc_oc=Adlwtxki7N2Snl5F3ZrhdiTQKnufz13BckHnNqwN-Akl6fppd47tXS0eQp9t9mZZotkCcBwQO7XRON40ra0xCVEg&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=ZVq_zSFB2ULpNHlSFiOBsg&oh=00_AfUSKsgIciSikcE3jYAs5b9JS4XDbGCK2UzeWa-ffvNTcg&oe=68BC74E6",
+              "alt_text": "Product photo of Samsung Galaxy S25 – Near New",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/541873252_1109559064485980_8030617278527220347_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=101&ccb=1-7&_nc_sid=247b10&_nc_ohc=LYd4ItYdY-8Q7kNvwFtQG4D&_nc_oc=AdmvqNSvb-ZqlBr3nbQSsFOAsr5ktc51bQluI5DlNSccs3ne4kfOnB8oOmA9YahLy8XzZjP5Fznx0slkWDvMHd80&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=ZVq_zSFB2ULpNHlSFiOBsg&oh=00_AfVwkxOGqnmkyCFsNKRQZMZPCelmhtIwnv_Wm4HfYuh3HQ&oe=68BC6596",
+              "alt_text": "Product photo of Samsung Galaxy S25 – Near New",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/541620359_1839473320783426_8701639560904409526_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=oRbVoi1DPIoQ7kNvwHUauDz&_nc_oc=AdmUguL9Vfz7zcE88t82uKQ-Z-MpRB9kl2q21d9WD_DONTFqHQJH9sQZMyUAJo96KjcdjqRBeGSvN4LLknfALDLN&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=ZVq_zSFB2ULpNHlSFiOBsg&oh=00_AfUIZWS3P6wjw1Lyw8UZ-atjxK51AwX1_d6VcyqIEnacYw&oe=68BC8815",
+              "alt_text": "Product photo of Samsung Galaxy S25 – Near New",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/543033815_642543262241677_3615715666223036167_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=111&ccb=1-7&_nc_sid=247b10&_nc_ohc=hjClsvDFHMIQ7kNvwGHLOO6&_nc_oc=AdmvxQuHMY47QvP3VQod9IYpZYL4TJqdUMnCFZFvxw8B_Tt6dcAcyrsAX1BgKsIhrLpekdH8-N2tkUmyBpNmEXwU&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=ZVq_zSFB2ULpNHlSFiOBsg&oh=00_AfVFOw_WwzPK1q8yN0hhMtWNuTblUTdV2XTUYdgXW_OfGA&oe=68BC821A",
+              "alt_text": "Product photo of Samsung Galaxy S25 – Near New",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.1600-4/480245706_120216985457580285_255220091115087271_n.jpg?stp=cp0_dst-jpg_q75_s960x960_spS444_tt6&_nc_cat=108&ccb=1-7&_nc_sid=c02adf&_nc_ohc=OkXT8v5SXncQ7kNvwEQj2rW&_nc_oc=Admi0VJgqm9bpEuTsBcvJ36_C3eddDdrLmSpX8QSEWH7-Kbhj80_TKiXCfy_ISPTrRLtB35z67nXc_r5wLxYvk_Y&_nc_zt=1&_nc_ht=scontent.fisb1-2.fna&_nc_gid=ZVq_zSFB2ULpNHlSFiOBsg&oh=00_AfXCvTvklE2P3EwFPSqvA-E-rsa1V5lOvsROHPO4rIWg7Q&oe=68BC81AC",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t15.5256-10/525765418_785265470622697_2939912168314881142_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=104&ccb=1-7&_nc_sid=282d23&_nc_ohc=cq2i2HM8lEcQ7kNvwEQLWpw&_nc_oc=Adkr0yVKAig3Bd_tcwkZtJMm_W6DbbI9AjLQILc56yWR0WifQ16mcVfoF_PMTuj-l8whLh-aIE9d_K80y7HzlJfU&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=ZVq_zSFB2ULpNHlSFiOBsg&oh=00_AfWdYCVXLKn0zi5PqBtZ14c6dNlZFZecCSdo6hWlOyZXnw&oe=68BC8D74",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/535470093_1449572239629654_7091577343484135749_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=110&ccb=1-7&_nc_sid=247b10&_nc_ohc=NEE7Ze6-qdEQ7kNvwETkw7w&_nc_oc=AdlIx1dA32DEHAWXylxzsGufUSClHoCpz7qA1cg32BZOU7jkA1Dkee2Cy4_CjUpu3SxHT_aG9MuTh_j73Q6WqnWo&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=K5kANP4AlK-jjSjQyQuyDw&oh=00_AfUNY5Beaokkd3PYXw-nHce3t_q4uuEOy_Hv-Ff1Bdouzg&oe=68BC882C",
+              "alt_text": "LG Front Loader 7.5kg Washing Machine in Central Coast, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/532325084_1297128568591067_7893992186039688746_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=6efaEgEtIIwQ7kNvwEKScpp&_nc_oc=AdlGKpjIy0Nzh_YWtxU0CtbbsLoaPdFfUHNhDoGERaB6fbgQ9Bm9OG8lDE8qi8Ggdu6yLN6bBtnpVvsU091KClhY&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=K5kANP4AlK-jjSjQyQuyDw&oh=00_AfV4rTuSOniC1MiaRfqO3fAkkX8cWnW31pH13WEh3TPonQ&oe=68BC839E",
+              "alt_text": "iPhone 13 Mini 128gb with back cover and screen protector in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t39.30808-6/542211163_10229385540038276_8330883811724617431_n.jpg?stp=c0.169.1537.1537a_dst-jpg_s261x260_tt6&_nc_cat=103&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=3Z10D04UHxYQ7kNvwGSWAsU&_nc_oc=AdmHhluRsbooVgcZJEVEUUl3DDbXNJ-hvGZs3BX_oZhhY7DOemlHUv18ThdPw_wiFhuWlyjvp0m9v_HNy33SJjFr&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=K5kANP4AlK-jjSjQyQuyDw&oh=00_AfV5CabF3n9bx6q2USXxXHNOWFKLhH4LqhP1ERgpN9TyqQ&oe=68BC5EC8",
+              "alt_text": "Apple Watch Ultra 49mm – Excellent Condition in Buy , sell , swap sydney area",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/539661804_1879515416310462_7032391621165246438_n.jpg?stp=c0.101.261.261a_dst-jpg_p261x260_tt6&_nc_cat=100&ccb=1-7&_nc_sid=247b10&_nc_ohc=HDdmTVzXRkgQ7kNvwFw8wwy&_nc_oc=Adl_hbQlbqkE5qiWoGHlVY1ySus4PUUNnPBBmmF9w9vfj8_IVPgm51vQha8z3qqhGW-Y2YXlygUqfqyJX6wnSn2g&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=K5kANP4AlK-jjSjQyQuyDw&oh=00_AfVIL0HpCWhG1U-mpM0y4nnyQN_NIV8SjA6H8pcdN9SXiQ&oe=68BC6A23",
+              "alt_text": "iPhone 11 in Menangle, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/540687840_819465037583963_6428144001804315460_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=vunb4mywy_UQ7kNvwEH5Lqm&_nc_oc=AdkOPl2MzNOVweFushaiUbg933gV9DR6R5UZ6uYapmomRJHEZfQnqJ5Oi2AdX226lJMoO1V4tQAbFQ-_bXu25hZ7&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=K5kANP4AlK-jjSjQyQuyDw&oh=00_AfV64nAbYhbsoB5DTuP70mmaCqloRF7S0IIjuaPMy18Tfw&oe=68BC6172",
+              "alt_text": "LG 6.5 kg top loader washing machine and Simpson 5.5 kg vented dryers.Selling as package in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/476898386_665394665912312_7512133511743495865_n.jpg?stp=c93.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_ohc=7_BUpJmskm4Q7kNvwEhjK39&_nc_oc=AdlIPvZqCe603h7geyp_wvdOT_ZBaiX-qv5NjfmC9sBY63wtqGo82S-13dBSKys53MEA-kb6CUH3Do_x_4pNbPz0&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=K5kANP4AlK-jjSjQyQuyDw&oh=00_AfU7qeIX63RO0iVD8V79y0MohvaYqaROWNzYEdQuVAGtmw&oe=68BC6D0E",
+              "alt_text": "Tradie pants in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t39.30808-6/492391392_3929660090606254_345975549279263438_n.jpg?stp=c130.0.875.875a_dst-jpg_s261x260_tt6&_nc_cat=106&ccb=1-7&_nc_sid=454cf4&_nc_ohc=5iFThPeUbJ4Q7kNvwGFkL7X&_nc_oc=AdnY81OhaTWXHQWx_usx16-iTo1kssnYkp6FLst_7J2zfhSiO-JyPWshJwEtXsxblP1RDiCAaeO23N3h75MWqgfG&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=K5kANP4AlK-jjSjQyQuyDw&oh=00_AfW2zmapq_7uN-YF1Qex_DlfRX4pfXt4LM5Q-bvvQN4p1g&oe=68BC5E54",
+              "alt_text": "2020 BMW in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/529836196_766966982532156_7625289461526219471_n.jpg?stp=c0.0.261.261a_dst-jpg_p261x260_tt6&_nc_cat=104&ccb=1-7&_nc_sid=247b10&_nc_ohc=Gk24Unm3YjEQ7kNvwF70TvH&_nc_oc=AdmFTYraJMsUwTP7kHDMIbM_ywUm07phgAVpA0mVs6kiyFcggCxOoDEemMOYx-Gc-oW02XAJPrJgjysWI5_it0WZ&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=K5kANP4AlK-jjSjQyQuyDw&oh=00_AfWxlKsCpq4hbE91xV3MlYANkQYsLngeDzXD95m28AND-w&oe=68BC5BB6",
+              "alt_text": "New rug luxury brand new in Sydney, NSW",
+              "type": "product_image"
+            }
+          ],
+          "description": "Samsung Galaxy S25 – Near New\n\nListed 18 hours ago in Sydney, NSW\n\nSelling my Samsung Galaxy S25 in excellent condition. It comes with 12GB RAM for smooth, fast perfo... See more"
+        }
+      },
+      "hot_reload_timestamp": "2025-09-02T12:52:48.621774",
+      "scraping_status": "completed",
+      "scraping_method": "deep",
+      "created_at": "2025-09-02T12:52:48.621774",
+      "hot_reload": true,
+      "seller_name": "Private Seller"
+    },
+    {
+      "id": "deep_670170058812081",
+      "title": "AU$800\nSamsung Galaxy S25 Ultra - New\nSydney, NSW",
+      "price": {
+        "amount": "13",
+        "currency": "KR",
+        "raw_value": "13 kr"
+      },
+      "location": {
+        "city": "Within",
+        "distance": "51km",
+        "raw_location": "Within 51"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/670170058812081/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A16b23647-2ee2-4f7d-a567-b2cc27d71b41&__tn__=!%3AD",
+      "seller": {
+        "info": "Private Seller",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 13 mini",
+        "storage": "9 TB",
+        "condition": "new_in_box",
+        "color": "Black"
+      },
+      "images": [
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/542775392_796991646344896_3429130518831795391_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=109&ccb=1-7&_nc_sid=247b10&_nc_ohc=I4giGc_VGOUQ7kNvwGdo-Z5&_nc_oc=AdnqDismvsh54M34617Py0k6Uh2_3FpIdZq6XtRMYD5a57pvxvWDc8WHlkCODrCijXRjQ5KANn3IDcSLoyAMxD7s&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=2-GH5xXXAlTYB4nEHbPGMg&oh=00_AfXx-55XVCfHgvaNUCZCK6qVZVcn5YDkDHrkUgLEze1d-Q&oe=68BC7388",
+          "alt_text": "",
+          "type": "product_image"
+        },
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/542775392_796991646344896_3429130518831795391_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=109&ccb=1-7&_nc_sid=247b10&_nc_ohc=I4giGc_VGOUQ7kNvwGdo-Z5&_nc_oc=AdnqDismvsh54M34617Py0k6Uh2_3FpIdZq6XtRMYD5a57pvxvWDc8WHlkCODrCijXRjQ5KANn3IDcSLoyAMxD7s&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=2-GH5xXXAlTYB4nEHbPGMg&oh=00_AfXx-55XVCfHgvaNUCZCK6qVZVcn5YDkDHrkUgLEze1d-Q&oe=68BC7388",
+          "alt_text": "Product photo of Samsung Galaxy S25 Ultra - New",
+          "type": "product_image"
+        },
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/542775392_796991646344896_3429130518831795391_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=109&ccb=1-7&_nc_sid=247b10&_nc_ohc=I4giGc_VGOUQ7kNvwGdo-Z5&_nc_oc=AdnqDismvsh54M34617Py0k6Uh2_3FpIdZq6XtRMYD5a57pvxvWDc8WHlkCODrCijXRjQ5KANn3IDcSLoyAMxD7s&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=2-GH5xXXAlTYB4nEHbPGMg&oh=00_AfXx-55XVCfHgvaNUCZCK6qVZVcn5YDkDHrkUgLEze1d-Q&oe=68BC7388",
+          "alt_text": "Product photo of Samsung Galaxy S25 Ultra - New",
+          "type": "product_image"
+        }
+      ],
+      "extraction_method": "deep_scraper",
+      "data_quality": "comprehensive",
+      "added_at": "2025-09-02T12:50:56.184182",
+      "source": "facebook_marketplace_scraper",
+      "deep_data": {
+        "seller_details": {
+          "button_found": true,
+          "extraction_timestamp": "2025-09-02T12:49:28.263241",
+          "button_text": "Seller details",
+          "button_href": "https://www.facebook.com/marketplace/profile/1413682525/?product_id=670170058812081",
+          "join_date": "joined facebook in 2009"
+        },
+        "marketplace_metadata": {
+          "fb_listing_id": "670170058812081",
+          "is_sold": true,
+          "timing": {
+            "facebook_time_text": "9m",
+            "parsed_minutes_ago": 9.0,
+            "calculated_timestamp": "2025-09-02T12:41:52.340196",
+            "extraction_method": "facebook_time_parser",
+            "all_expressions_found": [
+              "9m",
+              "14m",
+              "5m",
+              "1d",
+              "3d"
+            ]
+          }
+        },
+        "comprehensive_product": {
+          "model_name": "iPhone 13 mini",
+          "storage": "9 TB",
+          "color": "Black",
+          "condition": "new_in_box",
+          "images": [
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/542775392_796991646344896_3429130518831795391_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=109&ccb=1-7&_nc_sid=247b10&_nc_ohc=I4giGc_VGOUQ7kNvwGdo-Z5&_nc_oc=AdnqDismvsh54M34617Py0k6Uh2_3FpIdZq6XtRMYD5a57pvxvWDc8WHlkCODrCijXRjQ5KANn3IDcSLoyAMxD7s&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=2-GH5xXXAlTYB4nEHbPGMg&oh=00_AfXx-55XVCfHgvaNUCZCK6qVZVcn5YDkDHrkUgLEze1d-Q&oe=68BC7388",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/542775392_796991646344896_3429130518831795391_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=109&ccb=1-7&_nc_sid=247b10&_nc_ohc=I4giGc_VGOUQ7kNvwGdo-Z5&_nc_oc=AdnqDismvsh54M34617Py0k6Uh2_3FpIdZq6XtRMYD5a57pvxvWDc8WHlkCODrCijXRjQ5KANn3IDcSLoyAMxD7s&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=2-GH5xXXAlTYB4nEHbPGMg&oh=00_AfXx-55XVCfHgvaNUCZCK6qVZVcn5YDkDHrkUgLEze1d-Q&oe=68BC7388",
+              "alt_text": "Product photo of Samsung Galaxy S25 Ultra - New",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/542775392_796991646344896_3429130518831795391_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=109&ccb=1-7&_nc_sid=247b10&_nc_ohc=I4giGc_VGOUQ7kNvwGdo-Z5&_nc_oc=AdnqDismvsh54M34617Py0k6Uh2_3FpIdZq6XtRMYD5a57pvxvWDc8WHlkCODrCijXRjQ5KANn3IDcSLoyAMxD7s&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=2-GH5xXXAlTYB4nEHbPGMg&oh=00_AfXx-55XVCfHgvaNUCZCK6qVZVcn5YDkDHrkUgLEze1d-Q&oe=68BC7388",
+              "alt_text": "Product photo of Samsung Galaxy S25 Ultra - New",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/540160957_1293103494996367_4862709806630779652_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_ohc=ZVGKeyJeddwQ7kNvwFcKhFt&_nc_oc=AdkiNmAmVWw-KUzJLUfNlJt1hBE1SVxCPpcyq_Wr7gLXEd17Z_SQSm3Zm40lrKEKhDKQqZxF7_I3VLxRFVh_rFDr&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=2-GH5xXXAlTYB4nEHbPGMg&oh=00_AfUInbXKOYBzAUiiiZJ5JYV6XqCgruQf6VlSN5QobksHPw&oe=68BC771A",
+              "alt_text": "Product photo of Samsung Galaxy S25 Ultra - New",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/540143370_1744798129545523_7945981707276445004_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=103&ccb=1-7&_nc_sid=247b10&_nc_ohc=DAQuwk1ZlCwQ7kNvwFPcUdF&_nc_oc=Adl6lp79aIddun60lCvskta7rJshOStriwcUX5P8-U_hQhTBNPblh1JsoAdNmMxX1-cy7_ymBSaqBLrQlBiriAM_&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=2-GH5xXXAlTYB4nEHbPGMg&oh=00_AfXIbqsTFYFpsZGH_Y_20ZEID-eVWEV3Su9U8eaECqwcgg&oe=68BC663E",
+              "alt_text": "Product photo of Samsung Galaxy S25 Ultra - New",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/540533628_1428058405613499_696392961739631910_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=100&ccb=1-7&_nc_sid=247b10&_nc_ohc=p2t3ABSAW0UQ7kNvwG7mABn&_nc_oc=AdnS4IQ0qzmsQR0j6MCFJj-k2CCw_orcpaXGNNYEuIxlvBHdfkpXPbX72W6hpTr-s8bdro420AL5Gzl3Z2pgqXsJ&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=2-GH5xXXAlTYB4nEHbPGMg&oh=00_AfVeqEmaPjwtn21IT35YQklqDMq_ke9_rtr8nBCcDZBV2Q&oe=68BC86F8",
+              "alt_text": "Product photo of Samsung Galaxy S25 Ultra - New",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/540526602_770001985771592_5429811527961175677_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=kbNnTxeCEUcQ7kNvwHxSyDh&_nc_oc=AdlXU906ZDrQQ4O2urnl0PG4cMtF9IM0Qty6uVIoa90cWU3h2216X95oFh6_7qky-PdcXD-7p1QHzgs22U9dcLv6&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=2-GH5xXXAlTYB4nEHbPGMg&oh=00_AfX_chko5QIgt2K2u7DDF4T6ks6WbJBnFTy8_SM4KiU7KQ&oe=68BC72BE",
+              "alt_text": "Product photo of Samsung Galaxy S25 Ultra - New",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t15.5256-10/351309759_2525815594223012_8076846003917022948_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=100&ccb=1-7&_nc_sid=7965db&_nc_ohc=NYWNhSCVOGUQ7kNvwGkmS-d&_nc_oc=AdkYci7oth7QAFXBIxCeAOhvHMXxntYomOJscI7cDAXkdIYSXDAZDG1yOCHhJ8G0AZa0Odq24imzrI304t4Z9nbO&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=2-GH5xXXAlTYB4nEHbPGMg&oh=00_AfWHUobcbXVEcJjFkJX2uCTRxCh3IYTxmDmbc_BtMiukuw&oe=68BC5D38",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.1600-4/480245706_120216985457580285_255220091115087271_n.jpg?stp=cp0_dst-jpg_q75_s960x960_spS444_tt6&_nc_cat=108&ccb=1-7&_nc_sid=c02adf&_nc_ohc=OkXT8v5SXncQ7kNvwEQj2rW&_nc_oc=Admi0VJgqm9bpEuTsBcvJ36_C3eddDdrLmSpX8QSEWH7-Kbhj80_TKiXCfy_ISPTrRLtB35z67nXc_r5wLxYvk_Y&_nc_zt=1&_nc_ht=scontent.fisb1-2.fna&_nc_gid=2-GH5xXXAlTYB4nEHbPGMg&oh=00_AfXYpl2P4LSUq0qsaTgslRp6leAk9RcnLKfQl2FNot878w&oe=68BC81AC",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/532325084_1297128568591067_7893992186039688746_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=6efaEgEtIIwQ7kNvwEKScpp&_nc_oc=AdlGKpjIy0Nzh_YWtxU0CtbbsLoaPdFfUHNhDoGERaB6fbgQ9Bm9OG8lDE8qi8Ggdu6yLN6bBtnpVvsU091KClhY&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=ZxpWIzb3c0YXPGQhEPf70A&oh=00_AfW_NGoRzVxAsEeGYo2Q8xVt1V8X-B_NQpURJwC4GrNMZQ&oe=68BC839E",
+              "alt_text": "iPhone 13 Mini 128gb with back cover and screen protector in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/542916712_3164934330342349_5350195980467256505_n.jpg?stp=c0.0.261.261a_dst-jpg_p261x260_tt6&_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_ohc=QvFfb4jXPLkQ7kNvwH8fXef&_nc_oc=AdkD_tyKe3970VnlxMVNWavgYcjYHCAPrt5wLlQBrUE9oYXF1ZZWTZ0Jx0hSmPi65L0XGcopoA9h4g5BXTykU0jA&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=ZxpWIzb3c0YXPGQhEPf70A&oh=00_AfVnE_4Uz8obuQIIYTjX0rsddSEehPjcpVNIlQlP3eq3gQ&oe=68BC7A8D",
+              "alt_text": "Front  wachine machine Samsung 7.5 kg Great condition 1 months warranty delivery available in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t39.30808-6/540653801_24367846869508603_2453085527248457626_n.jpg?stp=c0.79.720.720a_dst-jpg_s261x260_tt6&_nc_cat=111&ccb=1-7&_nc_sid=454cf4&_nc_ohc=3DFcZ1yjQAsQ7kNvwG1sdDT&_nc_oc=AdnLLArenafJcXi7EfPMQwjH4XPlRTnbhKPBgtgJ-hJqEhHtavcm3Feq8aHbdUhO5iUYcbMGahvZUya2Gdh29UVT&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=ZxpWIzb3c0YXPGQhEPf70A&oh=00_AfXyC7WxaNTWw5bLa82rglu6UTUeH-B3tvAnqe9KRL37Sw&oe=68BC8250",
+              "alt_text": "Granny flat in Chester Hill in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/542860306_1259837288949969_8030237033053808855_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_ohc=HkC1mpSW3pIQ7kNvwF-jYHa&_nc_oc=Adk_K4uP1_D7MSa7rZ01V9zSbNyPvlJh-j1FIsWtjwoWGi2DwtUnOEKZjysc-5NWT7odmpUY_PTr0FCFNon2WgG5&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=ZxpWIzb3c0YXPGQhEPf70A&oh=00_AfWDGvjK6hRc1WWkct4rymJRyeyg5A4zHr5NAR-wZkuW7Q&oe=68BC6778",
+              "alt_text": "FREE CLOTHES in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/534433528_742510331997490_3691363580646669237_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=eV6Bh4T-hGMQ7kNvwELsB-y&_nc_oc=AdnpIpYVzHHhqaBi3gIN7btRJxyFkYhcj_iT5ozKAeeIBomYgFghneWpurd-qTW0jaR6Qh_jVncTHsj0UrcPWYMg&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=ZxpWIzb3c0YXPGQhEPf70A&oh=00_AfVIBwdliC5J0N8awoyuw7QVyJELEKGn0rndDmk0T___Ow&oe=68BC6B94",
+              "alt_text": "iPhone 13 - Pink (Great Condition) in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/540764387_797047102884234_1823275404311687556_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=puMcL5BUbrEQ7kNvwHUtYme&_nc_oc=AdnqvpPFD7IP3JhL8MdgTLGfbJGNriZ-X2xfNr2DI6gSXqHGLwKQkAjSgNsACh7tJNcbNyO0NbI51QbGSvqRJMpC&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=ZxpWIzb3c0YXPGQhEPf70A&oh=00_AfW7MohuUtEIwBX4rf6-FzP5AwitXLUZMxlmUuqE667Unw&oe=68BC7974",
+              "alt_text": "1 x Clear Blue and 5 x First Response Pregnancy Tests in Sydney, NSW",
+              "type": "product_image"
+            }
+          ],
+          "description": "Samsung Galaxy S25 Ultra - New\n\nListed about an hour ago in Sydney, NSW\n\nSamsung Galaxy S25 Ultra 1TB - New (Copy version)\n\nPick Up - Parramatta"
+        }
+      },
+      "hot_reload_timestamp": "2025-09-02T12:50:56.184182",
+      "scraping_status": "completed",
+      "scraping_method": "deep",
+      "created_at": "2025-09-02T12:50:56.184182",
+      "hot_reload": true,
+      "seller_name": "Private Seller"
+    },
+    {
+      "id": "deep_1934364340662443",
+      "title": "AU$600\niPhone 14\nSydney, NSW",
+      "price": {
+        "amount": "75",
+        "currency": "KR",
+        "raw_value": "75 kr"
+      },
+      "location": {
+        "city": "Within",
+        "distance": "51km",
+        "raw_location": "Within 51"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1934364340662443/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ab39c85db-e248-4461-a9e7-85881a2d732c&__tn__=!%3AD",
+      "seller": {
+        "info": "Private Seller",
+        "profile": null
+      },
+      "product_details": {
+        "model": "Unknown",
+        "storage": "Unknown",
+        "condition": "Unknown",
+        "color": "Unknown"
+      },
+      "images": [],
+      "extraction_method": "deep_scraper",
+      "data_quality": "comprehensive",
+      "added_at": "2025-09-02T12:50:52.640121",
+      "source": "facebook_marketplace_scraper",
+      "deep_data": {
+        "seller_details": {
+          "button_found": true,
+          "extraction_timestamp": "2025-09-02T12:47:09.183816",
+          "button_text": "Seller details",
+          "button_href": "https://www.facebook.com/marketplace/profile/100005607439427/?product_id=1934364340662443",
+          "extraction_error": "('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))",
+          "click_error": "HTTPConnectionPool(host='localhost', port=55620): Max retries exceeded with url: /session/787b1d8539a99217e94ed54ed34806e8/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002C07EAD8640>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))"
+        },
+        "marketplace_metadata": {
+          "error": "HTTPConnectionPool(host='localhost', port=55620): Max retries exceeded with url: /session/787b1d8539a99217e94ed54ed34806e8/source (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002C07EA7ABE0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))",
+          "timing": {
+            "error": "HTTPConnectionPool(host='localhost', port=55620): Max retries exceeded with url: /session/787b1d8539a99217e94ed54ed34806e8/source (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002C00025CE20>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))"
+          }
+        },
+        "comprehensive_product": {
+          "error": "HTTPConnectionPool(host='localhost', port=55620): Max retries exceeded with url: /session/787b1d8539a99217e94ed54ed34806e8/source (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002C07EA7B570>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))",
+          "images": [],
+          "description": ""
+        }
+      },
+      "hot_reload_timestamp": "2025-09-02T12:50:52.640121",
+      "scraping_status": "completed",
+      "scraping_method": "deep",
+      "created_at": "2025-09-02T12:50:52.640121",
+      "hot_reload": true,
+      "seller_name": "Private Seller"
+    },
+    {
+      "id": "deep_1267139244886141",
+      "title": "Product 1",
+      "price": {
+        "amount": "66",
+        "currency": "KR",
+        "raw_value": "66 kr"
+      },
+      "location": {
+        "city": "Within",
+        "distance": "51km",
+        "raw_location": "Within 51"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1267139244886141/?notif_id=1756282332143442&notif_t=marketplace_seller_insights&ref=notif",
+      "seller": {
+        "info": "Private Seller",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 12 mini",
+        "storage": "64 GB",
+        "condition": "new_in_box",
+        "color": "Black"
+      },
+      "images": [
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/533046289_802092862369977_5135485542147287877_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=102&ccb=1-7&_nc_sid=247b10&_nc_ohc=5ZwadBnfjN8Q7kNvwHtb0HS&_nc_oc=Adnb3D7lZrs9SMDPIfac6SN-85busYqz4jk0Q_lfhwwyuGKTuRK3Ef6-9FLI0Z3A2K-Q82xYAL7xPyKDdinAG2Mm&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=MT8tMcad3LbUJMcLll4xXg&oh=00_AfWF4naJlxyt49_lUrY_mGMn2hGVqsXKJJqLkHG54bs40g&oe=68BC8912",
+          "alt_text": "",
+          "type": "product_image"
+        },
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/533046289_802092862369977_5135485542147287877_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=102&ccb=1-7&_nc_sid=247b10&_nc_ohc=5ZwadBnfjN8Q7kNvwHtb0HS&_nc_oc=Adnb3D7lZrs9SMDPIfac6SN-85busYqz4jk0Q_lfhwwyuGKTuRK3Ef6-9FLI0Z3A2K-Q82xYAL7xPyKDdinAG2Mm&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=MT8tMcad3LbUJMcLll4xXg&oh=00_AfWF4naJlxyt49_lUrY_mGMn2hGVqsXKJJqLkHG54bs40g&oe=68BC8912",
+          "alt_text": "Product photo of GOOGLE PIXEL 3 64GB",
+          "type": "product_image"
+        },
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/533046289_802092862369977_5135485542147287877_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=102&ccb=1-7&_nc_sid=247b10&_nc_ohc=5ZwadBnfjN8Q7kNvwHtb0HS&_nc_oc=Adnb3D7lZrs9SMDPIfac6SN-85busYqz4jk0Q_lfhwwyuGKTuRK3Ef6-9FLI0Z3A2K-Q82xYAL7xPyKDdinAG2Mm&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=MT8tMcad3LbUJMcLll4xXg&oh=00_AfWF4naJlxyt49_lUrY_mGMn2hGVqsXKJJqLkHG54bs40g&oe=68BC8912",
+          "alt_text": "Product photo of GOOGLE PIXEL 3 64GB",
+          "type": "product_image"
+        }
+      ],
+      "extraction_method": "deep_scraper",
+      "data_quality": "comprehensive",
+      "added_at": "2025-09-02T12:46:53.341589",
+      "source": "facebook_marketplace_scraper",
+      "deep_data": {
+        "seller_details": {
+          "button_found": true,
+          "extraction_timestamp": "2025-09-02T12:45:41.306563",
+          "button_text": "Seller details",
+          "button_href": "https://www.facebook.com/marketplace/profile/61577869736044/?product_id=1267139244886141",
+          "ratings": [
+            "5 out of 5 rating"
+          ],
+          "join_date": "joined facebook in 2025"
+        },
+        "marketplace_metadata": {
+          "fb_listing_id": "1267139244886141",
+          "is_sold": true,
+          "timing": {
+            "facebook_time_text": "5m",
+            "parsed_minutes_ago": 5.0,
+            "calculated_timestamp": "2025-09-02T12:41:49.547747",
+            "extraction_method": "facebook_time_parser",
+            "all_expressions_found": [
+              "5m",
+              "10m",
+              "1d",
+              "3d",
+              "2 weeks ago"
+            ]
+          }
+        },
+        "comprehensive_product": {
+          "model_name": "iPhone 12 mini",
+          "storage": "64 GB",
+          "color": "Black",
+          "condition": "new_in_box",
+          "images": [
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/533046289_802092862369977_5135485542147287877_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=102&ccb=1-7&_nc_sid=247b10&_nc_ohc=5ZwadBnfjN8Q7kNvwHtb0HS&_nc_oc=Adnb3D7lZrs9SMDPIfac6SN-85busYqz4jk0Q_lfhwwyuGKTuRK3Ef6-9FLI0Z3A2K-Q82xYAL7xPyKDdinAG2Mm&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=MT8tMcad3LbUJMcLll4xXg&oh=00_AfWF4naJlxyt49_lUrY_mGMn2hGVqsXKJJqLkHG54bs40g&oe=68BC8912",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/533046289_802092862369977_5135485542147287877_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=102&ccb=1-7&_nc_sid=247b10&_nc_ohc=5ZwadBnfjN8Q7kNvwHtb0HS&_nc_oc=Adnb3D7lZrs9SMDPIfac6SN-85busYqz4jk0Q_lfhwwyuGKTuRK3Ef6-9FLI0Z3A2K-Q82xYAL7xPyKDdinAG2Mm&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=MT8tMcad3LbUJMcLll4xXg&oh=00_AfWF4naJlxyt49_lUrY_mGMn2hGVqsXKJJqLkHG54bs40g&oe=68BC8912",
+              "alt_text": "Product photo of GOOGLE PIXEL 3 64GB",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/533046289_802092862369977_5135485542147287877_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=102&ccb=1-7&_nc_sid=247b10&_nc_ohc=5ZwadBnfjN8Q7kNvwHtb0HS&_nc_oc=Adnb3D7lZrs9SMDPIfac6SN-85busYqz4jk0Q_lfhwwyuGKTuRK3Ef6-9FLI0Z3A2K-Q82xYAL7xPyKDdinAG2Mm&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=MT8tMcad3LbUJMcLll4xXg&oh=00_AfWF4naJlxyt49_lUrY_mGMn2hGVqsXKJJqLkHG54bs40g&oe=68BC8912",
+              "alt_text": "Product photo of GOOGLE PIXEL 3 64GB",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/532279884_757315767273654_7033320705735714349_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_ohc=Rw8sqV56oBkQ7kNvwEchWNj&_nc_oc=Adl6Upap02EUqZgWzjUHA4JKBAGdkyUzc5oXcd-MxUQKF05lAJAYxvV-cvLN4eD2Um-7fkkQOBtjAHUyPwkHU6Gy&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=MT8tMcad3LbUJMcLll4xXg&oh=00_AfWz67VB3ZaiYe-v1PvZgkMeDt6w8DRcFwnelBMMuWFt6g&oe=68BC6E17",
+              "alt_text": "Product photo of GOOGLE PIXEL 3 64GB",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/530945009_804374682163071_5540782069031949973_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=100&ccb=1-7&_nc_sid=247b10&_nc_ohc=2wwkuSBe7l0Q7kNvwF2wo36&_nc_oc=AdmHsLfFWTKMo7BHDKLCuareMti-nSGdLxuXzZoBvMlDhxLxp69zpkbGOfC6NVJsmlphvgZUAr-NVxNfjbr-rbUT&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=MT8tMcad3LbUJMcLll4xXg&oh=00_AfWuJoDsaqgwTKre05z3ku7kWHuuGJ6VLEV1zggaPQv0pA&oe=68BC591B",
+              "alt_text": "Product photo of GOOGLE PIXEL 3 64GB",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/530043816_1176991094308992_2695566783921118976_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=108&ccb=1-7&_nc_sid=247b10&_nc_ohc=tETFja8JXZAQ7kNvwGBfOs2&_nc_oc=AdltXmvSuXfhclwxBzBWGnkxrDRRm5N0HhfPFK9mjPiZPn4TC0uCcTpR5S4XUYw3Wt0V74utYMwY3gbJcq1qTQU1&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=MT8tMcad3LbUJMcLll4xXg&oh=00_AfWDi-Qk_qK8tzUEAiZBH30DoJZd1byBz3XXwRzi1ohWmg&oe=68BC596D",
+              "alt_text": "Product photo of GOOGLE PIXEL 3 64GB",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/530943827_771224869190204_2743363037421134839_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=102&ccb=1-7&_nc_sid=247b10&_nc_ohc=9YGkrN2C9U4Q7kNvwH5axjo&_nc_oc=Adn9-1OmWPS30BbrkrPvEIwVpyqT6MMJ7WfcPvCaoEKxLdkMoLCiOVlYZqzU_u3vCHZH2PZO1ATbauMSPdhWOvVd&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=MT8tMcad3LbUJMcLll4xXg&oh=00_AfXfwhOVhavBtNrnoWijPMH7bBCl2er0kyz2sEQ2vo-7Rg&oe=68BC7390",
+              "alt_text": "Product photo of GOOGLE PIXEL 3 64GB",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/495317621_1356320702325398_4459552166050601764_n.jpg?stp=c43.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=100&ccb=1-7&_nc_sid=247b10&_nc_ohc=9eSXzmsVG5MQ7kNvwH0ETCW&_nc_oc=Admo31FwF5Wcm7LJLV-crcqKdXYZwJwTSkG1fZVgqf0e62YaTMr095IUb_Q4HZ4EeEk4Al5Ej67J5CHiHP5XYuv3&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=qpfDkrI8anAeCeyOvDXnlw&oh=00_AfVCnjPj65ByP4kT3A4ElJGPODOR1TX4U2suE1Ltk-YQvA&oe=68BC65FB",
+              "alt_text": "128gb iPhone 12 mini_ Original Phone in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t39.30808-6/536270853_3606613042802524_4363977516993399574_n.jpg?stp=c0.169.1537.1537a_dst-jpg_s261x260_tt6&_nc_cat=110&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=0zFTFyXCYL8Q7kNvwHJpdDp&_nc_oc=AdlpDoO3nIDkLg0sVzvesLiZeksA7pznfO-BnT3PkILyinahOFNOYOFJ8DMZWCof0SQJvrmMjjc9I-AB9IsB5vCK&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=qpfDkrI8anAeCeyOvDXnlw&oh=00_AfUc3VMoX-CMF1sJM9z8MewZbWA0FdCgB1yATZO9SICOow&oe=68BC84E7",
+              "alt_text": "Washing machine + fridge ￼ almost brand-new in Items for sale in sydney",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/540496999_781866317668177_8881688881059070443_n.jpg?stp=c0.62.261.261a_dst-jpg_p261x260_tt6&_nc_cat=111&ccb=1-7&_nc_sid=247b10&_nc_ohc=Q0CG2y2e8UsQ7kNvwHB93oI&_nc_oc=AdmFtZfdkwpvXTO6Jn7d1t9Axl-C6PplSXQ9Jx40pVYVym39ToqSQI4qHVh034Hqi6rxglRWgOtiCCc7uZBN7G0f&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=qpfDkrI8anAeCeyOvDXnlw&oh=00_AfUrJO68RYYinjDrLS5Zb86sRqZIwZAcRVGYvRVp2_6r3w&oe=68BC852E",
+              "alt_text": "FREE - 2006 Arquin Sprint 125 Mbike 125cc black petrol scooter in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/540982723_629942530166353_8285646075200884263_n.jpg?stp=c0.17.261.261a_dst-jpg_p261x260_tt6&_nc_cat=104&ccb=1-7&_nc_sid=247b10&_nc_ohc=wumm9RaVC1IQ7kNvwHDEeJ8&_nc_oc=AdmVjEdUDD8qzbQhzIau970Cr24eM3ooASf9lq3Q9n4sVtXltJP4U4F6d7Ev3uenDoKIBOGIF4U6w9843RjjUElT&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=qpfDkrI8anAeCeyOvDXnlw&oh=00_AfWxvB4QlN2E85PVjmw-v12TXO6v2I8F-qfqKPztFWUPYw&oe=68BC746A",
+              "alt_text": "Sydney marathon finisher tee swap in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/541282501_764058606495010_8436230698949672018_n.jpg?stp=c12.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=108&ccb=1-7&_nc_sid=247b10&_nc_ohc=slJAGwGvkbsQ7kNvwEsnXJk&_nc_oc=AdnYsZgg36ZLweQxLDbhdB27PdjxUmUztqKACYxsTznf0AYT2kYlx3XtqNvc1Q_sckNVz6XxPMihNz_bpoY7t905&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=qpfDkrI8anAeCeyOvDXnlw&oh=00_AfXoMaC0s1nYOiy0xcNKkECeQ1K6iRbBkp5wBPyxZRXQqg&oe=68BC7ADC",
+              "alt_text": "Batman suit in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t39.30808-6/541221381_24676929855236623_984468710571903004_n.jpg?stp=c0.169.1536.1536a_dst-jpg_s261x260_tt6&_nc_cat=111&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=U5_6KlwE8TYQ7kNvwF6hi3s&_nc_oc=AdlpdKjGrHfRUJEFQ0YjVkdeQh6rfumtThxzWQFoGqNIflg_bWtbFrgUC9tKwCH82UrDrTWo7DzNwBvnyWFE-DIG&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=qpfDkrI8anAeCeyOvDXnlw&oh=00_AfUBlDSk7-I42UI10iNMQ1MVKPdHFKunaRneG4Jzf0E0KA&oe=68BC65A5",
+              "alt_text": "Wireless earbuds brand new. I have 4. in Items for sale in sydney",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t39.30808-6/540667497_122261189492032059_1173311180827616785_n.jpg?stp=c0.169.1537.1537a_dst-jpg_s261x260_tt6&_nc_cat=111&ccb=1-7&_nc_sid=454cf4&_nc_ohc=NFXG-wWoHscQ7kNvwGrwiyy&_nc_oc=AdlUz_RVfoSrwawNEhHE1YAD47c91LfhWS5pPQkjEvUJNSjjaghE0CYs4tQFc8f84WYUVdMnJi0XJD2g6q-EWcnh&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=qpfDkrI8anAeCeyOvDXnlw&oh=00_AfVwsdpyu_aJE8q-BfOhS08OLHz6oUk0P76CxdXJpeLvmQ&oe=68BC5FE9",
+              "alt_text": "2013 Nissan almera in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/540692726_1471889357466301_6992964160035779137_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=PaEq2sT48Y4Q7kNvwGZkclo&_nc_oc=AdmhE6JFJWQ5pkfXgVsuHZefZoBBtzGeQbK0m2gcLbkZzoa9M6irvPtn3ijmS2W4d-_kUXP0Wo4JQdP3LDlv5Pnb&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=qpfDkrI8anAeCeyOvDXnlw&oh=00_AfW5CJ8TWuDPw2hxjwazXi8Ddq1jkMw11evMHQuKfyug9g&oe=68BC61DC",
+              "alt_text": "Free couch 2.2m in Sydney, NSW",
+              "type": "product_image"
+            }
+          ],
+          "description": "Listed 2 weeks ago in Sydney, NSW\n\nGOOGLE PIXEL 3 64GB\nCOLOUR -NOT PINK\nBrand -Google\nOperating system- Android, Chrome OS\nCPU model -S... See more\n\nLocation is approximate"
+        }
+      },
+      "hot_reload_timestamp": "2025-09-02T12:46:53.341589",
+      "scraping_status": "completed",
+      "scraping_method": "deep",
+      "created_at": "2025-09-02T12:46:53.341589",
+      "hot_reload": true,
+      "seller_name": "Private Seller"
+    },
+    {
+      "id": "deep_1283680443486636",
+      "title": "AU$1,000\nIphone 16E 256GB Black\nSydney, NSW",
+      "price": {
+        "amount": "0",
+        "currency": "SEK",
+        "raw_value": "Not found"
+      },
+      "location": {
+        "city": "Within",
+        "distance": "51km",
+        "raw_location": "Within 51"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/1283680443486636/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A08b13f7f-6b5a-47d2-84b6-d8e47813ddd2&__tn__=!%3AD",
+      "seller": {
+        "info": "Private Seller",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 16",
+        "storage": "256 GB",
+        "condition": "new_in_box",
+        "color": "Black"
+      },
+      "images": [
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/541285862_2011271276308694_8939046986748809794_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=lZbENtn7v34Q7kNvwG1eKE9&_nc_oc=AdlYDcPzpP_P8-BuPlUWSVukwLmvaAhd94QKwH0FRVA5JD2DcIBeMIlkkcbuBvVzc5i6-kqH6VyhMumG7mGWDk1P&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=StiMFRVkc4bEmJ1F6L4Dtw&oh=00_AfUuB3tajLWcnvJSarTqsBR-wKl77CjObx2j4Uspe7tufA&oe=68BC7E4F",
+          "alt_text": "",
+          "type": "product_image"
+        },
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/541285862_2011271276308694_8939046986748809794_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=lZbENtn7v34Q7kNvwG1eKE9&_nc_oc=AdlYDcPzpP_P8-BuPlUWSVukwLmvaAhd94QKwH0FRVA5JD2DcIBeMIlkkcbuBvVzc5i6-kqH6VyhMumG7mGWDk1P&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=StiMFRVkc4bEmJ1F6L4Dtw&oh=00_AfUuB3tajLWcnvJSarTqsBR-wKl77CjObx2j4Uspe7tufA&oe=68BC7E4F",
+          "alt_text": "Product photo of Iphone 16E 256GB Black",
+          "type": "product_image"
+        },
+        {
+          "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/541285862_2011271276308694_8939046986748809794_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=lZbENtn7v34Q7kNvwG1eKE9&_nc_oc=AdlYDcPzpP_P8-BuPlUWSVukwLmvaAhd94QKwH0FRVA5JD2DcIBeMIlkkcbuBvVzc5i6-kqH6VyhMumG7mGWDk1P&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=StiMFRVkc4bEmJ1F6L4Dtw&oh=00_AfUuB3tajLWcnvJSarTqsBR-wKl77CjObx2j4Uspe7tufA&oe=68BC7E4F",
+          "alt_text": "Product photo of Iphone 16E 256GB Black",
+          "type": "product_image"
+        }
+      ],
+      "extraction_method": "deep_scraper",
+      "data_quality": "comprehensive",
+      "added_at": "2025-09-02T12:42:55.506576",
+      "source": "facebook_marketplace_scraper",
+      "deep_data": {
+        "seller_details": {
+          "button_found": true,
+          "extraction_timestamp": "2025-09-02T12:41:09.842963",
+          "button_text": "Seller details",
+          "button_href": "https://www.facebook.com/marketplace/profile/100003313466433/?product_id=1283680443486636",
+          "ratings": [
+            "3.3 out of 5 stars, from one review"
+          ]
+        },
+        "marketplace_metadata": {
+          "fb_listing_id": "1283680443486636",
+          "is_sold": true,
+          "timing": {
+            "facebook_time_text": "Today",
+            "parsed_minutes_ago": 720.0,
+            "calculated_timestamp": "2025-09-02T00:42:51.017877",
+            "extraction_method": "facebook_time_parser",
+            "all_expressions_found": [
+              "Today"
+            ]
+          }
+        },
+        "comprehensive_product": {
+          "model_name": "iPhone 16",
+          "storage": "256 GB",
+          "color": "Black",
+          "condition": "new_in_box",
+          "images": [
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/541285862_2011271276308694_8939046986748809794_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=lZbENtn7v34Q7kNvwG1eKE9&_nc_oc=AdlYDcPzpP_P8-BuPlUWSVukwLmvaAhd94QKwH0FRVA5JD2DcIBeMIlkkcbuBvVzc5i6-kqH6VyhMumG7mGWDk1P&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=StiMFRVkc4bEmJ1F6L4Dtw&oh=00_AfUuB3tajLWcnvJSarTqsBR-wKl77CjObx2j4Uspe7tufA&oe=68BC7E4F",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/541285862_2011271276308694_8939046986748809794_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=lZbENtn7v34Q7kNvwG1eKE9&_nc_oc=AdlYDcPzpP_P8-BuPlUWSVukwLmvaAhd94QKwH0FRVA5JD2DcIBeMIlkkcbuBvVzc5i6-kqH6VyhMumG7mGWDk1P&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=StiMFRVkc4bEmJ1F6L4Dtw&oh=00_AfUuB3tajLWcnvJSarTqsBR-wKl77CjObx2j4Uspe7tufA&oe=68BC7E4F",
+              "alt_text": "Product photo of Iphone 16E 256GB Black",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/541285862_2011271276308694_8939046986748809794_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=lZbENtn7v34Q7kNvwG1eKE9&_nc_oc=AdlYDcPzpP_P8-BuPlUWSVukwLmvaAhd94QKwH0FRVA5JD2DcIBeMIlkkcbuBvVzc5i6-kqH6VyhMumG7mGWDk1P&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=StiMFRVkc4bEmJ1F6L4Dtw&oh=00_AfUuB3tajLWcnvJSarTqsBR-wKl77CjObx2j4Uspe7tufA&oe=68BC7E4F",
+              "alt_text": "Product photo of Iphone 16E 256GB Black",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/540500215_701768466229542_4865544260683997041_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=109&ccb=1-7&_nc_sid=247b10&_nc_ohc=ApC_z5deI3AQ7kNvwF3NIBX&_nc_oc=AdlDn1qxavlNdr5JfIb53gWs8coy5BjWx7sT6jxBtbDzLAK2lD9oPjOwnEkgGSKrLdNcGO0-58od79IaDBSOrQZE&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=StiMFRVkc4bEmJ1F6L4Dtw&oh=00_AfV8oIoAqIT8KYLUvgc8_cj44XTVRoQUKhaQfhfEz_eLyw&oe=68BC71FB",
+              "alt_text": "Product photo of Iphone 16E 256GB Black",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/536008902_1134065315252132_2888475586325995633_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_ohc=7ie0-CNkINkQ7kNvwEqVio6&_nc_oc=AdnT1thfy1utU1KAMLlnzK5gPnNYJGqdrVoicd3eQB7fPM0PjqWsM0qewDHdbxUtL8_Y-zF6D-yysYjVIGWI5tLD&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=StiMFRVkc4bEmJ1F6L4Dtw&oh=00_AfXfve-qVGT06SmipxzF2llQIi1zLx5zeHh9jGduok1hAA&oe=68BC893A",
+              "alt_text": "Product photo of Iphone 16E 256GB Black",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/539359787_646279704755894_3268245354057802886_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=110&ccb=1-7&_nc_sid=247b10&_nc_ohc=Mq6KbbbhhEMQ7kNvwFPtGTS&_nc_oc=AdnamDYrFX6oATFB0t2do-lIOzDa34YKQLoR7nCrVWwD61TDngVfcSZG30ql-GsGAEEZeY9NW30SSTa_hd2UDBbz&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=StiMFRVkc4bEmJ1F6L4Dtw&oh=00_AfXWMWzZmxrRDppxNTzhxhvaESS3oO7pbsp9x34E4XRw-Q&oe=68BC5ED6",
+              "alt_text": "Product photo of Iphone 16E 256GB Black",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t15.5256-10/351309759_2525815594223012_8076846003917022948_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=100&ccb=1-7&_nc_sid=7965db&_nc_ohc=NYWNhSCVOGUQ7kNvwGkmS-d&_nc_oc=AdkYci7oth7QAFXBIxCeAOhvHMXxntYomOJscI7cDAXkdIYSXDAZDG1yOCHhJ8G0AZa0Odq24imzrI304t4Z9nbO&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=StiMFRVkc4bEmJ1F6L4Dtw&oh=00_AfVNBdpeSCtOAamErULi09cvQj10Tk1jdoiS_ePAMfEq2g&oe=68BC5D38",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t15.13418-10/504874049_1742626613312715_1247353675598016936_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=102&ccb=1-7&_nc_sid=ace027&_nc_ohc=CQMfpixkb_QQ7kNvwFXvj5D&_nc_oc=Adm9_V3TX3s4Z8NVinQl_i_nZFO5TRZA2FdURMN6mEdDIZ9zwgzCpBsxiaCWzkLTkIo1jdjYyOpAt_8w-PwApdgr&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=StiMFRVkc4bEmJ1F6L4Dtw&oh=00_AfWNTSaZIfrPMkPtwOriFw0LhORJpNb6GE0t6QNgh4E0-Q&oe=68BC7791",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/540099719_804704172131182_2082434040330622760_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=YiCVuZ86UhUQ7kNvwFWH9TH&_nc_oc=AdldAABZDXaN6MHzUYDOmBJWfzjRjSDIasR1ONni7R42Vtg2qWXor2gBoXavuqohG_W0LlTZJgCncXnIoloHhGeF&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=6-HbwSL5m8wzSi1cZvULGA&oh=00_AfVIAG721MqVMYUAlNMCFgE56ZJhh7boblOZfQwBOW8drQ&oe=68BC8DA3",
+              "alt_text": "LG top loader washing machine 8kg in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/540113249_1283149019493567_2812582504940050580_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=106&ccb=1-7&_nc_sid=247b10&_nc_ohc=g4sSjgRX0PIQ7kNvwEzIyRl&_nc_oc=Adluh3fgU9tikn28fuNFo95yXv0Z6GsETNEIa3mrlMKoEbfGr6zSNCxbw_HpFAtxhyawkIfm7yQ8Fy9q9vPNpS-b&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=6-HbwSL5m8wzSi1cZvULGA&oh=00_AfWLwJvtCSmZZdaYu7OnO8tcthHeHSuGOoe85Ufvf8yaAA&oe=68BC5EF7",
+              "alt_text": "100% battery iPhone 15 128gb in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/541595477_665990249861120_7620499697595805904_n.jpg?stp=c43.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=109&ccb=1-7&_nc_sid=247b10&_nc_ohc=8Q02nieVC84Q7kNvwHIzrTs&_nc_oc=Adm5vJgy9XwvdyQTSlnpWXuc45LHm79Pt4EoPl6JuUnxIjepvQW7ppDwPLW0MKxIt4NZbCtEh3O4sc2N6RAK8PbZ&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=6-HbwSL5m8wzSi1cZvULGA&oh=00_AfXLQSQQ92FTcqtNs_1rlfLac_I22hmcQWUtYk4i60eELQ&oe=68BC76AB",
+              "alt_text": "LG Washing Machine and Dryer in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/540745627_1308257497674606_8071917911766552503_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=102&ccb=1-7&_nc_sid=247b10&_nc_ohc=iuiSlQEXTcQQ7kNvwGsPHRe&_nc_oc=AdmNJQ4e5lcTUWO42wPAu4zPACucBPOwdYwxscoDBaDg970bfhLP4xgC6VjmESx5ccdRsHgk2yRd69dZBPV9sVlm&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=6-HbwSL5m8wzSi1cZvULGA&oh=00_AfV0kgxb93nQSb1f96asFgCUnwJmbfMU0jW8aW7nTdaXnQ&oe=68BC74A2",
+              "alt_text": "Brand new Original Apple USB-C power adapter.  Pick up Leichhardt in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/539834501_686920074439163_929401009071296869_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=111&ccb=1-7&_nc_sid=247b10&_nc_ohc=02oSpSfQ32AQ7kNvwHRTMwO&_nc_oc=AdnNFj3ZmaoSGrhFwalMSAXRyhy1e5V-3OqGncy3FUjgiKunbQDSonkvaS4GljXsKem249dyBJj3ZKOt0E22PHXQ&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=6-HbwSL5m8wzSi1cZvULGA&oh=00_AfUeH2f6o1g_UJeIX_7oZlKfC_-48TwDKam0JMisYo5mqg&oe=68BC867F",
+              "alt_text": "iphone 14 Pro 128 GB in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/519533052_704586105823069_3773238961440374930_n.jpg?stp=c43.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=104&ccb=1-7&_nc_sid=247b10&_nc_ohc=UfmswduHlNwQ7kNvwFTmbLQ&_nc_oc=AdmRjN957aeaCjWNK2TCIn0vd9blAv_ftLPBZoCaATkV0qgEJ-t1OKHpEwhgW1_3voi5lDPi84kM8moD4Onhvdt0&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=6-HbwSL5m8wzSi1cZvULGA&oh=00_AfXq9ZMFBw98ghizYVegqOqXe07H-88fC8NKHqTd3jZrcg&oe=68BC85D5",
+              "alt_text": "2017 Toyota corolla - h1re in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/539555861_1142365544470854_5885709916536451528_n.jpg?stp=c43.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_ohc=1uQBQTL9DcIQ7kNvwGD1Fzf&_nc_oc=AdmSdOrtVA9jkwWihSocpB-60WnPVl22JxBN_xEsngc1alpL66eTgatNNi8osFLyU5YAn2eNapFVQEULaCluHGxw&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=6-HbwSL5m8wzSi1cZvULGA&oh=00_AfW07vgMd0XlTRQifpXsi1tiNIUteA6FefOCs82Y_lMNxQ&oe=68BC676D",
+              "alt_text": "Trading Fragrances in Sydney, NSW",
+              "type": "product_image"
+            }
+          ],
+          "description": "Iphone 16E 256GB Black\n\nAU$1,000\n  · In stock\n\nListed in Sydney, NSW"
+        }
+      },
+      "hot_reload_timestamp": "2025-09-02T12:42:55.506576",
+      "scraping_status": "completed",
+      "scraping_method": "deep",
+      "created_at": "2025-09-02T12:42:55.506576",
+      "hot_reload": true,
+      "seller_name": "Private Seller"
+    },
+    {
+      "id": "deep_801089619094189",
+      "title": "AU$1,899\nIphone 16 Pro Max 1TB\nSydney, NSW",
+      "price": {
+        "amount": "92",
+        "currency": "SEK",
+        "raw_value": "92 sek"
+      },
+      "location": {
+        "city": "Within",
+        "distance": "51km",
+        "raw_location": "Within 51"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/801089619094189/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A08b13f7f-6b5a-47d2-84b6-d8e47813ddd2&__tn__=!%3AD",
+      "seller": {
+        "info": "Private Seller",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 16 pro max",
+        "storage": "1 TB",
+        "condition": "new_in_box",
+        "color": "Black"
+      },
+      "images": [
+        {
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/539288445_777434118167468_3141856670229469149_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=108&ccb=1-7&_nc_sid=247b10&_nc_ohc=79JRnmDJMD4Q7kNvwEugdN0&_nc_oc=AdmDLRw0lhAAj1yu8T0AxiSXuAxZNXZzmvqFbUQsshCKUpRsxWKDPlYYGD0ZhtdR9n-KWoU1QWZEGieTEYxeWDuu&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=dNSkl7Z3bDxIfDdMJw22gw&oh=00_AfXptgsivIXoNwOX_QMUO2WUoaSdGNTnYAomq9yuFzSbsw&oe=68BC6C48",
+          "alt_text": "",
+          "type": "product_image"
+        },
+        {
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/539288445_777434118167468_3141856670229469149_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=108&ccb=1-7&_nc_sid=247b10&_nc_ohc=79JRnmDJMD4Q7kNvwEugdN0&_nc_oc=AdmDLRw0lhAAj1yu8T0AxiSXuAxZNXZzmvqFbUQsshCKUpRsxWKDPlYYGD0ZhtdR9n-KWoU1QWZEGieTEYxeWDuu&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=dNSkl7Z3bDxIfDdMJw22gw&oh=00_AfXptgsivIXoNwOX_QMUO2WUoaSdGNTnYAomq9yuFzSbsw&oe=68BC6C48",
+          "alt_text": "Product photo of Iphone 16 Pro Max 1TB",
+          "type": "product_image"
+        },
+        {
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/539288445_777434118167468_3141856670229469149_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=108&ccb=1-7&_nc_sid=247b10&_nc_ohc=79JRnmDJMD4Q7kNvwEugdN0&_nc_oc=AdmDLRw0lhAAj1yu8T0AxiSXuAxZNXZzmvqFbUQsshCKUpRsxWKDPlYYGD0ZhtdR9n-KWoU1QWZEGieTEYxeWDuu&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=dNSkl7Z3bDxIfDdMJw22gw&oh=00_AfXptgsivIXoNwOX_QMUO2WUoaSdGNTnYAomq9yuFzSbsw&oe=68BC6C48",
+          "alt_text": "Product photo of Iphone 16 Pro Max 1TB",
+          "type": "product_image"
+        }
+      ],
+      "extraction_method": "deep_scraper",
+      "data_quality": "comprehensive",
+      "added_at": "2025-09-02T12:40:45.187961",
+      "source": "facebook_marketplace_scraper",
+      "deep_data": {
+        "seller_details": {
+          "button_found": true,
+          "extraction_timestamp": "2025-09-02T12:39:25.673757",
+          "button_text": "Seller details",
+          "button_href": "https://www.facebook.com/marketplace/profile/100003980353821/?product_id=801089619094189",
+          "ratings": [
+            "4.4 out of 5 stars, from one review"
+          ]
+        },
+        "marketplace_metadata": {
+          "fb_listing_id": "801089619094189",
+          "is_sold": true,
+          "timing": {
+            "facebook_time_text": "3 days ago",
+            "parsed_minutes_ago": 4320.0,
+            "calculated_timestamp": "2025-08-30T12:40:41.414618",
+            "extraction_method": "facebook_time_parser",
+            "all_expressions_found": [
+              "3 days ago",
+              "Today"
+            ]
+          }
+        },
+        "comprehensive_product": {
+          "model_name": "iPhone 16 pro max",
+          "storage": "1 TB",
+          "color": "Black",
+          "condition": "new_in_box",
+          "images": [
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/539288445_777434118167468_3141856670229469149_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=108&ccb=1-7&_nc_sid=247b10&_nc_ohc=79JRnmDJMD4Q7kNvwEugdN0&_nc_oc=AdmDLRw0lhAAj1yu8T0AxiSXuAxZNXZzmvqFbUQsshCKUpRsxWKDPlYYGD0ZhtdR9n-KWoU1QWZEGieTEYxeWDuu&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=dNSkl7Z3bDxIfDdMJw22gw&oh=00_AfXptgsivIXoNwOX_QMUO2WUoaSdGNTnYAomq9yuFzSbsw&oe=68BC6C48",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/539288445_777434118167468_3141856670229469149_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=108&ccb=1-7&_nc_sid=247b10&_nc_ohc=79JRnmDJMD4Q7kNvwEugdN0&_nc_oc=AdmDLRw0lhAAj1yu8T0AxiSXuAxZNXZzmvqFbUQsshCKUpRsxWKDPlYYGD0ZhtdR9n-KWoU1QWZEGieTEYxeWDuu&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=dNSkl7Z3bDxIfDdMJw22gw&oh=00_AfXptgsivIXoNwOX_QMUO2WUoaSdGNTnYAomq9yuFzSbsw&oe=68BC6C48",
+              "alt_text": "Product photo of Iphone 16 Pro Max 1TB",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/539288445_777434118167468_3141856670229469149_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=108&ccb=1-7&_nc_sid=247b10&_nc_ohc=79JRnmDJMD4Q7kNvwEugdN0&_nc_oc=AdmDLRw0lhAAj1yu8T0AxiSXuAxZNXZzmvqFbUQsshCKUpRsxWKDPlYYGD0ZhtdR9n-KWoU1QWZEGieTEYxeWDuu&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=dNSkl7Z3bDxIfDdMJw22gw&oh=00_AfXptgsivIXoNwOX_QMUO2WUoaSdGNTnYAomq9yuFzSbsw&oe=68BC6C48",
+              "alt_text": "Product photo of Iphone 16 Pro Max 1TB",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/535458668_1195528019256390_2515684324406316783_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=104&ccb=1-7&_nc_sid=247b10&_nc_ohc=dWmc-nXkGN8Q7kNvwFANW45&_nc_oc=Adlie_sWzYJqc8HEp_JuTvkx3HgtdsiFrng8D6Qcwq37DCUtldmeSuCRAxpdwRv-dL1ndHlVuyCvK8phN7VI0JgQ&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=dNSkl7Z3bDxIfDdMJw22gw&oh=00_AfXUJ5wC-E21F0kCt82xzuV7MITxZIArvdY_F56LGpSJnQ&oe=68BC8447",
+              "alt_text": "Product photo of Iphone 16 Pro Max 1TB",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/535465046_806830805115580_46658075739787468_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=3WuRH_ybH0YQ7kNvwGi8YKz&_nc_oc=AdnwXRVRGz1OyQ5M0DrNxUkRw5fCS-_QFMSWDeDSpP4eEwIyJbzlMUogK7vWapgqUtjtlBdCMVrjz2guDotoL6oW&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=dNSkl7Z3bDxIfDdMJw22gw&oh=00_AfU0nLwzy8IqIx8Zh20P41meUJHRpkMZNFB8FjGrBtcZxA&oe=68BC755E",
+              "alt_text": "Product photo of Iphone 16 Pro Max 1TB",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t15.13418-10/459050415_1040889220467841_6466576579020816392_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=107&ccb=1-7&_nc_sid=ace027&_nc_ohc=BTb3tiqqnVMQ7kNvwE5ijIF&_nc_oc=AdmT7mBS9lhSPPoc2dqr74D2hK2g5XGhyjVJdTRQiyBJi7y65W0eDeeN6HT-QaofzgJv4KAs7lsJkHAEkY-b37AA&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=dNSkl7Z3bDxIfDdMJw22gw&oh=00_AfWkjNwcI4Q2mje_S79GDUvE0EZTJmixQuDCsUS5Ggor7w&oe=68BC6C28",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t15.5256-10/442085344_798763582365407_6683431044961940138_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=110&ccb=1-7&_nc_sid=f3af18&_nc_ohc=bxcV7VN4ANcQ7kNvwFVp9BA&_nc_oc=AdlXWmrFhEWk8zc1lFPNTdA1mlaqRe8_nkDC_9amYvjlDcui3sDV2r2bE3urLrEalu6XJuvkkSmAJLCSTtxrOxY7&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=dNSkl7Z3bDxIfDdMJw22gw&oh=00_AfWkyBUEuou9T7iy6A6zKuFO1aN-WnIe0q7Oio5GZGQuww&oe=68BC6499",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/540099719_804704172131182_2082434040330622760_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=YiCVuZ86UhUQ7kNvwFWH9TH&_nc_oc=AdldAABZDXaN6MHzUYDOmBJWfzjRjSDIasR1ONni7R42Vtg2qWXor2gBoXavuqohG_W0LlTZJgCncXnIoloHhGeF&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=0tzsZ8Yg108MSMoKlxT0QA&oh=00_AfVplf0ukmIAEobhgpeVlxSlSLDud_DNVzHOJqImVjHR5A&oe=68BC8DA3",
+              "alt_text": "LG top loader washing machine 8kg in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/540113249_1283149019493567_2812582504940050580_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=106&ccb=1-7&_nc_sid=247b10&_nc_ohc=g4sSjgRX0PIQ7kNvwEzIyRl&_nc_oc=Adluh3fgU9tikn28fuNFo95yXv0Z6GsETNEIa3mrlMKoEbfGr6zSNCxbw_HpFAtxhyawkIfm7yQ8Fy9q9vPNpS-b&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=0tzsZ8Yg108MSMoKlxT0QA&oh=00_AfUNuEqLbmLipJG_ZGlPMsSsBpD-5cJ5fTGRogOyOVMMLQ&oe=68BC5EF7",
+              "alt_text": "100% battery iPhone 15 128gb in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/541595477_665990249861120_7620499697595805904_n.jpg?stp=c43.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=109&ccb=1-7&_nc_sid=247b10&_nc_ohc=8Q02nieVC84Q7kNvwHIzrTs&_nc_oc=Adm5vJgy9XwvdyQTSlnpWXuc45LHm79Pt4EoPl6JuUnxIjepvQW7ppDwPLW0MKxIt4NZbCtEh3O4sc2N6RAK8PbZ&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=0tzsZ8Yg108MSMoKlxT0QA&oh=00_AfV2PaUjvxWYZDEdAGqWH0EC1NysTkbbxGvnTLnM2mVHqA&oe=68BC76AB",
+              "alt_text": "LG Washing Machine and Dryer in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/540496999_781866317668177_8881688881059070443_n.jpg?stp=c0.62.261.261a_dst-jpg_p261x260_tt6&_nc_cat=111&ccb=1-7&_nc_sid=247b10&_nc_ohc=Q0CG2y2e8UsQ7kNvwHB93oI&_nc_oc=AdmFtZfdkwpvXTO6Jn7d1t9Axl-C6PplSXQ9Jx40pVYVym39ToqSQI4qHVh034Hqi6rxglRWgOtiCCc7uZBN7G0f&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=0tzsZ8Yg108MSMoKlxT0QA&oh=00_AfWMNSOMlNdB3Frvio_ayWOniRF2Ag406DnyWd8zxgVKPA&oe=68BC852E",
+              "alt_text": "FREE - 2006 Arquin Sprint 125 Mbike 125cc black petrol scooter in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/540745627_1308257497674606_8071917911766552503_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=102&ccb=1-7&_nc_sid=247b10&_nc_ohc=iuiSlQEXTcQQ7kNvwGsPHRe&_nc_oc=AdmNJQ4e5lcTUWO42wPAu4zPACucBPOwdYwxscoDBaDg970bfhLP4xgC6VjmESx5ccdRsHgk2yRd69dZBPV9sVlm&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=0tzsZ8Yg108MSMoKlxT0QA&oh=00_AfXewo4VF7Th6-hK0c3dVFHaCxaON8XSIAk9nPJp73sA-Q&oe=68BC74A2",
+              "alt_text": "Brand new Original Apple USB-C power adapter.  Pick up Leichhardt in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/539834501_686920074439163_929401009071296869_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=111&ccb=1-7&_nc_sid=247b10&_nc_ohc=02oSpSfQ32AQ7kNvwHRTMwO&_nc_oc=AdnNFj3ZmaoSGrhFwalMSAXRyhy1e5V-3OqGncy3FUjgiKunbQDSonkvaS4GljXsKem249dyBJj3ZKOt0E22PHXQ&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=0tzsZ8Yg108MSMoKlxT0QA&oh=00_AfU1NWmuKe5utKgFKg5cwA5lX5R1Pp8MG-gWc-dFSsSyoQ&oe=68BC867F",
+              "alt_text": "iphone 14 Pro 128 GB in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/539555861_1142365544470854_5885709916536451528_n.jpg?stp=c43.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_ohc=1uQBQTL9DcIQ7kNvwGD1Fzf&_nc_oc=AdmSdOrtVA9jkwWihSocpB-60WnPVl22JxBN_xEsngc1alpL66eTgatNNi8osFLyU5YAn2eNapFVQEULaCluHGxw&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=0tzsZ8Yg108MSMoKlxT0QA&oh=00_AfWuulN_F1gUtklM7p7XVDa-Sine6RI3tCE8vftrK80fZQ&oe=68BC676D",
+              "alt_text": "Trading Fragrances in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/473209778_1991977867988688_2145991380981536167_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=100&ccb=1-7&_nc_sid=247b10&_nc_ohc=z4u1bgcreAoQ7kNvwFiJfUi&_nc_oc=Admih9JR-cKKLtKnuAd_i6jEjSrM7t54uh6EXbL7QRnioDp8imGE0UCJtYS7Ch2bTvdPac4aXBx674hGpKXRjtxH&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=0tzsZ8Yg108MSMoKlxT0QA&oh=00_AfX26Jke4H44tBQxcmOr_bwMQi26NI1WeUC_3loEm8PCMA&oe=68BC6062",
+              "alt_text": "Mutton biryani cooked using basmati rice which has lots of flavour in Sydney, NSW",
+              "type": "product_image"
+            }
+          ],
+          "description": "Iphone 16 Pro Max 1TB\n\nListed 3 days ago in Sydney, NSW\n\nYes its available - Located in Parramatta"
+        }
+      },
+      "hot_reload_timestamp": "2025-09-02T12:40:45.187961",
+      "scraping_status": "completed",
+      "scraping_method": "deep",
+      "created_at": "2025-09-02T12:40:45.187961",
+      "hot_reload": true,
+      "seller_name": "Private Seller"
+    },
+    {
+      "id": "deep_786624504261298",
+      "title": "AU$1,050\niPhone 16 white 100 % battery health\nSydney, NSW",
+      "price": {
+        "amount": "92",
+        "currency": "SEK",
+        "raw_value": "92 sek"
+      },
+      "location": {
+        "city": "Within",
+        "distance": "51km",
+        "raw_location": "Within 51"
+      },
+      "marketplace_url": "https://www.facebook.com/marketplace/item/786624504261298/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A08b13f7f-6b5a-47d2-84b6-d8e47813ddd2&__tn__=!%3AD",
+      "seller": {
+        "info": "Private Seller",
+        "profile": null
+      },
+      "product_details": {
+        "model": "iPhone 16",
+        "storage": "29 TB",
+        "condition": "new_in_box",
+        "color": "Black"
+      },
+      "images": [
+        {
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/541300256_1495484565229151_905749123495009964_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_ohc=Ei9dJaNtIYAQ7kNvwFtWEQJ&_nc_oc=AdlV6Ck1OSsm6n_3OTsmL8SdL95f1ixjBMOZ_S-JXoegoByxFXoAWk0tXpgO5aafmZct9ZaScv96BvH4zo8q9QkI&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=ntRhgFHv-o9d-Q8FYphIPA&oh=00_AfVQI8qCzFd7KssPRdPu1Ha3Tj1sD7vlIlh5mrkEHIQvsQ&oe=68BC5788",
+          "alt_text": "",
+          "type": "product_image"
+        },
+        {
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/541300256_1495484565229151_905749123495009964_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_ohc=Ei9dJaNtIYAQ7kNvwFtWEQJ&_nc_oc=AdlV6Ck1OSsm6n_3OTsmL8SdL95f1ixjBMOZ_S-JXoegoByxFXoAWk0tXpgO5aafmZct9ZaScv96BvH4zo8q9QkI&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=ntRhgFHv-o9d-Q8FYphIPA&oh=00_AfVQI8qCzFd7KssPRdPu1Ha3Tj1sD7vlIlh5mrkEHIQvsQ&oe=68BC5788",
+          "alt_text": "Product photo of iPhone 16 white 100 % battery health",
+          "type": "product_image"
+        },
+        {
+          "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/541300256_1495484565229151_905749123495009964_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_ohc=Ei9dJaNtIYAQ7kNvwFtWEQJ&_nc_oc=AdlV6Ck1OSsm6n_3OTsmL8SdL95f1ixjBMOZ_S-JXoegoByxFXoAWk0tXpgO5aafmZct9ZaScv96BvH4zo8q9QkI&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=ntRhgFHv-o9d-Q8FYphIPA&oh=00_AfVQI8qCzFd7KssPRdPu1Ha3Tj1sD7vlIlh5mrkEHIQvsQ&oe=68BC5788",
+          "alt_text": "Product photo of iPhone 16 white 100 % battery health",
+          "type": "product_image"
+        }
+      ],
+      "extraction_method": "deep_scraper",
+      "data_quality": "comprehensive",
+      "added_at": "2025-09-02T12:39:02.529396",
+      "source": "facebook_marketplace_scraper",
+      "deep_data": {
+        "seller_details": {
+          "button_found": true,
+          "extraction_timestamp": "2025-09-02T12:37:25.505453",
+          "button_text": "Seller details",
+          "button_href": "https://www.facebook.com/marketplace/profile/61570140974460/?product_id=786624504261298",
+          "join_date": "joined facebook in 2024"
+        },
+        "marketplace_metadata": {
+          "fb_listing_id": "786624504261298",
+          "is_sold": true,
+          "timing": {
+            "facebook_time_text": "3 days ago",
+            "parsed_minutes_ago": 4320.0,
+            "calculated_timestamp": "2025-08-30T12:38:59.245448",
+            "extraction_method": "facebook_time_parser",
+            "all_expressions_found": [
+              "3 days ago",
+              "Today"
+            ]
+          }
+        },
+        "comprehensive_product": {
+          "model_name": "iPhone 16",
+          "storage": "29 TB",
+          "color": "Black",
+          "condition": "new_in_box",
+          "images": [
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/541300256_1495484565229151_905749123495009964_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_ohc=Ei9dJaNtIYAQ7kNvwFtWEQJ&_nc_oc=AdlV6Ck1OSsm6n_3OTsmL8SdL95f1ixjBMOZ_S-JXoegoByxFXoAWk0tXpgO5aafmZct9ZaScv96BvH4zo8q9QkI&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=ntRhgFHv-o9d-Q8FYphIPA&oh=00_AfVQI8qCzFd7KssPRdPu1Ha3Tj1sD7vlIlh5mrkEHIQvsQ&oe=68BC5788",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/541300256_1495484565229151_905749123495009964_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_ohc=Ei9dJaNtIYAQ7kNvwFtWEQJ&_nc_oc=AdlV6Ck1OSsm6n_3OTsmL8SdL95f1ixjBMOZ_S-JXoegoByxFXoAWk0tXpgO5aafmZct9ZaScv96BvH4zo8q9QkI&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=ntRhgFHv-o9d-Q8FYphIPA&oh=00_AfVQI8qCzFd7KssPRdPu1Ha3Tj1sD7vlIlh5mrkEHIQvsQ&oe=68BC5788",
+              "alt_text": "Product photo of iPhone 16 white 100 % battery health",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/541300256_1495484565229151_905749123495009964_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_ohc=Ei9dJaNtIYAQ7kNvwFtWEQJ&_nc_oc=AdlV6Ck1OSsm6n_3OTsmL8SdL95f1ixjBMOZ_S-JXoegoByxFXoAWk0tXpgO5aafmZct9ZaScv96BvH4zo8q9QkI&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=ntRhgFHv-o9d-Q8FYphIPA&oh=00_AfVQI8qCzFd7KssPRdPu1Ha3Tj1sD7vlIlh5mrkEHIQvsQ&oe=68BC5788",
+              "alt_text": "Product photo of iPhone 16 white 100 % battery health",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/540685340_2025012668034443_2548227289536220043_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=110&ccb=1-7&_nc_sid=247b10&_nc_ohc=4KXCTcCngtIQ7kNvwGC0uJM&_nc_oc=AdlHiocWGBV7EDJ6iPwA_lGki_3g__98IEY0d_7D8fToPBPigHoXmCRJIrRdLHwyzHlT-sTIScuwuQZHJXWSKXox&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=ntRhgFHv-o9d-Q8FYphIPA&oh=00_AfWLPXcoQ3OIEBpmrjmvouJvjfGxjnU1PuOa87sojgfxWw&oe=68BC700E",
+              "alt_text": "Product photo of iPhone 16 white 100 % battery health",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/536869257_666677729174658_4544425404165493072_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=102&ccb=1-7&_nc_sid=247b10&_nc_ohc=0OxNT5W_Rd0Q7kNvwH7JiKo&_nc_oc=Adn3S5myxWiE-cnhVceXXNW_sE9sn0ZP1pe7csFQSicj5c_GFlNn0WEOO57XM5wbAvj4QnR_6vdoZf17TTS3UGSx&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=ntRhgFHv-o9d-Q8FYphIPA&oh=00_AfXDZcziw0_o2A4MWyFo3IjhUsWW8R7MkqEU6Q-w4RoUjw&oe=68BC62D8",
+              "alt_text": "Product photo of iPhone 16 white 100 % battery health",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t15.13418-10/459050415_1040889220467841_6466576579020816392_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=107&ccb=1-7&_nc_sid=ace027&_nc_ohc=BTb3tiqqnVMQ7kNvwE5ijIF&_nc_oc=AdmT7mBS9lhSPPoc2dqr74D2hK2g5XGhyjVJdTRQiyBJi7y65W0eDeeN6HT-QaofzgJv4KAs7lsJkHAEkY-b37AA&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=ntRhgFHv-o9d-Q8FYphIPA&oh=00_AfXiFKpELhfNQW-7PWPMzQ5Vpk5kuj0ORFZHtUNeajxE8w&oe=68BC6C28",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t15.13418-10/514790743_1108125327799245_6842428491380852867_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=100&ccb=1-7&_nc_sid=ace027&_nc_ohc=d2qI500Fd4EQ7kNvwFycoxC&_nc_oc=Adlb3jCn9E1-lzAdr9C-cyBfwI1eWF86IzKkyrNTBpsEUIgtoy0RKfEiHQF12JVZ8zKXnOFJui44lGlLok7BIdrY&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=ntRhgFHv-o9d-Q8FYphIPA&oh=00_AfVG6wMS4CtVL7j2usQu87AX-96b0F7osolmF691H5F64w&oe=68BC6A2E",
+              "alt_text": "",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/481026022_4152583001694542_3583413626233134937_n.jpg?stp=c160.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=102&ccb=1-7&_nc_sid=247b10&_nc_ohc=Ju_klmkElTUQ7kNvwG1pQTs&_nc_oc=Adk_COsgLqbUjM2J992xSvk2mXf1-6B661ZG_s1e1jvdBrCUgWD1p6FMs43c7_ve402GPXm-HyLLdJH7cZRQcyWg&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=1TMc-7CH_hYwgq4lABACiA&oh=00_AfViZpB5BHQrClWPQ0PQH_rIzgHaVGyQC8iPZ2wUx8RmsQ&oe=68BC57CC",
+              "alt_text": "BRAND NEW GENUINE MAKITA TOOLS, CHEAPEST PRICES in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/540113249_1283149019493567_2812582504940050580_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=106&ccb=1-7&_nc_sid=247b10&_nc_ohc=g4sSjgRX0PIQ7kNvwEzIyRl&_nc_oc=Adluh3fgU9tikn28fuNFo95yXv0Z6GsETNEIa3mrlMKoEbfGr6zSNCxbw_HpFAtxhyawkIfm7yQ8Fy9q9vPNpS-b&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=1TMc-7CH_hYwgq4lABACiA&oh=00_AfVfsdb7jE8AoblbsUwk0lY5FrOXYZmViWGoa0PvI51oNg&oe=68BC5EF7",
+              "alt_text": "100% battery iPhone 15 128gb in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t39.30808-6/543358892_122120268314953301_1464322479932949435_n.jpg?stp=c0.134.1643.1643a_dst-jpg_s261x260_tt6&_nc_cat=102&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=JdkuN1Quz28Q7kNvwF6f3eQ&_nc_oc=AdlOuD95qr_Lx1E_tZ6sppt9i_OF8nsNo_-L1DL-dKo6-dbDkRPbNbOIAxYEUtAlhFXja0IAC9ISaghzUC1chGWH&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=1TMc-7CH_hYwgq4lABACiA&oh=00_AfWNBtB3Mnldczo6r23lQ--_TT6AQyZgs33uiK0mZXuemw&oe=68BC6DFF",
+              "alt_text": "AirPod Pro (second generation) NEGOTIABLE & SEALED in Buy , sell , swap sydney area",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/541595477_665990249861120_7620499697595805904_n.jpg?stp=c43.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=109&ccb=1-7&_nc_sid=247b10&_nc_ohc=8Q02nieVC84Q7kNvwHIzrTs&_nc_oc=Adm5vJgy9XwvdyQTSlnpWXuc45LHm79Pt4EoPl6JuUnxIjepvQW7ppDwPLW0MKxIt4NZbCtEh3O4sc2N6RAK8PbZ&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=1TMc-7CH_hYwgq4lABACiA&oh=00_AfXk4s2fUaHdKq9bwH50c3rg3IrNYe0cZ0a6ViK2RVjqAA&oe=68BC76AB",
+              "alt_text": "LG Washing Machine and Dryer in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/540496999_781866317668177_8881688881059070443_n.jpg?stp=c0.62.261.261a_dst-jpg_p261x260_tt6&_nc_cat=111&ccb=1-7&_nc_sid=247b10&_nc_ohc=Q0CG2y2e8UsQ7kNvwHB93oI&_nc_oc=AdmFtZfdkwpvXTO6Jn7d1t9Axl-C6PplSXQ9Jx40pVYVym39ToqSQI4qHVh034Hqi6rxglRWgOtiCCc7uZBN7G0f&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=1TMc-7CH_hYwgq4lABACiA&oh=00_AfWeb0Tba8_u52LYS24RZ379aIncguBdjKQc28JHuF3yow&oe=68BC852E",
+              "alt_text": "FREE - 2006 Arquin Sprint 125 Mbike 125cc black petrol scooter in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb1-2.fna.fbcdn.net/v/t45.5328-4/539555861_1142365544470854_5885709916536451528_n.jpg?stp=c43.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_ohc=1uQBQTL9DcIQ7kNvwGD1Fzf&_nc_oc=AdmSdOrtVA9jkwWihSocpB-60WnPVl22JxBN_xEsngc1alpL66eTgatNNi8osFLyU5YAn2eNapFVQEULaCluHGxw&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=1TMc-7CH_hYwgq4lABACiA&oh=00_AfXu9y81tHcd9Vq8ALxMSGjueWJFwh8nWiAB8CC4KqFC3A&oe=68BC676D",
+              "alt_text": "Trading Fragrances in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/473209778_1991977867988688_2145991380981536167_n.jpg?stp=c0.43.261.261a_dst-jpg_p261x260_tt6&_nc_cat=100&ccb=1-7&_nc_sid=247b10&_nc_ohc=z4u1bgcreAoQ7kNvwFiJfUi&_nc_oc=Admih9JR-cKKLtKnuAd_i6jEjSrM7t54uh6EXbL7QRnioDp8imGE0UCJtYS7Ch2bTvdPac4aXBx674hGpKXRjtxH&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=1TMc-7CH_hYwgq4lABACiA&oh=00_AfWQblv1Ie4RLsxqXZwoyV2IRf3Iv9BmegiAxhrBUPc2RA&oe=68BC6062",
+              "alt_text": "Mutton biryani cooked using basmati rice which has lots of flavour in Sydney, NSW",
+              "type": "product_image"
+            },
+            {
+              "url": "https://scontent.fisb17-1.fna.fbcdn.net/v/t45.5328-4/540190460_547287598441170_782464690128254503_n.jpg?stp=c43.0.260.260a_dst-jpg_p261x260_tt6&_nc_cat=100&ccb=1-7&_nc_sid=247b10&_nc_ohc=gv6IaE5fmvAQ7kNvwEPLd32&_nc_oc=Adkv2Ns7l9_BTAcSe3kfEST4DxKdlX1oLRDX8KFuqgXU1-LmA-bjnWbGYlSEz2RIohSEnsXIZLw7skEAkOov68ft&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=1TMc-7CH_hYwgq4lABACiA&oh=00_AfX8zi0z9c2OpUMT7BfB48dj-8_gVkbI_P3HAcrAVaQMDA&oe=68BC85CB",
+              "alt_text": "Google Pixel 6 5G 256gb in Sydney, NSW",
+              "type": "product_image"
+            }
+          ],
+          "description": "iPhone 16 white 100 % battery health\n\nListed 3 days ago in Sydney, NSW\n\niPhone 16 128 GB White\nComes with receipt \nMessage for more info"
+        }
+      },
+      "hot_reload_timestamp": "2025-09-02T12:39:02.529396",
+      "scraping_status": "completed",
+      "scraping_method": "deep",
+      "created_at": "2025-09-02T12:39:02.529396",
+      "hot_reload": true,
+      "seller_name": "Private Seller"
+    },
     {
       "id": "deep_1181121487394764",
       "title": "AU$270\niPhone 11 black 64gb 96% battery health Excellent condition Warranty\nSydney, NSW",
@@ -3333,7 +5659,7 @@
     "image_quality": "6 products have high-quality thumbnail images from Facebook's CDN",
     "location_accuracy": "Some locations extracted as 'x' - needs pattern refinement",
     "data_completeness": "6 products have complete data with images and links, 10 products have partial data",
-    "last_updated": "2025-08-27T17:26:05.686567"
+    "last_updated": "2025-09-02T14:46:45.602469"
   },
   "technical_details": {
     "html_source_size": "2,926,700 characters",

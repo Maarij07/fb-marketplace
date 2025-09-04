@@ -1,0 +1,24 @@
+{
+  "extraction_info": {
+    "timestamp": "2025-09-02",
+    "source": "Facebook Marketplace Stockholm",
+    "search_query": "iPhone 16",
+    "total_products_found": 0,
+    "extraction_method": "automated_scraper"
+  },
+  "summary": {
+    "products_with_complete_data": 0,
+    "products_with_images": 0,
+    "products_with_links": 0,
+    "products_with_locations": 0,
+    "products_with_prices": 0,
+    "unique_locations": []
+  },
+  "products": [],
+  "scraping_sessions": [],
+  "extraction_notes": {
+    "last_updated": "2025-09-02T12:34:01.114111",
+    "data_source": "Facebook Marketplace",
+    "deduplication": "Based on listing ID and title similarity"
+  }
+}

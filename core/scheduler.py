@@ -451,32 +451,22 @@ class SchedulerManager:
         try:
             self.logger.info(f"Starting custom scraping job for: {search_query}")
             
-            # Check if deep scraping is available, fallback to regular scraping
-            try:
-                from core.deep_scraper import DeepMarketplaceScraper
-                
-                # Create deep scraper instance
-                scraper = DeepMarketplaceScraper(self.settings, persistent_session=False)
-                
-                # Set notification manager if provided for real-time updates
-                if notification_manager:
-                    scraper.set_notification_manager(notification_manager)
-                
+            # Create scraper instance
+            scraper = FacebookMarketplaceScraper(self.settings, persistent_session=False)
+            
+            # Set notification manager for real-time updates
+            if notification_manager:
+                scraper.set_notification_manager(notification_manager)
+            
+            # Check if deep scraping is enabled
+            enable_deep_scraping = self.settings.get_bool('ENABLE_DEEP_SCRAPING', True)
+            
+            if enable_deep_scraping:
                 # Run deep scraping for custom search
                 max_products = self.settings.get_int('DEEP_SCRAPE_MAX_PRODUCTS', 10)
                 results = scraper.deep_scrape_marketplace(search_query, max_products=max_products)
-                
-            except ImportError:
-                self.logger.warning("Deep scraper not available, using standard scraper")
-                
-                # Fallback to regular scraper
-                scraper = FacebookMarketplaceScraper(self.settings, persistent_session=False)
-                
-                # Set notification manager for real-time updates
-                if notification_manager:
-                    scraper.set_notification_manager(notification_manager)
-                
-                # Run custom marketplace search
+            else:
+                # Run standard continuous scraping
                 results = scraper.search_marketplace_custom(search_query)
             
             self.logger.info(f"Custom scraping job completed: {len(results)} products scraped")

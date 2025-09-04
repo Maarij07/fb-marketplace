@@ -27,6 +27,7 @@ from selenium.common.exceptions import (
 )
 
 from core.json_manager import JSONDataManager
+from facebook_time_parser import FacebookTimeParser
 
 
 class FacebookMarketplaceScraper:
@@ -98,6 +99,9 @@ class FacebookMarketplaceScraper:
         import os
         self.output_dir = "deep_scrape_output"
         os.makedirs(self.output_dir, exist_ok=True)
+        
+        # Initialize Facebook Time Parser for timing extraction
+        self.time_parser = FacebookTimeParser()
     
     def setup_driver(self):
         """Initialize and configure Chrome WebDriver."""
@@ -634,6 +638,10 @@ class FacebookMarketplaceScraper:
                 'condition': 'Unknown',
                 'color': 'Unknown'
             }
+            
+            # Extract timing information from listing element using FacebookTimeParser
+            timing_info = self._extract_timing_from_element(element)
+            listing_data['timing'] = timing_info
             
             # Add metadata with timestamp
             listing_data['extraction_method'] = 'automated_scraper'
@@ -1449,44 +1457,86 @@ class FacebookMarketplaceScraper:
             return []
     
     def _find_product_cards_for_deep_scrape(self) -> List[Dict[str, Any]]:
-        """Find and prepare product cards for deep scraping."""
-        try:
-            self.logger.info("Finding product cards for deep scraping...")
-            
-            # Wait for content to load
-            time.sleep(1.5)
-            
-            # Find marketplace item links
-            marketplace_links = self.driver.find_elements(By.CSS_SELECTOR, "a[href*='/marketplace/item/']")
-            self.logger.info(f"Found {len(marketplace_links)} marketplace item links")
-            
-            product_cards = []
-            for i, link in enumerate(marketplace_links):
-                try:
-                    url = link.get_attribute('href')
-                    if not url or '/marketplace/item/' not in url:
-                        continue
+        """Find and prepare product cards for deep scraping with retry logic."""
+        max_attempts = 3
+        for attempt in range(max_attempts):
+            try:
+                self.logger.info(f"Finding product cards for deep scraping (attempt {attempt + 1}/{max_attempts})...")
+                
+                # Wait for content to load with longer delays for bad connections
+                wait_time = 2 + attempt  # Progressively longer waits
+                time.sleep(wait_time)
+                
+                # Verify we're on the right page first
+                current_url = self.driver.current_url.lower()
+                if 'marketplace' not in current_url or ('search' not in current_url and 'query=' not in current_url):
+                    self.logger.warning(f"Not on marketplace search page (URL: {current_url}), attempting to navigate back...")
                     
-                    # Try to get product title from link or parent
-                    title = self._extract_title_from_link(link, i)
+                    # Try to get back to search results
+                    search_query = getattr(self, '_current_search_query', 'iphone')
+                    import urllib.parse
+                    encoded_query = urllib.parse.quote(search_query)
+                    search_url = f"https://www.facebook.com/marketplace/sydney/search/?query={encoded_query}"
                     
-                    product_cards.append({
-                        'index': i,
-                        'title': title,
-                        'url': url,
-                        'link_element': link
-                    })
+                    self.logger.info(f"Navigating back to search: {search_url}")
+                    self.driver.get(search_url)
+                    time.sleep(3 + attempt)  # Extra time for page load
+                
+                # Find marketplace item links
+                marketplace_links = self.driver.find_elements(By.CSS_SELECTOR, "a[href*='/marketplace/item/']")
+                self.logger.info(f"Found {len(marketplace_links)} marketplace item links on attempt {attempt + 1}")
+                
+                # If we found some links, process them
+                if marketplace_links:
+                    product_cards = []
+                    for i, link in enumerate(marketplace_links):
+                        try:
+                            url = link.get_attribute('href')
+                            if not url or '/marketplace/item/' not in url:
+                                continue
+                            
+                            # Verify link is still valid (element not stale)
+                            try:
+                                link.is_displayed()  # This will throw if element is stale
+                            except:
+                                self.logger.debug(f"Link {i} is stale, skipping")
+                                continue
+                            
+                            # Try to get product title from link or parent
+                            title = self._extract_title_from_link(link, i)
+                            
+                            product_cards.append({
+                                'index': i,
+                                'title': title,
+                                'url': url,
+                                'link_element': link
+                            })
+                            
+                        except Exception as e:
+                            self.logger.debug(f"Failed to process link {i}: {e}")
+                            continue
                     
-                except Exception as e:
-                    self.logger.debug(f"Failed to process link {i}: {e}")
+                    if product_cards:
+                        self.logger.info(f"Successfully prepared {len(product_cards)} product cards for deep scraping")
+                        return product_cards
+                    else:
+                        self.logger.warning(f"Found links but couldn't process any on attempt {attempt + 1}")
+                else:
+                    self.logger.warning(f"No marketplace links found on attempt {attempt + 1}")
+                
+                # If this isn't the last attempt, wait before retrying
+                if attempt < max_attempts - 1:
+                    self.logger.info(f"Retrying in 2 seconds...")
+                    time.sleep(2)
+                
+            except Exception as e:
+                self.logger.error(f"Error finding product cards on attempt {attempt + 1}: {e}")
+                if attempt < max_attempts - 1:
+                    time.sleep(2)
                     continue
-            
-            self.logger.info(f"Prepared {len(product_cards)} product cards for deep scraping")
-            return product_cards
-            
-        except Exception as e:
-            self.logger.error(f"Failed to find product cards: {e}")
-            return []
+        
+        self.logger.error(f"Failed to find product cards after {max_attempts} attempts")
+        return []
     
     def _extract_title_from_link(self, link, index: int) -> str:
         """Extract product title from link element or its parents."""
@@ -1584,33 +1634,64 @@ class FacebookMarketplaceScraper:
             
             # Navigate back to search results for next product
             self.logger.info("Navigating back to search results...")
-            try:
-                # Try to go back using browser history first
-                self.driver.back()
-                time.sleep(0.5)
-                
-                # Check if we're back on search results
-                if 'marketplace' not in self.driver.current_url.lower() or 'search' not in self.driver.current_url.lower():
-                    # If not on search page, construct search URL manually
-                    search_query = getattr(self, '_current_search_query', 'iphone')
-                    search_url = f"https://www.facebook.com/marketplace/sydney/search/?query={search_query.replace(' ', '%20')}"
-                    self.logger.info(f"Going back to search URL: {search_url}")
-                    self.driver.get(search_url)
-                    
-                time.sleep(random.uniform(0.5, 1.0))
-                
-            except Exception as nav_error:
-                self.logger.error(f"Navigation back failed: {nav_error}")
-                # Fallback: reconstruct search URL
+            max_back_attempts = 3
+            back_successful = False
+            
+            for attempt in range(max_back_attempts):
                 try:
-                    search_query = getattr(self, '_current_search_query', 'iphone')
-                    search_url = f"https://www.facebook.com/marketplace/sydney/search/?query={search_query.replace(' ', '%20')}"
-                    self.logger.info(f"Fallback: navigating to search URL: {search_url}")
-                    self.driver.get(search_url)
-                    time.sleep(1.5)
-                except Exception as fallback_error:
-                    self.logger.error(f"Fallback navigation failed: {fallback_error}")
-                    raise
+                    # First attempt: browser back
+                    if attempt == 0:
+                        self.logger.info(f"Attempt {attempt + 1}: Using browser back()")
+                        self.driver.back()
+                        time.sleep(2)  # Longer wait for bad connections
+                        
+                    # Check if we're back on search results
+                    current_url = self.driver.current_url.lower()
+                    if ('marketplace' in current_url and 'search' in current_url) or 'query=' in current_url:
+                        self.logger.info(f"Successfully navigated back on attempt {attempt + 1}")
+                        back_successful = True
+                        break
+                    else:
+                        # Not on search page, try to reconstruct search URL
+                        search_query = getattr(self, '_current_search_query', 'iphone')
+                        # Use URL encoding for search query
+                        import urllib.parse
+                        encoded_query = urllib.parse.quote(search_query)
+                        search_url = f"https://www.facebook.com/marketplace/sydney/search/?query={encoded_query}"
+                        
+                        self.logger.info(f"Attempt {attempt + 1}: Not on search page, navigating to: {search_url}")
+                        self.driver.get(search_url)
+                        time.sleep(3)  # Extra time for page load with bad internet
+                        
+                        # Verify we're on the right page now
+                        if 'marketplace' in self.driver.current_url.lower():
+                            back_successful = True
+                            break
+                        
+                except Exception as nav_error:
+                    self.logger.warning(f"Navigation attempt {attempt + 1} failed: {nav_error}")
+                    if attempt < max_back_attempts - 1:
+                        time.sleep(2)  # Wait before retrying
+                        continue
+                    else:
+                        # Final attempt with fresh search page
+                        try:
+                            search_query = getattr(self, '_current_search_query', 'iphone')
+                            import urllib.parse
+                            encoded_query = urllib.parse.quote(search_query)
+                            search_url = f"https://www.facebook.com/marketplace/sydney/search/?query={encoded_query}"
+                            
+                            self.logger.error(f"All navigation attempts failed, final fallback to: {search_url}")
+                            self.driver.get(search_url)
+                            time.sleep(5)  # Long wait for final attempt
+                            back_successful = True
+                        except Exception as final_error:
+                            self.logger.error(f"Final navigation fallback failed: {final_error}")
+                            # Don't raise here, continue with what we have
+                            break
+            
+            if not back_successful:
+                self.logger.warning(f"Failed to navigate back after {max_back_attempts} attempts, but continuing...")
             
             return comprehensive_data
             
@@ -2127,24 +2208,81 @@ class FacebookMarketplaceScraper:
             data['product_comprehensive']['description'] = f"Error: {str(e)}"
     
     def _extract_posting_timing_info(self, data: Dict[str, Any]):
-        """Extract when the item was posted and any urgency indicators."""
+        """Extract when the item was posted and any urgency indicators using FacebookTimeParser."""
         try:
             timing_info = {}
             
-            # Look for posting time patterns
-            page_text = self.driver.page_source.lower()
-            time_patterns = [
-                r'posted\s+([^<]*ago)',
-                r'listed\s+([^<]*ago)',
-                r'(\d+)\s+(minutes?|hours?|days?|weeks?|months?)\s+ago'
-            ]
+            # Get page content for time extraction
+            page_html = self.driver.page_source
+            page_text = page_html.lower()
             
-            for pattern in time_patterns:
-                matches = re.findall(pattern, page_text, re.IGNORECASE)
-                if matches:
-                    time_text = matches[0] if isinstance(matches[0], str) else ' '.join(matches[0])
-                    timing_info['posted_time'] = time_text.strip()
-                    break
+            # Extract timing expressions from HTML using FacebookTimeParser
+            from facebook_time_parser import extract_time_from_html
+            timing_expressions = extract_time_from_html(page_html)
+            
+            if timing_expressions:
+                self.logger.debug(f"Found timing expressions: {timing_expressions}")
+                
+                # Parse the first (most relevant) timing expression
+                primary_expression = timing_expressions[0]
+                parsed_minutes = self.time_parser.parse_time_expression(primary_expression)
+                
+                if parsed_minutes is not None:
+                    # Calculate timestamp from minutes ago
+                    from datetime import datetime, timedelta
+                    posting_time = datetime.now() - timedelta(minutes=parsed_minutes)
+                    
+                    timing_info.update({
+                        'facebook_time_text': primary_expression,  # Original Facebook text like "just listed"
+                        'parsed_minutes_ago': parsed_minutes,      # Converted to minutes
+                        'calculated_timestamp': posting_time.isoformat(),  # When it was actually posted
+                        'extraction_method': 'facebook_time_parser',
+                        'all_expressions_found': timing_expressions[:5]  # Keep first 5 for debugging
+                    })
+                    
+                    self.logger.info(f"✅ Parsed timing: '{primary_expression}' = {parsed_minutes} minutes ago (posted at {posting_time.strftime('%Y-%m-%d %H:%M:%S')})")
+                else:
+                    timing_info.update({
+                        'facebook_time_text': primary_expression,
+                        'parsed_minutes_ago': None,
+                        'parse_error': 'Could not parse time expression',
+                        'all_expressions_found': timing_expressions[:5]
+                    })
+            else:
+                # Fallback to basic regex patterns if no expressions found
+                self.logger.debug("No timing expressions found with HTML parser, trying basic patterns...")
+                
+                time_patterns = [
+                    r'posted\s+([^<]*ago)',
+                    r'listed\s+([^<]*ago)',
+                    r'(\d+)\s+(minutes?|hours?|days?|weeks?|months?)\s+ago'
+                ]
+                
+                for pattern in time_patterns:
+                    matches = re.findall(pattern, page_text, re.IGNORECASE)
+                    if matches:
+                        time_text = matches[0] if isinstance(matches[0], str) else ' '.join(matches[0])
+                        parsed_minutes = self.time_parser.parse_time_expression(time_text)
+                        
+                        if parsed_minutes is not None:
+                            from datetime import datetime, timedelta
+                            posting_time = datetime.now() - timedelta(minutes=parsed_minutes)
+                            
+                            timing_info.update({
+                                'facebook_time_text': time_text.strip(),
+                                'parsed_minutes_ago': parsed_minutes,
+                                'calculated_timestamp': posting_time.isoformat(),
+                                'extraction_method': 'regex_fallback'
+                            })
+                            
+                            self.logger.info(f"✅ Regex fallback parsed: '{time_text}' = {parsed_minutes} minutes ago")
+                            break
+                        else:
+                            timing_info.update({
+                                'facebook_time_text': time_text.strip(),
+                                'parsed_minutes_ago': None,
+                                'extraction_method': 'regex_unparseable'
+                            })
             
             # Look for urgency indicators
             urgency_phrases = ['urgent', 'quick sale', 'today only', 'must sell', 'moving sale']
@@ -2622,6 +2760,106 @@ class FacebookMarketplaceScraper:
         except Exception as e:
             self.logger.error(f"Failed to extract enhanced product details: {e}")
             return None
+    
+    def _extract_timing_from_element(self, element) -> Dict[str, Any]:
+        """Extract Facebook timing information from listing element using FacebookTimeParser."""
+        try:
+            timing_info = {}
+            
+            # Get element HTML and text for timing extraction
+            element_html = element.get_attribute('outerHTML')
+            element_text = element.text
+            
+            # First try to extract timing expressions from the element HTML
+            from facebook_time_parser import extract_time_from_html
+            timing_expressions = extract_time_from_html(element_html)
+            
+            if timing_expressions:
+                self.logger.debug(f"Found timing expressions in element: {timing_expressions}")
+                
+                # Parse the first (most relevant) timing expression
+                primary_expression = timing_expressions[0]
+                parsed_minutes = self.time_parser.parse_time_expression(primary_expression)
+                
+                if parsed_minutes is not None:
+                    # Calculate timestamp from minutes ago
+                    from datetime import datetime, timedelta
+                    posting_time = datetime.now() - timedelta(minutes=parsed_minutes)
+                    
+                    timing_info.update({
+                        'facebook_time_text': primary_expression,  # Original Facebook text like "just listed"
+                        'parsed_minutes_ago': parsed_minutes,      # Converted to minutes
+                        'calculated_timestamp': posting_time.isoformat(),  # When it was actually posted
+                        'extraction_method': 'facebook_time_parser_element',
+                        'all_expressions_found': timing_expressions[:3]  # Keep first 3 for debugging
+                    })
+                    
+                    self.logger.debug(f"⏰ Element timing: '{primary_expression}' = {parsed_minutes} minutes ago")
+                else:
+                    timing_info.update({
+                        'facebook_time_text': primary_expression,
+                        'parsed_minutes_ago': None,
+                        'parse_error': 'Could not parse time expression',
+                        'extraction_method': 'facebook_time_parser_element_failed',
+                        'all_expressions_found': timing_expressions[:3]
+                    })
+            else:
+                # Fallback: Look for timing patterns in element text
+                element_text_lower = element_text.lower() if element_text else ''
+                
+                # Common timing patterns for listing cards
+                time_patterns = [
+                    r'(\d+)\s*(m|h|d|w)\b',  # 3h, 1w, 23h, 5m
+                    r'(just\s+listed|moments\s+ago|yesterday|today)',  # Text expressions
+                    r'(\d+)\s+(minutes?|hours?|days?|weeks?)\s+ago'
+                ]
+                
+                for pattern in time_patterns:
+                    matches = re.findall(pattern, element_text_lower, re.IGNORECASE)
+                    if matches:
+                        time_text = matches[0] if isinstance(matches[0], str) else ' '.join(str(x) for x in matches[0] if x)
+                        parsed_minutes = self.time_parser.parse_time_expression(time_text)
+                        
+                        if parsed_minutes is not None:
+                            from datetime import datetime, timedelta
+                            posting_time = datetime.now() - timedelta(minutes=parsed_minutes)
+                            
+                            timing_info.update({
+                                'facebook_time_text': time_text.strip(),
+                                'parsed_minutes_ago': parsed_minutes,
+                                'calculated_timestamp': posting_time.isoformat(),
+                                'extraction_method': 'regex_element_text'
+                            })
+                            
+                            self.logger.debug(f"⏰ Element regex: '{time_text}' = {parsed_minutes} minutes ago")
+                            break
+                        else:
+                            timing_info.update({
+                                'facebook_time_text': time_text.strip(),
+                                'parsed_minutes_ago': None,
+                                'extraction_method': 'regex_element_unparseable'
+                            })
+            
+            # If no timing info found, set default values
+            if not timing_info:
+                timing_info = {
+                    'facebook_time_text': None,
+                    'parsed_minutes_ago': None,
+                    'calculated_timestamp': None,
+                    'extraction_method': 'none_found'
+                }
+            
+            return timing_info
+            
+        except Exception as e:
+            self.logger.debug(f"Failed to extract timing from element: {e}")
+            return {
+                'facebook_time_text': None,
+                'parsed_minutes_ago': None,
+                'calculated_timestamp': None,
+                'extraction_method': 'error',
+                'error': str(e)
+            }
     
     def __del__(self):
         """Cleanup when object is destroyed."""
