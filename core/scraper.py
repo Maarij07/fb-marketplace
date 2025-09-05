@@ -28,6 +28,7 @@ from selenium.common.exceptions import (
 
 from core.json_manager import JSONDataManager
 from facebook_time_parser import FacebookTimeParser
+from core.product_filter import SmartProductFilter
 
 
 class FacebookMarketplaceScraper:
@@ -102,6 +103,10 @@ class FacebookMarketplaceScraper:
         
         # Initialize Facebook Time Parser for timing extraction
         self.time_parser = FacebookTimeParser()
+        
+        # Initialize Smart Product Filter for accurate model matching
+        self.product_filter = SmartProductFilter()
+        self.enable_smart_filtering = self.settings.get_bool('ENABLE_SMART_FILTERING', True)
     
     def setup_driver(self):
         """Initialize and configure Chrome WebDriver."""
@@ -242,6 +247,9 @@ class FacebookMarketplaceScraper:
         """Navigate to Facebook Marketplace with iPhone 16 search."""
         try:
             self.logger.info("Navigating to Facebook Marketplace...")
+            
+            # Store search query for smart filtering
+            self._current_search_query = "iPhone 16"
             
             # First navigate to main marketplace
             marketplace_url = "https://www.facebook.com/marketplace"
@@ -431,19 +439,14 @@ class FacebookMarketplaceScraper:
                 
                 return []
             
-                    # Extract data from each listing
+            # Extract data from each listing
+            raw_listings = []
             for i, element in enumerate(listing_elements[:self.search_config['max_listings']]):
                 try:
                     listing_data = self._extract_listing_data(element, i)
                     if listing_data:
-                        listings.append(listing_data)
+                        raw_listings.append(listing_data)
                         self.session_stats['listings_found'] += 1
-                        
-                        # 🔥 HOT RELOAD FEATURE: Save product immediately for standard scraping
-                        self._save_product_immediately_standard(listing_data, i + 1)
-                        
-                        # Send real-time notification for standard scraping
-                        self._send_standard_product_notification(listing_data, i + 1, len(listing_elements))
                     
                     # Add delay between extractions
                     if i % 5 == 0:  # Every 5 items
@@ -453,6 +456,60 @@ class FacebookMarketplaceScraper:
                     self.logger.warning(f"Failed to extract listing {i}: {e}")
                     self.session_stats['errors_count'] += 1
                     continue
+            
+            # 🔥 SMART FILTERING: Apply intelligent product filtering to exclude variants
+            if self.enable_smart_filtering and raw_listings:
+                search_query = getattr(self, '_current_search_query', 'iPhone 16')  # Default or stored query
+                
+                self.logger.info(f"🧠 Applying smart product filtering for search: '{search_query}'")
+                self.logger.info(f"Found {len(raw_listings)} raw products before filtering")
+                
+                try:
+                    # Filter products using smart filtering
+                    filtered_listings, excluded_listings = self.product_filter.filter_product_list(raw_listings, search_query)
+                    
+                    # Log filtering results
+                    if excluded_listings:
+                        filter_stats = self.product_filter.get_filter_statistics(excluded_listings)
+                        self.logger.info(f"📊 Smart filtering results: {len(filtered_listings)} included, {len(excluded_listings)} excluded")
+                        self.logger.info(f"📊 Exclusion reasons: {filter_stats}")
+                        
+                        # Log some examples of excluded products
+                        self.logger.info("📋 Sample excluded products:")
+                        for i, excluded in enumerate(excluded_listings[:3]):
+                            title = excluded.get('title', 'Unknown')[:50]
+                            reason = excluded.get('exclusion_reason', 'Unknown reason')
+                            self.logger.info(f"  {i+1}. {title}... - Reason: {reason}")
+                    
+                    # Use filtered listings for further processing
+                    listings = filtered_listings
+                    
+                    # Update session stats
+                    self.session_stats['raw_listings_found'] = len(raw_listings)
+                    self.session_stats['filtered_listings_included'] = len(filtered_listings)
+                    self.session_stats['filtered_listings_excluded'] = len(excluded_listings)
+                    
+                except Exception as filter_error:
+                    self.logger.error(f"Smart filtering failed: {filter_error}")
+                    self.logger.info("Falling back to unfiltered results")
+                    listings = raw_listings
+            else:
+                # No filtering applied
+                if not self.enable_smart_filtering:
+                    self.logger.info("Smart filtering is disabled, using all extracted products")
+                listings = raw_listings
+            
+            # 🔥 HOT RELOAD FEATURE: Save and notify for final filtered products
+            for i, listing_data in enumerate(listings):
+                try:
+                    # Save product immediately for standard scraping
+                    self._save_product_immediately_standard(listing_data, i + 1)
+                    
+                    # Send real-time notification for standard scraping
+                    self._send_standard_product_notification(listing_data, i + 1, len(listings))
+                    
+                except Exception as e:
+                    self.logger.warning(f"Failed to save/notify for listing {i+1}: {e}")
             
             self.logger.info(f"Successfully extracted {len(listings)} listings")
             return listings
@@ -1036,6 +1093,9 @@ class FacebookMarketplaceScraper:
         """Navigate to Facebook Marketplace with custom search query."""
         try:
             self.logger.info(f"Navigating to Facebook Marketplace with search: {search_query}")
+            
+            # Store search query for smart filtering
+            self._current_search_query = search_query
             
             # First navigate to main marketplace
             marketplace_url = "https://www.facebook.com/marketplace"
