@@ -444,25 +444,13 @@ class JSONDataManager:
         data = self.load_data()
         products = data.get("products", [])
         
-        # Fix missing timestamps for existing products
-        current_time = datetime.now().isoformat()
-        for product in products:
-            if not product.get('added_at'):
-                product['added_at'] = current_time
-            if not product.get('created_at'):
-                product['created_at'] = product.get('added_at', current_time)
-            # Fix seller info for dashboard display
-            if not product.get('seller_name'):
-                seller_info = product.get('seller', {}).get('info', 'Unknown Seller')
-                product['seller_name'] = seller_info if seller_info != 'Not extracted' else 'Private Seller'
+        # DO NOT modify existing data - just return it
+        # The posted_date and created_at fields should be preserved as-is
         
-        # Save updated data back to file
-        self.save_data(data)
-        
-        # Sort by added_at timestamp (most recent first)
+        # Sort by created_at or added_at timestamp (most recent first)
         sorted_products = sorted(
             products,
-            key=lambda x: x.get('added_at', '1970-01-01T00:00:00'),
+            key=lambda x: x.get('created_at', x.get('added_at', '1970-01-01T00:00:00')),
             reverse=True
         )
         
@@ -590,6 +578,128 @@ class JSONDataManager:
         except Exception as e:
             self.logger.error(f"Failed to cleanup old data: {e}")
             return 0
+    
+    def safe_cleanup_unwanted_variants(self, search_query: str, max_age_minutes: int = 60) -> Dict[str, int]:
+        """🔥 SAFETY NET: Remove unwanted variants from current scraping session only.
+        
+        Args:
+            search_query: Current search query (e.g., "iPhone 14", "iPhone 14 Plus")
+            max_age_minutes: Only clean products added in the last N minutes (default: 60 min)
+            
+        Returns:
+            Dict with cleanup statistics
+        """
+        try:
+            from datetime import datetime, timedelta
+            from core.product_filter import SmartProductFilter
+            
+            data = self.load_data()
+            products = data.get("products", [])
+            
+            if not products:
+                return {'removed': 0, 'kept': len(products), 'error': None}
+            
+            # Calculate cutoff time for current session safety
+            cutoff_time = datetime.now() - timedelta(minutes=max_age_minutes)
+            
+            # Initialize product filter
+            product_filter = SmartProductFilter()
+            
+            # Separate recent products (current session) from old products (keep unchanged)
+            recent_products = []
+            old_products = []
+            
+            for product in products:
+                if self._is_product_from_current_session(product, cutoff_time):
+                    recent_products.append(product)
+                else:
+                    old_products.append(product)
+            
+            self.logger.info(f"🛡️ Variant cleanup: Found {len(recent_products)} recent products and {len(old_products)} older products")
+            
+            if not recent_products:
+                self.logger.info(f"🛡️ No recent products to check for variants")
+                return {'removed': 0, 'kept': len(products), 'error': None, 'recent_products': 0}
+            
+            # Apply smart filtering ONLY to recent products
+            self.logger.info(f"🛡️ Applying variant cleanup to recent products for search: '{search_query}'")
+            
+            filtered_recent, excluded_recent = product_filter.filter_product_list(recent_products, search_query)
+            
+            # Count what was removed
+            removed_count = len(excluded_recent)
+            kept_recent = len(filtered_recent)
+            
+            # Log cleanup results
+            if excluded_recent:
+                filter_stats = product_filter.get_filter_statistics(excluded_recent)
+                self.logger.info(f"🛡️ Variant cleanup results: {kept_recent} recent products kept, {removed_count} removed")
+                self.logger.info(f"🛡️ Removal reasons: {filter_stats}")
+                
+                # Log some examples of removed products
+                self.logger.info(f"🛡️ Sample removed products:")
+                for i, removed in enumerate(excluded_recent[:3]):
+                    title = removed.get('title', 'Unknown')[:60]
+                    reason = removed.get('exclusion_reason', 'Unknown reason')
+                    self.logger.info(f"  {i+1}. {title}... - Reason: {reason}")
+            else:
+                self.logger.info(f"🛡️ No unwanted variants found in recent products")
+            
+            # Combine old products (unchanged) + filtered recent products
+            data["products"] = old_products + filtered_recent
+            
+            # Update summary and save
+            self.update_summary(data)
+            
+            if removed_count > 0:
+                success = self.save_data(data)
+                if success:
+                    self.logger.info(f"🛡️ Successfully cleaned up {removed_count} unwanted variants from recent session")
+                else:
+                    self.logger.error(f"🛡️ Failed to save after variant cleanup")
+                    return {'removed': 0, 'kept': len(products), 'error': 'Failed to save after cleanup'}
+            
+            return {
+                'removed': removed_count,
+                'kept': len(data["products"]),
+                'recent_products': len(recent_products),
+                'old_products_preserved': len(old_products),
+                'error': None
+            }
+            
+        except Exception as e:
+            self.logger.error(f"🛡️ Variant cleanup failed: {e}")
+            return {'removed': 0, 'kept': len(data.get("products", [])), 'error': str(e)}
+    
+    def _is_product_from_current_session(self, product: Dict[str, Any], cutoff_time: datetime) -> bool:
+        """Check if product is from current scraping session (within time window)."""
+        try:
+            # Check multiple timestamp fields
+            timestamp_fields = ['added_at', 'hot_reload_timestamp', 'created_at']
+            
+            for field in timestamp_fields:
+                timestamp_str = product.get(field, '')
+                if timestamp_str:
+                    try:
+                        # Parse ISO format timestamp
+                        if 'T' in timestamp_str:
+                            timestamp = datetime.fromisoformat(timestamp_str.replace('Z', '+00:00'))
+                            # Remove timezone info for comparison if present
+                            if timestamp.tzinfo is not None:
+                                timestamp = timestamp.replace(tzinfo=None)
+                            
+                            # If this product is newer than cutoff, it's from current session
+                            if timestamp >= cutoff_time:
+                                return True
+                    except (ValueError, TypeError):
+                        continue
+            
+            # If we can't parse any timestamps or all are too old, treat as old product
+            return False
+            
+        except Exception as e:
+            # If any error, treat as old product to be safe
+            return False
     
     def _is_product_recent(self, product: Dict[str, Any], cutoff_time: datetime) -> bool:
         """Check if product is recent enough to keep."""

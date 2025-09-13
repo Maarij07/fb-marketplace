@@ -1,14 +1,31 @@
-selenium
-beautifulsoup4
-requests
-schedule
-flask
-flask-cors
-pandas
-plotly
-python-dotenv
-webdriver-manager
-apscheduler
-sqlalchemy
-openpyxl
-xlsxwriter
+# Facebook Marketplace Automation - EXE Requirements
+# Core Dependencies
+selenium==4.25.0
+beautifulsoup4==4.12.3
+requests==2.32.3
+flask==3.1.0
+flask-cors==5.0.0
+pandas==2.2.3
+python-dotenv==1.0.1
+webdriver-manager==4.0.2
+apscheduler==3.10.4
+sqlalchemy==2.0.36
+openpyxl==3.1.5
+xlsxwriter==3.2.0
+lxml==5.3.0
+
+# Google Sheets Integration
+google-api-python-client==2.150.0
+google-auth==2.35.0
+google-auth-oauthlib==1.2.1
+google-auth-httplib2==0.2.0
+
+# PyInstaller for EXE creation
+pyinstaller==6.15.0
+altgraph==0.17.4
+pefile==2023.2.7
+pywin32-ctypes==0.2.3
+pyinstaller-hooks-contrib==2025.8
+
+# Windows-specific
+pywin32==308

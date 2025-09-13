@@ -129,64 +129,85 @@ class SmartProductFilter:
                 'strict_matching': True
             }
         }
-        
-        # Common exclusion patterns
+        # Global exclusion patterns - Enhanced with more accessory keywords
         self.global_exclusions = [
             'case', 'cover', 'screen protector', 'charger', 'cable', 'adapter',
             'battery', 'replacement', 'parts', 'repair', 'service', 'unlock',
             'sim', 'memory card', 'headphones', 'airpods', 'bluetooth', 'speaker',
-            'holder', 'mount', 'stand', 'dock', 'wireless', 'power bank'
+            'holder', 'mount', 'stand', 'dock', 'wireless', 'power bank',
+            'tempered glass', 'magsafe', 'charging', 'wallet', 'folio', 'glass',
+            'shield', 'bumper', 'pouch', 'sleeve', 'skin', 'film', 'leather',
+            'silicone', 'tpu', 'hard', 'soft', 'wallet', 'flip', 'holster'
         ]
         
-        # Version/generation exclusion patterns
+        # Version/generation exclusion patterns (removed 'generation' since it's legitimate for iPads, etc.)
         self.version_exclusions = [
-            'generation', 'gen', 'version', 'ver', 'v2', 'v3', 'mk2', 'mk3', '2nd', '3rd'
+            'gen', 'version', 'ver', 'v2', 'v3', 'mk2', 'mk3', '2nd', '3rd'
         ]
         
         self.logger.info("Smart Product Filter initialized")
     
     def should_include_product(self, product_title: str, target_search: str) -> Tuple[bool, str]:
         """
-        Determine if a product should be included based on smart filtering rules.
+        Determine if a product should be included based on enhanced suffix-based filtering rules.
+        
+        Enhanced Logic:
+        1. HIGHEST PRIORITY: If search query is found EXACTLY in product title, ALWAYS include
+        2. Second Priority: Apply smart phone filtering for recognized brands
+        3. Third Priority: If smart filtering fails, use substring matching fallback
+        4. Always Apply: Global exclusions (accessories like case, cover, etc.)
         
         Args:
             product_title: The title of the product found
-            target_search: The original search query (e.g., "iPhone 16")
+            target_search: The original search query (e.g., "iPhone 16", "iPad 9th generation")
             
         Returns:
             Tuple[bool, str]: (should_include, exclusion_reason)
         """
         try:
-            # Clean and normalize inputs
+            # HIGHEST PRIORITY: Direct substring match check (before any cleaning)
+            # If the search query is found exactly in the product title, include it
+            if target_search.lower() in product_title.lower():
+                # Still check for accessories even with exact match
+                if self._contains_global_exclusions(product_title.lower()):
+                    return False, "Contains accessory/non-phone keywords (despite exact match)"
+                return True, f"Exact match: search query '{target_search}' found in product title"
+            
+            # Clean and normalize inputs for further processing
             title_clean = self._clean_title(product_title)
             search_clean = self._clean_title(target_search)
             
-            # First, check for global exclusions (accessories, etc.)
+            # Check for global exclusions (accessories, etc.)
             if self._contains_global_exclusions(title_clean):
                 return False, "Contains accessory/non-phone keywords"
             
-            # Parse the target search to extract brand and model
+            # Try to parse the target search to extract brand and model
             target_info = self._parse_phone_model(search_clean)
-            if not target_info:
-                # If we can't parse the target, use basic string matching
-                return self._basic_string_matching(title_clean, search_clean)
             
-            # Parse the product title
-            product_info = self._parse_phone_model(title_clean)
-            if not product_info:
-                return False, "Could not parse product model"
+            # PRIORITY 2: Smart Phone Model Matching
+            if target_info:
+                # Parse the product title
+                product_info = self._parse_phone_model(title_clean)
+                if product_info:
+                    # Check if it's the same brand
+                    if target_info['brand'].lower() == product_info['brand'].lower():
+                        # Apply smart model matching for recognized phone brands
+                        return self._smart_model_matching(target_info, product_info)
+                    else:
+                        # Different phone brands - continue to fallback matching
+                        pass
             
-            # Check if it's the same brand
-            if target_info['brand'].lower() != product_info['brand'].lower():
-                return False, f"Different brand: {product_info['brand']} vs {target_info['brand']}"
-            
-            # Apply smart model matching
-            return self._smart_model_matching(target_info, product_info)
+            # PRIORITY 3: Substring Matching Fallback
+            # This handles cases like:
+            # - "Apple iPad 9th generation 64GB Grey excellent condition"
+            # - Non-phone products
+            # - Products that couldn't be parsed by smart matching
+            return self._substring_matching_fallback(title_clean, search_clean)
             
         except Exception as e:
             self.logger.error(f"Error in product filtering: {e}")
-            # Fall back to basic matching if there's an error
-            return self._basic_string_matching(product_title.lower(), target_search.lower())
+            # Final fallback to basic substring matching
+            return self._substring_matching_fallback(product_title.lower(), target_search.lower())
     
     def _clean_title(self, title: str) -> str:
         """Clean and normalize product title."""
@@ -225,8 +246,8 @@ class SmartProductFilter:
             # iPhone patterns - Fixed to handle compound variants like 'Pro Max'
             'iphone': r'iphone\s*(\d+)(\s*(pro\s*max|pro\s*plus|pro|plus\s*max|plus|max|mini|se|c|s))?',
             
-            # Samsung patterns
-            'samsung': r'samsung\s*galaxy\s*s(\d+)(\s*(ultra|plus|edge|fe|lite|neo))?|galaxy\s*note\s*(\d+)(\s*(ultra|plus))?',
+            # Samsung patterns - Fixed to handle common search variations
+            'samsung': r'(?:samsung\s*(?:galaxy\s*)?s(\d+)|galaxy\s*s(\d+)|samsung\s*s(\d+))(\s*(ultra|plus|edge|fe|lite|neo))?|(?:samsung\s*)?galaxy\s*note\s*(\d+)(\s*(ultra|plus))?',
             
             # Google Pixel patterns
             'pixel': r'google\s*pixel\s*(\d+)(\s*(xl|pro|a))?|pixel\s*(\d+)(\s*(xl|pro|a))?',
@@ -278,11 +299,19 @@ class SmartProductFilter:
                         'full_model': f"iPhone {match.group(1)}" + (f" {match.group(3)}" if match.group(3) else "")
                     }
                 
-                # Samsung parsing
+                # Samsung parsing - Updated to handle new flexible regex pattern
                 elif brand_key == 'samsung':
-                    base_model = match.group(1) if match.group(1) else match.group(4)
-                    variant = match.group(3) if match.group(3) else match.group(5)
-                    model_type = "Galaxy S" if match.group(1) else "Galaxy Note"
+                    # Handle multiple capture groups from flexible pattern
+                    # Groups: (s22_variant1, s22_variant2, s22_variant3, suffix, suffix_clean, note_model, note_suffix, note_suffix_clean)
+                    base_model = match.group(1) or match.group(2) or match.group(3) or match.group(6)
+                    variant = match.group(5) or match.group(8)  # Clean variant without leading space
+                    
+                    # Determine if it's Galaxy S or Galaxy Note
+                    if match.group(6):  # Note model matched
+                        model_type = "Galaxy Note"
+                    else:
+                        model_type = "Galaxy S"
+                    
                     return {
                         'brand': 'Samsung',
                         'model': base_model,
@@ -454,10 +483,12 @@ class SmartProductFilter:
         """
         Apply smart model matching rules based on search intent.
         
-        LOGIC:
+        ENHANCED SUFFIX-BASED LOGIC:
         - If you search "iPhone 16" → Only show iPhone 16 (exclude Pro, Plus, etc.)
         - If you search "iPhone 16 Pro" → Only show iPhone 16 Pro (exclude regular 16, Plus, Max)
         - If you search "Redmi Note 10" → Only show Redmi Note 10 (exclude Pro, other models)
+        - Any search term + suffix should be excluded (iPhone 16 + case, iPhone 16 Pro + case)
+        - Any search term with suffix shouldn't match additional suffixes (iPhone 16 Pro ≠ iPhone 16 Pro Max)
         
         Args:
             target_info: Parsed target search info
@@ -474,18 +505,37 @@ class SmartProductFilter:
         target_variants = set(target_info['variants'].lower().split()) if target_info['variants'] else set()
         product_variants = set(product_info['variants'].lower().split()) if product_info['variants'] else set()
         
-        # 3. SMART MATCHING LOGIC - The key insight!
+        # 3. ENHANCED SUFFIX-BASED MATCHING LOGIC
+        
+        # Get all known suffixes/variants from all phone rules combined
+        all_known_suffixes = set()
+        for brand_rules in self.phone_filter_rules.values():
+            all_known_suffixes.update(brand_rules.get('variants_to_exclude', []))
+        
+        # Add accessory suffixes
+        accessory_suffixes = {'case', 'cover', 'screen', 'protector', 'charger', 'cable', 'adapter',
+                             'battery', 'headphone', 'airpod', 'earpod', 'speaker', 'dock', 'stand'}
+        all_known_suffixes.update(accessory_suffixes)
+        
+        # Check if product title contains any suffixes that aren't in the search term
+        product_title_lower = product_info.get('full_model', '').lower()
+        target_search_lower = target_info.get('full_model', '').lower()
         
         # Case A: Target has NO variants (e.g., "iPhone 16", "Redmi Note 10")
         # → Should ONLY include products with NO variants
         # → Should EXCLUDE any products with variants (Pro, Plus, Max, etc.)
         if not target_variants:
+            # Check if product has any known suffix that's not in the target
+            for suffix in all_known_suffixes:
+                if suffix in product_title_lower and suffix not in target_search_lower:
+                    return False, f"Target is base model but product has suffix: '{suffix}'"
+            
+            # If product has variants parsed, exclude it
             if product_variants:
-                # Product has variants but target doesn't - EXCLUDE IT
                 return False, f"Target is base model but product has variants: {', '.join(product_variants)}"
-            else:
-                # Both target and product have no variants - PERFECT MATCH
-                return True, "Exact base model match"
+            
+            # Both target and product have no variants - PERFECT MATCH
+            return True, "Exact base model match"
         
         # Case B: Target HAS variants (e.g., "iPhone 16 Pro", "Redmi Note 10 Pro")
         # → Should ONLY include products with EXACTLY the same variants
@@ -494,8 +544,17 @@ class SmartProductFilter:
             if not product_variants:
                 # Target has variants but product doesn't - EXCLUDE IT
                 return False, f"Target has variants {', '.join(target_variants)} but product is base model"
-            elif target_variants == product_variants:
-                # Exact variant match - PERFECT MATCH
+            
+            # Check for exact variant match
+            if target_variants == product_variants:
+                # Even with matching variants, check if product has any additional suffixes
+                for suffix in all_known_suffixes:
+                    # Only check suffixes that aren't part of the target variants
+                    if suffix not in ' '.join(target_variants).lower():
+                        if suffix in product_title_lower and suffix not in target_search_lower:
+                            return False, f"Product has additional suffix: '{suffix}'"
+                
+                # Exact variant match without extra suffixes - PERFECT MATCH
                 return True, f"Exact variant match: {', '.join(target_variants)}"
             else:
                 # Different variants - EXCLUDE IT
@@ -516,9 +575,10 @@ class SmartProductFilter:
         """Check if title contains globally excluded terms."""
         title_lower = title.lower()
         
-        # Check for accessory keywords
+        # Check for accessory keywords with word boundary check for more precision
         for exclusion in self.global_exclusions:
-            if exclusion in title_lower:
+            # Use word boundaries for more accurate matching
+            if re.search(r'\b' + re.escape(exclusion) + r'\b', title_lower):
                 return True
         
         # Check for version-specific exclusions
@@ -528,9 +588,258 @@ class SmartProductFilter:
         
         return False
     
+    def _substring_matching_fallback(self, title: str, target: str) -> Tuple[bool, str]:
+        """
+        Substring matching fallback with STRICT mode for deep/exact searches.
+        
+        LOGIC:
+        - For long, detailed searches (7+ words): Use EXACT substring matching only
+        - For medium searches (4-6 words): Use flexible word matching (80% threshold)
+        - For short searches (1-3 words): Use very flexible matching
+        
+        This ensures that:
+        - "Apple iPad 9th generation 64GB Grey excellent condition" requires EXACT match
+        - "Cabramatta" type products are excluded from exact searches
+        - Short searches remain flexible
+        
+        Args:
+            title: Cleaned product title
+            target: Cleaned target search query
+            
+        Returns:
+            Tuple[bool, str]: (should_include, reason)
+        """
+        title_lower = title.lower()
+        target_lower = target.lower()
+        
+        # METHOD 1: Always try exact substring match first
+        if target_lower in title_lower:
+            return True, f"Exact substring match: '{target}' found in title"
+        
+        # Count meaningful words in target to determine matching strategy
+        # Remove common noise words first
+        basic_noise = {'the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'of', 'as', 'by'}
+        target_word_count = len([w for w in target_lower.split() if w not in basic_noise])
+        
+        # STRICT MODE: For detailed searches (7+ meaningful words)
+        # These are likely exact product searches and should match very precisely
+        if target_word_count >= 7:
+            # For very detailed searches, only allow exact substring matches
+            # This prevents "Cabramatta" type products from matching detailed queries
+            return False, f"Detailed search requires exact match - no substring match found (query has {target_word_count} words)"
+        
+        # FLEXIBLE MODE: For shorter searches, use enhanced matching
+        # METHOD 2: Enhanced key-term matching for shorter searches
+        target_normalized = self._normalize_for_matching(target_lower)
+        title_normalized = self._normalize_for_matching(title_lower)
+        
+        target_words = set(target_normalized.split())
+        title_words = set(title_normalized.split())
+        
+        # Enhanced noise word filtering for better matching
+        noise_words = {
+            # Condition words
+            'new', 'used', 'excellent', 'good', 'fair', 'condition', 'mint', 'sealed', 
+            'unopened', 'refurbished', 'barely', 'hardly', 'lightly',
+            
+            # Inclusion words
+            'with', 'without', 'includes', 'included', 'comes', 'complete',
+            
+            # Quality words
+            'original', 'genuine', 'authentic', 'official', 'brand', 'perfect',
+            
+            # Packaging words
+            'box', 'packaging', 'accessories', 'manual', 'charger', 'cable',
+            
+            # Location/pickup words
+            'pickup', 'delivery', 'collection', 'meet', 'location', 'area', 'cabramatta',
+            
+            # Generic words
+            'the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'of', 'as', 'by',
+            'is', 'are', 'was', 'were', 'be', 'been', 'have', 'has', 'had', 'will', 'would', 'could',
+            
+            # Sale-related words
+            'sale', 'sell', 'selling', 'price', 'cheap', 'bargain', 'deal', 'offer', 'obo',
+            
+            # Connectivity words
+            'wifi', 'only', 'cellular', '4g', '5g'
+        }
+        
+        # Remove noise words
+        target_words = target_words - noise_words
+        title_words = title_words - noise_words
+        
+        if not target_words:  # If no meaningful words left in target
+            return False, "No meaningful words in search query after noise filtering"
+        
+        # METHOD 3: Core product identifier matching (for medium searches)
+        if 4 <= target_word_count <= 6:
+            target_core = self._extract_core_identifiers(target_normalized)
+            title_core = self._extract_core_identifiers(title_normalized)
+            
+            core_matches = 0
+            total_core = len(target_core) if target_core else 0
+            
+            if target_core and title_core:
+                for key, target_value in target_core.items():
+                    if key in title_core:
+                        title_value = title_core[key]
+                        if self._flexible_value_match(target_value, title_value, key):
+                            core_matches += 1
+            
+            # Require higher core match ratio for medium searches
+            if total_core > 0:
+                core_ratio = core_matches / total_core
+                if core_ratio >= 0.8:  # 80% of core identifiers must match
+                    return True, f"Core identifier match: {core_matches}/{total_core} identifiers matched ({core_ratio:.1%})"
+        
+        # METHOD 4: Word-based matching with strict thresholds
+        matching_words = target_words.intersection(title_words)
+        match_ratio = len(matching_words) / len(target_words)
+        
+        # Stricter thresholds to prevent unwanted matches
+        if len(target_words) <= 3:
+            # Short queries: moderate flexibility (70%)
+            threshold = 0.7
+        elif len(target_words) <= 6:
+            # Medium queries: high precision required (85%)
+            threshold = 0.85
+        else:
+            # This shouldn't happen as we already handled 7+ words above
+            threshold = 1.0  # Require perfect match
+        
+        if match_ratio >= threshold:
+            return True, f"Word-based match: {len(matching_words)}/{len(target_words)} words matched ({match_ratio:.1%})"
+        
+        # METHOD 5: Fuzzy string similarity (only for very short queries)
+        if len(target_words) <= 3:
+            similarity = difflib.SequenceMatcher(None, title_lower, target_lower).ratio()
+            
+            if similarity >= 0.7:  # Higher threshold for similarity
+                return True, f"Fuzzy similarity match: {similarity:.2f}"
+            else:
+                return False, f"No sufficient match found (word ratio: {match_ratio:.1%}, similarity: {similarity:.2f})"
+        else:
+            return False, f"No sufficient match found (word ratio: {match_ratio:.1%}, required: {threshold:.1%})"
+    
+    def _normalize_for_matching(self, text: str) -> str:
+        """
+        Normalize text for better matching by standardizing variations.
+        
+        Example:
+        - "64GB" and "64g" both become "64gb"
+        - "iPad" and "Ipad" both become "ipad"
+        - "9th generation" and "9th-gen" both become "9th generation"
+        """
+        normalized = text.lower()
+        
+        # Storage normalization: 64g -> 64gb, 1t -> 1tb
+        normalized = re.sub(r'(\d+)\s*g\b(?!b)', r'\1gb', normalized)
+        normalized = re.sub(r'(\d+)\s*t\b(?!b)', r'\1tb', normalized)
+        
+        # Generation normalization: 9th-gen -> 9th generation
+        normalized = re.sub(r'(\d+)\w*\s*-?\s*gen(?:eration)?', r'\1th generation', normalized)
+        
+        # Remove special characters for better word matching
+        normalized = re.sub(r'[^a-zA-Z0-9\s]', ' ', normalized)
+        
+        # Normalize multiple spaces
+        normalized = ' '.join(normalized.split())
+        
+        return normalized
+    
+    def _extract_core_identifiers(self, text: str) -> Dict[str, str]:
+        """
+        Extract core product identifiers for matching.
+        
+        Returns dict with keys like 'brand', 'product_type', 'generation', 'storage'
+        """
+        identifiers = {}
+        
+        # Brand patterns
+        brand_patterns = {
+            'apple': r'\bapple\b',
+            'samsung': r'\bsamsung\b', 
+            'google': r'\bgoogle\b',
+            'microsoft': r'\bmicrosoft\b',
+            'nintendo': r'\bnintendo\b'
+        }
+        
+        for brand, pattern in brand_patterns.items():
+            if re.search(pattern, text):
+                identifiers['brand'] = brand
+                break
+        
+        # Product type patterns
+        product_patterns = {
+            'ipad': r'\bipad\b',
+            'iphone': r'\biphone\b',
+            'macbook': r'\bmacbook\b',
+            'galaxy': r'\bgalaxy\b',
+            'pixel': r'\bpixel\b',
+            'surface': r'\bsurface\b',
+            'switch': r'\bswitch\b'
+        }
+        
+        for product, pattern in product_patterns.items():
+            if re.search(pattern, text):
+                identifiers['product_type'] = product
+                break
+        
+        # Generation/model patterns
+        generation_match = re.search(r'(\d+)(?:th|st|nd|rd)?\s+generation', text)
+        if generation_match:
+            identifiers['generation'] = f"{generation_match.group(1)}th generation"
+        
+        # Storage patterns
+        storage_match = re.search(r'(\d+)\s*(gb|tb)', text)
+        if storage_match:
+            identifiers['storage'] = f"{storage_match.group(1)}{storage_match.group(2)}"
+        
+        # Model number patterns (iPhone 16, Galaxy S24, etc.)
+        model_match = re.search(r'\b(\d+)\b(?!\s*(gb|tb|th|st|nd|rd))', text)
+        if model_match:
+            identifiers['model'] = model_match.group(1)
+        
+        return identifiers
+    
+    def _flexible_value_match(self, target_value: str, title_value: str, key: str) -> bool:
+        """
+        Flexible matching for specific identifier types.
+        
+        Args:
+            target_value: Value from search query
+            title_value: Value from product title
+            key: Type of identifier (brand, storage, etc.)
+        """
+        # Exact match
+        if target_value == title_value:
+            return True
+        
+        # Storage flexible matching (64gb matches 64g)
+        if key == 'storage':
+            target_num = re.search(r'(\d+)', target_value)
+            title_num = re.search(r'(\d+)', title_value)
+            if target_num and title_num:
+                return target_num.group(1) == title_num.group(1)
+        
+        # Generation flexible matching (9th generation matches 9th-gen)
+        if key == 'generation':
+            target_num = re.search(r'(\d+)', target_value)
+            title_num = re.search(r'(\d+)', title_value)
+            if target_num and title_num:
+                return target_num.group(1) == title_num.group(1)
+        
+        # Model flexible matching
+        if key == 'model':
+            return target_value == title_value
+        
+        # Brand and product type should match exactly
+        return target_value == title_value
+    
     def _basic_string_matching(self, title: str, target: str) -> Tuple[bool, str]:
         """
-        Fallback basic string matching when smart parsing fails.
+        Legacy basic string matching method (kept for backward compatibility).
         """
         # Use fuzzy matching to determine similarity
         similarity = difflib.SequenceMatcher(None, title.lower(), target.lower()).ratio()

@@ -30,13 +30,28 @@ def setup_logging(verbose: bool = False):
     # Create logs directory if it doesn't exist
     os.makedirs('logs', exist_ok=True)
     
+    # Create file handler with UTF-8 encoding
+    file_handler = logging.FileHandler('logs/marketplace_automation.log', encoding='utf-8')
+    file_handler.setFormatter(logging.Formatter(log_format))
+    
+    # Create console handler with UTF-8 encoding (or fallback gracefully)
+    console_handler = logging.StreamHandler(sys.stdout)
+    console_handler.setFormatter(logging.Formatter(log_format))
+    
+    # Set up UTF-8 output for Windows console if possible
+    if os.name == 'nt':  # Windows
+        try:
+            # Try to set console to UTF-8
+            import codecs
+            sys.stdout = codecs.getwriter('utf-8')(sys.stdout.buffer, errors='replace')
+        except (AttributeError, OSError):
+            # Fallback: keep original stdout but handle encoding errors gracefully
+            pass
+    
     logging.basicConfig(
         level=log_level,
         format=log_format,
-        handlers=[
-            logging.FileHandler('logs/marketplace_automation.log'),
-            logging.StreamHandler(sys.stdout)
-        ]
+        handlers=[file_handler, console_handler]
     )
     
     return logging.getLogger(__name__)

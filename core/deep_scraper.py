@@ -282,28 +282,86 @@ class DeepMarketplaceScraper(FacebookMarketplaceScraper):
         try:
             # Try to get text from the link itself
             link_text = link.text.strip()
-            if link_text and len(link_text) > 5:
+            if link_text and len(link_text) > 5 and not link_text.replace(',','').replace(' ','').replace('$','').replace('AU','').isdigit():
                 return link_text
             
-            # Look in parent elements for title
+            # Look for specific product title selectors
+            title_selectors = [
+                "span[dir='auto']",
+                "div[dir='auto']", 
+                "a > span",
+                "[role='img']"  # Sometimes title is in img aria-label
+            ]
+            
+            # Try to find title elements within the link or its container
+            container = link
+            for level in range(4):  # Go up a few levels to find container
+                try:
+                    # Look for title elements in current container
+                    for selector in title_selectors:
+                        title_elements = container.find_elements(By.CSS_SELECTOR, selector)
+                        for elem in title_elements:
+                            text = elem.text.strip()
+                            # Good title criteria
+                            if (text and len(text) > 10 and len(text) < 200 and
+                                not text.replace(',','').replace(' ','').replace('$','').replace('AU','').replace('kr','').replace('SEK','').isdigit() and
+                                not text.lower().startswith('sek') and 
+                                not text.lower().startswith('kr') and
+                                ('iphone' in text.lower() or len(text) > 15)):
+                                return text
+                    
+                    # Also check aria-label attributes
+                    aria_label = container.get_attribute('aria-label')
+                    if (aria_label and len(aria_label) > 10 and len(aria_label) < 200 and
+                        ('iphone' in aria_label.lower() or 'AU$' in aria_label or 'AUD' in aria_label)):
+                        return aria_label
+                    
+                    # Move to parent container
+                    container = container.find_element(By.XPATH, "..")
+                    
+                except:
+                    break
+            
+            # Look in parent elements for title - more comprehensive search
             parent = link
-            for level in range(3):
+            for level in range(5):  # Check more parent levels
                 try:
                     parent = parent.find_element(By.XPATH, "..")
                     parent_text = parent.text.strip()
+                    
                     if parent_text and len(parent_text) > 10:
-                        # Extract first meaningful line as title
+                        # Extract meaningful lines from parent text
                         lines = parent_text.split('\n')
+                        
                         for line in lines:
                             line = line.strip()
-                            if (len(line) > 5 and 
-                                not line.startswith('SEK') and 
-                                not line.startswith('$') and
-                                not line.replace(',','').replace(' ','').isdigit()):
+                            # Good title line criteria
+                            if (len(line) > 10 and len(line) < 200 and 
+                                not line.replace(',','').replace(' ','').replace('$','').replace('AU','').replace('kr','').replace('SEK','').isdigit() and
+                                not line.lower().startswith('sek') and 
+                                not line.lower().startswith('kr') and
+                                not line.lower().endswith(' km') and  # Avoid location distance
+                                ('iphone' in line.lower() or 'AU$' in line or 'AUD' in line or len(line) > 20)):
                                 return line
-                        break
                 except:
                     break
+            
+            # Fallback: try to extract from href URL if it contains item ID
+            try:
+                href = link.get_attribute('href')
+                if href and '/marketplace/item/' in href:
+                    # Sometimes the URL contains encoded title information
+                    import urllib.parse
+                    parsed_url = urllib.parse.urlparse(href)
+                    if parsed_url.query:
+                        # Check query parameters for title info
+                        query_params = urllib.parse.parse_qs(parsed_url.query)
+                        for param_name, param_values in query_params.items():
+                            for value in param_values:
+                                if len(value) > 10 and ('iphone' in value.lower() or 'AU$' in value):
+                                    return urllib.parse.unquote(value)
+            except:
+                pass
             
             return f"Product {index+1}"
             
@@ -413,6 +471,10 @@ class DeepMarketplaceScraper(FacebookMarketplaceScraper):
             self.driver.get(product_url)
             time.sleep(random.uniform(3, 5))
             
+            # Create directory for HTML source pages if it doesn't exist
+            html_source_dir = os.path.join(self.output_dir, "product_html_sources")
+            os.makedirs(html_source_dir, exist_ok=True)
+            
             # Initialize comprehensive data structure
             comprehensive_data = {
                 'basic_info': {
@@ -484,8 +546,23 @@ class DeepMarketplaceScraper(FacebookMarketplaceScraper):
     def _extract_basic_product_info(self, data: Dict[str, Any]):
         """Extract basic product information from the page."""
         try:
-            # Extract price information
-            price_info = self._extract_detailed_price()
+            # Save HTML source page before extracting price
+            self._save_product_html_source(data)
+            
+            # Extract price information - prioritize title extraction first
+            title = data['basic_info'].get('title', '')
+            price_info = self._extract_price_from_title(title)
+            
+            # If no price found in title, fall back to HTML extraction
+            if not price_info or price_info.get('amount', '0') == '0':
+                self.logger.info("No price found in title, trying HTML extraction...")
+                html_price_info = self._extract_detailed_price()
+                # Only use HTML price if it's not obviously wrong (like Swedish kr when title has AU$)
+                if self._is_valid_price_extraction(html_price_info, title):
+                    price_info = html_price_info
+                else:
+                    self.logger.warning(f"HTML price extraction seems invalid: {html_price_info}, keeping title price")
+            
             data['basic_info']['price'] = price_info
             
             # Extract location information
@@ -501,6 +578,73 @@ class DeepMarketplaceScraper(FacebookMarketplaceScraper):
         except Exception as e:
             self.logger.error(f"Failed to extract basic product info: {e}")
     
+    def _save_product_html_source(self, data: Dict[str, Any]):
+        """Save the HTML source of the product detail page for debugging."""
+        try:
+            # Create unique filename with product ID or timestamp
+            product_id = data['basic_info'].get('product_id', str(int(time.time())))
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            filename = f"product_{product_id}_{timestamp}.html"
+            
+            # Create path in the HTML source directory
+            html_source_dir = os.path.join(self.output_dir, "product_html_sources")
+            filepath = os.path.join(html_source_dir, filename)
+            
+            # Get page source and save to file
+            page_source = self.driver.page_source
+            with open(filepath, 'w', encoding='utf-8') as f:
+                f.write(page_source)
+            
+            self.logger.info(f"✅ Saved product HTML source to: {filepath}")
+            
+            # Store source path in data for reference
+            data['extraction_metadata']['html_source_path'] = filepath
+            
+            # For better debugging, also extract title element text
+            try:
+                title_elements = self.driver.find_elements(By.CSS_SELECTOR, "h1, [data-testid*='title']")
+                title_texts = [elem.text for elem in title_elements if elem.text.strip()]
+                if title_texts:
+                    data['extraction_metadata']['title_elements_found'] = title_texts
+            except Exception as e:
+                self.logger.debug(f"Error extracting title elements: {e}")
+                
+            # Extract all price-related elements for better debugging
+            try:
+                price_selectors = [
+                    "span:contains('$')", 
+                    "span:contains('AU$')",
+                    "span:contains('kr')",
+                    "span:contains('SEK')",
+                    "div:contains('$')",
+                    "div:contains('AU$')",
+                    "[data-testid*='price']"
+                ]
+                
+                price_texts = []
+                for selector in price_selectors:
+                    if ':contains(' in selector:
+                        text_part = selector.split(':contains(')[1].strip(')').strip('\'"')
+                        base_selector = selector.split(':contains(')[0]
+                        
+                        elements = self.driver.find_elements(By.CSS_SELECTOR, base_selector)
+                        for elem in elements:
+                            if text_part in elem.text:
+                                price_texts.append(elem.text)
+                    else:
+                        elements = self.driver.find_elements(By.CSS_SELECTOR, selector)
+                        for elem in elements:
+                            if elem.text.strip():
+                                price_texts.append(elem.text)
+                
+                if price_texts:
+                    data['extraction_metadata']['price_elements_found'] = price_texts
+            except Exception as e:
+                self.logger.debug(f"Error extracting price elements: {e}")
+            
+        except Exception as e:
+            self.logger.error(f"Failed to save HTML source: {e}")
+    
     def _extract_detailed_price(self) -> Dict[str, Any]:
         """Extract detailed price information."""
         try:
@@ -510,7 +654,10 @@ class DeepMarketplaceScraper(FacebookMarketplaceScraper):
             price_patterns = [
                 r'(\d[\d,\s]*[\d])\s*(kr|sek)',  # Price with currency after
                 r'(kr|sek)\s*(\d[\d,\s]*[\d])',  # Currency before price
-                r'(\d[\d,\s]*[\d])\s*:-'         # Swedish price format
+                r'(\d[\d,\s]*[\d])\s*:-',        # Swedish price format
+                r'au\$(\d[\d,\s]*[\d])',         # Australian dollar price
+                r'\$(\d[\d,\s]*[\d])',          # Dollar price
+                r'(\d[\d,\s]*[\d])\s*aud'        # AUD price format
             ]
             
             for pattern in price_patterns:
@@ -522,6 +669,14 @@ class DeepMarketplaceScraper(FacebookMarketplaceScraper):
                             # Currency first format
                             currency = match[0].upper()
                             amount = match[1].replace(' ', '').replace(',', '')
+                        elif 'au$' in match[0] or 'aud' in match[0]:
+                            # Australian dollar
+                            amount = match[1].replace(' ', '').replace(',', '') if len(match) > 1 else match[0].replace('au$', '').replace('aud', '').replace(' ', '').replace(',', '')
+                            currency = 'AUD'
+                        elif '$' in match[0]:
+                            # Dollar price
+                            amount = match[1].replace(' ', '').replace(',', '') if len(match) > 1 else match[0].replace('$', '').replace(' ', '').replace(',', '')
+                            currency = 'AUD'  # Assuming AUD since we're targeting AU marketplace
                         else:
                             # Amount first format
                             amount = match[0].replace(' ', '').replace(',', '')
@@ -530,12 +685,83 @@ class DeepMarketplaceScraper(FacebookMarketplaceScraper):
                         amount = match.replace(' ', '').replace(',', '').replace(':-', '')
                         currency = 'SEK'
                     
+                    # Log what we found for debugging
+                    self.logger.info(f"Found price pattern: amount={amount}, currency={currency}, raw_text={''.join(match) if isinstance(match, tuple) else match}")
+                    
                     return {
                         'amount': amount,
                         'currency': currency,
                         'raw_price_text': f"{' '.join(match) if isinstance(match, tuple) else match}"
                     }
             
+            # Also try to extract price directly from the DOM
+            try:
+                # Try various selectors for price elements
+                price_selectors = [
+                    "span[content]:not([content=''])",  # Common price metadata format
+                    "span:contains('AU$')",
+                    "span:contains('$')",
+                    "div:contains('AU$')",
+                    "div:contains('$')",
+                    "*[data-testid*='price']"
+                ]
+                
+                for selector in price_selectors:
+                    if ':contains(' in selector:
+                        text_part = selector.split(':contains(')[1].strip(')').strip('\'"')
+                        base_selector = selector.split(':contains(')[0]
+                        
+                        elements = self.driver.find_elements(By.CSS_SELECTOR, base_selector)
+                        for elem in elements:
+                            if text_part in elem.text:
+                                # Found potential price element
+                                price_text = elem.text.strip()
+                                # Extract price and currency
+                                currency = 'AUD' if 'AU$' in price_text or 'AUD' in price_text.upper() else 'USD' if '$' in price_text else 'SEK'
+                                amount = re.sub(r'[^\d]', '', price_text)
+                                
+                                if amount:
+                                    self.logger.info(f"Extracted price from DOM: {price_text} -> {amount} {currency}")
+                                    return {
+                                        'amount': amount,
+                                        'currency': currency,
+                                        'raw_price_text': price_text,
+                                        'method': 'dom_extraction'
+                                    }
+                    else:
+                        elements = self.driver.find_elements(By.CSS_SELECTOR, selector)
+                        for elem in elements:
+                            if elem.text.strip() and ('$' in elem.text or any(c.isdigit() for c in elem.text)):
+                                price_text = elem.text.strip()
+                                # Extract price and currency
+                                currency = 'AUD' if 'AU$' in price_text or 'AUD' in price_text.upper() else 'USD' if '$' in price_text else 'SEK'
+                                amount = re.sub(r'[^\d]', '', price_text)
+                                
+                                if amount:
+                                    self.logger.info(f"Extracted price from DOM: {price_text} -> {amount} {currency}")
+                                    return {
+                                        'amount': amount,
+                                        'currency': currency,
+                                        'raw_price_text': price_text,
+                                        'method': 'dom_extraction'
+                                    }
+                                    
+                # Try looking for metadata content attribute
+                price_meta = self.driver.find_elements(By.CSS_SELECTOR, "meta[property*='price'], meta[name*='price']")
+                for meta in price_meta:
+                    content = meta.get_attribute('content')
+                    if content and any(c.isdigit() for c in content):
+                        self.logger.info(f"Extracted price from meta tag: {content}")
+                        return {
+                            'amount': re.sub(r'[^\d]', '', content),
+                            'currency': 'AUD',  # Assuming AUD for meta tags
+                            'raw_price_text': content,
+                            'method': 'meta_extraction'
+                        }
+            except Exception as dom_error:
+                self.logger.error(f"DOM price extraction failed: {dom_error}")
+                
+            self.logger.warning("No price pattern found in the page text or DOM")
             return {'amount': '0', 'currency': 'SEK', 'raw_price_text': 'Not found'}
             
         except Exception as e:
@@ -1103,3 +1329,76 @@ class DeepMarketplaceScraper(FacebookMarketplaceScraper):
         except Exception as e:
             self.logger.error(f"Failed to convert to standard format: {e}")
             return {}
+    
+    def _extract_price_from_title(self, title: str) -> Dict[str, Any]:
+        """Extract price information from product title."""
+        try:
+            if not title:
+                return {'amount': '0', 'currency': 'SEK', 'raw_price_text': 'No title'}
+            
+            self.logger.info(f"Extracting price from title: {title[:100]}...")
+            
+            # Look for various price patterns in the title
+            price_patterns = [
+                r'AU\$\s*(\d+(?:[,\s]*\d+)*)',   # AU$950, AU$1,200, AU$ 950
+                r'AUD\s*(\d+(?:[,\s]*\d+)*)',    # AUD 950, AUD 1200
+                r'\$\s*(\d+(?:[,\s]*\d+)*).*AU', # $950 AU (reverse order)
+                r'(\d+(?:[,\s]*\d+)*)\s*AU\$',  # 950 AU$
+                r'(\d+(?:[,\s]*\d+)*)\s*AUD',   # 950 AUD
+                r'\$\s*(\d+(?:[,\s]*\d+)*)',    # $950 (generic dollar)
+            ]
+            
+            for pattern in price_patterns:
+                matches = re.findall(pattern, title, re.IGNORECASE)
+                if matches:
+                    amount = matches[0].replace(' ', '').replace(',', '')
+                    if amount and amount.isdigit():
+                        # Determine currency based on pattern
+                        if 'AU' in pattern.upper() or 'AUD' in title.upper():
+                            currency = 'AUD'
+                        else:
+                            currency = 'AUD'  # Assume AUD for Australian marketplace
+                        
+                        self.logger.info(f"✅ Extracted price from title: {amount} {currency}")
+                        return {
+                            'amount': amount,
+                            'currency': currency,
+                            'raw_price_text': title,
+                            'method': 'title_extraction'
+                        }
+            
+            # If no price pattern found, return default
+            self.logger.warning(f"No price pattern found in title: {title}")
+            return {'amount': '0', 'currency': 'AUD', 'raw_price_text': title}
+            
+        except Exception as e:
+            self.logger.error(f"Failed to extract price from title: {e}")
+            return {'amount': '0', 'currency': 'AUD', 'error': str(e)}
+    
+    def _is_valid_price_extraction(self, html_price: Dict[str, Any], title: str) -> bool:
+        """Validate if HTML price extraction makes sense given the title context."""
+        try:
+            if not html_price or not isinstance(html_price, dict):
+                return False
+                
+            html_amount = html_price.get('amount', '0')
+            html_currency = html_price.get('currency', 'SEK')
+            
+            # If title contains AU$ or AUD but HTML extraction found SEK or KR, it's likely wrong
+            if ('AU$' in title.upper() or 'AUD' in title.upper()) and html_currency.upper() in ['SEK', 'KR']:
+                self.logger.warning(f"Title has AU$/AUD but HTML extraction found {html_currency} - likely invalid")
+                return False
+            
+            # If HTML price is 0 or very low (like 10) but title suggests higher price, it's suspicious
+            if html_amount.isdigit() and int(html_amount) < 50:
+                # Look for any numbers in title that might be the real price
+                title_numbers = re.findall(r'\d{3,4}', title)  # 3-4 digit numbers (likely prices)
+                if title_numbers and any(int(num) > 100 for num in title_numbers):
+                    self.logger.warning(f"HTML price {html_amount} too low compared to title numbers {title_numbers}")
+                    return False
+            
+            return True
+            
+        except Exception as e:
+            self.logger.error(f"Error validating price extraction: {e}")
+            return True  # Default to true if we can't validate

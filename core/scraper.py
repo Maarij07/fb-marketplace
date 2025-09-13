@@ -457,11 +457,11 @@ class FacebookMarketplaceScraper:
                     self.session_stats['errors_count'] += 1
                     continue
             
-            # 🔥 SMART FILTERING: Apply intelligent product filtering to exclude variants
+            # SMART FILTERING: Apply intelligent product filtering to exclude variants
             if self.enable_smart_filtering and raw_listings:
                 search_query = getattr(self, '_current_search_query', 'iPhone 16')  # Default or stored query
                 
-                self.logger.info(f"🧠 Applying smart product filtering for search: '{search_query}'")
+                self.logger.info(f"[SMART FILTER] Applying smart product filtering for search: '{search_query}'")
                 self.logger.info(f"Found {len(raw_listings)} raw products before filtering")
                 
                 try:
@@ -471,11 +471,11 @@ class FacebookMarketplaceScraper:
                     # Log filtering results
                     if excluded_listings:
                         filter_stats = self.product_filter.get_filter_statistics(excluded_listings)
-                        self.logger.info(f"📊 Smart filtering results: {len(filtered_listings)} included, {len(excluded_listings)} excluded")
-                        self.logger.info(f"📊 Exclusion reasons: {filter_stats}")
+                        self.logger.info(f"[FILTER RESULTS] Smart filtering results: {len(filtered_listings)} included, {len(excluded_listings)} excluded")
+                        self.logger.info(f"[FILTER STATS] Exclusion reasons: {filter_stats}")
                         
                         # Log some examples of excluded products
-                        self.logger.info("📋 Sample excluded products:")
+                        self.logger.info("[EXCLUDED PRODUCTS] Sample excluded products:")
                         for i, excluded in enumerate(excluded_listings[:3]):
                             title = excluded.get('title', 'Unknown')[:50]
                             reason = excluded.get('exclusion_reason', 'Unknown reason')
@@ -499,7 +499,7 @@ class FacebookMarketplaceScraper:
                     self.logger.info("Smart filtering is disabled, using all extracted products")
                 listings = raw_listings
             
-            # 🔥 HOT RELOAD FEATURE: Save and notify for final filtered products
+            # HOT RELOAD FEATURE: Save and notify for final filtered products
             for i, listing_data in enumerate(listings):
                 try:
                     # Save product immediately for standard scraping
@@ -569,50 +569,86 @@ class FacebookMarketplaceScraper:
             
             listing_data['title'] = title[:200]  # Limit title length
             
-            # Extract price - look for currency symbols and numbers
+            # Extract price - PRIORITY: Look for AU$ in title first, then other patterns
             price_text = None
-            price_patterns = [
-                r'\$[\d,]+(?:\.\d{2})?',  # $1,234.56
-                r'[\d,]+\s*kr',           # 1234 kr
-                r'SEK\s*[\d,]+',          # SEK 1234
-                r'[\d,]+\s*SEK',          # 1234 SEK
-                r'AU\$[\d,]+',            # AU$1234
-                r'USD\s*[\d,]+',          # USD 1234
-            ]
+            currency = 'AUD'  # Default to Australian Dollars since we're scraping Sydney marketplace
+            amount = 0
             
-            for pattern in price_patterns:
-                matches = re.findall(pattern, element_text, re.IGNORECASE)
-                if matches:
-                    price_text = matches[0]
-                    break
-            
-            # Parse price into structured format for JSON compatibility
-            if price_text:
-                # Extract numeric value
-                price_numbers = re.findall(r'[\d,]+', price_text)
-                if price_numbers:
-                    try:
-                        amount = int(price_numbers[0].replace(',', ''))
-                        # Determine currency
-                        if 'kr' in price_text.lower() or 'sek' in price_text.lower():
-                            currency = 'SEK'
-                        elif '$' in price_text:
-                            currency = 'USD' if 'AU' not in price_text else 'AUD'
-                        else:
-                            currency = 'SEK'  # Default for Stockholm
-                        
-                        listing_data['price'] = {
-                            'raw_value': price_text,
-                            'currency': currency,
-                            'amount': str(amount),
-                            'note': f'Extracted from: {price_text}'
-                        }
-                    except ValueError:
-                        listing_data['price'] = {'amount': '0', 'currency': 'SEK', 'raw_value': price_text}
-                else:
-                    listing_data['price'] = {'amount': '0', 'currency': 'SEK', 'raw_value': price_text}
+            # First, try to extract AU$ price from the title (most reliable)
+            title_price_match = re.search(r'AU\$([\d,]+)', title, re.IGNORECASE)
+            if title_price_match:
+                price_text = f"AU${title_price_match.group(1)}"
+                amount = int(title_price_match.group(1).replace(',', ''))
+                currency = 'AUD'
+                self.logger.debug(f"Extracted AU$ price from title: {price_text}")
             else:
-                listing_data['price'] = {'amount': '0', 'currency': 'SEK', 'raw_value': 'Not found'}
+                # Fallback: Look for other price patterns in element text
+                price_patterns = [
+                    r'AU\$([\d,]+)',          # AU$1234 - highest priority
+                    r'\$([\d,]+)',            # $1,234
+                    r'([\d,]+)\s*AUD',        # 1234 AUD
+                    r'([\d,]+)\s*kr',         # 1234 kr (Swedish - keep for compatibility)
+                    r'SEK\s*([\d,]+)',        # SEK 1234
+                    r'([\d,]+)\s*SEK',        # 1234 SEK
+                    r'USD\s*([\d,]+)',        # USD 1234
+                ]
+                
+                for pattern in price_patterns:
+                    matches = re.findall(pattern, element_text, re.IGNORECASE)
+                    if matches:
+                        amount_str = matches[0]
+                        try:
+                            amount = int(amount_str.replace(',', ''))
+                            
+                            # Determine currency based on pattern
+                            if 'AU\$' in pattern:
+                                currency = 'AUD'
+                                price_text = f"AU${amount_str}"
+                            elif 'AUD' in pattern:
+                                currency = 'AUD' 
+                                price_text = f"{amount_str} AUD"
+                            elif 'kr' in pattern.lower() or 'SEK' in pattern:
+                                currency = 'SEK'
+                                price_text = f"{amount_str} kr"
+                            elif 'USD' in pattern:
+                                currency = 'USD'
+                                price_text = f"USD {amount_str}"
+                            else:
+                                currency = 'AUD'  # Default to AUD for Sydney marketplace
+                                price_text = f"${amount_str}"
+                            
+                            break
+                        except ValueError:
+                            continue
+            
+            # Create price object
+            if price_text and amount > 0:
+                listing_data['price'] = {
+                    'raw_value': price_text,
+                    'currency': currency,
+                    'amount': str(amount),
+                    'note': f'Extracted from: {price_text}'
+                }
+                self.logger.debug(f"Price extracted: {amount} {currency} from '{price_text}'")
+            else:
+                # Last resort: try to find any number that looks like a price
+                number_matches = re.findall(r'([\d,]{2,})', element_text)
+                if number_matches:
+                    try:
+                        amount = int(number_matches[0].replace(',', ''))
+                        if amount >= 10:  # Reasonable minimum price
+                            listing_data['price'] = {
+                                'raw_value': f"{number_matches[0]}",
+                                'currency': 'AUD',
+                                'amount': str(amount),
+                                'note': f'Extracted number from element: {number_matches[0]}'
+                            }
+                        else:
+                            listing_data['price'] = {'amount': '0', 'currency': 'AUD', 'raw_value': 'Not found'}
+                    except ValueError:
+                        listing_data['price'] = {'amount': '0', 'currency': 'AUD', 'raw_value': 'Not found'}
+                else:
+                    listing_data['price'] = {'amount': '0', 'currency': 'AUD', 'raw_value': 'Not found'}
             
             # Extract location - look for distance indicators
             location_text = None
@@ -714,7 +750,7 @@ class FacebookMarketplaceScraper:
             except Exception:
                 self.logger.info(f"Successfully extracted listing (title contains special chars) Price: {listing_data['price']['amount']} {listing_data['price']['currency']} ID: {listing_data['id']}")
             
-            # 🔥 ENHANCED EXTRACTION: If enabled, enhance this listing with real data
+            # ENHANCED EXTRACTION: If enabled, enhance this listing with real data
             if self.enhanced_extraction['enabled']:
                 listing_data = self._enhance_listing_with_real_data(listing_data)
             
@@ -909,8 +945,24 @@ class FacebookMarketplaceScraper:
                     self.session_stats['duplicates_found'] = stats['duplicates']
                     self.session_stats['errors_count'] += stats['errors']
                     self.logger.info(f"JSON save stats: {stats['added']} added, {stats['duplicates']} duplicates, {stats['errors']} errors")
+                    
+                    # [SAFETY NET] Clean up any unwanted variants that might have slipped through
+                    if stats['added'] > 0:
+                        self.logger.info(f"[SAFETY NET] Running safety cleanup for unwanted variants...")
+                        search_query = getattr(self, '_current_search_query', 'iPhone 16')
+                        cleanup_stats = self.json_manager.safe_cleanup_unwanted_variants(search_query, max_age_minutes=30)
+                        
+                        if cleanup_stats.get('removed', 0) > 0:
+                            self.logger.info(f"[SAFETY NET] Safety cleanup removed {cleanup_stats['removed']} unwanted variant products")
+                            self.session_stats['variants_cleaned'] = cleanup_stats['removed']
+                        else:
+                            self.logger.info(f"[SAFETY NET] Safety cleanup: No unwanted variants found")
+                            self.session_stats['variants_cleaned'] = 0
+                    else:
+                        self.session_stats['variants_cleaned'] = 0
                 else:
                     self.logger.warning("No listings extracted to save")
+                    self.session_stats['variants_cleaned'] = 0
                 
                 all_listings.extend(listings)
                 self.logger.info(f"Found {len(listings)} iPhone 16 listings, total so far: {len(all_listings)}")
@@ -1273,7 +1325,7 @@ class FacebookMarketplaceScraper:
                     self.logger.info(f"Cycle {cycle_count}: Found {len(new_listings)} new unique listings")
                     all_listings.extend(new_listings)
                     
-                    # 🔥 HOT RELOAD FEATURE: Save each product immediately as it's found
+                    # HOT RELOAD FEATURE: Save each product immediately as it's found
                     for idx, listing in enumerate(new_listings):
                         try:
                             # Add hot reload metadata
@@ -1284,9 +1336,9 @@ class FacebookMarketplaceScraper:
                             # Save individual product immediately using hot reload
                             success = self.json_manager.add_product_hot_reload(listing)
                             if success:
-                                self.logger.debug(f"🔥 Hot reload: Saved product {idx+1}/{len(new_listings)} successfully")
+                                self.logger.debug(f"[HOT RELOAD] Saved product {idx+1}/{len(new_listings)} successfully")
                             else:
-                                self.logger.warning(f"🔥 Hot reload: Failed to save product {idx+1}/{len(new_listings)}")
+                                self.logger.warning(f"[HOT RELOAD] Failed to save product {idx+1}/{len(new_listings)}")
                             
                             # Send individual product notification
                             self._send_scraping_notification('product_added', {
@@ -1443,9 +1495,52 @@ class FacebookMarketplaceScraper:
                 self.logger.warning("No product cards found for deep scraping")
                 return []
             
-            self.logger.info(f"Found {len(product_cards)} product cards, will deep scrape first {min(max_products, len(product_cards))}")
+            self.logger.info(f"Found {len(product_cards)} product cards before filtering")
             
-            # Perform deep extraction on each product
+            # APPLY SMART FILTERING TO DEEP SCRAPER
+            if self.enable_smart_filtering:
+                self.logger.info(f"[SMART FILTER] Applying smart filtering to deep scraper for search: '{search_query}'")
+                
+                # Convert product cards to format compatible with product filter
+                cards_for_filtering = [{'title': card['title']} for card in product_cards]
+                
+                try:
+                    # Apply smart filtering to product cards
+                    filtered_cards, excluded_cards = self.product_filter.filter_product_list(cards_for_filtering, search_query)
+                    
+                    # Map back to original product cards
+                    filtered_titles = {card['title'] for card in filtered_cards}
+                    filtered_product_cards = [card for card in product_cards if card['title'] in filtered_titles]
+                    
+                    # Log filtering results
+                    if excluded_cards:
+                        filter_stats = self.product_filter.get_filter_statistics(excluded_cards)
+                        self.logger.info(f"[FILTER RESULTS] Deep scraper filtering: {len(filtered_product_cards)} included, {len(excluded_cards)} excluded")
+                        self.logger.info(f"[FILTER STATS] Exclusion reasons: {filter_stats}")
+                        
+                        # Log some examples of excluded products
+                        self.logger.info("[EXCLUDED PRODUCTS] Deep scraper excluded products:")
+                        for i, excluded in enumerate(excluded_cards[:3]):
+                            title = excluded.get('title', 'Unknown')[:50]
+                            reason = excluded.get('exclusion_reason', 'Unknown reason')
+                            self.logger.info(f"  {i+1}. {title}... - Reason: {reason}")
+                    
+                    # Use filtered product cards
+                    product_cards = filtered_product_cards
+                    
+                except Exception as filter_error:
+                    self.logger.error(f"Deep scraper filtering failed: {filter_error}")
+                    self.logger.info("Falling back to unfiltered deep scraping")
+            else:
+                self.logger.info("Smart filtering is disabled for deep scraper")
+            
+            if not product_cards:
+                self.logger.warning("No product cards remaining after filtering")
+                return []
+            
+            self.logger.info(f"Will deep scrape {min(max_products, len(product_cards))} filtered product cards")
+            
+            # Perform deep extraction on each filtered product
             deep_scraped_products = []
             cards_to_process = product_cards[:max_products]
             
@@ -1469,16 +1564,16 @@ class FacebookMarketplaceScraper:
                     if deep_data:
                         deep_scraped_products.append(deep_data)
                         self.deep_scrape_stats['products_successful'] += 1
-                        self.logger.info(f"✅ Successfully deep scraped product {i+1}")
+                        self.logger.info(f"[SUCCESS] Successfully deep scraped product {i+1}")
                         
-                        # 🔥 HOT RELOAD FEATURE: Save product immediately to JSON
+                        # HOT RELOAD FEATURE: Save product immediately to JSON
                         self._save_product_immediately(deep_data, i + 1)
                         
                         # Send real-time notification to dashboard
                         self._send_product_completion_notification(deep_data, i + 1, len(cards_to_process))
                         
                     else:
-                        self.logger.warning(f"❌ Failed to deep scrape product {i+1}")
+                        self.logger.warning(f"[FAILED] Failed to deep scrape product {i+1}")
                         self.deep_scrape_stats['errors'].append(f"Product {i+1}: Failed to extract data")
                     
                     # Delay between products to avoid detection
@@ -1495,6 +1590,16 @@ class FacebookMarketplaceScraper:
             # Save comprehensive results
             self._save_deep_scrape_results(deep_scraped_products, search_query)
             
+            # SAFETY NET: Clean up any unwanted variants from deep scraping session
+            if deep_scraped_products:
+                self.logger.info(f"[SAFETY CLEANUP] Running safety cleanup for deep scraped variants...")
+                cleanup_stats = self.json_manager.safe_cleanup_unwanted_variants(search_query, max_age_minutes=60)
+                
+                if cleanup_stats.get('removed', 0) > 0:
+                    self.logger.info(f"[SAFETY CLEANUP] Deep scraper safety cleanup removed {cleanup_stats['removed']} unwanted variants")
+                else:
+                    self.logger.info(f"[SAFETY CLEANUP] Deep scraper safety cleanup: No unwanted variants found")
+            
             # Send completion notification
             self._send_scraping_notification('deep_scrape_completed', {
                 'search_query': search_query,
@@ -1502,6 +1607,7 @@ class FacebookMarketplaceScraper:
                 'successful': self.deep_scrape_stats['products_successful'],
                 'attempted': self.deep_scrape_stats['products_attempted'],
                 'seller_details': self.deep_scrape_stats['seller_details_extracted'],
+                'variants_cleaned': cleanup_stats.get('removed', 0) if deep_scraped_products else 0,
                 'message': f'Deep scraping completed! Successfully processed {self.deep_scrape_stats["products_successful"]}/{self.deep_scrape_stats["products_attempted"]} products'
             })
             
@@ -1795,45 +1901,84 @@ class FacebookMarketplaceScraper:
             self.logger.error(f"Failed to extract basic product info: {e}")
     
     def _extract_detailed_price(self) -> Dict[str, Any]:
-        """Extract detailed price information."""
+        """Extract detailed price information - PRIORITY: Look for AU$ first."""
         try:
-            page_text = self.driver.page_source.lower()
+            page_text = self.driver.page_source
+            page_title = self.driver.title
             
-            # Look for various price patterns
+            # First, try to extract AU$ price from page title and content (most reliable)
+            combined_text = f"{page_title} {page_text}"
+            au_price_match = re.search(r'AU\$([\d,]+)', combined_text, re.IGNORECASE)
+            if au_price_match:
+                amount = au_price_match.group(1).replace(',', '')
+                return {
+                    'amount': amount,
+                    'currency': 'AUD',
+                    'raw_price_text': f"AU${au_price_match.group(1)}"
+                }
+            
+            # Fallback to other price patterns
+            page_text_lower = page_text.lower()
+            
+            # Look for various price patterns - prioritize AU$ and USD over SEK
             price_patterns = [
-                r'(\d[\d,\s]*[\d])\s*(kr|sek)',  # Price with currency after
-                r'(kr|sek)\s*(\d[\d,\s]*[\d])',  # Currency before price
-                r'(\d[\d,\s]*[\d])\s*:-'         # Swedish price format
+                (r'AU\$([\d,]+)', 'AUD', 'AU$'),        # AU$1234 - highest priority
+                (r'\$([\d,]+)', 'AUD', '$'),             # $1234 - assume AUD for Sydney
+                (r'([\d,]+)\s*AUD', 'AUD', 'AUD'),       # 1234 AUD
+                (r'USD\s*([\d,]+)', 'USD', 'USD'),       # USD 1234
+                (r'([\d,]+)\s*USD', 'USD', 'USD'),       # 1234 USD
+                (r'([\d,]+)\s*(kr|sek)', 'SEK', 'kr'),   # 1234 kr (fallback)
+                (r'(kr|sek)\s*([\d,]+)', 'SEK', 'kr'),   # kr 1234 (fallback)
+                (r'([\d,]+)\s*:-', 'SEK', ':-')          # Swedish price format (fallback)
             ]
             
-            for pattern in price_patterns:
+            for pattern, currency, symbol in price_patterns:
                 matches = re.findall(pattern, page_text, re.IGNORECASE)
                 if matches:
-                    match = matches[0]
-                    if isinstance(match, tuple):
-                        if 'kr' in match[0] or 'sek' in match[0]:
-                            # Currency first format
-                            currency = match[0].upper()
-                            amount = match[1].replace(' ', '').replace(',', '')
+                    if currency == 'SEK' and len(matches[0]) == 2:
+                        # Handle Swedish patterns with tuple results
+                        if 'kr' in matches[0][0] or 'sek' in matches[0][0]:
+                            # Currency first
+                            amount = matches[0][1].replace(' ', '').replace(',', '')
                         else:
-                            # Amount first format
-                            amount = match[0].replace(' ', '').replace(',', '')
-                            currency = match[1].upper() if len(match) > 1 else 'SEK'
+                            # Amount first
+                            amount = matches[0][0].replace(' ', '').replace(',', '')
                     else:
-                        amount = match.replace(' ', '').replace(',', '').replace(':-', '')
-                        currency = 'SEK'
+                        # Handle simple patterns
+                        amount_str = matches[0] if isinstance(matches[0], str) else matches[0][0]
+                        amount = amount_str.replace(' ', '').replace(',', '').replace(':-', '')
                     
-                    return {
-                        'amount': amount,
-                        'currency': currency,
-                        'raw_price_text': f"{' '.join(match) if isinstance(match, tuple) else match}"
-                    }
+                    # Validate amount is numeric
+                    try:
+                        int(amount)
+                        return {
+                            'amount': amount,
+                            'currency': currency,
+                            'raw_price_text': f"{symbol}{amount}" if currency == 'AUD' else f"{amount} {symbol}"
+                        }
+                    except ValueError:
+                        continue
             
-            return {'amount': '0', 'currency': 'SEK', 'raw_price_text': 'Not found'}
+            # Final fallback - look for any number that could be a price
+            number_matches = re.findall(r'([\d,]{2,})', page_text)
+            if number_matches:
+                for num_str in number_matches:
+                    try:
+                        amount = int(num_str.replace(',', ''))
+                        if 10 <= amount <= 100000:  # Reasonable price range
+                            return {
+                                'amount': str(amount),
+                                'currency': 'AUD',  # Default to AUD for Sydney marketplace
+                                'raw_price_text': f"${num_str}"
+                            }
+                    except ValueError:
+                        continue
+            
+            return {'amount': '0', 'currency': 'AUD', 'raw_price_text': 'Not found'}
             
         except Exception as e:
             self.logger.error(f"Failed to extract price: {e}")
-            return {'amount': '0', 'currency': 'SEK', 'error': str(e)}
+            return {'amount': '0', 'currency': 'AUD', 'error': str(e)}
     
     def _extract_detailed_location(self) -> Dict[str, Any]:
         """Extract detailed location information."""
@@ -2300,7 +2445,7 @@ class FacebookMarketplaceScraper:
                         'all_expressions_found': timing_expressions[:5]  # Keep first 5 for debugging
                     })
                     
-                    self.logger.info(f"✅ Parsed timing: '{primary_expression}' = {parsed_minutes} minutes ago (posted at {posting_time.strftime('%Y-%m-%d %H:%M:%S')})")
+                    self.logger.info(f"[TIMING OK] Parsed timing: '{primary_expression}' = {parsed_minutes} minutes ago (posted at {posting_time.strftime('%Y-%m-%d %H:%M:%S')})")
                 else:
                     timing_info.update({
                         'facebook_time_text': primary_expression,
@@ -2335,7 +2480,7 @@ class FacebookMarketplaceScraper:
                                 'extraction_method': 'regex_fallback'
                             })
                             
-                            self.logger.info(f"✅ Regex fallback parsed: '{time_text}' = {parsed_minutes} minutes ago")
+                            self.logger.info(f"[TIMING OK] Regex fallback parsed: '{time_text}' = {parsed_minutes} minutes ago")
                             break
                         else:
                             timing_info.update({
@@ -2457,7 +2602,7 @@ class FacebookMarketplaceScraper:
             return {}
     
     def _save_product_immediately(self, deep_data: Dict[str, Any], product_index: int):
-        """🔥 HOT RELOAD: Save deep scraped product immediately to JSON for real-time dashboard updates."""
+        """[HOT RELOAD] Save deep scraped product immediately to JSON for real-time dashboard updates."""
         try:
             # Convert to standard format
             standard_product = self._convert_to_standard_format(deep_data)
@@ -2471,15 +2616,15 @@ class FacebookMarketplaceScraper:
                 # Save immediately using hot reload method
                 success = self.json_manager.add_product_hot_reload(standard_product)
                 if success:
-                    self.logger.info(f"🔥 Hot reload: Saved deep product {product_index} successfully")
+                    self.logger.info(f"[HOT RELOAD] Hot reload: Saved deep product {product_index} successfully")
                 else:
-                    self.logger.warning(f"🔥 Hot reload: Failed to save deep product {product_index}")
+                    self.logger.warning(f"[HOT RELOAD] Hot reload: Failed to save deep product {product_index}")
                 
         except Exception as e:
             self.logger.error(f"Hot reload save failed for product {product_index}: {e}")
     
     def _save_product_immediately_standard(self, listing_data: Dict[str, Any], product_index: int):
-        """🔥 HOT RELOAD: Save standard scraped product immediately for real-time updates."""
+        """[HOT RELOAD] Save standard scraped product immediately for real-time updates."""
         try:
             # Add hot reload metadata
             listing_data['hot_reload_timestamp'] = datetime.now().isoformat()
@@ -2489,9 +2634,9 @@ class FacebookMarketplaceScraper:
             # Save immediately using hot reload method
             success = self.json_manager.add_product_hot_reload(listing_data)
             if success:
-                self.logger.debug(f"🔥 Hot reload: Standard product {product_index} saved successfully")
+                self.logger.debug(f"[HOT RELOAD] Hot reload: Standard product {product_index} saved successfully")
             else:
-                self.logger.warning(f"🔥 Hot reload: Failed to save standard product {product_index}")
+                self.logger.warning(f"[HOT RELOAD] Hot reload: Failed to save standard product {product_index}")
             
         except Exception as e:
             self.logger.error(f"Hot reload save failed for standard product {product_index}: {e}")
@@ -2518,7 +2663,7 @@ class FacebookMarketplaceScraper:
                 'seller_name': seller_name,
                 'completion_timestamp': datetime.now().isoformat(),
                 'progress_percentage': round((product_index / total_products) * 100, 1),
-                'message': f'✅ Completed {product_index}/{total_products}: {title[:30]}... ({price_amount} {price_currency})'
+                'message': f'[COMPLETED] Completed {product_index}/{total_products}: {title[:30]}... ({price_amount} {price_currency})'
             })
             
         except Exception as e:
@@ -2540,14 +2685,14 @@ class FacebookMarketplaceScraper:
                 'product_currency': price_currency,
                 'completion_timestamp': datetime.now().isoformat(),
                 'progress_percentage': round((product_index / total_products) * 100, 1),
-                'message': f'📦 Found {product_index}/{total_products}: {title[:30]}... ({price_amount} {price_currency})'
+                'message': f'[FOUND] Found {product_index}/{total_products}: {title[:30]}... ({price_amount} {price_currency})'
             })
             
         except Exception as e:
             self.logger.error(f"Failed to send standard product notification: {e}")
     
     def _enhance_listing_with_real_data(self, listing_data: Dict[str, Any]) -> Dict[str, Any]:
-        """🔥 ENHANCED EXTRACTION: Visit product page and extract real data."""
+        """[ENHANCED EXTRACTION] Visit product page and extract real data."""
         try:
             if not self.enhanced_extraction['enabled']:
                 return listing_data
@@ -2559,7 +2704,7 @@ class FacebookMarketplaceScraper:
             original_url = self.driver.current_url
             product_id = listing_data.get('id', 'unknown')
             
-            self.logger.info(f"🔥 Enhancing listing {product_id} with real data from product page")
+            self.logger.info(f"[ENHANCED EXTRACTION] Enhancing listing {product_id} with real data from product page")
             
             try:
                 # Navigate to product page
@@ -2616,7 +2761,7 @@ class FacebookMarketplaceScraper:
                 self.driver.get(original_url)
                 time.sleep(1)
                 
-                self.logger.info(f"✅ Successfully enhanced listing {product_id}")
+                self.logger.info(f"[ENHANCED EXTRACTION] Successfully enhanced listing {product_id}")
                 
             except Exception as e:
                 self.logger.error(f"Failed to enhance listing {product_id}: {e}")
@@ -2854,7 +2999,7 @@ class FacebookMarketplaceScraper:
                         'all_expressions_found': timing_expressions[:3]  # Keep first 3 for debugging
                     })
                     
-                    self.logger.debug(f"⏰ Element timing: '{primary_expression}' = {parsed_minutes} minutes ago")
+                    self.logger.debug(f"[TIMING] Element timing: '{primary_expression}' = {parsed_minutes} minutes ago")
                 else:
                     timing_info.update({
                         'facebook_time_text': primary_expression,
@@ -2891,7 +3036,7 @@ class FacebookMarketplaceScraper:
                                 'extraction_method': 'regex_element_text'
                             })
                             
-                            self.logger.debug(f"⏰ Element regex: '{time_text}' = {parsed_minutes} minutes ago")
+                            self.logger.debug(f"[TIMING] Element regex: '{time_text}' = {parsed_minutes} minutes ago")
                             break
                         else:
                             timing_info.update({

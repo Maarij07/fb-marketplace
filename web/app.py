@@ -175,16 +175,12 @@ def create_app(settings):
             formatted_listings = []
             for listing in listings:
                 formatted_listing = dict(listing)
-                # Format price display for Swedish marketplace
+                # Format price display - FIXED for AUD
                 price_info = formatted_listing.get('price', {})
                 if isinstance(price_info, dict) and price_info.get('amount'):
-                    currency = price_info.get('currency', 'SEK')
+                    currency = price_info.get('currency', 'AUD')
                     amount = price_info.get('amount', '0')
-                    # Handle incomplete prices (like "SEK6" -> "6000+ SEK")
-                    if len(str(amount)) <= 2:
-                        formatted_listing['price_display'] = f"{amount}000+ {currency}"
-                    else:
-                        formatted_listing['price_display'] = f"{amount} {currency}"
+                    formatted_listing['price_display'] = f"{currency}${amount}"
                 else:
                     formatted_listing['price_display'] = "N/A"
                 
@@ -209,7 +205,27 @@ def create_app(settings):
                 else:
                     formatted_listing['category'] = 'other'
                 
-                # Ensure created_at field exists for dashboard sorting
+                # FIXED: Get posted_date from the JSON directly first
+                actual_posted_date = formatted_listing.get('posted_date')
+                
+                # If not in root, check deep_data for timing information
+                if not actual_posted_date:
+                    deep_data = formatted_listing.get('deep_data', {})
+                    if isinstance(deep_data, dict):
+                        marketplace_metadata = deep_data.get('marketplace_metadata', {})
+                        if isinstance(marketplace_metadata, dict):
+                            md_timing = marketplace_metadata.get('timing', {})
+                            if isinstance(md_timing, dict) and md_timing.get('calculated_timestamp'):
+                                actual_posted_date = md_timing['calculated_timestamp']
+                
+                # Set the posted_date to actual Facebook posted date
+                if actual_posted_date:
+                    formatted_listing['posted_date'] = actual_posted_date
+                else:
+                    # Fallback to extraction timestamp
+                    formatted_listing['posted_date'] = formatted_listing.get('added_at', formatted_listing.get('created_at', datetime.now().isoformat()))
+                
+                # Ensure created_at field exists for dashboard sorting (extraction timestamp)
                 if not formatted_listing.get('created_at'):
                     formatted_listing['created_at'] = formatted_listing.get('added_at', datetime.now().isoformat())
                 
@@ -268,11 +284,31 @@ def create_app(settings):
             if not formatted_listing.get('created_at'):
                 formatted_listing['created_at'] = formatted_listing.get('added_at', datetime.now().isoformat())
             
-            # Format posted date if available
-            posted_date = formatted_listing.get('posted_date', '')
-            if posted_date:
-                formatted_listing['posted_date_display'] = posted_date
+            # Extract actual posted date from timing data (calculated_timestamp)
+            actual_posted_date = None
+            
+            # First check timing field directly
+            timing_info = formatted_listing.get('timing', {})
+            if isinstance(timing_info, dict) and timing_info.get('calculated_timestamp'):
+                actual_posted_date = timing_info['calculated_timestamp']
+            
+            # Also check deep_data for timing information
+            if not actual_posted_date:
+                deep_data = formatted_listing.get('deep_data', {})
+                if isinstance(deep_data, dict):
+                    marketplace_metadata = deep_data.get('marketplace_metadata', {})
+                    if isinstance(marketplace_metadata, dict):
+                        md_timing = marketplace_metadata.get('timing', {})
+                        if isinstance(md_timing, dict) and md_timing.get('calculated_timestamp'):
+                            actual_posted_date = md_timing['calculated_timestamp']
+            
+            # Set the posted_date field to the actual Facebook posted date
+            if actual_posted_date:
+                formatted_listing['posted_date'] = actual_posted_date
+                formatted_listing['posted_date_display'] = actual_posted_date
             else:
+                # Fallback to extraction timestamp if no timing data available
+                formatted_listing['posted_date'] = formatted_listing.get('created_at', '')
                 formatted_listing['posted_date_display'] = 'Unknown'
             
             # Add category
