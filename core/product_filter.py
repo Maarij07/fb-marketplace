@@ -43,7 +43,7 @@ class SmartProductFilter:
             # iPhone Rules
             'iphone': {
                 'variants_to_exclude': [
-                    'plus', 'pro', 'max', 'mini', 'se', 'c', 's'
+                    'plus', 'pro', 'max', 'mini', 'se'
                 ],
                 'model_separators': [' ', '-', '_'],
                 'strict_matching': True
@@ -129,15 +129,77 @@ class SmartProductFilter:
                 'strict_matching': True
             }
         }
-        # Global exclusion patterns - Enhanced with more accessory keywords
-        self.global_exclusions = [
-            'case', 'cover', 'screen protector', 'charger', 'cable', 'adapter',
-            'battery', 'replacement', 'parts', 'repair', 'service', 'unlock',
-            'sim', 'memory card', 'headphones', 'airpods', 'bluetooth', 'speaker',
-            'holder', 'mount', 'stand', 'dock', 'wireless', 'power bank',
-            'tempered glass', 'magsafe', 'charging', 'wallet', 'folio', 'glass',
-            'shield', 'bumper', 'pouch', 'sleeve', 'skin', 'film', 'leather',
-            'silicone', 'tpu', 'hard', 'soft', 'wallet', 'flip', 'holster'
+        # COMPREHENSIVE BLACKLIST for phone accessories and covers
+        self.accessories_blacklist = [
+            # Phone Cases & Covers
+            'case', 'cases', 'cover', 'covers', 'protection', 'protective',
+            'shell', 'shells', 'sleeve', 'sleeves', 'pouch', 'pouches',
+            'bumper', 'bumpers', 'holster', 'holsters', 'wallet', 'flip',
+            'folio', 'leather', 'silicone', 'tpu', 'rubber', 'plastic',
+            'hard case', 'soft case', 'clear case', 'transparent', 'shockproof',
+            
+            # Screen Protection
+            'screen protector', 'screen guard', 'tempered glass', 'glass protector',
+            'film', 'shield', 'privacy screen', '9h', 'anti-glare', 'matte',
+            
+            # Charging & Cables
+            'charger', 'charging', 'cable', 'cables', 'adapter', 'adapters',
+            'power bank', 'wireless charger', 'car charger', 'wall charger',
+            'usb cable', 'lightning cable', 'type-c', 'usb-c', 'magsafe',
+            'charging pad', 'charging station', 'charging dock',
+            
+            # Audio Accessories
+            'headphones', 'earphones', 'airpods', 'earbuds', 'bluetooth',
+            'speaker', 'speakers', 'audio', 'headset', 'wireless headphones',
+            
+            # Phone Stands & Mounts
+            'stand', 'stands', 'holder', 'holders', 'mount', 'mounts',
+            'car mount', 'desk stand', 'phone stand', 'tripod', 'ring holder',
+            'pop socket', 'grip', 'kickstand',
+            
+            # Replacement Parts & Repair
+            'battery', 'batteries', 'replacement', 'parts', 'repair',
+            'service', 'fix', 'broken', 'cracked', 'damaged', 'spare parts',
+            'lcd', 'display', 'screen replacement', 'back cover', 'housing',
+            
+            # Memory & Storage
+            'memory card', 'sd card', 'micro sd', 'storage', 'flash drive',
+            'sim card', 'sim tray', 'sim tool',
+            
+            # Other Accessories
+            'lens', 'camera lens', 'ring light', 'selfie stick', 'stylus',
+            'cleaning kit', 'wipe', 'cloth', 'kit', 'accessories pack',
+            'bundle', 'combo', 'set', 'package deal', 'lot of',
+            
+            # Services & Software
+            'unlock', 'unlocking', 'jailbreak', 'software', 'app', 'service',
+            'contract', 'plan', 'carrier', 'network', 'sim free',
+            
+            # Box & Packaging (but NOT "new in box" or "sealed box")
+            'empty box', 'box only', 'packaging', 'manual', 'instructions'
+        ]
+        
+        # WHITELIST: Allowed terms that should NOT be filtered out
+        self.phone_whitelist = [
+            # Valid phone conditions
+            'new', 'used', 'refurbished', 'mint', 'excellent', 'good', 'fair',
+            'sealed', 'unopened', 'new in box', 'mint condition', 'like new',
+            
+            # Valid phone colors (very important - these are NOT accessories)
+            'black', 'white', 'red', 'blue', 'green', 'purple', 'pink',
+            'gold', 'silver', 'gray', 'grey', 'rose gold', 'space gray',
+            'midnight', 'starlight', 'sierra blue', 'graphite', 'alpine green',
+            'deep purple', 'yellow', 'coral', 'titanium', 'natural', 'phantom',
+            
+            # Valid phone storage sizes
+            '16gb', '32gb', '64gb', '128gb', '256gb', '512gb', '1tb', '2tb',
+            'gb', 'tb', 'storage',
+            
+            # Valid phone networks
+            'unlocked', 'factory unlocked', 'gsm', 'cdma', 'lte', '5g', '4g',
+            
+            # Valid descriptive terms
+            'smartphone', 'mobile', 'phone', 'cellular', 'device'
         ]
         
         # Version/generation exclusion patterns (removed 'generation' since it's legitimate for iPads, etc.)
@@ -152,10 +214,9 @@ class SmartProductFilter:
         Determine if a product should be included based on enhanced suffix-based filtering rules.
         
         Enhanced Logic:
-        1. HIGHEST PRIORITY: If search query is found EXACTLY in product title, ALWAYS include
-        2. Second Priority: Apply smart phone filtering for recognized brands
-        3. Third Priority: If smart filtering fails, use substring matching fallback
-        4. Always Apply: Global exclusions (accessories like case, cover, etc.)
+        1. HIGHEST PRIORITY: Apply smart phone filtering for recognized brands (especially iPhones)
+        2. Second Priority: If exact model filtering fails, use substring matching with extreme caution
+        3. Always Apply: Global exclusions (accessories like case, cover, etc.)
         
         Args:
             product_title: The title of the product found
@@ -165,8 +226,13 @@ class SmartProductFilter:
             Tuple[bool, str]: (should_include, exclusion_reason)
         """
         try:
-            # HIGHEST PRIORITY: Direct substring match check (before any cleaning)
-            # If the search query is found exactly in the product title, include it
+            # Check for common iPhone/branded model searches first for most accurate filtering
+            if self._is_common_phone_model_search(target_search):
+                # Skip substring matching and go straight to smart model matching for phones
+                # This ensures "iPhone 13" doesn't match "iPhone 13 Pro"
+                return self._apply_strict_model_matching(product_title, target_search)
+            
+            # For non-phone searches, check for exact substring match with caution
             if target_search.lower() in product_title.lower():
                 # Still check for accessories even with exact match
                 if self._contains_global_exclusions(product_title.lower()):
@@ -243,8 +309,8 @@ class SmartProductFilter:
         
         # Define comprehensive brand patterns for ALL major phone brands
         brand_patterns = {
-            # iPhone patterns - Fixed to handle compound variants like 'Pro Max'
-            'iphone': r'iphone\s*(\d+)(\s*(pro\s*max|pro\s*plus|pro|plus\s*max|plus|max|mini|se|c|s))?',
+            # iPhone patterns - Fixed to handle compound variants like 'Pro Max' but not color names
+            'iphone': r'iphone\s*(\d+)(?:\s+(pro\s*max|pro\s*plus|pro|plus\s*max|plus|max|mini|se))?',
             
             # Samsung patterns - Fixed to handle common search variations
             'samsung': r'(?:samsung\s*(?:galaxy\s*)?s(\d+)|galaxy\s*s(\d+)|samsung\s*s(\d+))(\s*(ultra|plus|edge|fe|lite|neo))?|(?:samsung\s*)?galaxy\s*note\s*(\d+)(\s*(ultra|plus))?',
@@ -295,8 +361,8 @@ class SmartProductFilter:
                     return {
                         'brand': 'iPhone',
                         'model': match.group(1),
-                        'variants': match.group(3) if match.group(3) else '',
-                        'full_model': f"iPhone {match.group(1)}" + (f" {match.group(3)}" if match.group(3) else "")
+                        'variants': match.group(2) if match.group(2) else '',
+                        'full_model': f"iPhone {match.group(1)}" + (f" {match.group(2)}" if match.group(2) else "")
                     }
                 
                 # Samsung parsing - Updated to handle new flexible regex pattern
@@ -479,16 +545,74 @@ class SmartProductFilter:
             self.logger.error(f"Generic parsing failed: {e}")
             return None
     
+    def _is_common_phone_model_search(self, search_term: str) -> bool:
+        """Check if search term is a common phone model search that requires strict filtering."""
+        search_lower = search_term.lower()
+        
+        # Common phone brand patterns that need strict model matching
+        phone_patterns = [
+            r'iphone\s*\d+',     # iPhone 13, iPhone 16, etc.
+            r'samsung\s*s\d+',   # Samsung S22, etc.
+            r'galaxy\s*s\d+',    # Galaxy S22, etc.
+            r'pixel\s*\d+',      # Pixel 6, etc.
+            r'redmi\s*\d+',      # Redmi 9, etc.
+            r'redmi\s*note\s*\d+' # Redmi Note 10, etc.
+        ]
+        
+        for pattern in phone_patterns:
+            if re.search(pattern, search_lower):
+                return True
+                
+        return False
+    
+    def _apply_strict_model_matching(self, product_title: str, target_search: str) -> Tuple[bool, str]:
+        """Apply strict model matching for phone models regardless of case."""
+        # CRITICAL: Check for global exclusions FIRST before any model parsing
+        # This ensures accessories are always excluded, even if they contain valid model names
+        if self._contains_global_exclusions(product_title):
+            return False, "Contains accessory/non-phone keywords"
+        
+        # Clean and normalize inputs for processing
+        title_clean = self._clean_title(product_title)
+        search_clean = self._clean_title(target_search)
+        
+        # Double-check exclusions on cleaned title as well
+        if self._contains_global_exclusions(title_clean):
+            return False, "Contains accessory/non-phone keywords (after cleaning)"
+        
+        # Parse the target search to extract brand and model
+        target_info = self._parse_phone_model(search_clean)
+        if not target_info:
+            # Fallback to substring matching if we can't parse the model
+            return self._substring_matching_fallback(title_clean, search_clean)
+            
+        # Parse the product title
+        product_info = self._parse_phone_model(title_clean)
+        if not product_info:
+            # Skip this product if we can't parse its model information
+            return False, "Unable to parse product model information"
+            
+        # Ensure same brand
+        if target_info['brand'].lower() != product_info['brand'].lower():
+            return False, f"Different brand: {product_info['brand']} vs {target_info['brand']}"
+            
+        # FINAL CHECK: Even if models match, triple-check for accessories 
+        # (some accessories might have model names in them)
+        if self._contains_global_exclusions(product_title.lower()):
+            return False, "Contains accessory keywords (final check)"
+            
+        # Apply the enhanced smart model matching
+        return self._smart_model_matching(target_info, product_info)
+    
     def _smart_model_matching(self, target_info: Dict[str, str], product_info: Dict[str, str]) -> Tuple[bool, str]:
         """
-        Apply smart model matching rules based on search intent.
+        Apply strict model matching rules based on search intent.
         
-        ENHANCED SUFFIX-BASED LOGIC:
-        - If you search "iPhone 16" → Only show iPhone 16 (exclude Pro, Plus, etc.)
-        - If you search "iPhone 16 Pro" → Only show iPhone 16 Pro (exclude regular 16, Plus, Max)
-        - If you search "Redmi Note 10" → Only show Redmi Note 10 (exclude Pro, other models)
-        - Any search term + suffix should be excluded (iPhone 16 + case, iPhone 16 Pro + case)
-        - Any search term with suffix shouldn't match additional suffixes (iPhone 16 Pro ≠ iPhone 16 Pro Max)
+        ENHANCED STRICT MODEL MATCHING:
+        - If you search "iPhone 16" → ONLY show iPhone 16 (EXCLUDE Pro, Plus, etc.)
+        - If you search "iPhone 16 Pro" → ONLY show iPhone 16 Pro (EXCLUDE regular 16, Plus, Max)
+        - If you search "Redmi Note 10" → ONLY show Redmi Note 10 (EXCLUDE Pro, other models)
+        - Case insensitive matching ("iPhone" = "iphone" = "IPHONE")
         
         Args:
             target_info: Parsed target search info
@@ -521,21 +645,42 @@ class SmartProductFilter:
         product_title_lower = product_info.get('full_model', '').lower()
         target_search_lower = target_info.get('full_model', '').lower()
         
-        # Case A: Target has NO variants (e.g., "iPhone 16", "Redmi Note 10")
-        # → Should ONLY include products with NO variants
+        # STRICT FILTERING: Target has NO variants (e.g., "iPhone 16", "Redmi Note 10")
+        # → Should ONLY include products with NO variants whatsoever
         # → Should EXCLUDE any products with variants (Pro, Plus, Max, etc.)
         if not target_variants:
-            # Check if product has any known suffix that's not in the target
-            for suffix in all_known_suffixes:
-                if suffix in product_title_lower and suffix not in target_search_lower:
-                    return False, f"Target is base model but product has suffix: '{suffix}'"
+            # Get phone-specific variant exclusions (more accurate than global list)
+            brand_lower = target_info.get('brand', '').lower()
+            phone_variants = set()
             
-            # If product has variants parsed, exclude it
+            # Get brand-specific variants to exclude
+            for rule_brand, rules in self.phone_filter_rules.items():
+                if rule_brand in brand_lower:
+                    phone_variants.update(rules.get('variants_to_exclude', []))
+                    break
+            
+            # If no brand-specific rules found, use common phone variants
+            if not phone_variants:
+                phone_variants = {'pro', 'plus', 'max', 'mini', 'ultra', 'lite', 'se'}
+            
+            # Check if product title contains phone variant words (as standalone words)
+            product_title_words = set(word.strip() for word in product_title_lower.split())
+            
+            # Look for phone variant words that appear as standalone words
+            for variant in phone_variants:
+                if variant in product_title_words:
+                    # Additional check: make sure it's not part of a color name or other context
+                    # Skip single-letter variants that could be colors (like 's' in "Space Gray")
+                    if len(variant) <= 1:
+                        continue
+                    return False, f"Target is base model but product has variant: '{variant}'"
+            
+            # If product has variants parsed by our regex, exclude it
             if product_variants:
-                return False, f"Target is base model but product has variants: {', '.join(product_variants)}"
+                return False, f"Target is base model but product has parsed variants: {', '.join(product_variants)}"
             
             # Both target and product have no variants - PERFECT MATCH
-            return True, "Exact base model match"
+            return True, "Exact base model match - no variants"
         
         # Case B: Target HAS variants (e.g., "iPhone 16 Pro", "Redmi Note 10 Pro")
         # → Should ONLY include products with EXACTLY the same variants
@@ -572,16 +717,80 @@ class SmartProductFilter:
         return None
     
     def _contains_global_exclusions(self, title: str) -> bool:
-        """Check if title contains globally excluded terms."""
+        """Check if title contains globally excluded terms (accessories, etc.)."""
         title_lower = title.lower()
         
-        # Check for accessory keywords with word boundary check for more precision
-        for exclusion in self.global_exclusions:
-            # Use word boundaries for more accurate matching
-            if re.search(r'\b' + re.escape(exclusion) + r'\b', title_lower):
+        # STEP 1: Check whitelist first - if title contains whitelist terms, be more lenient
+        whitelist_found = []
+        for whitelist_term in self.phone_whitelist:
+            if whitelist_term in title_lower:
+                whitelist_found.append(whitelist_term)
+        
+        # STEP 2: Check for comprehensive accessories blacklist
+        blacklisted_terms = []
+        for accessory_term in self.accessories_blacklist:
+            # Use word boundaries for multi-word terms, simple substring for single words
+            if ' ' in accessory_term:
+                # Multi-word terms: use exact phrase matching
+                if accessory_term in title_lower:
+                    blacklisted_terms.append(accessory_term)
+            else:
+                # Single words: use word boundary for precision (but not too strict)
+                if re.search(r'\b' + re.escape(accessory_term) + r'\b', title_lower):
+                    blacklisted_terms.append(accessory_term)
+        
+        # STEP 2.5: Additional check for common accessory patterns that might be missed
+        accessory_patterns = [
+            r'\bcase\b',                    # iPhone 15 Case
+            r'\bscreen\s+protector\b',      # Screen Protector
+            r'\btempered\s+glass\b',        # Tempered Glass
+            r'\bwireless\s+charger\b',     # Wireless Charger
+            r'\bcar\s+charger\b',          # Car Charger
+            r'\bmemory\s+card\b',          # Memory Card
+            r'\bphone\s+holder\b',         # Phone Holder
+        ]
+        
+        for pattern in accessory_patterns:
+            if re.search(pattern, title_lower):
+                match = re.search(pattern, title_lower)
+                blacklisted_terms.append(match.group().strip())
+        
+        # STEP 3: Smart decision based on whitelist vs blacklist
+        if blacklisted_terms:
+            # CRITICAL: Always exclude obvious accessories, regardless of whitelist
+            obvious_accessories = ['case', 'cases', 'cover', 'covers', 'screen protector', 'screen guard', 
+                                 'tempered glass', 'charger', 'charging', 'cable', 'cables', 'adapter', 
+                                 'headphones', 'airpods', 'speaker', 'stand', 'holder', 'mount', 'battery', 
+                                 'replacement', 'repair', 'service', 'kit', 'bundle']
+            
+            # Check if any blacklisted terms are obvious accessories
+            has_obvious_accessories = any(accessory in blacklisted_terms for accessory in obvious_accessories)
+            
+            if has_obvious_accessories:
+                self.logger.debug(f"ALWAYS EXCLUDING - Contains obvious accessories: '{title[:50]}...', terms: {blacklisted_terms}")
+                return True
+            
+            # For non-obvious blacklisted terms, check whitelist override
+            if whitelist_found:
+                # If we have significant whitelist presence, be more lenient for ambiguous terms
+                strong_phone_indicators = ['iphone', 'samsung', 'galaxy', 'pixel', 'smartphone', 'mobile phone']
+                has_strong_phone_indicators = any(indicator in title_lower for indicator in strong_phone_indicators)
+                
+                # Special handling for potentially valid combinations
+                # Example: "iPhone 15 256gb unlocked" should NOT be excluded even if "unlocked" might be suspicious
+                if has_strong_phone_indicators and len(whitelist_found) >= 2:
+                    # Log the decision for debugging
+                    self.logger.debug(f"Allowing title with ambiguous blacklisted terms due to strong phone indicators: '{title[:50]}...', blacklist: {blacklisted_terms}, whitelist: {whitelist_found}")
+                    return False
+                else:
+                    self.logger.debug(f"Excluding title due to blacklisted terms: '{title[:50]}...', terms: {blacklisted_terms}")
+                    return True
+            else:
+                # No whitelist terms found, definitely exclude
+                self.logger.debug(f"Excluding title - blacklisted terms without phone indicators: '{title[:50]}...', terms: {blacklisted_terms}")
                 return True
         
-        # Check for version-specific exclusions
+        # STEP 4: Check for version-specific exclusions (kept from original)
         for exclusion in self.version_exclusions:
             if exclusion in title_lower:
                 return True

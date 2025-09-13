@@ -1652,9 +1652,11 @@ class FacebookMarketplaceScraper:
                 marketplace_links = self.driver.find_elements(By.CSS_SELECTOR, "a[href*='/marketplace/item/']")
                 self.logger.info(f"Found {len(marketplace_links)} marketplace item links on attempt {attempt + 1}")
                 
-                # If we found some links, process them
+                    # If we found some links, process them with IMMEDIATE filtering
                 if marketplace_links:
                     product_cards = []
+                    search_query = getattr(self, '_current_search_query', 'iphone')
+                    
                     for i, link in enumerate(marketplace_links):
                         try:
                             url = link.get_attribute('href')
@@ -1670,6 +1672,16 @@ class FacebookMarketplaceScraper:
                             
                             # Try to get product title from link or parent
                             title = self._extract_title_from_link(link, i)
+                            
+                            # IMMEDIATE FILTERING: Check if this title matches our search EXACTLY
+                            if self.enable_smart_filtering and title and len(title) > 3:
+                                should_include, filter_reason = self.product_filter.should_include_product(title, search_query)
+                                
+                                if not should_include:
+                                    self.logger.debug(f"[IMMEDIATE FILTER] Excluding title '{title[:50]}...' - Reason: {filter_reason}")
+                                    continue  # Skip this product entirely
+                                else:
+                                    self.logger.debug(f"[IMMEDIATE FILTER] Including title '{title[:50]}...'")
                             
                             product_cards.append({
                                 'index': i,
