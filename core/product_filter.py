@@ -176,8 +176,65 @@ class SmartProductFilter:
             'contract', 'plan', 'carrier', 'network', 'sim free',
             
             # Box & Packaging (but NOT "new in box" or "sealed box")
-            'empty box', 'box only', 'packaging', 'manual', 'instructions'
+            'empty box', 'box only', 'packaging', 'manual', 'instructions',
+            
+            # 🚫 MONITORS AND NON-PHONE ELECTRONICS (New Addition)
+            'monitor', 'monitors', 'display', 'screen', 'lcd', 'led', 'oled',
+            'curved monitor', 'gaming monitor', 'ultrawide', '4k monitor',
+            'hd monitor', 'fhd', 'qhd', 'uhd', '24 inch', '27 inch', '32 inch',
+            'tv', 'television', 'smart tv', 'projector', 'webcam', 'camera'
         ]
+        
+        # 🚫 MONITOR MODEL PATTERNS - Specific patterns to detect monitor models
+        self.monitor_model_patterns = [
+            r's\d+[a-z]\d+[a-z]+\d+[a-z]*',  # Samsung monitor pattern like S24C360EAE, S27AG50, etc.
+            r'[a-z]\d+[a-z]\d+[a-z]?',       # Generic monitor patterns like C24F390, U28E590D
+            r'\d+["\']?\s*(inch|in)\b',        # Size indicators like "24 inch", "27'", etc.
+            r'\b(fhd|qhd|uhd|4k|1080p|1440p|2160p)\b',  # Resolution indicators
+            r'\b(curved|gaming|ultrawide)\s*(monitor|display)\b',  # Monitor types
+        ]
+        
+        # 🎨 COMPREHENSIVE COLOR DEFINITIONS - For color-specific filtering
+        self.phone_colors = {
+            # Basic Colors
+            'black': ['black', 'jet black', 'matte black', 'space black'],
+            'white': ['white', 'pearl white', 'ceramic white', 'cloud white'],
+            'red': ['red', 'product red', 'cherry red', 'sunset red', 'coral red'],
+            'blue': ['blue', 'pacific blue', 'sierra blue', 'sky blue', 'navy blue', 'midnight blue'],
+            'green': ['green', 'alpine green', 'midnight green', 'pine green', 'forest green'],
+            'purple': ['purple', 'deep purple', 'lavender', 'violet'],
+            'pink': ['pink', 'rose pink', 'coral pink', 'blush pink'],
+            'yellow': ['yellow', 'canary yellow', 'lemon yellow'],
+            'orange': ['orange', 'sunset orange', 'coral orange'],
+            
+            # Metallic Colors
+            'gold': ['gold', 'rose gold', 'champagne gold', 'bronze gold'],
+            'silver': ['silver', 'platinum silver', 'mystic silver'],
+            'gray': ['gray', 'grey', 'space gray', 'space grey', 'graphite', 'charcoal', 'slate'],
+            'bronze': ['bronze', 'mystic bronze', 'copper bronze'],
+            
+            # Premium/Special Colors
+            'titanium': ['titanium', 'natural titanium', 'blue titanium', 'white titanium', 'black titanium'],
+            'phantom': ['phantom', 'phantom black', 'phantom silver', 'phantom white'],
+            'midnight': ['midnight', 'midnight green', 'midnight blue'],
+            'starlight': ['starlight', 'starlight gold'],
+            'graphite': ['graphite', 'space gray'],
+            
+            # Samsung-specific colors
+            'cream': ['cream', 'phantom cream'],
+            'lavender': ['lavender', 'phantom lavender'],
+            'mint': ['mint', 'mint green'],
+            
+            # Other brand colors
+            'coral': ['coral', 'living coral'],
+            'sage': ['sage', 'sage green'],
+            'hazel': ['hazel', 'sorta sage']
+        }
+        
+        # Flatten color variations for easy lookup
+        self.all_color_variations = set()
+        for color_family, variations in self.phone_colors.items():
+            self.all_color_variations.update([v.lower() for v in variations])
         
         # WHITELIST: Allowed terms that should NOT be filtered out
         self.phone_whitelist = [
@@ -185,11 +242,8 @@ class SmartProductFilter:
             'new', 'used', 'refurbished', 'mint', 'excellent', 'good', 'fair',
             'sealed', 'unopened', 'new in box', 'mint condition', 'like new',
             
-            # Valid phone colors (very important - these are NOT accessories)
-            'black', 'white', 'red', 'blue', 'green', 'purple', 'pink',
-            'gold', 'silver', 'gray', 'grey', 'rose gold', 'space gray',
-            'midnight', 'starlight', 'sierra blue', 'graphite', 'alpine green',
-            'deep purple', 'yellow', 'coral', 'titanium', 'natural', 'phantom',
+            # Valid phone colors (dynamically from color definitions)
+            *self.all_color_variations,
             
             # Valid phone storage sizes
             '16gb', '32gb', '64gb', '128gb', '256gb', '512gb', '1tb', '2tb',
@@ -208,6 +262,52 @@ class SmartProductFilter:
         ]
         
         self.logger.info("Smart Product Filter initialized")
+    
+    def _extract_color_from_text(self, text: str) -> Optional[str]:
+        """🎨 NEW: Extract color information from search query or product title."""
+        text_lower = text.lower()
+        
+        # Look for colors in the text, prioritizing more specific colors first
+        found_colors = []
+        
+        for color_family, variations in self.phone_colors.items():
+            for variation in variations:
+                if variation.lower() in text_lower:
+                    # Use word boundaries to ensure we match whole color names
+                    if re.search(r'\b' + re.escape(variation.lower()) + r'\b', text_lower):
+                        found_colors.append((color_family, variation.lower()))
+        
+        if found_colors:
+            # Return the most specific color found (longest variation name)
+            most_specific = max(found_colors, key=lambda x: len(x[1]))
+            return most_specific[0]  # Return the color family name
+        
+        return None
+    
+    def _get_color_variations(self, color_family: str) -> List[str]:
+        """Get all variations of a color family."""
+        return [v.lower() for v in self.phone_colors.get(color_family, [])]
+    
+    def _colors_match(self, target_color: str, product_color: str) -> bool:
+        """🎨 Check if two colors match (considering color families and variations)."""
+        if not target_color or not product_color:
+            return True  # If no color specified, don't filter by color
+        
+        # If exact match
+        if target_color == product_color:
+            return True
+        
+        # Check if they belong to the same color family
+        target_variations = self._get_color_variations(target_color)
+        product_variations = self._get_color_variations(product_color)
+        
+        # Check if any variation of target color matches any variation of product color
+        for target_var in target_variations:
+            for product_var in product_variations:
+                if target_var == product_var:
+                    return True
+        
+        return False
     
     def should_include_product(self, product_title: str, target_search: str) -> Tuple[bool, str]:
         """
@@ -258,7 +358,7 @@ class SmartProductFilter:
                     # Check if it's the same brand
                     if target_info['brand'].lower() == product_info['brand'].lower():
                         # Apply smart model matching for recognized phone brands
-                        return self._smart_model_matching(target_info, product_info)
+                        return self._smart_model_matching(target_info, product_info, target_search, product_title)
                     else:
                         # Different phone brands - continue to fallback matching
                         pass
@@ -307,13 +407,17 @@ class SmartProductFilter:
         """
         title_lower = title.lower()
         
-        # Define comprehensive brand patterns for ALL major phone brands
+        # Define comprehensive brand patterns for ALL major mobile devices
         brand_patterns = {
             # iPhone patterns - Fixed to handle compound variants like 'Pro Max' but not color names
             'iphone': r'iphone\s*(\d+)(?:\s+(pro\s*max|pro\s*plus|pro|plus\s*max|plus|max|mini|se))?',
             
-            # Samsung patterns - Fixed to handle common search variations
-            'samsung': r'(?:samsung\s*(?:galaxy\s*)?s(\d+)|galaxy\s*s(\d+)|samsung\s*s(\d+))(\s*(ultra|plus|edge|fe|lite|neo))?|(?:samsung\s*)?galaxy\s*note\s*(\d+)(\s*(ultra|plus))?',
+            # 📱 IPAD PATTERNS - New Addition for iPad Support
+            'ipad': r'(?:apple\s*)?ipad(?:\s+(air|pro|mini))?(?:\s*(\d+)(?:th|st|nd|rd)?(?:\s*generation|\s*gen)?)?',
+            'ipad_numbered': r'ipad\s*(\d+)(?:th|st|nd|rd)?(?:\s*generation|\s*gen)?(?:\s+(air|pro|mini))?',
+            
+            # Samsung patterns - ENHANCED to detect and exclude monitor models
+            'samsung': r'(?:samsung\s*(?:galaxy\s*)?s(\d+)(?![a-z]\d)|galaxy\s*s(\d+)(?![a-z]\d)|samsung\s*s(\d+)(?![a-z]\d))(\s*(ultra|plus|edge|fe|lite|neo))?|(?:samsung\s*)?galaxy\s*note\s*(\d+)(\s*(ultra|plus))?',
             
             # Google Pixel patterns
             'pixel': r'google\s*pixel\s*(\d+)(\s*(xl|pro|a))?|pixel\s*(\d+)(\s*(xl|pro|a))?',
@@ -363,6 +467,43 @@ class SmartProductFilter:
                         'model': match.group(1),
                         'variants': match.group(2) if match.group(2) else '',
                         'full_model': f"iPhone {match.group(1)}" + (f" {match.group(2)}" if match.group(2) else "")
+                    }
+                
+                # 📱 iPad parsing - NEW: Handle iPad Air, Pro, Mini, and numbered generations
+                elif brand_key.startswith('ipad'):
+                    if brand_key == 'ipad':
+                        # Pattern: "iPad Air 2" or "iPad Pro 12.9" or "iPad 9th generation"
+                        variant = match.group(1)  # air, pro, mini
+                        generation = match.group(2)  # number
+                        
+                        if variant and generation:
+                            # "iPad Air 4", "iPad Pro 12"
+                            model = f"{variant.title()} {generation}"
+                        elif variant:
+                            # "iPad Air" (no specific generation)
+                            model = variant.title()
+                        elif generation:
+                            # "iPad 9th generation" (numbered iPad)
+                            model = f"{generation}th generation"
+                        else:
+                            # Just "iPad"
+                            model = "iPad"
+                    
+                    elif brand_key == 'ipad_numbered':
+                        # Pattern: "iPad 9th generation" or "iPad 10th gen Air"
+                        generation = match.group(1)  # number
+                        variant = match.group(2)  # air, pro, mini
+                        
+                        if variant:
+                            model = f"{generation}th generation {variant.title()}"
+                        else:
+                            model = f"{generation}th generation"
+                    
+                    return {
+                        'brand': 'iPad',
+                        'model': model,
+                        'variants': '',  # iPads don't have sub-variants like phones
+                        'full_model': f"iPad {model}" if model != 'iPad' else 'iPad'
                     }
                 
                 # Samsung parsing - Updated to handle new flexible regex pattern
@@ -602,21 +743,25 @@ class SmartProductFilter:
             return False, "Contains accessory keywords (final check)"
             
         # Apply the enhanced smart model matching
-        return self._smart_model_matching(target_info, product_info)
+        return self._smart_model_matching(target_info, product_info, target_search, product_title)
     
-    def _smart_model_matching(self, target_info: Dict[str, str], product_info: Dict[str, str]) -> Tuple[bool, str]:
+    def _smart_model_matching(self, target_info: Dict[str, str], product_info: Dict[str, str], 
+                            target_search: str = "", product_title: str = "") -> Tuple[bool, str]:
         """
         Apply strict model matching rules based on search intent.
         
         ENHANCED STRICT MODEL MATCHING:
         - If you search "iPhone 16" → ONLY show iPhone 16 (EXCLUDE Pro, Plus, etc.)
         - If you search "iPhone 16 Pro" → ONLY show iPhone 16 Pro (EXCLUDE regular 16, Plus, Max)
+        - If you search "iPhone 16 white" → ONLY show white iPhone 16 (EXCLUDE other colors)
         - If you search "Redmi Note 10" → ONLY show Redmi Note 10 (EXCLUDE Pro, other models)
         - Case insensitive matching ("iPhone" = "iphone" = "IPHONE")
         
         Args:
             target_info: Parsed target search info
             product_info: Parsed product info
+            target_search: Original search query (for color extraction)
+            product_title: Original product title (for color extraction)
             
         Returns:
             Tuple[bool, str]: (should_include, reason)
@@ -625,7 +770,19 @@ class SmartProductFilter:
         if target_info['model'] != product_info['model']:
             return False, f"Different model number: {product_info['model']} vs {target_info['model']}"
         
-        # 2. Parse variants from both target and product
+        # 🎨 2. NEW: COLOR-SPECIFIC FILTERING - Check if colors match (if color specified)
+        target_color = self._extract_color_from_text(target_search) if target_search else None
+        product_color = self._extract_color_from_text(product_title) if product_title else None
+        
+        if target_color and product_color:
+            if not self._colors_match(target_color, product_color):
+                return False, f"Color mismatch: product is '{product_color}' but target wants '{target_color}'"
+        elif target_color and not product_color:
+            # User specified a color but product doesn't mention any color - exclude it
+            return False, f"Target specifies color '{target_color}' but product color is not mentioned"
+        # If target doesn't specify color but product does, that's fine - include it
+        
+        # 3. Parse variants from both target and product
         target_variants = set(target_info['variants'].lower().split()) if target_info['variants'] else set()
         product_variants = set(product_info['variants'].lower().split()) if product_info['variants'] else set()
         
@@ -726,7 +883,11 @@ class SmartProductFilter:
             if whitelist_term in title_lower:
                 whitelist_found.append(whitelist_term)
         
-        # STEP 2: Check for comprehensive accessories blacklist
+        # STEP 2: Check for monitor patterns (NEW - Prevents Samsung monitors from being matched)
+        if self._is_monitor_product(title_lower):
+            return True  # Exclude monitors
+        
+        # STEP 2.1: Check for comprehensive accessories blacklist
         blacklisted_terms = []
         for accessory_term in self.accessories_blacklist:
             # Use word boundaries for multi-word terms, simple substring for single words
@@ -796,6 +957,37 @@ class SmartProductFilter:
                 return True
         
         return False
+    
+    def _is_monitor_product(self, title_lower: str) -> bool:
+        """🚫 NEW: Check if product title indicates it's a monitor (not a phone)."""
+        try:
+            # Check for monitor model patterns (like Samsung S24C360EAE)
+            for pattern in self.monitor_model_patterns:
+                if re.search(pattern, title_lower):
+                    self.logger.debug(f"MONITOR DETECTED: Pattern '{pattern}' matched in title: '{title_lower[:50]}...'")
+                    return True
+            
+            # Check for explicit monitor keywords
+            monitor_keywords = ['monitor', 'display', 'curved', 'gaming monitor', 'ultrawide', 
+                              '24 inch', '27 inch', '32 inch', 'fhd', 'qhd', '4k monitor']
+            
+            for keyword in monitor_keywords:
+                if keyword in title_lower:
+                    self.logger.debug(f"MONITOR DETECTED: Keyword '{keyword}' found in title: '{title_lower[:50]}...'")
+                    return True
+            
+            # Special case: Samsung model patterns that are monitors
+            # Samsung monitors often follow the pattern: S + number + letters + numbers (e.g., S24C360EAE)
+            samsung_monitor_pattern = r'samsung.*s\d+[a-z]\d+'
+            if re.search(samsung_monitor_pattern, title_lower):
+                self.logger.debug(f"SAMSUNG MONITOR DETECTED: Pattern '{samsung_monitor_pattern}' in title: '{title_lower[:50]}...'")
+                return True
+            
+            return False
+            
+        except Exception as e:
+            self.logger.error(f"Error in monitor detection: {e}")
+            return False
     
     def _substring_matching_fallback(self, title: str, target: str) -> Tuple[bool, str]:
         """
